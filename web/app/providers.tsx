@@ -9,6 +9,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { CartProvider } from "@/context/cart-context";
 import { AuthProvider } from "@/context/auth-context";
 import { AddressProvider } from "@/context/address-context";
+import { PanelProvider } from "@/context/panel-context";
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -30,9 +31,11 @@ export function Providers({ children, themeProps }: ProvidersProps) {
     <HeroUIProvider navigate={router.push}>
       <NextThemesProvider {...themeProps}>
         <AuthProvider>
-          <AddressProvider>
-            <CartProvider>{children}</CartProvider>
-          </AddressProvider>
+          <PanelProvider>
+            <AddressProvider>
+              <CartProvider>{children}</CartProvider>
+            </AddressProvider>
+          </PanelProvider>
         </AuthProvider>
       </NextThemesProvider>
     </HeroUIProvider>

@@ -1,33 +1,217 @@
-# Quick Reference Guide
+# Quick Reference - Multi-Panel Architecture
 
-## ✅ What's Done
+## Panel Overview
 
-### Requirement: "if product has variant, i must select variant drop down instead of add to cart"
-
-**IMPLEMENTED:** 
-- Users MUST select a variant from dropdown before Add to Cart button works
-- Button shows "Select Variant First" when disabled
-- Button shows "Add to Cart" when variant is selected
+| Panel | URL | Header | Footer | Color | Logo |
+|-------|-----|--------|--------|-------|------|
+| **Landing** | `/` | LandingHeader | LandingFooter | Default | 🛍️ Hatiri |
+| **Admin** | `/admin` | AdminHeader | AdminFooter | Red | ⚙️ Admin |
+| **Seller** | `/seller/[id]` | SellerHeader | SellerFooter | Blue | 📊 Seller |
+| **Store** | `/store/[code]` | StoreHeader | StoreFooter | Default | Logo |
 
 ---
 
-## 🚀 How to Test
+## Quick Copy-Paste Templates
 
-### Step 1: Start the Application
-```bash
-# Terminal 1 - Backend API
-cd /Users/pc/dev/hatiri/hatiri-shop/api
-npm run dev
+### Adding a New Admin Page
 
-# Terminal 2 - Frontend
-cd /Users/pc/dev/hatiri/hatiri-shop/web
-npm run dev
+```tsx
+"use client";
+
+import { AdminLayout } from "@/components/layouts/admin-layout";
+
+export default function NewAdminPage() {
+  return (
+    <AdminLayout>
+      <main className="p-4">
+        {/* Your content */}
+      </main>
+    </AdminLayout>
+  );
+}
 ```
 
-### Step 2: Visit Store
+### Adding a New Seller Page
+
+```tsx
+"use client";
+
+import { SellerLayout } from "@/components/layouts/seller-layout";
+
+export default function NewSellerPage() {
+  return (
+    <SellerLayout>
+      <main className="p-4">
+        {/* Your content */}
+      </main>
+    </SellerLayout>
+  );
+}
 ```
-http://localhost:3000
+
+### Adding a New Landing Page
+
+```tsx
+import { LandingLayout } from "@/components/layouts/landing-layout";
+
+export default function NewLandingPage() {
+  return (
+    <LandingLayout>
+      {/* Your content */}
+    </LandingLayout>
+  );
+}
 ```
+
+---
+
+## Component Locations
+
+| Component | Path |
+|-----------|------|
+| LandingHeader | `@/components/headers/landing-header` |
+| AdminHeader | `@/components/headers/admin-header` |
+| SellerHeader | `@/components/headers/seller-header` |
+| StoreHeader | `@/components/store-header` |
+| LandingFooter | `@/components/footers/landing-footer` |
+| AdminFooter | `@/components/footers/admin-footer` |
+| SellerFooter | `@/components/footers/seller-footer` |
+| StoreFooter | `@/components/footers/store-footer` |
+| LandingLayout | `@/components/layouts/landing-layout` |
+| AdminLayout | `@/components/layouts/admin-layout` |
+| SellerLayout | `@/components/layouts/seller-layout` |
+| StoreLayout | `@/components/layouts/store-layout` |
+
+---
+
+## Navigation Links
+
+### Admin Panel
+- Dashboard: `/admin/dashboard`
+- Organisations: `/admin/dashboard`
+- Categories: `/admin/dashboard`
+- Reports: `/admin/dashboard`
+- Settings: `/admin/dashboard`
+
+### Seller Panel
+- Dashboard: `/seller/[id]/dashboard`
+- Products: `/seller/[id]/products`
+- Orders: `/seller/[id]/orders`
+- Customers: `/seller/[id]/customers`
+- Analytics: `/seller/[id]/analytics`
+- Settings: `/seller/[id]/settings`
+
+### Landing
+- Home: `/`
+- About: `/about`
+- Products: `/products`
+- Pricing: `/pricing`
+- Blog: `/blog`
+
+---
+
+## LocalStorage Keys
+
+| Panel | Token Key | User Key |
+|-------|-----------|----------|
+| Admin | `adminToken` | `adminUser` |
+| Seller | `sellerToken` | `sellerUser` |
+
+### User Object Structure
+```json
+{
+  "id": 1,
+  "name": "John Doe",
+  "email": "john@example.com",
+  "storeName": "My Store" // seller only
+}
+```
+
+---
+
+## Logout Implementation
+
+All headers have built-in logout that:
+1. Clears localStorage tokens
+2. Clears localStorage user data
+3. Redirects to login page
+
+No additional implementation needed!
+
+---
+
+## Responsive Behavior
+
+- **Mobile:** Hamburger menu in header, full-width content
+- **Tablet:** Drawer/sidebar optional
+- **Desktop:** Full navigation visible
+
+All components are HeroUI Navbar which handles this automatically.
+
+---
+
+## Customization Points
+
+### Change Header Colors
+Edit gradient in header component:
+```tsx
+className="bg-gradient-to-r from-red-600 to-red-700"
+```
+
+### Add Menu Items
+Edit `menuItems` array in header:
+```tsx
+const menuItems = [
+  { label: "New Item", href: "/new-route" },
+];
+```
+
+### Modify Footer Links
+Edit footer component directly:
+```tsx
+<Link href="/custom-page">Custom Page</Link>
+```
+
+---
+
+## Common Issues & Solutions
+
+**Q: Header not showing?**
+- Ensure page is wrapped with correct Layout component
+- Check if page is inside correct route folder
+
+**Q: Layout showing twice?**
+- Remove header/footer from page component
+- Let Layout handle all header/footer rendering
+
+**Q: Auth not persisting?**
+- Check localStorage keys match panel type
+- Ensure user data is JSON stringified
+
+**Q: Mobile menu not closing?**
+- HeroUI handles this automatically
+- Verify Navbar component has proper props
+
+---
+
+## Testing Layouts
+
+### Admin
+Visit: `http://localhost:3000/admin/dashboard`
+Should show: Red gradient header + Admin content + Footer
+
+### Seller
+Visit: `http://localhost:3000/seller/1/dashboard`
+Should show: Blue gradient header + Seller content + Footer
+
+### Landing
+Visit: `http://localhost:3000/`
+Should show: Default header + Home + Footer
+
+### Store
+Visit: `http://store-code.localhost:3000/`
+Should show: Store header + Products + Footer
+
 
 ### Step 3: Test Variant Selection
 1. Click on store (e.g., "Vegetable Wings" - VW001)

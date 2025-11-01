@@ -1,6 +1,10 @@
 import React from "react";
 import { Product } from "./product";
-import { StoreHeader } from "./store-header";
+import { Button } from "@heroui/button";
+import { Card, CardBody } from "@heroui/card";
+import { Divider } from "@heroui/divider";
+import { Chip } from "@heroui/chip";
+import { ScrollShadow } from "@heroui/scroll-shadow";
 
 interface ProductType {
   id: number;
@@ -77,11 +81,15 @@ export async function StoreHomePage({ storeCode }: { storeCode: string }) {
 
   if (!data) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-6xl mb-4">❌</div>
-          <p className="text-foreground/60 text-xl font-semibold">Store not found</p>
-        </div>
+      <div className="min-h-screen bg-background flex items-center justify-center p-4">
+        <Card className="max-w-md w-full">
+          <CardBody className="gap-4 py-8 text-center items-center">
+            <div className="text-6xl">❌</div>
+            <div>
+              <p className="text-foreground/60 text-xl font-semibold">Store not found</p>
+            </div>
+          </CardBody>
+        </Card>
       </div>
     );
   }
@@ -94,67 +102,73 @@ export async function StoreHomePage({ storeCode }: { storeCode: string }) {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <StoreHeader storeCode={storeCode} />
+    <div className="bg-background">
+      {/* Mobile Category Bar - First on mobile */}
+      <ScrollShadow hideScrollBar className="w-full bg-default-50 border-b border-divider lg:hidden">
+        <div className="flex gap-2 p-2 sm:p-3 whitespace-nowrap">
+          {allCategories.map((category: any) => (
+            <Chip
+              key={category.slug || category.name}
+              avatar={<span className="text-base">{getCategoryEmoji(category.name)}</span>}
+              variant="flat"
+              className="flex-shrink-0 text-xs sm:text-sm"
+              classNames={{
+                content: "gap-1",
+              }}
+            >
+              {category.name}
+            </Chip>
+          ))}
+        </div>
+      </ScrollShadow>
 
-      <div className="flex">
-        {/* Vertical Category Sidebar */}
-        <aside className="hidden md:block w-48 bg-default-50 border-r border-divider min-h-screen sticky top-16 overflow-y-auto">
-          <div className="p-4 space-y-2">
+      <div className="flex flex-col lg:flex-row">
+        {/* Vertical Category Sidebar - Hidden on mobile, shown on desktop */}
+        <ScrollShadow hideScrollBar className="hidden lg:block lg:w-48 bg-default-50 border-r border-divider min-h-screen sticky top-16 overflow-y-auto">
+          <div className="p-3 sm:p-4 space-y-2">
             {allCategories.map((category: any) => (
-              <button
+              <Button
                 key={category.slug || category.name}
-                className="w-full text-left px-4 py-3 rounded-lg font-medium text-sm bg-background hover:bg-default-100 text-foreground transition-all duration-200 flex items-center gap-2 group"
+                className="w-full justify-start px-3 sm:px-4 py-2 sm:py-3 text-sm"
+                variant="light"
+                startContent={<span className="text-base">{getCategoryEmoji(category.name)}</span>}
               >
-                <span className="text-base">{getCategoryEmoji(category.name)}</span>
-                <span className="truncate">{category.name}</span>
-              </button>
+                <span className="truncate text-left">{category.name}</span>
+              </Button>
             ))}
           </div>
-        </aside>
-
-        {/* Mobile Category Bar */}
-        <div className="md:hidden w-full bg-default-50 border-b border-divider">
-          <div className="overflow-x-auto scrollbar-hide">
-            <div className="flex gap-2 p-3 whitespace-nowrap">
-              {allCategories.map((category: any) => (
-                <button
-                  key={category.slug || category.name}
-                  className="px-4 py-2 rounded-full font-medium text-sm bg-background text-foreground border border-divider hover:bg-default-100 transition-all flex-shrink-0 flex items-center gap-1"
-                >
-                  <span className="text-base">{getCategoryEmoji(category.name)}</span>
-                  <span>{category.name}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
+        </ScrollShadow>
 
         {/* Main Content */}
-        <main className="flex-1">
-          <div className="px-4 py-6 md:px-6">
+        <main className="flex-1 w-full">
+          <div className="px-3 py-4 sm:px-4 sm:py-5 md:px-6 md:py-6">
             {/* Results Header */}
-            <div className="mb-6">
-              <h2 className="text-xl md:text-2xl font-bold text-foreground mb-1">
+            <div className="mb-4 sm:mb-5 md:mb-6">
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground mb-2">
                 All Products
               </h2>
-              <p className="text-sm text-foreground/60">
-                {products.length} product{products.length !== 1 ? "s" : ""}{" "}
-                available
-              </p>
+              <Chip
+                variant="flat"
+                className="text-xs sm:text-sm"
+              >
+                {products.length} product{products.length !== 1 ? "s" : ""} available
+              </Chip>
             </div>
 
             {products.length === 0 ? (
-              <div className="text-center py-20 bg-default-50 rounded-lg border border-divider">
-                <div className="text-6xl mb-4">🔍</div>
-                <p className="text-foreground text-lg font-semibold mb-2">
-                  No products available
-                </p>
-                <p className="text-foreground/60">Check back soon!</p>
-              </div>
+              <Card className="py-12 sm:py-16 md:py-20">
+                <CardBody className="gap-4 flex items-center justify-center text-center">
+                  <div className="text-5xl sm:text-6xl">🔍</div>
+                  <div>
+                    <p className="text-foreground text-base sm:text-lg font-semibold mb-1">
+                      No products available
+                    </p>
+                    <p className="text-foreground/60 text-sm sm:text-base">Check back soon!</p>
+                  </div>
+                </CardBody>
+              </Card>
             ) : (
-              <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3 md:gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
                 {products.map((product: any) => (
                   <Product
                     key={product.id}
@@ -168,16 +182,6 @@ export async function StoreHomePage({ storeCode }: { storeCode: string }) {
           </div>
         </main>
       </div>
-
-      <style>{`
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
     </div>
   );
 }

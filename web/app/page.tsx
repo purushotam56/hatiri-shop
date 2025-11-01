@@ -1,5 +1,7 @@
 import { HomePage } from "@/components/home-page";
 import { StoreHomePage } from "@/components/store-home-page";
+import { LandingLayout } from "@/components/layouts/landing-layout";
+import { StoreLayout } from "@/components/layouts/store-layout";
 import { headers } from "next/headers";
 
 interface Organisation {
@@ -50,10 +52,18 @@ export default async function Home() {
   
   if (subdomainCode) {
     // Render store page for subdomain
-    return <StoreHomePage storeCode={subdomainCode} />;
+    return (
+      <StoreLayout storeCode={subdomainCode}>
+        <StoreHomePage storeCode={subdomainCode} />
+      </StoreLayout>
+    );
   }
 
   // Otherwise render home page with all organisations
   const organisations = await fetchOrganisations();
-  return <HomePage organisations={organisations} />;
+  return (
+    <LandingLayout>
+      <HomePage organisations={organisations} />
+    </LandingLayout>
+  );
 }

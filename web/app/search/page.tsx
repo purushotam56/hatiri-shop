@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Input } from "@heroui/input";
 import { Button } from "@heroui/button";
 import { Card, CardBody } from "@heroui/card";
+import { Chip } from "@heroui/chip";
 import Link from "next/link";
 import { SearchIcon } from "@/components/icons";
 import { ProductCard } from "@/components/product-card";
@@ -137,11 +138,23 @@ export default function SearchPage() {
               </p>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {filteredProducts.map((product) => (
-                  <ProductCard
-                    key={product.id}
-                    {...product}
-                    onAddToCart={(id) => console.log("Added to cart:", id)}
-                  />
+                  <Card key={product.id} className="hover:shadow-lg transition-shadow cursor-pointer">
+                    <CardBody className="p-3">
+                      <div className="text-2xl mb-2">{mockProducts.find(p => p.id === product.id)?.category ? "📦" : "📦"}</div>
+                      <h3 className="font-semibold text-sm line-clamp-2">{product.name}</h3>
+                      <div className="flex justify-between items-center mt-2">
+                        <span className="text-primary font-bold text-sm">${product.price}</span>
+                        {product.stock > 0 ? (
+                          <Chip size="sm" color="success" variant="flat">Stock</Chip>
+                        ) : (
+                          <Chip size="sm" color="danger" variant="flat">Out</Chip>
+                        )}
+                      </div>
+                      <Button size="sm" color="primary" className="w-full mt-2" onClick={() => console.log("Added to cart:", product.id)}>
+                        Add
+                      </Button>
+                    </CardBody>
+                  </Card>
                 ))}
               </div>
             </div>

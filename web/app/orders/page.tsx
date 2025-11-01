@@ -17,6 +17,7 @@ import { Chip } from "@heroui/chip";
 import { COLORS } from "@/lib/theme";
 import { Order } from "@/types/order";
 import { OrderDetailModal } from "@/components/order-detail-modal";
+import { StoreLayout } from "@/components/layouts/store-layout";
 
 // Helper function to safely convert to number
 const toNumber = (value: any): number => {
@@ -24,7 +25,7 @@ const toNumber = (value: any): number => {
   return isNaN(num) ? 0 : num;
 };
 
-export default function OrdersPage() {
+function OrdersPageContent() {
   const { isLoggedIn, isLoading } = useAuth();
   const router = useRouter();
   const [orders, setOrders] = useState<Order[]>([]);
@@ -229,5 +230,13 @@ export default function OrdersPage() {
         order={selectedOrder}
       />
     </div>
+  );
+}
+
+export default function OrdersPage() {
+  return (
+    <StoreLayout>
+      <OrdersPageContent />
+    </StoreLayout>
   );
 }

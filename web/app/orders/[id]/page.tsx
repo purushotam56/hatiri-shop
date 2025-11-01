@@ -6,6 +6,7 @@ import { Button } from "@heroui/button";
 import { Input } from "@heroui/input";
 import { Divider } from "@heroui/divider";
 import Link from "next/link";
+import { StoreLayout } from "@/components/layouts/store-layout";
 
 export default function OrderTrackingPage({ params }: { params: Promise<{ id: string }> }) {
   const [orderId, setOrderId] = useState<string>("");
@@ -48,6 +49,15 @@ export default function OrderTrackingPage({ params }: { params: Promise<{ id: st
     };
     setOrder(mockOrder);
   }, [orderId]);
+
+  return (
+    <StoreLayout>
+      <OrderTrackingPageContent order={order} orderId={orderId} />
+    </StoreLayout>
+  );
+}
+
+function OrderTrackingPageContent({ order, orderId }: { order: any; orderId: string }) {
 
   if (!order) {
     return (

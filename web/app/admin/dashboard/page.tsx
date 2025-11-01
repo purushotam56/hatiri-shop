@@ -8,6 +8,7 @@ import { Input } from '@heroui/input'
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from '@heroui/modal'
 import { Tabs, Tab } from '@heroui/tabs'
 import Link from 'next/link'
+import { AdminLayout } from '@/components/layouts/admin-layout'
 
 interface Organisation {
   id: number
@@ -114,39 +115,37 @@ export default function AdminDashboard() {
   }
 
   return (
-    <main className="min-h-screen bg-default-50 dark:bg-default-100 p-4">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-8">
-          <div>
-            <h1 className="text-4xl font-bold">Admin Dashboard</h1>
-            <p className="text-default-600">Welcome, {currentUser?.fullName}</p>
+    <AdminLayout>
+      <main className="min-h-screen bg-default-50 dark:bg-default-100 p-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-8">
+            <div>
+              <h1 className="text-4xl font-bold">Admin Dashboard</h1>
+              <p className="text-default-600">Welcome, {currentUser?.fullName}</p>
+            </div>
           </div>
-          <Button color="danger" variant="flat" onPress={handleLogout}>
-            Logout
-          </Button>
-        </div>
 
-        {/* Quick Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-          <Card>
-            <CardBody className="py-6">
-              <p className="text-default-600 text-sm">Total Organizations</p>
-              <p className="text-4xl font-bold text-primary">{organisations.length}</p>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardBody className="py-6">
-              <p className="text-default-600 text-sm">Total Branches</p>
-              <p className="text-4xl font-bold text-primary">
-                {organisations.reduce((sum, org) => sum + (org._count?.branch || 0), 0)}
-              </p>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardBody className="py-6">
-              <p className="text-default-600 text-sm">Active Sellers</p>
-              <p className="text-4xl font-bold text-primary">-</p>
+          {/* Quick Stats */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <Card>
+              <CardBody className="py-6">
+                <p className="text-default-600 text-sm">Total Organizations</p>
+                <p className="text-4xl font-bold text-primary">{organisations.length}</p>
+              </CardBody>
+            </Card>
+            <Card>
+              <CardBody className="py-6">
+                <p className="text-default-600 text-sm">Total Branches</p>
+                <p className="text-4xl font-bold text-primary">
+                  {organisations.reduce((sum, org) => sum + (org._count?.branch || 0), 0)}
+                </p>
+              </CardBody>
+            </Card>
+            <Card>
+              <CardBody className="py-6">
+                <p className="text-default-600 text-sm">Active Sellers</p>
+                <p className="text-4xl font-bold text-primary">-</p>
             </CardBody>
           </Card>
         </div>
@@ -223,7 +222,7 @@ export default function AdminDashboard() {
                   )}
                 </ModalBody>
                 <ModalFooter>
-                  <Button color="default" variant="light" onPress={onClose}>
+                  <Button color="default" variant="light" onPress={onOpenChange}>
                     Cancel
                   </Button>
                   <Button color="primary" isLoading={submitting} onPress={handleCreateOrg}>
@@ -236,5 +235,7 @@ export default function AdminDashboard() {
         </Modal>
       </div>
     </main>
+    </AdminLayout>
   )
 }
+
