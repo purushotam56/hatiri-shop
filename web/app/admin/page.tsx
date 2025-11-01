@@ -2,10 +2,12 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useAdmin } from '@/context/admin-context'
 import { COLORS, GRADIENTS, COMPONENTS, UTILS } from '@/lib/theme'
 
 export default function AdminLoginPage() {
   const router = useRouter()
+  const { setAdminUser } = useAdmin()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
   const [formData, setFormData] = useState({
@@ -40,7 +42,7 @@ export default function AdminLoginPage() {
 
       // Store token
       localStorage.setItem('adminToken', data.token)
-      localStorage.setItem('adminUser', JSON.stringify(data.admin))
+      setAdminUser(data.admin)
 
       router.push('/admin/dashboard')
     } catch (err) {

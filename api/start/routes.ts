@@ -125,11 +125,15 @@ router
     router
       .group(() => {
         router.post('/login', [AdminController, 'adminLogin'])
+        router.get('/stats', [AdminController, 'getStats']).use(middleware.auth({ guards: ['adminapi'] }))
         router.get('/organisations', [AdminController, 'listOrganisations']).use(middleware.auth({ guards: ['adminapi'] }))
         router.post('/organisations', [AdminController, 'createOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
         router.get('/organisations/:id', [AdminController, 'getOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
         router.put('/organisations/:id', [AdminController, 'updateOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
         router.delete('/organisations/:id', [AdminController, 'deleteOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
+        router.get('/sellers', [AdminController, 'getSellers']).use(middleware.auth({ guards: ['adminapi'] }))
+        router.get('/orders', [AdminController, 'getOrders']).use(middleware.auth({ guards: ['adminapi'] }))
+        router.get('/products', [AdminController, 'getProducts']).use(middleware.auth({ guards: ['adminapi'] }))
       })
       .prefix('/admin')
 

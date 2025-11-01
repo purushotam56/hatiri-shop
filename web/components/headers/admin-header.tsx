@@ -1,34 +1,47 @@
-"use client";
+'use client'
 
-import React, { useState } from "react";
-import { Button } from "@heroui/button";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@heroui/navbar";
-import { Avatar } from "@heroui/avatar";
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@heroui/dropdown";
-import { Link } from "@heroui/link";
-import { Chip } from "@heroui/chip";
+import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { Button } from '@heroui/button'
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+} from '@heroui/navbar'
+import { Avatar } from '@heroui/avatar'
+import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from '@heroui/dropdown'
+import { Link } from '@heroui/link'
+import { useAdmin } from '@/context/admin-context'
 
 interface AdminHeaderProps {
-  userName?: string;
-  userEmail?: string;
+  userName?: string
+  userEmail?: string
 }
 
-export function AdminHeader({ userName = "Admin", userEmail = "admin@hatiri.com" }: AdminHeaderProps) {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+export function AdminHeader({ userName: propName, userEmail: propEmail }: AdminHeaderProps) {
+  const router = useRouter()
+  const { adminUser, clearAdmin } = useAdmin()
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const displayName = propName || adminUser?.fullName || 'Admin'
+  const displayEmail = propEmail || adminUser?.email || 'admin@hatiri.com'
 
   const menuItems = [
-    { label: "Dashboard", href: "/admin/dashboard" },
-    { label: "Organisations", href: "/admin/dashboard" },
-    { label: "Categories", href: "/admin/dashboard" },
-    { label: "Reports", href: "/admin/dashboard" },
-    { label: "Settings", href: "/admin/dashboard" },
-  ];
+    { label: 'Dashboard', href: '/admin/dashboard' },
+    { label: 'Organizations', href: '/admin/organizations' },
+    { label: 'Sellers', href: '/admin/sellers' },
+    { label: 'Orders', href: '/admin/orders' },
+    { label: 'Products', href: '/admin/products' },
+  ]
 
   const handleLogout = () => {
-    localStorage.removeItem("adminToken");
-    localStorage.removeItem("adminUser");
-    window.location.href = "/admin";
-  };
+    clearAdmin()
+    router.push('/admin')
+  }
 
   return (
     <Navbar
@@ -75,36 +88,25 @@ export function AdminHeader({ userName = "Admin", userEmail = "admin@hatiri.com"
                 as="button"
                 className="transition-transform"
                 color="primary"
-                name={userName}
+                name={displayName}
                 size="sm"
                 src=""
               />
             </DropdownTrigger>
-            <DropdownMenu
-              aria-label="Admin Actions"
-              closeOnSelect={false}
-            >
+            <DropdownMenu aria-label="Admin Actions" closeOnSelect={false}>
               <DropdownItem
                 key="user-info"
                 isReadOnly
                 textValue="User Info"
                 className="h-14 gap-2 opacity-100 cursor-default"
               >
-                <p className="font-semibold">{userName}</p>
-                <p className="text-xs text-foreground/60">{userEmail}</p>
+                <p className="font-semibold">{displayName}</p>
+                <p className="text-xs text-foreground/60">{displayEmail}</p>
               </DropdownItem>
-              <DropdownItem
-                key="profile"
-                textValue="Profile"
-              >
+              <DropdownItem key="profile" textValue="Profile">
                 Profile Settings
               </DropdownItem>
-              <DropdownItem
-                key="logout"
-                color="danger"
-                onPress={handleLogout}
-                textValue="Logout"
-              >
+              <DropdownItem key="logout" color="danger" onPress={handleLogout} textValue="Logout">
                 Logout
               </DropdownItem>
             </DropdownMenu>

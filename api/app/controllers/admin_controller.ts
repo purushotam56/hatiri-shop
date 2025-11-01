@@ -2,6 +2,9 @@ import { HttpContext } from '@adonisjs/core/http'
 import AdminUser from '#models/admin_user'
 import Organisation from '#models/organisation'
 import Branch from '#models/branch'
+import User from '#models/user'
+import Order from '#models/order'
+import Product from '#models/product'
 import { errorHandler } from '#helper/error_handler'
 
 export default class AdminController {
@@ -121,10 +124,8 @@ export default class AdminController {
   async listOrganisations({ response, auth }: HttpContext) {
     try {
       // Try to get user if authenticated, but allow public access
-      let isAdmin = false
       try {
         await auth.getUserOrFail()
-        isAdmin = true
       } catch (e) {
         // User not authenticated, but that's ok for public browsing
       }
@@ -211,6 +212,129 @@ export default class AdminController {
       })
     } catch (error) {
       return errorHandler(error || 'Failed to delete organization', { response } as any)
+    }
+  }
+
+  /**
+   * Get admin dashboard statistics (Admin only)
+   */
+  async getStats({ response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      // Get counts for all entities
+      const totalOrganizations = await Organisation.query().count('* as total').first() as any
+      const totalSellers = await User.query()
+        .whereHas('organisation', (query: any) => {
+          query.where('is_admin', false)
+        })
+        .count('* as total')
+        .first() as any
+
+      const totalOrders = await Order.query().count('* as total').first() as any
+      const pendingOrders = await Order.query().where('status', 'pending').count('* as total').first() as any
+      const deliveredOrders = await Order.query().where('status', 'delivered').count('* as total').first() as any
+
+      // Calculate total revenue from delivered orders using reduce (like seller does)
+      const deliveredOrdersData = await Order.query().where('status', 'delivered')
+      const totalRevenue = deliveredOrdersData.reduce((sum: number, order: any) => sum + (order.totalAmount || 0), 0)
+
+      return response.ok({
+        stats: {
+          totalOrganizations: totalOrganizations?.$extras?.total || 0,
+          totalSellers: totalSellers?.$extras?.total || 0,
+          totalOrders: totalOrders?.$extras?.total || 0,
+          totalRevenue: totalRevenue,
+          pendingOrders: pendingOrders?.$extras?.total || 0,
+          deliveredOrders: deliveredOrders?.$extras?.total || 0,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch stats', { response } as any)
+    }
+  }
+
+  /**
+   * Get all sellers (Admin only)
+   */
+  async getSellers({ response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      // Get all users who have seller relationships with organizations
+      const sellers = await User.query()
+        .whereHas('organisation', (query: any) => {
+          query.where('is_admin', false)
+        })
+        .select('id', 'email', 'fullName', 'mobile', 'createdAt')
+        .orderBy('createdAt', 'desc')
+
+      return response.ok({
+        sellers,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch sellers', { response } as any)
+    }
+  }
+
+  /**
+   * Get all orders (Admin only)
+   */
+  async getOrders({ response, auth, request }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+      const { page = 1, limit = 20 } = request.qs()
+
+      const orders = await Order.query()
+        .preload('customer')
+        .preload('items', (q) => {
+          q.preload('product')
+        })
+        .paginate(page, limit)
+
+      return response.ok({
+        orders: orders.all(),
+        pagination: {
+          total: orders.total,
+          perPage: orders.perPage,
+          currentPage: orders.currentPage,
+          lastPage: orders.lastPage,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch orders', { response } as any)
+    }
+  }
+
+  /**
+   * Get all products (Admin only)
+   */
+  async getProducts({ response, auth, request }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+      const { page = 1, limit = 20, search } = request.qs()
+
+      let query = Product.query()
+
+      if (search) {
+        query = query
+          .where('name', 'ilike', `%${search}%`)
+          .orWhere('sku', 'ilike', `%${search}%`)
+      }
+
+      const products = await query.paginate(page, limit)
+
+      return response.ok({
+        products: products.all(),
+        pagination: {
+          total: products.total,
+          perPage: products.perPage,
+          currentPage: products.currentPage,
+          lastPage: products.lastPage,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch products', { response } as any)
     }
   }
 }
