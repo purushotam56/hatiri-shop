@@ -1,165 +1,233 @@
 "use client";
 
-import React, { useState } from "react";
-import { Card, CardBody, CardFooter } from "@heroui/card";
+import React, { useState, useEffect } from "react";
+import { useAuth } from "@/context/auth-context";
+import { useRouter } from "next/navigation";
+import {
+  Table,
+  TableHeader,
+  TableColumn,
+  TableBody,
+  TableRow,
+  TableCell,
+} from "@heroui/table";
 import { Button } from "@heroui/button";
-import { Divider } from "@heroui/divider";
-import Link from "next/link";
+import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Chip } from "@heroui/chip";
+import { COLORS } from "@/lib/theme";
+import { Order } from "@/types/order";
+import { OrderDetailModal } from "@/components/order-detail-modal";
+
+// Helper function to safely convert to number
+const toNumber = (value: any): number => {
+  const num = Number(value);
+  return isNaN(num) ? 0 : num;
+};
 
 export default function OrdersPage() {
-  const [orders] = useState([
-    {
-      id: "ORD-001",
-      date: "Oct 28, 2025 • 2:15 PM",
-      items: ["Fresh Red Apples x2", "Organic Spinach x1", "Whole Wheat Bread x1"],
-      total: 48.99,
-      status: "delivered",
-      deliveryTime: "2:43 PM (28 min)",
-      address: "123 Main St, Apt 4B",
-    },
-    {
-      id: "ORD-002",
-      date: "Oct 26, 2025 • 5:30 PM",
-      items: ["Premium Olive Oil x1", "Non-Stick Pan x1"],
-      total: 32.50,
-      status: "delivered",
-      deliveryTime: "6:02 PM (32 min)",
-      address: "456 Business Ave",
-    },
-    {
-      id: "ORD-003",
-      date: "Oct 24, 2025 • 10:00 AM",
-      items: ["Multiple items (15)", "See details"],
-      total: 61.25,
-      status: "delivered",
-      deliveryTime: "10:31 AM (31 min)",
-      address: "123 Main St, Apt 4B",
-    },
-  ]);
+  const { isLoggedIn, isLoading } = useAuth();
+  const router = useRouter();
+  const [orders, setOrders] = useState<Order[]>([]);
+  const [pageIsLoading, setPageIsLoading] = useState(true);
+  const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
+  const [isDetailOpen, setIsDetailOpen] = useState(false);
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "delivered":
-        return "bg-green-100 text-green-800";
-      case "in-transit":
-        return "bg-blue-100 text-blue-800";
-      case "preparing":
-        return "bg-yellow-100 text-yellow-800";
-      default:
-        return "bg-gray-100 text-gray-800";
+  useEffect(() => {
+    // Wait for auth to load
+    if (isLoading) {
+      return;
+    }
+
+    // If not logged in, redirect
+    if (!isLoggedIn) {
+      // router.push("/login");
+      return;
+    }
+
+    fetchOrders();
+  }, [isLoggedIn, isLoading, router]);
+
+  const fetchOrders = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const response = await fetch("http://localhost:3333/api/orders", {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch orders");
+      }
+
+      const data = await response.json();
+      setOrders(data.orders || []);
+    } catch (error) {
+      console.error("Error fetching orders:", error);
+    } finally {
+      setPageIsLoading(false);
     }
   };
 
-  const getStatusLabel = (status: string) => {
+  const getStatusColor = (status: string): "warning" | "secondary" | "primary" | "success" | "danger" | "default" => {
     switch (status) {
-      case "delivered":
-        return "✅ Delivered";
-      case "in-transit":
-        return "🚚 In Transit";
+      case "pending":
+        return "warning";
+      case "confirmed":
+        return "secondary";
       case "preparing":
-        return "📦 Preparing";
+        return "secondary";
+      case "ready":
+        return "secondary";
+      case "out_for_delivery":
+        return "primary";
+      case "delivered":
+        return "success";
+      case "cancelled":
+        return "danger";
       default:
-        return status;
+        return "default";
     }
   };
+
+  const formatDate = (date: string) => {
+    return new Date(date).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  };
+
+  const handleViewDetails = (order: Order) => {
+    setSelectedOrder(order);
+    setIsDetailOpen(true);
+  };
+
+  // Wait for auth to load
+  if (isLoading) {
+    return (
+      <div className="min-h-screen py-12 px-4 bg-gradient-to-b from-slate-900 to-slate-800">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-center text-slate-400">Loading...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!isLoggedIn) {
+    return null;
+  }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-default-100 pt-2 pb-24">
-      <div className="max-w-4xl mx-auto px-3">
+    <div className="min-h-screen py-12 px-4 bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="mb-4 flex items-center gap-3">
-          <Link href="/account">
-            <Button isIconOnly variant="light" size="sm">
-              ←
-            </Button>
-          </Link>
-          <div>
-            <h1 className="text-2xl md:text-3xl font-bold">Your Orders</h1>
-            <p className="text-default-600 text-xs md:text-sm">Track and manage your purchases</p>
-          </div>
+        <div className="mb-8">
+          <h1 className="text-4xl font-bold text-white mb-2">My Orders</h1>
+          <p className="text-slate-400">View and manage your orders</p>
         </div>
 
-        {/* Orders List */}
-        <div className="space-y-3">
-          {orders.map((order) => (
-            <Link key={order.id} href={`/orders/${order.id}`}>
-              <Card className="hover:shadow-lg transition-shadow cursor-pointer bg-default-50 dark:bg-default-200">
-                <CardBody className="py-3 space-y-3">
-                  {/* Order Header */}
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-1">
-                        <p className="font-bold text-sm md:text-base">{order.id}</p>
-                        <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${getStatusColor(order.status)}`}>
-                          {getStatusLabel(order.status)}
-                        </span>
-                      </div>
-                      <p className="text-xs md:text-sm text-default-600">{order.date}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-base md:text-lg font-bold text-primary">₹{order.total}</p>
-                      <p className="text-xs text-default-600">{order.items.length} items</p>
-                    </div>
-                  </div>
-
-                  <Divider className="my-1" />
-
-                  {/* Delivery Info - Compact */}
-                  <div className="grid grid-cols-2 gap-2 text-xs">
-                    <div>
-                      <p className="text-default-600">📍 Address</p>
-                      <p className="font-semibold text-sm truncate">{order.address}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-default-600">⏱️ Time</p>
-                      <p className="font-semibold text-sm">{order.deliveryTime}</p>
-                    </div>
-                  </div>
-
-                  {/* Items Preview */}
-                  <div>
-                    <p className="text-xs font-semibold text-default-600 mb-1">Items</p>
-                    <div className="space-y-0.5">
-                      {order.items.slice(0, 2).map((item, idx) => (
-                        <p key={idx} className="text-xs text-default-600">
-                          • {item}
-                        </p>
-                      ))}
-                      {order.items.length > 2 && (
-                        <p className="text-xs text-primary font-semibold">
-                          +{order.items.length - 2} more →
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </CardBody>
-                <CardFooter className="gap-2 p-3 pt-0">
-                  <Button fullWidth size="sm" variant="flat" className="text-xs">
-                    Reorder
-                  </Button>
-                  <Button fullWidth size="sm" color="primary" className="text-xs">
-                    Details →
-                  </Button>
-                </CardFooter>
-              </Card>
-            </Link>
-          ))}
-        </div>
-
-        {/* Empty State */}
-        {orders.length === 0 && (
-          <Card className="text-center py-12 bg-default-50 dark:bg-default-200">
-            <CardBody>
-              <p className="text-4xl mb-3">📭</p>
-              <p className="text-lg font-semibold mb-1">No orders yet</p>
-              <p className="text-default-600 text-sm mb-4">Start shopping to see your orders here</p>
-              <Button as={Link} href="/" color="primary" size="sm">
-                Start Shopping
-              </Button>
+        {/* Orders Table */}
+        {pageIsLoading ? (
+          <Card className="bg-slate-800/50 border border-slate-700">
+            <CardBody className="py-8">
+              <p className="text-center text-slate-400">Loading orders...</p>
             </CardBody>
+          </Card>
+        ) : orders.length === 0 ? (
+          <Card className="bg-slate-800/50 border border-slate-700">
+            <CardBody className="py-12">
+              <div className="text-center">
+                <p className="text-slate-400 text-lg mb-4">No orders yet</p>
+                <Button
+                  className={`${COLORS.ecommerce.from} ${COLORS.ecommerce.to} text-white`}
+                  onPress={() => router.push("/products")}
+                >
+                  Start Shopping
+                </Button>
+              </div>
+            </CardBody>
+          </Card>
+        ) : (
+          <Card className="bg-slate-800/50 border border-slate-700 overflow-hidden">
+            <Table
+              aria-label="Orders table"
+              classNames={{
+                base: "bg-transparent",
+                table: "text-slate-200",
+                thead: "[&>tr]:first:border-b-1 [&>tr]:first:border-slate-600",
+                tbody: "[&>tr]:border-b-1 [&>tr]:border-slate-700",
+              }}
+            >
+              <TableHeader>
+                <TableColumn className="bg-slate-700/50 text-slate-100">
+                  Order ID
+                </TableColumn>
+                <TableColumn className="bg-slate-700/50 text-slate-100">
+                  Date
+                </TableColumn>
+                <TableColumn className="bg-slate-700/50 text-slate-100">
+                  Total
+                </TableColumn>
+                <TableColumn className="bg-slate-700/50 text-slate-100">
+                  Items
+                </TableColumn>
+                <TableColumn className="bg-slate-700/50 text-slate-100">
+                  Status
+                </TableColumn>
+                <TableColumn className="bg-slate-700/50 text-slate-100 text-center">
+                  Actions
+                </TableColumn>
+              </TableHeader>
+              <TableBody>
+                {orders.map((order) => (
+                  <TableRow key={order.id}>
+                    <TableCell className="text-slate-200 font-semibold">
+                      {order.orderNumber}
+                    </TableCell>
+                    <TableCell className="text-slate-300">
+                      {formatDate(order.createdAt)}
+                    </TableCell>
+                    <TableCell className="text-slate-200 font-semibold">
+                      AED {toNumber(order.totalAmount).toFixed(2)}
+                    </TableCell>
+                    <TableCell className="text-slate-300">
+                      {order.items?.length || 0} item(s)
+                    </TableCell>
+                    <TableCell>
+                      <Chip
+                        className="capitalize"
+                        color={getStatusColor(order.status)}
+                        size="sm"
+                        variant="flat"
+                      >
+                        {order.status.replace(/_/g, " ")}
+                      </Chip>
+                    </TableCell>
+                    <TableCell className="text-center">
+                      <Button
+                        isIconOnly
+                        className="bg-slate-700 hover:bg-slate-600 text-slate-200"
+                        size="sm"
+                        onPress={() => handleViewDetails(order)}
+                      >
+                        👁️
+                      </Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
           </Card>
         )}
       </div>
-    </main>
+
+      {/* Order Detail Modal */}
+      <OrderDetailModal
+        isOpen={isDetailOpen}
+        onClose={() => setIsDetailOpen(false)}
+        order={selectedOrder}
+      />
+    </div>
   );
 }

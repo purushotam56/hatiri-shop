@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Button } from "@heroui/button";
+import Link from "next/link";
 import { useAuth } from "@/context/auth-context";
 import { LoginModal } from "./login-modal";
 import { CartSidebar } from "./cart-sidebar";
@@ -44,13 +45,23 @@ export function StoreHeader({ storeCode }: StoreHeaderProps) {
             </div>
           </div>
 
-          {/* Right Section - Login/User + Cart */}
+          {/* Right Section - Login/User + Orders + Cart */}
           <div className="flex items-center gap-3">
             {isLoggedIn && user ? (
               <div className="hidden sm:flex gap-2 items-center">
                 <span className="text-sm font-medium text-foreground">
                   {user.name || user.email}
                 </span>
+                <Link href="/orders">
+                  <Button
+                    className="bg-default-100 text-default-600"
+                    radius="full"
+                    size="sm"
+                    variant="flat"
+                  >
+                    📦 Orders
+                  </Button>
+                </Link>
                 <Button
                   className="bg-default-100 text-default-600"
                   onPress={logout}

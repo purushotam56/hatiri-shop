@@ -4,6 +4,7 @@ import OrderItem from '#models/order_item'
 import Cart from '#models/cart'
 import Address from '#models/address'
 import { errorHandler } from '#helper/error_handler'
+import PDFDocument from 'pdfkit'
 
 export default class OrdersController {
   async store({ auth, request, response }: HttpContext) {
@@ -96,6 +97,130 @@ export default class OrdersController {
         .firstOrFail()
 
       return response.ok({ order })
+    } catch (error) {
+      return errorHandler(error, { auth, response } as HttpContext)
+    }
+  }
+
+  async downloadInvoice({ auth, params, response }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const order = await Order.query()
+        .where('id', params.id)
+        .where('customerId', user.id)
+        .preload('items')
+        .firstOrFail()
+
+      // Create PDF
+      const doc = new PDFDocument()
+      
+      // Collect PDF data
+      const chunks: Buffer[] = []
+      doc.on('data', (chunk: Buffer) => {
+        chunks.push(chunk)
+      })
+
+      // Set response headers
+      response.header('Content-Type', 'application/pdf')
+      response.header('Content-Disposition', `attachment; filename="Invoice-${order.orderNumber}.pdf"`)
+
+      // Add header
+      doc.fontSize(20).font('Helvetica-Bold').text('INVOICE', { align: 'center' })
+      doc.moveDown(0.5)
+      doc.fontSize(12).font('Helvetica').text(`Order #${order.orderNumber}`, { align: 'center' })
+      doc.moveDown(0.5)
+
+      // Horizontal line
+      doc.moveTo(50, doc.y).lineTo(550, doc.y).stroke()
+      doc.moveDown(0.5)
+
+      // Order info
+      doc.fontSize(11).font('Helvetica-Bold').text('Order Information')
+      doc.fontSize(10).font('Helvetica')
+      doc.text(`Date: ${order.createdAt.toFormat('dd LLLL yyyy')}`)
+      doc.text(`Status: ${order.status.toUpperCase()}`)
+      doc.moveDown(0.5)
+
+      // Customer info
+      doc.fontSize(11).font('Helvetica-Bold').text('Customer Information')
+      doc.fontSize(10).font('Helvetica')
+      doc.text(`Name: ${order.customerName}`)
+      doc.text(`Phone: ${order.customerPhone}`)
+      doc.moveDown(0.5)
+
+      // Delivery address
+      doc.fontSize(11).font('Helvetica-Bold').text('Delivery Address')
+      doc.fontSize(10).font('Helvetica')
+      doc.text(order.deliveryAddress)
+      doc.moveDown(0.5)
+
+      // Horizontal line
+      doc.moveTo(50, doc.y).lineTo(550, doc.y).stroke()
+      doc.moveDown(0.5)
+
+      // Items table header
+      doc.fontSize(11).font('Helvetica-Bold')
+      const col1X = 50
+      const col2X = 300
+      const col3X = 400
+      const col4X = 500
+      
+      doc.text('Item', col1X, doc.y)
+      doc.text('Qty', col2X, doc.y - 15)
+      doc.text('Price', col3X, doc.y - 15)
+      doc.text('Total', col4X, doc.y - 15)
+      doc.moveDown(0.5)
+
+      // Items
+      doc.fontSize(10).font('Helvetica')
+      order.items?.forEach((item) => {
+        const price = Number(item.price)
+        const quantity = Number(item.quantity)
+        const itemTotal = price * quantity
+        doc.text(item.name, col1X, doc.y, { width: 240 })
+        doc.text(quantity.toString(), col2X, doc.y - doc.heightOfString(item.name))
+        doc.text(`AED ${price.toFixed(2)}`, col3X, doc.y - doc.heightOfString(item.name))
+        doc.text(`AED ${itemTotal.toFixed(2)}`, col4X, doc.y - doc.heightOfString(item.name))
+        doc.moveDown(1)
+      })
+
+      // Horizontal line
+      doc.moveTo(50, doc.y).lineTo(550, doc.y).stroke()
+      doc.moveDown(0.5)
+
+      // Summary
+      const summaryX = 380
+      const subtotal = Number(order.subtotal)
+      const taxAmount = Number(order.taxAmount)
+      const deliveryAmount = Number(order.deliveryAmount)
+      const totalAmount = Number(order.totalAmount)
+      
+      doc.fontSize(10).font('Helvetica')
+      doc.text(`Subtotal: AED ${subtotal.toFixed(2)}`, summaryX)
+      if (taxAmount > 0) {
+        doc.text(`Tax: AED ${taxAmount.toFixed(2)}`)
+      }
+      if (deliveryAmount > 0) {
+        doc.text(`Delivery: AED ${deliveryAmount.toFixed(2)}`)
+      }
+      
+      doc.fontSize(12).font('Helvetica-Bold')
+      doc.text(`Total: AED ${totalAmount.toFixed(2)}`)
+
+      // Footer
+      doc.moveDown(2)
+      doc.fontSize(9).font('Helvetica').text('Thank you for your purchase!', { align: 'center' })
+
+      // Finalize PDF and send response
+      await new Promise<void>((resolve, reject) => {
+        doc.on('end', () => {
+          const pdfBuffer = Buffer.concat(chunks)
+          response.send(pdfBuffer)
+          resolve()
+        })
+        doc.on('error', reject)
+        doc.end()
+      })
     } catch (error) {
       return errorHandler(error, { auth, response } as HttpContext)
     }

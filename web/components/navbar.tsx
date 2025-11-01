@@ -150,6 +150,16 @@ export const Navbar = () => {
               </Link>
             </NavbarMenuItem>
           ))}
+          <NavbarMenuItem>
+            <Link
+              color="foreground"
+              as={NextLink}
+              href="/orders"
+              size="lg"
+            >
+              📦 Orders
+            </Link>
+          </NavbarMenuItem>
         </div>
       </NavbarMenu>
     </HeroUINavbar>

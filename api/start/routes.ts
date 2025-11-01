@@ -190,6 +190,7 @@ router
         router.get('/', [OrdersController, 'index'])
         router.post('/', [OrdersController, 'store'])
         router.get('/:id', [OrdersController, 'show'])
+        router.get('/:id/invoice', [OrdersController, 'downloadInvoice'])
       })
       .prefix('/orders')
       .middleware(middleware.auth({ guards: ['api'] }))
