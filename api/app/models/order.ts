@@ -1,9 +1,9 @@
 import { DateTime } from 'luxon'
-import { BaseModel, belongsTo, column } from '@adonisjs/lucid/orm'
-import type { BelongsTo } from '@adonisjs/lucid/types/relations'
+import { BaseModel, belongsTo, hasMany, column } from '@adonisjs/lucid/orm'
+import type { BelongsTo, HasMany } from '@adonisjs/lucid/types/relations'
 import User from '#models/user'
-import Organisation from '#models/organisation'
-import Branch from '#models/branch'
+import Address from '#models/address'
+import OrderItem from '#models/order_item'
 
 export type OrderStatus = 'pending' | 'confirmed' | 'preparing' | 'ready' | 'out_for_delivery' | 'delivered' | 'cancelled'
 
@@ -25,20 +25,17 @@ export default class Order extends BaseModel {
   declare customer: BelongsTo<typeof User>
 
   @column()
-  declare organisationId: number
+  declare addressId: number
 
-  @belongsTo(() => Organisation, {
-    foreignKey: 'organisationId',
+  @belongsTo(() => Address, {
+    foreignKey: 'addressId',
   })
-  declare organisation: BelongsTo<typeof Organisation>
+  declare address: BelongsTo<typeof Address>
 
-  @column()
-  declare branchId: number
-
-  @belongsTo(() => Branch, {
-    foreignKey: 'branchId',
+  @hasMany(() => OrderItem, {
+    foreignKey: 'orderId',
   })
-  declare branch: BelongsTo<typeof Branch>
+  declare items: HasMany<typeof OrderItem>
 
   @column()
   declare totalAmount: number

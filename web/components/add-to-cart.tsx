@@ -3,52 +3,64 @@
 import React, { useState } from "react";
 import { useCart } from "@/context/cart-context";
 
-interface Product {
+interface Variant {
+  id: number;
+  sku?: string;
+  price: number;
+  stock: number;
+  unit?: string;
+  quantity?: string;
+  options?: string | any[];
+}
+
+interface ProductGroup {
   id: number;
   name: string;
   price: number;
   currency: string;
   stock: number;
-  sku?: string;
   unit?: string;
-  options?: string | any[];
-}
-
-interface ProductGroup {
-  baseProduct: Product;
-  variants: Product[];
+  variants: Variant[];
 }
 
 interface AddToCartProps {
   group: ProductGroup;
 }
 
-const getVariantName = (variant: Product): string => {
+const getVariantName = (variant: Variant): string => {
   try {
     const opts =
       typeof variant.options === "string"
         ? JSON.parse(variant.options)
         : variant.options;
-    return Array.isArray(opts) && opts.length > 0 ? opts[0] : variant.name;
+    return Array.isArray(opts) && opts.length > 0 ? opts[0] : variant.unit || `Option ${variant.id}`;
   } catch (e) {
-    return variant.name;
+    return variant.unit || `Option ${variant.id}`;
   }
 };
 
 export function AddToCart({ group }: AddToCartProps) {
   const { addToCart } = useCart();
-  const [selectedVariant, setSelectedVariant] = useState<string>(
-    getVariantName(group.variants[0])
+  const [selectedVariant, setSelectedVariant] = useState<number>(
+    group.variants[0]?.id || 0
   );
+  const [showVariantSlider, setShowVariantSlider] = useState(false);
 
-  const product = group.baseProduct;
-  const selected = group.variants.find(
-    (v) => getVariantName(v) === selectedVariant
-  );
+  const selected = group.variants.find((v) => v.id === selectedVariant);
 
-  const handleAddToCart = () => {
-    if (selected && selected.stock > 0) {
-      addToCart(selected);
+  const handleAddClick = () => {
+    if (group.variants.length > 1) {
+      setShowVariantSlider(true);
+    } else if (selected && selected.stock > 0) {
+      addToCart({
+        id: selected.id,
+        name: group.name,
+        price: selected.price,
+        currency: group.currency,
+        stock: selected.stock,
+        sku: selected.sku,
+        unit: selected.unit,
+      });
     }
   };
 
@@ -56,55 +68,100 @@ export function AddToCart({ group }: AddToCartProps) {
     group.variants.length > 0 && group.variants.every((v) => v.stock === 0);
 
   return (
-    <div className="space-y-3">
-      {/* Variant Selector Slider */}
-      {group.variants.length > 1 && (
-        <div>
-          <label className="text-xs text-slate-600 mb-2 block font-medium">
-            Select variant:
-          </label>
-          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-            {group.variants.map((variant) => {
-              const variantName = getVariantName(variant);
-              const isSelected = selectedVariant === variantName;
-              return (
-                <button
-                  key={variant.id}
-                  onClick={() => setSelectedVariant(variantName)}
-                  className={`flex-shrink-0 px-3 py-2 rounded-lg font-semibold text-xs transition-all whitespace-nowrap border-2 ${
-                    isSelected
-                      ? "bg-blue-600 text-white border-blue-600 shadow-md"
-                      : "bg-slate-100 text-slate-700 border-slate-300 hover:border-blue-400"
-                  } ${variant.stock === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
-                  disabled={variant.stock === 0}
-                >
-                  <div className="flex flex-col items-center gap-1">
-                    <span>{variant.unit || variant.name.split("-").pop()}</span>
-                    {isSelected && (
-                      <span className="text-xs font-bold">
-                        ₹{parseFloat(String(variant.price)).toFixed(0)}
-                      </span>
-                    )}
-                  </div>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
+    <>
       {/* Add Button */}
       <button
-        onClick={handleAddToCart}
+        onClick={handleAddClick}
         disabled={isOutOfStock || (selected?.stock || 0) === 0}
-        className={`w-full py-2.5 rounded-full font-bold text-sm transition-all transform hover:scale-105 shadow-md ${
+        className={`w-full py-2 rounded-lg font-bold text-xs md:text-sm transition-all ${
           isOutOfStock || (selected?.stock || 0) === 0
-            ? "bg-slate-200 text-slate-500 cursor-not-allowed opacity-50"
-            : "bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 active:scale-95"
+            ? "bg-default-200 text-foreground/50 cursor-not-allowed opacity-50"
+            : "bg-primary text-primary-foreground hover:bg-primary/90 active:scale-95"
         }`}
       >
-        {isOutOfStock ? "Out of Stock" : "Add to Cart"}
+        {isOutOfStock ? "Out of Stock" : "Add"}
       </button>
-    </div>
+
+      {/* Bottom Slider Modal */}
+      {showVariantSlider && group.variants.length > 1 && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/20 z-40"
+            onClick={() => setShowVariantSlider(false)}
+          />
+
+          {/* Slider Content */}
+          <div className="fixed bottom-0 left-0 right-0 bg-background rounded-t-2xl shadow-2xl z-50 animate-in slide-in-from-bottom-5 duration-300">
+            {/* Handle Bar */}
+            <div className="flex justify-center pt-2 pb-1">
+              <div className="w-12 h-1 rounded-full bg-divider" />
+            </div>
+
+            {/* Content */}
+            <div className="px-4 pb-6 pt-2 max-h-[60vh] overflow-y-auto">
+              {/* Header */}
+              <div className="mb-4 flex items-center justify-between">
+                <h3 className="text-lg font-bold text-foreground">Select Option</h3>
+                <button
+                  onClick={() => setShowVariantSlider(false)}
+                  className="text-foreground/60 hover:text-foreground text-xl font-bold"
+                >
+                  ✕
+                </button>
+              </div>
+
+              {/* Variant Options */}
+              <div className="space-y-3 mb-6">
+                {group.variants.map((variant) => {
+                  const isDisabled = variant.stock === 0;
+
+                  return (
+                    <div
+                      key={variant.id}
+                      className="flex items-center justify-between gap-3 p-3 rounded-lg bg-default-50 hover:bg-default-100 transition-all"
+                    >
+                      <div className="flex-1 min-w-0">
+                        <p className="font-semibold text-foreground text-sm">
+                          {variant.quantity && variant.unit
+                            ? `${variant.quantity} ${variant.unit}`
+                            : variant.unit || `Option ${variant.id}`}
+                        </p>
+                        <p className="text-lg font-bold text-primary">
+                          ₹{parseFloat(String(variant.price)).toFixed(0)}
+                        </p>
+                      </div>
+
+                      {/* Add Button */}
+                      <button
+                        onClick={() => {
+                          if (!isDisabled) {
+                            addToCart({
+                              id: variant.id,
+                              name: group.name,
+                              price: variant.price,
+                              currency: group.currency,
+                              stock: variant.stock,
+                              sku: variant.sku,
+                              unit: variant.unit,
+                            });
+                            setShowVariantSlider(false);
+                          }
+                        }}
+                        disabled={isDisabled}
+                        className="flex-shrink-0 px-4 py-2 bg-primary text-primary-foreground rounded-lg font-bold text-sm transition-all hover:bg-primary/90 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        Add
+                      </button>
+                    </div>
+                  );
+                })}
+              </div>
+
+            </div>
+          </div>
+        </>
+      )}
+    </>
   );
 }

@@ -462,4 +462,25 @@ export default class AuthController {
         .firstOrFail()
     }
   }
+
+  // Customer session check endpoint
+  async checkCustomerSession({ auth, response }: HttpContext) {
+    try {
+      const user = await auth.authenticate()
+      return response.ok({
+        isLoggedIn: true,
+        user: {
+          id: user.id,
+          email: user.email,
+          phoneNumber: user.mobile,
+          name: user.fullName,
+        },
+      })
+    } catch (error) {
+      return response.ok({
+        isLoggedIn: false,
+        user: null,
+      })
+    }
+  }
 }

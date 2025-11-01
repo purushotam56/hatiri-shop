@@ -18,20 +18,12 @@ export default class extends BaseSchema {
         .onDelete('CASCADE')
       
       table
-        .integer('organisation_id')
+        .integer('address_id')
         .unsigned()
-        .notNullable()
+        .nullable()
         .references('id')
-        .inTable('organisation')
-        .onDelete('CASCADE')
-      
-      table
-        .integer('branch_id')
-        .unsigned()
-        .notNullable()
-        .references('id')
-        .inTable('branchs')
-        .onDelete('CASCADE')
+        .inTable('addresses')
+        .onDelete('SET NULL')
       
       table.enum('status', [
         'pending',

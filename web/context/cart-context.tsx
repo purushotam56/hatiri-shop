@@ -1,11 +1,17 @@
+"use client";
+
 import React, { createContext, useContext, ReactNode, useState, useEffect } from "react";
+import { useAuth } from "./auth-context";
 
 export interface CartItem {
   id: number;
+  productId?: number;
+  variantId?: number;
   name: string;
   price: number;
   quantity: number;
   currency: string;
+  unit?: string;
 }
 
 interface CartContextType {
@@ -16,87 +22,226 @@ interface CartContextType {
   clearCart: () => void;
   cartCount: number;
   cartTotal: number;
+  isLoading: boolean;
+  syncCart: () => Promise<void>;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-export function CartProvider({ children }: { children: ReactNode }) {
-  const [cart, setCart] = useState<CartItem[]>([]);
+const API_URL = "http://localhost:3333/api";
 
-  // Load cart from localStorage
+export function CartProvider({ children }: { children: ReactNode }) {
+  const { isLoggedIn, user } = useAuth();
+  const [cart, setCart] = useState<CartItem[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [localCart, setLocalCart] = useState<CartItem[]>([]);
+  const [mounted, setMounted] = useState(false);
+
+  // Load local cart from localStorage on mount
   useEffect(() => {
+    setMounted(true);
     if (typeof window !== "undefined") {
       const storedCart = localStorage.getItem("cart");
       if (storedCart) {
-        setCart(JSON.parse(storedCart));
+        setLocalCart(JSON.parse(storedCart));
       }
     }
   }, []);
 
-  // Save cart to localStorage
+  // Fetch cart from backend only when user logs in
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("cart", JSON.stringify(cart));
+    if (isLoggedIn && mounted) {
+      fetchCart();
     }
-  }, [cart]);
+  }, [isLoggedIn, mounted]);
 
-  const addToCart = (product: any) => {
-    const existing = cart.find((item) => item.id === product.id);
-    if (existing) {
-      setCart(
-        cart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
-      );
-    } else {
-      setCart([
-        ...cart,
-        {
-          id: product.id,
-          name: product.name,
-          price: product.price,
-          quantity: 1,
-          currency: product.currency,
+  // Save local cart to localStorage when not logged in
+  useEffect(() => {
+    if (!isLoggedIn && mounted && typeof window !== "undefined") {
+      localStorage.setItem("cart", JSON.stringify(localCart));
+    }
+  }, [localCart, isLoggedIn, mounted]);
+
+  const fetchCart = async () => {
+    if (!isLoggedIn) return;
+    setIsLoading(true);
+    try {
+      const response = await fetch(`${API_URL}/cart`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
-      ]);
+      });
+      const data = await response.json();
+      if (data.items) {
+        setCart(data.items);
+      }
+    } catch (error) {
+      console.error("Failed to fetch cart:", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  const removeFromCart = (id: number) => {
-    setCart(cart.filter((item) => item.id !== id));
+  const syncCart = async () => {
+    if (!isLoggedIn) return;
+    try {
+      // Sync local cart items to backend
+      for (const item of localCart) {
+        await fetch(`${API_URL}/cart`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify(item),
+        });
+      }
+      setLocalCart([]);
+      await fetchCart();
+    } catch (error) {
+      console.error("Failed to sync cart:", error);
+    }
   };
 
-  const updateQuantity = (id: number, quantity: number) => {
-    if (quantity <= 0) {
-      removeFromCart(id);
+  const addToCart = async (product: any) => {
+    if (isLoggedIn) {
+      // Add to backend
+      try {
+        const response = await fetch(`${API_URL}/cart`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify({
+            productId: product.productId || product.id,
+            variantId: product.variantId || product.id,
+            name: product.name,
+            price: product.price,
+            quantity: product.quantity || 1,
+            currency: product.currency || "AED",
+            unit: product.unit,
+          }),
+        });
+        const data = await response.json();
+        if (data.item) {
+          await fetchCart();
+        }
+      } catch (error) {
+        console.error("Failed to add to cart:", error);
+      }
     } else {
-      setCart(
-        cart.map((item) =>
+      // Add to local cart
+      const existing = localCart.find(
+        (item) => item.variantId === (product.variantId || product.id)
+      );
+      if (existing) {
+        setLocalCart(
+          localCart.map((item) =>
+            item.variantId === (product.variantId || product.id)
+              ? { ...item, quantity: item.quantity + (product.quantity || 1) }
+              : item
+          )
+        );
+      } else {
+        setLocalCart([
+          ...localCart,
+          {
+            id: product.id || Date.now(),
+            productId: product.productId,
+            variantId: product.variantId || product.id,
+            name: product.name,
+            price: product.price,
+            quantity: product.quantity || 1,
+            currency: product.currency || "AED",
+            unit: product.unit,
+          },
+        ]);
+      }
+    }
+  };
+
+  const removeFromCart = async (id: number) => {
+    if (isLoggedIn) {
+      try {
+        await fetch(`${API_URL}/cart/${id}`, {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
+        await fetchCart();
+      } catch (error) {
+        console.error("Failed to remove from cart:", error);
+      }
+    } else {
+      setLocalCart(localCart.filter((item) => item.id !== id));
+    }
+  };
+
+  const updateQuantity = async (id: number, quantity: number) => {
+    if (quantity <= 0) {
+      await removeFromCart(id);
+    } else if (isLoggedIn) {
+      try {
+        await fetch(`${API_URL}/cart/${id}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+          body: JSON.stringify({ quantity }),
+        });
+        await fetchCart();
+      } catch (error) {
+        console.error("Failed to update quantity:", error);
+      }
+    } else {
+      setLocalCart(
+        localCart.map((item) =>
           item.id === id ? { ...item, quantity } : item
         )
       );
     }
   };
 
-  const clearCart = () => {
-    setCart([]);
+  const clearCart = async () => {
+    if (isLoggedIn) {
+      try {
+        await fetch(`${API_URL}/cart`, {
+          method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        });
+        setCart([]);
+      } catch (error) {
+        console.error("Failed to clear cart:", error);
+      }
+    } else {
+      setLocalCart([]);
+    }
   };
 
-  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
-  const cartTotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const displayCart = isLoggedIn ? cart : localCart;
+  const cartCount = displayCart.reduce((sum, item) => sum + item.quantity, 0);
+  const cartTotal = displayCart.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
 
   return (
     <CartContext.Provider
       value={{
-        cart,
+        cart: displayCart,
         addToCart,
         removeFromCart,
         updateQuantity,
         clearCart,
         cartCount,
         cartTotal,
+        isLoading,
+        syncCart,
       }}
     >
       {children}

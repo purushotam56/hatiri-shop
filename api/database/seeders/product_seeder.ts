@@ -892,7 +892,7 @@ export default class extends BaseSeeder {
         sku: `${skuBase}-${String(variantIndex).padStart(3, '0')}`,
         price: variant.price,
         stock: variant.stock,
-        unit: key || 'piece',
+        unit: value,
         imageUrl: null,
         options: variant.options || [],
       })

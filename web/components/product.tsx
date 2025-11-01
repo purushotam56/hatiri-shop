@@ -2,21 +2,25 @@ import React from "react";
 import Link from "next/link";
 import { AddToCart } from "./add-to-cart";
 
-interface Product {
+interface Variant {
+  id: number;
+  sku?: string;
+  price: number;
+  stock: number;
+  unit?: string;
+  options?: string | any[];
+}
+
+interface ProductGroup {
   id: number;
   name: string;
   price: number;
   currency: string;
   stock: number;
-  sku?: string;
   unit?: string;
-  options?: string | any[];
   category?: string;
-}
-
-interface ProductGroup {
-  baseProduct: Product;
-  variants: Product[];
+  imageUrl?: string | null;
+  variants: Variant[];
 }
 
 interface ProductProps {
@@ -25,73 +29,52 @@ interface ProductProps {
   getCategoryEmoji: (name: string) => string;
 }
 
-const getVariantName = (variant: Product): string => {
-  try {
-    const opts =
-      typeof variant.options === "string"
-        ? JSON.parse(variant.options)
-        : variant.options;
-    return Array.isArray(opts) && opts.length > 0 ? opts[0] : variant.name;
-  } catch (e) {
-    return variant.name;
-  }
-};
-
 export function Product({ group, onProductClick, getCategoryEmoji }: ProductProps) {
-  const product = group.baseProduct;
-  const selectedVariant = group.variants[0];
+  const product = group;
 
   return (
-    <Link href={onProductClick(product.id)}>
-      <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all border border-slate-200 hover:border-blue-400 cursor-pointer">
-        {/* Product Image */}
-        <div className="relative bg-gradient-to-br from-slate-100 via-slate-50 to-slate-100 h-40 flex items-center justify-center overflow-hidden border-b border-slate-200">
-          <div className="text-6xl group-hover:scale-125 transition-transform duration-300">
-            {getCategoryEmoji(product.name)}
-          </div>
-          {(selectedVariant?.stock || product.stock) === 0 && (
-            <div className="absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm">
-              <span className="text-white font-bold text-sm">OUT OF STOCK</span>
-            </div>
-          )}
-          {(selectedVariant?.stock || product.stock) < 5 &&
-            (selectedVariant?.stock || product.stock) > 0 && (
-              <div className="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-                Only {selectedVariant?.stock || product.stock} left!
-              </div>
-            )}
+    <div className="group bg-default-50 rounded-xl overflow-hidden border border-divider hover:border-primary hover:shadow-md transition-all cursor-pointer h-full flex flex-col">
+      {/* Product Image */}
+      <div className="relative bg-default-100 flex-shrink-0 h-24 md:h-32 flex items-center justify-center overflow-hidden border-b border-divider">
+        <div className="text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-300">
+          {getCategoryEmoji(product.name)}
         </div>
+        {product.stock === 0 && (
+          <div className="absolute inset-0 bg-foreground/20 flex items-center justify-center backdrop-blur-sm">
+            <span className="text-foreground font-bold text-xs md:text-sm">SOLD OUT</span>
+          </div>
+        )}
+        {product.stock < 5 && product.stock > 0 && (
+          <div className="absolute top-1 right-1 bg-danger/90 text-background px-1.5 py-0.5 rounded-full text-xs font-bold shadow-sm">
+            {product.stock}
+          </div>
+        )}
+      </div>
 
-        {/* Product Info */}
-        <div className="p-4">
-          <h3 className="font-bold text-slate-900 text-sm line-clamp-2 mb-2 group-hover:text-blue-600 transition-colors">
+      {/* Product Info */}
+      <div className="p-3 flex-1 flex flex-col">
+        <Link href={`/product/${product.id}`}>
+          <h3 className="font-semibold text-foreground text-xs md:text-sm line-clamp-2 mb-1 group-hover:text-primary transition-colors">
             {product.name}
           </h3>
-
-        {(selectedVariant?.unit || product.unit) && (
-          <p className="text-xs text-slate-500 mb-3 font-medium">
-            {selectedVariant?.unit || product.unit}
+        </Link>
+        {product.unit && (
+          <p className="text-xs text-foreground/60 mb-2 font-medium">
+            {product.unit}
           </p>
         )}
 
         {/* Price */}
-        <div className="flex items-baseline justify-between mb-4">
-          <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
-            ₹{parseFloat(
-              String(selectedVariant?.price || product.price)
-            ).toFixed(0)}
+        <div className="flex items-center justify-between gap-2 mb-3 mt-auto">
+          <span className="text-lg md:text-xl font-bold text-primary">
+            ₹{parseFloat(String(product.price)).toFixed(0)}
           </span>
-          {(selectedVariant?.sku || product.sku) && (
-            <span className="text-xs text-slate-400 font-mono">
-              {selectedVariant?.sku || product.sku}
-            </span>
-          )}
         </div>
 
         {/* Add To Cart Component */}
         <AddToCart group={group} />
       </div>
     </div>
-    </Link>
+
   );
 }

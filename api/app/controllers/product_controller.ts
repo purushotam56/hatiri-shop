@@ -47,9 +47,60 @@ export default class ProductController {
       }
 
       const products = await query.paginate(page, limit)
+      
+      // Group products by base SKU
+      const grouped: { [key: string]: Product[] } = {}
+      products.all().forEach((product: Product) => {
+        const skuParts = product.sku?.split('-') || []
+        const baseSku = skuParts.slice(0, -1).join('-') || product.sku || product.name
+        
+        if (!grouped[baseSku]) {
+          grouped[baseSku] = []
+        }
+        grouped[baseSku].push(product)
+      })
+
+      // Format grouped products
+      const groupedProducts = Object.values(grouped).map((variants) => ({
+        id: variants[0].id,
+        name: variants[0].name,
+        description: variants[0].description,
+        price: variants[0].price,
+        currency: variants[0].currency,
+        categoryId: variants[0].categoryId,
+        category: variants[0].category,
+        imageUrl: variants[0].imageUrl,
+        imageId: variants[0].imageId,
+        organisationId: variants[0].organisationId,
+        isActive: variants[0].isActive,
+        createdAt: variants[0].createdAt,
+        updatedAt: variants[0].updatedAt,
+        variants: variants.map((v) => {
+          // Extract quantity number from unit (e.g., "1kg" -> "1")
+          let quantity = ''
+          const quantityMatch = v.unit?.match(/^(\d+)/)
+          if (quantityMatch) {
+            quantity = quantityMatch[1]
+          }
+
+          return {
+            id: v.id,
+            sku: v.sku,
+            price: v.price,
+            stock: v.stock,
+            unit: v.unit,
+            quantity: quantity,
+            options: v.options,
+          }
+        }),
+      }))
+
       return response.ok({
         message: 'Products fetched successfully',
-        data: products,
+        data: {
+          meta: products.getMeta(),
+          data: groupedProducts,
+        },
       })
     } catch (error) {
       return response.internalServerError({

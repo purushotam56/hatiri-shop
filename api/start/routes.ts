@@ -20,6 +20,9 @@ const AdminController = () => import('#controllers/admin_controller')
 const SellerController = () => import('#controllers/seller_controller')
 const ProductController = () => import('#controllers/product_controller')
 const ProductCategoryController = () => import('#controllers/product_category_controller')
+const AddressesController = () => import('#controllers/addresses_controller')
+const CartsController = () => import('#controllers/carts_controller')
+const OrdersController = () => import('#controllers/orders_controller')
 
 router
   .group(() => {
@@ -81,6 +84,10 @@ router
     router
       .get('check_session', [AuthController, 'validateToken'])
       .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+    // Customer session check endpoint
+    router
+      .get('customer/session', [AuthController, 'checkCustomerSession'])
+      .use(middleware.auth({ guards: ['api'] }))
     router.post('login_otp', [AuthController, 'sendLoginOtp'])
     router.post('login_otp_verify', [AuthController, 'verifyLoginOtp'])
     router
@@ -158,6 +165,34 @@ router
     // Get categories for a specific organisation
     router
       .get('organisation/:organisationId/categories', [ProductCategoryController, 'getByOrganisation'])
+
+    // Address routes - authenticated only
+    router
+      .resource('addresses', AddressesController)
+      .apiOnly()
+      .use(['store', 'update', 'destroy', 'show', 'index'], middleware.auth({ guards: ['api'] }))
+
+    // Cart routes - authenticated only
+    router
+      .group(() => {
+        router.get('/', [CartsController, 'index'])
+        router.post('/', [CartsController, 'store'])
+        router.patch('/:id', [CartsController, 'update'])
+        router.delete('/:id', [CartsController, 'destroy'])
+        router.delete('/', [CartsController, 'clear'])
+      })
+      .prefix('/cart')
+      .middleware(middleware.auth({ guards: ['api'] }))
+
+    // Order routes - authenticated only
+    router
+      .group(() => {
+        router.get('/', [OrdersController, 'index'])
+        router.post('/', [OrdersController, 'store'])
+        router.get('/:id', [OrdersController, 'show'])
+      })
+      .prefix('/orders')
+      .middleware(middleware.auth({ guards: ['api'] }))
   })
   .prefix('/api')
 
