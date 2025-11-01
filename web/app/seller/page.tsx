@@ -3,9 +3,11 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { COLORS, GRADIENTS, COMPONENTS, UTILS } from '@/lib/theme'
+import { useSellerStore, type Store } from '@/context/seller-store-context'
 
 export default function SellerAuthPage() {
   const router = useRouter()
+  const { setSelectedStore, setStores, stores } = useSellerStore()
   const [activeTab, setActiveTab] = useState('login')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
@@ -14,7 +16,6 @@ export default function SellerAuthPage() {
   const [loginForm, setLoginForm] = useState({
     email: '',
     password: '',
-    organisationCode: '',
   })
 
   // Register form
@@ -59,14 +60,52 @@ export default function SellerAuthPage() {
 
       localStorage.setItem('sellerToken', data.token)
       localStorage.setItem('sellerUser', JSON.stringify(data.user))
-      localStorage.setItem('sellerOrg', JSON.stringify(data.organisation))
+      
+      // Store the available stores
+      if (data.stores && data.stores.length > 0) {
+        setStores(data.stores)
 
-      router.push(`/seller/${data.organisation.id}/dashboard`)
+        // If only one store, auto-select it
+        if (data.stores.length === 1) {
+          await selectStoreAndRedirect(data.stores[0], data.token)
+        } else {
+          // Multiple stores, redirect to store selection
+          router.push('/seller/select-store')
+        }
+      }
     } catch (err) {
       setError('Connection error')
       console.error(err)
     } finally {
       setLoading(false)
+    }
+  }
+
+  const selectStoreAndRedirect = async (store: Store, token: string) => {
+    try {
+      const response = await fetch('http://localhost:3333/api/seller/select-store', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ storeId: store.id }),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        setError(data.message || 'Failed to select store')
+        return
+      }
+
+      // Update with the new token that includes store ID
+      localStorage.setItem('sellerToken', data.token)
+      setSelectedStore(data.store)
+      router.push(`/seller/${store.id}/dashboard`)
+    } catch (err) {
+      setError('Failed to select store')
+      console.error(err)
     }
   }
 
@@ -94,7 +133,6 @@ export default function SellerAuthPage() {
       setLoginForm({
         email: registerForm.email,
         password: registerForm.password,
-        organisationCode: registerForm.organisationCode,
       })
     } catch (err) {
       setError('Connection error')
@@ -151,22 +189,6 @@ export default function SellerAuthPage() {
             {/* Login Form */}
             {activeTab === 'login' && (
               <form onSubmit={handleLogin} className="space-y-5">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-200 mb-2">
-                    Organization Code
-                  </label>
-                  <input
-                    type="text"
-                    name="organisationCode"
-                    placeholder="e.g., FM001"
-                    value={loginForm.organisationCode}
-                    onChange={handleLoginChange}
-                    disabled={loading}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all disabled:opacity-50"
-                    required
-                  />
-                </div>
-
                 <div>
                   <label className="block text-sm font-semibold text-slate-200 mb-2">
                     Email Address
@@ -331,7 +353,6 @@ export default function SellerAuthPage() {
 
             <div className="mt-6 pt-6 border-t border-slate-600 bg-slate-700/30 rounded-lg p-4 text-xs text-slate-300">
               <p className="font-semibold text-orange-400 mb-2">Test Account:</p>
-              <p className="mb-1"><span className="text-slate-400">Org Code:</span> FM001</p>
               <p className="mb-1"><span className="text-slate-400">Email:</span> seller1@example.com</p>
               <p><span className="text-slate-400">Password:</span> Password@123</p>
             </div>

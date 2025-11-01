@@ -1,11 +1,18 @@
-export default function SellerLayout({
+'use client'
+
+import { SellerStoreProvider } from '@/context/seller-store-context'
+import { SellerLayout } from '@/components/layouts/seller-layout'
+
+export default function SellerRootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <>
-      {children}
-    </>
+    <SellerStoreProvider>
+      <SellerLayout>
+        {children}
+      </SellerLayout>
+    </SellerStoreProvider>
   );
 }

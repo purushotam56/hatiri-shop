@@ -1,55 +1,52 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter, useParams } from 'next/navigation'
 import { Button } from '@heroui/button'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import Link from 'next/link'
+import { useSellerStore } from '@/context/seller-store-context'
 
 export default function SellerSettingsPage() {
   const router = useRouter()
   const params = useParams()
   const orgId = params.id
+  const { selectedStore, clearStore } = useSellerStore()
+  const [storeLoaded, setStoreLoaded] = useState(false)
 
+  // First effect: wait for store to load from localStorage
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setStoreLoaded(true)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Second effect: check auth and store selection
+  useEffect(() => {
+    if (!storeLoaded) return
+
     const token = localStorage.getItem('sellerToken')
     if (!token) {
       router.push('/seller')
+      return
     }
-  }, [router])
+
+    // Verify store match
+    if (!selectedStore || (selectedStore?.id !== Number(orgId) && selectedStore?.id !== orgId)) {
+      router.push('/seller/select-store')
+    }
+  }, [router, orgId, selectedStore, storeLoaded])
 
   const handleLogout = () => {
     localStorage.removeItem('sellerToken')
     localStorage.removeItem('sellerUser')
-    localStorage.removeItem('sellerOrg')
+    clearStore()
     router.push('/seller')
   }
 
   return (
     <main className="min-h-screen bg-default-50 pb-20">
-      {/* Header */}
-      <div className="sticky top-0 z-30 bg-white dark:bg-default-100 border-b border-default-200">
-        <div className="max-w-2xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Link href={`/seller/${orgId}/dashboard`}>
-              <Button isIconOnly variant="light" size="sm">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </Button>
-            </Link>
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">Settings</h1>
-            </div>
-          </div>
-          <Button isIconOnly color="default" variant="light" onPress={handleLogout}>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-            </svg>
-          </Button>
-        </div>
-      </div>
-
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
         {/* Profile Section */}
         <Card>

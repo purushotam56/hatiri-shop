@@ -141,12 +141,15 @@ router
       .group(() => {
         router.post('/register', [SellerController, 'registerSeller'])
         router.post('/login', [SellerController, 'sellerLogin'])
+        router.get('/stores', [SellerController, 'getSellerStores']).use(middleware.auth({ guards: ['api'] }))
+        router.post('/select-store', [SellerController, 'selectStore']).use(middleware.auth({ guards: ['api'] }))
         router.get('/:id/dashboard', [SellerController, 'getDashboard']).use(middleware.auth({ guards: ['api'] }))
         router.get('/:id/orders', [SellerController, 'getOrders']).use(middleware.auth({ guards: ['api'] }))
         router.get('/:id/orders/:orderId', [SellerController, 'getOrderDetail']).use(middleware.auth({ guards: ['api'] }))
         router.patch('/:id/orders/:orderId/status', [SellerController, 'updateOrderStatus']).use(middleware.auth({ guards: ['api'] }))
         router.get('/:id/customers', [SellerController, 'getCustomers']).use(middleware.auth({ guards: ['api'] }))
         router.get('/:id/customers/:customerId/orders', [SellerController, 'getCustomerOrders']).use(middleware.auth({ guards: ['api'] }))
+        router.get('/:id/products', [SellerController, 'getProducts']).use(middleware.auth({ guards: ['api'] }))
       })
       .prefix('/seller')
 

@@ -1,10 +1,11 @@
 import { DateTime } from 'luxon'
-import { BaseModel, column, belongsTo, manyToMany } from '@adonisjs/lucid/orm'
-import type { BelongsTo, ManyToMany } from '@adonisjs/lucid/types/relations'
+import { BaseModel, column, belongsTo, manyToMany, hasMany } from '@adonisjs/lucid/orm'
+import type { BelongsTo, ManyToMany, HasMany } from '@adonisjs/lucid/types/relations'
 import Organisation from './organisation.js'
 import Branch from './branch.js'
 import Upload from './upload.js'
 import ProductCategory from './product_category.js'
+import OrderItem from './order_item.js'
 import { PRODUCTS, BRANCH_PRODUCTS } from '#database/constants/table_names'
 
 export default class Product extends BaseModel {
@@ -24,6 +25,11 @@ export default class Product extends BaseModel {
     pivotTable: BRANCH_PRODUCTS,
   })
   declare branches: ManyToMany<typeof Branch>
+
+  @hasMany(() => OrderItem, {
+    foreignKey: 'productId',
+  })
+  declare orderItems: HasMany<typeof OrderItem>
 
   // basic product fields
   @column()

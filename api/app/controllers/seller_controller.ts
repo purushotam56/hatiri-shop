@@ -2,7 +2,20 @@ import { HttpContext } from '@adonisjs/core/http'
 import User from '#models/user'
 import Organisation from '#models/organisation'
 import Order from '#models/order'
+import Product from '#models/product'
 import { errorHandler } from '#helper/error_handler'
+
+// Helper function to filter orders by seller organisation
+function filterOrdersByOrganisation(orders: any[], organisationId: number): any[] {
+  return orders.filter((order) => {
+    if (!order.items || !Array.isArray(order.items) || order.items.length === 0) {
+      return false
+    }
+    return order.items.some((item: any) => {
+      return item && item.product && item.product.organisationId === organisationId
+    })
+  })
+}
 
 export default class SellerController {
   /**
@@ -71,39 +84,29 @@ export default class SellerController {
   }
 
   /**
-   * Seller login
+   * Seller login - returns user and list of stores they belong to
    */
   async sellerLogin({ request, response }: HttpContext) {
     try {
-      const { email, password, organisationCode } = request.only(['email', 'password', 'organisationCode'])
-
-      if (!organisationCode) {
-        return response.badRequest({
-          message: 'Organization code is required',
-        })
-      }
+      const { email, password } = request.only(['email', 'password'])
 
       // Verify credentials
       const user = await User.verifyCredentials(email, password)
 
-      // Find organization
-      const organisation = await Organisation.findBy('organisationUniqueCode', organisationCode)
-      if (!organisation) {
-        return response.notFound({
-          message: 'Organization not found',
-        })
-      }
+      // Fetch all organizations where this user is a member
+      const organisations = await Organisation.query()
+        .select('id', 'name', 'organisationUniqueCode')
+        .preload('user', (q) => q.where('user_id', user.id))
+        .whereHas('user', (q) => q.where('user_id', user.id))
 
-      // Check if user is associated with organization
-      const orgUser = await organisation.related('user').query().where('user_id', user.id).first()
-      if (!orgUser) {
+      if (organisations.length === 0) {
         return response.forbidden({
-          message: 'You are not authorized for this organization',
+          message: 'You are not authorized as a seller',
         })
       }
 
-      // Create token
-      const token = await User.accessTokens.create(user, ['seller', String(organisation.id)])
+      // Create a temporary token for store selection
+      const token = await User.accessTokens.create(user, ['seller'])
 
       return response.ok({
         message: 'Login successful',
@@ -112,15 +115,81 @@ export default class SellerController {
           id: user.id,
           email: user.email,
           fullName: user.fullName,
+          mobile: user.mobile,
         },
-        organisation: {
-          id: organisation.id,
-          name: organisation.name,
-          code: organisation.organisationUniqueCode,
-        },
+        stores: organisations.map((org) => ({
+          id: org.id,
+          name: org.name,
+          code: org.organisationUniqueCode,
+        })),
       })
     } catch (error) {
       return errorHandler(error || 'Invalid credentials', { request, response } as HttpContext)
+    }
+  }
+
+  /**
+   * Get seller's stores
+   */
+  async getSellerStores({ response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail() as any
+
+      const organisations = await Organisation.query()
+        .select('id', 'name', 'organisationUniqueCode', 'currency', 'dateFormat')
+        .preload('user', (q) => q.where('user_id', user.id))
+        .whereHas('user', (q) => q.where('user_id', user.id))
+
+      return response.ok({
+        stores: organisations,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch stores', { response } as any)
+    }
+  }
+
+  /**
+   * Select store and get updated token
+   */
+  async selectStore({ request, response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail() as any
+      const { storeId } = request.only(['storeId'])
+
+      if (!storeId) {
+        return response.badRequest({
+          message: 'Store ID is required',
+        })
+      }
+
+      // Verify user belongs to this organization
+      const organisation = await Organisation.query()
+        .where('id', storeId)
+        .preload('user', (q) => q.where('user_id', user.id))
+        .first()
+
+      if (!organisation || organisation.user.length === 0) {
+        return response.forbidden({
+          message: 'You are not authorized for this store',
+        })
+      }
+
+      // Create new token with store ID
+      const newToken = await User.accessTokens.create(user as User, ['seller', String(storeId)])
+
+      return response.ok({
+        message: 'Store selected successfully',
+        token: newToken.value!.release(),
+        store: {
+          id: organisation.id,
+          name: organisation.name,
+          code: organisation.organisationUniqueCode,
+          currency: organisation.currency,
+          dateFormat: organisation.dateFormat,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to select store', { request, response } as HttpContext)
     }
   }
 
@@ -144,37 +213,53 @@ export default class SellerController {
         })
       }
 
-      // Get stats
-      const totalOrders = await Order.query().where('organisation_id', organisationId).count('* as count').first()
-      const pendingOrders = await Order.query().where('organisation_id', organisationId).where('status', 'pending').count('* as count').first()
-      const completedOrders = await Order.query().where('organisation_id', organisationId).where('status', 'delivered').count('* as count').first()
-      const totalRevenue = await Order.query()
-        .where('organisation_id', organisationId)
-        .where('status', 'delivered')
-        .sum('total_amount as sum')
-        .first()
-      const averageOrderValue = await Order.query()
-        .where('organisation_id', organisationId)
-        .avg('total_amount as avg')
-        .first()
-      const totalCustomers = await Order.query()
-        .where('organisation_id', organisationId)
-        .countDistinct('customer_id as count')
-        .first()
+      // Fetch all orders with preloaded items
+      const allOrders = await Order.query().preload('items')
 
-      const recentOrders = await Order.query()
-        .where('organisation_id', organisationId)
-        .orderBy('createdAt', 'desc')
-        .limit(5)
+      // For each order, load products in items
+      const ordersWithProducts = await Promise.all(
+        allOrders.map(async (order) => {
+          if (order.items && order.items.length > 0) {
+            // Load products for all items
+            await Promise.all(order.items.map((item) => item.load('product')))
+          }
+          return order
+        })
+      )
+
+      // Filter orders that belong to this seller's organisation
+      const sellerOrders = filterOrdersByOrganisation(ordersWithProducts, Number(organisationId))
+
+      // Calculate stats
+      const totalOrders = sellerOrders.length
+      const pendingOrders = sellerOrders.filter((o) => o.status === 'pending').length
+      const completedOrders = sellerOrders.filter((o) => o.status === 'delivered').length
+      const totalRevenue = sellerOrders
+        .filter((o) => o.status === 'delivered')
+        .reduce((sum, o) => sum + (o.totalAmount || 0), 0)
+      const averageOrderValue = totalOrders > 0 ? totalRevenue / totalOrders : 0
+      const totalCustomers = new Set(sellerOrders.map((o) => o.customerId)).size
+
+      const recentOrders = sellerOrders
+        .sort((a, b) => b.createdAt.toMillis() - a.createdAt.toMillis())
+        .slice(0, 5)
+        .map((order) => ({
+          id: order.id,
+          orderNumber: order.orderNumber,
+          status: order.status,
+          totalAmount: order.totalAmount,
+          customerName: order.customerName,
+          createdAt: order.createdAt,
+        }))
 
       return response.ok({
         stats: {
-          totalOrders: (totalOrders?.$extras.count as number) || 0,
-          pendingOrders: (pendingOrders?.$extras.count as number) || 0,
-          completedOrders: (completedOrders?.$extras.count as number) || 0,
-          totalRevenue: parseFloat((totalRevenue?.$extras.sum || 0).toString()),
-          averageOrderValue: parseFloat((averageOrderValue?.$extras.avg || 0).toString()),
-          totalCustomers: (totalCustomers?.$extras.count as number) || 0,
+          totalOrders,
+          pendingOrders,
+          completedOrders,
+          totalRevenue,
+          averageOrderValue,
+          totalCustomers,
         },
         recentOrders,
       })
@@ -204,25 +289,45 @@ export default class SellerController {
         })
       }
 
-      // Build query
-      let query = Order.query().where('organisation_id', organisationId)
+      // Fetch all orders with preloaded items
+      const allOrders = await Order.query().preload('items')
+
+      // For each order, load products in items
+      const ordersWithProducts = await Promise.all(
+        allOrders.map(async (order) => {
+          if (order.items && order.items.length > 0) {
+            // Load products for all items
+            await Promise.all(order.items.map((item) => item.load('product')))
+          }
+          return order
+        })
+      )
+
+      // Filter orders for this seller
+      let sellerOrders = filterOrdersByOrganisation(ordersWithProducts, Number(organisationId))
+
       if (status) {
-        query = query.where('status', status)
+        sellerOrders = sellerOrders.filter((order) => order.status === status)
       }
 
-      const orders = await query
-        .orderBy('createdAt', 'desc')
-        .paginate(page, limit)
+      // Sort by creation date descending
+      sellerOrders.sort((a, b) => b.createdAt.toMillis() - a.createdAt.toMillis())
+
+      // Paginate
+      const total = sellerOrders.length
+      const skip = (page - 1) * limit
+      const paginatedOrders = sellerOrders.slice(skip, skip + limit)
+      const lastPage = Math.ceil(total / limit) || 1
 
       return response.ok({
-        orders: orders.all(),
+        orders: paginatedOrders,
         pagination: {
-          total: orders.total,
-          perPage: orders.perPage,
-          currentPage: orders.currentPage,
-          lastPage: orders.lastPage,
+          total,
+          perPage: limit,
+          currentPage: page,
+          lastPage,
         },
-        hasMore: orders.currentPage < orders.lastPage,
+        hasMore: page < lastPage,
       })
     } catch (error) {
       return errorHandler(error || 'Failed to fetch orders', { response } as any)
@@ -249,11 +354,32 @@ export default class SellerController {
         })
       }
 
-      // Get order
+      // Get order with preloaded items and products
       const order = await Order.query()
         .where('id', orderId)
-        .where('organisation_id', organisationId)
-        .firstOrFail()
+        .preload('items', (q) => {
+          q.preload('product')
+        })
+        .preload('customer')
+        .preload('address')
+        .first()
+
+      if (!order) {
+        return response.notFound({
+          message: 'Order not found',
+        })
+      }
+
+      // Verify this seller owns items in this order
+      const hasSellerItems = order.items.some((item: any) => {
+        if (!item.product) return false
+        return item.product.organisationId === Number(organisationId)
+      })
+      if (!hasSellerItems) {
+        return response.forbidden({
+          message: 'Not authorized to view this order',
+        })
+      }
 
       return response.ok({
         order,
@@ -284,17 +410,60 @@ export default class SellerController {
         })
       }
 
-      // Get and update order
+      // Get order with preloaded items and products
       const order = await Order.query()
         .where('id', orderId)
-        .where('organisation_id', organisationId)
-        .firstOrFail()
+        .preload('items', (q) => {
+          q.preload('product')
+        })
+        .preload('customer')
+        .preload('address')
+        .first()
+
+      if (!order) {
+        return response.notFound({
+          message: 'Order not found',
+        })
+      }
+
+      // Verify seller owns items in this order
+      const hasSellerItems = order.items.some((item: any) => {
+        if (!item.product) return false
+        return item.product.organisationId === Number(organisationId)
+      })
+      if (!hasSellerItems) {
+        return response.forbidden({
+          message: 'Not authorized to update this order',
+        })
+      }
 
       const validStatuses = ['pending', 'confirmed', 'preparing', 'ready', 'out_for_delivery', 'delivered', 'cancelled']
       if (!validStatuses.includes(status)) {
         return response.badRequest({
           message: 'Invalid status',
         })
+      }
+
+      // If order is being marked as delivered, decrease stock for all items
+      if (status === 'delivered' && order.status !== 'delivered') {
+        for (const item of order.items) {
+          if (item.product) {
+            // Decrease stock by the quantity ordered
+            item.product.stock = Math.max(0, item.product.stock - item.quantity)
+            await item.product.save()
+          }
+        }
+      }
+
+      // If order is being cancelled (and was previously delivered), restore stock
+      if (status === 'cancelled' && order.status === 'delivered') {
+        for (const item of order.items) {
+          if (item.product) {
+            // Restore stock by the quantity ordered
+            item.product.stock = item.product.stock + item.quantity
+            await item.product.save()
+          }
+        }
       }
 
       order.status = status
@@ -310,13 +479,12 @@ export default class SellerController {
   }
 
   /**
-   * Get customers list for seller's organization
+   * Get customers list for seller's organization (only customers with orders)
    */
-  async getCustomers({ params, request, response, auth }: HttpContext) {
+  async getCustomers({ params, response, auth }: HttpContext) {
     try {
       const user = await auth.getUserOrFail()
       const organisationId = params.id
-      const { page = 1, limit = 20 } = request.qs()
 
       // Verify authorization
       const org = await Organisation.query()
@@ -330,21 +498,60 @@ export default class SellerController {
         })
       }
 
-      // Get customers with their orders
-      const customers = await User.query()
-        .select('id', 'email', 'fullName', 'mobile', 'createdAt')
-        .orderBy('createdAt', 'desc')
-        .paginate(page, limit)
+      // Get all orders with items for this seller
+      const allOrders = await Order.query().preload('items')
+
+      // For each order, load products in items
+      const ordersWithProducts = await Promise.all(
+        allOrders.map(async (order) => {
+          if (order.items && order.items.length > 0) {
+            await Promise.all(order.items.map((item) => item.load('product')))
+          }
+          return order
+        })
+      )
+
+      // Filter for orders that have items from this seller
+      const sellerOrders = filterOrdersByOrganisation(ordersWithProducts, Number(organisationId))
+
+      // Get unique customers from these orders with order count and last order date
+      const customerMap = new Map<number, any>()
+      sellerOrders.forEach((order) => {
+        if (!customerMap.has(order.customerId)) {
+          customerMap.set(order.customerId, {
+            customerId: order.customerId,
+            customerName: order.customerName,
+            customerPhone: order.customerPhone,
+            orderCount: 0,
+            totalSpent: 0,
+            lastOrderDate: order.createdAt,
+          })
+        }
+        const customer = customerMap.get(order.customerId)!
+        customer.orderCount += 1
+        customer.totalSpent += order.totalAmount || 0
+        if (order.createdAt.toMillis() > customer.lastOrderDate.toMillis()) {
+          customer.lastOrderDate = order.createdAt
+        }
+      })
+
+      // Convert to array and sort by last order date
+      const customers = Array.from(customerMap.values())
+        .map((customer) => ({
+          ...customer,
+          totalSpent: Number(customer.totalSpent),
+          lastOrderDate: customer.lastOrderDate.toString(),
+        }))
+        .sort((a, b) => new Date(b.lastOrderDate).getTime() - new Date(a.lastOrderDate).getTime())
 
       return response.ok({
-        customers: customers.all(),
+        customers,
         pagination: {
-          total: customers.total,
-          perPage: customers.perPage,
-          currentPage: customers.currentPage,
-          lastPage: customers.lastPage,
+          total: customers.length,
+          perPage: customers.length,
+          currentPage: 1,
+          lastPage: 1,
         },
-        hasMore: customers.currentPage < customers.lastPage,
       })
     } catch (error) {
       return errorHandler(error || 'Failed to fetch customers', { response } as any)
@@ -371,17 +578,97 @@ export default class SellerController {
         })
       }
 
-      // Get customer orders
-      const orders = await Order.query()
-        .where('organisation_id', organisationId)
-        .where('customer_id', customerId)
-        .orderBy('createdAt', 'desc')
+      // Get customer orders with preloaded items
+      const allOrders = await Order.query()
+        .where('customerId', customerId)
+        .preload('items')
+
+      // For each order, load products in items
+      const ordersWithProducts = await Promise.all(
+        allOrders.map(async (order) => {
+          if (order.items && order.items.length > 0) {
+            // Load products for all items
+            await Promise.all(order.items.map((item) => item.load('product')))
+          }
+          return order
+        })
+      )
+
+      // Filter for orders that have items from this seller
+      const sellerOrders = filterOrdersByOrganisation(ordersWithProducts, Number(organisationId))
+
+      // Sort by creation date descending
+      sellerOrders.sort((a, b) => b.createdAt.toMillis() - a.createdAt.toMillis())
 
       return response.ok({
-        orders,
+        orders: sellerOrders,
       })
     } catch (error) {
       return errorHandler(error || 'Failed to fetch customer orders', { response } as any)
+    }
+  }
+
+  /**
+   * Get all products for seller's organization
+   */
+  async getProducts({ params, request, response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const organisationId = params.id
+      const { page = 1, limit = 20, search } = request.qs()
+
+      // Verify authorization
+      const org = await Organisation.query()
+        .where('id', organisationId)
+        .preload('user', (q) => q.where('user_id', user.id))
+        .first()
+
+      if (!org || org.user.length === 0) {
+        return response.forbidden({
+          message: 'Not authorized',
+        })
+      }
+
+      // Fetch products for this seller's organisation
+      let query = Product.query().where('organisationId', organisationId)
+
+      if (search) {
+        query = query.where('name', 'ilike', `%${search}%`)
+          .orWhere('description', 'ilike', `%${search}%`)
+          .orWhere('sku', 'ilike', `%${search}%`)
+      }
+
+      // Get paginated results
+      const products = await query.paginate(page, limit)
+
+      // Preload order items to calculate sold quantity
+      const productsWithItems = await Promise.all(
+        products.all().map(async (product) => {
+          await product.load('orderItems')
+          const sold = product.orderItems.reduce((sum: number, item: any) => sum + item.quantity, 0)
+          return {
+            id: product.id,
+            name: product.name,
+            sku: product.sku,
+            stock: product.stock,
+            price: product.price,
+            isActive: product.isActive,
+            sold: sold,
+          }
+        })
+      )
+
+      return response.ok({
+        products: productsWithItems,
+        pagination: {
+          total: products.total,
+          perPage: products.perPage,
+          currentPage: products.currentPage,
+          lastPage: products.lastPage,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch products', { response } as any)
     }
   }
 }

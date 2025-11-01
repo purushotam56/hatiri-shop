@@ -6,6 +6,7 @@ import { Button } from '@heroui/button'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import Link from 'next/link'
+import { useSellerStore } from '@/context/seller-store-context'
 
 interface Product {
   id: string
@@ -21,66 +22,76 @@ export default function SellerProductsPage() {
   const router = useRouter()
   const params = useParams()
   const orgId = params.id
+  const { selectedStore, clearStore } = useSellerStore()
   
   const [products, setProducts] = useState<Product[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
+  const [storeLoaded, setStoreLoaded] = useState(false)
 
+  // First effect: wait for store to load from localStorage
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setStoreLoaded(true)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Second effect: check auth and store selection
+  useEffect(() => {
+    if (!storeLoaded) return
+
     const token = localStorage.getItem('sellerToken')
     if (!token) {
       router.push('/seller')
       return
     }
 
-    // Note: We'll integrate actual product fetch once ProductController is set up
-    // For now, show placeholder message
-    setLoading(false)
-  }, [router])
+    // Verify store match
+    if (!selectedStore || (selectedStore?.id !== Number(orgId) && selectedStore?.id !== orgId)) {
+      router.push('/seller/select-store')
+      return
+    }
+
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(`http://localhost:3333/api/seller/${orgId}/products`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+
+        if (!response.ok) {
+          if (response.status === 401) {
+            localStorage.removeItem('sellerToken')
+            router.push('/seller')
+            return
+          }
+          throw new Error('Failed to fetch products')
+        }
+
+        const data = await response.json()
+        setProducts(data.products || [])
+      } catch (err) {
+        setError('Failed to load products')
+        console.error(err)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchProducts()
+  }, [router, orgId, selectedStore, storeLoaded])
 
   const handleLogout = () => {
     localStorage.removeItem('sellerToken')
     localStorage.removeItem('sellerUser')
-    localStorage.removeItem('sellerOrg')
+    clearStore()
     router.push('/seller')
   }
 
   return (
     <main className="min-h-screen bg-default-50 pb-20">
-      {/* Header */}
-      <div className="sticky top-0 z-30 bg-white dark:bg-default-100 border-b border-default-200">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <Link href={`/seller/${orgId}/dashboard`}>
-              <Button isIconOnly variant="light" size="sm">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </Button>
-            </Link>
-            <div>
-              <h1 className="text-2xl font-bold text-foreground">Products</h1>
-              <p className="text-sm text-default-600">Manage your products</p>
-            </div>
-          </div>
-          <div className="flex items-center gap-2">
-            <Link href={`/seller/${orgId}/products/create`}>
-              <Button color="primary" size="sm">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                </svg>
-                Add Product
-              </Button>
-            </Link>
-            <Button isIconOnly color="default" variant="light" onPress={handleLogout}>
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-              </svg>
-            </Button>
-          </div>
-        </div>
-      </div>
-
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
         {loading ? (
           <div className="flex items-center justify-center py-12">

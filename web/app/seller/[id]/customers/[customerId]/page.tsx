@@ -9,22 +9,33 @@ import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from 
 import Link from 'next/link'
 import { useSellerStore } from '@/context/seller-store-context'
 
-interface Customer {
-  customerId: number
+interface Order {
+  id: number
+  orderNumber: string
+  status: string
+  totalAmount: number
   customerName: string
-  customerPhone: string
-  orderCount: number
-  totalSpent: number
-  lastOrderDate: string
+  createdAt: string
 }
 
-export default function SellerCustomersPage() {
+const statusColors: Record<string, string> = {
+  pending: 'bg-gray-100 text-gray-800 dark:bg-gray-900/30 dark:text-gray-400',
+  confirmed: 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-400',
+  preparing: 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-400',
+  ready: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/30 dark:text-indigo-400',
+  out_for_delivery: 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400',
+  delivered: 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400',
+  cancelled: 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400',
+}
+
+export default function CustomerDetailPage() {
   const router = useRouter()
   const params = useParams()
   const orgId = params.id
+  const customerId = params.customerId
   const { selectedStore, clearStore } = useSellerStore()
   
-  const [customers, setCustomers] = useState<Customer[]>([])
+  const [orders, setOrders] = useState<Order[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [storeLoaded, setStoreLoaded] = useState(false)
@@ -52,9 +63,9 @@ export default function SellerCustomersPage() {
       return
     }
 
-    const fetchCustomers = async () => {
+    const fetchOrders = async () => {
       try {
-        const response = await fetch(`http://localhost:3333/api/seller/${orgId}/customers`, {
+        const response = await fetch(`http://localhost:3333/api/seller/${orgId}/customers/${customerId}/orders`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -66,21 +77,21 @@ export default function SellerCustomersPage() {
             router.push('/seller')
             return
           }
-          throw new Error('Failed to fetch customers')
+          throw new Error('Failed to fetch orders')
         }
 
         const data = await response.json()
-        setCustomers(data.customers || [])
+        setOrders(data.orders || [])
       } catch (err) {
-        setError('Failed to load customers')
+        setError('Failed to load orders')
         console.error(err)
       } finally {
         setLoading(false)
       }
     }
 
-    fetchCustomers()
-  }, [orgId, router, selectedStore, storeLoaded])
+    fetchOrders()
+  }, [orgId, customerId, router, selectedStore, storeLoaded])
 
   const handleLogout = () => {
     localStorage.removeItem('sellerToken')
@@ -94,6 +105,8 @@ export default function SellerCustomersPage() {
       year: 'numeric',
       month: 'short',
       day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
     })
   }
 
@@ -108,43 +121,43 @@ export default function SellerCustomersPage() {
           <Card className="bg-red-50 dark:bg-red-950/20">
             <CardBody className="text-red-600 dark:text-red-400">{error}</CardBody>
           </Card>
-        ) : customers.length === 0 ? (
+        ) : orders.length === 0 ? (
           <Card>
             <CardBody className="text-center py-12 text-default-600">
-              No customers found
+              No orders found for this customer
             </CardBody>
           </Card>
         ) : (
           <Card>
             <CardHeader className="flex gap-3">
               <div className="flex flex-col">
-                <p className="text-lg font-semibold">Customers ({customers.length})</p>
+                <p className="text-lg font-semibold">Orders ({orders.length})</p>
               </div>
             </CardHeader>
             <CardBody>
-              <Table aria-label="Customers table">
+              <Table aria-label="Orders table">
                 <TableHeader>
-                  <TableColumn>Name</TableColumn>
-                  <TableColumn>Phone</TableColumn>
-                  <TableColumn align="end">Orders</TableColumn>
-                  <TableColumn align="end">Total Spent</TableColumn>
-                  <TableColumn>Last Order</TableColumn>
+                  <TableColumn>Order Number</TableColumn>
+                  <TableColumn>Status</TableColumn>
+                  <TableColumn align="end">Amount</TableColumn>
+                  <TableColumn>Date</TableColumn>
                   <TableColumn align="center">Action</TableColumn>
                 </TableHeader>
                 <TableBody>
-                  {customers.map((customer) => (
-                    <TableRow key={customer.customerId}>
-                      <TableCell>{customer.customerName}</TableCell>
-                      <TableCell>{customer.customerPhone}</TableCell>
-                      <TableCell className="text-right">{customer.orderCount}</TableCell>
-                      <TableCell className="text-right">
-                        ₹ {typeof customer.totalSpent === 'number' ? customer.totalSpent.toFixed(2) : Number(customer.totalSpent).toFixed(2)}
+                  {orders.map((order) => (
+                    <TableRow key={order.id}>
+                      <TableCell className="font-medium">{order.orderNumber}</TableCell>
+                      <TableCell>
+                        <span className={`px-3 py-1 rounded-full text-xs font-semibold ${statusColors[order.status] || statusColors.pending}`}>
+                          {order.status.replace('_', ' ').toUpperCase()}
+                        </span>
                       </TableCell>
-                      <TableCell>{formatDate(customer.lastOrderDate)}</TableCell>
+                      <TableCell className="text-right">₹ {Number(order.totalAmount).toFixed(2)}</TableCell>
+                      <TableCell>{formatDate(order.createdAt)}</TableCell>
                       <TableCell className="text-center">
-                        <Link href={`/seller/${orgId}/customers/${customer.customerId}`}>
+                        <Link href={`/seller/${orgId}/orders/${order.id}`}>
                           <Button size="sm" variant="light" color="primary">
-                            View Orders
+                            View
                           </Button>
                         </Link>
                       </TableCell>
