@@ -1,0 +1,362 @@
+{
+  "name": "New Zealand",
+  "isoCode": "NZ",
+  "timezones": [
+    {
+      "name": "Pacific/Auckland",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "NZST",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Chatham",
+      "utcOffset": "+12:45",
+      "offsetMinutes": 765,
+      "abbreviation": null,
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Auckland Region",
+      "isoCode": "AUK",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bay of Plenty Region",
+      "isoCode": "BOP",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Canterbury Region",
+      "isoCode": "CAN",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chatham Islands",
+      "isoCode": "CIT",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gisborne District",
+      "isoCode": "GIS",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hawke's Bay Region",
+      "isoCode": "HKB",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Manawatu-Wanganui Region",
+      "isoCode": "MWT",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Marlborough Region",
+      "isoCode": "MBH",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nelson Region",
+      "isoCode": "NSN",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northland Region",
+      "isoCode": "NTL",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Otago Region",
+      "isoCode": "OTA",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Southland Region",
+      "isoCode": "STL",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taranaki Region",
+      "isoCode": "TKI",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tasman District",
+      "isoCode": "TAS",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Waikato Region",
+      "isoCode": "WKO",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wellington Region",
+      "isoCode": "WGN",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "West Coast Region",
+      "isoCode": "WTC",
+      "timezones": [
+        {
+          "name": "Pacific/Auckland",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "NZST",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Chatham",
+          "utcOffset": "+12:45",
+          "offsetMinutes": 765,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

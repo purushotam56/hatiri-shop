@@ -1,0 +1,14 @@
+{
+  "name": "American Samoa",
+  "isoCode": "AS",
+  "timezones": [
+    {
+      "name": "Pacific/Pago_Pago",
+      "utcOffset": "-11:00",
+      "offsetMinutes": -660,
+      "abbreviation": "SST",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

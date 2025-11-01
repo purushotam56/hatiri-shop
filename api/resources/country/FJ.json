@@ -1,0 +1,262 @@
+{
+  "name": "Fiji Islands",
+  "isoCode": "FJ",
+  "timezones": [
+    {
+      "name": "Pacific/Fiji",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Ba",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bua",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cakaudrove",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central Division",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eastern Division",
+      "isoCode": "E",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kadavu",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lau",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lomaiviti",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Macuata",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nadroga-Navosa",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Naitasiri",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Namosi",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern Division",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ra",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rewa",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rotuma",
+      "isoCode": "R",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Serua",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tailevu",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Division",
+      "isoCode": "W",
+      "timezones": [
+        {
+          "name": "Pacific/Fiji",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

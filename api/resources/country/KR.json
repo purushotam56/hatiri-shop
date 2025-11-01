@@ -1,0 +1,236 @@
+{
+  "name": "South Korea",
+  "isoCode": "KR",
+  "timezones": [
+    {
+      "name": "Asia/Seoul",
+      "utcOffset": "+09:00",
+      "offsetMinutes": 540,
+      "abbreviation": "KST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Busan",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Daegu",
+      "isoCode": "27",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Daejeon",
+      "isoCode": "30",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gangwon Province",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gwangju",
+      "isoCode": "29",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gyeonggi Province",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Incheon",
+      "isoCode": "28",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jeju",
+      "isoCode": "49",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Chungcheong Province",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Gyeongsang Province",
+      "isoCode": "47",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Jeolla Province",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sejong City",
+      "isoCode": "50",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Seoul",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South Chungcheong Province",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South Gyeongsang Province",
+      "isoCode": "48",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South Jeolla Province",
+      "isoCode": "46",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ulsan",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Asia/Seoul",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "KST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

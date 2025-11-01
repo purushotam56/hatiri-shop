@@ -1,0 +1,145 @@
+{
+  "name": "Haiti",
+  "isoCode": "HT",
+  "timezones": [
+    {
+      "name": "America/Port-au-Prince",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "EDT",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Artibonite",
+      "isoCode": "AR",
+      "timezones": [
+        {
+          "name": "America/Port-au-Prince",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Centre",
+      "isoCode": "CE",
+      "timezones": [
+        {
+          "name": "America/Port-au-Prince",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Grand'Anse",
+      "isoCode": "GA",
+      "timezones": [
+        {
+          "name": "America/Port-au-Prince",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nippes",
+      "isoCode": "NI",
+      "timezones": [
+        {
+          "name": "America/Port-au-Prince",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nord",
+      "isoCode": "ND",
+      "timezones": [
+        {
+          "name": "America/Port-au-Prince",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nord-Est",
+      "isoCode": "NE",
+      "timezones": [
+        {
+          "name": "America/Port-au-Prince",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nord-Ouest",
+      "isoCode": "NO",
+      "timezones": [
+        {
+          "name": "America/Port-au-Prince",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ouest",
+      "isoCode": "OU",
+      "timezones": [
+        {
+          "name": "America/Port-au-Prince",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sud",
+      "isoCode": "SD",
+      "timezones": [
+        {
+          "name": "America/Port-au-Prince",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sud-Est",
+      "isoCode": "SE",
+      "timezones": [
+        {
+          "name": "America/Port-au-Prince",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

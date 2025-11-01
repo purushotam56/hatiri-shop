@@ -1,0 +1,80 @@
+{
+  "name": "Singapore",
+  "isoCode": "SG",
+  "timezones": [
+    {
+      "name": "Asia/Singapore",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "+08",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Central Singapore Community Development Council",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North East Community Development Council",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North West Community Development Council",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South East Community Development Council",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South West Community Development Council",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

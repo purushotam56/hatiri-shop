@@ -1,0 +1,21 @@
+{
+  "name": "Aruba",
+  "isoCode": "AW",
+  "timezones": [
+    {
+      "name": "America/Aruba",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    },
+    {
+      "name": "America/Puerto_Rico",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

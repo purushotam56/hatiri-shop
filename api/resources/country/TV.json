@@ -1,0 +1,182 @@
+{
+  "name": "Tuvalu",
+  "isoCode": "TV",
+  "timezones": [
+    {
+      "name": "Pacific/Funafuti",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Tarawa",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Funafuti",
+      "isoCode": "FUN",
+      "timezones": [
+        {
+          "name": "Pacific/Funafuti",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nanumanga",
+      "isoCode": "NMG",
+      "timezones": [
+        {
+          "name": "Pacific/Funafuti",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nanumea",
+      "isoCode": "NMA",
+      "timezones": [
+        {
+          "name": "Pacific/Funafuti",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Niutao Island Council",
+      "isoCode": "NIT",
+      "timezones": [
+        {
+          "name": "Pacific/Funafuti",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nui",
+      "isoCode": "NUI",
+      "timezones": [
+        {
+          "name": "Pacific/Funafuti",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nukufetau",
+      "isoCode": "NKF",
+      "timezones": [
+        {
+          "name": "Pacific/Funafuti",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nukulaelae",
+      "isoCode": "NKL",
+      "timezones": [
+        {
+          "name": "Pacific/Funafuti",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vaitupu",
+      "isoCode": "VAI",
+      "timezones": [
+        {
+          "name": "Pacific/Funafuti",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

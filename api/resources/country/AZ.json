@@ -1,0 +1,990 @@
+{
+  "name": "Azerbaijan",
+  "isoCode": "AZ",
+  "timezones": [
+    {
+      "name": "Asia/Baku",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Absheron District",
+      "isoCode": "ABS",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Agdam District",
+      "isoCode": "AGM",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Agdash District",
+      "isoCode": "AGS",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aghjabadi District",
+      "isoCode": "AGC",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Agstafa District",
+      "isoCode": "AGA",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Agsu District",
+      "isoCode": "AGU",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Astara District",
+      "isoCode": "AST",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Babek District",
+      "isoCode": "BAB",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Baku",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Balakan District",
+      "isoCode": "BAL",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Barda District",
+      "isoCode": "BAR",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Beylagan District",
+      "isoCode": "BEY",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bilasuvar District",
+      "isoCode": "BIL",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dashkasan District",
+      "isoCode": "DAS",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fizuli District",
+      "isoCode": "FUZ",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ganja",
+      "isoCode": "GA",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gobustan District",
+      "isoCode": "QOB",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Goranboy District",
+      "isoCode": "GOR",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Goychay",
+      "isoCode": "GOY",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Goygol District",
+      "isoCode": "GYG",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gədəbəy",
+      "isoCode": "GAD",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hajigabul District",
+      "isoCode": "HAC",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Imishli District",
+      "isoCode": "IMI",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ismailli District",
+      "isoCode": "ISM",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jabrayil District",
+      "isoCode": "CAB",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jalilabad District",
+      "isoCode": "CAL",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Julfa District",
+      "isoCode": "CUL",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kalbajar District",
+      "isoCode": "KAL",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kangarli District",
+      "isoCode": "KAN",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khachmaz District",
+      "isoCode": "XAC",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khizi District",
+      "isoCode": "XIZ",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khojali District",
+      "isoCode": "XCI",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kurdamir District",
+      "isoCode": "KUR",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lachin District",
+      "isoCode": "LAC",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lankaran",
+      "isoCode": "LAN",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lankaran District",
+      "isoCode": "LA",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lerik District",
+      "isoCode": "LER",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Martuni",
+      "isoCode": "XVD",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Masally District",
+      "isoCode": "MAS",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mingachevir",
+      "isoCode": "MI",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nakhchivan Autonomous Republic",
+      "isoCode": "NX",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Neftchala District",
+      "isoCode": "NEF",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oghuz District",
+      "isoCode": "OGU",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ordubad District",
+      "isoCode": "ORD",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Qabala District",
+      "isoCode": "QAB",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Qakh District",
+      "isoCode": "QAX",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Qazakh District",
+      "isoCode": "QAZ",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Quba District",
+      "isoCode": "QBA",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Qubadli District",
+      "isoCode": "QBI",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Qusar District",
+      "isoCode": "QUS",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saatly District",
+      "isoCode": "SAT",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sabirabad District",
+      "isoCode": "SAB",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sadarak District",
+      "isoCode": "SAD",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Salyan District",
+      "isoCode": "SAL",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samukh District",
+      "isoCode": "SMX",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shabran District",
+      "isoCode": "SBN",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shahbuz District",
+      "isoCode": "SAH",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shaki",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shaki District",
+      "isoCode": "SAK",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shamakhi District",
+      "isoCode": "SMI",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shamkir District",
+      "isoCode": "SKR",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sharur District",
+      "isoCode": "SAR",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shirvan",
+      "isoCode": "SR",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shusha District",
+      "isoCode": "SUS",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Siazan District",
+      "isoCode": "SIY",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sumqayit",
+      "isoCode": "SM",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tartar District",
+      "isoCode": "TAR",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tovuz District",
+      "isoCode": "TOV",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ujar District",
+      "isoCode": "UCA",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yardymli District",
+      "isoCode": "YAR",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yevlakh",
+      "isoCode": "YE",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yevlakh District",
+      "isoCode": "YEV",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zangilan District",
+      "isoCode": "ZAN",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zaqatala District",
+      "isoCode": "ZAQ",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zardab District",
+      "isoCode": "ZAR",
+      "timezones": [
+        {
+          "name": "Asia/Baku",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

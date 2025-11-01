@@ -1,0 +1,561 @@
+{
+  "name": "Hungary",
+  "isoCode": "HU",
+  "timezones": [
+    {
+      "name": "Europe/Budapest",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Baranya County",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Borsod-Abaúj-Zemplén County",
+      "isoCode": "BZ",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Budapest",
+      "isoCode": "BU",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bács-Kiskun County",
+      "isoCode": "BK",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Békés County",
+      "isoCode": "BE",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Békéscsaba",
+      "isoCode": "BC",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Csongrád County",
+      "isoCode": "CS",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Debrecen",
+      "isoCode": "DE",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dunaújváros",
+      "isoCode": "DU",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Eger",
+      "isoCode": "EG",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fejér County",
+      "isoCode": "FE",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Győr",
+      "isoCode": "GY",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Győr-Moson-Sopron County",
+      "isoCode": "GS",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hajdú-Bihar County",
+      "isoCode": "HB",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Heves County",
+      "isoCode": "HE",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hódmezővásárhely",
+      "isoCode": "HV",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jász-Nagykun-Szolnok County",
+      "isoCode": "JN",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kaposvár",
+      "isoCode": "KV",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kecskemét",
+      "isoCode": "KM",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Miskolc",
+      "isoCode": "MI",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nagykanizsa",
+      "isoCode": "NK",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nyíregyháza",
+      "isoCode": "NY",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nógrád County",
+      "isoCode": "NO",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pest County",
+      "isoCode": "PE",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pécs",
+      "isoCode": "PS",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Salgótarján",
+      "isoCode": "ST",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Somogy County",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sopron",
+      "isoCode": "SN",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Szabolcs-Szatmár-Bereg County",
+      "isoCode": "SZ",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Szeged",
+      "isoCode": "SD",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Szekszárd",
+      "isoCode": "SS",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Szolnok",
+      "isoCode": "SK",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Szombathely",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Székesfehérvár",
+      "isoCode": "SF",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tatabánya",
+      "isoCode": "TB",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tolna County",
+      "isoCode": "TO",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vas County",
+      "isoCode": "VA",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Veszprém",
+      "isoCode": "VM",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Veszprém County",
+      "isoCode": "VE",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zala County",
+      "isoCode": "ZA",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zalaegerszeg",
+      "isoCode": "ZE",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Érd",
+      "isoCode": "ER",
+      "timezones": [
+        {
+          "name": "Europe/Budapest",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

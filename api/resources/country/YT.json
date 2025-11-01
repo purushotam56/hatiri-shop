@@ -1,0 +1,21 @@
+{
+  "name": "Mayotte",
+  "isoCode": "YT",
+  "timezones": [
+    {
+      "name": "Africa/Nairobi",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EAT",
+      "isDST": false
+    },
+    {
+      "name": "Indian/Mayotte",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EAT",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

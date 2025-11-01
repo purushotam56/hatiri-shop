@@ -1,0 +1,207 @@
+{
+  "name": "Micronesia",
+  "isoCode": "FM",
+  "timezones": [
+    {
+      "name": "Pacific/Chuuk",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "+10",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Guadalcanal",
+      "utcOffset": "+11:00",
+      "offsetMinutes": 660,
+      "abbreviation": "+11",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Kosrae",
+      "utcOffset": "+11:00",
+      "offsetMinutes": 660,
+      "abbreviation": "+11",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Pohnpei",
+      "utcOffset": "+11:00",
+      "offsetMinutes": 660,
+      "abbreviation": "+11",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Port_Moresby",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "+10",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Chuuk State",
+      "isoCode": "TRK",
+      "timezones": [
+        {
+          "name": "Pacific/Chuuk",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Kosrae",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Pohnpei",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kosrae State",
+      "isoCode": "KSA",
+      "timezones": [
+        {
+          "name": "Pacific/Chuuk",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Kosrae",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Pohnpei",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pohnpei State",
+      "isoCode": "PNI",
+      "timezones": [
+        {
+          "name": "Pacific/Chuuk",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Kosrae",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Pohnpei",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yap State",
+      "isoCode": "YAP",
+      "timezones": [
+        {
+          "name": "Pacific/Chuuk",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Kosrae",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Pohnpei",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

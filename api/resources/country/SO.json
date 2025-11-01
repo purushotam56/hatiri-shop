@@ -1,0 +1,342 @@
+{
+  "name": "Somalia",
+  "isoCode": "SO",
+  "timezones": [
+    {
+      "name": "Africa/Mogadishu",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Nairobi",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Awdal Region",
+      "isoCode": "AW",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bakool",
+      "isoCode": "BK",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Banaadir",
+      "isoCode": "BN",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bari",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bay",
+      "isoCode": "BY",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Galguduud",
+      "isoCode": "GA",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gedo",
+      "isoCode": "GE",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hiran",
+      "isoCode": "HI",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lower Juba",
+      "isoCode": "JH",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lower Shebelle",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Middle Juba",
+      "isoCode": "JD",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Middle Shebelle",
+      "isoCode": "SD",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mudug",
+      "isoCode": "MU",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nugal",
+      "isoCode": "NU",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sanaag Region",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Togdheer Region",
+      "isoCode": "TO",
+      "timezones": [
+        {
+          "name": "Africa/Mogadishu",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

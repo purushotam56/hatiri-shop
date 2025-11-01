@@ -1,0 +1,14 @@
+{
+  "name": "Guam",
+  "isoCode": "GU",
+  "timezones": [
+    {
+      "name": "Pacific/Guam",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "ChST",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

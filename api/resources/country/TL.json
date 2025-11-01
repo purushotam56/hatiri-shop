@@ -1,0 +1,171 @@
+{
+  "name": "East Timor",
+  "isoCode": "TL",
+  "timezones": [
+    {
+      "name": "Asia/Dili",
+      "utcOffset": "+09:00",
+      "offsetMinutes": 540,
+      "abbreviation": "+09",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Aileu municipality",
+      "isoCode": "AL",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ainaro Municipality",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Baucau Municipality",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bobonaro Municipality",
+      "isoCode": "BO",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cova Lima Municipality",
+      "isoCode": "CO",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dili municipality",
+      "isoCode": "DI",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ermera District",
+      "isoCode": "ER",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lautém Municipality",
+      "isoCode": "LA",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Liquiçá Municipality",
+      "isoCode": "LI",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Manatuto District",
+      "isoCode": "MT",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Manufahi Municipality",
+      "isoCode": "MF",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Viqueque Municipality",
+      "isoCode": "VI",
+      "timezones": [
+        {
+          "name": "Asia/Dili",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "name": "Netherlands",
+  "isoCode": "NL",
+  "timezones": [
+    {
+      "name": "Europe/Amsterdam",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Brussels",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Bonaire",
+      "isoCode": "BQ1",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Drenthe",
+      "isoCode": "DR",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Flevoland",
+      "isoCode": "FL",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Friesland",
+      "isoCode": "FR",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gelderland",
+      "isoCode": "GE",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Groningen",
+      "isoCode": "GR",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Limburg",
+      "isoCode": "LI",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Brabant",
+      "isoCode": "NB",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Holland",
+      "isoCode": "NH",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Overijssel",
+      "isoCode": "OV",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saba",
+      "isoCode": "BQ2",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sint Eustatius",
+      "isoCode": "BQ3",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Holland",
+      "isoCode": "ZH",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Utrecht",
+      "isoCode": "UT",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zeeland",
+      "isoCode": "ZE",
+      "timezones": [
+        {
+          "name": "Europe/Amsterdam",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

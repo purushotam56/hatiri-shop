@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body style="font-family: Arial, sans-serif; background-color: #ffffff; padding: 20px;">
+    <table padding: px>
+      <tr>
+        <td>
+          <!-- Logo -->
+          <img src="{{ logoUrl }}" alt="Proprly Logo" style="height: 30px;" />
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-top: 20px;">
+          <p>
+            Following are the details related to the new user
+          </p>
+          <p>
+            Full Name: <b>{{ data.fullName }} </b>            <br />
+            Email Address: <b>{{ data.email }} </b>            <br />
+            Password: <b>{{ data.password }} </b>            <br />
+            Organisation Country: <b>{{ data.organisationCountryCode }} </b>            <br />
+            Organisation Name: <b>{{ data.organisationName }} </b>
+          </p>
+          <p>
+            Kindly contact the user and generate the credentials on the system
+          </p>
+          <p>
+            Best Regards,<br />Proprly Team
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+{
+  "name": "Belize",
+  "isoCode": "BZ",
+  "timezones": [
+    {
+      "name": "America/Belize",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Belize District",
+      "isoCode": "BZ",
+      "timezones": [
+        {
+          "name": "America/Belize",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cayo District",
+      "isoCode": "CY",
+      "timezones": [
+        {
+          "name": "America/Belize",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Corozal District",
+      "isoCode": "CZL",
+      "timezones": [
+        {
+          "name": "America/Belize",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Orange Walk District",
+      "isoCode": "OW",
+      "timezones": [
+        {
+          "name": "America/Belize",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Stann Creek District",
+      "isoCode": "SC",
+      "timezones": [
+        {
+          "name": "America/Belize",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Toledo District",
+      "isoCode": "TOL",
+      "timezones": [
+        {
+          "name": "America/Belize",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

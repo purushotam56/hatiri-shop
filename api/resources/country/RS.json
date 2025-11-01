@@ -1,0 +1,353 @@
+{
+  "name": "Serbia",
+  "isoCode": "RS",
+  "timezones": [
+    {
+      "name": "Europe/Belgrade",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Belgrade",
+      "isoCode": "00",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bor District",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Braničevo District",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Central Banat District",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jablanica District",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kolubara District",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mačva District",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Moravica District",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nišava District",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Banat District",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Bačka District",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pirot District",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Podunavlje District",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pomoravlje District",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pčinja District",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rasina District",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Raška District",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Banat District",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Bačka District",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Srem District",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Toplica District",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vojvodina",
+      "isoCode": "VO",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Bačka District",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zaječar District",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zlatibor District",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Šumadija District",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

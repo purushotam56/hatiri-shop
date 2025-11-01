@@ -1,0 +1,1679 @@
+{
+  "name": "Italy",
+  "isoCode": "IT",
+  "timezones": [
+    {
+      "name": "Europe/Rome",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Abruzzo",
+      "isoCode": "65",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aosta Valley",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Apulia",
+      "isoCode": "75",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Basilicata",
+      "isoCode": "77",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Benevento Province",
+      "isoCode": "BN",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Calabria",
+      "isoCode": "78",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Campania",
+      "isoCode": "72",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Emilia-Romagna",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Friuli–Venezia Giulia",
+      "isoCode": "36",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lazio",
+      "isoCode": "62",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Libero consorzio comunale di Agrigento",
+      "isoCode": "AG",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Libero consorzio comunale di Caltanissetta",
+      "isoCode": "CL",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Libero consorzio comunale di Enna",
+      "isoCode": "EN",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Libero consorzio comunale di Ragusa",
+      "isoCode": "RG",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Libero consorzio comunale di Siracusa",
+      "isoCode": "SR",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Libero consorzio comunale di Trapani",
+      "isoCode": "TP",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Liguria",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lombardy",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Marche",
+      "isoCode": "57",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Bari",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Bologna",
+      "isoCode": "BO",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Cagliari",
+      "isoCode": "CA",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Catania",
+      "isoCode": "CT",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Florence",
+      "isoCode": "FI",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Genoa",
+      "isoCode": "GE",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Messina",
+      "isoCode": "ME",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Milan",
+      "isoCode": "MI",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Naples",
+      "isoCode": "NA",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Palermo",
+      "isoCode": "PA",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Reggio Calabria",
+      "isoCode": "RC",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Rome",
+      "isoCode": "RM",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Turin",
+      "isoCode": "TO",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan City of Venice",
+      "isoCode": "VE",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Molise",
+      "isoCode": "67",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pesaro and Urbino Province",
+      "isoCode": "PU",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Piedmont",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Alessandria",
+      "isoCode": "AL",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Ancona",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Ascoli Piceno",
+      "isoCode": "AP",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Asti",
+      "isoCode": "AT",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Avellino",
+      "isoCode": "AV",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Barletta-Andria-Trani",
+      "isoCode": "BT",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Belluno",
+      "isoCode": "BL",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Bergamo",
+      "isoCode": "BG",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Biella",
+      "isoCode": "BI",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Brescia",
+      "isoCode": "BS",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Brindisi",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Campobasso",
+      "isoCode": "CB",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Carbonia-Iglesias",
+      "isoCode": "CI",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Caserta",
+      "isoCode": "CE",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Catanzaro",
+      "isoCode": "CZ",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Chieti",
+      "isoCode": "CH",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Como",
+      "isoCode": "CO",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Cosenza",
+      "isoCode": "CS",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Cremona",
+      "isoCode": "CR",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Crotone",
+      "isoCode": "KR",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Cuneo",
+      "isoCode": "CN",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Fermo",
+      "isoCode": "FM",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Ferrara",
+      "isoCode": "FE",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Foggia",
+      "isoCode": "FG",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Forlì-Cesena",
+      "isoCode": "FC",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Frosinone",
+      "isoCode": "FR",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Gorizia",
+      "isoCode": "GO",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Grosseto",
+      "isoCode": "GR",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Imperia",
+      "isoCode": "IM",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Isernia",
+      "isoCode": "IS",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of L'Aquila",
+      "isoCode": "AQ",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of La Spezia",
+      "isoCode": "SP",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Latina",
+      "isoCode": "LT",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Lecce",
+      "isoCode": "LE",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Lecco",
+      "isoCode": "LC",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Livorno",
+      "isoCode": "LI",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Lodi",
+      "isoCode": "LO",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Lucca",
+      "isoCode": "LU",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Macerata",
+      "isoCode": "MC",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Mantua",
+      "isoCode": "MN",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Massa and Carrara",
+      "isoCode": "MS",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Matera",
+      "isoCode": "MT",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Medio Campidano",
+      "isoCode": "VS",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Modena",
+      "isoCode": "MO",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Monza and Brianza",
+      "isoCode": "MB",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Novara",
+      "isoCode": "NO",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Nuoro",
+      "isoCode": "NU",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Ogliastra",
+      "isoCode": "OG",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Olbia-Tempio",
+      "isoCode": "OT",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Oristano",
+      "isoCode": "OR",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Padua",
+      "isoCode": "PD",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Parma",
+      "isoCode": "PR",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Pavia",
+      "isoCode": "PV",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Perugia",
+      "isoCode": "PG",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Pescara",
+      "isoCode": "PE",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Piacenza",
+      "isoCode": "PC",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Pisa",
+      "isoCode": "PI",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Pistoia",
+      "isoCode": "PT",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Pordenone",
+      "isoCode": "PN",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Potenza",
+      "isoCode": "PZ",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Prato",
+      "isoCode": "PO",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Ravenna",
+      "isoCode": "RA",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Reggio Emilia",
+      "isoCode": "RE",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Rieti",
+      "isoCode": "RI",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Rimini",
+      "isoCode": "RN",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Rovigo",
+      "isoCode": "RO",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Salerno",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Sassari",
+      "isoCode": "SS",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Savona",
+      "isoCode": "SV",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Siena",
+      "isoCode": "SI",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Sondrio",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Taranto",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Teramo",
+      "isoCode": "TE",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Terni",
+      "isoCode": "TR",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Treviso",
+      "isoCode": "TV",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Trieste",
+      "isoCode": "TS",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Udine",
+      "isoCode": "UD",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Varese",
+      "isoCode": "VA",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Verbano-Cusio-Ossola",
+      "isoCode": "VB",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Vercelli",
+      "isoCode": "VC",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Verona",
+      "isoCode": "VR",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Vibo Valentia",
+      "isoCode": "VV",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Vicenza",
+      "isoCode": "VI",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Province of Viterbo",
+      "isoCode": "VT",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sardinia",
+      "isoCode": "88",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sicily",
+      "isoCode": "82",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Tyrol",
+      "isoCode": "BZ",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Trentino",
+      "isoCode": "TN",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Trentino-South Tyrol",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tuscany",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Umbria",
+      "isoCode": "55",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Veneto",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Europe/Rome",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

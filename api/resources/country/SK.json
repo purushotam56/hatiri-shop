@@ -1,0 +1,182 @@
+{
+  "name": "Slovakia",
+  "isoCode": "SK",
+  "timezones": [
+    {
+      "name": "Europe/Bratislava",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Prague",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Banská Bystrica Region",
+      "isoCode": "BC",
+      "timezones": [
+        {
+          "name": "Europe/Bratislava",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bratislava Region",
+      "isoCode": "BL",
+      "timezones": [
+        {
+          "name": "Europe/Bratislava",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Košice Region",
+      "isoCode": "KI",
+      "timezones": [
+        {
+          "name": "Europe/Bratislava",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nitra Region",
+      "isoCode": "NI",
+      "timezones": [
+        {
+          "name": "Europe/Bratislava",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Prešov Region",
+      "isoCode": "PV",
+      "timezones": [
+        {
+          "name": "Europe/Bratislava",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Trenčín Region",
+      "isoCode": "TC",
+      "timezones": [
+        {
+          "name": "Europe/Bratislava",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Trnava Region",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Europe/Bratislava",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Žilina Region",
+      "isoCode": "ZI",
+      "timezones": [
+        {
+          "name": "Europe/Bratislava",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

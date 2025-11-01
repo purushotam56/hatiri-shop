@@ -1,0 +1,14 @@
+{
+  "name": "Martinique",
+  "isoCode": "MQ",
+  "timezones": [
+    {
+      "name": "America/Martinique",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

@@ -1,0 +1,119 @@
+{
+  "name": "Pakistan",
+  "isoCode": "PK",
+  "timezones": [
+    {
+      "name": "Asia/Karachi",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "PKT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Azad Kashmir",
+      "isoCode": "JK",
+      "timezones": [
+        {
+          "name": "Asia/Karachi",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "PKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Balochistan",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Asia/Karachi",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "PKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Federally Administered Tribal Areas",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Asia/Karachi",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "PKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gilgit-Baltistan",
+      "isoCode": "GB",
+      "timezones": [
+        {
+          "name": "Asia/Karachi",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "PKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Islamabad Capital Territory",
+      "isoCode": "IS",
+      "timezones": [
+        {
+          "name": "Asia/Karachi",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "PKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khyber Pakhtunkhwa",
+      "isoCode": "KP",
+      "timezones": [
+        {
+          "name": "Asia/Karachi",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "PKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Punjab",
+      "isoCode": "PB",
+      "timezones": [
+        {
+          "name": "Asia/Karachi",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "PKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sindh",
+      "isoCode": "SD",
+      "timezones": [
+        {
+          "name": "Asia/Karachi",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "PKT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

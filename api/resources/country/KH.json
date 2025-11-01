@@ -1,0 +1,522 @@
+{
+  "name": "Cambodia",
+  "isoCode": "KH",
+  "timezones": [
+    {
+      "name": "Asia/Bangkok",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "+07",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Phnom_Penh",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "+07",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Banteay Meanchey",
+      "isoCode": "1",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Battambang",
+      "isoCode": "2",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kampong Cham",
+      "isoCode": "3",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kampong Chhnang",
+      "isoCode": "4",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kampong Speu",
+      "isoCode": "5",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kampong Thom",
+      "isoCode": "6",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kampot",
+      "isoCode": "7",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kandal",
+      "isoCode": "8",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kep",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Koh Kong",
+      "isoCode": "9",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kratie",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mondulkiri",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oddar Meanchey",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pailin",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phnom Penh",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Preah Vihear",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Prey Veng",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pursat",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ratanakiri",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Siem Reap",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sihanoukville",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Stung Treng",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Svay Rieng",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tai Po District",
+      "isoCode": "NTP",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Takeo",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Phnom_Penh",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

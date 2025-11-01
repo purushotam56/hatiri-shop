@@ -1,0 +1,142 @@
+{
+  "name": "Djibouti",
+  "isoCode": "DJ",
+  "timezones": [
+    {
+      "name": "Africa/Djibouti",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Nairobi",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Ali Sabieh Region",
+      "isoCode": "AS",
+      "timezones": [
+        {
+          "name": "Africa/Djibouti",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Arta Region",
+      "isoCode": "AR",
+      "timezones": [
+        {
+          "name": "Africa/Djibouti",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dikhil Region",
+      "isoCode": "DI",
+      "timezones": [
+        {
+          "name": "Africa/Djibouti",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Djibouti",
+      "isoCode": "DJ",
+      "timezones": [
+        {
+          "name": "Africa/Djibouti",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Obock Region",
+      "isoCode": "OB",
+      "timezones": [
+        {
+          "name": "Africa/Djibouti",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tadjourah Region",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Africa/Djibouti",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

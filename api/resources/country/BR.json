@@ -1,0 +1,2571 @@
+{
+  "name": "Brazil",
+  "isoCode": "BR",
+  "timezones": [
+    {
+      "name": "America/Araguaina",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Bahia",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Belem",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Boa_Vista",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "-04",
+      "isDST": false
+    },
+    {
+      "name": "America/Campo_Grande",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "-04",
+      "isDST": false
+    },
+    {
+      "name": "America/Cuiaba",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "-04",
+      "isDST": false
+    },
+    {
+      "name": "America/Eirunepe",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "-05",
+      "isDST": false
+    },
+    {
+      "name": "America/Fortaleza",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Maceio",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Manaus",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "-04",
+      "isDST": false
+    },
+    {
+      "name": "America/Noronha",
+      "utcOffset": "-02:00",
+      "offsetMinutes": -120,
+      "abbreviation": "-02",
+      "isDST": false
+    },
+    {
+      "name": "America/Porto_Velho",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "-04",
+      "isDST": false
+    },
+    {
+      "name": "America/Recife",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Rio_Branco",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "-05",
+      "isDST": false
+    },
+    {
+      "name": "America/Santarem",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Sao_Paulo",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Acre",
+      "isoCode": "AC",
+      "timezones": [
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Alagoas",
+      "isoCode": "AL",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Amapá",
+      "isoCode": "AP",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Amazonas",
+      "isoCode": "AM",
+      "timezones": [
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bahia",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ceará",
+      "isoCode": "CE",
+      "timezones": [
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Distrito Federal",
+      "isoCode": "DF",
+      "timezones": [
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Espírito Santo",
+      "isoCode": "ES",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Goiás",
+      "isoCode": "GO",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maranhão",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mato Grosso",
+      "isoCode": "MT",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mato Grosso do Sul",
+      "isoCode": "MS",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Minas Gerais",
+      "isoCode": "MG",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Paraná",
+      "isoCode": "PR",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Paraíba",
+      "isoCode": "PB",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pará",
+      "isoCode": "PA",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pernambuco",
+      "isoCode": "PE",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Piauí",
+      "isoCode": "PI",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rio Grande do Norte",
+      "isoCode": "RN",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rio Grande do Sul",
+      "isoCode": "RS",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rio de Janeiro",
+      "isoCode": "RJ",
+      "timezones": [
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rondônia",
+      "isoCode": "RO",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Roraima",
+      "isoCode": "RR",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Catarina",
+      "isoCode": "SC",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sergipe",
+      "isoCode": "SE",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "São Paulo",
+      "isoCode": "SP",
+      "timezones": [
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tocantins",
+      "isoCode": "TO",
+      "timezones": [
+        {
+          "name": "America/Araguaina",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Bahia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Belem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Boa_Vista",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Campo_Grande",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Cuiaba",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Eirunepe",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Fortaleza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Maceio",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Manaus",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Noronha",
+          "utcOffset": "-02:00",
+          "offsetMinutes": -120,
+          "abbreviation": "-02",
+          "isDST": false
+        },
+        {
+          "name": "America/Porto_Velho",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "America/Recife",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Rio_Branco",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "America/Santarem",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Sao_Paulo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

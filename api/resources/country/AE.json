@@ -1,0 +1,106 @@
+{
+  "name": "United Arab Emirates",
+  "isoCode": "AE",
+  "timezones": [
+    {
+      "name": "Asia/Dubai",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Abu Dhabi Emirate",
+      "isoCode": "AZ",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ajman Emirate",
+      "isoCode": "AJ",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dubai",
+      "isoCode": "DU",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fujairah",
+      "isoCode": "FU",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ras al-Khaimah",
+      "isoCode": "RK",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sharjah Emirate",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Umm al-Quwain",
+      "isoCode": "UQ",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

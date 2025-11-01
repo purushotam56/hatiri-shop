@@ -1,0 +1,340 @@
+{
+  "name": "Peru",
+  "isoCode": "PE",
+  "timezones": [
+    {
+      "name": "America/Lima",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "-05",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Amazonas",
+      "isoCode": "AMA",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Apurímac",
+      "isoCode": "APU",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Arequipa",
+      "isoCode": "ARE",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ayacucho",
+      "isoCode": "AYA",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cajamarca",
+      "isoCode": "CAJ",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Callao",
+      "isoCode": "CAL",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cusco",
+      "isoCode": "CUS",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Huancavelica",
+      "isoCode": "HUV",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Huanuco",
+      "isoCode": "HUC",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ica",
+      "isoCode": "ICA",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Junín",
+      "isoCode": "JUN",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Libertad",
+      "isoCode": "LAL",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lambayeque",
+      "isoCode": "LAM",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lima",
+      "isoCode": "LIM",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Loreto",
+      "isoCode": "LOR",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Madre de Dios",
+      "isoCode": "MDD",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Moquegua",
+      "isoCode": "MOQ",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pasco",
+      "isoCode": "PAS",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Piura",
+      "isoCode": "PIU",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Puno",
+      "isoCode": "PUN",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San Martín",
+      "isoCode": "SAM",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tacna",
+      "isoCode": "TAC",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tumbes",
+      "isoCode": "TUM",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ucayali",
+      "isoCode": "UCA",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Áncash",
+      "isoCode": "ANC",
+      "timezones": [
+        {
+          "name": "America/Lima",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

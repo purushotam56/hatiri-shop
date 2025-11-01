@@ -1,0 +1,1068 @@
+{
+  "name": "Turkey",
+  "isoCode": "TR",
+  "timezones": [
+    {
+      "name": "Europe/Istanbul",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Adana",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Adıyaman",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Afyonkarahisar",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aksaray",
+      "isoCode": "68",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Amasya",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ankara",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Antalya",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ardahan",
+      "isoCode": "75",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Artvin",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aydın",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ağrı",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Balıkesir",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bartın",
+      "isoCode": "74",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Batman",
+      "isoCode": "72",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bayburt",
+      "isoCode": "69",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bilecik",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bingöl",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bitlis",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bolu",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Burdur",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bursa",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Denizli",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Diyarbakır",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Düzce",
+      "isoCode": "81",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Edirne",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Elazığ",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Erzincan",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Erzurum",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eskişehir",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gaziantep",
+      "isoCode": "27",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Giresun",
+      "isoCode": "28",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gümüşhane",
+      "isoCode": "29",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hakkâri",
+      "isoCode": "30",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hatay",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Isparta",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Istanbul",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Iğdır",
+      "isoCode": "76",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kahramanmaraş",
+      "isoCode": "46",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karabük",
+      "isoCode": "78",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karaman",
+      "isoCode": "70",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kars",
+      "isoCode": "36",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kastamonu",
+      "isoCode": "37",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kayseri",
+      "isoCode": "38",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kilis",
+      "isoCode": "79",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kocaeli",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Konya",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kütahya",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kırklareli",
+      "isoCode": "39",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kırıkkale",
+      "isoCode": "71",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kırşehir",
+      "isoCode": "40",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Malatya",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Manisa",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mardin",
+      "isoCode": "47",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mersin",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Muğla",
+      "isoCode": "48",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Muş",
+      "isoCode": "49",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nevşehir",
+      "isoCode": "50",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Niğde",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ordu",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Osmaniye",
+      "isoCode": "80",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rize",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sakarya",
+      "isoCode": "54",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samsun",
+      "isoCode": "55",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Siirt",
+      "isoCode": "56",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sinop",
+      "isoCode": "57",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sivas",
+      "isoCode": "58",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tekirdağ",
+      "isoCode": "59",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tokat",
+      "isoCode": "60",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Trabzon",
+      "isoCode": "61",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tunceli",
+      "isoCode": "62",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Uşak",
+      "isoCode": "64",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Van",
+      "isoCode": "65",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yalova",
+      "isoCode": "77",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yozgat",
+      "isoCode": "66",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zonguldak",
+      "isoCode": "67",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Çanakkale",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Çankırı",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Çorum",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "İzmir",
+      "isoCode": "35",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Şanlıurfa",
+      "isoCode": "63",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Şırnak",
+      "isoCode": "73",
+      "timezones": [
+        {
+          "name": "Europe/Istanbul",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,542 @@
+{
+  "name": "Ukraine",
+  "isoCode": "UA",
+  "timezones": [
+    {
+      "name": "Europe/Kyiv",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Simferopol",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "MSK",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Autonomous Republic of Crimea",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cherkaska oblast",
+      "isoCode": "71",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chernihivska oblast",
+      "isoCode": "74",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chernivetska oblast",
+      "isoCode": "77",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dnipropetrovska oblast",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Donetska oblast",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ivano-Frankivska oblast",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kharkivska oblast",
+      "isoCode": "63",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khersonska oblast",
+      "isoCode": "65",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khmelnytska oblast",
+      "isoCode": "68",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kirovohradska oblast",
+      "isoCode": "35",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kyiv",
+      "isoCode": "30",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kyivska oblast",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Luhanska oblast",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lvivska oblast",
+      "isoCode": "46",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mykolaivska oblast",
+      "isoCode": "48",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Odeska oblast",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Poltavska oblast",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rivnenska oblast",
+      "isoCode": "56",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sumska oblast",
+      "isoCode": "59",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ternopilska oblast",
+      "isoCode": "61",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vinnytska oblast",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Volynska oblast",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zakarpatska Oblast",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zaporizka oblast",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zhytomyrska oblast",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Europe/Kyiv",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Simferopol",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "MSK",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

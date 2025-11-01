@@ -1,0 +1,302 @@
+{
+  "name": "Uzbekistan",
+  "isoCode": "UZ",
+  "timezones": [
+    {
+      "name": "Asia/Samarkand",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Tashkent",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Andijan Region",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bukhara Region",
+      "isoCode": "BU",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fergana Region",
+      "isoCode": "FA",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jizzakh Region",
+      "isoCode": "JI",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karakalpakstan",
+      "isoCode": "QR",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Namangan Region",
+      "isoCode": "NG",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Navoiy Region",
+      "isoCode": "NW",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Qashqadaryo Region",
+      "isoCode": "QA",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samarqand Region",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sirdaryo Region",
+      "isoCode": "SI",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Surxondaryo Region",
+      "isoCode": "SU",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tashkent",
+      "isoCode": "TK",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tashkent Region",
+      "isoCode": "TO",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Xorazm Region",
+      "isoCode": "XO",
+      "timezones": [
+        {
+          "name": "Asia/Samarkand",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Tashkent",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

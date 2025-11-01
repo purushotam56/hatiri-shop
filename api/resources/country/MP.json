@@ -1,0 +1,21 @@
+{
+  "name": "Northern Mariana Islands",
+  "isoCode": "MP",
+  "timezones": [
+    {
+      "name": "Pacific/Guam",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "ChST",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Saipan",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "ChST",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

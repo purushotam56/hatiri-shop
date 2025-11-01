@@ -1,0 +1,223 @@
+{
+  "name": "Palau",
+  "isoCode": "PW",
+  "timezones": [
+    {
+      "name": "Pacific/Palau",
+      "utcOffset": "+09:00",
+      "offsetMinutes": 540,
+      "abbreviation": "+09",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Aimeliik",
+      "isoCode": "002",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Airai",
+      "isoCode": "004",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Angaur",
+      "isoCode": "010",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hatohobei",
+      "isoCode": "050",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kayangel",
+      "isoCode": "100",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Koror",
+      "isoCode": "150",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Melekeok",
+      "isoCode": "212",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ngaraard",
+      "isoCode": "214",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ngarchelong",
+      "isoCode": "218",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ngardmau",
+      "isoCode": "222",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ngatpang",
+      "isoCode": "224",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ngchesar",
+      "isoCode": "226",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ngeremlengui",
+      "isoCode": "227",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ngiwal",
+      "isoCode": "228",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Peleliu",
+      "isoCode": "350",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sonsorol",
+      "isoCode": "370",
+      "timezones": [
+        {
+          "name": "Pacific/Palau",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "+09",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

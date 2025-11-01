@@ -1,0 +1,496 @@
+{
+  "name": "Nigeria",
+  "isoCode": "NG",
+  "timezones": [
+    {
+      "name": "Africa/Lagos",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Abia",
+      "isoCode": "AB",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Abuja Federal Capital Territory",
+      "isoCode": "FC",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Adamawa",
+      "isoCode": "AD",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Akwa Ibom",
+      "isoCode": "AK",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Anambra",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bauchi",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bayelsa",
+      "isoCode": "BY",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Benue",
+      "isoCode": "BE",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Borno",
+      "isoCode": "BO",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cross River",
+      "isoCode": "CR",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Delta",
+      "isoCode": "DE",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ebonyi",
+      "isoCode": "EB",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Edo",
+      "isoCode": "ED",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ekiti",
+      "isoCode": "EK",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Enugu",
+      "isoCode": "EN",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gombe",
+      "isoCode": "GO",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Imo",
+      "isoCode": "IM",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jigawa",
+      "isoCode": "JI",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kaduna",
+      "isoCode": "KD",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kano",
+      "isoCode": "KN",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Katsina",
+      "isoCode": "KT",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kebbi",
+      "isoCode": "KE",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kogi",
+      "isoCode": "KO",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kwara",
+      "isoCode": "KW",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lagos",
+      "isoCode": "LA",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nasarawa",
+      "isoCode": "NA",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Niger",
+      "isoCode": "NI",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ogun",
+      "isoCode": "OG",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ondo",
+      "isoCode": "ON",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Osun",
+      "isoCode": "OS",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oyo",
+      "isoCode": "OY",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Plateau",
+      "isoCode": "PL",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rivers",
+      "isoCode": "RI",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sokoto",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taraba",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yobe",
+      "isoCode": "YO",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zamfara",
+      "isoCode": "ZA",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

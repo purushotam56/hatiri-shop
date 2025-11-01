@@ -1,0 +1,702 @@
+{
+  "name": "China",
+  "isoCode": "CN",
+  "timezones": [
+    {
+      "name": "Asia/Shanghai",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "CST",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Urumqi",
+      "utcOffset": "+06:00",
+      "offsetMinutes": 360,
+      "abbreviation": "+06",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Anhui",
+      "isoCode": "AH",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Beijing",
+      "isoCode": "BJ",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chongqing",
+      "isoCode": "CQ",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fujian",
+      "isoCode": "FJ",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gansu",
+      "isoCode": "GS",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guangdong",
+      "isoCode": "GD",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guangxi Zhuang",
+      "isoCode": "GX",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guizhou",
+      "isoCode": "GZ",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hainan",
+      "isoCode": "HI",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hebei",
+      "isoCode": "HE",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Heilongjiang",
+      "isoCode": "HL",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Henan",
+      "isoCode": "HA",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hong Kong SAR",
+      "isoCode": "HK",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hubei",
+      "isoCode": "HB",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hunan",
+      "isoCode": "HN",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Inner Mongolia",
+      "isoCode": "NM",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jiangsu",
+      "isoCode": "JS",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jiangxi",
+      "isoCode": "JX",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jilin",
+      "isoCode": "JL",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Liaoning",
+      "isoCode": "LN",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Macau SAR",
+      "isoCode": "MO",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ningxia Huizu",
+      "isoCode": "NX",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Qinghai",
+      "isoCode": "QH",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shaanxi",
+      "isoCode": "SN",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shandong",
+      "isoCode": "SD",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shanghai",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shanxi",
+      "isoCode": "SX",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sichuan",
+      "isoCode": "SC",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taiwan",
+      "isoCode": "TW",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tianjin",
+      "isoCode": "TJ",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Xinjiang",
+      "isoCode": "XJ",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Xizang",
+      "isoCode": "XZ",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yunnan",
+      "isoCode": "YN",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zhejiang",
+      "isoCode": "ZJ",
+      "timezones": [
+        {
+          "name": "Asia/Shanghai",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Urumqi",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

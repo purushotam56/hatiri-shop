@@ -1,0 +1,14 @@
+{
+  "name": "Gibraltar",
+  "isoCode": "GI",
+  "timezones": [
+    {
+      "name": "Europe/Gibraltar",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

@@ -1,0 +1,862 @@
+{
+  "name": "The Bahamas",
+  "isoCode": "BS",
+  "timezones": [
+    {
+      "name": "America/Nassau",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "EDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Toronto",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "EDT",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Acklins",
+      "isoCode": "AK",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Acklins and Crooked Islands",
+      "isoCode": "AC",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Berry Islands",
+      "isoCode": "BY",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bimini",
+      "isoCode": "BI",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Black Point",
+      "isoCode": "BP",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cat Island",
+      "isoCode": "CI",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Central Abaco",
+      "isoCode": "CO",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Central Andros",
+      "isoCode": "CS",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Central Eleuthera",
+      "isoCode": "CE",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Crooked Island",
+      "isoCode": "CK",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "East Grand Bahama",
+      "isoCode": "EG",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Exuma",
+      "isoCode": "EX",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Freeport",
+      "isoCode": "FP",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fresh Creek",
+      "isoCode": "FC",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Governor's Harbour",
+      "isoCode": "GH",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Grand Cay",
+      "isoCode": "GC",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Green Turtle Cay",
+      "isoCode": "GT",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Harbour Island",
+      "isoCode": "HI",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "High Rock",
+      "isoCode": "HR",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hope Town",
+      "isoCode": "HT",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Inagua",
+      "isoCode": "IN",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kemps Bay",
+      "isoCode": "KB",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Long Island",
+      "isoCode": "LI",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mangrove Cay",
+      "isoCode": "MC",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Marsh Harbour",
+      "isoCode": "MH",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mayaguana District",
+      "isoCode": "MG",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "New Providence",
+      "isoCode": "NP",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nichollstown and Berry Islands",
+      "isoCode": "NB",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Abaco",
+      "isoCode": "NO",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Andros",
+      "isoCode": "NS",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Eleuthera",
+      "isoCode": "NE",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ragged Island",
+      "isoCode": "RI",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rock Sound",
+      "isoCode": "RS",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rum Cay District",
+      "isoCode": "RC",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "San Salvador Island",
+      "isoCode": "SS",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "San Salvador and Rum Cay",
+      "isoCode": "SR",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sandy Point",
+      "isoCode": "SP",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Abaco",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Andros",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Eleuthera",
+      "isoCode": "SE",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Spanish Wells",
+      "isoCode": "SW",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Grand Bahama",
+      "isoCode": "WG",
+      "timezones": [
+        {
+          "name": "America/Nassau",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

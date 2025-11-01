@@ -1,0 +1,14 @@
+{
+  "name": "New Caledonia",
+  "isoCode": "NC",
+  "timezones": [
+    {
+      "name": "Pacific/Noumea",
+      "utcOffset": "+11:00",
+      "offsetMinutes": 660,
+      "abbreviation": "+11",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

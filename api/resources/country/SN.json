@@ -1,0 +1,302 @@
+{
+  "name": "Senegal",
+  "isoCode": "SN",
+  "timezones": [
+    {
+      "name": "Africa/Abidjan",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Dakar",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Dakar",
+      "isoCode": "DK",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Diourbel Region",
+      "isoCode": "DB",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fatick",
+      "isoCode": "FK",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kaffrine",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kaolack",
+      "isoCode": "KL",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kolda",
+      "isoCode": "KD",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kédougou",
+      "isoCode": "KE",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Louga",
+      "isoCode": "LG",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Matam",
+      "isoCode": "MT",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint-Louis",
+      "isoCode": "SL",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sédhiou",
+      "isoCode": "SE",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tambacounda Region",
+      "isoCode": "TC",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Thiès Region",
+      "isoCode": "TH",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ziguinchor",
+      "isoCode": "ZG",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Dakar",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

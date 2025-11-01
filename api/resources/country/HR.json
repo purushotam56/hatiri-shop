@@ -1,0 +1,422 @@
+{
+  "name": "Croatia",
+  "isoCode": "HR",
+  "timezones": [
+    {
+      "name": "Europe/Belgrade",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Zagreb",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Bjelovar-Bilogora County",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Brod-Posavina County",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dubrovnik-Neretva County",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Istria County",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Karlovac County",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Koprivnica-Križevci County",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Krapina-Zagorje County",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lika-Senj County",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Međimurje County",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Osijek-Baranja County",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Požega-Slavonia County",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Primorje-Gorski Kotar County",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sisak-Moslavina County",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Split-Dalmatia County",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Virovitica-Podravina County",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vukovar-Syrmia County",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zadar County",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zagreb",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zagreb County",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Šibenik-Knin County",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Zagreb",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

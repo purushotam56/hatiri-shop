@@ -1,0 +1,442 @@
+{
+  "name": "Mongolia",
+  "isoCode": "MN",
+  "timezones": [
+    {
+      "name": "Asia/Hovd",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "+07",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Ulaanbaatar",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "+08",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Arkhangai Province",
+      "isoCode": "073",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bayan-Ölgii Province",
+      "isoCode": "071",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bayankhongor Province",
+      "isoCode": "069",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bulgan Province",
+      "isoCode": "067",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Darkhan-Uul Province",
+      "isoCode": "037",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dornod Province",
+      "isoCode": "061",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dornogovi Province",
+      "isoCode": "063",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dundgovi Province",
+      "isoCode": "059",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Govi-Altai Province",
+      "isoCode": "065",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Govisümber Province",
+      "isoCode": "064",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khentii Province",
+      "isoCode": "039",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khovd Province",
+      "isoCode": "043",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khövsgöl Province",
+      "isoCode": "041",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Orkhon Province",
+      "isoCode": "035",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Selenge Province",
+      "isoCode": "049",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sükhbaatar Province",
+      "isoCode": "051",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Töv Province",
+      "isoCode": "047",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Uvs Province",
+      "isoCode": "046",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zavkhan Province",
+      "isoCode": "057",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ömnögovi Province",
+      "isoCode": "053",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Övörkhangai Province",
+      "isoCode": "055",
+      "timezones": [
+        {
+          "name": "Asia/Hovd",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Ulaanbaatar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

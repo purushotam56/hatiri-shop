@@ -1,0 +1,182 @@
+{
+  "name": "Antigua And Barbuda",
+  "isoCode": "AG",
+  "timezones": [
+    {
+      "name": "America/Antigua",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    },
+    {
+      "name": "America/Puerto_Rico",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Barbuda",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "America/Antigua",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Redonda",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "America/Antigua",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint George Parish",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "America/Antigua",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint John Parish",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "America/Antigua",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Mary Parish",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "America/Antigua",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Paul Parish",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "America/Antigua",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Peter Parish",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "America/Antigua",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Philip Parish",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "America/Antigua",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

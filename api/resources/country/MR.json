@@ -1,0 +1,322 @@
+{
+  "name": "Mauritania",
+  "isoCode": "MR",
+  "timezones": [
+    {
+      "name": "Africa/Abidjan",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Nouakchott",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Adrar Region",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Assaba Region",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Brakna Region",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dakhlet Nouadhibou",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gorgol Region",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guidimaka Region",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hodh Ech Chargui Region",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hodh El Gharbi Region",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Inchiri Region",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nouakchott-Nord Region",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nouakchott-Ouest Region",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nouakchott-Sud Region",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tagant Region",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tiris Zemmour Region",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Trarza Region",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nouakchott",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

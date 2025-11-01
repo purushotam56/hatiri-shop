@@ -1,0 +1,142 @@
+{
+  "name": "Kuwait",
+  "isoCode": "KW",
+  "timezones": [
+    {
+      "name": "Asia/Kuwait",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Riyadh",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Al Ahmadi Governorate",
+      "isoCode": "AH",
+      "timezones": [
+        {
+          "name": "Asia/Kuwait",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Farwaniyah Governorate",
+      "isoCode": "FA",
+      "timezones": [
+        {
+          "name": "Asia/Kuwait",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Jahra Governorate",
+      "isoCode": "JA",
+      "timezones": [
+        {
+          "name": "Asia/Kuwait",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Capital Governorate",
+      "isoCode": "KU",
+      "timezones": [
+        {
+          "name": "Asia/Kuwait",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hawalli Governorate",
+      "isoCode": "HA",
+      "timezones": [
+        {
+          "name": "Asia/Kuwait",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mubarak Al-Kabeer Governorate",
+      "isoCode": "MU",
+      "timezones": [
+        {
+          "name": "Asia/Kuwait",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

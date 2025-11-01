@@ -1,0 +1,342 @@
+{
+  "name": "Trinidad And Tobago",
+  "isoCode": "TT",
+  "timezones": [
+    {
+      "name": "America/Port_of_Spain",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    },
+    {
+      "name": "America/Puerto_Rico",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Arima",
+      "isoCode": "ARI",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chaguanas",
+      "isoCode": "CHA",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Couva-Tabaquite-Talparo Regional Corporation",
+      "isoCode": "CTT",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Diego Martin Regional Corporation",
+      "isoCode": "DMN",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eastern Tobago",
+      "isoCode": "ETO",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Penal-Debe Regional Corporation",
+      "isoCode": "PED",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Point Fortin",
+      "isoCode": "PTF",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Port of Spain",
+      "isoCode": "POS",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Princes Town Regional Corporation",
+      "isoCode": "PRT",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rio Claro-Mayaro Regional Corporation",
+      "isoCode": "MRC",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San Fernando",
+      "isoCode": "SFO",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San Juan-Laventille Regional Corporation",
+      "isoCode": "SJL",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sangre Grande Regional Corporation",
+      "isoCode": "SGE",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Siparia Regional Corporation",
+      "isoCode": "SIP",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tunapuna-Piarco Regional Corporation",
+      "isoCode": "TUP",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Tobago",
+      "isoCode": "WTO",
+      "timezones": [
+        {
+          "name": "America/Port_of_Spain",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3226 @@
+{
+  "name": "United Kingdom",
+  "isoCode": "GB",
+  "timezones": [
+    {
+      "name": "Europe/London",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "BST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Aberdeen",
+      "isoCode": "ABE",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aberdeenshire",
+      "isoCode": "ABD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Angus",
+      "isoCode": "ANS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Antrim",
+      "isoCode": "ANT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Antrim and Newtownabbey",
+      "isoCode": "ANN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ards",
+      "isoCode": "ARD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ards and North Down",
+      "isoCode": "AND",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Argyll and Bute",
+      "isoCode": "AGB",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Armagh City and District Council",
+      "isoCode": "ARM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Armagh, Banbridge and Craigavon",
+      "isoCode": "ABC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ascension Island",
+      "isoCode": "SH-AC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ballymena Borough",
+      "isoCode": "BLA",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ballymoney",
+      "isoCode": "BLY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Banbridge",
+      "isoCode": "BNB",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Barnsley",
+      "isoCode": "BNS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bath and North East Somerset",
+      "isoCode": "BAS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bedford",
+      "isoCode": "BDF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Belfast district",
+      "isoCode": "BFS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Birmingham",
+      "isoCode": "BIR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Blackburn with Darwen",
+      "isoCode": "BBD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Blackpool",
+      "isoCode": "BPL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Blaenau Gwent County Borough",
+      "isoCode": "BGW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bolton",
+      "isoCode": "BOL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bournemouth",
+      "isoCode": "BMH",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bracknell Forest",
+      "isoCode": "BRC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bradford",
+      "isoCode": "BRD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bridgend County Borough",
+      "isoCode": "BGE",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Brighton and Hove",
+      "isoCode": "BNH",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Buckinghamshire",
+      "isoCode": "BKM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bury",
+      "isoCode": "BUR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Caerphilly County Borough",
+      "isoCode": "CAY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Calderdale",
+      "isoCode": "CLD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cambridgeshire",
+      "isoCode": "CAM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Carmarthenshire",
+      "isoCode": "CMN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Carrickfergus Borough Council",
+      "isoCode": "CKF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Castlereagh",
+      "isoCode": "CSR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Causeway Coast and Glens",
+      "isoCode": "CCG",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Central Bedfordshire",
+      "isoCode": "CBF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ceredigion",
+      "isoCode": "CGN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cheshire East",
+      "isoCode": "CHE",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cheshire West and Chester",
+      "isoCode": "CHW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City and County of Cardiff",
+      "isoCode": "CRF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City and County of Swansea",
+      "isoCode": "SWA",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Bristol",
+      "isoCode": "BST",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Derby",
+      "isoCode": "DER",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Kingston upon Hull",
+      "isoCode": "KHL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Leicester",
+      "isoCode": "LCE",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of London",
+      "isoCode": "LND",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Nottingham",
+      "isoCode": "NGM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Peterborough",
+      "isoCode": "PTE",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Plymouth",
+      "isoCode": "PLY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Portsmouth",
+      "isoCode": "POR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Southampton",
+      "isoCode": "STH",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Stoke-on-Trent",
+      "isoCode": "STE",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Sunderland",
+      "isoCode": "SND",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Westminster",
+      "isoCode": "WSM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of Wolverhampton",
+      "isoCode": "WLV",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "City of York",
+      "isoCode": "YOR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Clackmannanshire",
+      "isoCode": "CLK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Coleraine Borough Council",
+      "isoCode": "CLR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Conwy County Borough",
+      "isoCode": "CWY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cookstown District Council",
+      "isoCode": "CKT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cornwall",
+      "isoCode": "CON",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "County Durham",
+      "isoCode": "DUR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Coventry",
+      "isoCode": "COV",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Craigavon Borough Council",
+      "isoCode": "CGV",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cumbria",
+      "isoCode": "CMA",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Darlington",
+      "isoCode": "DAL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Denbighshire",
+      "isoCode": "DEN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Derbyshire",
+      "isoCode": "DBY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Derry City Council",
+      "isoCode": "DRY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Derry City and Strabane",
+      "isoCode": "DRS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Devon",
+      "isoCode": "DEV",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Doncaster",
+      "isoCode": "DNC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dorset",
+      "isoCode": "DOR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Down District Council",
+      "isoCode": "DOW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dudley",
+      "isoCode": "DUD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dumfries and Galloway",
+      "isoCode": "DGY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dundee",
+      "isoCode": "DND",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dungannon and South Tyrone Borough Council",
+      "isoCode": "DGN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "East Ayrshire",
+      "isoCode": "EAY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "East Dunbartonshire",
+      "isoCode": "EDU",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "East Lothian",
+      "isoCode": "ELN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "East Renfrewshire",
+      "isoCode": "ERW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "East Riding of Yorkshire",
+      "isoCode": "ERY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "East Sussex",
+      "isoCode": "ESX",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Edinburgh",
+      "isoCode": "EDH",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "England",
+      "isoCode": "ENG",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Essex",
+      "isoCode": "ESS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Falkirk",
+      "isoCode": "FAL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fermanagh District Council",
+      "isoCode": "FER",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fermanagh and Omagh",
+      "isoCode": "FMO",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fife",
+      "isoCode": "FIF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Flintshire",
+      "isoCode": "FLN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gateshead",
+      "isoCode": "GAT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Glasgow",
+      "isoCode": "GLG",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gloucestershire",
+      "isoCode": "GLS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gwynedd",
+      "isoCode": "GWN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Halton",
+      "isoCode": "HAL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hampshire",
+      "isoCode": "HAM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hartlepool",
+      "isoCode": "HPL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Herefordshire",
+      "isoCode": "HEF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hertfordshire",
+      "isoCode": "HRT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Highland",
+      "isoCode": "HLD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Inverclyde",
+      "isoCode": "IVC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Isle of Wight",
+      "isoCode": "IOW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Isles of Scilly",
+      "isoCode": "IOS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kent",
+      "isoCode": "KEN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kirklees",
+      "isoCode": "KIR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Knowsley",
+      "isoCode": "KWL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lancashire",
+      "isoCode": "LAN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Larne Borough Council",
+      "isoCode": "LRN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Leeds",
+      "isoCode": "LDS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Leicestershire",
+      "isoCode": "LEC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Limavady Borough Council",
+      "isoCode": "LMV",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lincolnshire",
+      "isoCode": "LIN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lisburn City Council",
+      "isoCode": "LSB",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lisburn and Castlereagh",
+      "isoCode": "LBC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Liverpool",
+      "isoCode": "LIV",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Barking and Dagenham",
+      "isoCode": "BDG",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Barnet",
+      "isoCode": "BNE",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Bexley",
+      "isoCode": "BEX",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Brent",
+      "isoCode": "BEN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Bromley",
+      "isoCode": "BRY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Camden",
+      "isoCode": "CMD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Croydon",
+      "isoCode": "CRY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Ealing",
+      "isoCode": "EAL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Enfield",
+      "isoCode": "ENF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Hackney",
+      "isoCode": "HCK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Hammersmith and Fulham",
+      "isoCode": "HMF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Haringey",
+      "isoCode": "HRY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Harrow",
+      "isoCode": "HRW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Havering",
+      "isoCode": "HAV",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Hillingdon",
+      "isoCode": "HIL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Hounslow",
+      "isoCode": "HNS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Islington",
+      "isoCode": "ISL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Lambeth",
+      "isoCode": "LBH",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Lewisham",
+      "isoCode": "LEW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Merton",
+      "isoCode": "MRT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Newham",
+      "isoCode": "NWM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Redbridge",
+      "isoCode": "RDB",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Richmond upon Thames",
+      "isoCode": "RIC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Southwark",
+      "isoCode": "SWK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Sutton",
+      "isoCode": "STN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Tower Hamlets",
+      "isoCode": "TWH",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Waltham Forest",
+      "isoCode": "WFT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "London Borough of Wandsworth",
+      "isoCode": "WND",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Magherafelt District Council",
+      "isoCode": "MFT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Manchester",
+      "isoCode": "MAN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Medway",
+      "isoCode": "MDW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Merthyr Tydfil County Borough",
+      "isoCode": "MTY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Metropolitan Borough of Wigan",
+      "isoCode": "WGN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mid Ulster",
+      "isoCode": "MUL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mid and East Antrim",
+      "isoCode": "MEA",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Middlesbrough",
+      "isoCode": "MDB",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Midlothian",
+      "isoCode": "MLN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Milton Keynes",
+      "isoCode": "MIK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Monmouthshire",
+      "isoCode": "MON",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Moray",
+      "isoCode": "MRY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Moyle District Council",
+      "isoCode": "MYL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Neath Port Talbot County Borough",
+      "isoCode": "NTL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Newcastle upon Tyne",
+      "isoCode": "NET",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Newport",
+      "isoCode": "NWP",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Newry and Mourne District Council",
+      "isoCode": "NYM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Newry, Mourne and Down",
+      "isoCode": "NMD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Newtownabbey Borough Council",
+      "isoCode": "NTA",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Norfolk",
+      "isoCode": "NFK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Ayrshire",
+      "isoCode": "NAY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Down Borough Council",
+      "isoCode": "NDN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North East Lincolnshire",
+      "isoCode": "NEL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Lanarkshire",
+      "isoCode": "NLK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Lincolnshire",
+      "isoCode": "NLN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Somerset",
+      "isoCode": "NSM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Tyneside",
+      "isoCode": "NTY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Yorkshire",
+      "isoCode": "NYK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Northamptonshire",
+      "isoCode": "NTH",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Northern Ireland",
+      "isoCode": "NIR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Northumberland",
+      "isoCode": "NBL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nottinghamshire",
+      "isoCode": "NTT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Oldham",
+      "isoCode": "OLD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Omagh District Council",
+      "isoCode": "OMH",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Orkney Islands",
+      "isoCode": "ORK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Outer Hebrides",
+      "isoCode": "ELS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Oxfordshire",
+      "isoCode": "OXF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pembrokeshire",
+      "isoCode": "PEM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Perth and Kinross",
+      "isoCode": "PKN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Poole",
+      "isoCode": "POL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Powys",
+      "isoCode": "POW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Reading",
+      "isoCode": "RDG",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Redcar and Cleveland",
+      "isoCode": "RCC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Renfrewshire",
+      "isoCode": "RFW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rhondda Cynon Taf",
+      "isoCode": "RCT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rochdale",
+      "isoCode": "RCH",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rotherham",
+      "isoCode": "ROT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Royal Borough of Greenwich",
+      "isoCode": "GRE",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Royal Borough of Kensington and Chelsea",
+      "isoCode": "KEC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Royal Borough of Kingston upon Thames",
+      "isoCode": "KTT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rutland",
+      "isoCode": "RUT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saint Helena",
+      "isoCode": "SH-HL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Salford",
+      "isoCode": "SLF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sandwell",
+      "isoCode": "SAW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Scotland",
+      "isoCode": "SCT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Scottish Borders",
+      "isoCode": "SCB",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sefton",
+      "isoCode": "SFT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sheffield",
+      "isoCode": "SHF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Shetland Islands",
+      "isoCode": "ZET",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Shropshire",
+      "isoCode": "SHR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Slough",
+      "isoCode": "SLG",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Solihull",
+      "isoCode": "SOL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Somerset",
+      "isoCode": "SOM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Ayrshire",
+      "isoCode": "SAY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Gloucestershire",
+      "isoCode": "SGC",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Lanarkshire",
+      "isoCode": "SLK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Tyneside",
+      "isoCode": "STY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Southend-on-Sea",
+      "isoCode": "SOS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "St Helens",
+      "isoCode": "SHN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Staffordshire",
+      "isoCode": "STS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Stirling",
+      "isoCode": "STG",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Stockport",
+      "isoCode": "SKP",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Stockton-on-Tees",
+      "isoCode": "STT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Strabane District Council",
+      "isoCode": "STB",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Suffolk",
+      "isoCode": "SFK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Surrey",
+      "isoCode": "SRY",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Swindon",
+      "isoCode": "SWD",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tameside",
+      "isoCode": "TAM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Telford and Wrekin",
+      "isoCode": "TFW",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Thurrock",
+      "isoCode": "THR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Torbay",
+      "isoCode": "TOB",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Torfaen",
+      "isoCode": "TOF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Trafford",
+      "isoCode": "TRF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "United Kingdom",
+      "isoCode": "UKM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vale of Glamorgan",
+      "isoCode": "VGL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Wakefield",
+      "isoCode": "WKF",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Wales",
+      "isoCode": "WLS",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Walsall",
+      "isoCode": "WLL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Warrington",
+      "isoCode": "WRT",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Warwickshire",
+      "isoCode": "WAR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Berkshire",
+      "isoCode": "WBK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Dunbartonshire",
+      "isoCode": "WDU",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Lothian",
+      "isoCode": "WLN",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Sussex",
+      "isoCode": "WSX",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Wiltshire",
+      "isoCode": "WIL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Windsor and Maidenhead",
+      "isoCode": "WNM",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Wirral",
+      "isoCode": "WRL",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Wokingham",
+      "isoCode": "WOK",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Worcestershire",
+      "isoCode": "WOR",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Wrexham County Borough",
+      "isoCode": "WRX",
+      "timezones": [
+        {
+          "name": "Europe/London",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "BST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

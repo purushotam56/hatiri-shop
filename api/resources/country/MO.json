@@ -1,0 +1,14 @@
+{
+  "name": "Macau S.A.R.",
+  "isoCode": "MO",
+  "timezones": [
+    {
+      "name": "Asia/Macau",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "CST",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

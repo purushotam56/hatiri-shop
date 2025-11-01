@@ -1,0 +1,166 @@
+/*
+|--------------------------------------------------------------------------
+| Routes file
+|--------------------------------------------------------------------------
+|
+| The routes file is used for defining the HTTP routes.
+|
+*/
+
+import router from '@adonisjs/core/services/router'
+import { middleware } from './kernel.js'
+const OrganisationController = () => import('#controllers/organisation_controller')
+const BranchsController = () => import('#controllers/branch_controller')
+const AccountsController = () => import('#controllers/accounts_controller')
+const UsersController = () => import('#controllers/users_controller')
+const AuthController = () => import('#controllers/auth_controller')
+const UploadsController = () => import('#controllers/uploads_controller')
+const GlobalConfigsController = () => import('#controllers/global_configs_controller')
+const AdminController = () => import('#controllers/admin_controller')
+const SellerController = () => import('#controllers/seller_controller')
+const ProductController = () => import('#controllers/product_controller')
+const ProductCategoryController = () => import('#controllers/product_category_controller')
+
+router
+  .group(() => {
+    router
+      .group(() => {
+        router.get('/countries', [GlobalConfigsController, 'countries'])
+        router.get('/state/:countryCode', [GlobalConfigsController, 'stateFromCountry'])
+        router.get('/managed_countries', [GlobalConfigsController, 'managedCountryState'])
+        router.get('/config', [GlobalConfigsController, 'configs'])
+      })
+      .prefix('/public')
+
+    router
+      .resource('organisation', OrganisationController)
+      .apiOnly()
+      .use(['destroy', 'store'], middleware.auth({ guards: ['adminapi'] }))
+      .use(['show', 'index', 'update'], middleware.auth({ guards: ['adminapi', 'api'] }))
+
+    router
+      .resource('admin/organisation', OrganisationController)
+      .apiOnly()
+      .use(['destroy', 'store'], middleware.auth({ guards: ['adminapi'] }))
+      .use(['show', 'index', 'update'], middleware.auth({ guards: ['adminapi', 'api'] }))
+
+    // .use('*', middleware.headerUtility({
+    //   organisationRequired: true
+    // }))
+
+    // router.get('invitation/update-invitee/:id', [InvitationUsersController, 'update'])
+    // .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+
+    router
+      .post('organisation/:organisationId/user', [OrganisationController, 'createOrganisationUser'])
+      .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+
+    router
+      .get('organisation/:organisationId/branchs', [BranchsController, 'findAllByOrganisation'])
+      .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+
+    router
+      .get('organisation/:organisationId/users', [UsersController, 'findAllByOrganisation'])
+      .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+
+    router
+      .resource('branchs', BranchsController)
+      .apiOnly()
+      .use('*', middleware.auth({ guards: ['adminapi', 'api'] }))
+    router
+      .post('branch/:branchId/user', [BranchsController, 'createBranchUser'])
+      .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+    router
+      .get('branch/:branchId/users-with-tradecode', [BranchsController, 'findBranchUserWithTradeCode'])
+      .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+
+    router.post('login', [AuthController, 'login'])
+    router
+      .post('organisation_login', [AuthController, 'selectOrganisationRole'])
+      .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+    router
+      .get('check_session', [AuthController, 'validateToken'])
+      .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+    router.post('login_otp', [AuthController, 'sendLoginOtp'])
+    router.post('login_otp_verify', [AuthController, 'verifyLoginOtp'])
+    router
+      .post('logout', [AuthController, 'logout'])
+      .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+    router.post('forgot_password', [AuthController, 'forgotPassword'])
+    router.post('admin/forgot_password', [AuthController, 'forgotPassword'])
+    router.post('reset_password', [AuthController, 'resetPassword'])
+    router.post('decrypt_token', [AuthController, 'decryptToken'])
+    router
+      .resource('upload', UploadsController)
+      .except(['update', 'destroy', 'index', 'edit'])
+      .use('*', middleware.auth({ guards: ['adminapi', 'api'] }))
+
+    router.get('/global_config', [GlobalConfigsController, 'globalConfigList'])
+    router
+      .get('/config', [GlobalConfigsController, 'privateConfigs'])
+      .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+
+    router.get('/countries', [GlobalConfigsController, 'countryList'])
+
+    router
+      .resource('users', UsersController)
+      .apiOnly()
+      .use('update', middleware.auth({ guards: ['api', 'adminapi'] }))
+      .use(['destroy', 'index', 'show', 'store'], middleware.auth({ guards: ['adminapi'] }))
+
+    router.put('admin/:id', [UsersController, 'update']).use(middleware.auth({ guards: ['adminapi'] }))
+
+    router
+      .post('account/register-device-token', [AccountsController, 'registerUserDeviceToken'])
+      .use(middleware.auth({ guards: ['adminapi', 'api'] }))
+
+    // Admin routes
+    router
+      .group(() => {
+        router.post('/login', [AdminController, 'adminLogin'])
+        router.get('/organisations', [AdminController, 'listOrganisations']).use(middleware.auth({ guards: ['adminapi'] }))
+        router.post('/organisations', [AdminController, 'createOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
+        router.get('/organisations/:id', [AdminController, 'getOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
+        router.put('/organisations/:id', [AdminController, 'updateOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
+        router.delete('/organisations/:id', [AdminController, 'deleteOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
+      })
+      .prefix('/admin')
+
+    // Public organisations endpoint - for browsing stores
+    router.get('/organisations', [AdminController, 'listOrganisations'])
+
+    // Seller routes
+    router
+      .group(() => {
+        router.post('/register', [SellerController, 'registerSeller'])
+        router.post('/login', [SellerController, 'sellerLogin'])
+        router.get('/:id/dashboard', [SellerController, 'getDashboard']).use(middleware.auth({ guards: ['api'] }))
+        router.get('/:id/orders', [SellerController, 'getOrders']).use(middleware.auth({ guards: ['api'] }))
+        router.get('/:id/orders/:orderId', [SellerController, 'getOrderDetail']).use(middleware.auth({ guards: ['api'] }))
+        router.patch('/:id/orders/:orderId/status', [SellerController, 'updateOrderStatus']).use(middleware.auth({ guards: ['api'] }))
+        router.get('/:id/customers', [SellerController, 'getCustomers']).use(middleware.auth({ guards: ['api'] }))
+        router.get('/:id/customers/:customerId/orders', [SellerController, 'getCustomerOrders']).use(middleware.auth({ guards: ['api'] }))
+      })
+      .prefix('/seller')
+
+    // Product routes - public browsing, authenticated create/edit/delete
+    router
+      .resource('products', ProductController)
+      .apiOnly()
+      .use(['store', 'update', 'destroy'], middleware.auth({ guards: ['api', 'adminapi'] }))
+
+    // Product Category routes - public read, authenticated create/edit/delete
+    router
+      .resource('categories', ProductCategoryController)
+      .apiOnly()
+      .use(['store', 'update', 'destroy'], middleware.auth({ guards: ['api', 'adminapi'] }))
+
+    // Get categories for a specific organisation
+    router
+      .get('organisation/:organisationId/categories', [ProductCategoryController, 'getByOrganisation'])
+  })
+  .prefix('/api')
+
+router.get('/', async ({ view }) => {
+  return view.render('welcome')
+})

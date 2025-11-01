@@ -1,0 +1,39 @@
+import { BaseSeeder } from '@adonisjs/lucid/seeders'
+import ProductCategory from '#models/product_category'
+import Organisation from '#models/organisation'
+
+export default class extends BaseSeeder {
+  async run() {
+    const organisations = await Organisation.all()
+    
+    const categories = [
+      { name: 'Vegetables', slug: 'vegetables', description: 'Fresh vegetables and greens' },
+      { name: 'Fruits', slug: 'fruits', description: 'Fresh fruits and berries' },
+      { name: 'Dairy', slug: 'dairy', description: 'Milk, cheese, and dairy products' },
+      { name: 'Bakery', slug: 'bakery', description: 'Bread, cakes, and baked goods' },
+      { name: 'Snacks', slug: 'snacks', description: 'Snacks and light bites' },
+      { name: 'Beverages', slug: 'beverages', description: 'Drinks and beverages' },
+      { name: 'Kitchen', slug: 'kitchen', description: 'Kitchen and household items' },
+      { name: 'Home', slug: 'home', description: 'Home essentials' },
+      { name: 'Cleaning', slug: 'cleaning', description: 'Cleaning supplies' },
+      { name: 'Electronics', slug: 'electronics', description: 'Electronics and gadgets' },
+    ]
+
+    for (const org of organisations) {
+      for (const category of categories) {
+        await ProductCategory.firstOrCreate(
+          { organisationId: org.id, slug: category.slug },
+          {
+            organisationId: org.id,
+            name: category.name,
+            slug: category.slug,
+            description: category.description,
+            isActive: true,
+          }
+        )
+      }
+    }
+
+    console.log('Product categories seeded successfully for all organisations')
+  }
+}

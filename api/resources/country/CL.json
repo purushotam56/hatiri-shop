@@ -1,0 +1,580 @@
+{
+  "name": "Chile",
+  "isoCode": "CL",
+  "timezones": [
+    {
+      "name": "America/Coyhaique",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Punta_Arenas",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Santiago",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "-04",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Easter",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "-06",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Aisén del General Carlos Ibañez del Campo",
+      "isoCode": "AI",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Antofagasta",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Arica y Parinacota",
+      "isoCode": "AP",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Atacama",
+      "isoCode": "AT",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Biobío",
+      "isoCode": "BI",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Coquimbo",
+      "isoCode": "CO",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Araucanía",
+      "isoCode": "AR",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Libertador General Bernardo O'Higgins",
+      "isoCode": "LI",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Los Lagos",
+      "isoCode": "LL",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Los Ríos",
+      "isoCode": "LR",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Magallanes y de la Antártica Chilena",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maule",
+      "isoCode": "ML",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Región Metropolitana de Santiago",
+      "isoCode": "RM",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tarapacá",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Valparaíso",
+      "isoCode": "VS",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ñuble",
+      "isoCode": "NB",
+      "timezones": [
+        {
+          "name": "America/Coyhaique",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Punta_Arenas",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Santiago",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Easter",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

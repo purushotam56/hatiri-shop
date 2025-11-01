@@ -1,0 +1,353 @@
+{
+  "name": "Maldives",
+  "isoCode": "MV",
+  "timezones": [
+    {
+      "name": "Indian/Maldives",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Addu Atoll",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Alif Alif Atoll",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Alif Dhaal Atoll",
+      "isoCode": "00",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central Province",
+      "isoCode": "CE",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dhaalu Atoll",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Faafu Atoll",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gaafu Alif Atoll",
+      "isoCode": "27",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gaafu Dhaalu Atoll",
+      "isoCode": "28",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gnaviyani Atoll",
+      "isoCode": "29",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Haa Alif Atoll",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Haa Dhaalu Atoll",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kaafu Atoll",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Laamu Atoll",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lhaviyani Atoll",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Malé",
+      "isoCode": "MLE",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Meemu Atoll",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Noonu Atoll",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Central Province",
+      "isoCode": "NC",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Province",
+      "isoCode": "NO",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Raa Atoll",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shaviyani Atoll",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South Central Province",
+      "isoCode": "SC",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South Province",
+      "isoCode": "SU",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Thaa Atoll",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Upper South Province",
+      "isoCode": "US",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vaavu Atoll",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Indian/Maldives",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "name": "Jordan",
+  "isoCode": "JO",
+  "timezones": [
+    {
+      "name": "Asia/Amman",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Ajloun Governorate",
+      "isoCode": "AJ",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Amman Governorate",
+      "isoCode": "AM",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aqaba Governorate",
+      "isoCode": "AQ",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Balqa Governorate",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Irbid Governorate",
+      "isoCode": "IR",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jerash Governorate",
+      "isoCode": "JA",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karak Governorate",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ma'an Governorate",
+      "isoCode": "MN",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Madaba Governorate",
+      "isoCode": "MD",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mafraq Governorate",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tafilah Governorate",
+      "isoCode": "AT",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zarqa Governorate",
+      "isoCode": "AZ",
+      "timezones": [
+        {
+          "name": "Asia/Amman",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

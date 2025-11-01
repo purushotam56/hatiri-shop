@@ -1,0 +1,142 @@
+{
+  "name": "The Gambia",
+  "isoCode": "GM",
+  "timezones": [
+    {
+      "name": "Africa/Abidjan",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Banjul",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Banjul",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Banjul",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central River Division",
+      "isoCode": "M",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Banjul",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lower River Division",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Banjul",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Bank Division",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Banjul",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Upper River Division",
+      "isoCode": "U",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Banjul",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "West Coast Division",
+      "isoCode": "W",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Banjul",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

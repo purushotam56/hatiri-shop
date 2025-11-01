@@ -1,0 +1,21 @@
+{
+  "name": "Palestinian Territory Occupied",
+  "isoCode": "PS",
+  "timezones": [
+    {
+      "name": "Asia/Gaza",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    },
+    {
+      "name": "Asia/Hebron",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

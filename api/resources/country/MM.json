@@ -1,0 +1,210 @@
+{
+  "name": "Myanmar",
+  "isoCode": "MM",
+  "timezones": [
+    {
+      "name": "Asia/Yangon",
+      "utcOffset": "+06:30",
+      "offsetMinutes": 390,
+      "abbreviation": null,
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Ayeyarwady Region",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bago",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chin State",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kachin State",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kayah State",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kayin State",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Magway Region",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mandalay Region",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mon State",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Naypyidaw Union Territory",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rakhine State",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sagaing Region",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shan State",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tanintharyi Region",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yangon Region",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Asia/Yangon",
+          "utcOffset": "+06:30",
+          "offsetMinutes": 390,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

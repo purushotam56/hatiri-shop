@@ -1,0 +1,288 @@
+{
+  "name": "Guatemala",
+  "isoCode": "GT",
+  "timezones": [
+    {
+      "name": "America/Guatemala",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Alta Verapaz Department",
+      "isoCode": "AV",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Baja Verapaz Department",
+      "isoCode": "BV",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chimaltenango Department",
+      "isoCode": "CM",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chiquimula Department",
+      "isoCode": "CQ",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El Progreso Department",
+      "isoCode": "PR",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Escuintla Department",
+      "isoCode": "ES",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guatemala Department",
+      "isoCode": "GU",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Huehuetenango Department",
+      "isoCode": "HU",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Izabal Department",
+      "isoCode": "IZ",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jalapa Department",
+      "isoCode": "JA",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jutiapa Department",
+      "isoCode": "JU",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Petén Department",
+      "isoCode": "PE",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Quetzaltenango Department",
+      "isoCode": "QZ",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Quiché Department",
+      "isoCode": "QC",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Retalhuleu Department",
+      "isoCode": "RE",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sacatepéquez Department",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San Marcos Department",
+      "isoCode": "SM",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Rosa Department",
+      "isoCode": "SR",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sololá Department",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Suchitepéquez Department",
+      "isoCode": "SU",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Totonicapán Department",
+      "isoCode": "TO",
+      "timezones": [
+        {
+          "name": "America/Guatemala",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

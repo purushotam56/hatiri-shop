@@ -1,0 +1,14 @@
+{
+  "name": "Saint Pierre and Miquelon",
+  "isoCode": "PM",
+  "timezones": [
+    {
+      "name": "America/Miquelon",
+      "utcOffset": "-02:00",
+      "offsetMinutes": -120,
+      "abbreviation": "-02",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

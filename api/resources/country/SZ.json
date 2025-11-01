@@ -1,0 +1,102 @@
+{
+  "name": "Swaziland",
+  "isoCode": "SZ",
+  "timezones": [
+    {
+      "name": "Africa/Johannesburg",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "SAST",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Mbabane",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "SAST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Hhohho District",
+      "isoCode": "HH",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Mbabane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lubombo District",
+      "isoCode": "LU",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Mbabane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Manzini District",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Mbabane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shiselweni District",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Mbabane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

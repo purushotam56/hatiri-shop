@@ -1,0 +1,14 @@
+{
+  "mutiple_resource": "Please provide only one location where you want to invite",
+  "error": {
+    "header": {
+      "organisation": "Bad organisation",
+      "role": "Bad role"
+    },
+    "invitation": {
+      "mutiple_resource": "Please provide only one location where you want to invite",
+      "wrong_role": "Can not use this role",
+      "can_not_invite_company": "Can not invite company here"
+    }
+  }
+}

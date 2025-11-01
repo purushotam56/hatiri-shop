@@ -1,0 +1,82 @@
+{
+  "name": "Monaco",
+  "isoCode": "MC",
+  "timezones": [
+    {
+      "name": "Europe/Monaco",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Paris",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "La Colle",
+      "isoCode": "CL",
+      "timezones": [
+        {
+          "name": "Europe/Monaco",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "La Condamine",
+      "isoCode": "CO",
+      "timezones": [
+        {
+          "name": "Europe/Monaco",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Moneghetti",
+      "isoCode": "MG",
+      "timezones": [
+        {
+          "name": "Europe/Monaco",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

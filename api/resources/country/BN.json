@@ -1,0 +1,102 @@
+{
+  "name": "Brunei",
+  "isoCode": "BN",
+  "timezones": [
+    {
+      "name": "Asia/Brunei",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "+08",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Kuching",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "+08",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Belait District",
+      "isoCode": "BE",
+      "timezones": [
+        {
+          "name": "Asia/Brunei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Brunei-Muara District",
+      "isoCode": "BM",
+      "timezones": [
+        {
+          "name": "Asia/Brunei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Temburong District",
+      "isoCode": "TE",
+      "timezones": [
+        {
+          "name": "Asia/Brunei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tutong District",
+      "isoCode": "TU",
+      "timezones": [
+        {
+          "name": "Asia/Brunei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "name": "Belgium",
+  "isoCode": "BE",
+  "timezones": [
+    {
+      "name": "Europe/Brussels",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Antwerp",
+      "isoCode": "VAN",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Brussels-Capital Region",
+      "isoCode": "BRU",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "East Flanders",
+      "isoCode": "VOV",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Flanders",
+      "isoCode": "VLG",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Flemish Brabant",
+      "isoCode": "VBR",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hainaut",
+      "isoCode": "WHT",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Limburg",
+      "isoCode": "VLI",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Liège",
+      "isoCode": "WLG",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Luxembourg",
+      "isoCode": "WLX",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Namur",
+      "isoCode": "WNA",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Wallonia",
+      "isoCode": "WAL",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Walloon Brabant",
+      "isoCode": "WBR",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Flanders",
+      "isoCode": "VWV",
+      "timezones": [
+        {
+          "name": "Europe/Brussels",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

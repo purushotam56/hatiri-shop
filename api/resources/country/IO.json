@@ -1,0 +1,14 @@
+{
+  "name": "British Indian Ocean Territory",
+  "isoCode": "IO",
+  "timezones": [
+    {
+      "name": "Indian/Chagos",
+      "utcOffset": "+06:00",
+      "offsetMinutes": 360,
+      "abbreviation": "+06",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

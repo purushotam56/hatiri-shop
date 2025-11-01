@@ -1,0 +1,392 @@
+{
+  "name": "Ireland",
+  "isoCode": "IE",
+  "timezones": [
+    {
+      "name": "Europe/Dublin",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "IST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Carlow",
+      "isoCode": "CW",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cavan",
+      "isoCode": "CN",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Clare",
+      "isoCode": "CE",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Connacht",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cork",
+      "isoCode": "CO",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Donegal",
+      "isoCode": "DL",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dublin",
+      "isoCode": "D",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Galway",
+      "isoCode": "G",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kerry",
+      "isoCode": "KY",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kildare",
+      "isoCode": "KE",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kilkenny",
+      "isoCode": "KK",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Laois",
+      "isoCode": "LS",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Leinster",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Limerick",
+      "isoCode": "LK",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Longford",
+      "isoCode": "LD",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Louth",
+      "isoCode": "LH",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mayo",
+      "isoCode": "MO",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Meath",
+      "isoCode": "MH",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Monaghan",
+      "isoCode": "MN",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Munster",
+      "isoCode": "M",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Offaly",
+      "isoCode": "OY",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Roscommon",
+      "isoCode": "RN",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sligo",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tipperary",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ulster",
+      "isoCode": "U",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Waterford",
+      "isoCode": "WD",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Westmeath",
+      "isoCode": "WH",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Wexford",
+      "isoCode": "WX",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Wicklow",
+      "isoCode": "WW",
+      "timezones": [
+        {
+          "name": "Europe/Dublin",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "IST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

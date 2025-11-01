@@ -1,0 +1,1146 @@
+{
+  "name": "Morocco",
+  "isoCode": "MA",
+  "timezones": [
+    {
+      "name": "Africa/Casablanca",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "+01",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Agadir-Ida-Ou-Tanane",
+      "isoCode": "AGD",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Haouz",
+      "isoCode": "HAO",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Hoceïma",
+      "isoCode": "HOC",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aousserd (EH)",
+      "isoCode": "AOU",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Assa-Zag (EH-partial)",
+      "isoCode": "ASZ",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Azilal",
+      "isoCode": "AZI",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Benslimane",
+      "isoCode": "BES",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Berkane",
+      "isoCode": "BER",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Berrechid",
+      "isoCode": "BRR",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Boujdour (EH)",
+      "isoCode": "BOD",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Boulemane",
+      "isoCode": "BOM",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Béni Mellal",
+      "isoCode": "BEM",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Béni Mellal-Khénifra",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Casablanca",
+      "isoCode": "CAS",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Casablanca-Settat",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chefchaouen",
+      "isoCode": "CHE",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chichaoua",
+      "isoCode": "CHI",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chtouka-Ait Baha",
+      "isoCode": "CHT",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dakhla-Oued Ed-Dahab (EH)",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Driouch",
+      "isoCode": "DRI",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Drâa-Tafilalet",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El Hajeb",
+      "isoCode": "HAJ",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El Jadida",
+      "isoCode": "JDI",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El Kelâa des Sraghna",
+      "isoCode": "KES",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Errachidia",
+      "isoCode": "ERR",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Es-Semara (EH-partial)",
+      "isoCode": "ESM",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Essaouira",
+      "isoCode": "ESI",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fahs-Anjra",
+      "isoCode": "FAH",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Figuig",
+      "isoCode": "FIG",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fquih Ben Salah",
+      "isoCode": "FQH",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fès",
+      "isoCode": "FES",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fès-Meknès",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guelmim",
+      "isoCode": "GUE",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guelmim-Oued Noun (EH-partial)",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guercif",
+      "isoCode": "GUF",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ifrane",
+      "isoCode": "IFR",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Inezgane-Ait Melloul",
+      "isoCode": "INE",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jerada",
+      "isoCode": "JRA",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khouribga",
+      "isoCode": "KHO",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khémisset",
+      "isoCode": "KHE",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khénifra",
+      "isoCode": "KHN",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kénitra",
+      "isoCode": "KEN",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "L'Oriental",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Larache",
+      "isoCode": "LAR",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Laâyoune (EH)",
+      "isoCode": "LAA",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Laâyoune-Sakia El Hamra (EH-partial)",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Marrakech",
+      "isoCode": "MAR",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Marrakesh-Safi",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Meknès",
+      "isoCode": "MEK",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Midelt",
+      "isoCode": "MID",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mohammadia",
+      "isoCode": "MOH",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Moulay Yacoub",
+      "isoCode": "MOU",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Médiouna",
+      "isoCode": "MED",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "M’diq-Fnideq",
+      "isoCode": "MDF",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nador",
+      "isoCode": "NAD",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nouaceur",
+      "isoCode": "NOU",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ouarzazate",
+      "isoCode": "OUA",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oued Ed-Dahab (EH)",
+      "isoCode": "OUD",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ouezzane",
+      "isoCode": "OUZ",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oujda-Angad",
+      "isoCode": "OUJ",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rabat",
+      "isoCode": "RAB",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rabat-Salé-Kénitra",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rehamna",
+      "isoCode": "REH",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Safi",
+      "isoCode": "SAF",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Salé",
+      "isoCode": "SAL",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sefrou",
+      "isoCode": "SEF",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Settat",
+      "isoCode": "SET",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sidi Bennour",
+      "isoCode": "SIB",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sidi Ifni",
+      "isoCode": "SIF",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sidi Kacem",
+      "isoCode": "SIK",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sidi Slimane",
+      "isoCode": "SIL",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Skhirate-Témara",
+      "isoCode": "SKH",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Souss-Massa",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tan-Tan (EH-partial)",
+      "isoCode": "TNT",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tanger-Assilah",
+      "isoCode": "TNG",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tanger-Tétouan-Al Hoceïma",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taounate",
+      "isoCode": "TAO",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taourirt",
+      "isoCode": "TAI",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tarfaya (EH-partial)",
+      "isoCode": "TAF",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taroudannt",
+      "isoCode": "TAR",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tata",
+      "isoCode": "TAT",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taza",
+      "isoCode": "TAZ",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tinghir",
+      "isoCode": "TIN",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tiznit",
+      "isoCode": "TIZ",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tétouan",
+      "isoCode": "TET",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Youssoufia",
+      "isoCode": "YUS",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zagora",
+      "isoCode": "ZAG",
+      "timezones": [
+        {
+          "name": "Africa/Casablanca",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "+01",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

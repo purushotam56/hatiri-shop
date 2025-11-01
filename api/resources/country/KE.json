@@ -1,0 +1,626 @@
+{
+  "name": "Kenya",
+  "isoCode": "KE",
+  "timezones": [
+    {
+      "name": "Africa/Nairobi",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Baringo",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bomet",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bungoma",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Busia",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Elgeyo-Marakwet",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Embu",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Garissa",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Homa Bay",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Isiolo",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kajiado",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kakamega",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kericho",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kiambu",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kilifi",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kirinyaga",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kisii",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kisumu",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kitui",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kwale",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Laikipia",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lamu",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Machakos",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Makueni",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mandera",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Marsabit",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Meru",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Migori",
+      "isoCode": "27",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mombasa",
+      "isoCode": "28",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Murang'a",
+      "isoCode": "29",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nairobi City",
+      "isoCode": "30",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nakuru",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nandi",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Narok",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nyamira",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nyandarua",
+      "isoCode": "35",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nyeri",
+      "isoCode": "36",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samburu",
+      "isoCode": "37",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Siaya",
+      "isoCode": "38",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taita–Taveta",
+      "isoCode": "39",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tana River",
+      "isoCode": "40",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tharaka-Nithi",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Trans Nzoia",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Turkana",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Uasin Gishu",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vihiga",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wajir",
+      "isoCode": "46",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "West Pokot",
+      "isoCode": "47",
+      "timezones": [
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

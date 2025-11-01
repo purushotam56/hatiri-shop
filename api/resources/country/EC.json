@@ -1,0 +1,502 @@
+{
+  "name": "Ecuador",
+  "isoCode": "EC",
+  "timezones": [
+    {
+      "name": "America/Guayaquil",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "-05",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Galapagos",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "-06",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Azuay",
+      "isoCode": "A",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bolívar",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Carchi",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cañar",
+      "isoCode": "F",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chimborazo",
+      "isoCode": "H",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cotopaxi",
+      "isoCode": "X",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El Oro",
+      "isoCode": "O",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Esmeraldas",
+      "isoCode": "E",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Galápagos",
+      "isoCode": "W",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guayas",
+      "isoCode": "G",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Imbabura",
+      "isoCode": "I",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Loja",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Los Ríos",
+      "isoCode": "R",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Manabí",
+      "isoCode": "M",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Morona-Santiago",
+      "isoCode": "S",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Napo",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Orellana",
+      "isoCode": "D",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pastaza",
+      "isoCode": "Y",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pichincha",
+      "isoCode": "P",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Elena",
+      "isoCode": "SE",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santo Domingo de los Tsáchilas",
+      "isoCode": "SD",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sucumbíos",
+      "isoCode": "U",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tungurahua",
+      "isoCode": "T",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zamora Chinchipe",
+      "isoCode": "Z",
+      "timezones": [
+        {
+          "name": "America/Guayaquil",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Galapagos",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "-06",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

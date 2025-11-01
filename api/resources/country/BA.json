@@ -1,0 +1,282 @@
+{
+  "name": "Bosnia and Herzegovina",
+  "isoCode": "BA",
+  "timezones": [
+    {
+      "name": "Europe/Belgrade",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Sarajevo",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Bosnian Podrinje Canton",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Brčko District",
+      "isoCode": "BRC",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Canton 10",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Central Bosnia Canton",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Federation of Bosnia and Herzegovina",
+      "isoCode": "BIH",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Herzegovina-Neretva Canton",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Posavina Canton",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Republika Srpska",
+      "isoCode": "SRP",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sarajevo Canton",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tuzla Canton",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Una-Sana Canton",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Herzegovina Canton",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zenica-Doboj Canton",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Europe/Belgrade",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Sarajevo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

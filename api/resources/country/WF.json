@@ -1,0 +1,21 @@
+{
+  "name": "Wallis And Futuna Islands",
+  "isoCode": "WF",
+  "timezones": [
+    {
+      "name": "Pacific/Tarawa",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Wallis",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

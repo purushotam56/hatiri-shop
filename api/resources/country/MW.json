@@ -1,0 +1,622 @@
+{
+  "name": "Malawi",
+  "isoCode": "MW",
+  "timezones": [
+    {
+      "name": "Africa/Blantyre",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Maputo",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Balaka District",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Blantyre District",
+      "isoCode": "BL",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central Region",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chikwawa District",
+      "isoCode": "CK",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chiradzulu District",
+      "isoCode": "CR",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chitipa district",
+      "isoCode": "CT",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dedza District",
+      "isoCode": "DE",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dowa District",
+      "isoCode": "DO",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karonga District",
+      "isoCode": "KR",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kasungu District",
+      "isoCode": "KS",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Likoma District",
+      "isoCode": "LK",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lilongwe District",
+      "isoCode": "LI",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Machinga District",
+      "isoCode": "MH",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mangochi District",
+      "isoCode": "MG",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mchinji District",
+      "isoCode": "MC",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mulanje District",
+      "isoCode": "MU",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mwanza District",
+      "isoCode": "MW",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mzimba District",
+      "isoCode": "MZ",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nkhata Bay District",
+      "isoCode": "NB",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nkhotakota District",
+      "isoCode": "NK",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern Region",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nsanje District",
+      "isoCode": "NS",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ntcheu District",
+      "isoCode": "NU",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ntchisi District",
+      "isoCode": "NI",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phalombe District",
+      "isoCode": "PH",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rumphi District",
+      "isoCode": "RU",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Salima District",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Southern Region",
+      "isoCode": "S",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Thyolo District",
+      "isoCode": "TH",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zomba District",
+      "isoCode": "ZO",
+      "timezones": [
+        {
+          "name": "Africa/Blantyre",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+{
+  "name": "Bulgaria",
+  "isoCode": "BG",
+  "timezones": [
+    {
+      "name": "Europe/Sofia",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Blagoevgrad Province",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Burgas Province",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dobrich Province",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gabrovo Province",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Haskovo Province",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kardzhali Province",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kyustendil Province",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lovech Province",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Montana Province",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pazardzhik Province",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pernik Province",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pleven Province",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Plovdiv Province",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Razgrad Province",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ruse Province",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Shumen",
+      "isoCode": "27",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Silistra Province",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sliven Province",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Smolyan Province",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sofia City Province",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sofia Province",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Stara Zagora Province",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Targovishte Province",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Varna Province",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Veliko Tarnovo Province",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vidin Province",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vratsa Province",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Yambol Province",
+      "isoCode": "28",
+      "timezones": [
+        {
+          "name": "Europe/Sofia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

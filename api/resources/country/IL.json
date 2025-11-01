@@ -1,0 +1,93 @@
+{
+  "name": "Israel",
+  "isoCode": "IL",
+  "timezones": [
+    {
+      "name": "Asia/Jerusalem",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "IDT",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Central District",
+      "isoCode": "M",
+      "timezones": [
+        {
+          "name": "Asia/Jerusalem",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "IDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Haifa District",
+      "isoCode": "HA",
+      "timezones": [
+        {
+          "name": "Asia/Jerusalem",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "IDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jerusalem District",
+      "isoCode": "JM",
+      "timezones": [
+        {
+          "name": "Asia/Jerusalem",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "IDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Northern District",
+      "isoCode": "Z",
+      "timezones": [
+        {
+          "name": "Asia/Jerusalem",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "IDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Southern District",
+      "isoCode": "D",
+      "timezones": [
+        {
+          "name": "Asia/Jerusalem",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "IDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tel Aviv District",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Asia/Jerusalem",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "IDT",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Cocos (Keeling) Islands",
+  "isoCode": "CC",
+  "timezones": [
+    {
+      "name": "Asia/Yangon",
+      "utcOffset": "+06:30",
+      "offsetMinutes": 390,
+      "abbreviation": null,
+      "isDST": false
+    },
+    {
+      "name": "Indian/Cocos",
+      "utcOffset": "+06:30",
+      "offsetMinutes": 390,
+      "abbreviation": null,
+      "isDST": false
+    }
+  ],
+  "states": []
+}

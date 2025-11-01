@@ -1,0 +1,222 @@
+{
+  "name": "Zimbabwe",
+  "isoCode": "ZW",
+  "timezones": [
+    {
+      "name": "Africa/Harare",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Maputo",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bulawayo Province",
+      "isoCode": "BU",
+      "timezones": [
+        {
+          "name": "Africa/Harare",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Harare Province",
+      "isoCode": "HA",
+      "timezones": [
+        {
+          "name": "Africa/Harare",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Manicaland",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Africa/Harare",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mashonaland Central Province",
+      "isoCode": "MC",
+      "timezones": [
+        {
+          "name": "Africa/Harare",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mashonaland East Province",
+      "isoCode": "ME",
+      "timezones": [
+        {
+          "name": "Africa/Harare",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mashonaland West Province",
+      "isoCode": "MW",
+      "timezones": [
+        {
+          "name": "Africa/Harare",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Masvingo Province",
+      "isoCode": "MV",
+      "timezones": [
+        {
+          "name": "Africa/Harare",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Matabeleland North Province",
+      "isoCode": "MN",
+      "timezones": [
+        {
+          "name": "Africa/Harare",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Matabeleland South Province",
+      "isoCode": "MS",
+      "timezones": [
+        {
+          "name": "Africa/Harare",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Midlands Province",
+      "isoCode": "MI",
+      "timezones": [
+        {
+          "name": "Africa/Harare",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

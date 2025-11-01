@@ -1,0 +1,35 @@
+{
+  "name": "United States Minor Outlying Islands",
+  "isoCode": "UM",
+  "timezones": [
+    {
+      "name": "Pacific/Midway",
+      "utcOffset": "-11:00",
+      "offsetMinutes": -660,
+      "abbreviation": "SST",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Pago_Pago",
+      "utcOffset": "-11:00",
+      "offsetMinutes": -660,
+      "abbreviation": "SST",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Tarawa",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Wake",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Vatican City State (Holy See)",
+  "isoCode": "VA",
+  "timezones": [
+    {
+      "name": "Europe/Rome",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Vatican",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

@@ -1,0 +1,2074 @@
+{
+  "countries": [
+    {
+      "countryName": "United States",
+      "countryCode": "US",
+      "currency": "USD",
+      "dateFormat": "mm/dd/yyyy",
+      "regions": [
+        {
+          "regionCode": "US-CA",
+          "regionName": "California",
+          "timezone": "America/Los_Angeles"
+        },
+        {
+          "regionCode": "US-NY",
+          "regionName": "New York",
+          "timezone": "America/New_York"
+        },
+        {
+          "regionCode": "US-TX",
+          "regionName": "Texas",
+          "timezone": "America/Chicago"
+        }
+      ]
+    },
+    {
+      "countryName": "Canada",
+      "countryCode": "CA",
+      "currency": "CAD",
+      "dateFormat": "yyyy-mm-dd",
+      "regions": [
+        {
+          "regionCode": "CA-ON",
+          "regionName": "Ontario",
+          "timezone": "America/Toronto"
+        },
+        {
+          "regionCode": "CA-QC",
+          "regionName": "Quebec",
+          "timezone": "America/Montreal"
+        },
+        {
+          "regionCode": "CA-BC",
+          "regionName": "British Columbia",
+          "timezone": "America/Vancouver"
+        }
+      ]
+    },
+    {
+      "countryName": "Mexico",
+      "countryCode": "MX",
+      "currency": "MXN",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "MX-DF",
+          "regionName": "Mexico City",
+          "timezone": "America/Mexico_City"
+        },
+        {
+          "regionCode": "MX-JAL",
+          "regionName": "Jalisco",
+          "timezone": "America/Mexico_City"
+        },
+        {
+          "regionCode": "MX-NL",
+          "regionName": "Nuevo Le\u00f3n",
+          "timezone": "America/Monterrey"
+        }
+      ]
+    },
+    {
+      "countryName": "Brazil",
+      "countryCode": "BR",
+      "currency": "BRL",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "BR-SP",
+          "regionName": "S\u00e3o Paulo",
+          "timezone": "America/Sao_Paulo"
+        },
+        {
+          "regionCode": "BR-RJ",
+          "regionName": "Rio de Janeiro",
+          "timezone": "America/Sao_Paulo"
+        },
+        {
+          "regionCode": "BR-RS",
+          "regionName": "Rio Grande do Sul",
+          "timezone": "America/Sao_Paulo"
+        }
+      ]
+    },
+    {
+      "countryName": "Argentina",
+      "countryCode": "AR",
+      "currency": "ARS",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "AR-BA",
+          "regionName": "Buenos Aires",
+          "timezone": "America/Buenos_Aires"
+        },
+        {
+          "regionCode": "AR-CF",
+          "regionName": "C\u00f3rdoba",
+          "timezone": "America/Buenos_Aires"
+        },
+        {
+          "regionCode": "AR-SL",
+          "regionName": "Salta",
+          "timezone": "America/Buenos_Aires"
+        }
+      ]
+    },
+    {
+      "countryName": "United Kingdom",
+      "countryCode": "GB",
+      "currency": "GBP",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "GB-ENG",
+          "regionName": "England",
+          "timezone": "Europe/London"
+        },
+        {
+          "regionCode": "GB-SCT",
+          "regionName": "Scotland",
+          "timezone": "Europe/London"
+        },
+        {
+          "regionCode": "GB-WLS",
+          "regionName": "Wales",
+          "timezone": "Europe/London"
+        }
+      ]
+    },
+    {
+      "countryName": "Germany",
+      "countryCode": "DE",
+      "currency": "EUR",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "DE-BE",
+          "regionName": "Berlin",
+          "timezone": "Europe/Berlin"
+        },
+        {
+          "regionCode": "DE-NW",
+          "regionName": "North Rhine-Westphalia",
+          "timezone": "Europe/Berlin"
+        },
+        {
+          "regionCode": "DE-BY",
+          "regionName": "Bavaria",
+          "timezone": "Europe/Berlin"
+        }
+      ]
+    },
+    {
+      "countryName": "France",
+      "countryCode": "FR",
+      "currency": "EUR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "FR-IDF",
+          "regionName": "\u00cele-de-France",
+          "timezone": "Europe/Paris"
+        },
+        {
+          "regionCode": "FR-ARA",
+          "regionName": "Auvergne-Rh\u00f4ne-Alpes",
+          "timezone": "Europe/Paris"
+        },
+        {
+          "regionCode": "FR-OCC",
+          "regionName": "Occitanie",
+          "timezone": "Europe/Paris"
+        }
+      ]
+    },
+    {
+      "countryName": "Italy",
+      "countryCode": "IT",
+      "currency": "EUR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "IT-RM",
+          "regionName": "Lazio",
+          "timezone": "Europe/Rome"
+        },
+        {
+          "regionCode": "IT-MI",
+          "regionName": "Lombardy",
+          "timezone": "Europe/Rome"
+        },
+        {
+          "regionCode": "IT-NA",
+          "regionName": "Campania",
+          "timezone": "Europe/Rome"
+        }
+      ]
+    },
+    {
+      "countryName": "Spain",
+      "countryCode": "ES",
+      "currency": "EUR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "ES-MD",
+          "regionName": "Community of Madrid",
+          "timezone": "Europe/Madrid"
+        },
+        {
+          "regionCode": "ES-CT",
+          "regionName": "Catalonia",
+          "timezone": "Europe/Madrid"
+        },
+        {
+          "regionCode": "ES-AN",
+          "regionName": "Andalusia",
+          "timezone": "Europe/Madrid"
+        }
+      ]
+    },
+    {
+      "countryName": "Russia",
+      "countryCode": "RU",
+      "currency": "RUB",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "RU-MOW",
+          "regionName": "Moscow",
+          "timezone": "Europe/Moscow"
+        },
+        {
+          "regionCode": "RU-SPE",
+          "regionName": "Saint Petersburg",
+          "timezone": "Europe/Moscow"
+        },
+        {
+          "regionCode": "RU-SVE",
+          "regionName": "Sverdlovsk Oblast",
+          "timezone": "Asia/Yekaterinburg"
+        }
+      ]
+    },
+    {
+      "countryName": "China",
+      "countryCode": "CN",
+      "currency": "CNY",
+      "dateFormat": "yyyy-mm-dd",
+      "regions": [
+        {
+          "regionCode": "CN-BJ",
+          "regionName": "Beijing",
+          "timezone": "Asia/Shanghai"
+        },
+        {
+          "regionCode": "CN-SH",
+          "regionName": "Shanghai",
+          "timezone": "Asia/Shanghai"
+        },
+        {
+          "regionCode": "CN-GD",
+          "regionName": "Guangdong",
+          "timezone": "Asia/Shanghai"
+        }
+      ]
+    },
+    {
+      "countryName": "Japan",
+      "countryCode": "JP",
+      "currency": "JPY",
+      "dateFormat": "yyyy/mm/dd",
+      "regions": [
+        {
+          "regionCode": "JP-13",
+          "regionName": "Tokyo",
+          "timezone": "Asia/Tokyo"
+        },
+        {
+          "regionCode": "JP-27",
+          "regionName": "Osaka",
+          "timezone": "Asia/Tokyo"
+        },
+        {
+          "regionCode": "JP-23",
+          "regionName": "Aichi",
+          "timezone": "Asia/Tokyo"
+        }
+      ]
+    },
+    {
+      "countryName": "India",
+      "countryCode": "IN",
+      "currency": "INR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "IN-MH",
+          "regionName": "Maharashtra",
+          "timezone": "Asia/Kolkata"
+        },
+        {
+          "regionCode": "IN-DL",
+          "regionName": "Delhi",
+          "timezone": "Asia/Kolkata"
+        },
+        {
+          "regionCode": "IN-KA",
+          "regionName": "Karnataka",
+          "timezone": "Asia/Kolkata"
+        }
+      ]
+    },
+    {
+      "countryName": "Australia",
+      "countryCode": "AU",
+      "currency": "AUD",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "AU-NSW",
+          "regionName": "New South Wales",
+          "timezone": "Australia/Sydney"
+        },
+        {
+          "regionCode": "AU-VIC",
+          "regionName": "Victoria",
+          "timezone": "Australia/Melbourne"
+        },
+        {
+          "regionCode": "AU-QLD",
+          "regionName": "Queensland",
+          "timezone": "Australia/Brisbane"
+        }
+      ]
+    },
+    {
+      "countryName": "South Africa",
+      "countryCode": "ZA",
+      "currency": "ZAR",
+      "dateFormat": "yyyy/mm/dd",
+      "regions": [
+        {
+          "regionCode": "ZA-GT",
+          "regionName": "Gauteng",
+          "timezone": "Africa/Johannesburg"
+        },
+        {
+          "regionCode": "ZA-WC",
+          "regionName": "Western Cape",
+          "timezone": "Africa/Johannesburg"
+        },
+        {
+          "regionCode": "ZA-KZN",
+          "regionName": "KwaZulu-Natal",
+          "timezone": "Africa/Johannesburg"
+        }
+      ]
+    },
+    {
+      "countryName": "Egypt",
+      "countryCode": "EG",
+      "currency": "EGP",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "EG-CAI",
+          "regionName": "Cairo",
+          "timezone": "Africa/Cairo"
+        },
+        {
+          "regionCode": "EG-ALX",
+          "regionName": "Alexandria",
+          "timezone": "Africa/Cairo"
+        },
+        {
+          "regionCode": "EG-GIZ",
+          "regionName": "Giza",
+          "timezone": "Africa/Cairo"
+        }
+      ]
+    },
+    {
+      "countryName": "Nigeria",
+      "countryCode": "NG",
+      "currency": "NGN",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "NG-LA",
+          "regionName": "Lagos",
+          "timezone": "Africa/Lagos"
+        },
+        {
+          "regionCode": "NG-FC",
+          "regionName": "Federal Capital Territory",
+          "timezone": "Africa/Lagos"
+        },
+        {
+          "regionCode": "NG-KN",
+          "regionName": "Kano",
+          "timezone": "Africa/Lagos"
+        }
+      ]
+    },
+    {
+      "countryName": "Kenya",
+      "countryCode": "KE",
+      "currency": "KES",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "KE-30",
+          "regionName": "Nairobi City",
+          "timezone": "Africa/Nairobi"
+        },
+        {
+          "regionCode": "KE-20",
+          "regionName": "Mombasa",
+          "timezone": "Africa/Nairobi"
+        },
+        {
+          "regionCode": "KE-15",
+          "regionName": "Nakuru",
+          "timezone": "Africa/Nairobi"
+        }
+      ]
+    },
+    {
+      "countryName": "Saudi Arabia",
+      "countryCode": "SA",
+      "currency": "SAR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "SA-RI",
+          "regionName": "Riyadh",
+          "timezone": "Asia/Riyadh"
+        },
+        {
+          "regionCode": "SA-MK",
+          "regionName": "Makkah",
+          "timezone": "Asia/Riyadh"
+        },
+        {
+          "regionCode": "SA-JD",
+          "regionName": "Jeddah",
+          "timezone": "Asia/Riyadh"
+        }
+      ]
+    },
+    {
+      "countryName": "United Arab Emirates",
+      "countryCode": "AE",
+      "currency": "AED",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "AE-AZ",
+          "regionName": "Abu Dhabi",
+          "timezone": "Asia/Dubai"
+        },
+        {
+          "regionCode": "AE-DU",
+          "regionName": "Dubai",
+          "timezone": "Asia/Dubai"
+        },
+        {
+          "regionCode": "AE-SH",
+          "regionName": "Sharjah",
+          "timezone": "Asia/Dubai"
+        }
+      ]
+    },
+    {
+      "countryName": "Israel",
+      "countryCode": "IL",
+      "currency": "ILS",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "IL-TA",
+          "regionName": "Tel Aviv",
+          "timezone": "Asia/Jerusalem"
+        },
+        {
+          "regionCode": "IL-JM",
+          "regionName": "Jerusalem",
+          "timezone": "Asia/Jerusalem"
+        },
+        {
+          "regionCode": "IL-HA",
+          "regionName": "Haifa",
+          "timezone": "Asia/Jerusalem"
+        }
+      ]
+    },
+    {
+      "countryName": "Turkey",
+      "countryCode": "TR",
+      "currency": "TRY",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "TR-34",
+          "regionName": "Istanbul",
+          "timezone": "Europe/Istanbul"
+        },
+        {
+          "regionCode": "TR-06",
+          "regionName": "Ankara",
+          "timezone": "Europe/Istanbul"
+        },
+        {
+          "regionCode": "TR-35",
+          "regionName": "Izmir",
+          "timezone": "Europe/Istanbul"
+        }
+      ]
+    },
+    {
+      "countryName": "Iran",
+      "countryCode": "IR",
+      "currency": "IRR",
+      "dateFormat": "yyyy/mm/dd",
+      "regions": [
+        {
+          "regionCode": "IR-TEH",
+          "regionName": "Tehran",
+          "timezone": "Asia/Tehran"
+        },
+        {
+          "regionCode": "IR-ESF",
+          "regionName": "Isfahan",
+          "timezone": "Asia/Tehran"
+        },
+        {
+          "regionCode": "IR-FAR",
+          "regionName": "Fars",
+          "timezone": "Asia/Tehran"
+        }
+      ]
+    },
+    {
+      "countryName": "Indonesia",
+      "countryCode": "ID",
+      "currency": "IDR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "ID-JK",
+          "regionName": "Jakarta",
+          "timezone": "Asia/Jakarta"
+        },
+        {
+          "regionCode": "ID-JB",
+          "regionName": "West Java",
+          "timezone": "Asia/Jakarta"
+        },
+        {
+          "regionCode": "ID-JT",
+          "regionName": "Central Java",
+          "timezone": "Asia/Jakarta"
+        }
+      ]
+    },
+    {
+      "countryName": "South Korea",
+      "countryCode": "KR",
+      "currency": "KRW",
+      "dateFormat": "yyyy-mm-dd",
+      "regions": [
+        {
+          "regionCode": "KR-11",
+          "regionName": "Seoul",
+          "timezone": "Asia/Seoul"
+        },
+        {
+          "regionCode": "KR-26",
+          "regionName": "Busan",
+          "timezone": "Asia/Seoul"
+        },
+        {
+          "regionCode": "KR-27",
+          "regionName": "Daegu",
+          "timezone": "Asia/Seoul"
+        }
+      ]
+    },
+    {
+      "countryName": "Vietnam",
+      "countryCode": "VN",
+      "currency": "VND",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "VN-SG",
+          "regionName": "Ho Chi Minh City",
+          "timezone": "Asia/Ho_Chi_Minh"
+        },
+        {
+          "regionCode": "VN-HN",
+          "regionName": "Hanoi",
+          "timezone": "Asia/Ho_Chi_Minh"
+        },
+        {
+          "regionCode": "VN-DN",
+          "regionName": "Da Nang",
+          "timezone": "Asia/Ho_Chi_Minh"
+        }
+      ]
+    },
+    {
+      "countryName": "Thailand",
+      "countryCode": "TH",
+      "currency": "THB",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "TH-10",
+          "regionName": "Bangkok",
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "regionCode": "TH-50",
+          "regionName": "Chiang Mai",
+          "timezone": "Asia/Bangkok"
+        },
+        {
+          "regionCode": "TH-20",
+          "regionName": "Chonburi",
+          "timezone": "Asia/Bangkok"
+        }
+      ]
+    },
+    {
+      "countryName": "Malaysia",
+      "countryCode": "MY",
+      "currency": "MYR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "MY-14",
+          "regionName": "Kuala Lumpur",
+          "timezone": "Asia/Kuala_Lumpur"
+        },
+        {
+          "regionCode": "MY-10",
+          "regionName": "Selangor",
+          "timezone": "Asia/Kuala_Lumpur"
+        },
+        {
+          "regionCode": "MY-11",
+          "regionName": "Penang",
+          "timezone": "Asia/Kuala_Lumpur"
+        }
+      ]
+    },
+    {
+      "countryName": "Chile",
+      "countryCode": "CL",
+      "currency": "CLP",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "CL-RM",
+          "regionName": "Santiago Metropolitan",
+          "timezone": "America/Santiago"
+        },
+        {
+          "regionCode": "CL-VA",
+          "regionName": "Valpara\u00edso",
+          "timezone": "America/Santiago"
+        },
+        {
+          "regionCode": "CL-BI",
+          "regionName": "Biob\u00edo",
+          "timezone": "America/Santiago"
+        }
+      ]
+    },
+    {
+      "countryName": "Colombia",
+      "countryCode": "CO",
+      "currency": "COP",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "CO-DC",
+          "regionName": "Bogot\u00e1",
+          "timezone": "America/Bogota"
+        },
+        {
+          "regionCode": "CO-ANT",
+          "regionName": "Antioquia",
+          "timezone": "America/Bogota"
+        },
+        {
+          "regionCode": "CO-VAC",
+          "regionName": "Valle del Cauca",
+          "timezone": "America/Bogota"
+        }
+      ]
+    },
+    {
+      "countryName": "Peru",
+      "countryCode": "PE",
+      "currency": "PEN",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "PE-LIM",
+          "regionName": "Lima",
+          "timezone": "America/Lima"
+        },
+        {
+          "regionCode": "PE-ANC",
+          "regionName": "Ancash",
+          "timezone": "America/Lima"
+        },
+        {
+          "regionCode": "PE-ARE",
+          "regionName": "Arequipa",
+          "timezone": "America/Lima"
+        }
+      ]
+    },
+    {
+      "countryName": "Venezuela",
+      "countryCode": "VE",
+      "currency": "VES",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "VE-DC",
+          "regionName": "Caracas",
+          "timezone": "America/Caracas"
+        },
+        {
+          "regionCode": "VE-ZU",
+          "regionName": "Zulia",
+          "timezone": "America/Caracas"
+        },
+        {
+          "regionCode": "VE-AR",
+          "regionName": "Aragua",
+          "timezone": "America/Caracas"
+        }
+      ]
+    },
+    {
+      "countryName": "Ecuador",
+      "countryCode": "EC",
+      "currency": "USD",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "EC-P",
+          "regionName": "Pichincha",
+          "timezone": "America/Guayaquil"
+        },
+        {
+          "regionCode": "EC-G",
+          "regionName": "Guayas",
+          "timezone": "America/Guayaquil"
+        },
+        {
+          "regionCode": "EC-A",
+          "regionName": "Azuay",
+          "timezone": "America/Guayaquil"
+        }
+      ]
+    },
+    {
+      "countryName": "Poland",
+      "countryCode": "PL",
+      "currency": "PLN",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "PL-MZ",
+          "regionName": "Mazovia",
+          "timezone": "Europe/Warsaw"
+        },
+        {
+          "regionCode": "PL-SL",
+          "regionName": "Silesia",
+          "timezone": "Europe/Warsaw"
+        },
+        {
+          "regionCode": "PL-MP",
+          "regionName": "Lesser Poland",
+          "timezone": "Europe/Warsaw"
+        }
+      ]
+    },
+    {
+      "countryName": "Ukraine",
+      "countryCode": "UA",
+      "currency": "UAH",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "UA-32",
+          "regionName": "Kyiv",
+          "timezone": "Europe/Kiev"
+        },
+        {
+          "regionCode": "UA-14",
+          "regionName": "Lviv",
+          "timezone": "Europe/Kiev"
+        },
+        {
+          "regionCode": "UA-23",
+          "regionName": "Odessa",
+          "timezone": "Europe/Kiev"
+        }
+      ]
+    },
+    {
+      "countryName": "Romania",
+      "countryCode": "RO",
+      "currency": "RON",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "RO-B",
+          "regionName": "Bucharest",
+          "timezone": "Europe/Bucharest"
+        },
+        {
+          "regionCode": "RO-CJ",
+          "regionName": "Cluj",
+          "timezone": "Europe/Bucharest"
+        },
+        {
+          "regionCode": "RO-TM",
+          "regionName": "Timi\u0219",
+          "timezone": "Europe/Bucharest"
+        }
+      ]
+    },
+    {
+      "countryName": "Czech Republic",
+      "countryCode": "CZ",
+      "currency": "CZK",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "CZ-PR",
+          "regionName": "Prague",
+          "timezone": "Europe/Prague"
+        },
+        {
+          "regionCode": "CZ-JM",
+          "regionName": "South Moravian",
+          "timezone": "Europe/Prague"
+        },
+        {
+          "regionCode": "CZ-ST",
+          "regionName": "Central Bohemian",
+          "timezone": "Europe/Prague"
+        }
+      ]
+    },
+    {
+      "countryName": "Greece",
+      "countryCode": "GR",
+      "currency": "EUR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "GR-A",
+          "regionName": "Attica",
+          "timezone": "Europe/Athens"
+        },
+        {
+          "regionCode": "GR-I",
+          "regionName": "Central Macedonia",
+          "timezone": "Europe/Athens"
+        },
+        {
+          "regionCode": "GR-B",
+          "regionName": "Central Greece",
+          "timezone": "Europe/Athens"
+        }
+      ]
+    },
+    {
+      "countryName": "Portugal",
+      "countryCode": "PT",
+      "currency": "EUR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "PT-11",
+          "regionName": "Lisbon",
+          "timezone": "Europe/Lisbon"
+        },
+        {
+          "regionCode": "PT-13",
+          "regionName": "Porto",
+          "timezone": "Europe/Lisbon"
+        },
+        {
+          "regionCode": "PT-08",
+          "regionName": "Algarve",
+          "timezone": "Europe/Lisbon"
+        }
+      ]
+    },
+    {
+      "countryName": "Switzerland",
+      "countryCode": "CH",
+      "currency": "CHF",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "CH-ZH",
+          "regionName": "Zurich",
+          "timezone": "Europe/Zurich"
+        },
+        {
+          "regionCode": "CH-GE",
+          "regionName": "Geneva",
+          "timezone": "Europe/Zurich"
+        },
+        {
+          "regionCode": "CH-BE",
+          "regionName": "Bern",
+          "timezone": "Europe/Zurich"
+        }
+      ]
+    },
+    {
+      "countryName": "Pakistan",
+      "countryCode": "PK",
+      "currency": "PKR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "PK-IS",
+          "regionName": "Islamabad",
+          "timezone": "Asia/Karachi"
+        },
+        {
+          "regionCode": "PK-PB",
+          "regionName": "Punjab",
+          "timezone": "Asia/Karachi"
+        },
+        {
+          "regionCode": "PK-SD",
+          "regionName": "Sindh",
+          "timezone": "Asia/Karachi"
+        }
+      ]
+    },
+    {
+      "countryName": "Bangladesh",
+      "countryCode": "BD",
+      "currency": "BDT",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "BD-13",
+          "regionName": "Dhaka",
+          "timezone": "Asia/Dhaka"
+        },
+        {
+          "regionCode": "BD-6",
+          "regionName": "Chittagong",
+          "timezone": "Asia/Dhaka"
+        },
+        {
+          "regionCode": "BD-1",
+          "regionName": "Rajshahi",
+          "timezone": "Asia/Dhaka"
+        }
+      ]
+    },
+    {
+      "countryName": "Sri Lanka",
+      "countryCode": "LK",
+      "currency": "LKR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "LK-1",
+          "regionName": "Western Province",
+          "timezone": "Asia/Colombo"
+        },
+        {
+          "regionCode": "LK-7",
+          "regionName": "Central Province",
+          "timezone": "Asia/Colombo"
+        },
+        {
+          "regionCode": "LK-8",
+          "regionName": "Sabaragamuwa Province",
+          "timezone": "Asia/Colombo"
+        }
+      ]
+    },
+    {
+      "countryName": "Nepal",
+      "countryCode": "NP",
+      "currency": "NPR",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "NP-3",
+          "regionName": "Kathmandu",
+          "timezone": "Asia/Kathmandu"
+        },
+        {
+          "regionCode": "NP-1",
+          "regionName": "Bagmati Pradesh",
+          "timezone": "Asia/Kathmandu"
+        },
+        {
+          "regionCode": "NP-4",
+          "regionName": "Gandaki Pradesh",
+          "timezone": "Asia/Kathmandu"
+        }
+      ]
+    },
+    {
+      "countryName": "Philippines",
+      "countryCode": "PH",
+      "currency": "PHP",
+      "dateFormat": "mm/dd/yyyy",
+      "regions": [
+        {
+          "regionCode": "PH-NCR",
+          "regionName": "National Capital Region",
+          "timezone": "Asia/Manila"
+        },
+        {
+          "regionCode": "PH-CAR",
+          "regionName": "Cordillera Administrative Region",
+          "timezone": "Asia/Manila"
+        },
+        {
+          "regionCode": "PH-ILO",
+          "regionName": "Ilocos Region",
+          "timezone": "Asia/Manila"
+        }
+      ]
+    },
+    {
+      "countryName": "Morocco",
+      "countryCode": "MA",
+      "currency": "MAD",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "MA-11",
+          "regionName": "Rabat-Sal\u00e9-K\u00e9nitra",
+          "timezone": "Africa/Casablanca"
+        },
+        {
+          "regionCode": "MA-06",
+          "regionName": "Casablanca-Settat",
+          "timezone": "Africa/Casablanca"
+        },
+        {
+          "regionCode": "MA-04",
+          "regionName": "Marrakesh-Safi",
+          "timezone": "Africa/Casablanca"
+        }
+      ]
+    },
+    {
+      "countryName": "Algeria",
+      "countryCode": "DZ",
+      "currency": "DZD",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "DZ-16",
+          "regionName": "Algiers",
+          "timezone": "Africa/Algiers"
+        },
+        {
+          "regionCode": "DZ-25",
+          "regionName": "Constantine",
+          "timezone": "Africa/Algiers"
+        },
+        {
+          "regionCode": "DZ-31",
+          "regionName": "Oran",
+          "timezone": "Africa/Algiers"
+        }
+      ]
+    },
+    {
+      "countryName": "Tunisia",
+      "countryCode": "TN",
+      "currency": "TND",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "TN-31",
+          "regionName": "Tunis",
+          "timezone": "Africa/Tunis"
+        },
+        {
+          "regionCode": "TN-32",
+          "regionName": "Ariana",
+          "timezone": "Africa/Tunis"
+        },
+        {
+          "regionCode": "TN-33",
+          "regionName": "Ben Arous",
+          "timezone": "Africa/Tunis"
+        }
+      ]
+    },
+    {
+      "countryName": "Ghana",
+      "countryCode": "GH",
+      "currency": "GHS",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "GH-AA",
+          "regionName": "Greater Accra",
+          "timezone": "Africa/Accra"
+        },
+        {
+          "regionCode": "GH-EP",
+          "regionName": "Eastern Region",
+          "timezone": "Africa/Accra"
+        },
+        {
+          "regionCode": "GH-AH",
+          "regionName": "Ashanti Region",
+          "timezone": "Africa/Accra"
+        }
+      ]
+    },
+    {
+      "countryName": "Senegal",
+      "countryCode": "SN",
+      "currency": "XOF",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "SN-DK",
+          "regionName": "Dakar",
+          "timezone": "Africa/Dakar"
+        },
+        {
+          "regionCode": "SN-TH",
+          "regionName": "Thies",
+          "timezone": "Africa/Dakar"
+        },
+        {
+          "regionCode": "SN-SL",
+          "regionName": "Saint-Louis",
+          "timezone": "Africa/Dakar"
+        }
+      ]
+    },
+    {
+      "countryName": "Ivory Coast",
+      "countryCode": "CI",
+      "currency": "XOF",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "CI-AB",
+          "regionName": "Abidjan",
+          "timezone": "Africa/Abidjan"
+        },
+        {
+          "regionCode": "CI-YA",
+          "regionName": "Yamoussoukro",
+          "timezone": "Africa/Abidjan"
+        },
+        {
+          "regionCode": "CI-BA",
+          "regionName": "Bas-Sassandra",
+          "timezone": "Africa/Abidjan"
+        }
+      ]
+    },
+    {
+      "countryName": "Ethiopia",
+      "countryCode": "ET",
+      "currency": "ETB",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "ET-AA",
+          "regionName": "Addis Ababa",
+          "timezone": "Africa/Addis_Ababa"
+        },
+        {
+          "regionCode": "ET-OR",
+          "regionName": "Oromia",
+          "timezone": "Africa/Addis_Ababa"
+        },
+        {
+          "regionCode": "ET-AM",
+          "regionName": "Amhara",
+          "timezone": "Africa/Addis_Ababa"
+        }
+      ]
+    },
+    {
+      "countryName": "Angola",
+      "countryCode": "AO",
+      "currency": "AOA",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "AO-LUA",
+          "regionName": "Luanda",
+          "timezone": "Africa/Luanda"
+        },
+        {
+          "regionCode": "AO-BGO",
+          "regionName": "Bengo",
+          "timezone": "Africa/Luanda"
+        },
+        {
+          "regionCode": "AO-COA",
+          "regionName": "Coastal",
+          "timezone": "Africa/Luanda"
+        }
+      ]
+    },
+    {
+      "countryName": "Cameroon",
+      "countryCode": "CM",
+      "currency": "XAF",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "CM-CE",
+          "regionName": "Centre",
+          "timezone": "Africa/Douala"
+        },
+        {
+          "regionCode": "CM-LT",
+          "regionName": "Littoral",
+          "timezone": "Africa/Douala"
+        },
+        {
+          "regionCode": "CM-NO",
+          "regionName": "North",
+          "timezone": "Africa/Douala"
+        }
+      ]
+    },
+    {
+      "countryName": "Tanzania",
+      "countryCode": "TZ",
+      "currency": "TZS",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "TZ-DO",
+          "regionName": "Dodoma",
+          "timezone": "Africa/Dar_es_Salaam"
+        },
+        {
+          "regionCode": "TZ-DS",
+          "regionName": "Dar es Salaam",
+          "timezone": "Africa/Dar_es_Salaam"
+        },
+        {
+          "regionCode": "TZ-TN",
+          "regionName": "Tanga",
+          "timezone": "Africa/Dar_es_Salaam"
+        }
+      ]
+    },
+    {
+      "countryName": "Democratic Republic of the Congo",
+      "countryCode": "CD",
+      "currency": "CDF",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "CD-KN",
+          "regionName": "Kinshasa",
+          "timezone": "Africa/Kinshasa"
+        },
+        {
+          "regionCode": "CD-BC",
+          "regionName": "Bas-Congo",
+          "timezone": "Africa/Kinshasa"
+        },
+        {
+          "regionCode": "CD-OR",
+          "regionName": "Orientale",
+          "timezone": "Africa/Kinshasa"
+        }
+      ]
+    },
+    {
+      "countryName": "Uganda",
+      "countryCode": "UG",
+      "currency": "UGX",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "UG-KLA",
+          "regionName": "Kampala",
+          "timezone": "Africa/Kampala"
+        },
+        {
+          "regionCode": "UG-CEN",
+          "regionName": "Central",
+          "timezone": "Africa/Kampala"
+        },
+        {
+          "regionCode": "UG-EAS",
+          "regionName": "Eastern",
+          "timezone": "Africa/Kampala"
+        }
+      ]
+    },
+    {
+      "countryName": "Mozambique",
+      "countryCode": "MZ",
+      "currency": "MZN",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "MZ-MPM",
+          "regionName": "Maputo",
+          "timezone": "Africa/Maputo"
+        },
+        {
+          "regionCode": "MZ-SN",
+          "regionName": "Sofala",
+          "timezone": "Africa/Maputo"
+        },
+        {
+          "regionCode": "MZ-GA",
+          "regionName": "Gaza",
+          "timezone": "Africa/Maputo"
+        }
+      ]
+    },
+    {
+      "countryName": "Zambia",
+      "countryCode": "ZM",
+      "currency": "ZMW",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "ZM-LU",
+          "regionName": "Lusaka",
+          "timezone": "Africa/Lusaka"
+        },
+        {
+          "regionCode": "ZM-CP",
+          "regionName": "Copperbelt",
+          "timezone": "Africa/Lusaka"
+        },
+        {
+          "regionCode": "ZM-NW",
+          "regionName": "North-Western",
+          "timezone": "Africa/Lusaka"
+        }
+      ]
+    },
+    {
+      "countryName": "Jamaica",
+      "countryCode": "JM",
+      "currency": "JMD",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "JM-01",
+          "regionName": "Kingston",
+          "timezone": "America/Jamaica"
+        },
+        {
+          "regionCode": "JM-12",
+          "regionName": "Saint Andrew",
+          "timezone": "America/Jamaica"
+        },
+        {
+          "regionCode": "JM-09",
+          "regionName": "Manchester",
+          "timezone": "America/Jamaica"
+        }
+      ]
+    },
+    {
+      "countryName": "Costa Rica",
+      "countryCode": "CR",
+      "currency": "CRC",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "CR-SJ",
+          "regionName": "San Jos\u00e9",
+          "timezone": "America/Costa_Rica"
+        },
+        {
+          "regionCode": "CR-A",
+          "regionName": "Alajuela",
+          "timezone": "America/Costa_Rica"
+        },
+        {
+          "regionCode": "CR-C",
+          "regionName": "Cartago",
+          "timezone": "America/Costa_Rica"
+        }
+      ]
+    },
+    {
+      "countryName": "Panama",
+      "countryCode": "PA",
+      "currency": "PAB",
+      "dateFormat": "mm/dd/yyyy",
+      "regions": [
+        {
+          "regionCode": "PA-8",
+          "regionName": "Panama",
+          "timezone": "America/Panama"
+        },
+        {
+          "regionCode": "PA-3",
+          "regionName": "Col\u00f3n",
+          "timezone": "America/Panama"
+        },
+        {
+          "regionCode": "PA-1",
+          "regionName": "Bocas del Toro",
+          "timezone": "America/Panama"
+        }
+      ]
+    },
+    {
+      "countryName": "Dominican Republic",
+      "countryCode": "DO",
+      "currency": "DOP",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "DO-DN",
+          "regionName": "Santo Domingo",
+          "timezone": "America/Santo_Domingo"
+        },
+        {
+          "regionCode": "DO-SD",
+          "regionName": "San Domingo",
+          "timezone": "America/Santo_Domingo"
+        },
+        {
+          "regionCode": "DO-PL",
+          "regionName": "La Plata",
+          "timezone": "America/Santo_Domingo"
+        }
+      ]
+    },
+    {
+      "countryName": "Cuba",
+      "countryCode": "CU",
+      "currency": "CUP",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "CU-HAV",
+          "regionName": "Havana",
+          "timezone": "America/Havana"
+        },
+        {
+          "regionCode": "CU-HOL",
+          "regionName": "Holgu\u00edn",
+          "timezone": "America/Havana"
+        },
+        {
+          "regionCode": "CU-SCU",
+          "regionName": "Santiago de Cuba",
+          "timezone": "America/Havana"
+        }
+      ]
+    },
+    {
+      "countryName": "New Zealand",
+      "countryCode": "NZ",
+      "currency": "NZD",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "NZ-WGN",
+          "regionName": "Wellington",
+          "timezone": "Pacific/Auckland"
+        },
+        {
+          "regionCode": "NZ-AUK",
+          "regionName": "Auckland",
+          "timezone": "Pacific/Auckland"
+        },
+        {
+          "regionCode": "NZ-CAN",
+          "regionName": "Canterbury",
+          "timezone": "Pacific/Auckland"
+        }
+      ]
+    },
+    {
+      "countryName": "Fiji",
+      "countryCode": "FJ",
+      "currency": "FJD",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "FJ-C",
+          "regionName": "Central",
+          "timezone": "Pacific/Fiji"
+        },
+        {
+          "regionCode": "FJ-W",
+          "regionName": "Western",
+          "timezone": "Pacific/Fiji"
+        },
+        {
+          "regionCode": "FJ-N",
+          "regionName": "Northern",
+          "timezone": "Pacific/Fiji"
+        }
+      ]
+    },
+    {
+      "countryName": "Solomon Islands",
+      "countryCode": "SB",
+      "currency": "SBD",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "SB-CT",
+          "regionName": "Central",
+          "timezone": "Pacific/Guadalcanal"
+        },
+        {
+          "regionCode": "SB-GU",
+          "regionName": "Guadalcanal",
+          "timezone": "Pacific/Guadalcanal"
+        },
+        {
+          "regionCode": "SB-IS",
+          "regionName": "Isabel",
+          "timezone": "Pacific/Guadalcanal"
+        }
+      ]
+    },
+    {
+      "countryName": "Papua New Guinea",
+      "countryCode": "PG",
+      "currency": "PGK",
+      "dateFormat": "dd/mm/yyyy",
+      "regions": [
+        {
+          "regionCode": "PG-NCD",
+          "regionName": "National Capital District",
+          "timezone": "Pacific/Port_Moresby"
+        },
+        {
+          "regionCode": "PG-EHG",
+          "regionName": "Eastern Highlands",
+          "timezone": "Pacific/Port_Moresby"
+        },
+        {
+          "regionCode": "PG-WNB",
+          "regionName": "West New Britain",
+          "timezone": "Pacific/Port_Moresby"
+        }
+      ]
+    },
+    {
+      "countryName": "Finland",
+      "countryCode": "FI",
+      "currency": "EUR",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "FI-18",
+          "regionName": "Uusimaa",
+          "timezone": "Europe/Helsinki"
+        },
+        {
+          "regionCode": "FI-19",
+          "regionName": "Southwest Finland",
+          "timezone": "Europe/Helsinki"
+        },
+        {
+          "regionCode": "FI-17",
+          "regionName": "Pirkanmaa",
+          "timezone": "Europe/Helsinki"
+        }
+      ]
+    },
+    {
+      "countryName": "Denmark",
+      "countryCode": "DK",
+      "currency": "DKK",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "DK-84",
+          "regionName": "Capital Region",
+          "timezone": "Europe/Copenhagen"
+        },
+        {
+          "regionCode": "DK-82",
+          "regionName": "Central Denmark Region",
+          "timezone": "Europe/Copenhagen"
+        },
+        {
+          "regionCode": "DK-81",
+          "regionName": "North Denmark Region",
+          "timezone": "Europe/Copenhagen"
+        }
+      ]
+    },
+    {
+      "countryName": "Norway",
+      "countryCode": "NO",
+      "currency": "NOK",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "NO-03",
+          "regionName": "Oslo",
+          "timezone": "Europe/Oslo"
+        },
+        {
+          "regionCode": "NO-30",
+          "regionName": "Viken",
+          "timezone": "Europe/Oslo"
+        },
+        {
+          "regionCode": "NO-11",
+          "regionName": "Rogaland",
+          "timezone": "Europe/Oslo"
+        }
+      ]
+    },
+    {
+      "countryName": "Sweden",
+      "countryCode": "SE",
+      "currency": "SEK",
+      "dateFormat": "yyyy-mm-dd",
+      "regions": [
+        {
+          "regionCode": "SE-AB",
+          "regionName": "Stockholm",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "regionCode": "SE-VG",
+          "regionName": "V\u00e4stra G\u00f6taland",
+          "timezone": "Europe/Stockholm"
+        },
+        {
+          "regionCode": "SE-SK",
+          "regionName": "Sk\u00e5ne",
+          "timezone": "Europe/Stockholm"
+        }
+      ]
+    },
+    {
+      "countryName": "Iceland",
+      "countryCode": "IS",
+      "currency": "ISK",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "IS-1",
+          "regionName": "Capital Region",
+          "timezone": "Atlantic/Reykjavik"
+        },
+        {
+          "regionCode": "IS-5",
+          "regionName": "Southern Peninsula",
+          "timezone": "Atlantic/Reykjavik"
+        },
+        {
+          "regionCode": "IS-6",
+          "regionName": "Western Region",
+          "timezone": "Atlantic/Reykjavik"
+        }
+      ]
+    },
+    {
+      "countryName": "Kazakhstan",
+      "countryCode": "KZ",
+      "currency": "KZT",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "KZ-AST",
+          "regionName": "Nur-Sultan",
+          "timezone": "Asia/Almaty"
+        },
+        {
+          "regionCode": "KZ-ALM",
+          "regionName": "Almaty",
+          "timezone": "Asia/Almaty"
+        },
+        {
+          "regionCode": "KZ-ZHA",
+          "regionName": "Zhambyl",
+          "timezone": "Asia/Almaty"
+        }
+      ]
+    },
+    {
+      "countryName": "Uzbekistan",
+      "countryCode": "UZ",
+      "currency": "UZS",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "UZ-TK",
+          "regionName": "Tashkent",
+          "timezone": "Asia/Tashkent"
+        },
+        {
+          "regionCode": "UZ-AN",
+          "regionName": "Andijan",
+          "timezone": "Asia/Tashkent"
+        },
+        {
+          "regionCode": "UZ-BU",
+          "regionName": "Bukhara",
+          "timezone": "Asia/Tashkent"
+        }
+      ]
+    },
+    {
+      "countryName": "Kyrgyzstan",
+      "countryCode": "KG",
+      "currency": "KGS",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "KG-GB",
+          "regionName": "Bishkek",
+          "timezone": "Asia/Bishkek"
+        },
+        {
+          "regionCode": "KG-B",
+          "regionName": "Batken",
+          "timezone": "Asia/Bishkek"
+        },
+        {
+          "regionCode": "KG-J",
+          "regionName": "Jalal-Abad",
+          "timezone": "Asia/Bishkek"
+        }
+      ]
+    },
+    {
+      "countryName": "Turkmenistan",
+      "countryCode": "TM",
+      "currency": "TMT",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "TM-ASB",
+          "regionName": "Ashgabat",
+          "timezone": "Asia/Ashgabat"
+        },
+        {
+          "regionCode": "TM-M",
+          "regionName": "Mary",
+          "timezone": "Asia/Ashgabat"
+        },
+        {
+          "regionCode": "TM-B",
+          "regionName": "Balkan",
+          "timezone": "Asia/Ashgabat"
+        }
+      ]
+    },
+    {
+      "countryName": "Tajikistan",
+      "countryCode": "TJ",
+      "currency": "TJS",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "TJ-DU",
+          "regionName": "Dushanbe",
+          "timezone": "Asia/Dushanbe"
+        },
+        {
+          "regionCode": "TJ-KT",
+          "regionName": "Khatlon",
+          "timezone": "Asia/Dushanbe"
+        },
+        {
+          "regionCode": "TJ-GB",
+          "regionName": "Gorno-Badakhshan",
+          "timezone": "Asia/Dushanbe"
+        }
+      ]
+    },
+    {
+      "countryName": "Armenia",
+      "countryCode": "AM",
+      "currency": "AMD",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "AM-ER",
+          "regionName": "Yerevan",
+          "timezone": "Asia/Yerevan"
+        },
+        {
+          "regionCode": "AM-GR",
+          "regionName": "Gegharkunik",
+          "timezone": "Asia/Yerevan"
+        },
+        {
+          "regionCode": "AM-KT",
+          "regionName": "Kotayk",
+          "timezone": "Asia/Yerevan"
+        }
+      ]
+    },
+    {
+      "countryName": "Georgia",
+      "countryCode": "GE",
+      "currency": "GEL",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "GE-TB",
+          "regionName": "Tbilisi",
+          "timezone": "Asia/Tbilisi"
+        },
+        {
+          "regionCode": "GE-KA",
+          "regionName": "Kakheti",
+          "timezone": "Asia/Tbilisi"
+        },
+        {
+          "regionCode": "GE-SZ",
+          "regionName": "Samegrelo-Zemo Svaneti",
+          "timezone": "Asia/Tbilisi"
+        }
+      ]
+    },
+    {
+      "countryName": "Azerbaijan",
+      "countryCode": "AZ",
+      "currency": "AZN",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "AZ-BA",
+          "regionName": "Baku",
+          "timezone": "Asia/Baku"
+        },
+        {
+          "regionCode": "AZ-GA",
+          "regionName": "Ganja",
+          "timezone": "Asia/Baku"
+        },
+        {
+          "regionCode": "AZ-QA",
+          "regionName": "Qazakh",
+          "timezone": "Asia/Baku"
+        }
+      ]
+    },
+    {
+      "countryName": "Moldova",
+      "countryCode": "MD",
+      "currency": "MDL",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "MD-CU",
+          "regionName": "Chi\u0219in\u0103u",
+          "timezone": "Europe/Chisinau"
+        },
+        {
+          "regionCode": "MD-BA",
+          "regionName": "B\u0103l\u021bi",
+          "timezone": "Europe/Chisinau"
+        },
+        {
+          "regionCode": "MD-HD",
+          "regionName": "H\u00eence\u0219ti",
+          "timezone": "Europe/Chisinau"
+        }
+      ]
+    },
+    {
+      "countryName": "Belarus",
+      "countryCode": "BY",
+      "currency": "BYN",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "BY-MI",
+          "regionName": "Minsk",
+          "timezone": "Europe/Minsk"
+        },
+        {
+          "regionCode": "BY-BR",
+          "regionName": "Brest",
+          "timezone": "Europe/Minsk"
+        },
+        {
+          "regionCode": "BY-MA",
+          "regionName": "Mogilev",
+          "timezone": "Europe/Minsk"
+        }
+      ]
+    },
+    {
+      "countryName": "Serbia",
+      "countryCode": "RS",
+      "currency": "RSD",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "RS-00",
+          "regionName": "Belgrade",
+          "timezone": "Europe/Belgrade"
+        },
+        {
+          "regionCode": "RS-24",
+          "regionName": "South Ba\u010dka",
+          "timezone": "Europe/Belgrade"
+        },
+        {
+          "regionCode": "RS-22",
+          "regionName": "Central Serbia",
+          "timezone": "Europe/Belgrade"
+        }
+      ]
+    },
+    {
+      "countryName": "Croatia",
+      "countryCode": "HR",
+      "currency": "HRK",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "HR-ZG",
+          "regionName": "Zagreb",
+          "timezone": "Europe/Zagreb"
+        },
+        {
+          "regionCode": "HR-SU",
+          "regionName": "Split-Dalmatia",
+          "timezone": "Europe/Zagreb"
+        },
+        {
+          "regionCode": "HR-OS",
+          "regionName": "Osijek-Baranja",
+          "timezone": "Europe/Zagreb"
+        }
+      ]
+    },
+    {
+      "countryName": "Slovenia",
+      "countryCode": "SI",
+      "currency": "EUR",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "SI-LJ",
+          "regionName": "Ljubljana",
+          "timezone": "Europe/Ljubljana"
+        },
+        {
+          "regionCode": "SI-MB",
+          "regionName": "Maribor",
+          "timezone": "Europe/Ljubljana"
+        },
+        {
+          "regionCode": "SI-KR",
+          "regionName": "Kranj",
+          "timezone": "Europe/Ljubljana"
+        }
+      ]
+    },
+    {
+      "countryName": "North Macedonia",
+      "countryCode": "MK",
+      "currency": "MKD",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "MK-85",
+          "regionName": "Skopje",
+          "timezone": "Europe/Skopje"
+        },
+        {
+          "regionCode": "MK-34",
+          "regionName": "Pelagonia",
+          "timezone": "Europe/Skopje"
+        },
+        {
+          "regionCode": "MK-83",
+          "regionName": "East",
+          "timezone": "Europe/Skopje"
+        }
+      ]
+    },
+    {
+      "countryName": "Albania",
+      "countryCode": "AL",
+      "currency": "ALL",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "AL-TR",
+          "regionName": "Tirana",
+          "timezone": "Europe/Tirane"
+        },
+        {
+          "regionCode": "AL-DR",
+          "regionName": "Durr\u00ebs",
+          "timezone": "Europe/Tirane"
+        },
+        {
+          "regionCode": "AL-VL",
+          "regionName": "Vlor\u00eb",
+          "timezone": "Europe/Tirane"
+        }
+      ]
+    },
+    {
+      "countryName": "Bosnia and Herzegovina",
+      "countryCode": "BA",
+      "currency": "BAM",
+      "dateFormat": "dd.mm.yyyy",
+      "regions": [
+        {
+          "regionCode": "BA-BIH",
+          "regionName": "Federation of Bosnia and Herzegovina",
+          "timezone": "Europe/Sarajevo"
+        },
+        {
+          "regionCode": "BA-SRP",
+          "regionName": "Republika Srpska",
+          "timezone": "Europe/Sarajevo"
+        },
+        {
+          "regionCode": "BA-BRC",
+          "regionName": "Br\u010dko District",
+          "timezone": "Europe/Sarajevo"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "name": "Estonia",
+  "isoCode": "EE",
+  "timezones": [
+    {
+      "name": "Europe/Tallinn",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Harju County",
+      "isoCode": "37",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hiiu County",
+      "isoCode": "39",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ida-Viru County",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Järva County",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jõgeva County",
+      "isoCode": "49",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lääne County",
+      "isoCode": "57",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lääne-Viru County",
+      "isoCode": "59",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pärnu County",
+      "isoCode": "67",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Põlva County",
+      "isoCode": "65",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rapla County",
+      "isoCode": "70",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saare County",
+      "isoCode": "74",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tartu County",
+      "isoCode": "78",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Valga County",
+      "isoCode": "82",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Viljandi County",
+      "isoCode": "84",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Võru County",
+      "isoCode": "86",
+      "timezones": [
+        {
+          "name": "Europe/Tallinn",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

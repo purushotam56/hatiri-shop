@@ -1,0 +1,119 @@
+{
+  "name": "Lebanon",
+  "isoCode": "LB",
+  "timezones": [
+    {
+      "name": "Asia/Beirut",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Akkar Governorate",
+      "isoCode": "AK",
+      "timezones": [
+        {
+          "name": "Asia/Beirut",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Baalbek-Hermel Governorate",
+      "isoCode": "BH",
+      "timezones": [
+        {
+          "name": "Asia/Beirut",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Beirut Governorate",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Asia/Beirut",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Beqaa Governorate",
+      "isoCode": "BI",
+      "timezones": [
+        {
+          "name": "Asia/Beirut",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mount Lebanon Governorate",
+      "isoCode": "JL",
+      "timezones": [
+        {
+          "name": "Asia/Beirut",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nabatieh Governorate",
+      "isoCode": "NA",
+      "timezones": [
+        {
+          "name": "Asia/Beirut",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Governorate",
+      "isoCode": "AS",
+      "timezones": [
+        {
+          "name": "Asia/Beirut",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Governorate",
+      "isoCode": "JA",
+      "timezones": [
+        {
+          "name": "Asia/Beirut",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

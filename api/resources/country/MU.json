@@ -1,0 +1,236 @@
+{
+  "name": "Mauritius",
+  "isoCode": "MU",
+  "timezones": [
+    {
+      "name": "Indian/Mauritius",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Agaléga",
+      "isoCode": "AG",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Beau Bassin-Rose Hill",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cargados Carajos",
+      "isoCode": "CC",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Curepipe",
+      "isoCode": "CU",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Flacq District",
+      "isoCode": "FL",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Grand Port District",
+      "isoCode": "GP",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Moka District",
+      "isoCode": "MO",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pamplemousses District",
+      "isoCode": "PA",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Plaines Wilhems District",
+      "isoCode": "PW",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Port Louis",
+      "isoCode": "PU",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Port Louis District",
+      "isoCode": "PL",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Quatre Bornes",
+      "isoCode": "QB",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rivière Noire District",
+      "isoCode": "BL",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rivière du Rempart District",
+      "isoCode": "RR",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rodrigues",
+      "isoCode": "RO",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Savanne District",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vacoas-Phoenix",
+      "isoCode": "VP",
+      "timezones": [
+        {
+          "name": "Indian/Mauritius",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

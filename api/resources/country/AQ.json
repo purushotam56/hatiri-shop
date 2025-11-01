@@ -1,0 +1,105 @@
+{
+  "name": "Antarctica",
+  "isoCode": "AQ",
+  "timezones": [
+    {
+      "name": "Antarctica/Casey",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "+08",
+      "isDST": false
+    },
+    {
+      "name": "Antarctica/Davis",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "+07",
+      "isDST": false
+    },
+    {
+      "name": "Antarctica/DumontDUrville",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "+10",
+      "isDST": false
+    },
+    {
+      "name": "Antarctica/Mawson",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    },
+    {
+      "name": "Antarctica/McMurdo",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "NZST",
+      "isDST": false
+    },
+    {
+      "name": "Antarctica/Palmer",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "Antarctica/Rothera",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "Antarctica/Syowa",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    },
+    {
+      "name": "Antarctica/Troll",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "+02",
+      "isDST": true
+    },
+    {
+      "name": "Antarctica/Vostok",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Riyadh",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Singapore",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "+08",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Auckland",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "NZST",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Port_Moresby",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "+10",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

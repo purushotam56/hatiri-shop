@@ -1,0 +1,442 @@
+{
+  "name": "Papua new Guinea",
+  "isoCode": "PG",
+  "timezones": [
+    {
+      "name": "Pacific/Bougainville",
+      "utcOffset": "+11:00",
+      "offsetMinutes": 660,
+      "abbreviation": "+11",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Port_Moresby",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "+10",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bougainville",
+      "isoCode": "NSB",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central Province",
+      "isoCode": "CPM",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chimbu Province",
+      "isoCode": "CPK",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "East New Britain",
+      "isoCode": "EBR",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eastern Highlands Province",
+      "isoCode": "EHG",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Enga Province",
+      "isoCode": "EPW",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gulf",
+      "isoCode": "GPK",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hela",
+      "isoCode": "HLA",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jiwaka Province",
+      "isoCode": "JWK",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Madang Province",
+      "isoCode": "MPM",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Manus Province",
+      "isoCode": "MRL",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Milne Bay Province",
+      "isoCode": "MBA",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Morobe Province",
+      "isoCode": "MPL",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "New Ireland Province",
+      "isoCode": "NIK",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oro Province",
+      "isoCode": "NPP",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Port Moresby",
+      "isoCode": "NCD",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sandaun Province",
+      "isoCode": "SAN",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Southern Highlands Province",
+      "isoCode": "SHM",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "West New Britain Province",
+      "isoCode": "WBK",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Highlands Province",
+      "isoCode": "WHM",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Province",
+      "isoCode": "WPD",
+      "timezones": [
+        {
+          "name": "Pacific/Bougainville",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Port_Moresby",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "+10",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

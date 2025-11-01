@@ -1,0 +1,340 @@
+{
+  "name": "Venezuela",
+  "isoCode": "VE",
+  "timezones": [
+    {
+      "name": "America/Caracas",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "-04",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Amazonas",
+      "isoCode": "Z",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Anzoátegui",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Apure",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aragua",
+      "isoCode": "D",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Barinas",
+      "isoCode": "E",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bolívar",
+      "isoCode": "F",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Carabobo",
+      "isoCode": "G",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cojedes",
+      "isoCode": "H",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Delta Amacuro",
+      "isoCode": "Y",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Distrito Capital",
+      "isoCode": "A",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Falcón",
+      "isoCode": "I",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Federal Dependencies of Venezuela",
+      "isoCode": "W",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guárico",
+      "isoCode": "J",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Guaira",
+      "isoCode": "X",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lara",
+      "isoCode": "K",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Miranda",
+      "isoCode": "M",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Monagas",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mérida",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nueva Esparta",
+      "isoCode": "O",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Portuguesa",
+      "isoCode": "P",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sucre",
+      "isoCode": "R",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Trujillo",
+      "isoCode": "T",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Táchira",
+      "isoCode": "S",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yaracuy",
+      "isoCode": "U",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zulia",
+      "isoCode": "V",
+      "timezones": [
+        {
+          "name": "America/Caracas",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

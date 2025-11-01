@@ -1,0 +1,197 @@
+{
+  "name": "Namibia",
+  "isoCode": "NA",
+  "timezones": [
+    {
+      "name": "Africa/Windhoek",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Erongo Region",
+      "isoCode": "ER",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hardap Region",
+      "isoCode": "HA",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karas Region",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kavango East Region",
+      "isoCode": "KE",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kavango West Region",
+      "isoCode": "KW",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khomas Region",
+      "isoCode": "KH",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kunene Region",
+      "isoCode": "KU",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ohangwena Region",
+      "isoCode": "OW",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Omaheke Region",
+      "isoCode": "OH",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Omusati Region",
+      "isoCode": "OS",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oshana Region",
+      "isoCode": "ON",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oshikoto Region",
+      "isoCode": "OT",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Otjozondjupa Region",
+      "isoCode": "OD",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zambezi Region",
+      "isoCode": "CA",
+      "timezones": [
+        {
+          "name": "Africa/Windhoek",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

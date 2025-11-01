@@ -1,0 +1,41 @@
+{
+  "name": "Sao Tome and Principe",
+  "isoCode": "ST",
+  "timezones": [
+    {
+      "name": "Africa/Sao_Tome",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Príncipe Province",
+      "isoCode": "P",
+      "timezones": [
+        {
+          "name": "Africa/Sao_Tome",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "São Tomé Province",
+      "isoCode": "S",
+      "timezones": [
+        {
+          "name": "Africa/Sao_Tome",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

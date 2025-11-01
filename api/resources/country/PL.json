@@ -1,0 +1,223 @@
+{
+  "name": "Poland",
+  "isoCode": "PL",
+  "timezones": [
+    {
+      "name": "Europe/Warsaw",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Greater Poland Voivodeship",
+      "isoCode": "WP",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kuyavian-Pomeranian Voivodeship",
+      "isoCode": "KP",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lesser Poland Voivodeship",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lower Silesian Voivodeship",
+      "isoCode": "DS",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lublin Voivodeship",
+      "isoCode": "LU",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lubusz Voivodeship",
+      "isoCode": "LB",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Masovian Voivodeship",
+      "isoCode": "MZ",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Opole Voivodeship",
+      "isoCode": "OP",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Podkarpackie Voivodeship",
+      "isoCode": "PK",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Podlaskie Voivodeship",
+      "isoCode": "PD",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pomeranian Voivodeship",
+      "isoCode": "PM",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Silesian Voivodeship",
+      "isoCode": "SL",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Warmian-Masurian Voivodeship",
+      "isoCode": "WN",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Pomeranian Voivodeship",
+      "isoCode": "ZP",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Łódź Voivodeship",
+      "isoCode": "LD",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Świętokrzyskie Voivodeship",
+      "isoCode": "SK",
+      "timezones": [
+        {
+          "name": "Europe/Warsaw",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

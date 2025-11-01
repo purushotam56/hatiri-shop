@@ -1,0 +1,14 @@
+{
+  "name": "Norfolk Island",
+  "isoCode": "NF",
+  "timezones": [
+    {
+      "name": "Pacific/Norfolk",
+      "utcOffset": "+11:00",
+      "offsetMinutes": 660,
+      "abbreviation": "+11",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

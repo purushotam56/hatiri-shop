@@ -1,0 +1,366 @@
+{
+  "name": "Egypt",
+  "isoCode": "EG",
+  "timezones": [
+    {
+      "name": "Africa/Cairo",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Alexandria",
+      "isoCode": "ALX",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aswan",
+      "isoCode": "ASN",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Asyut",
+      "isoCode": "AST",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Beheira",
+      "isoCode": "BH",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Beni Suef",
+      "isoCode": "BNS",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cairo",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dakahlia",
+      "isoCode": "DK",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Damietta",
+      "isoCode": "DT",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Faiyum",
+      "isoCode": "FYM",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gharbia",
+      "isoCode": "GH",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Giza",
+      "isoCode": "GZ",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ismailia",
+      "isoCode": "IS",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kafr el-Sheikh",
+      "isoCode": "KFS",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Luxor",
+      "isoCode": "LX",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Matrouh",
+      "isoCode": "MT",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Minya",
+      "isoCode": "MN",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Monufia",
+      "isoCode": "MNF",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "New Valley",
+      "isoCode": "WAD",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Sinai",
+      "isoCode": "SIN",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Port Said",
+      "isoCode": "PTS",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Qalyubia",
+      "isoCode": "KB",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Qena",
+      "isoCode": "KN",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Red Sea",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sharqia",
+      "isoCode": "SHR",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sohag",
+      "isoCode": "SHG",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Sinai",
+      "isoCode": "JS",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Suez",
+      "isoCode": "SUZ",
+      "timezones": [
+        {
+          "name": "Africa/Cairo",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

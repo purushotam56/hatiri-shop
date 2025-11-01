@@ -1,0 +1,142 @@
+{
+  "name": "Saint Vincent And The Grenadines",
+  "isoCode": "VC",
+  "timezones": [
+    {
+      "name": "America/Puerto_Rico",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    },
+    {
+      "name": "America/St_Vincent",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Charlotte Parish",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Vincent",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Grenadines Parish",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Vincent",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Andrew Parish",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Vincent",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint David Parish",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Vincent",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint George Parish",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Vincent",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Patrick Parish",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Vincent",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

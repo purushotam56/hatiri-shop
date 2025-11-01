@@ -1,0 +1,769 @@
+{
+  "name": "Algeria",
+  "isoCode": "DZ",
+  "timezones": [
+    {
+      "name": "Africa/Algiers",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "CET",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Adrar",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Algiers",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Annaba",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aïn Defla",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aïn Témouchent",
+      "isoCode": "46",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Batna",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Biskra",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Blida",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bordj Baji Mokhtar",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bordj Bou Arréridj",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Boumerdès",
+      "isoCode": "35",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bouïra",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Béchar",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Béjaïa",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Béni Abbès",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chlef",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Constantine",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Djanet",
+      "isoCode": "56",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Djelfa",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El Bayadh",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El M'ghair",
+      "isoCode": "49",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El Menia",
+      "isoCode": "50",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El Oued",
+      "isoCode": "39",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El Tarf",
+      "isoCode": "36",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ghardaïa",
+      "isoCode": "47",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guelma",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Illizi",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "In Guezzam",
+      "isoCode": "58",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "In Salah",
+      "isoCode": "57",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jijel",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khenchela",
+      "isoCode": "40",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Laghouat",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "M'Sila",
+      "isoCode": "28",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mascara",
+      "isoCode": "29",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mila",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mostaganem",
+      "isoCode": "27",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Médéa",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Naama",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oran",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ouargla",
+      "isoCode": "30",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ouled Djellal",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oum El Bouaghi",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Relizane",
+      "isoCode": "48",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saïda",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sidi Bel Abbès",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Skikda",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Souk Ahras",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sétif",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tamanghasset",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tiaret",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Timimoun",
+      "isoCode": "54",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tindouf",
+      "isoCode": "37",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tipasa",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tissemsilt",
+      "isoCode": "38",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tizi Ouzou",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tlemcen",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Touggourt",
+      "isoCode": "55",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tébessa",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Africa/Algiers",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "name": "Guinea-Bissau",
+  "isoCode": "GW",
+  "timezones": [
+    {
+      "name": "Africa/Bissau",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bafatá",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Biombo Region",
+      "isoCode": "BM",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bolama Region",
+      "isoCode": "BL",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cacheu Region",
+      "isoCode": "CA",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gabú Region",
+      "isoCode": "GA",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Leste Province",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Norte Province",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oio Region",
+      "isoCode": "OI",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Quinara Region",
+      "isoCode": "QU",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sul Province",
+      "isoCode": "S",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tombali Region",
+      "isoCode": "TO",
+      "timezones": [
+        {
+          "name": "Africa/Bissau",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

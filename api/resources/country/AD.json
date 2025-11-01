@@ -1,0 +1,106 @@
+{
+  "name": "Andorra",
+  "isoCode": "AD",
+  "timezones": [
+    {
+      "name": "Europe/Andorra",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Andorra la Vella",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Andorra",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Canillo",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Europe/Andorra",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Encamp",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Andorra",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Escaldes-Engordany",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Europe/Andorra",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "La Massana",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Europe/Andorra",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ordino",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Andorra",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sant Julià de Lòria",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Andorra",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

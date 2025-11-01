@@ -1,0 +1,314 @@
+{
+  "name": "Chad",
+  "isoCode": "TD",
+  "timezones": [
+    {
+      "name": "Africa/Ndjamena",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bahr el Gazel",
+      "isoCode": "BG",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Batha Region",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Borkou",
+      "isoCode": "BO",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ennedi Region",
+      "isoCode": "EN",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ennedi-Est",
+      "isoCode": "EE",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ennedi-Ouest",
+      "isoCode": "EO",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guéra Region",
+      "isoCode": "GR",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hadjer-Lamis",
+      "isoCode": "HL",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kanem Region",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lac Region",
+      "isoCode": "LC",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Logone Occidental Region",
+      "isoCode": "LO",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Logone Oriental Region",
+      "isoCode": "LR",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mandoul Region",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mayo-Kebbi Est Region",
+      "isoCode": "ME",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mayo-Kebbi Ouest Region",
+      "isoCode": "MO",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Moyen-Chari Region",
+      "isoCode": "MC",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "N'Djamena",
+      "isoCode": "ND",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ouaddaï Region",
+      "isoCode": "OD",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Salamat Region",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sila Region",
+      "isoCode": "SI",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tandjilé Region",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tibesti Region",
+      "isoCode": "TI",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wadi Fira Region",
+      "isoCode": "WF",
+      "timezones": [
+        {
+          "name": "Africa/Ndjamena",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

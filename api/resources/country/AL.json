@@ -1,0 +1,626 @@
+{
+  "name": "Albania",
+  "isoCode": "AL",
+  "timezones": [
+    {
+      "name": "Europe/Tirane",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Berat County",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Berat District",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bulqizë District",
+      "isoCode": "BU",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Delvinë District",
+      "isoCode": "DL",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Devoll District",
+      "isoCode": "DV",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dibër County",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dibër District",
+      "isoCode": "DI",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Durrës County",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Durrës District",
+      "isoCode": "DR",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Elbasan County",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fier County",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fier District",
+      "isoCode": "FR",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gjirokastër County",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gjirokastër District",
+      "isoCode": "GJ",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gramsh District",
+      "isoCode": "GR",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Has District",
+      "isoCode": "HA",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kavajë District",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kolonjë District",
+      "isoCode": "ER",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Korçë County",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Korçë District",
+      "isoCode": "KO",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Krujë District",
+      "isoCode": "KR",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kukës County",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kukës District",
+      "isoCode": "KU",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kurbin District",
+      "isoCode": "KB",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kuçovë District",
+      "isoCode": "KC",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lezhë County",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lezhë District",
+      "isoCode": "LE",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Librazhd District",
+      "isoCode": "LB",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lushnjë District",
+      "isoCode": "LU",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mallakastër District",
+      "isoCode": "MK",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Malësi e Madhe District",
+      "isoCode": "MM",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mat District",
+      "isoCode": "MT",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mirditë District",
+      "isoCode": "MR",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Peqin District",
+      "isoCode": "PQ",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pogradec District",
+      "isoCode": "PG",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pukë District",
+      "isoCode": "PU",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Përmet District",
+      "isoCode": "PR",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sarandë District",
+      "isoCode": "SR",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Shkodër County",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Shkodër District",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Skrapar District",
+      "isoCode": "SK",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tepelenë District",
+      "isoCode": "TE",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tirana County",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tirana District",
+      "isoCode": "TR",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tropojë District",
+      "isoCode": "TP",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vlorë County",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vlorë District",
+      "isoCode": "VL",
+      "timezones": [
+        {
+          "name": "Europe/Tirane",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

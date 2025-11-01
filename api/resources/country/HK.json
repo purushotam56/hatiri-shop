@@ -1,0 +1,236 @@
+{
+  "name": "Hong Kong S.A.R.",
+  "isoCode": "HK",
+  "timezones": [
+    {
+      "name": "Asia/Hong_Kong",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "HKT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Central and Western District",
+      "isoCode": "HCW",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eastern",
+      "isoCode": "HEA",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Islands District",
+      "isoCode": "NIS",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kowloon City",
+      "isoCode": "KKC",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kwai Tsing",
+      "isoCode": "NKT",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kwun Tong",
+      "isoCode": "KKT",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North",
+      "isoCode": "NNO",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sai Kung District",
+      "isoCode": "NSK",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sha Tin",
+      "isoCode": "NST",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sham Shui Po",
+      "isoCode": "KSS",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Southern",
+      "isoCode": "HSO",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tsuen Wan District",
+      "isoCode": "NTW",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tuen Mun",
+      "isoCode": "NTM",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wan Chai",
+      "isoCode": "HWC",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wong Tai Sin",
+      "isoCode": "KWT",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yau Tsim Mong",
+      "isoCode": "KYT",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yuen Long District",
+      "isoCode": "NYL",
+      "timezones": [
+        {
+          "name": "Asia/Hong_Kong",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "HKT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

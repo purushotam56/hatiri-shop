@@ -1,0 +1,322 @@
+{
+  "name": "Saint Kitts And Nevis",
+  "isoCode": "KN",
+  "timezones": [
+    {
+      "name": "America/Puerto_Rico",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    },
+    {
+      "name": "America/St_Kitts",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Christ Church Nichola Town Parish",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nevis",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Anne Sandy Point Parish",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint George Gingerland Parish",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint James Windward Parish",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint John Capisterre Parish",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint John Figtree Parish",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Kitts",
+      "isoCode": "K",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Mary Cayon Parish",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Paul Capisterre Parish",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Paul Charlestown Parish",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Peter Basseterre Parish",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Thomas Lowland Parish",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Thomas Middle Island Parish",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Trinity Palmetto Point Parish",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/St_Kitts",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

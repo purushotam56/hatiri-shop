@@ -1,0 +1,202 @@
+{
+  "name": "Equatorial Guinea",
+  "isoCode": "GQ",
+  "timezones": [
+    {
+      "name": "Africa/Lagos",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Malabo",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Annobón Province",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Malabo",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bioko Norte Province",
+      "isoCode": "BN",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Malabo",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bioko Sur Province",
+      "isoCode": "BS",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Malabo",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Centro Sur Province",
+      "isoCode": "CS",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Malabo",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Insular Region",
+      "isoCode": "I",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Malabo",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kié-Ntem Province",
+      "isoCode": "KN",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Malabo",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Litoral Province",
+      "isoCode": "LI",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Malabo",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Río Muni",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Malabo",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wele-Nzas Province",
+      "isoCode": "WN",
+      "timezones": [
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Malabo",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

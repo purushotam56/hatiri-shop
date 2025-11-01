@@ -1,0 +1,223 @@
+{
+  "name": "Cuba",
+  "isoCode": "CU",
+  "timezones": [
+    {
+      "name": "America/Havana",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "CDT",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Artemisa Province",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Camagüey Province",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ciego de Ávila Province",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cienfuegos Province",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Granma Province",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Guantánamo Province",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Havana Province",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Holguín Province",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Isla de la Juventud",
+      "isoCode": "99",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Las Tunas Province",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Matanzas Province",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mayabeque Province",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pinar del Río Province",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sancti Spíritus Province",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Santiago de Cuba Province",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Villa Clara Province",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "America/Havana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

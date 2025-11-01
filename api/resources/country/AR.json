@@ -1,0 +1,2252 @@
+{
+  "name": "Argentina",
+  "isoCode": "AR",
+  "timezones": [
+    {
+      "name": "America/Argentina/Buenos_Aires",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/Catamarca",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/Cordoba",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/Jujuy",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/La_Rioja",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/Mendoza",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/Rio_Gallegos",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/Salta",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/San_Juan",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/San_Luis",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/Tucuman",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    },
+    {
+      "name": "America/Argentina/Ushuaia",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Buenos Aires",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Catamarca",
+      "isoCode": "K",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chaco",
+      "isoCode": "H",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chubut",
+      "isoCode": "U",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ciudad Autónoma de Buenos Aires",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Corrientes",
+      "isoCode": "W",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Córdoba",
+      "isoCode": "X",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Entre Ríos",
+      "isoCode": "E",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Formosa",
+      "isoCode": "P",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jujuy",
+      "isoCode": "Y",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Pampa",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Rioja",
+      "isoCode": "F",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mendoza",
+      "isoCode": "M",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Misiones",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Neuquén",
+      "isoCode": "Q",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Río Negro",
+      "isoCode": "R",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Salta",
+      "isoCode": "A",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San Juan",
+      "isoCode": "J",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San Luis",
+      "isoCode": "D",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Cruz",
+      "isoCode": "Z",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Fe",
+      "isoCode": "S",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santiago del Estero",
+      "isoCode": "G",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tierra del Fuego",
+      "isoCode": "V",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tucumán",
+      "isoCode": "T",
+      "timezones": [
+        {
+          "name": "America/Argentina/Buenos_Aires",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Catamarca",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Cordoba",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Jujuy",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/La_Rioja",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Mendoza",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Rio_Gallegos",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Salta",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Juan",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/San_Luis",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Tucuman",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        },
+        {
+          "name": "America/Argentina/Ushuaia",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

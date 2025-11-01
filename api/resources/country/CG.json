@@ -1,0 +1,262 @@
+{
+  "name": "Congo",
+  "isoCode": "CG",
+  "timezones": [
+    {
+      "name": "Africa/Brazzaville",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Lagos",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bouenza Department",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Brazzaville",
+      "isoCode": "BZV",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cuvette Department",
+      "isoCode": "8",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cuvette-Ouest Department",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kouilou Department",
+      "isoCode": "5",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Likouala Department",
+      "isoCode": "7",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lékoumou Department",
+      "isoCode": "2",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Niari Department",
+      "isoCode": "9",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Plateaux Department",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pointe-Noire",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pool Department",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sangha Department",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Africa/Brazzaville",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

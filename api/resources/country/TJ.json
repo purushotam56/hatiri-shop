@@ -1,0 +1,67 @@
+{
+  "name": "Tajikistan",
+  "isoCode": "TJ",
+  "timezones": [
+    {
+      "name": "Asia/Dushanbe",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Gorno-Badakhshan Autonomous Province",
+      "isoCode": "GB",
+      "timezones": [
+        {
+          "name": "Asia/Dushanbe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khatlon Province",
+      "isoCode": "KT",
+      "timezones": [
+        {
+          "name": "Asia/Dushanbe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sughd Province",
+      "isoCode": "SU",
+      "timezones": [
+        {
+          "name": "Asia/Dushanbe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "districts of Republican Subordination",
+      "isoCode": "RA",
+      "timezones": [
+        {
+          "name": "Asia/Dushanbe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

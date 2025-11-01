@@ -1,0 +1,145 @@
+{
+  "name": "Guyana",
+  "isoCode": "GY",
+  "timezones": [
+    {
+      "name": "America/Guyana",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "-04",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Barima-Waini",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "America/Guyana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cuyuni-Mazaruni",
+      "isoCode": "CU",
+      "timezones": [
+        {
+          "name": "America/Guyana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Demerara-Mahaica",
+      "isoCode": "DE",
+      "timezones": [
+        {
+          "name": "America/Guyana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "East Berbice-Corentyne",
+      "isoCode": "EB",
+      "timezones": [
+        {
+          "name": "America/Guyana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Essequibo Islands-West Demerara",
+      "isoCode": "ES",
+      "timezones": [
+        {
+          "name": "America/Guyana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mahaica-Berbice",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "America/Guyana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pomeroon-Supenaam",
+      "isoCode": "PM",
+      "timezones": [
+        {
+          "name": "America/Guyana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Potaro-Siparuni",
+      "isoCode": "PT",
+      "timezones": [
+        {
+          "name": "America/Guyana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Upper Demerara-Berbice",
+      "isoCode": "UD",
+      "timezones": [
+        {
+          "name": "America/Guyana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Upper Takutu-Upper Essequibo",
+      "isoCode": "UT",
+      "timezones": [
+        {
+          "name": "America/Guyana",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Turks And Caicos Islands",
+  "isoCode": "TC",
+  "timezones": [
+    {
+      "name": "America/Grand_Turk",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "EDT",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

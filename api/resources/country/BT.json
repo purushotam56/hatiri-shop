@@ -1,0 +1,262 @@
+{
+  "name": "Bhutan",
+  "isoCode": "BT",
+  "timezones": [
+    {
+      "name": "Asia/Thimphu",
+      "utcOffset": "+06:00",
+      "offsetMinutes": 360,
+      "abbreviation": "+06",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bumthang District",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chukha District",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dagana District",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gasa District",
+      "isoCode": "GA",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Haa District",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lhuntse District",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mongar District",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Paro District",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pemagatshel District",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Punakha District",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samdrup Jongkhar District",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samtse District",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sarpang District",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Thimphu District",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Trashigang District",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Trongsa District",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tsirang District",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wangdue Phodrang District",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zhemgang District",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Asia/Thimphu",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

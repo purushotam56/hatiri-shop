@@ -1,0 +1,132 @@
+{
+  "name": "Kyrgyzstan",
+  "isoCode": "KG",
+  "timezones": [
+    {
+      "name": "Asia/Bishkek",
+      "utcOffset": "+06:00",
+      "offsetMinutes": 360,
+      "abbreviation": "+06",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Batken Region",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "Asia/Bishkek",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bishkek",
+      "isoCode": "GB",
+      "timezones": [
+        {
+          "name": "Asia/Bishkek",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chuy Region",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "Asia/Bishkek",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Issyk-Kul Region",
+      "isoCode": "Y",
+      "timezones": [
+        {
+          "name": "Asia/Bishkek",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jalal-Abad Region",
+      "isoCode": "J",
+      "timezones": [
+        {
+          "name": "Asia/Bishkek",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Naryn Region",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "Asia/Bishkek",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Osh",
+      "isoCode": "GO",
+      "timezones": [
+        {
+          "name": "Asia/Bishkek",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Osh Region",
+      "isoCode": "O",
+      "timezones": [
+        {
+          "name": "Asia/Bishkek",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Talas Region",
+      "isoCode": "T",
+      "timezones": [
+        {
+          "name": "Asia/Bishkek",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

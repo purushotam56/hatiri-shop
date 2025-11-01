@@ -1,0 +1,132 @@
+{
+  "name": "Bermuda",
+  "isoCode": "BM",
+  "timezones": [
+    {
+      "name": "Atlantic/Bermuda",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "ADT",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Devonshire Parish",
+      "isoCode": "DEV",
+      "timezones": [
+        {
+          "name": "Atlantic/Bermuda",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hamilton Parish",
+      "isoCode": "HA",
+      "timezones": [
+        {
+          "name": "Atlantic/Bermuda",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Paget Parish",
+      "isoCode": "PAG",
+      "timezones": [
+        {
+          "name": "Atlantic/Bermuda",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pembroke Parish",
+      "isoCode": "PEM",
+      "timezones": [
+        {
+          "name": "Atlantic/Bermuda",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saint George's Parish",
+      "isoCode": "SGE",
+      "timezones": [
+        {
+          "name": "Atlantic/Bermuda",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sandys Parish",
+      "isoCode": "SAN",
+      "timezones": [
+        {
+          "name": "Atlantic/Bermuda",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Smith's Parish,",
+      "isoCode": "SMI",
+      "timezones": [
+        {
+          "name": "Atlantic/Bermuda",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Southampton Parish",
+      "isoCode": "SOU",
+      "timezones": [
+        {
+          "name": "Atlantic/Bermuda",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Warwick Parish",
+      "isoCode": "WAR",
+      "timezones": [
+        {
+          "name": "Atlantic/Bermuda",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

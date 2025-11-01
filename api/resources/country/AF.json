@@ -1,0 +1,444 @@
+{
+  "name": "Afghanistan",
+  "isoCode": "AF",
+  "timezones": [
+    {
+      "name": "Asia/Kabul",
+      "utcOffset": "+04:30",
+      "offsetMinutes": 270,
+      "abbreviation": null,
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Badakhshan",
+      "isoCode": "BDS",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Badghis",
+      "isoCode": "BDG",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Baghlan",
+      "isoCode": "BGL",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Balkh",
+      "isoCode": "BAL",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bamyan",
+      "isoCode": "BAM",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Daykundi",
+      "isoCode": "DAY",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Farah",
+      "isoCode": "FRA",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Faryab",
+      "isoCode": "FYB",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ghazni",
+      "isoCode": "GHA",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ghōr",
+      "isoCode": "GHO",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Helmand",
+      "isoCode": "HEL",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Herat",
+      "isoCode": "HER",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jowzjan",
+      "isoCode": "JOW",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kabul",
+      "isoCode": "KAB",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kandahar",
+      "isoCode": "KAN",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kapisa",
+      "isoCode": "KAP",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khost",
+      "isoCode": "KHO",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kunar",
+      "isoCode": "KNR",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kunduz Province",
+      "isoCode": "KDZ",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Laghman",
+      "isoCode": "LAG",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Logar",
+      "isoCode": "LOG",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nangarhar",
+      "isoCode": "NAN",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nimruz",
+      "isoCode": "NIM",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nuristan",
+      "isoCode": "NUR",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Paktia",
+      "isoCode": "PIA",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Paktika",
+      "isoCode": "PKA",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Panjshir",
+      "isoCode": "PAN",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Parwan",
+      "isoCode": "PAR",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samangan",
+      "isoCode": "SAM",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sar-e Pol",
+      "isoCode": "SAR",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Takhar",
+      "isoCode": "TAK",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Urozgan",
+      "isoCode": "URU",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zabul",
+      "isoCode": "ZAB",
+      "timezones": [
+        {
+          "name": "Asia/Kabul",
+          "utcOffset": "+04:30",
+          "offsetMinutes": 270,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

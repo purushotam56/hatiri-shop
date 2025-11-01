@@ -1,0 +1,14 @@
+{
+  "name": "Tokelau",
+  "isoCode": "TK",
+  "timezones": [
+    {
+      "name": "Pacific/Fakaofo",
+      "utcOffset": "+13:00",
+      "offsetMinutes": 780,
+      "abbreviation": "+13",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Greenland",
+  "isoCode": "GL",
+  "timezones": [
+    {
+      "name": "America/Danmarkshavn",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    },
+    {
+      "name": "America/Nuuk",
+      "utcOffset": "-01:00",
+      "offsetMinutes": -60,
+      "abbreviation": "-01",
+      "isDST": true
+    },
+    {
+      "name": "America/Scoresbysund",
+      "utcOffset": "-01:00",
+      "offsetMinutes": -60,
+      "abbreviation": "-01",
+      "isDST": true
+    },
+    {
+      "name": "America/Thule",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "ADT",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

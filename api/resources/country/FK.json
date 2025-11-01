@@ -1,0 +1,14 @@
+{
+  "name": "Falkland Islands",
+  "isoCode": "FK",
+  "timezones": [
+    {
+      "name": "Atlantic/Stanley",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

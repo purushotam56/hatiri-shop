@@ -1,0 +1,884 @@
+{
+  "name": "Canada",
+  "isoCode": "CA",
+  "timezones": [
+    {
+      "name": "America/Atikokan",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "EST",
+      "isDST": false
+    },
+    {
+      "name": "America/Blanc-Sablon",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    },
+    {
+      "name": "America/Cambridge_Bay",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "MDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Creston",
+      "utcOffset": "-07:00",
+      "offsetMinutes": -420,
+      "abbreviation": "MST",
+      "isDST": false
+    },
+    {
+      "name": "America/Dawson",
+      "utcOffset": "-07:00",
+      "offsetMinutes": -420,
+      "abbreviation": "MST",
+      "isDST": false
+    },
+    {
+      "name": "America/Dawson_Creek",
+      "utcOffset": "-07:00",
+      "offsetMinutes": -420,
+      "abbreviation": "MST",
+      "isDST": false
+    },
+    {
+      "name": "America/Edmonton",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "MDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Fort_Nelson",
+      "utcOffset": "-07:00",
+      "offsetMinutes": -420,
+      "abbreviation": "MST",
+      "isDST": false
+    },
+    {
+      "name": "America/Glace_Bay",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "ADT",
+      "isDST": true
+    },
+    {
+      "name": "America/Goose_Bay",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "ADT",
+      "isDST": true
+    },
+    {
+      "name": "America/Halifax",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "ADT",
+      "isDST": true
+    },
+    {
+      "name": "America/Inuvik",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "MDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Iqaluit",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "EDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Moncton",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "ADT",
+      "isDST": true
+    },
+    {
+      "name": "America/Panama",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "EST",
+      "isDST": false
+    },
+    {
+      "name": "America/Phoenix",
+      "utcOffset": "-07:00",
+      "offsetMinutes": -420,
+      "abbreviation": "MST",
+      "isDST": false
+    },
+    {
+      "name": "America/Puerto_Rico",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    },
+    {
+      "name": "America/Rankin_Inlet",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "CDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Regina",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    },
+    {
+      "name": "America/Resolute",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "CDT",
+      "isDST": true
+    },
+    {
+      "name": "America/St_Johns",
+      "utcOffset": "-02:30",
+      "offsetMinutes": -150,
+      "abbreviation": "NDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Swift_Current",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    },
+    {
+      "name": "America/Toronto",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "EDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Vancouver",
+      "utcOffset": "-07:00",
+      "offsetMinutes": -420,
+      "abbreviation": "PDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Whitehorse",
+      "utcOffset": "-07:00",
+      "offsetMinutes": -420,
+      "abbreviation": "MST",
+      "isDST": false
+    },
+    {
+      "name": "America/Winnipeg",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "CDT",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Alberta",
+      "isoCode": "AB",
+      "timezones": [
+        {
+          "name": "America/Edmonton",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "British Columbia",
+      "isoCode": "BC",
+      "timezones": [
+        {
+          "name": "America/Vancouver",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Manitoba",
+      "isoCode": "MB",
+      "timezones": [
+        {
+          "name": "America/Winnipeg",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "New Brunswick",
+      "isoCode": "NB",
+      "timezones": [
+        {
+          "name": "America/Moncton",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Newfoundland and Labrador",
+      "isoCode": "NL",
+      "timezones": [
+        {
+          "name": "America/St_Johns",
+          "utcOffset": "-02:30",
+          "offsetMinutes": -150,
+          "abbreviation": "NDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Northwest Territories",
+      "isoCode": "NT",
+      "timezones": [
+        {
+          "name": "America/Atikokan",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Blanc-Sablon",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cambridge_Bay",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Creston",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Dawson",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Dawson_Creek",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Edmonton",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Fort_Nelson",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Glace_Bay",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Goose_Bay",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Halifax",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Inuvik",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Iqaluit",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Moncton",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Panama",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Phoenix",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Rankin_Inlet",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Regina",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Resolute",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/St_Johns",
+          "utcOffset": "-02:30",
+          "offsetMinutes": -150,
+          "abbreviation": "NDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Swift_Current",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Vancouver",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Whitehorse",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Winnipeg",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nova Scotia",
+      "isoCode": "NS",
+      "timezones": [
+        {
+          "name": "America/Halifax",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nunavut",
+      "isoCode": "NU",
+      "timezones": [
+        {
+          "name": "America/Atikokan",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Blanc-Sablon",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cambridge_Bay",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Creston",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Dawson",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Dawson_Creek",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Edmonton",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Fort_Nelson",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Glace_Bay",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Goose_Bay",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Halifax",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Inuvik",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Iqaluit",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Moncton",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Panama",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Phoenix",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Rankin_Inlet",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Regina",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Resolute",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/St_Johns",
+          "utcOffset": "-02:30",
+          "offsetMinutes": -150,
+          "abbreviation": "NDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Swift_Current",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Vancouver",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Whitehorse",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Winnipeg",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ontario",
+      "isoCode": "ON",
+      "timezones": [
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Prince Edward Island",
+      "isoCode": "PE",
+      "timezones": [
+        {
+          "name": "America/Halifax",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Quebec",
+      "isoCode": "QC",
+      "timezones": [
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saskatchewan",
+      "isoCode": "SK",
+      "timezones": [
+        {
+          "name": "America/Regina",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yukon",
+      "isoCode": "YT",
+      "timezones": [
+        {
+          "name": "America/Atikokan",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Blanc-Sablon",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cambridge_Bay",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Creston",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Dawson",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Dawson_Creek",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Edmonton",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Fort_Nelson",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Glace_Bay",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Goose_Bay",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Halifax",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Inuvik",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Iqaluit",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Moncton",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "ADT",
+          "isDST": true
+        },
+        {
+          "name": "America/Panama",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Phoenix",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Puerto_Rico",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "AST",
+          "isDST": false
+        },
+        {
+          "name": "America/Rankin_Inlet",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Regina",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Resolute",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/St_Johns",
+          "utcOffset": "-02:30",
+          "offsetMinutes": -150,
+          "abbreviation": "NDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Swift_Current",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Toronto",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "EDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Vancouver",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Whitehorse",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Winnipeg",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

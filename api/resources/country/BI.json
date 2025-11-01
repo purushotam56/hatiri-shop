@@ -1,0 +1,382 @@
+{
+  "name": "Burundi",
+  "isoCode": "BI",
+  "timezones": [
+    {
+      "name": "Africa/Bujumbura",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Maputo",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bubanza Province",
+      "isoCode": "BB",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bujumbura Mairie Province",
+      "isoCode": "BM",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bujumbura Rural Province",
+      "isoCode": "BL",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bururi Province",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cankuzo Province",
+      "isoCode": "CA",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cibitoke Province",
+      "isoCode": "CI",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gitega Province",
+      "isoCode": "GI",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karuzi Province",
+      "isoCode": "KR",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kayanza Province",
+      "isoCode": "KY",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kirundo Province",
+      "isoCode": "KI",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Makamba Province",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Muramvya Province",
+      "isoCode": "MU",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Muyinga Province",
+      "isoCode": "MY",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mwaro Province",
+      "isoCode": "MW",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ngozi Province",
+      "isoCode": "NG",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rumonge Province",
+      "isoCode": "RM",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rutana Province",
+      "isoCode": "RT",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ruyigi Province",
+      "isoCode": "RY",
+      "timezones": [
+        {
+          "name": "Africa/Bujumbura",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

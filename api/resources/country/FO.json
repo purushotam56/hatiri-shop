@@ -1,0 +1,14 @@
+{
+  "name": "Faroe Islands",
+  "isoCode": "FO",
+  "timezones": [
+    {
+      "name": "Atlantic/Faroe",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WEST",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

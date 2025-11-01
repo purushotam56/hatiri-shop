@@ -1,0 +1,21 @@
+{
+  "name": "Man (Isle of)",
+  "isoCode": "IM",
+  "timezones": [
+    {
+      "name": "Europe/Isle_of_Man",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "BST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/London",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "BST",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

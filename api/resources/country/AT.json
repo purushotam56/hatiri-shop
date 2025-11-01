@@ -1,0 +1,132 @@
+{
+  "name": "Austria",
+  "isoCode": "AT",
+  "timezones": [
+    {
+      "name": "Europe/Vienna",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Burgenland",
+      "isoCode": "1",
+      "timezones": [
+        {
+          "name": "Europe/Vienna",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Carinthia",
+      "isoCode": "2",
+      "timezones": [
+        {
+          "name": "Europe/Vienna",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lower Austria",
+      "isoCode": "3",
+      "timezones": [
+        {
+          "name": "Europe/Vienna",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Salzburg",
+      "isoCode": "5",
+      "timezones": [
+        {
+          "name": "Europe/Vienna",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Styria",
+      "isoCode": "6",
+      "timezones": [
+        {
+          "name": "Europe/Vienna",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tyrol",
+      "isoCode": "7",
+      "timezones": [
+        {
+          "name": "Europe/Vienna",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Upper Austria",
+      "isoCode": "4",
+      "timezones": [
+        {
+          "name": "Europe/Vienna",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vienna",
+      "isoCode": "9",
+      "timezones": [
+        {
+          "name": "Europe/Vienna",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vorarlberg",
+      "isoCode": "8",
+      "timezones": [
+        {
+          "name": "Europe/Vienna",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

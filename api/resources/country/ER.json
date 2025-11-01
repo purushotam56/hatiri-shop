@@ -1,0 +1,142 @@
+{
+  "name": "Eritrea",
+  "isoCode": "ER",
+  "timezones": [
+    {
+      "name": "Africa/Asmara",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Nairobi",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Anseba Region",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "Africa/Asmara",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Debub Region",
+      "isoCode": "DU",
+      "timezones": [
+        {
+          "name": "Africa/Asmara",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gash-Barka Region",
+      "isoCode": "GB",
+      "timezones": [
+        {
+          "name": "Africa/Asmara",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maekel Region",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Africa/Asmara",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern Red Sea Region",
+      "isoCode": "SK",
+      "timezones": [
+        {
+          "name": "Africa/Asmara",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Southern Red Sea Region",
+      "isoCode": "DK",
+      "timezones": [
+        {
+          "name": "Africa/Asmara",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Nairobi",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

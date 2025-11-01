@@ -1,0 +1,249 @@
+{
+  "name": "Sudan",
+  "isoCode": "SD",
+  "timezones": [
+    {
+      "name": "Africa/Khartoum",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Al Jazirah",
+      "isoCode": "GZ",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Qadarif",
+      "isoCode": "GD",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Blue Nile",
+      "isoCode": "NB",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central Darfur",
+      "isoCode": "DC",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "East Darfur",
+      "isoCode": "DE",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kassala",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khartoum",
+      "isoCode": "KH",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Darfur",
+      "isoCode": "DN",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Kordofan",
+      "isoCode": "KN",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern",
+      "isoCode": "NO",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Red Sea",
+      "isoCode": "RS",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "River Nile",
+      "isoCode": "NR",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sennar",
+      "isoCode": "SI",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South Darfur",
+      "isoCode": "DS",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South Kordofan",
+      "isoCode": "KS",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "West Darfur",
+      "isoCode": "DW",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "West Kordofan",
+      "isoCode": "GK",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "White Nile",
+      "isoCode": "NW",
+      "timezones": [
+        {
+          "name": "Africa/Khartoum",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

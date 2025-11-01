@@ -1,0 +1,14 @@
+{
+  "name": "Niue",
+  "isoCode": "NU",
+  "timezones": [
+    {
+      "name": "Pacific/Niue",
+      "utcOffset": "-11:00",
+      "offsetMinutes": -660,
+      "abbreviation": "-11",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

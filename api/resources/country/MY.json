@@ -1,0 +1,461 @@
+{
+  "name": "Malaysia",
+  "isoCode": "MY",
+  "timezones": [
+    {
+      "name": "Asia/Kuala_Lumpur",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "+08",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Kuching",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "+08",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Singapore",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "+08",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Johor",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kedah",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kelantan",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kuala Lumpur",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Labuan",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Malacca",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Negeri Sembilan",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pahang",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Penang",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Perak",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Perlis",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Putrajaya",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sabah",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sarawak",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Selangor",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Terengganu",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Asia/Kuala_Lumpur",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Kuching",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Singapore",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "+08",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Aland Islands",
+  "isoCode": "AX",
+  "timezones": [
+    {
+      "name": "Europe/Helsinki",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Mariehamn",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

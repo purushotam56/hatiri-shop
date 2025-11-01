@@ -1,0 +1,822 @@
+{
+  "name": "Guinea",
+  "isoCode": "GN",
+  "timezones": [
+    {
+      "name": "Africa/Abidjan",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Conakry",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Beyla Prefecture",
+      "isoCode": "BE",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Boffa Prefecture",
+      "isoCode": "BF",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Boké Prefecture",
+      "isoCode": "BK",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Boké Region",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Conakry",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Coyah Prefecture",
+      "isoCode": "CO",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dabola Prefecture",
+      "isoCode": "DB",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dalaba Prefecture",
+      "isoCode": "DL",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dinguiraye Prefecture",
+      "isoCode": "DI",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dubréka Prefecture",
+      "isoCode": "DU",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Faranah Prefecture",
+      "isoCode": "FA",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Forécariah Prefecture",
+      "isoCode": "FO",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fria Prefecture",
+      "isoCode": "FR",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gaoual Prefecture",
+      "isoCode": "GA",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guéckédou Prefecture",
+      "isoCode": "GU",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kankan Prefecture",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kankan Region",
+      "isoCode": "K",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kindia Prefecture",
+      "isoCode": "KD",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kindia Region",
+      "isoCode": "D",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kissidougou Prefecture",
+      "isoCode": "KS",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Koubia Prefecture",
+      "isoCode": "KB",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Koundara Prefecture",
+      "isoCode": "KN",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kouroussa Prefecture",
+      "isoCode": "KO",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kérouané Prefecture",
+      "isoCode": "KE",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Labé Prefecture",
+      "isoCode": "LA",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Labé Region",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lola Prefecture",
+      "isoCode": "LO",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lélouma Prefecture",
+      "isoCode": "LE",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Macenta Prefecture",
+      "isoCode": "MC",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mali Prefecture",
+      "isoCode": "ML",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mamou Prefecture",
+      "isoCode": "MM",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mamou Region",
+      "isoCode": "M",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mandiana Prefecture",
+      "isoCode": "MD",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nzérékoré Prefecture",
+      "isoCode": "NZ",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nzérékoré Region",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pita Prefecture",
+      "isoCode": "PI",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Siguiri Prefecture",
+      "isoCode": "SI",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tougué Prefecture",
+      "isoCode": "TO",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Télimélé Prefecture",
+      "isoCode": "TE",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yomou Prefecture",
+      "isoCode": "YO",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Conakry",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

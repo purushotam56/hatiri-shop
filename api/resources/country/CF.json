@@ -1,0 +1,362 @@
+{
+  "name": "Central African Republic",
+  "isoCode": "CF",
+  "timezones": [
+    {
+      "name": "Africa/Bangui",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Lagos",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bamingui-Bangoran Prefecture",
+      "isoCode": "BB",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bangui",
+      "isoCode": "BGF",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Basse-Kotto Prefecture",
+      "isoCode": "BK",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Haut-Mbomou Prefecture",
+      "isoCode": "HM",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Haute-Kotto Prefecture",
+      "isoCode": "HK",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kémo Prefecture",
+      "isoCode": "KG",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lobaye Prefecture",
+      "isoCode": "LB",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mambéré-Kadéï",
+      "isoCode": "HS",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mbomou Prefecture",
+      "isoCode": "MB",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nana-Grébizi Economic Prefecture",
+      "isoCode": "KB",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nana-Mambéré Prefecture",
+      "isoCode": "NM",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ombella-M'Poko Prefecture",
+      "isoCode": "MP",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ouaka Prefecture",
+      "isoCode": "UK",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ouham Prefecture",
+      "isoCode": "AC",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ouham-Pendé Prefecture",
+      "isoCode": "OP",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sangha-Mbaéré",
+      "isoCode": "SE",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vakaga Prefecture",
+      "isoCode": "VK",
+      "timezones": [
+        {
+          "name": "Africa/Bangui",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,886 @@
+{
+  "name": "Malta",
+  "isoCode": "MT",
+  "timezones": [
+    {
+      "name": "Europe/Malta",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Attard",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Balzan",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Birgu",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Birkirkara",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Birżebbuġa",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cospicua",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dingli",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fgura",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Floriana",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fontana",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gudja",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Għajnsielem",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Għarb",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Għargħur",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Għasri",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Għaxaq",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gżira",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Iklin",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kalkara",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kerċem",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kirkop",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lija",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Luqa",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Marsa",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Marsaskala",
+      "isoCode": "27",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Marsaxlokk",
+      "isoCode": "28",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mdina",
+      "isoCode": "29",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mellieħa",
+      "isoCode": "30",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mosta",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mqabba",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Msida",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mtarfa",
+      "isoCode": "35",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Munxar",
+      "isoCode": "36",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mġarr",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nadur",
+      "isoCode": "37",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Naxxar",
+      "isoCode": "38",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Paola",
+      "isoCode": "39",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pembroke",
+      "isoCode": "40",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pietà",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Qala",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Qormi",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Qrendi",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rabat",
+      "isoCode": "46",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saint Lawrence",
+      "isoCode": "50",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "San Ġwann",
+      "isoCode": "49",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sannat",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Santa Luċija",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Santa Venera",
+      "isoCode": "54",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Senglea",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Siġġiewi",
+      "isoCode": "55",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sliema",
+      "isoCode": "56",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "St. Julian's",
+      "isoCode": "48",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "St. Paul's Bay",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Swieqi",
+      "isoCode": "57",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ta' Xbiex",
+      "isoCode": "58",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tarxien",
+      "isoCode": "59",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Valletta",
+      "isoCode": "60",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Victoria",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Xagħra",
+      "isoCode": "61",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Xewkija",
+      "isoCode": "62",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Xgħajra",
+      "isoCode": "63",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ħamrun",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Żabbar",
+      "isoCode": "64",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Żebbuġ Gozo",
+      "isoCode": "65",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Żebbuġ Malta",
+      "isoCode": "66",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Żejtun",
+      "isoCode": "67",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Żurrieq",
+      "isoCode": "68",
+      "timezones": [
+        {
+          "name": "Europe/Malta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

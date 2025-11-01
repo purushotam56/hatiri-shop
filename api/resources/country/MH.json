@@ -1,0 +1,83 @@
+{
+  "name": "Marshall Islands",
+  "isoCode": "MH",
+  "timezones": [
+    {
+      "name": "Pacific/Kwajalein",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Majuro",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Tarawa",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Ralik Chain",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "Pacific/Kwajalein",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Majuro",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ratak Chain",
+      "isoCode": "T",
+      "timezones": [
+        {
+          "name": "Pacific/Kwajalein",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Majuro",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

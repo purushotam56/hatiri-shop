@@ -1,0 +1,145 @@
+{
+  "name": "South Sudan",
+  "isoCode": "SS",
+  "timezones": [
+    {
+      "name": "Africa/Juba",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Central Equatoria",
+      "isoCode": "EC",
+      "timezones": [
+        {
+          "name": "Africa/Juba",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eastern Equatoria",
+      "isoCode": "EE",
+      "timezones": [
+        {
+          "name": "Africa/Juba",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jonglei State",
+      "isoCode": "JG",
+      "timezones": [
+        {
+          "name": "Africa/Juba",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lakes",
+      "isoCode": "LK",
+      "timezones": [
+        {
+          "name": "Africa/Juba",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern Bahr el Ghazal",
+      "isoCode": "BN",
+      "timezones": [
+        {
+          "name": "Africa/Juba",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Unity",
+      "isoCode": "UY",
+      "timezones": [
+        {
+          "name": "Africa/Juba",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Upper Nile",
+      "isoCode": "NU",
+      "timezones": [
+        {
+          "name": "Africa/Juba",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Warrap",
+      "isoCode": "WR",
+      "timezones": [
+        {
+          "name": "Africa/Juba",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Bahr el Ghazal",
+      "isoCode": "BW",
+      "timezones": [
+        {
+          "name": "Africa/Juba",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Equatoria",
+      "isoCode": "EW",
+      "timezones": [
+        {
+          "name": "Africa/Juba",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

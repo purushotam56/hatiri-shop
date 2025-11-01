@@ -1,0 +1,222 @@
+{
+  "name": "Lesotho",
+  "isoCode": "LS",
+  "timezones": [
+    {
+      "name": "Africa/Johannesburg",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "SAST",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Maseru",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "SAST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Berea District",
+      "isoCode": "D",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maseru",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Butha-Buthe District",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maseru",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Leribe District",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maseru",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mafeteng District",
+      "isoCode": "E",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maseru",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maseru District",
+      "isoCode": "A",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maseru",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mohale's Hoek District",
+      "isoCode": "F",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maseru",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mokhotlong District",
+      "isoCode": "J",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maseru",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Qacha's Nek District",
+      "isoCode": "H",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maseru",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Quthing District",
+      "isoCode": "G",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maseru",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Thaba-Tseka District",
+      "isoCode": "K",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maseru",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

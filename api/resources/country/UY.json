@@ -1,0 +1,262 @@
+{
+  "name": "Uruguay",
+  "isoCode": "UY",
+  "timezones": [
+    {
+      "name": "America/Montevideo",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Artigas Department",
+      "isoCode": "AR",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Canelones Department",
+      "isoCode": "CA",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cerro Largo Department",
+      "isoCode": "CL",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Colonia Department",
+      "isoCode": "CO",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Durazno Department",
+      "isoCode": "DU",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Flores Department",
+      "isoCode": "FS",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Florida Department",
+      "isoCode": "FD",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lavalleja Department",
+      "isoCode": "LA",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maldonado Department",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Montevideo Department",
+      "isoCode": "MO",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Paysandú Department",
+      "isoCode": "PA",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rivera Department",
+      "isoCode": "RV",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rocha Department",
+      "isoCode": "RO",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Río Negro Department",
+      "isoCode": "RN",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Salto Department",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San José Department",
+      "isoCode": "SJ",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Soriano Department",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tacuarembó Department",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Treinta y Tres Department",
+      "isoCode": "TT",
+      "timezones": [
+        {
+          "name": "America/Montevideo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

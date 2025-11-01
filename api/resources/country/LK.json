@@ -1,0 +1,444 @@
+{
+  "name": "Sri Lanka",
+  "isoCode": "LK",
+  "timezones": [
+    {
+      "name": "Asia/Colombo",
+      "utcOffset": "+05:30",
+      "offsetMinutes": 330,
+      "abbreviation": null,
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Ampara District",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Anuradhapura District",
+      "isoCode": "71",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Badulla District",
+      "isoCode": "81",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Batticaloa District",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central Province",
+      "isoCode": "2",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Colombo District",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eastern Province",
+      "isoCode": "5",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Galle District",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gampaha District",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hambantota District",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jaffna District",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kalutara District",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kandy District",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kegalle District",
+      "isoCode": "92",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kilinochchi District",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mannar District",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Matale District",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Matara District",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Monaragala District",
+      "isoCode": "82",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mullaitivu District",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Central Province",
+      "isoCode": "7",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Western Province",
+      "isoCode": "6",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern Province",
+      "isoCode": "4",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nuwara Eliya District",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Polonnaruwa District",
+      "isoCode": "72",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Puttalam District",
+      "isoCode": "62",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ratnapura district",
+      "isoCode": "91",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sabaragamuwa Province",
+      "isoCode": "9",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Southern Province",
+      "isoCode": "3",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Trincomalee District",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Uva Province",
+      "isoCode": "8",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vavuniya District",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Province",
+      "isoCode": "1",
+      "timezones": [
+        {
+          "name": "Asia/Colombo",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

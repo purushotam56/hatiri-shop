@@ -1,0 +1,442 @@
+{
+  "name": "Yemen",
+  "isoCode": "YE",
+  "timezones": [
+    {
+      "name": "Asia/Aden",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Riyadh",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "'Adan Governorate",
+      "isoCode": "AD",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "'Amran Governorate",
+      "isoCode": "AM",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Abyan Governorate",
+      "isoCode": "AB",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Bayda' Governorate",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Hudaydah Governorate",
+      "isoCode": "HU",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Jawf Governorate",
+      "isoCode": "JA",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Mahrah Governorate",
+      "isoCode": "MR",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Mahwit Governorate",
+      "isoCode": "MW",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dhamar Governorate",
+      "isoCode": "DH",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hadhramaut Governorate",
+      "isoCode": "HD",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hajjah Governorate",
+      "isoCode": "HJ",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ibb Governorate",
+      "isoCode": "IB",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lahij Governorate",
+      "isoCode": "LA",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ma'rib Governorate",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Raymah Governorate",
+      "isoCode": "RA",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saada Governorate",
+      "isoCode": "SD",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sana'a",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sana'a Governorate",
+      "isoCode": "SN",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shabwah Governorate",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Socotra Governorate",
+      "isoCode": "SU",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ta'izz Governorate",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Asia/Aden",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Riyadh",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

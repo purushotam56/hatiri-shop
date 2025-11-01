@@ -1,0 +1,110 @@
+{
+  "name": "Kiribati",
+  "isoCode": "KI",
+  "timezones": [
+    {
+      "name": "Pacific/Kanton",
+      "utcOffset": "+13:00",
+      "offsetMinutes": 780,
+      "abbreviation": "+13",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Kiritimati",
+      "utcOffset": "+14:00",
+      "offsetMinutes": 840,
+      "abbreviation": "+14",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Tarawa",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Gilbert Islands",
+      "isoCode": "G",
+      "timezones": [
+        {
+          "name": "Pacific/Kanton",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Kiritimati",
+          "utcOffset": "+14:00",
+          "offsetMinutes": 840,
+          "abbreviation": "+14",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Line Islands",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "Pacific/Kanton",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Kiritimati",
+          "utcOffset": "+14:00",
+          "offsetMinutes": 840,
+          "abbreviation": "+14",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phoenix Islands",
+      "isoCode": "P",
+      "timezones": [
+        {
+          "name": "Pacific/Kanton",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Kiritimati",
+          "utcOffset": "+14:00",
+          "offsetMinutes": 840,
+          "abbreviation": "+14",
+          "isDST": false
+        },
+        {
+          "name": "Pacific/Tarawa",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

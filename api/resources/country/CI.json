@@ -1,0 +1,418 @@
+{
+  "name": "Cote D'Ivoire (Ivory Coast)",
+  "isoCode": "CI",
+  "timezones": [
+    {
+      "name": "Africa/Abidjan",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "GMT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Abidjan",
+      "isoCode": "AB",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Agnéby",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bafing Region",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bas-Sassandra District",
+      "isoCode": "BS",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bas-Sassandra Region",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Comoé District",
+      "isoCode": "CM",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Denguélé District",
+      "isoCode": "DN",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Denguélé Region",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dix-Huit Montagnes",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fromager",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gôh-Djiboua District",
+      "isoCode": "GD",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Haut-Sassandra",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lacs District",
+      "isoCode": "LC",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lacs Region",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lagunes District",
+      "isoCode": "LG",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lagunes region",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Marahoué Region",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Montagnes District",
+      "isoCode": "MG",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Moyen-Cavally",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Moyen-Comoé",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "N'zi-Comoé",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sassandra-Marahoué District",
+      "isoCode": "SM",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Savanes Region",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sud-Bandama",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sud-Comoé",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vallée du Bandama District",
+      "isoCode": "VB",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vallée du Bandama Region",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Woroba District",
+      "isoCode": "WR",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Worodougou",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yamoussoukro",
+      "isoCode": "YM",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zanzan Region",
+      "isoCode": "ZZ",
+      "timezones": [
+        {
+          "name": "Africa/Abidjan",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "GMT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

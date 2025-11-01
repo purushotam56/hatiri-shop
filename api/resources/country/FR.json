@@ -1,0 +1,1614 @@
+{
+  "name": "France",
+  "isoCode": "FR",
+  "timezones": [
+    {
+      "name": "Europe/Paris",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Ain",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aisne",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Allier",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Alpes-Maritimes",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Alpes-de-Haute-Provence",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Alsace",
+      "isoCode": "6AE",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ardennes",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ardèche",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ariège",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aube",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aude",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Auvergne-Rhône-Alpes",
+      "isoCode": "ARA",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aveyron",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bas-Rhin",
+      "isoCode": "67",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bouches-du-Rhône",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bourgogne-Franche-Comté",
+      "isoCode": "BFC",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bretagne",
+      "isoCode": "BRE",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Calvados",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cantal",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Centre-Val de Loire",
+      "isoCode": "CVL",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Charente",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Charente-Maritime",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cher",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Clipperton",
+      "isoCode": "CP",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Corrèze",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Corse",
+      "isoCode": "20R",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Corse-du-Sud",
+      "isoCode": "2A",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Creuse",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Côte-d'Or",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Côtes-d'Armor",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Deux-Sèvres",
+      "isoCode": "79",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dordogne",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Doubs",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Drôme",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Essonne",
+      "isoCode": "91",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Eure",
+      "isoCode": "27",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Eure-et-Loir",
+      "isoCode": "28",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Finistère",
+      "isoCode": "29",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "French Guiana",
+      "isoCode": "973",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "French Polynesia",
+      "isoCode": "PF",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "French Southern and Antarctic Lands",
+      "isoCode": "TF",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gard",
+      "isoCode": "30",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gers",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gironde",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Grand-Est",
+      "isoCode": "GES",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Guadeloupe",
+      "isoCode": "971",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Haut-Rhin",
+      "isoCode": "68",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Haute-Corse",
+      "isoCode": "2B",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Haute-Garonne",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Haute-Loire",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Haute-Marne",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Haute-Savoie",
+      "isoCode": "74",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Haute-Saône",
+      "isoCode": "70",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Haute-Vienne",
+      "isoCode": "87",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hautes-Alpes",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hautes-Pyrénées",
+      "isoCode": "65",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hauts-de-France",
+      "isoCode": "HDF",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hauts-de-Seine",
+      "isoCode": "92",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hérault",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ille-et-Vilaine",
+      "isoCode": "35",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Indre",
+      "isoCode": "36",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Indre-et-Loire",
+      "isoCode": "37",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Isère",
+      "isoCode": "38",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jura",
+      "isoCode": "39",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "La Réunion",
+      "isoCode": "974",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Landes",
+      "isoCode": "40",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Loir-et-Cher",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Loire",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Loire-Atlantique",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Loiret",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lot",
+      "isoCode": "46",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lot-et-Garonne",
+      "isoCode": "47",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lozère",
+      "isoCode": "48",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Maine-et-Loire",
+      "isoCode": "49",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Manche",
+      "isoCode": "50",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Marne",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Martinique",
+      "isoCode": "972",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mayenne",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mayotte",
+      "isoCode": "976",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Meurthe-et-Moselle",
+      "isoCode": "54",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Meuse",
+      "isoCode": "55",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Morbihan",
+      "isoCode": "56",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Moselle",
+      "isoCode": "57",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Métropole de Lyon",
+      "isoCode": "69M",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nièvre",
+      "isoCode": "58",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nord",
+      "isoCode": "59",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Normandie",
+      "isoCode": "NOR",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nouvelle-Aquitaine",
+      "isoCode": "NAQ",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Occitanie",
+      "isoCode": "OCC",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Oise",
+      "isoCode": "60",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Orne",
+      "isoCode": "61",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Paris",
+      "isoCode": "75C",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pas-de-Calais",
+      "isoCode": "62",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pays-de-la-Loire",
+      "isoCode": "PDL",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Provence-Alpes-Côte-d’Azur",
+      "isoCode": "PAC",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Puy-de-Dôme",
+      "isoCode": "63",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pyrénées-Atlantiques",
+      "isoCode": "64",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pyrénées-Orientales",
+      "isoCode": "66",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rhône",
+      "isoCode": "69",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saint Pierre and Miquelon",
+      "isoCode": "PM",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saint-Barthélemy",
+      "isoCode": "BL",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saint-Martin",
+      "isoCode": "MF",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sarthe",
+      "isoCode": "72",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Savoie",
+      "isoCode": "73",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saône-et-Loire",
+      "isoCode": "71",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Seine-Maritime",
+      "isoCode": "76",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Seine-Saint-Denis",
+      "isoCode": "93",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Seine-et-Marne",
+      "isoCode": "77",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Somme",
+      "isoCode": "80",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tarn",
+      "isoCode": "81",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tarn-et-Garonne",
+      "isoCode": "82",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Territoire de Belfort",
+      "isoCode": "90",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Val-d'Oise",
+      "isoCode": "95",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Val-de-Marne",
+      "isoCode": "94",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Var",
+      "isoCode": "83",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vaucluse",
+      "isoCode": "84",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vendée",
+      "isoCode": "85",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vienne",
+      "isoCode": "86",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vosges",
+      "isoCode": "88",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Wallis and Futuna",
+      "isoCode": "WF",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Yonne",
+      "isoCode": "89",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Yvelines",
+      "isoCode": "78",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Île-de-France",
+      "isoCode": "IDF",
+      "timezones": [
+        {
+          "name": "Europe/Paris",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

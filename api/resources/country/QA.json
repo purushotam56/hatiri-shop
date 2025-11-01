@@ -1,0 +1,119 @@
+{
+  "name": "Qatar",
+  "isoCode": "QA",
+  "timezones": [
+    {
+      "name": "Asia/Qatar",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Al Daayen",
+      "isoCode": "ZA",
+      "timezones": [
+        {
+          "name": "Asia/Qatar",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Khor",
+      "isoCode": "KH",
+      "timezones": [
+        {
+          "name": "Asia/Qatar",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Rayyan Municipality",
+      "isoCode": "RA",
+      "timezones": [
+        {
+          "name": "Asia/Qatar",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Wakrah",
+      "isoCode": "WA",
+      "timezones": [
+        {
+          "name": "Asia/Qatar",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al-Shahaniya",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Asia/Qatar",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Doha",
+      "isoCode": "DA",
+      "timezones": [
+        {
+          "name": "Asia/Qatar",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Madinat ash Shamal",
+      "isoCode": "MS",
+      "timezones": [
+        {
+          "name": "Asia/Qatar",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Umm Salal Municipality",
+      "isoCode": "US",
+      "timezones": [
+        {
+          "name": "Asia/Qatar",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

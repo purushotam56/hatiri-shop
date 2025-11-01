@@ -1,0 +1,21 @@
+{
+  "name": "Curaçao",
+  "isoCode": "CW",
+  "timezones": [
+    {
+      "name": "America/Curacao",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    },
+    {
+      "name": "America/Puerto_Rico",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

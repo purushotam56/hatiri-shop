@@ -1,0 +1,992 @@
+{
+  "name": "Kazakhstan",
+  "isoCode": "KZ",
+  "timezones": [
+    {
+      "name": "Asia/Almaty",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Aqtau",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Aqtobe",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Atyrau",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Oral",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Qostanay",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Qyzylorda",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Akmola Region",
+      "isoCode": "AKM",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aktobe Region",
+      "isoCode": "AKT",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Almaty",
+      "isoCode": "ALA",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Almaty Region",
+      "isoCode": "ALM",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Atyrau Region",
+      "isoCode": "ATY",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Baikonur",
+      "isoCode": "BAY",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "East Kazakhstan Region",
+      "isoCode": "VOS",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jambyl Region",
+      "isoCode": "ZHA",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karaganda Region",
+      "isoCode": "KAR",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kostanay Region",
+      "isoCode": "KUS",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kyzylorda Region",
+      "isoCode": "KZY",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mangystau Region",
+      "isoCode": "MAN",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Kazakhstan Region",
+      "isoCode": "SEV",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nur-Sultan",
+      "isoCode": "AST",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pavlodar Region",
+      "isoCode": "PAV",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Turkestan Region",
+      "isoCode": "YUZ",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "West Kazakhstan Province",
+      "isoCode": "ZAP",
+      "timezones": [
+        {
+          "name": "Asia/Almaty",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Aqtobe",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Atyrau",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Oral",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qostanay",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Qyzylorda",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,920 @@
+{
+  "name": "Democratic Republic of the Congo",
+  "isoCode": "CD",
+  "timezones": [
+    {
+      "name": "Africa/Kinshasa",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Lagos",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Lubumbashi",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Maputo",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bas-Uélé",
+      "isoCode": "BU",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Haut-Katanga",
+      "isoCode": "HK",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Haut-Lomami",
+      "isoCode": "HL",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Haut-Uélé",
+      "isoCode": "HU",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ituri",
+      "isoCode": "IT",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kasaï",
+      "isoCode": "KS",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kasaï Central",
+      "isoCode": "KC",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kasaï Oriental",
+      "isoCode": "KE",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kinshasa",
+      "isoCode": "KN",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kongo Central",
+      "isoCode": "BC",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kwango",
+      "isoCode": "KG",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kwilu",
+      "isoCode": "KL",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lomami",
+      "isoCode": "LO",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lualaba",
+      "isoCode": "LU",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mai-Ndombe",
+      "isoCode": "MN",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maniema",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mongala",
+      "isoCode": "MO",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nord-Kivu",
+      "isoCode": "NK",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nord-Ubangi",
+      "isoCode": "NU",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sankuru",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sud-Kivu",
+      "isoCode": "SK",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sud-Ubangi",
+      "isoCode": "SU",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tanganyika",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tshopo",
+      "isoCode": "TO",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tshuapa",
+      "isoCode": "TU",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Équateur",
+      "isoCode": "EQ",
+      "timezones": [
+        {
+          "name": "Africa/Kinshasa",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lagos",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Lubumbashi",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Cook Islands",
+  "isoCode": "CK",
+  "timezones": [
+    {
+      "name": "Pacific/Rarotonga",
+      "utcOffset": "-10:00",
+      "offsetMinutes": -600,
+      "abbreviation": "-10",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

@@ -1,0 +1,402 @@
+{
+  "name": "Laos",
+  "isoCode": "LA",
+  "timezones": [
+    {
+      "name": "Asia/Bangkok",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "+07",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Vientiane",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "+07",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Attapeu Province",
+      "isoCode": "AT",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bokeo Province",
+      "isoCode": "BK",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bolikhamsai Province",
+      "isoCode": "BL",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Champasak Province",
+      "isoCode": "CH",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Houaphanh Province",
+      "isoCode": "HO",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khammouane Province",
+      "isoCode": "KH",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Luang Namtha Province",
+      "isoCode": "LM",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Luang Prabang Province",
+      "isoCode": "LP",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oudomxay Province",
+      "isoCode": "OU",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phongsaly Province",
+      "isoCode": "PH",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sainyabuli Province",
+      "isoCode": "XA",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Salavan Province",
+      "isoCode": "SL",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Savannakhet Province",
+      "isoCode": "SV",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sekong Province",
+      "isoCode": "XE",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vientiane Prefecture",
+      "isoCode": "VT",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vientiane Province",
+      "isoCode": "VI",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Xaisomboun",
+      "isoCode": "XN",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Xaisomboun Province",
+      "isoCode": "XS",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Xiangkhouang Province",
+      "isoCode": "XI",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Vientiane",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

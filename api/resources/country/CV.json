@@ -1,0 +1,314 @@
+{
+  "name": "Cape Verde",
+  "isoCode": "CV",
+  "timezones": [
+    {
+      "name": "Atlantic/Cape_Verde",
+      "utcOffset": "-01:00",
+      "offsetMinutes": -60,
+      "abbreviation": "-01",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Barlavento Islands",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Boa Vista",
+      "isoCode": "BV",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Brava",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maio Municipality",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mosteiros",
+      "isoCode": "MO",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Paul",
+      "isoCode": "PA",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Porto Novo",
+      "isoCode": "PN",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Praia",
+      "isoCode": "PR",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ribeira Brava Municipality",
+      "isoCode": "RB",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ribeira Grande",
+      "isoCode": "RG",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ribeira Grande de Santiago",
+      "isoCode": "RS",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sal",
+      "isoCode": "SL",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Catarina",
+      "isoCode": "CA",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Catarina do Fogo",
+      "isoCode": "CF",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Cruz",
+      "isoCode": "CR",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sotavento Islands",
+      "isoCode": "S",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "São Domingos",
+      "isoCode": "SD",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "São Filipe",
+      "isoCode": "SF",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "São Lourenço dos Órgãos",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "São Miguel",
+      "isoCode": "SM",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "São Vicente",
+      "isoCode": "SV",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tarrafal",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tarrafal de São Nicolau",
+      "isoCode": "TS",
+      "timezones": [
+        {
+          "name": "Atlantic/Cape_Verde",
+          "utcOffset": "-01:00",
+          "offsetMinutes": -60,
+          "abbreviation": "-01",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

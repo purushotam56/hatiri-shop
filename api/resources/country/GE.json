@@ -1,0 +1,197 @@
+{
+  "name": "Georgia",
+  "isoCode": "GE",
+  "timezones": [
+    {
+      "name": "Asia/Tbilisi",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Adjara",
+      "isoCode": "AJ",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Autonomous Republic of Abkhazia",
+      "isoCode": "AB",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guria",
+      "isoCode": "GU",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Imereti",
+      "isoCode": "IM",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kakheti",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khelvachauri Municipality",
+      "isoCode": "29",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kvemo Kartli",
+      "isoCode": "KK",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mtskheta-Mtianeti",
+      "isoCode": "MM",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Racha-Lechkhumi and Kvemo Svaneti",
+      "isoCode": "RL",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samegrelo-Zemo Svaneti",
+      "isoCode": "SZ",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samtskhe-Javakheti",
+      "isoCode": "SJ",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Senaki Municipality",
+      "isoCode": "50",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shida Kartli",
+      "isoCode": "SK",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tbilisi",
+      "isoCode": "TB",
+      "timezones": [
+        {
+          "name": "Asia/Tbilisi",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

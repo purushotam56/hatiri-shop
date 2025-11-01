@@ -1,0 +1,1185 @@
+{
+  "name": "Czech Republic",
+  "isoCode": "CZ",
+  "timezones": [
+    {
+      "name": "Europe/Prague",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Benešov",
+      "isoCode": "201",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Beroun",
+      "isoCode": "202",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Blansko",
+      "isoCode": "641",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Brno-město",
+      "isoCode": "642",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Brno-venkov",
+      "isoCode": "643",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bruntál",
+      "isoCode": "801",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Břeclav",
+      "isoCode": "644",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cheb",
+      "isoCode": "411",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Chomutov",
+      "isoCode": "422",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Chrudim",
+      "isoCode": "531",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Domažlice",
+      "isoCode": "321",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Děčín",
+      "isoCode": "421",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Frýdek-Místek",
+      "isoCode": "802",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Havlíčkův Brod",
+      "isoCode": "631",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hodonín",
+      "isoCode": "645",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hradec Králové",
+      "isoCode": "521",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jablonec nad Nisou",
+      "isoCode": "512",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jeseník",
+      "isoCode": "711",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jihlava",
+      "isoCode": "632",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jihomoravský kraj",
+      "isoCode": "64",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jihočeský kraj",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jindřichův Hradec",
+      "isoCode": "313",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jičín",
+      "isoCode": "522",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Karlovarský kraj",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Karlovy Vary",
+      "isoCode": "412",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Karviná",
+      "isoCode": "803",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kladno",
+      "isoCode": "203",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Klatovy",
+      "isoCode": "322",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kolín",
+      "isoCode": "204",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kraj Vysočina",
+      "isoCode": "63",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kroměříž",
+      "isoCode": "721",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Královéhradecký kraj",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kutná Hora",
+      "isoCode": "205",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Liberec",
+      "isoCode": "513",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Liberecký kraj",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Litoměřice",
+      "isoCode": "423",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Louny",
+      "isoCode": "424",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mladá Boleslav",
+      "isoCode": "207",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Moravskoslezský kraj",
+      "isoCode": "80",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Most",
+      "isoCode": "425",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mělník",
+      "isoCode": "206",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nový Jičín",
+      "isoCode": "804",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nymburk",
+      "isoCode": "208",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Náchod",
+      "isoCode": "523",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Olomouc",
+      "isoCode": "712",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Olomoucký kraj",
+      "isoCode": "71",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Opava",
+      "isoCode": "805",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ostrava-město",
+      "isoCode": "806",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pardubice",
+      "isoCode": "532",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pardubický kraj",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pelhřimov",
+      "isoCode": "633",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Plzeň-jih",
+      "isoCode": "324",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Plzeň-město",
+      "isoCode": "323",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Plzeň-sever",
+      "isoCode": "325",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Plzeňský kraj",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Prachatice",
+      "isoCode": "315",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Praha, Hlavní město",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Praha-východ",
+      "isoCode": "209",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Praha-západ",
+      "isoCode": "20A",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Prostějov",
+      "isoCode": "713",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Písek",
+      "isoCode": "314",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Přerov",
+      "isoCode": "714",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Příbram",
+      "isoCode": "20B",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rakovník",
+      "isoCode": "20C",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rokycany",
+      "isoCode": "326",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rychnov nad Kněžnou",
+      "isoCode": "524",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Semily",
+      "isoCode": "514",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sokolov",
+      "isoCode": "413",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Strakonice",
+      "isoCode": "316",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Středočeský kraj",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Svitavy",
+      "isoCode": "533",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tachov",
+      "isoCode": "327",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Teplice",
+      "isoCode": "426",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Trutnov",
+      "isoCode": "525",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tábor",
+      "isoCode": "317",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Třebíč",
+      "isoCode": "634",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Uherské Hradiště",
+      "isoCode": "722",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vsetín",
+      "isoCode": "723",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vyškov",
+      "isoCode": "646",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zlín",
+      "isoCode": "724",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zlínský kraj",
+      "isoCode": "72",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Znojmo",
+      "isoCode": "647",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ústecký kraj",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ústí nad Labem",
+      "isoCode": "427",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ústí nad Orlicí",
+      "isoCode": "534",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Česká Lípa",
+      "isoCode": "511",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "České Budějovice",
+      "isoCode": "311",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Český Krumlov",
+      "isoCode": "312",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Šumperk",
+      "isoCode": "715",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Žďár nad Sázavou",
+      "isoCode": "635",
+      "timezones": [
+        {
+          "name": "Europe/Prague",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Reunion",
+  "isoCode": "RE",
+  "timezones": [
+    {
+      "name": "Asia/Dubai",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    },
+    {
+      "name": "Indian/Reunion",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

@@ -1,0 +1,288 @@
+{
+  "name": "Finland",
+  "isoCode": "FI",
+  "timezones": [
+    {
+      "name": "Europe/Helsinki",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Central Finland",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Central Ostrobothnia",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Eastern Finland Province",
+      "isoCode": "IS",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Finland Proper",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kainuu",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kymenlaakso",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lapland",
+      "isoCode": "LL",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "North Karelia",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Northern Ostrobothnia",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Northern Savonia",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ostrobothnia",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Oulu Province",
+      "isoCode": "OL",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pirkanmaa",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Päijänne Tavastia",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Satakunta",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Karelia",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Southern Ostrobothnia",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Southern Savonia",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tavastia Proper",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Uusimaa",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Åland Islands",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Europe/Helsinki",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

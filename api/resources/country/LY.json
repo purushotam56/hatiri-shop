@@ -1,0 +1,288 @@
+{
+  "name": "Libya",
+  "isoCode": "LY",
+  "timezones": [
+    {
+      "name": "Africa/Tripoli",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "EET",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Al Wahat District",
+      "isoCode": "WA",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Benghazi",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Derna District",
+      "isoCode": "DR",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ghat District",
+      "isoCode": "GT",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jabal al Akhdar",
+      "isoCode": "JA",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jabal al Gharbi District",
+      "isoCode": "JG",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jafara",
+      "isoCode": "JI",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jufra",
+      "isoCode": "JU",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kufra District",
+      "isoCode": "KF",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Marj District",
+      "isoCode": "MJ",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Misrata District",
+      "isoCode": "MI",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Murqub",
+      "isoCode": "MB",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Murzuq District",
+      "isoCode": "MQ",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nalut District",
+      "isoCode": "NL",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nuqat al Khams",
+      "isoCode": "NQ",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sabha District",
+      "isoCode": "SB",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sirte District",
+      "isoCode": "SR",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tripoli District",
+      "isoCode": "TB",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wadi al Hayaa District",
+      "isoCode": "WD",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wadi al Shatii District",
+      "isoCode": "WS",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zawiya District",
+      "isoCode": "ZA",
+      "timezones": [
+        {
+          "name": "Africa/Tripoli",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "EET",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

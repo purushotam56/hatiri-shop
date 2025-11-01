@@ -1,0 +1,42 @@
+{
+  "name": "Kosovo",
+  "isoCode": "XK",
+  "timezones": [],
+  "states": [
+    {
+      "name": "Gjilan District",
+      "isoCode": "XGJ",
+      "timezones": []
+    },
+    {
+      "name": "Kosovska Mitrovica District",
+      "isoCode": "XKM",
+      "timezones": []
+    },
+    {
+      "name": "Peć District",
+      "isoCode": "XPE",
+      "timezones": []
+    },
+    {
+      "name": "Pristina (Priştine)",
+      "isoCode": "XPI",
+      "timezones": []
+    },
+    {
+      "name": "Prizren District",
+      "isoCode": "XPR",
+      "timezones": []
+    },
+    {
+      "name": "Uroševac District (Ferizaj)",
+      "isoCode": "XUF",
+      "timezones": []
+    },
+    {
+      "name": "Đakovica District (Gjakove)",
+      "isoCode": "XDG",
+      "timezones": []
+    }
+  ]
+}

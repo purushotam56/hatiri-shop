@@ -1,0 +1,1276 @@
+{
+  "name": "Philippines",
+  "isoCode": "PH",
+  "timezones": [
+    {
+      "name": "Asia/Manila",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "PST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Abra",
+      "isoCode": "ABR",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Agusan del Norte",
+      "isoCode": "AGN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Agusan del Sur",
+      "isoCode": "AGS",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aklan",
+      "isoCode": "AKL",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Albay",
+      "isoCode": "ALB",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Antique",
+      "isoCode": "ANT",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Apayao",
+      "isoCode": "APA",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aurora",
+      "isoCode": "AUR",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Autonomous Region in Muslim Mindanao",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Basilan",
+      "isoCode": "BAS",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bataan",
+      "isoCode": "BAN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Batanes",
+      "isoCode": "BTN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Batangas",
+      "isoCode": "BTG",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Benguet",
+      "isoCode": "BEN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bicol Region",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Biliran",
+      "isoCode": "BIL",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bohol",
+      "isoCode": "BOH",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bukidnon",
+      "isoCode": "BUK",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bulacan",
+      "isoCode": "BUL",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cagayan",
+      "isoCode": "CAG",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cagayan Valley",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Calabarzon",
+      "isoCode": "40",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Camarines Norte",
+      "isoCode": "CAN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Camarines Sur",
+      "isoCode": "CAS",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Camiguin",
+      "isoCode": "CAM",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Capiz",
+      "isoCode": "CAP",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Caraga",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Catanduanes",
+      "isoCode": "CAT",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cavite",
+      "isoCode": "CAV",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cebu",
+      "isoCode": "CEB",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central Luzon",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central Visayas",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Compostela Valley",
+      "isoCode": "COM",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cordillera Administrative Region",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cotabato",
+      "isoCode": "NCO",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Davao Occidental",
+      "isoCode": "DVO",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Davao Oriental",
+      "isoCode": "DAO",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Davao Region",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Davao del Norte",
+      "isoCode": "DAV",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Davao del Sur",
+      "isoCode": "DAS",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dinagat Islands",
+      "isoCode": "DIN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eastern Samar",
+      "isoCode": "EAS",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eastern Visayas",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guimaras",
+      "isoCode": "GUI",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ifugao",
+      "isoCode": "IFU",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ilocos Norte",
+      "isoCode": "ILN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ilocos Region",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ilocos Sur",
+      "isoCode": "ILS",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Iloilo",
+      "isoCode": "ILI",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Isabela",
+      "isoCode": "ISA",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kalinga",
+      "isoCode": "KAL",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Union",
+      "isoCode": "LUN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Laguna",
+      "isoCode": "LAG",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lanao del Norte",
+      "isoCode": "LAN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lanao del Sur",
+      "isoCode": "LAS",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Leyte",
+      "isoCode": "LEY",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maguindanao",
+      "isoCode": "MAG",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Marinduque",
+      "isoCode": "MAD",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Masbate",
+      "isoCode": "MAS",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Metro Manila",
+      "isoCode": "NCR",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mimaropa",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Misamis Occidental",
+      "isoCode": "MSC",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Misamis Oriental",
+      "isoCode": "MSR",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mountain Province",
+      "isoCode": "MOU",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Negros Occidental",
+      "isoCode": "NEC",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Negros Oriental",
+      "isoCode": "NER",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern Mindanao",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern Samar",
+      "isoCode": "NSA",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nueva Ecija",
+      "isoCode": "NUE",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nueva Vizcaya",
+      "isoCode": "NUV",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Occidental Mindoro",
+      "isoCode": "MDC",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oriental Mindoro",
+      "isoCode": "MDR",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Palawan",
+      "isoCode": "PLW",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pampanga",
+      "isoCode": "PAM",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pangasinan",
+      "isoCode": "PAN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Quezon",
+      "isoCode": "QUE",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Quirino",
+      "isoCode": "QUI",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rizal",
+      "isoCode": "RIZ",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Romblon",
+      "isoCode": "ROM",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sarangani",
+      "isoCode": "SAR",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Siquijor",
+      "isoCode": "SIG",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Soccsksargen",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sorsogon",
+      "isoCode": "SOR",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South Cotabato",
+      "isoCode": "SCO",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Southern Leyte",
+      "isoCode": "SLE",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sultan Kudarat",
+      "isoCode": "SUK",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sulu",
+      "isoCode": "SLU",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Surigao del Norte",
+      "isoCode": "SUN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Surigao del Sur",
+      "isoCode": "SUR",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tarlac",
+      "isoCode": "TAR",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tawi-Tawi",
+      "isoCode": "TAW",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Visayas",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zambales",
+      "isoCode": "ZMB",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zamboanga Peninsula",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zamboanga Sibugay",
+      "isoCode": "ZSI",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zamboanga del Norte",
+      "isoCode": "ZAN",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zamboanga del Sur",
+      "isoCode": "ZAS",
+      "timezones": [
+        {
+          "name": "Asia/Manila",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "PST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

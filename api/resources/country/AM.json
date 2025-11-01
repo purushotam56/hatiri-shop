@@ -1,0 +1,158 @@
+{
+  "name": "Armenia",
+  "isoCode": "AM",
+  "timezones": [
+    {
+      "name": "Asia/Yerevan",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Aragatsotn Region",
+      "isoCode": "AG",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ararat Province",
+      "isoCode": "AR",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Armavir Region",
+      "isoCode": "AV",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gegharkunik Province",
+      "isoCode": "GR",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kotayk Region",
+      "isoCode": "KT",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lori Region",
+      "isoCode": "LO",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shirak Region",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Syunik Province",
+      "isoCode": "SU",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tavush Region",
+      "isoCode": "TV",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vayots Dzor Region",
+      "isoCode": "VD",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yerevan",
+      "isoCode": "ER",
+      "timezones": [
+        {
+          "name": "Asia/Yerevan",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

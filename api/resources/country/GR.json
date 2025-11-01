@@ -1,0 +1,509 @@
+{
+  "name": "Greece",
+  "isoCode": "GR",
+  "timezones": [
+    {
+      "name": "Europe/Athens",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Achaea Regional Unit",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aetolia-Acarnania Regional Unit",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Arcadia Prefecture",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Argolis Regional Unit",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Attica Region",
+      "isoCode": "I",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Boeotia Regional Unit",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Central Greece Region",
+      "isoCode": "H",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Central Macedonia",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Chania Regional Unit",
+      "isoCode": "94",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Corfu Prefecture",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Corinthia Regional Unit",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Crete Region",
+      "isoCode": "M",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Drama Regional Unit",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "East Attica Regional Unit",
+      "isoCode": "A2",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "East Macedonia and Thrace",
+      "isoCode": "A",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Epirus Region",
+      "isoCode": "D",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Euboea",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Grevena Prefecture",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Imathia Regional Unit",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ioannina Regional Unit",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ionian Islands Region",
+      "isoCode": "F",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Karditsa Regional Unit",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kastoria Regional Unit",
+      "isoCode": "56",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kefalonia Prefecture",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kilkis Regional Unit",
+      "isoCode": "57",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kozani Prefecture",
+      "isoCode": "58",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Laconia",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Larissa Prefecture",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lefkada Regional Unit",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pella Regional Unit",
+      "isoCode": "59",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Peloponnese Region",
+      "isoCode": "J",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Phthiotis Prefecture",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Preveza Prefecture",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Serres Prefecture",
+      "isoCode": "62",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "South Aegean",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Thessaloniki Regional Unit",
+      "isoCode": "54",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Greece Region",
+      "isoCode": "G",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "West Macedonia Region",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "Europe/Athens",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

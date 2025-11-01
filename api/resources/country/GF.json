@@ -1,0 +1,14 @@
+{
+  "name": "French Guiana",
+  "isoCode": "GF",
+  "timezones": [
+    {
+      "name": "America/Cayenne",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

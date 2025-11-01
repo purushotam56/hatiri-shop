@@ -1,0 +1,282 @@
+{
+  "name": "Oman",
+  "isoCode": "OM",
+  "timezones": [
+    {
+      "name": "Asia/Dubai",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Muscat",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Ad Dakhiliyah Governorate",
+      "isoCode": "DA",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ad Dhahirah Governorate",
+      "isoCode": "ZA",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Batinah North Governorate",
+      "isoCode": "BS",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Batinah Region",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Batinah South Governorate",
+      "isoCode": "BJ",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Buraimi Governorate",
+      "isoCode": "BU",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Wusta Governorate",
+      "isoCode": "WU",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ash Sharqiyah North Governorate",
+      "isoCode": "SS",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ash Sharqiyah Region",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ash Sharqiyah South Governorate",
+      "isoCode": "SJ",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dhofar Governorate",
+      "isoCode": "ZU",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Musandam Governorate",
+      "isoCode": "MU",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Muscat Governorate",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Muscat",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

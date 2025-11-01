@@ -1,0 +1,561 @@
+{
+  "name": "Romania",
+  "isoCode": "RO",
+  "timezones": [
+    {
+      "name": "Europe/Bucharest",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Alba",
+      "isoCode": "AB",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Arad County",
+      "isoCode": "AR",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Arges",
+      "isoCode": "AG",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bacău County",
+      "isoCode": "BC",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bihor County",
+      "isoCode": "BH",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bistrița-Năsăud County",
+      "isoCode": "BN",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Botoșani County",
+      "isoCode": "BT",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Braila",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Brașov County",
+      "isoCode": "BV",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bucharest",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Buzău County",
+      "isoCode": "BZ",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Caraș-Severin County",
+      "isoCode": "CS",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cluj County",
+      "isoCode": "CJ",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Constanța County",
+      "isoCode": "CT",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Covasna County",
+      "isoCode": "CV",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Călărași County",
+      "isoCode": "CL",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dolj County",
+      "isoCode": "DJ",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dâmbovița County",
+      "isoCode": "DB",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Galați County",
+      "isoCode": "GL",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Giurgiu County",
+      "isoCode": "GR",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gorj County",
+      "isoCode": "GJ",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Harghita County",
+      "isoCode": "HR",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hunedoara County",
+      "isoCode": "HD",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ialomița County",
+      "isoCode": "IL",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Iași County",
+      "isoCode": "IS",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ilfov County",
+      "isoCode": "IF",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Maramureș County",
+      "isoCode": "MM",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mehedinți County",
+      "isoCode": "MH",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mureș County",
+      "isoCode": "MS",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Neamț County",
+      "isoCode": "NT",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Olt County",
+      "isoCode": "OT",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Prahova County",
+      "isoCode": "PH",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Satu Mare County",
+      "isoCode": "SM",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sibiu County",
+      "isoCode": "SB",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Suceava County",
+      "isoCode": "SV",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sălaj County",
+      "isoCode": "SJ",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Teleorman County",
+      "isoCode": "TR",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Timiș County",
+      "isoCode": "TM",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tulcea County",
+      "isoCode": "TL",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vaslui County",
+      "isoCode": "VS",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vrancea County",
+      "isoCode": "VN",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vâlcea County",
+      "isoCode": "VL",
+      "timezones": [
+        {
+          "name": "Europe/Bucharest",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

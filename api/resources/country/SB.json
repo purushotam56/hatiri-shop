@@ -1,0 +1,145 @@
+{
+  "name": "Solomon Islands",
+  "isoCode": "SB",
+  "timezones": [
+    {
+      "name": "Pacific/Guadalcanal",
+      "utcOffset": "+11:00",
+      "offsetMinutes": 660,
+      "abbreviation": "+11",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Central Province",
+      "isoCode": "CE",
+      "timezones": [
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Choiseul Province",
+      "isoCode": "CH",
+      "timezones": [
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guadalcanal Province",
+      "isoCode": "GU",
+      "timezones": [
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Honiara",
+      "isoCode": "CT",
+      "timezones": [
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Isabel Province",
+      "isoCode": "IS",
+      "timezones": [
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Makira-Ulawa Province",
+      "isoCode": "MK",
+      "timezones": [
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Malaita Province",
+      "isoCode": "ML",
+      "timezones": [
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rennell and Bellona Province",
+      "isoCode": "RB",
+      "timezones": [
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Temotu Province",
+      "isoCode": "TE",
+      "timezones": [
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Province",
+      "isoCode": "WE",
+      "timezones": [
+        {
+          "name": "Pacific/Guadalcanal",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

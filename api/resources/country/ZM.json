@@ -1,0 +1,222 @@
+{
+  "name": "Zambia",
+  "isoCode": "ZM",
+  "timezones": [
+    {
+      "name": "Africa/Lusaka",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    },
+    {
+      "name": "Africa/Maputo",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CAT",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Central Province",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Africa/Lusaka",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Copperbelt Province",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Africa/Lusaka",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eastern Province",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Africa/Lusaka",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Luapula Province",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Africa/Lusaka",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lusaka Province",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Africa/Lusaka",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Muchinga Province",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Africa/Lusaka",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern Province",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Africa/Lusaka",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northwestern Province",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Africa/Lusaka",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Southern Province",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Africa/Lusaka",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Province",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Africa/Lusaka",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        },
+        {
+          "name": "Africa/Maputo",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CAT",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "name": "Cyprus",
+  "isoCode": "CY",
+  "timezones": [
+    {
+      "name": "Asia/Famagusta",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    },
+    {
+      "name": "Asia/Nicosia",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Famagusta District (Mağusa)",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Asia/Famagusta",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Asia/Nicosia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kyrenia District (Keryneia)",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Asia/Famagusta",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Asia/Nicosia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Larnaca District (Larnaka)",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Asia/Famagusta",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Asia/Nicosia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Limassol District (Leymasun)",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Asia/Famagusta",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Asia/Nicosia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nicosia District (Lefkoşa)",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Asia/Famagusta",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Asia/Nicosia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Paphos District (Pafos)",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Asia/Famagusta",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        },
+        {
+          "name": "Asia/Nicosia",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

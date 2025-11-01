@@ -1,0 +1,128 @@
+import { DateTime } from 'luxon'
+import { BaseModel, belongsTo, column, computed, manyToMany } from '@adonisjs/lucid/orm'
+import { branchBasementList, BranchMaintenanceServiceType, BranchType } from '#types/branch'
+import type { BelongsTo, ManyToMany } from '@adonisjs/lucid/types/relations'
+import User from './user.js'
+import Upload from './upload.js'
+import { PROJECT_DOCUMENTS } from '#database/constants/table_names'
+import { RoleKeys } from '#types/role'
+import Organisation from './organisation.js'
+export default class Branch extends BaseModel {
+  @column({ isPrimary: true })
+  declare id: number
+
+  @column()
+  declare organisationId: number
+
+  @belongsTo(() => Organisation)
+  declare organisation: BelongsTo<typeof Organisation>
+
+  @manyToMany(() => User, {
+    pivotColumns: ['is_admin', 'role_id'],
+  })
+  declare user: ManyToMany<typeof User>
+
+  @column()
+  declare name: string
+
+  @column()
+  declare type: BranchType
+
+  @column()
+  declare maintenanceServiceType: BranchMaintenanceServiceType
+
+  @column()
+  declare numBasementLevels: number
+
+  @column()
+  declare address: string
+
+  @column()
+  declare blockBuildingNo: string
+
+  @column()
+  declare strataPlanNo: string
+
+  @column()
+  declare imageId: number
+
+  @belongsTo(() => Upload, {
+    foreignKey: 'imageId',
+  })
+  declare image: BelongsTo<typeof Upload>
+
+  @manyToMany(() => Upload, {
+    pivotTable: PROJECT_DOCUMENTS,
+  })
+  declare legacyDocuments: ManyToMany<typeof Upload>
+
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime
+
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  declare updatedAt: DateTime
+
+  @computed()
+  public get basementList() {
+    if (this.numBasementLevels < 1) {
+      return []
+    }
+    return branchBasementList(this.numBasementLevels)
+  }
+
+  @computed()
+  public get [RoleKeys.branch_admin]() {
+    if (this.user && this.user.length > 0) {
+      return this.user.filter((usr) =>
+        usr.branch_role?.some((pr) => pr.roleKey === RoleKeys.branch_admin)
+      )
+    }
+    return undefined
+  }
+
+  @computed()
+  public get [RoleKeys.branch_auditor]() {
+    if (this.user && this.user.length > 0) {
+      const chrisUser = this.user.filter(
+        (usr) => usr.email.toLowerCase() === 'chris.hua@ababuilders.com.au'
+      )
+      if (chrisUser.length > 0) {
+        return chrisUser
+      }
+      return this.user.filter((usr) =>
+        usr.branch_role?.some((pr) => pr.roleKey === RoleKeys.branch_auditor)
+      )
+    }
+    return undefined
+  }
+
+  @computed()
+  public get [RoleKeys.branch_sub_contractor]() {
+    if (this.user && this.user.length > 0) {
+      return this.user.filter((usr) =>
+        usr.branch_role?.some((pr) => pr.roleKey === RoleKeys.branch_sub_contractor)
+      )
+    }
+    return undefined
+  }
+
+  @computed()
+  public get [RoleKeys.branch_strata]() {
+    if (this.user && this.user.length > 0) {
+      return this.user.filter((usr) =>
+        usr.branch_role?.some((pr) => pr.roleKey === RoleKeys.branch_strata)
+      )
+    }
+    return undefined
+  }
+
+  @computed()
+  public get [RoleKeys.branch_sales_agent]() {
+    if (this.user && this.user.length > 0) {
+      return this.user.filter((usr) =>
+        usr.branch_role?.some((pr) => pr.roleKey === RoleKeys.branch_sales_agent)
+      )
+    }
+    return undefined
+  }
+}

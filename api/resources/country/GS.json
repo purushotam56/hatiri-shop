@@ -1,0 +1,14 @@
+{
+  "name": "South Georgia",
+  "isoCode": "GS",
+  "timezones": [
+    {
+      "name": "Atlantic/South_Georgia",
+      "utcOffset": "-02:00",
+      "offsetMinutes": -120,
+      "abbreviation": "-02",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

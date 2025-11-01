@@ -1,0 +1,249 @@
+{
+  "name": "Honduras",
+  "isoCode": "HN",
+  "timezones": [
+    {
+      "name": "America/Tegucigalpa",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Atlántida Department",
+      "isoCode": "AT",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bay Islands Department",
+      "isoCode": "IB",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Choluteca Department",
+      "isoCode": "CH",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Colón Department",
+      "isoCode": "CL",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Comayagua Department",
+      "isoCode": "CM",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Copán Department",
+      "isoCode": "CP",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cortés Department",
+      "isoCode": "CR",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "El Paraíso Department",
+      "isoCode": "EP",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Francisco Morazán Department",
+      "isoCode": "FM",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gracias a Dios Department",
+      "isoCode": "GD",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Intibucá Department",
+      "isoCode": "IN",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Paz Department",
+      "isoCode": "LP",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lempira Department",
+      "isoCode": "LE",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ocotepeque Department",
+      "isoCode": "OC",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Olancho Department",
+      "isoCode": "OL",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Bárbara Department",
+      "isoCode": "SB",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Valle Department",
+      "isoCode": "VA",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yoro Department",
+      "isoCode": "YO",
+      "timezones": [
+        {
+          "name": "America/Tegucigalpa",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      You're Invited
+    </title>
+  </head>
+
+  <body style="font-family: Arial, sans-serif; background-color: #f1f5f9; padding: 30px;">
+    <div
+      style="max-width: 600px; margin: auto; background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05);"
+    >
+      <div style="text-align: center;">
+        <img src="{{ logoUrl }}" alt="Proprly Logo" style="height: 40px; margin-bottom: 20px;" />
+      </div>
+
+      <h2 style="color: #1e293b;">
+        Hello {{ name }},
+      </h2>
+      <p style="color: #334155;">
+        You have been invited to join
+        @if(invitationType === 'Branch')
+          📋 <strong>{{ branchName }}</strong>
+        @elseif(invitationType === 'Organisation')
+          🏢 <strong>{{ organisationName }}</strong>
+        @elseif(invitationType === 'Property')
+          🏠 <strong>{{ unitNo }}</strong>
+        @elseif(invitationType === 'User')
+          👤 <strong>{{ name }}</strong>
+        @endif
+        as a <strong>{{ role }}</strong>.
+      </p>
+
+      @if(tradeCodes?.length)
+        <p style="color: #334155;">
+          🔧 Assigned Trade Code(s):
+            <strong>
+            {{ tradeCodes.map((code) => code.name).join(', ') }}
+            </strong>
+        </p>
+      @endif
+      
+      <p style="color: #334155;">
+        Invited by: <strong>{{ invitedBy }}</strong>
+      </p>
+
+      <div style="margin-top: 30px; text-align: center;">
+        <a
+          href="{{ acceptLink }}"
+          style="display: inline-block; background-color: #10b981; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 10px;"
+          target="_blank"
+        >
+          ✅ Accept Invitation
+            </a>
+
+        <a
+          href="{{ declineLink }}"
+          style="display: inline-block; background-color: #ef4444; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: bold;"
+          target="_blank"
+        >
+          ❌ Decline Invitation
+            </a>
+      </div>
+
+      <p style="margin-top: 40px; color: #94a3b8; font-size: 12px; text-align: center;">
+        If you did not expect this invitation, you can safely ignore this email.
+      </p>
+    </div>
+  </body>
+
+</html>

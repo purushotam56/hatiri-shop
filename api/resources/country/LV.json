@@ -1,0 +1,1549 @@
+{
+  "name": "Latvia",
+  "isoCode": "LV",
+  "timezones": [
+    {
+      "name": "Europe/Riga",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Aglona Municipality",
+      "isoCode": "001",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aizkraukle Municipality",
+      "isoCode": "002",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aizpute Municipality",
+      "isoCode": "003",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aknīste Municipality",
+      "isoCode": "004",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aloja Municipality",
+      "isoCode": "005",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Alsunga Municipality",
+      "isoCode": "006",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Alūksne Municipality",
+      "isoCode": "007",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Amata Municipality",
+      "isoCode": "008",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ape Municipality",
+      "isoCode": "009",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Auce Municipality",
+      "isoCode": "010",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Babīte Municipality",
+      "isoCode": "012",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Baldone Municipality",
+      "isoCode": "013",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Baltinava Municipality",
+      "isoCode": "014",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Balvi Municipality",
+      "isoCode": "015",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bauska Municipality",
+      "isoCode": "016",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Beverīna Municipality",
+      "isoCode": "017",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Brocēni Municipality",
+      "isoCode": "018",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Burtnieki Municipality",
+      "isoCode": "019",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Carnikava Municipality",
+      "isoCode": "020",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cesvaine Municipality",
+      "isoCode": "021",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cibla Municipality",
+      "isoCode": "023",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cēsis Municipality",
+      "isoCode": "022",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dagda Municipality",
+      "isoCode": "024",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Daugavpils",
+      "isoCode": "DGV",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Daugavpils Municipality",
+      "isoCode": "025",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dobele Municipality",
+      "isoCode": "026",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dundaga Municipality",
+      "isoCode": "027",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Durbe Municipality",
+      "isoCode": "028",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Engure Municipality",
+      "isoCode": "029",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Garkalne Municipality",
+      "isoCode": "031",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Grobiņa Municipality",
+      "isoCode": "032",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gulbene Municipality",
+      "isoCode": "033",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Iecava Municipality",
+      "isoCode": "034",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ikšķile Municipality",
+      "isoCode": "035",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ilūkste Municipality",
+      "isoCode": "036",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Inčukalns Municipality",
+      "isoCode": "037",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jaunjelgava Municipality",
+      "isoCode": "038",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jaunpiebalga Municipality",
+      "isoCode": "039",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jaunpils Municipality",
+      "isoCode": "040",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jelgava",
+      "isoCode": "JEL",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jelgava Municipality",
+      "isoCode": "041",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jēkabpils",
+      "isoCode": "JKB",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jēkabpils Municipality",
+      "isoCode": "042",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jūrmala",
+      "isoCode": "JUR",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kandava Municipality",
+      "isoCode": "043",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kocēni Municipality",
+      "isoCode": "045",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Koknese Municipality",
+      "isoCode": "046",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Krimulda Municipality",
+      "isoCode": "048",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Krustpils Municipality",
+      "isoCode": "049",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Krāslava Municipality",
+      "isoCode": "047",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kuldīga Municipality",
+      "isoCode": "050",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Kārsava Municipality",
+      "isoCode": "044",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lielvārde Municipality",
+      "isoCode": "053",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Liepāja",
+      "isoCode": "LPX",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Limbaži Municipality",
+      "isoCode": "054",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lubāna Municipality",
+      "isoCode": "057",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ludza Municipality",
+      "isoCode": "058",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Līgatne Municipality",
+      "isoCode": "055",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Līvāni Municipality",
+      "isoCode": "056",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Madona Municipality",
+      "isoCode": "059",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mazsalaca Municipality",
+      "isoCode": "060",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mālpils Municipality",
+      "isoCode": "061",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mārupe Municipality",
+      "isoCode": "062",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Mērsrags Municipality",
+      "isoCode": "063",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Naukšēni Municipality",
+      "isoCode": "064",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nereta Municipality",
+      "isoCode": "065",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nīca Municipality",
+      "isoCode": "066",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ogre Municipality",
+      "isoCode": "067",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Olaine Municipality",
+      "isoCode": "068",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ozolnieki Municipality",
+      "isoCode": "069",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Preiļi Municipality",
+      "isoCode": "073",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Priekule Municipality",
+      "isoCode": "074",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Priekuļi Municipality",
+      "isoCode": "075",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pārgauja Municipality",
+      "isoCode": "070",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pāvilosta Municipality",
+      "isoCode": "071",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Pļaviņas Municipality",
+      "isoCode": "072",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rauna Municipality",
+      "isoCode": "076",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Riebiņi Municipality",
+      "isoCode": "078",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Riga",
+      "isoCode": "RIX",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Roja Municipality",
+      "isoCode": "079",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ropaži Municipality",
+      "isoCode": "080",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rucava Municipality",
+      "isoCode": "081",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rugāji Municipality",
+      "isoCode": "082",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rundāle Municipality",
+      "isoCode": "083",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rēzekne",
+      "isoCode": "REZ",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rēzekne Municipality",
+      "isoCode": "077",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rūjiena Municipality",
+      "isoCode": "084",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sala Municipality",
+      "isoCode": "085",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Salacgrīva Municipality",
+      "isoCode": "086",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Salaspils Municipality",
+      "isoCode": "087",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saldus Municipality",
+      "isoCode": "088",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Saulkrasti Municipality",
+      "isoCode": "089",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sigulda Municipality",
+      "isoCode": "091",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Skrunda Municipality",
+      "isoCode": "093",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Skrīveri Municipality",
+      "isoCode": "092",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Smiltene Municipality",
+      "isoCode": "094",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Stopiņi Municipality",
+      "isoCode": "095",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Strenči Municipality",
+      "isoCode": "096",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sēja Municipality",
+      "isoCode": "090",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Talsi Municipality",
+      "isoCode": "097",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tukums Municipality",
+      "isoCode": "099",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tērvete Municipality",
+      "isoCode": "098",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vaiņode Municipality",
+      "isoCode": "100",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Valka Municipality",
+      "isoCode": "101",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Valmiera",
+      "isoCode": "VMR",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Varakļāni Municipality",
+      "isoCode": "102",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vecpiebalga Municipality",
+      "isoCode": "104",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vecumnieki Municipality",
+      "isoCode": "105",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ventspils",
+      "isoCode": "VEN",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ventspils Municipality",
+      "isoCode": "106",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Viesīte Municipality",
+      "isoCode": "107",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Viļaka Municipality",
+      "isoCode": "108",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Viļāni Municipality",
+      "isoCode": "109",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vārkava Municipality",
+      "isoCode": "103",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zilupe Municipality",
+      "isoCode": "110",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ērgļi Municipality",
+      "isoCode": "030",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ķegums Municipality",
+      "isoCode": "051",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ķekava Municipality",
+      "isoCode": "052",
+      "timezones": [
+        {
+          "name": "Europe/Riga",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

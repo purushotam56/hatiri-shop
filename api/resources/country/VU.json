@@ -1,0 +1,93 @@
+{
+  "name": "Vanuatu",
+  "isoCode": "VU",
+  "timezones": [
+    {
+      "name": "Pacific/Efate",
+      "utcOffset": "+11:00",
+      "offsetMinutes": 660,
+      "abbreviation": "+11",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Malampa",
+      "isoCode": "MAP",
+      "timezones": [
+        {
+          "name": "Pacific/Efate",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Penama",
+      "isoCode": "PAM",
+      "timezones": [
+        {
+          "name": "Pacific/Efate",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sanma",
+      "isoCode": "SAM",
+      "timezones": [
+        {
+          "name": "Pacific/Efate",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shefa",
+      "isoCode": "SEE",
+      "timezones": [
+        {
+          "name": "Pacific/Efate",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tafea",
+      "isoCode": "TAE",
+      "timezones": [
+        {
+          "name": "Pacific/Efate",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Torba",
+      "isoCode": "TOB",
+      "timezones": [
+        {
+          "name": "Pacific/Efate",
+          "utcOffset": "+11:00",
+          "offsetMinutes": 660,
+          "abbreviation": "+11",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

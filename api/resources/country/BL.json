@@ -1,0 +1,21 @@
+{
+  "name": "Saint-Barthelemy",
+  "isoCode": "BL",
+  "timezones": [
+    {
+      "name": "America/Puerto_Rico",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    },
+    {
+      "name": "America/St_Barthelemy",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

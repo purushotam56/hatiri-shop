@@ -1,0 +1,1192 @@
+{
+  "name": "Indonesia",
+  "isoCode": "ID",
+  "timezones": [
+    {
+      "name": "Asia/Jakarta",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "WIB",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Jayapura",
+      "utcOffset": "+09:00",
+      "offsetMinutes": 540,
+      "abbreviation": "WIT",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Makassar",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "WITA",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Pontianak",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "WIB",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Aceh",
+      "isoCode": "AC",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bali",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Banten",
+      "isoCode": "BT",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bengkulu",
+      "isoCode": "BE",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "DI Yogyakarta",
+      "isoCode": "YO",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "DKI Jakarta",
+      "isoCode": "JK",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gorontalo",
+      "isoCode": "GO",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jambi",
+      "isoCode": "JA",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jawa Barat",
+      "isoCode": "JB",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jawa Tengah",
+      "isoCode": "JT",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jawa Timur",
+      "isoCode": "JI",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kalimantan Barat",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kalimantan Selatan",
+      "isoCode": "KS",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kalimantan Tengah",
+      "isoCode": "KT",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kalimantan Timur",
+      "isoCode": "KI",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kalimantan Utara",
+      "isoCode": "KU",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kepulauan Bangka Belitung",
+      "isoCode": "BB",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kepulauan Riau",
+      "isoCode": "KR",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lampung",
+      "isoCode": "LA",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maluku",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maluku Utara",
+      "isoCode": "MU",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nusa Tenggara Barat",
+      "isoCode": "NB",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nusa Tenggara Timur",
+      "isoCode": "NT",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Papua",
+      "isoCode": "PA",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Papua Barat",
+      "isoCode": "PB",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Riau",
+      "isoCode": "RI",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sulawesi Barat",
+      "isoCode": "SR",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sulawesi Selatan",
+      "isoCode": "SN",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sulawesi Tengah",
+      "isoCode": "ST",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sulawesi Tenggara",
+      "isoCode": "SG",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sulawesi Utara",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sumatera Barat",
+      "isoCode": "SB",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sumatera Selatan",
+      "isoCode": "SS",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sumatera Utara",
+      "isoCode": "SU",
+      "timezones": [
+        {
+          "name": "Asia/Jakarta",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Jayapura",
+          "utcOffset": "+09:00",
+          "offsetMinutes": 540,
+          "abbreviation": "WIT",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Makassar",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "WITA",
+          "isDST": false
+        },
+        {
+          "name": "Asia/Pontianak",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "WIB",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

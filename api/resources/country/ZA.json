@@ -1,0 +1,132 @@
+{
+  "name": "South Africa",
+  "isoCode": "ZA",
+  "timezones": [
+    {
+      "name": "Africa/Johannesburg",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "SAST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Eastern Cape",
+      "isoCode": "EC",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Free State",
+      "isoCode": "FS",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gauteng",
+      "isoCode": "GP",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "KwaZulu-Natal",
+      "isoCode": "KZN",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Limpopo",
+      "isoCode": "LP",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mpumalanga",
+      "isoCode": "MP",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North West",
+      "isoCode": "NW",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern Cape",
+      "isoCode": "NC",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Cape",
+      "isoCode": "WC",
+      "timezones": [
+        {
+          "name": "Africa/Johannesburg",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "SAST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

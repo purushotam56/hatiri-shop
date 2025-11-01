@@ -1,0 +1,21 @@
+{
+  "name": "Guernsey and Alderney",
+  "isoCode": "GG",
+  "timezones": [
+    {
+      "name": "Europe/Guernsey",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "BST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/London",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "BST",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

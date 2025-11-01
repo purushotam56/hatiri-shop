@@ -1,0 +1,28 @@
+{
+  "name": "French Polynesia",
+  "isoCode": "PF",
+  "timezones": [
+    {
+      "name": "Pacific/Gambier",
+      "utcOffset": "-09:00",
+      "offsetMinutes": -540,
+      "abbreviation": "-09",
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Marquesas",
+      "utcOffset": "-09:30",
+      "offsetMinutes": -570,
+      "abbreviation": null,
+      "isDST": false
+    },
+    {
+      "name": "Pacific/Tahiti",
+      "utcOffset": "-10:00",
+      "offsetMinutes": -600,
+      "abbreviation": "-10",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

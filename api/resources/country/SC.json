@@ -1,0 +1,502 @@
+{
+  "name": "Seychelles",
+  "isoCode": "SC",
+  "timezones": [
+    {
+      "name": "Asia/Dubai",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    },
+    {
+      "name": "Indian/Mahe",
+      "utcOffset": "+04:00",
+      "offsetMinutes": 240,
+      "abbreviation": "+04",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Anse Boileau",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Anse Royale",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Anse-aux-Pins",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Au Cap",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Baie Lazare",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Baie Sainte Anne",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Beau Vallon",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bel Air",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bel Ombre",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cascade",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Glacis",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Grand'Anse Mahé",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Grand'Anse Praslin",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Digue",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Rivière Anglaise",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Les Mamelles",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mont Buxton",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mont Fleuri",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Plaisance",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pointe La Rue",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Port Glaud",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Roche Caiman",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saint Louis",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Takamaka",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Asia/Dubai",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        },
+        {
+          "name": "Indian/Mahe",
+          "utcOffset": "+04:00",
+          "offsetMinutes": 240,
+          "abbreviation": "+04",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

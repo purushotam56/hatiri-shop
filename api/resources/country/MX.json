@@ -1,0 +1,2587 @@
+{
+  "name": "Mexico",
+  "isoCode": "MX",
+  "timezones": [
+    {
+      "name": "America/Bahia_Banderas",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    },
+    {
+      "name": "America/Cancun",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "EST",
+      "isDST": false
+    },
+    {
+      "name": "America/Chihuahua",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    },
+    {
+      "name": "America/Ciudad_Juarez",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "MDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Hermosillo",
+      "utcOffset": "-07:00",
+      "offsetMinutes": -420,
+      "abbreviation": "MST",
+      "isDST": false
+    },
+    {
+      "name": "America/Matamoros",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "CDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Mazatlan",
+      "utcOffset": "-07:00",
+      "offsetMinutes": -420,
+      "abbreviation": "MST",
+      "isDST": false
+    },
+    {
+      "name": "America/Merida",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    },
+    {
+      "name": "America/Mexico_City",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    },
+    {
+      "name": "America/Monterrey",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    },
+    {
+      "name": "America/Ojinaga",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "CDT",
+      "isDST": true
+    },
+    {
+      "name": "America/Tijuana",
+      "utcOffset": "-07:00",
+      "offsetMinutes": -420,
+      "abbreviation": "PDT",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Aguascalientes",
+      "isoCode": "AGU",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Baja California",
+      "isoCode": "BCN",
+      "timezones": [
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Baja California Sur",
+      "isoCode": "BCS",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Campeche",
+      "isoCode": "CAM",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Chiapas",
+      "isoCode": "CHP",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Chihuahua",
+      "isoCode": "CHH",
+      "timezones": [
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ciudad de México",
+      "isoCode": "CDMX",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Coahuila de Zaragoza",
+      "isoCode": "COA",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Colima",
+      "isoCode": "COL",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Durango",
+      "isoCode": "DUR",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Estado de México",
+      "isoCode": "MEX",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Guanajuato",
+      "isoCode": "GUA",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Guerrero",
+      "isoCode": "GRO",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hidalgo",
+      "isoCode": "HID",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jalisco",
+      "isoCode": "JAL",
+      "timezones": [
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Michoacán de Ocampo",
+      "isoCode": "MIC",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Morelos",
+      "isoCode": "MOR",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nayarit",
+      "isoCode": "NAY",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nuevo León",
+      "isoCode": "NLE",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Oaxaca",
+      "isoCode": "OAX",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Puebla",
+      "isoCode": "PUE",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Querétaro",
+      "isoCode": "QUE",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Quintana Roo",
+      "isoCode": "ROO",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "San Luis Potosí",
+      "isoCode": "SLP",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sinaloa",
+      "isoCode": "SIN",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sonora",
+      "isoCode": "SON",
+      "timezones": [
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tabasco",
+      "isoCode": "TAB",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tamaulipas",
+      "isoCode": "TAM",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Tlaxcala",
+      "isoCode": "TLA",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Veracruz de Ignacio de la Llave",
+      "isoCode": "VER",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Yucatán",
+      "isoCode": "YUC",
+      "timezones": [
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zacatecas",
+      "isoCode": "ZAC",
+      "timezones": [
+        {
+          "name": "America/Bahia_Banderas",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Cancun",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "EST",
+          "isDST": false
+        },
+        {
+          "name": "America/Chihuahua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ciudad_Juarez",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "MDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Hermosillo",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Matamoros",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Mazatlan",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "MST",
+          "isDST": false
+        },
+        {
+          "name": "America/Merida",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Mexico_City",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Monterrey",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        },
+        {
+          "name": "America/Ojinaga",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "CDT",
+          "isDST": true
+        },
+        {
+          "name": "America/Tijuana",
+          "utcOffset": "-07:00",
+          "offsetMinutes": -420,
+          "abbreviation": "PDT",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

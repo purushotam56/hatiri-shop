@@ -1,0 +1,106 @@
+{
+  "name": "Costa Rica",
+  "isoCode": "CR",
+  "timezones": [
+    {
+      "name": "America/Costa_Rica",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Alajuela Province",
+      "isoCode": "A",
+      "timezones": [
+        {
+          "name": "America/Costa_Rica",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guanacaste Province",
+      "isoCode": "G",
+      "timezones": [
+        {
+          "name": "America/Costa_Rica",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Heredia Province",
+      "isoCode": "H",
+      "timezones": [
+        {
+          "name": "America/Costa_Rica",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Limón Province",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "America/Costa_Rica",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Provincia de Cartago",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "America/Costa_Rica",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Puntarenas Province",
+      "isoCode": "P",
+      "timezones": [
+        {
+          "name": "America/Costa_Rica",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San José Province",
+      "isoCode": "SJ",
+      "timezones": [
+        {
+          "name": "America/Costa_Rica",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

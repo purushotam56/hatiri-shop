@@ -1,0 +1,1029 @@
+{
+  "name": "Thailand",
+  "isoCode": "TH",
+  "timezones": [
+    {
+      "name": "Asia/Bangkok",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "+07",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Amnat Charoen",
+      "isoCode": "37",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ang Thong",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bangkok",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bueng Kan",
+      "isoCode": "38",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Buri Ram",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chachoengsao",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chai Nat",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chaiyaphum",
+      "isoCode": "36",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chanthaburi",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chiang Mai",
+      "isoCode": "50",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chiang Rai",
+      "isoCode": "57",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chon Buri",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chumphon",
+      "isoCode": "86",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kalasin",
+      "isoCode": "46",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kamphaeng Phet",
+      "isoCode": "62",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kanchanaburi",
+      "isoCode": "71",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khon Kaen",
+      "isoCode": "40",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Krabi",
+      "isoCode": "81",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lampang",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lamphun",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Loei",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lop Buri",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mae Hong Son",
+      "isoCode": "58",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maha Sarakham",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mukdahan",
+      "isoCode": "49",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nakhon Nayok",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nakhon Pathom",
+      "isoCode": "73",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nakhon Phanom",
+      "isoCode": "48",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nakhon Ratchasima",
+      "isoCode": "30",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nakhon Sawan",
+      "isoCode": "60",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nakhon Si Thammarat",
+      "isoCode": "80",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nan",
+      "isoCode": "55",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Narathiwat",
+      "isoCode": "96",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nong Bua Lam Phu",
+      "isoCode": "39",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nong Khai",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nonthaburi",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pathum Thani",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pattani",
+      "isoCode": "94",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pattaya",
+      "isoCode": "S",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phangnga",
+      "isoCode": "82",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phatthalung",
+      "isoCode": "93",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phayao",
+      "isoCode": "56",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phetchabun",
+      "isoCode": "67",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phetchaburi",
+      "isoCode": "76",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phichit",
+      "isoCode": "66",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phitsanulok",
+      "isoCode": "65",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phra Nakhon Si Ayutthaya",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phrae",
+      "isoCode": "54",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Phuket",
+      "isoCode": "83",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Prachin Buri",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Prachuap Khiri Khan",
+      "isoCode": "77",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ranong",
+      "isoCode": "85",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ratchaburi",
+      "isoCode": "70",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rayong",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Roi Et",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sa Kaeo",
+      "isoCode": "27",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sakon Nakhon",
+      "isoCode": "47",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samut Prakan",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samut Sakhon",
+      "isoCode": "74",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Samut Songkhram",
+      "isoCode": "75",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saraburi",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Satun",
+      "isoCode": "91",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Si Sa Ket",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sing Buri",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Songkhla",
+      "isoCode": "90",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sukhothai",
+      "isoCode": "64",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Suphan Buri",
+      "isoCode": "72",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Surat Thani",
+      "isoCode": "84",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Surin",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tak",
+      "isoCode": "63",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Trang",
+      "isoCode": "92",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Trat",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ubon Ratchathani",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Udon Thani",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Uthai Thani",
+      "isoCode": "61",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Uttaradit",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yala",
+      "isoCode": "95",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yasothon",
+      "isoCode": "35",
+      "timezones": [
+        {
+          "name": "Asia/Bangkok",
+          "utcOffset": "+07:00",
+          "offsetMinutes": 420,
+          "abbreviation": "+07",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

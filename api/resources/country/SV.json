@@ -1,0 +1,197 @@
+{
+  "name": "El Salvador",
+  "isoCode": "SV",
+  "timezones": [
+    {
+      "name": "America/El_Salvador",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Ahuachapán Department",
+      "isoCode": "AH",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cabañas Department",
+      "isoCode": "CA",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chalatenango Department",
+      "isoCode": "CH",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cuscatlán Department",
+      "isoCode": "CU",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Libertad Department",
+      "isoCode": "LI",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Paz Department",
+      "isoCode": "PA",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Unión Department",
+      "isoCode": "UN",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Morazán Department",
+      "isoCode": "MO",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San Miguel Department",
+      "isoCode": "SM",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San Salvador Department",
+      "isoCode": "SS",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San Vicente Department",
+      "isoCode": "SV",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Ana Department",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sonsonate Department",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Usulután Department",
+      "isoCode": "US",
+      "timezones": [
+        {
+          "name": "America/El_Salvador",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

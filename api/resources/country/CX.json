@@ -1,0 +1,21 @@
+{
+  "name": "Christmas Island",
+  "isoCode": "CX",
+  "timezones": [
+    {
+      "name": "Asia/Bangkok",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "+07",
+      "isDST": false
+    },
+    {
+      "name": "Indian/Christmas",
+      "utcOffset": "+07:00",
+      "offsetMinutes": 420,
+      "abbreviation": "+07",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

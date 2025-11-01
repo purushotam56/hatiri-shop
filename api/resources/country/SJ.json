@@ -1,0 +1,21 @@
+{
+  "name": "Svalbard And Jan Mayen Islands",
+  "isoCode": "SJ",
+  "timezones": [
+    {
+      "name": "Arctic/Longyearbyen",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Berlin",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": []
+}

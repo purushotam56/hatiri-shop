@@ -1,0 +1,203 @@
+{
+  "name": "Australia",
+  "isoCode": "AU",
+  "timezones": [
+    {
+      "name": "Antarctica/Macquarie",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "AEST",
+      "isDST": false
+    },
+    {
+      "name": "Asia/Tokyo",
+      "utcOffset": "+09:00",
+      "offsetMinutes": 540,
+      "abbreviation": "JST",
+      "isDST": false
+    },
+    {
+      "name": "Australia/Adelaide",
+      "utcOffset": "+09:30",
+      "offsetMinutes": 570,
+      "abbreviation": "ACST",
+      "isDST": false
+    },
+    {
+      "name": "Australia/Brisbane",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "AEST",
+      "isDST": false
+    },
+    {
+      "name": "Australia/Broken_Hill",
+      "utcOffset": "+09:30",
+      "offsetMinutes": 570,
+      "abbreviation": "ACST",
+      "isDST": false
+    },
+    {
+      "name": "Australia/Darwin",
+      "utcOffset": "+09:30",
+      "offsetMinutes": 570,
+      "abbreviation": "ACST",
+      "isDST": false
+    },
+    {
+      "name": "Australia/Eucla",
+      "utcOffset": "+08:45",
+      "offsetMinutes": 525,
+      "abbreviation": null,
+      "isDST": false
+    },
+    {
+      "name": "Australia/Hobart",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "AEST",
+      "isDST": false
+    },
+    {
+      "name": "Australia/Lindeman",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "AEST",
+      "isDST": false
+    },
+    {
+      "name": "Australia/Lord_Howe",
+      "utcOffset": "+10:30",
+      "offsetMinutes": 630,
+      "abbreviation": null,
+      "isDST": false
+    },
+    {
+      "name": "Australia/Melbourne",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "AEST",
+      "isDST": false
+    },
+    {
+      "name": "Australia/Perth",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "AWST",
+      "isDST": false
+    },
+    {
+      "name": "Australia/Sydney",
+      "utcOffset": "+10:00",
+      "offsetMinutes": 600,
+      "abbreviation": "AEST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Australian Capital Territory",
+      "isoCode": "ACT",
+      "timezones": [
+        {
+          "name": "Australia/Sydney",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "AEST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "New South Wales",
+      "isoCode": "NSW",
+      "timezones": [
+        {
+          "name": "Australia/Sydney",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "AEST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Northern Territory",
+      "isoCode": "NT",
+      "timezones": [
+        {
+          "name": "Australia/Darwin",
+          "utcOffset": "+09:30",
+          "offsetMinutes": 570,
+          "abbreviation": "ACST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Queensland",
+      "isoCode": "QLD",
+      "timezones": [
+        {
+          "name": "Australia/Brisbane",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "AEST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South Australia",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Australia/Adelaide",
+          "utcOffset": "+09:30",
+          "offsetMinutes": 570,
+          "abbreviation": "ACST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tasmania",
+      "isoCode": "TAS",
+      "timezones": [
+        {
+          "name": "Australia/Hobart",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "AEST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Victoria",
+      "isoCode": "VIC",
+      "timezones": [
+        {
+          "name": "Australia/Melbourne",
+          "utcOffset": "+10:00",
+          "offsetMinutes": 600,
+          "abbreviation": "AEST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Australia",
+      "isoCode": "WA",
+      "timezones": [
+        {
+          "name": "Australia/Perth",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "AWST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

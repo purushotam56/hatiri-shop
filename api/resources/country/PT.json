@@ -1,0 +1,569 @@
+{
+  "name": "Portugal",
+  "isoCode": "PT",
+  "timezones": [
+    {
+      "name": "Atlantic/Azores",
+      "utcOffset": "+00:00",
+      "offsetMinutes": 0,
+      "abbreviation": "+00",
+      "isDST": true
+    },
+    {
+      "name": "Atlantic/Madeira",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Lisbon",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Aveiro",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Açores",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Beja",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Braga",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bragança",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Castelo Branco",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Coimbra",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Faro",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Guarda",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Leiria",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lisbon",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Madeira",
+      "isoCode": "30",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Portalegre",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Porto",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Santarém",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Setúbal",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Viana do Castelo",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vila Real",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Viseu",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Évora",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Atlantic/Azores",
+          "utcOffset": "+00:00",
+          "offsetMinutes": 0,
+          "abbreviation": "+00",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Madeira",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Lisbon",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

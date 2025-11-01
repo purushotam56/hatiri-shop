@@ -1,0 +1,249 @@
+{
+  "name": "Iraq",
+  "isoCode": "IQ",
+  "timezones": [
+    {
+      "name": "Asia/Baghdad",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Al Anbar Governorate",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al Muthanna Governorate",
+      "isoCode": "MU",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al-Qādisiyyah Governorate",
+      "isoCode": "QA",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Babylon Governorate",
+      "isoCode": "BB",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Baghdad Governorate",
+      "isoCode": "BG",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Basra Governorate",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dhi Qar Governorate",
+      "isoCode": "DQ",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Diyala Governorate",
+      "isoCode": "DI",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dohuk Governorate",
+      "isoCode": "DA",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Erbil Governorate",
+      "isoCode": "AR",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karbala Governorate",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kirkuk Governorate",
+      "isoCode": "KI",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maysan Governorate",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Najaf Governorate",
+      "isoCode": "NA",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nineveh Governorate",
+      "isoCode": "NI",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saladin Governorate",
+      "isoCode": "SD",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sulaymaniyah Governorate",
+      "isoCode": "SU",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wasit Governorate",
+      "isoCode": "WA",
+      "timezones": [
+        {
+          "name": "Asia/Baghdad",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

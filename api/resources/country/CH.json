@@ -1,0 +1,353 @@
+{
+  "name": "Switzerland",
+  "isoCode": "CH",
+  "timezones": [
+    {
+      "name": "Europe/Zurich",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Aargau",
+      "isoCode": "AG",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Appenzell Ausserrhoden",
+      "isoCode": "AR",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Appenzell Innerrhoden",
+      "isoCode": "AI",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Basel-Land",
+      "isoCode": "BL",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Basel-Stadt",
+      "isoCode": "BS",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bern",
+      "isoCode": "BE",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fribourg",
+      "isoCode": "FR",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Geneva",
+      "isoCode": "GE",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Glarus",
+      "isoCode": "GL",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Graubünden",
+      "isoCode": "GR",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Jura",
+      "isoCode": "JU",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Lucerne",
+      "isoCode": "LU",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Neuchâtel",
+      "isoCode": "NE",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nidwalden",
+      "isoCode": "NW",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Obwalden",
+      "isoCode": "OW",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Schaffhausen",
+      "isoCode": "SH",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Schwyz",
+      "isoCode": "SZ",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Solothurn",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "St. Gallen",
+      "isoCode": "SG",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Thurgau",
+      "isoCode": "TG",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ticino",
+      "isoCode": "TI",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Uri",
+      "isoCode": "UR",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Valais",
+      "isoCode": "VS",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Vaud",
+      "isoCode": "VD",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zug",
+      "isoCode": "ZG",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zürich",
+      "isoCode": "ZH",
+      "timezones": [
+        {
+          "name": "Europe/Zurich",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

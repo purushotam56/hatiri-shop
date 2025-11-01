@@ -1,0 +1,236 @@
+{
+  "name": "Paraguay",
+  "isoCode": "PY",
+  "timezones": [
+    {
+      "name": "America/Asuncion",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Alto Paraguay Department",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Alto Paraná Department",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Amambay Department",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Boquerón Department",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Caaguazú",
+      "isoCode": "5",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Caazapá",
+      "isoCode": "6",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Canindeyú",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central Department",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Concepción Department",
+      "isoCode": "1",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cordillera Department",
+      "isoCode": "3",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guairá Department",
+      "isoCode": "4",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Itapúa",
+      "isoCode": "7",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Misiones Department",
+      "isoCode": "8",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Paraguarí Department",
+      "isoCode": "9",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Presidente Hayes Department",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "San Pedro Department",
+      "isoCode": "2",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ñeembucú Department",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "America/Asuncion",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

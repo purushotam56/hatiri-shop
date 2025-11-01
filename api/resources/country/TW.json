@@ -1,0 +1,301 @@
+{
+  "name": "Taiwan",
+  "isoCode": "TW",
+  "timezones": [
+    {
+      "name": "Asia/Taipei",
+      "utcOffset": "+08:00",
+      "offsetMinutes": 480,
+      "abbreviation": "CST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Changhua",
+      "isoCode": "CHA",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chiayi",
+      "isoCode": "CYI",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chiayi",
+      "isoCode": "CYQ",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hsinchu",
+      "isoCode": "HSQ",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hsinchu",
+      "isoCode": "HSZ",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hualien",
+      "isoCode": "HUA",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kaohsiung",
+      "isoCode": "KHH",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Keelung",
+      "isoCode": "KEE",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kinmen",
+      "isoCode": "KIN",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lienchiang",
+      "isoCode": "LIE",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Miaoli",
+      "isoCode": "MIA",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nantou",
+      "isoCode": "NAN",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "New Taipei",
+      "isoCode": "NWT",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Penghu",
+      "isoCode": "PEN",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pingtung",
+      "isoCode": "PIF",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taichung",
+      "isoCode": "TXG",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tainan",
+      "isoCode": "TNN",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taipei",
+      "isoCode": "TPE",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taitung",
+      "isoCode": "TTT",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Taoyuan",
+      "isoCode": "TAO",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yilan",
+      "isoCode": "ILA",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yunlin",
+      "isoCode": "YUN",
+      "timezones": [
+        {
+          "name": "Asia/Taipei",
+          "utcOffset": "+08:00",
+          "offsetMinutes": 480,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

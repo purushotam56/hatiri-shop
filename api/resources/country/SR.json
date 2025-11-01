@@ -1,0 +1,145 @@
+{
+  "name": "Suriname",
+  "isoCode": "SR",
+  "timezones": [
+    {
+      "name": "America/Paramaribo",
+      "utcOffset": "-03:00",
+      "offsetMinutes": -180,
+      "abbreviation": "-03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Brokopondo District",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "America/Paramaribo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Commewijne District",
+      "isoCode": "CM",
+      "timezones": [
+        {
+          "name": "America/Paramaribo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Coronie District",
+      "isoCode": "CR",
+      "timezones": [
+        {
+          "name": "America/Paramaribo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Marowijne District",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "America/Paramaribo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nickerie District",
+      "isoCode": "NI",
+      "timezones": [
+        {
+          "name": "America/Paramaribo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Para District",
+      "isoCode": "PR",
+      "timezones": [
+        {
+          "name": "America/Paramaribo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Paramaribo District",
+      "isoCode": "PM",
+      "timezones": [
+        {
+          "name": "America/Paramaribo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Saramacca District",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "America/Paramaribo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sipaliwini District",
+      "isoCode": "SI",
+      "timezones": [
+        {
+          "name": "America/Paramaribo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Wanica District",
+      "isoCode": "WA",
+      "timezones": [
+        {
+          "name": "America/Paramaribo",
+          "utcOffset": "-03:00",
+          "offsetMinutes": -180,
+          "abbreviation": "-03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

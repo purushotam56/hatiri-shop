@@ -1,0 +1,106 @@
+{
+  "name": "Belarus",
+  "isoCode": "BY",
+  "timezones": [
+    {
+      "name": "Europe/Minsk",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Brest Region",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "Europe/Minsk",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gomel Region",
+      "isoCode": "HO",
+      "timezones": [
+        {
+          "name": "Europe/Minsk",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Grodno Region",
+      "isoCode": "HR",
+      "timezones": [
+        {
+          "name": "Europe/Minsk",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Minsk",
+      "isoCode": "HM",
+      "timezones": [
+        {
+          "name": "Europe/Minsk",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Minsk Region",
+      "isoCode": "MI",
+      "timezones": [
+        {
+          "name": "Europe/Minsk",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mogilev Region",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Europe/Minsk",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vitebsk Region",
+      "isoCode": "VI",
+      "timezones": [
+        {
+          "name": "Europe/Minsk",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

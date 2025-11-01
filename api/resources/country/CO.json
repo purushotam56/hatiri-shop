@@ -1,0 +1,444 @@
+{
+  "name": "Colombia",
+  "isoCode": "CO",
+  "timezones": [
+    {
+      "name": "America/Bogota",
+      "utcOffset": "-05:00",
+      "offsetMinutes": -300,
+      "abbreviation": "-05",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Amazonas",
+      "isoCode": "AMA",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Antioquia",
+      "isoCode": "ANT",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Arauca",
+      "isoCode": "ARA",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Archipiélago de San Andrés, Providencia y Santa Catalina",
+      "isoCode": "SAP",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Atlántico",
+      "isoCode": "ATL",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bogotá D.C.",
+      "isoCode": "DC",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bolívar",
+      "isoCode": "BOL",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Boyacá",
+      "isoCode": "BOY",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Caldas",
+      "isoCode": "CAL",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Caquetá",
+      "isoCode": "CAQ",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Casanare",
+      "isoCode": "CAS",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cauca",
+      "isoCode": "CAU",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cesar",
+      "isoCode": "CES",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chocó",
+      "isoCode": "CHO",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cundinamarca",
+      "isoCode": "CUN",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Córdoba",
+      "isoCode": "COR",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guainía",
+      "isoCode": "GUA",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Guaviare",
+      "isoCode": "GUV",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Huila",
+      "isoCode": "HUI",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Guajira",
+      "isoCode": "LAG",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Magdalena",
+      "isoCode": "MAG",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Meta",
+      "isoCode": "MET",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nariño",
+      "isoCode": "NAR",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Norte de Santander",
+      "isoCode": "NSA",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Putumayo",
+      "isoCode": "PUT",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Quindío",
+      "isoCode": "QUI",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Risaralda",
+      "isoCode": "RIS",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santander",
+      "isoCode": "SAN",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sucre",
+      "isoCode": "SUC",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tolima",
+      "isoCode": "TOL",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Valle del Cauca",
+      "isoCode": "VAC",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vaupés",
+      "isoCode": "VAU",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vichada",
+      "isoCode": "VID",
+      "timezones": [
+        {
+          "name": "America/Bogota",
+          "utcOffset": "-05:00",
+          "offsetMinutes": -300,
+          "abbreviation": "-05",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "name": "Syria",
+  "isoCode": "SY",
+  "timezones": [
+    {
+      "name": "Asia/Damascus",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "+03",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Al-Hasakah Governorate",
+      "isoCode": "HA",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Al-Raqqah Governorate",
+      "isoCode": "RA",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aleppo Governorate",
+      "isoCode": "HL",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "As-Suwayda Governorate",
+      "isoCode": "SU",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Damascus Governorate",
+      "isoCode": "DI",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Daraa Governorate",
+      "isoCode": "DR",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Deir ez-Zor Governorate",
+      "isoCode": "DY",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Hama Governorate",
+      "isoCode": "HM",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Homs Governorate",
+      "isoCode": "HI",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Idlib Governorate",
+      "isoCode": "ID",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Latakia Governorate",
+      "isoCode": "LA",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Quneitra Governorate",
+      "isoCode": "QU",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rif Dimashq Governorate",
+      "isoCode": "RD",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tartus Governorate",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Asia/Damascus",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "+03",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

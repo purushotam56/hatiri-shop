@@ -1,0 +1,785 @@
+{
+  "name": "Spain",
+  "isoCode": "ES",
+  "timezones": [
+    {
+      "name": "Africa/Ceuta",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    },
+    {
+      "name": "Atlantic/Canary",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "WEST",
+      "isDST": true
+    },
+    {
+      "name": "Europe/Madrid",
+      "utcOffset": "+02:00",
+      "offsetMinutes": 120,
+      "abbreviation": "CEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Andalusia",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Aragon",
+      "isoCode": "AR",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Asturias",
+      "isoCode": "AS",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Balearic Islands",
+      "isoCode": "PM",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Basque Country",
+      "isoCode": "PV",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Burgos Province",
+      "isoCode": "BU",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Canary Islands",
+      "isoCode": "CN",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cantabria",
+      "isoCode": "CB",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Castile and León",
+      "isoCode": "CL",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Castilla La Mancha",
+      "isoCode": "CM",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Catalonia",
+      "isoCode": "CT",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ceuta",
+      "isoCode": "CE",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Extremadura",
+      "isoCode": "EX",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Galicia",
+      "isoCode": "GA",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "La Rioja",
+      "isoCode": "RI",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Léon",
+      "isoCode": "LE",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Madrid",
+      "isoCode": "MD",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Melilla",
+      "isoCode": "ML",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Murcia",
+      "isoCode": "MC",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Navarra",
+      "isoCode": "NC",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Palencia Province",
+      "isoCode": "P",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Salamanca Province",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Segovia Province",
+      "isoCode": "SG",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Soria Province",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Valencia",
+      "isoCode": "VC",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Valladolid Province",
+      "isoCode": "VA",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Zamora Province",
+      "isoCode": "ZA",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ávila",
+      "isoCode": "AV",
+      "timezones": [
+        {
+          "name": "Africa/Ceuta",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        },
+        {
+          "name": "Atlantic/Canary",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "WEST",
+          "isDST": true
+        },
+        {
+          "name": "Europe/Madrid",
+          "utcOffset": "+02:00",
+          "offsetMinutes": 120,
+          "abbreviation": "CEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "name": "Samoa",
+  "isoCode": "WS",
+  "timezones": [
+    {
+      "name": "Pacific/Apia",
+      "utcOffset": "+13:00",
+      "offsetMinutes": 780,
+      "abbreviation": "+13",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "A'ana",
+      "isoCode": "AA",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Aiga-i-le-Tai",
+      "isoCode": "AL",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Atua",
+      "isoCode": "AT",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Fa'asaleleaga",
+      "isoCode": "FA",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gaga'emauga",
+      "isoCode": "GE",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gaga'ifomauga",
+      "isoCode": "GI",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Palauli",
+      "isoCode": "PA",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Satupa'itea",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tuamasaga",
+      "isoCode": "TU",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Va'a-o-Fonoti",
+      "isoCode": "VF",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vaisigano",
+      "isoCode": "VS",
+      "timezones": [
+        {
+          "name": "Pacific/Apia",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

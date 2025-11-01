@@ -1,0 +1,314 @@
+{
+  "name": "Tunisia",
+  "isoCode": "TN",
+  "timezones": [
+    {
+      "name": "Africa/Tunis",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "CET",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Ariana Governorate",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ben Arous Governorate",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bizerte Governorate",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gabès Governorate",
+      "isoCode": "81",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gafsa Governorate",
+      "isoCode": "71",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jendouba Governorate",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kairouan Governorate",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kasserine Governorate",
+      "isoCode": "42",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kassrine",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kebili Governorate",
+      "isoCode": "73",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kef Governorate",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mahdia Governorate",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Manouba Governorate",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Medenine Governorate",
+      "isoCode": "82",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Monastir Governorate",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sfax Governorate",
+      "isoCode": "61",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sidi Bouzid Governorate",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Siliana Governorate",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sousse Governorate",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tataouine Governorate",
+      "isoCode": "83",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tozeur Governorate",
+      "isoCode": "72",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tunis Governorate",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Zaghouan Governorate",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Africa/Tunis",
+          "utcOffset": "+01:00",
+          "offsetMinutes": 60,
+          "abbreviation": "CET",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Anguilla",
+  "isoCode": "AI",
+  "timezones": [
+    {
+      "name": "America/Anguilla",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    },
+    {
+      "name": "America/Puerto_Rico",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "AST",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

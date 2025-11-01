@@ -1,0 +1,483 @@
+{
+  "name": "India",
+  "isoCode": "IN",
+  "timezones": [
+    {
+      "name": "Asia/Kolkata",
+      "utcOffset": "+05:30",
+      "offsetMinutes": 330,
+      "abbreviation": "IST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Andaman and Nicobar Islands",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Andhra Pradesh",
+      "isoCode": "AP",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Arunachal Pradesh",
+      "isoCode": "AR",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Assam",
+      "isoCode": "AS",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bihar",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chandigarh",
+      "isoCode": "CH",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chhattisgarh",
+      "isoCode": "CT",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dadra and Nagar Haveli and Daman and Diu",
+      "isoCode": "DH",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Delhi",
+      "isoCode": "DL",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Goa",
+      "isoCode": "GA",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gujarat",
+      "isoCode": "GJ",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Haryana",
+      "isoCode": "HR",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Himachal Pradesh",
+      "isoCode": "HP",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jammu and Kashmir",
+      "isoCode": "JK",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jharkhand",
+      "isoCode": "JH",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karnataka",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kerala",
+      "isoCode": "KL",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ladakh",
+      "isoCode": "LA",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lakshadweep",
+      "isoCode": "LD",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Madhya Pradesh",
+      "isoCode": "MP",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Maharashtra",
+      "isoCode": "MH",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Manipur",
+      "isoCode": "MN",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Meghalaya",
+      "isoCode": "ML",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mizoram",
+      "isoCode": "MZ",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nagaland",
+      "isoCode": "NL",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Odisha",
+      "isoCode": "OR",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Puducherry",
+      "isoCode": "PY",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Punjab",
+      "isoCode": "PB",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rajasthan",
+      "isoCode": "RJ",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sikkim",
+      "isoCode": "SK",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tamil Nadu",
+      "isoCode": "TN",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Telangana",
+      "isoCode": "TG",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tripura",
+      "isoCode": "TR",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Uttar Pradesh",
+      "isoCode": "UP",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Uttarakhand",
+      "isoCode": "UT",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "West Bengal",
+      "isoCode": "WB",
+      "timezones": [
+        {
+          "name": "Asia/Kolkata",
+          "utcOffset": "+05:30",
+          "offsetMinutes": 330,
+          "abbreviation": "IST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "name": "Nicaragua",
+  "isoCode": "NI",
+  "timezones": [
+    {
+      "name": "America/Managua",
+      "utcOffset": "-06:00",
+      "offsetMinutes": -360,
+      "abbreviation": "CST",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Boaco",
+      "isoCode": "BO",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Carazo",
+      "isoCode": "CA",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chinandega",
+      "isoCode": "CI",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chontales",
+      "isoCode": "CO",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Estelí",
+      "isoCode": "ES",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Granada",
+      "isoCode": "GR",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jinotega",
+      "isoCode": "JI",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "León",
+      "isoCode": "LE",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Madriz",
+      "isoCode": "MD",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Managua",
+      "isoCode": "MN",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Masaya",
+      "isoCode": "MS",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Matagalpa",
+      "isoCode": "MT",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "North Caribbean Coast",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nueva Segovia",
+      "isoCode": "NS",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rivas",
+      "isoCode": "RI",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Río San Juan",
+      "isoCode": "SJ",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "South Caribbean Coast",
+      "isoCode": "AS",
+      "timezones": [
+        {
+          "name": "America/Managua",
+          "utcOffset": "-06:00",
+          "offsetMinutes": -360,
+          "abbreviation": "CST",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

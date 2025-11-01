@@ -1,0 +1,14 @@
+{
+  "name": "Western Sahara",
+  "isoCode": "EH",
+  "timezones": [
+    {
+      "name": "Africa/El_Aaiun",
+      "utcOffset": "+01:00",
+      "offsetMinutes": 60,
+      "abbreviation": "+01",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

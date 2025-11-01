@@ -1,0 +1,132 @@
+{
+  "name": "Bolivia",
+  "isoCode": "BO",
+  "timezones": [
+    {
+      "name": "America/La_Paz",
+      "utcOffset": "-04:00",
+      "offsetMinutes": -240,
+      "abbreviation": "-04",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Beni Department",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "America/La_Paz",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chuquisaca Department",
+      "isoCode": "H",
+      "timezones": [
+        {
+          "name": "America/La_Paz",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cochabamba Department",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "America/La_Paz",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "La Paz Department",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "America/La_Paz",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Oruro Department",
+      "isoCode": "O",
+      "timezones": [
+        {
+          "name": "America/La_Paz",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pando Department",
+      "isoCode": "N",
+      "timezones": [
+        {
+          "name": "America/La_Paz",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Potosí Department",
+      "isoCode": "P",
+      "timezones": [
+        {
+          "name": "America/La_Paz",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Santa Cruz Department",
+      "isoCode": "S",
+      "timezones": [
+        {
+          "name": "America/La_Paz",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tarija Department",
+      "isoCode": "T",
+      "timezones": [
+        {
+          "name": "America/La_Paz",
+          "utcOffset": "-04:00",
+          "offsetMinutes": -240,
+          "abbreviation": "-04",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,483 @@
+{
+  "name": "Moldova",
+  "isoCode": "MD",
+  "timezones": [
+    {
+      "name": "Europe/Chisinau",
+      "utcOffset": "+03:00",
+      "offsetMinutes": 180,
+      "abbreviation": "EEST",
+      "isDST": true
+    }
+  ],
+  "states": [
+    {
+      "name": "Anenii Noi District",
+      "isoCode": "AN",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Basarabeasca District",
+      "isoCode": "BS",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bender Municipality",
+      "isoCode": "BD",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Briceni District",
+      "isoCode": "BR",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Bălți Municipality",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cahul District",
+      "isoCode": "CA",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cantemir District",
+      "isoCode": "CT",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Chișinău Municipality",
+      "isoCode": "CU",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Cimișlia District",
+      "isoCode": "CM",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Criuleni District",
+      "isoCode": "CR",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Călărași District",
+      "isoCode": "CL",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Căușeni District",
+      "isoCode": "CS",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dondușeni District",
+      "isoCode": "DO",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Drochia District",
+      "isoCode": "DR",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Dubăsari District",
+      "isoCode": "DU",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Edineț District",
+      "isoCode": "ED",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Florești District",
+      "isoCode": "FL",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Fălești District",
+      "isoCode": "FA",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Gagauzia",
+      "isoCode": "GA",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Glodeni District",
+      "isoCode": "GL",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Hîncești District",
+      "isoCode": "HI",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ialoveni District",
+      "isoCode": "IA",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Nisporeni District",
+      "isoCode": "NI",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ocnița District",
+      "isoCode": "OC",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Orhei District",
+      "isoCode": "OR",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rezina District",
+      "isoCode": "RE",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Rîșcani District",
+      "isoCode": "RI",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Soroca District",
+      "isoCode": "SO",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Strășeni District",
+      "isoCode": "ST",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Sîngerei District",
+      "isoCode": "SI",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Taraclia District",
+      "isoCode": "TA",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Telenești District",
+      "isoCode": "TE",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Transnistria autonomous territorial unit",
+      "isoCode": "SN",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ungheni District",
+      "isoCode": "UN",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Șoldănești District",
+      "isoCode": "SD",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    },
+    {
+      "name": "Ștefan Vodă District",
+      "isoCode": "SV",
+      "timezones": [
+        {
+          "name": "Europe/Chisinau",
+          "utcOffset": "+03:00",
+          "offsetMinutes": 180,
+          "abbreviation": "EEST",
+          "isDST": true
+        }
+      ]
+    }
+  ]
+}

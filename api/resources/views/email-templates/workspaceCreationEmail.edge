@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <body style="font-family: Arial, sans-serif; background-color: #ffffff; padding: 20px;">
+    <table style="width: 100%; max-width: 600px; margin: auto; border-collapse: collapse;">
+      <tr>
+        <td style="text-align: center; padding-bottom: 20px;">
+          <!-- Logo -->
+          <img src="{{ logoUrl }}" alt="Company Logo" style="height: 30px;" />
+        </td>
+      </tr>
+      <tr>
+        <td style="padding-top: 20px; color: #333333;">
+          <p>
+            Hello <strong>{{ name }}</strong>,
+          </p>
+          <p>
+            Congratulations! Your organisation <strong>{{ organisationName }}</strong>has been created successfully.
+                    <br />
+            Your temporary password is: <strong>{{ password }}</strong>
+            <br />
+            Please use this password to log in and make sure to change it after your first login for security
+                    reasons.
+                    <br />            <br />
+            If you have any questions or need assistance, feel free to contact us at
+                    <a href="mailto:{{ supportEmail }}" style="color: #1a73e8;">{{ supportEmail }}</a>.
+          </p>
+          <p>
+            Best Regards,<br />
+            {{ organisationName }} Team
+          </p>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

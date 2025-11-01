@@ -1,0 +1,14 @@
+{
+  "name": "Pitcairn Island",
+  "isoCode": "PN",
+  "timezones": [
+    {
+      "name": "Pacific/Pitcairn",
+      "utcOffset": "-08:00",
+      "offsetMinutes": -480,
+      "abbreviation": "-08",
+      "isDST": false
+    }
+  ],
+  "states": []
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      Invitation Rejected - Proprly
+    </title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%);
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        color: #1e293b;
+        line-height: 1.6;
+      }
+      
+      .email-container {
+        width: 100%;
+        max-width: 650px;
+        margin: 40px auto;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(59, 130, 246, 0.08);
+        overflow: hidden;
+        position: relative;
+        border: 1px solid rgba(59, 130, 246, 0.1);
+      }
+      
+      .email-header {
+        background: linear-gradient(135deg, #ef4444 0%, #f87171 100%);
+        padding: 40px 40px 30px 40px;
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+        font-size: 28px;
+        border-radius: 20px 20px 0 0;
+      }
+      
+      .logo {
+        margin-bottom: 12px;
+      }
+      
+      .email-content {
+        padding: 40px;
+        background: #ffffff;
+      }
+      
+      .greeting {
+        font-size: 22px;
+        color: #1e293b;
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+      
+      .invitation-details {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        border: 2px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 25px;
+        margin: 25px 0;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.05);
+      }
+      
+      .detail-item {
+        font-size: 16px;
+        margin-bottom: 18px;
+        color: #ef4444;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+      }
+      
+      .detail-label {
+        min-width: 120px;
+        margin-right: 20px;
+        color: #ef4444;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+      }
+      
+      .detail-value {
+        color: #1e293b;
+        font-weight: 600;
+        flex: 1;
+      }
+      
+      .email-footer {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        color: #64748b;
+        text-align: center;
+        padding: 30px 40px;
+        font-size: 14px;
+        position: relative;
+        border-top: 1px solid #e2e8f0;
+        border-radius: 0 0 20px 20px;
+      }
+      
+      @media only screen and (max-width: 600px) {
+        .email-container {
+          margin: 20px;
+          border-radius: 16px;
+        }
+      
+        .email-header,
+        .email-content {
+          padding: 25px;
+        }
+      
+        .email-header {
+          font-size: 22px;
+        }
+      
+        .invitation-details {
+          padding: 15px;
+        }
+      
+        .detail-item {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px 0;
+        }
+      
+        .detail-label {
+          margin-bottom: 8px;
+          min-width: auto;
+        }
+      
+        .email-footer {
+          padding: 18px 10px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="email-container">
+      <div class="email-header">
+        <div class="logo">
+          <img src="{{ logoUrl }}" alt="Proprly Logo" width="120" style="display:block; margin:0 auto;" />
+        </div>
+        ❌ Invitation Rejected
+      </div>
+      <div class="email-content">
+        <div class="greeting">
+          Hello {{ name }},
+        </div>
+        <div class="invitation-details">
+          <div class="detail-item">
+            <span class="detail-label">Name</span>
+            <span class="detail-value">{{ name }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Email</span>
+            <span class="detail-value">{{ email }}</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Type</span>
+            <span class="detail-value">{{ invitationType }}</span>
+          </div>
+          @if(invitationType === 'Branch')
+            <div class="detail-item">
+              <span class="detail-label">🏗️ Branch</span>
+              <span class="detail-value">{{ branchName }}</span>
+            </div>
+          @elseif(invitationType === 'Organisation')
+            <div class="detail-item">
+              <span class="detail-label">🏢 Organisation</span>
+              <span class="detail-value">{{ organisationName }}</span>
+            </div>
+          @elseif(invitationType === 'Property')
+            <div class="detail-item">
+              <span class="detail-label">🏠 Property</span>
+              <span class="detail-value">{{ branchName }} / {{ unitNo }}</span>
+            </div>
+          @elseif(invitationType === 'User')
+            <div class="detail-item">
+              <span class="detail-label">👤 User</span>
+              <span class="detail-value">{{ name }}</span>
+            </div>
+          @endif
+          <div class="detail-item">
+            <span class="detail-label">👑 Role</span>
+            <span class="detail-value">{{ role }}</span>
+          </div>
+        </div>
+        <div class="invitation-details" style="background: #fff0f0; border-color: #ef4444; color: #ef4444;">
+          <p>
+            The invitation has been <strong>rejected</strong>. You may send a new invitation or reach out
+                    directly if needed.
+          </p>
+        </div>
+      </div>
+      <div class="email-footer">
+        <p>
+          &copy; {{ new Date().getFullYear() }} Proprly. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

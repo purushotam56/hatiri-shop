@@ -1,0 +1,197 @@
+{
+  "name": "Nauru",
+  "isoCode": "NR",
+  "timezones": [
+    {
+      "name": "Pacific/Nauru",
+      "utcOffset": "+12:00",
+      "offsetMinutes": 720,
+      "abbreviation": "+12",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Aiwo District",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Anabar District",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Anetan District",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Anibare District",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Baiti District",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Boe District",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Buada District",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Denigomodu District",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ewa District",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ijuw District",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Meneng District",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nibok District",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Uaboe District",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Yaren District",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Pacific/Nauru",
+          "utcOffset": "+12:00",
+          "offsetMinutes": 720,
+          "abbreviation": "+12",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

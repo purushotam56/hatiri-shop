@@ -1,0 +1,80 @@
+{
+  "name": "Tonga",
+  "isoCode": "TO",
+  "timezones": [
+    {
+      "name": "Pacific/Tongatapu",
+      "utcOffset": "+13:00",
+      "offsetMinutes": 780,
+      "abbreviation": "+13",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Haʻapai",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Pacific/Tongatapu",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Niuas",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Pacific/Tongatapu",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tongatapu",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Pacific/Tongatapu",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Vavaʻu",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Pacific/Tongatapu",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "ʻEua",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Pacific/Tongatapu",
+          "utcOffset": "+13:00",
+          "offsetMinutes": 780,
+          "abbreviation": "+13",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

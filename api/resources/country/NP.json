@@ -1,0 +1,262 @@
+{
+  "name": "Nepal",
+  "isoCode": "NP",
+  "timezones": [
+    {
+      "name": "Asia/Kathmandu",
+      "utcOffset": "+05:45",
+      "offsetMinutes": 345,
+      "abbreviation": null,
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bagmati Zone",
+      "isoCode": "BA",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bheri Zone",
+      "isoCode": "BH",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Central Region",
+      "isoCode": "1",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dhaulagiri Zone",
+      "isoCode": "DH",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Eastern Development Region",
+      "isoCode": "4",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Far-Western Development Region",
+      "isoCode": "5",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gandaki Zone",
+      "isoCode": "GA",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Janakpur Zone",
+      "isoCode": "JA",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Karnali Zone",
+      "isoCode": "KA",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kosi Zone",
+      "isoCode": "KO",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lumbini Zone",
+      "isoCode": "LU",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mahakali Zone",
+      "isoCode": "MA",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mechi Zone",
+      "isoCode": "ME",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mid-Western Region",
+      "isoCode": "2",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Narayani Zone",
+      "isoCode": "NA",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rapti Zone",
+      "isoCode": "RA",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sagarmatha Zone",
+      "isoCode": "SA",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Seti Zone",
+      "isoCode": "SE",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Western Region",
+      "isoCode": "3",
+      "timezones": [
+        {
+          "name": "Asia/Kathmandu",
+          "utcOffset": "+05:45",
+          "offsetMinutes": 345,
+          "abbreviation": null,
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

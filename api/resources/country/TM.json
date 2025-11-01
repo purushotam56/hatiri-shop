@@ -1,0 +1,93 @@
+{
+  "name": "Turkmenistan",
+  "isoCode": "TM",
+  "timezones": [
+    {
+      "name": "Asia/Ashgabat",
+      "utcOffset": "+05:00",
+      "offsetMinutes": 300,
+      "abbreviation": "+05",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Ahal Region",
+      "isoCode": "A",
+      "timezones": [
+        {
+          "name": "Asia/Ashgabat",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Ashgabat",
+      "isoCode": "S",
+      "timezones": [
+        {
+          "name": "Asia/Ashgabat",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Balkan Region",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "Asia/Ashgabat",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Daşoguz Region",
+      "isoCode": "D",
+      "timezones": [
+        {
+          "name": "Asia/Ashgabat",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lebap Region",
+      "isoCode": "L",
+      "timezones": [
+        {
+          "name": "Asia/Ashgabat",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mary Region",
+      "isoCode": "M",
+      "timezones": [
+        {
+          "name": "Asia/Ashgabat",
+          "utcOffset": "+05:00",
+          "offsetMinutes": 300,
+          "abbreviation": "+05",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}

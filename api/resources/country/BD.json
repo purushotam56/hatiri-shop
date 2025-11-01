@@ -1,0 +1,925 @@
+{
+  "name": "Bangladesh",
+  "isoCode": "BD",
+  "timezones": [
+    {
+      "name": "Asia/Dhaka",
+      "utcOffset": "+06:00",
+      "offsetMinutes": 360,
+      "abbreviation": "+06",
+      "isDST": false
+    }
+  ],
+  "states": [
+    {
+      "name": "Bagerhat District",
+      "isoCode": "05",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bahadia",
+      "isoCode": "33",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bandarban District",
+      "isoCode": "01",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Barguna District",
+      "isoCode": "02",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Barisal District",
+      "isoCode": "06",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Barisal Division",
+      "isoCode": "A",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bhola District",
+      "isoCode": "07",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Bogra District",
+      "isoCode": "03",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Brahmanbaria District",
+      "isoCode": "04",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chandpur District",
+      "isoCode": "09",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chapai Nawabganj District",
+      "isoCode": "45",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chittagong District",
+      "isoCode": "10",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chittagong Division",
+      "isoCode": "B",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Chuadanga District",
+      "isoCode": "12",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Comilla District",
+      "isoCode": "08",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Cox's Bazar District",
+      "isoCode": "11",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dhaka District",
+      "isoCode": "13",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dhaka Division",
+      "isoCode": "C",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Dinajpur District",
+      "isoCode": "14",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Faridpur District",
+      "isoCode": "15",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Feni District",
+      "isoCode": "16",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gaibandha District",
+      "isoCode": "19",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gazipur District",
+      "isoCode": "18",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Gopalganj District",
+      "isoCode": "17",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Habiganj District",
+      "isoCode": "20",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jamalpur District",
+      "isoCode": "21",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jessore District",
+      "isoCode": "22",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jhalokati District",
+      "isoCode": "25",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Jhenaidah District",
+      "isoCode": "23",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Joypurhat District",
+      "isoCode": "24",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khagrachari District",
+      "isoCode": "29",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khulna District",
+      "isoCode": "27",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Khulna Division",
+      "isoCode": "D",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kishoreganj District",
+      "isoCode": "26",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kurigram District",
+      "isoCode": "28",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Kushtia District",
+      "isoCode": "30",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lakshmipur District",
+      "isoCode": "31",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Lalmonirhat District",
+      "isoCode": "32",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Madaripur District",
+      "isoCode": "36",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Meherpur District",
+      "isoCode": "39",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Moulvibazar District",
+      "isoCode": "38",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Munshiganj District",
+      "isoCode": "35",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mymensingh District",
+      "isoCode": "34",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Mymensingh Division",
+      "isoCode": "H",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Naogaon District",
+      "isoCode": "48",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Narail District",
+      "isoCode": "43",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Narayanganj District",
+      "isoCode": "40",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Natore District",
+      "isoCode": "44",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Netrokona District",
+      "isoCode": "41",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Nilphamari District",
+      "isoCode": "46",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Noakhali District",
+      "isoCode": "47",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pabna District",
+      "isoCode": "49",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Panchagarh District",
+      "isoCode": "52",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Patuakhali District",
+      "isoCode": "51",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Pirojpur District",
+      "isoCode": "50",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rajbari District",
+      "isoCode": "53",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rajshahi District",
+      "isoCode": "54",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rajshahi Division",
+      "isoCode": "E",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rangamati Hill District",
+      "isoCode": "56",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rangpur District",
+      "isoCode": "55",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Rangpur Division",
+      "isoCode": "F",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Satkhira District",
+      "isoCode": "58",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Shariatpur District",
+      "isoCode": "62",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sherpur District",
+      "isoCode": "57",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sirajganj District",
+      "isoCode": "59",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sunamganj District",
+      "isoCode": "61",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sylhet District",
+      "isoCode": "60",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Sylhet Division",
+      "isoCode": "G",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Tangail District",
+      "isoCode": "63",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    },
+    {
+      "name": "Thakurgaon District",
+      "isoCode": "64",
+      "timezones": [
+        {
+          "name": "Asia/Dhaka",
+          "utcOffset": "+06:00",
+          "offsetMinutes": 360,
+          "abbreviation": "+06",
+          "isDST": false
+        }
+      ]
+    }
+  ]
+}
