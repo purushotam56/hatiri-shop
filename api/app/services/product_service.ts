@@ -24,9 +24,12 @@ export default class ProductService {
         currency: data.currency,
         categoryId: data.categoryId || data.category,
         stock: data.stock ?? 0,
+        quantity: data.quantity ?? 0,
         unit: data.unit,
         imageId: data.imageId,
         organisationId: data.organisationId,
+        taxRate: data.taxRate ?? 0,
+        taxType: data.taxType ?? 'percentage',
         isActive: data.isActive ?? true,
         isDeleted: false,
       })
@@ -62,7 +65,26 @@ export default class ProductService {
       const data = this.ctx.request.all()
       const product = await Product.findOrFail(id)
 
-      await product.merge(data).save()
+      // Prepare update data with defaults for optional fields
+      const updateData: any = {
+        name: data.name ?? product.name,
+        description: data.description ?? product.description,
+        sku: data.sku ?? product.sku,
+        price: data.price ?? product.price,
+        currency: data.currency ?? product.currency,
+        categoryId: data.categoryId ?? product.categoryId,
+        stock: data.stock !== undefined ? data.stock : product.stock,
+        quantity: data.quantity !== undefined ? data.quantity : product.quantity,
+        unit: data.unit ?? product.unit,
+        imageId: data.imageId ?? product.imageId,
+        organisationId: data.organisationId ?? product.organisationId,
+        taxRate: data.taxRate !== undefined ? data.taxRate : product.taxRate,
+        taxType: data.taxType ?? product.taxType,
+        isActive: data.isActive !== undefined ? data.isActive : product.isActive,
+        isDeleted: data.isDeleted !== undefined ? data.isDeleted : product.isDeleted,
+      }
+
+      await product.merge(updateData).save()
 
       // update branch pivot if provided (same shape as create)
       if (data.branches && Array.isArray(data.branches)) {

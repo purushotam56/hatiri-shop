@@ -1,217 +1,404 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import { COLORS, GRADIENTS, COMPONENTS } from "@/lib/theme";
+import Link from 'next/link'
+import { motion } from 'framer-motion'
+import { Button } from '@heroui/button'
+import { Card, CardBody } from '@heroui/card'
+import { Chip } from '@heroui/chip'
+import { GRADIENTS, COMPONENTS } from '@/lib/theme'
 
 interface Organisation {
-  id: number;
-  name: string;
-  organisationUniqueCode: string;
-  currency: string;
+  id: number
+  name: string
+  organisationUniqueCode: string
+  currency: string
 }
 
-const storeDetails: Record<string, { emoji: string; color: string; description: string; categories: string[] }> = {
+const storeDetails: Record<
+  string,
+  { emoji: string; gradient: string; description: string; categories: string[] }
+> = {
   VW001: {
-    emoji: "🥬",
-    color: "from-green-400 to-green-600",
-    description: "Fresh vegetables & fruits",
-    categories: ["Vegetables", "Fruits", "Organic"],
+    emoji: '🥬',
+    gradient: 'from-emerald-500 to-green-600',
+    description: 'Fresh vegetables & fruits',
+    categories: ['Vegetables', 'Fruits', 'Organic'],
   },
   KM001: {
-    emoji: "🏪",
-    color: "from-orange-400 to-orange-600",
-    description: "Groceries, dairy & bakery",
-    categories: ["Groceries", "Dairy", "Bakery", "Cosmetics"],
+    emoji: '🏪',
+    gradient: 'from-amber-500 to-orange-600',
+    description: 'Groceries, dairy & bakery',
+    categories: ['Groceries', 'Dairy', 'Bakery', 'Cosmetics'],
   },
   DH001: {
-    emoji: "📱",
-    color: "from-blue-400 to-blue-600",
-    description: "Electronics & mobile accessories",
-    categories: ["Phones", "Computers", "Audio", "Cameras"],
+    emoji: '📱',
+    gradient: 'from-cyan-500 to-blue-600',
+    description: 'Electronics & mobile accessories',
+    categories: ['Phones', 'Computers', 'Audio', 'Cameras'],
   },
   MH001: {
-    emoji: "�",
-    color: "from-purple-400 to-purple-600",
-    description: "Home essentials & cleaning",
-    categories: ["Kitchen", "Home", "Cleaning", "Bedding"],
+    emoji: '🏠',
+    gradient: 'from-violet-500 to-purple-600',
+    description: 'Home essentials & cleaning',
+    categories: ['Kitchen', 'Home', 'Cleaning', 'Bedding'],
   },
-};
+}
 
-const WEB_DOMAIN = process.env.NEXT_PUBLIC_WEB_DOMAIN || "localhost:3000";
+const WEB_DOMAIN = process.env.NEXT_PUBLIC_WEB_DOMAIN || 'localhost:3000'
 
-export function HomePage({
-  organisations,
-}: {
-  organisations: Organisation[];
-}) {
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.2,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: 'easeOut' },
+  },
+}
+
+const glowVariants = {
+  animate: {
+    boxShadow: [
+      '0 0 20px rgba(6, 182, 212, 0.3)',
+      '0 0 40px rgba(6, 182, 212, 0.6)',
+      '0 0 20px rgba(6, 182, 212, 0.3)',
+    ],
+    transition: {
+      duration: 3,
+      repeat: Infinity,
+      ease: 'easeInOut',
+    },
+  },
+}
+
+export function HomePage({ organisations }: { organisations: Organisation[] }) {
   return (
-    <div className={`min-h-screen ${GRADIENTS.page.dark}`}>
+    <div className={`min-h-screen ${GRADIENTS.page.dark} overflow-hidden`}>
+      {/* Animated background gradient orbs */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <motion.div
+          className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"
+          animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute -bottom-40 -left-40 w-80 h-80 bg-violet-500/20 rounded-full blur-3xl"
+          animate={{ x: [0, -100, 0], y: [0, -50, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute top-1/2 right-1/3 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"
+          animate={{ x: [0, -50, 0], y: [0, 100, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+        />
+      </div>
+
       {/* Header */}
-      <header className={COMPONENTS.header.base}>
+      <header className={`${COMPONENTS.header.base}`}>
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <motion.h1
+            className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             🛍️ Hatiri
-          </h1>
-          <nav className="flex gap-4">
-            <Link
-              href="/login"
-              className="px-4 py-2 rounded-lg text-slate-300 hover:text-white transition-colors"
-            >
+          </motion.h1>
+          <motion.nav
+            className="flex gap-3"
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+          >
+            <Button as={Link} href="/login" variant="flat" className="text-slate-300">
               Login
-            </Link>
-            <Link
-              href="/seller"
-              className="px-4 py-2 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 text-white hover:shadow-lg transition-all"
-            >
+            </Button>
+            <Button as={Link} href="/seller" className={COMPONENTS.button.seller}>
               Sell With Us
-            </Link>
-          </nav>
+            </Button>
+          </motion.nav>
         </div>
       </header>
 
-      <div className="max-w-7xl mx-auto px-4 py-12 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 py-12 space-y-16 relative z-10">
         {/* Hero Section */}
-        <div className="text-center space-y-4 py-12">
-          <h2 className="text-5xl font-bold text-white">
-            Your Favorite Stores, One Platform
-          </h2>
-          <p className="text-xl text-slate-400">
-            Quick delivery from multiple stores near you
-          </p>
-        </div>
+        <motion.div className="text-center space-y-6 py-16" variants={containerVariants} initial="hidden" animate="visible">
+          <motion.div variants={itemVariants} className="space-y-4">
+            <motion.span
+              className="text-sm font-semibold text-cyan-400 uppercase tracking-widest inline-block"
+              animate={{ opacity: [0.5, 1, 0.5] }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              ✨ Quick Commerce Made Easy
+            </motion.span>
+            <motion.h2 className="text-6xl md:text-7xl font-bold text-white leading-tight" variants={itemVariants}>
+              Your Favorite{' '}
+              <motion.span
+                className="bg-gradient-to-r from-cyan-400 via-blue-500 to-emerald-400 bg-clip-text text-transparent"
+                animate={{ backgroundPosition: ['0%', '100%', '0%'] }}
+                transition={{ duration: 4, repeat: Infinity }}
+              >
+                Local Stores
+              </motion.span>
+            </motion.h2>
+          </motion.div>
 
-        {/* Available Stores Section */}
-        <div className="space-y-6">
-          <h3 className="text-2xl font-bold text-white">Available Stores</h3>
-          
+          <motion.p className="text-xl md:text-2xl text-slate-300 max-w-2xl mx-auto leading-relaxed" variants={itemVariants}>
+            Shop from multiple local stores near you with lightning-fast delivery in 10 minutes.
+          </motion.p>
+
+          <motion.div className="flex flex-col sm:flex-row gap-4 justify-center pt-4" variants={itemVariants}>
+            <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+              <Button as={Link} href="/products" size="lg" className={COMPONENTS.button.primary}>
+                🛒 Shop Now
+              </Button>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+              <Button as={Link} href="#stores" size="lg" variant="bordered" className="border-cyan-500/50 text-cyan-400">
+                🔍 Explore Stores
+              </Button>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+
+        {/* Features Section */}
+        <motion.div
+          className="grid md:grid-cols-3 gap-6 py-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+        >
+          {[
+            { icon: '⚡', title: 'Lightning Fast', desc: '10 minutes delivery' },
+            { icon: '💰', title: 'Best Prices', desc: 'Compare & save more' },
+            { icon: '🛡️', title: 'Safe & Secure', desc: '100% secure payments' },
+          ].map((feature, i) => (
+            <motion.div key={i} variants={itemVariants} whileHover={{ y: -5, scale: 1.02 }}>
+              <Card className={`${COMPONENTS.card.base} ${COMPONENTS.card.hoverLift}`}>
+                <CardBody className="text-center space-y-4 p-6">
+                  <motion.div
+                    className="text-5xl"
+                    animate={{ y: [0, -8, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+                  >
+                    {feature.icon}
+                  </motion.div>
+                  <div>
+                    <h4 className="text-lg font-bold text-white">{feature.title}</h4>
+                    <p className="text-sm text-slate-400">{feature.desc}</p>
+                  </div>
+                </CardBody>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Stores Grid Section */}
+        <motion.div
+          className="space-y-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: '-100px' }}
+          id="stores"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="space-y-3"
+          >
+            <motion.span
+              className="text-sm font-semibold text-emerald-400 uppercase tracking-widest inline-block"
+              animate={{ opacity: [0.5, 1, 0.5] }}
+              transition={{ duration: 3, repeat: Infinity }}
+            >
+              🏪 Nearby Stores
+            </motion.span>
+            <h3 className="text-4xl md:text-5xl font-bold text-white">
+              Shop from Popular{' '}
+              <motion.span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                Local Stores
+              </motion.span>
+            </h3>
+          </motion.div>
+
           {organisations.length === 0 ? (
-            <p className="text-slate-400 text-center py-12">No stores available</p>
+            <motion.p className="text-slate-400 text-center py-12 text-lg" variants={itemVariants}>
+              No stores available yet
+            </motion.p>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <motion.div
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-100px' }}
+            >
               {organisations
                 .filter((org) => org.organisationUniqueCode)
                 .map((org) => {
-                  const code = org.organisationUniqueCode;
+                  const code = org.organisationUniqueCode
                   const details = storeDetails[code] || {
-                    emoji: "🏬",
-                    color: "from-slate-500 to-slate-700",
+                    emoji: '🏬',
+                    gradient: 'from-slate-600 to-slate-700',
                     description: org.name,
-                  };
-
-                  const storeUrl = `http://${code.toLowerCase()}.${WEB_DOMAIN}`;
+                    categories: [],
+                  }
+                  const storeUrl = `http://${code.toLowerCase()}.${WEB_DOMAIN}`
 
                   return (
-                    <a
+                    <motion.div
                       key={org.id}
-                      href={storeUrl}
-                      className={`group ${COMPONENTS.card.base} overflow-hidden hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1`}
+                      variants={itemVariants}
+                      whileHover={{ y: -8, scale: 1.02 }}
+                      whileTap={{ scale: 0.98 }}
                     >
-                      {/* Store Header */}
-                      <div
-                        className={`bg-gradient-to-br ${details.color} h-32 flex items-center justify-center text-7xl group-hover:scale-110 transition-transform duration-300`}
-                      >
-                        {details.emoji}
-                      </div>
+                      <a href={storeUrl} className="group block h-full">
+                        <Card className={`${COMPONENTS.card.base} overflow-hidden cursor-pointer relative h-full transition-all duration-300`}>
+                          {/* Glow effect */}
+                          <motion.div
+                            className="absolute inset-0 rounded-2xl bg-gradient-to-br from-cyan-500/0 to-emerald-500/0 pointer-events-none"
+                            variants={glowVariants}
+                            animate="animate"
+                            style={{ zIndex: 1 }}
+                          />
 
-                      {/* Store Info */}
-                      <div className="p-6 space-y-4">
-                        {/* Store Name */}
-                        <div>
-                          <h4 className="text-xl font-bold text-white">{org.name}</h4>
-                          <p className="text-sm text-slate-400">{details.description}</p>
-                        </div>
+                          {/* Store Header with Emoji */}
+                          <motion.div
+                            className={`bg-gradient-to-br ${details.gradient} h-40 flex items-center justify-center text-7xl relative z-0`}
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ type: 'spring', stiffness: 300 }}
+                          >
+                            {details.emoji}
+                          </motion.div>
 
-                        {/* Categories */}
-                        <div className="space-y-2">
-                          <p className="text-xs font-semibold text-slate-300 uppercase tracking-wide">Categories</p>
-                          <div className="flex flex-wrap gap-2">
-                            {details.categories.map((cat, idx) => (
-                              <span
-                                key={idx}
-                                className="px-3 py-1 bg-slate-700 text-slate-200 text-xs rounded-full font-medium hover:bg-slate-600 transition-colors"
+                          {/* Store Info */}
+                          <CardBody className="p-6 space-y-4 relative z-10 bg-slate-800/80 backdrop-blur-sm">
+                            <div>
+                              <h4 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
+                                {org.name}
+                              </h4>
+                              <p className="text-sm text-slate-400 mt-1">{details.description}</p>
+                            </div>
+
+                            {/* Categories */}
+                            {details.categories.length > 0 && (
+                              <div className="space-y-2">
+                                <p className="text-xs font-semibold text-slate-300 uppercase tracking-wide">Categories</p>
+                                <motion.div
+                                  className="flex flex-wrap gap-2"
+                                  variants={containerVariants}
+                                  initial="hidden"
+                                  animate="visible"
+                                >
+                                  {details.categories.map((cat, catIdx) => (
+                                    <motion.div key={catIdx} variants={itemVariants} whileHover={{ scale: 1.1, y: -2 }}>
+                                      <Chip
+                                        size="sm"
+                                        className="bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 text-cyan-300 border border-cyan-500/30 cursor-pointer"
+                                      >
+                                        {cat}
+                                      </Chip>
+                                    </motion.div>
+                                  ))}
+                                </motion.div>
+                              </div>
+                            )}
+
+                            {/* Footer */}
+                            <motion.div
+                              className="flex items-center justify-between pt-4 border-t border-slate-700"
+                              initial={{ opacity: 0 }}
+                              whileInView={{ opacity: 1 }}
+                              transition={{ delay: 0.3 }}
+                            >
+                              <span className="text-xs text-emerald-400 font-semibold">⚡ 10 mins</span>
+                              <motion.span
+                                className="text-cyan-400 font-semibold group-hover:text-cyan-300"
+                                animate={{ x: [0, 4, 0] }}
+                                transition={{ duration: 1.5, repeat: Infinity }}
                               >
-                                {cat}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                        
-                        <div className="flex items-center justify-between pt-4 border-t border-slate-700">
-                          <span className="text-xs text-emerald-400 font-medium">
-                            ⚡ 10 mins delivery
-                          </span>
-                          <span className="text-blue-400 font-semibold group-hover:translate-x-1 transition-transform">
-                            Browse →
-                          </span>
-                        </div>
-                      </div>
-                    </a>
-                  );
+                                Browse →
+                              </motion.span>
+                            </motion.div>
+                          </CardBody>
+                        </Card>
+                      </a>
+                    </motion.div>
+                  )
                 })}
-            </div>
+            </motion.div>
           )}
-        </div>
-
-        {/* Features Section */}
-        <div className="grid md:grid-cols-3 gap-6 py-12">
-          {[
-            { icon: "⚡", title: "Fast Delivery", desc: "10 minutes delivery" },
-            { icon: "💰", title: "Best Prices", desc: "Competitive pricing" },
-            { icon: "🛡️", title: "Safe Payment", desc: "Secure transactions" },
-          ].map((feature, i) => (
-            <div key={i} className={`${COMPONENTS.card.base} p-6 text-center space-y-3`}>
-              <div className="text-4xl">{feature.icon}</div>
-              <h4 className="text-lg font-bold text-white">{feature.title}</h4>
-              <p className="text-sm text-slate-400">{feature.desc}</p>
-            </div>
-          ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-slate-700 mt-16 py-12 bg-slate-900/50">
+      <motion.footer className="border-t border-slate-700/50 mt-16 py-12 bg-gradient-to-t from-slate-900/50 to-transparent relative z-20">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h4 className="font-bold text-white mb-4">Hatiri</h4>
-              <p className="text-sm text-slate-400">Quick commerce platform</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-white mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
+          <motion.div
+            className="grid md:grid-cols-4 gap-8 mb-8"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div variants={itemVariants} className="space-y-3">
+              <h4 className="font-bold text-white text-lg">Hatiri</h4>
+              <p className="text-sm text-slate-400">Quick commerce from local stores near you</p>
+            </motion.div>
+            <motion.div variants={itemVariants} className="space-y-3">
+              <h4 className="font-bold text-white text-lg">Company</h4>
+              <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/about" className="hover:text-white transition-colors">
-                    About
+                  <Link href="/about" className="text-slate-400 hover:text-cyan-400 transition-colors duration-300">
+                    About Us
                   </Link>
                 </li>
               </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-white mb-4">Support</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
+            </motion.div>
+            <motion.div variants={itemVariants} className="space-y-3">
+              <h4 className="font-bold text-white text-lg">Support</h4>
+              <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/contact" className="hover:text-white transition-colors">
-                    Contact
+                  <Link href="/contact" className="text-slate-400 hover:text-cyan-400 transition-colors duration-300">
+                    Contact Us
                   </Link>
                 </li>
               </ul>
-            </div>
-            <div>
-              <h4 className="font-bold text-white mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm text-slate-400">
+            </motion.div>
+            <motion.div variants={itemVariants} className="space-y-3">
+              <h4 className="font-bold text-white text-lg">Legal</h4>
+              <ul className="space-y-2 text-sm">
                 <li>
-                  <Link href="/privacy" className="hover:text-white transition-colors">
+                  <Link href="/privacy" className="text-slate-400 hover:text-cyan-400 transition-colors duration-300">
                     Privacy Policy
                   </Link>
                 </li>
               </ul>
-            </div>
-          </div>
-          <div className="border-t border-slate-700 pt-8 text-center text-slate-500 text-sm">
-            © 2025 Hatiri. All rights reserved.
-          </div>
+            </motion.div>
+          </motion.div>
+          <motion.div
+            className="border-t border-slate-700/50 pt-8 text-center text-slate-500 text-sm"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            © 2025 Hatiri. All rights reserved. | Locally curated, globally delivered
+          </motion.div>
         </div>
-      </footer>
+      </motion.footer>
     </div>
-  );
+  )
 }

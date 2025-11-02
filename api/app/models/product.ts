@@ -57,6 +57,9 @@ export default class Product extends BaseModel {
   declare stock: number
 
   @column()
+  declare quantity: number
+
+  @column()
   declare unit: string
 
   @column()
@@ -64,6 +67,12 @@ export default class Product extends BaseModel {
 
   @column()
   declare options: any
+
+  @column()
+  declare taxRate: number
+
+  @column()
+  declare taxType: string
 
   @column()
   declare imageId: number

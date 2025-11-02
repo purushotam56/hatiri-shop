@@ -2,6 +2,7 @@ import type { HttpContext } from '@adonisjs/core/http'
 import { inject } from '@adonisjs/core'
 import ProductService from '#services/product_service'
 import Product from '#models/product'
+import { calculateTax, calculateTotalWithTax } from '#helper/tax_helper'
 
 @inject()
 export default class ProductController {
@@ -73,23 +74,33 @@ export default class ProductController {
         imageId: variants[0].imageId,
         organisationId: variants[0].organisationId,
         isActive: variants[0].isActive,
+        taxRate: variants[0].taxRate,
+        taxType: variants[0].taxType,
         createdAt: variants[0].createdAt,
         updatedAt: variants[0].updatedAt,
         variants: variants.map((v) => {
           // Extract quantity number from unit (e.g., "1kg" -> "1")
-          let quantity = ''
+          let quantityFromUnit = ''
           const quantityMatch = v.unit?.match(/^(\d+)/)
           if (quantityMatch) {
-            quantity = quantityMatch[1]
+            quantityFromUnit = quantityMatch[1]
           }
+
+          const taxAmount = calculateTax(v.price, v.taxRate, v.taxType)
+          const priceWithTax = calculateTotalWithTax(v.price, v.taxRate, v.taxType)
 
           return {
             id: v.id,
             sku: v.sku,
             price: v.price,
             stock: v.stock,
+            quantity: v.quantity,
+            quantityFromUnit: quantityFromUnit,
             unit: v.unit,
-            quantity: quantity,
+            taxRate: v.taxRate,
+            taxType: v.taxType,
+            taxAmount,
+            priceWithTax,
             options: v.options,
           }
         }),
@@ -115,9 +126,16 @@ export default class ProductController {
   async show({ params, response }: HttpContext) {
     try {
       const product = await Product.findOrFail(params.id)
+      const taxAmount = calculateTax(product.price, product.taxRate, product.taxType)
+      const priceWithTax = calculateTotalWithTax(product.price, product.taxRate, product.taxType)
+
       return response.ok({
         message: 'Product fetched successfully',
-        product,
+        product: {
+          ...product.toJSON(),
+          taxAmount,
+          priceWithTax,
+        },
       })
     } catch (error) {
       return response.notFound({
@@ -131,14 +149,22 @@ export default class ProductController {
    */
   async update({ params, request, response }: HttpContext) {
     try {
-      const product = await Product.findOrFail(params.id)
-      const data = request.all()
+      const result = await this.productService.updateOne()
+      if (result.error) {
+        return response.status(result.status || 400).json(result)
+      }
 
-      await product.merge(data).save()
+      const product = result.data
+      const taxAmount = calculateTax(product.price, product.taxRate, product.taxType)
+      const priceWithTax = calculateTotalWithTax(product.price, product.taxRate, product.taxType)
 
       return response.ok({
         message: 'Product updated successfully',
-        product,
+        product: {
+          ...product.toJSON(),
+          taxAmount,
+          priceWithTax,
+        },
       })
     } catch (error) {
       if (error.code === 'E_ROW_NOT_FOUND') {

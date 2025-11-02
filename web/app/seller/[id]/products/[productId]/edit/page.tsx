@@ -6,13 +6,16 @@ import { Button } from '@heroui/button'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Input } from '@heroui/input'
 import Link from 'next/link'
+import { Spinner } from '@heroui/spinner'
 
-export default function SellerCreateProductPage() {
+export default function SellerEditProductPage() {
   const router = useRouter()
   const params = useParams()
   const orgId = params.id
+  const productId = params.productId
   
   const [loading, setLoading] = useState(false)
+  const [fetching, setFetching] = useState(true)
   const [error, setError] = useState('')
   const [categories, setCategories] = useState<Array<{ id: number; name: string }>>([])
   const [form, setForm] = useState({
@@ -21,8 +24,11 @@ export default function SellerCreateProductPage() {
     sku: '',
     price: '',
     stock: '',
+    quantity: '',
     unit: 'piece',
     categoryId: '',
+    taxRate: '',
+    taxType: 'percentage',
   })
 
   useEffect(() => {
@@ -32,25 +38,63 @@ export default function SellerCreateProductPage() {
       return
     }
 
-    // Fetch categories
-    const fetchCategories = async () => {
+    fetchProduct()
+  }, [productId])
+
+  const fetchProduct = async () => {
+    try {
+      setFetching(true)
+      const token = localStorage.getItem('sellerToken')
+      
+      // Fetch product
+      const response = await fetch(`http://localhost:3333/api/products/${productId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+
+      if (!response.ok) {
+        setError('Failed to load product')
+        return
+      }
+
+      const data = await response.json()
+      const product = data.product
+      
+      setForm({
+        name: product.name || '',
+        description: product.description || '',
+        sku: product.sku || '',
+        price: product.price ? product.price.toString() : '',
+        stock: product.stock ? product.stock.toString() : '',
+        quantity: product.quantity ? product.quantity.toString() : '',
+        unit: product.unit || 'piece',
+        categoryId: product.categoryId ? product.categoryId.toString() : '',
+        taxRate: product.taxRate ? product.taxRate.toString() : '',
+        taxType: product.taxType || 'percentage',
+      })
+
+      // Fetch categories
       try {
-        const response = await fetch(`http://localhost:3333/api/categories`, {
+        const catResponse = await fetch(`http://localhost:3333/api/categories`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         })
-        if (response.ok) {
-          const data = await response.json()
-          setCategories(data.data || [])
+        if (catResponse.ok) {
+          const catData = await catResponse.json()
+          setCategories(catData.data || [])
         }
       } catch (err) {
         console.error('Failed to fetch categories', err)
       }
+    } catch (err) {
+      setError('Connection error')
+      console.error(err)
+    } finally {
+      setFetching(false)
     }
-
-    fetchCategories()
-  }, [router])
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -70,23 +114,29 @@ export default function SellerCreateProductPage() {
         return
       }
 
-      const response = await fetch(`http://localhost:3333/api/products`, {
-        method: 'POST',
+      const response = await fetch(`http://localhost:3333/api/products/${productId}`, {
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
         },
         body: JSON.stringify({
-          ...form,
+          name: form.name,
+          description: form.description,
+          sku: form.sku,
           price: parseFloat(form.price),
           stock: parseInt(form.stock),
-          organisationId: orgId,
+          quantity: parseInt(form.quantity) || 0,
+          unit: form.unit,
+          categoryId: form.categoryId ? parseInt(form.categoryId) : null,
+          taxRate: parseFloat(form.taxRate) || 0,
+          taxType: form.taxType,
         }),
       })
 
       if (!response.ok) {
         const data = await response.json()
-        setError(data.message || 'Failed to create product')
+        setError(data.message || 'Failed to update product')
         return
       }
 
@@ -106,6 +156,14 @@ export default function SellerCreateProductPage() {
     router.push('/seller')
   }
 
+  if (fetching) {
+    return (
+      <main className="min-h-screen bg-default-50 flex items-center justify-center">
+        <Spinner />
+      </main>
+    )
+  }
+
   return (
     <main className="min-h-screen bg-default-50 pb-20">
       {/* Header */}
@@ -120,7 +178,7 @@ export default function SellerCreateProductPage() {
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-foreground">New Product</h1>
+              <h1 className="text-2xl font-bold text-foreground">Edit Product</h1>
             </div>
           </div>
           <Button isIconOnly color="default" variant="light" onPress={handleLogout}>
@@ -194,6 +252,16 @@ export default function SellerCreateProductPage() {
               </div>
 
               <div className="grid grid-cols-2 gap-4">
+                <Input
+                  label="Quantity"
+                  name="quantity"
+                  type="number"
+                  placeholder="0"
+                  value={form.quantity}
+                  onChange={handleChange}
+                  disabled={loading}
+                />
+
                 <div>
                   <label className="text-sm font-medium text-foreground block mb-2">Unit</label>
                   <select
@@ -209,7 +277,9 @@ export default function SellerCreateProductPage() {
                     <option value="dozen">Dozen</option>
                   </select>
                 </div>
+              </div>
 
+              <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground block mb-2">Category</label>
                   <select
@@ -227,6 +297,32 @@ export default function SellerCreateProductPage() {
                     ))}
                   </select>
                 </div>
+
+                <Input
+                  label="Tax Rate (%)"
+                  name="taxRate"
+                  type="number"
+                  placeholder="0"
+                  step="0.01"
+                  value={form.taxRate}
+                  onChange={handleChange}
+                  disabled={loading}
+                />
+              </div>
+
+              <div>
+                <label className="text-sm font-medium text-foreground block mb-2">Tax Type</label>
+                <select
+                  name="taxType"
+                  value={form.taxType}
+                  onChange={handleChange}
+                  disabled={loading}
+                  className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground"
+                >
+                  <option value="percentage">Percentage</option>
+                  <option value="fixed">Fixed</option>
+                  <option value="compound">Compound</option>
+                </select>
               </div>
 
               {error && (
@@ -248,7 +344,7 @@ export default function SellerCreateProductPage() {
                   isLoading={loading}
                   disabled={loading}
                 >
-                  Create Product
+                  Save Changes
                 </Button>
               </div>
             </form>
