@@ -2,8 +2,14 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { COLORS, GRADIENTS, COMPONENTS, UTILS } from '@/lib/theme'
+import { apiEndpoints } from '@/lib/api-client'
 import { useSellerStore, type Store } from '@/context/seller-store-context'
+import { Card, CardBody, CardHeader } from '@heroui/card'
+import { Button } from '@heroui/button'
+import { Input } from '@heroui/input'
+import { Tabs, Tab } from '@heroui/tabs'
+import { Chip } from '@heroui/chip'
+import Link from 'next/link'
 
 export default function SellerAuthPage() {
   const router = useRouter()
@@ -45,15 +51,9 @@ export default function SellerAuthPage() {
     setError('')
 
     try {
-      const response = await fetch('http://localhost:3333/api/seller/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(loginForm),
-      })
+      const data = await apiEndpoints.sellerLogin(loginForm);
 
-      const data = await response.json()
-
-      if (!response.ok) {
+      if (!data.user) {
         setError(data.message || 'Login failed')
         return
       }
@@ -83,18 +83,13 @@ export default function SellerAuthPage() {
 
   const selectStoreAndRedirect = async (store: Store, token: string) => {
     try {
-      const response = await fetch('http://localhost:3333/api/seller/select-store', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ storeId: store.id }),
-      })
+      const token = localStorage.getItem('sellerToken') || ''
+      const data = await apiEndpoints.sellerSelectStore(
+        { storeId: store.id },
+        token
+      )
 
-      const data = await response.json()
-
-      if (!response.ok) {
+      if (!data.store) {
         setError(data.message || 'Failed to select store')
         return
       }
@@ -115,15 +110,9 @@ export default function SellerAuthPage() {
     setError('')
 
     try {
-      const response = await fetch('http://localhost:3333/api/seller/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(registerForm),
-      })
+      const data = await apiEndpoints.sellerRegister(registerForm);
 
-      const data = await response.json()
-
-      if (!response.ok) {
+      if (!data.user) {
         setError(data.message || 'Registration failed')
         return
       }
@@ -143,227 +132,173 @@ export default function SellerAuthPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
-      {/* Animated background orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 -left-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: "2s" }}></div>
-      </div>
-
+    <main className="min-h-screen bg-gradient-to-b from-content1 via-content2 to-content1 flex items-center justify-center px-4">
       <div className="relative w-full max-w-md">
-        <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700 rounded-3xl shadow-2xl overflow-hidden">
-            <div className="h-2 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500"></div>
+        <Card className="w-full" shadow="lg">
+          <div className="h-2 bg-gradient-to-r from-warning via-danger to-secondary"></div>
+          
+          <CardHeader className="flex flex-col items-center gap-2 pt-8 pb-6">
+            <div className="text-5xl mb-3">🏪</div>
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-warning to-danger bg-clip-text text-transparent">
+              Hatiri Seller
+            </h1>
+            <p className="text-default-500">Manage your store & orders</p>
+          </CardHeader>
 
-          <div className="p-8">
-            <div className="text-center mb-8">
-              <div className="text-5xl mb-3">🏪</div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-2">
-                Hatiri Seller
-              </h1>
-              <p className="text-slate-400">Manage your store & orders</p>
-            </div>
+          <CardBody className="gap-6">
+            <Tabs
+              fullWidth
+              selectedKey={activeTab}
+              onSelectionChange={(key) => setActiveTab(key as string)}
+              color="warning"
+              variant="bordered"
+            >
+              <Tab key="login" title="Login">
+                <div className="py-4">
+                  <form onSubmit={handleLogin} className="flex flex-col gap-4">
+                    <Input
+                      type="email"
+                      label="Email Address"
+                      placeholder="seller@example.com"
+                      value={loginForm.email}
+                      onChange={(e) => handleLoginChange(e as any)}
+                      name="email"
+                      isDisabled={loading}
+                      isRequired
+                      variant="bordered"
+                    />
 
-            <div className="flex gap-2 mb-6 bg-slate-700/30 p-1 rounded-lg">
-              <button
-                onClick={() => setActiveTab('login')}
-                className={`flex-1 py-2 rounded-md font-semibold transition-all ${
-                  activeTab === 'login'
-                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
-                    : 'text-slate-400 hover:text-slate-200'
-                }`}
-              >
-                Login
-              </button>
-              <button
-                onClick={() => setActiveTab('register')}
-                className={`flex-1 py-2 rounded-md font-semibold transition-all ${
-                  activeTab === 'register'
-                    ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg'
-                    : 'text-slate-400 hover:text-slate-200'
-                }`}
-              >
-                Register
-              </button>
-            </div>
+                    <Input
+                      type="password"
+                      label="Password"
+                      placeholder="Enter your password"
+                      value={loginForm.password}
+                      onChange={(e) => handleLoginChange(e as any)}
+                      name="password"
+                      isDisabled={loading}
+                      isRequired
+                      variant="bordered"
+                    />
 
-            {/* Login Form */}
-            {activeTab === 'login' && (
-              <form onSubmit={handleLogin} className="space-y-5">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-200 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="seller@example.com"
-                    value={loginForm.email}
-                    onChange={handleLoginChange}
-                    disabled={loading}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all disabled:opacity-50"
-                    required
-                  />
+                    {error && (
+                      <Chip color="danger" variant="flat" startContent={<span>⚠️</span>} className="w-full justify-start p-4">
+                        {error}
+                      </Chip>
+                    )}
+
+                    <Button
+                      type="submit"
+                      color="warning"
+                      variant="shadow"
+                      fullWidth
+                      isLoading={loading}
+                      isDisabled={loading}
+                    >
+                      {loading ? "Logging in…" : "Login"}
+                    </Button>
+                  </form>
                 </div>
+              </Tab>
 
-                <div>
-                  <label className="block text-sm font-semibold text-slate-200 mb-2">
-                    Password
-                  </label>
-                  <input
-                    type="password"
-                    name="password"
-                    placeholder="••••••••"
-                    value={loginForm.password}
-                    onChange={handleLoginChange}
-                    disabled={loading}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all disabled:opacity-50"
-                    required
-                  />
-                </div>
+              <Tab key="register" title="Register">
+                <div className="py-4">
 
-                {error && (
-                  <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex gap-3">
-                    <span className="text-xl">⚠️</span>
-                    <p className="text-sm font-semibold text-red-200">{error}</p>
-                  </div>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className={`w-full py-3 rounded-lg font-bold transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed ${COMPONENTS.button.seller}`}
-                >
-                  {loading ? (
-                    <span className="flex items-center justify-center gap-2">
-                      <span className={UTILS.loadingSpinner}></span>
-                      Logging in…
-                    </span>
-                  ) : (
-                    "Login"
-                  )}
-                </button>
-              </form>
-            )}
-
-            {/* Register Form */}
-            {activeTab === 'register' && (
-              <form onSubmit={handleRegister} className="space-y-5">
-                <div>
-                  <label className="block text-sm font-semibold text-slate-200 mb-2">
-                    Organization Code
-                  </label>
-                  <input
+                <form onSubmit={handleRegister} className="flex flex-col gap-4">
+                  <Input
                     type="text"
-                    name="organisationCode"
+                    label="Organization Code"
                     placeholder="e.g., FM001"
                     value={registerForm.organisationCode}
-                    onChange={handleRegisterChange}
-                    disabled={loading}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all disabled:opacity-50"
-                    required
+                    onChange={(e) => handleRegisterChange(e as any)}
+                    name="organisationCode"
+                    isDisabled={loading}
+                    isRequired
+                    variant="bordered"
                   />
-                </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-slate-200 mb-2">
-                    Full Name
-                  </label>
-                  <input
+                  <Input
                     type="text"
-                    name="fullName"
+                    label="Full Name"
                     placeholder="Your full name"
                     value={registerForm.fullName}
-                    onChange={handleRegisterChange}
-                    disabled={loading}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all disabled:opacity-50"
-                    required
+                    onChange={(e) => handleRegisterChange(e as any)}
+                    name="fullName"
+                    isDisabled={loading}
+                    isRequired
+                    variant="bordered"
                   />
-                </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-slate-200 mb-2">
-                    Email Address
-                  </label>
-                  <input
+                  <Input
                     type="email"
-                    name="email"
+                    label="Email Address"
                     placeholder="your@example.com"
                     value={registerForm.email}
-                    onChange={handleRegisterChange}
-                    disabled={loading}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all disabled:opacity-50"
-                    required
+                    onChange={(e) => handleRegisterChange(e as any)}
+                    name="email"
+                    isDisabled={loading}
+                    isRequired
+                    variant="bordered"
                   />
-                </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-slate-200 mb-2">
-                    Mobile Number
-                  </label>
-                  <input
+                  <Input
                     type="tel"
-                    name="mobile"
+                    label="Mobile Number"
                     placeholder="+1 (555) 000-0000"
                     value={registerForm.mobile}
-                    onChange={handleRegisterChange}
-                    disabled={loading}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all disabled:opacity-50"
+                    onChange={(e) => handleRegisterChange(e as any)}
+                    name="mobile"
+                    isDisabled={loading}
+                    variant="bordered"
                   />
-                </div>
 
-                <div>
-                  <label className="block text-sm font-semibold text-slate-200 mb-2">
-                    Password
-                  </label>
-                  <input
+                  <Input
                     type="password"
-                    name="password"
+                    label="Password"
                     placeholder="Choose a strong password"
                     value={registerForm.password}
-                    onChange={handleRegisterChange}
-                    disabled={loading}
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 transition-all disabled:opacity-50"
-                    required
+                    onChange={(e) => handleRegisterChange(e as any)}
+                    name="password"
+                    isDisabled={loading}
+                    isRequired
+                    variant="bordered"
                   />
-                </div>
 
-                {error && (
-                  <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex gap-3">
-                    <span className="text-xl">⚠️</span>
-                    <p className="text-sm font-semibold text-red-200">{error}</p>
-                  </div>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className={`w-full py-3 rounded-lg font-bold transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed ${COMPONENTS.button.seller}`}
-                >
-                  {loading ? (
-                    <span className="flex items-center justify-center gap-2">
-                      <span className={UTILS.loadingSpinner}></span>
-                      Creating…
-                    </span>
-                  ) : (
-                    "Register"
+                  {error && (
+                    <Chip color="danger" variant="flat" startContent={<span>⚠️</span>} className="w-full justify-start p-4">
+                      {error}
+                    </Chip>
                   )}
-                </button>
-              </form>
-            )}
 
-            <div className="mt-6 pt-6 border-t border-slate-600 bg-slate-700/30 rounded-lg p-4 text-xs text-slate-300">
-              <p className="font-semibold text-orange-400 mb-2">Test Account:</p>
-              <p className="mb-1"><span className="text-slate-400">Email:</span> seller1@example.com</p>
-              <p><span className="text-slate-400">Password:</span> Password@123</p>
-            </div>
-          </div>
-        </div>
+                  <Button
+                    type="submit"
+                    color="warning"
+                    variant="shadow"
+                    fullWidth
+                    isLoading={loading}
+                    isDisabled={loading}
+                  >
+                    {loading ? "Creating…" : "Register"}
+                  </Button>
+                </form>
+                </div>
+              </Tab>
+            </Tabs>
 
-        <p className="text-center text-slate-400 text-sm mt-6">
+            <Card className="bg-warning-50 dark:bg-warning-900/20">
+              <CardBody className="text-xs">
+                <p className="font-semibold text-warning mb-2">Test Account:</p>
+                <p className="mb-1"><span className="text-default-500">Email:</span> seller1@example.com</p>
+                <p><span className="text-default-500">Password:</span> Password@123</p>
+              </CardBody>
+            </Card>
+          </CardBody>
+        </Card>
+
+        <p className="text-center text-default-500 text-sm mt-6">
           Want to shop instead?{" "}
-          <a href="/" className="text-orange-400 hover:text-orange-300 font-semibold transition-colors">
+          <Link href="/" className="text-warning hover:text-warning-600 font-semibold transition-colors">
             Go to store
-          </a>
+          </Link>
         </p>
       </div>
     </main>

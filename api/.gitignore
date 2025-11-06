@@ -3,6 +3,9 @@ node_modules
 build
 tmp
 
+# Uploads directory (local storage)
+uploads
+
 # Secrets
 .env
 .env.local

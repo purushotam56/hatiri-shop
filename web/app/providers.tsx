@@ -10,6 +10,8 @@ import { CartProvider } from "@/context/cart-context";
 import { AuthProvider } from "@/context/auth-context";
 import { AddressProvider } from "@/context/address-context";
 import { PanelProvider } from "@/context/panel-context";
+import { ThemeInjector } from "@/components/theme-injector";
+import { DEFAULT_THEME_MODE } from "@/config/theme-config";
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -29,7 +31,13 @@ export function Providers({ children, themeProps }: ProvidersProps) {
 
   return (
     <HeroUIProvider navigate={router.push}>
-      <NextThemesProvider {...themeProps}>
+      <NextThemesProvider 
+        {...themeProps}
+        defaultTheme={themeProps?.defaultTheme || DEFAULT_THEME_MODE}
+        attribute="class"
+        enableSystem
+      >
+        <ThemeInjector />
         <AuthProvider>
           <PanelProvider>
             <AddressProvider>

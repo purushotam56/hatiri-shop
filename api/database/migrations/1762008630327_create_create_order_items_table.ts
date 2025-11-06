@@ -6,7 +6,7 @@ export default class extends BaseSchema {
   async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      
+
       table
         .integer('order_id')
         .unsigned()
@@ -14,7 +14,7 @@ export default class extends BaseSchema {
         .references('id')
         .inTable('orders')
         .onDelete('CASCADE')
-      
+
       table.integer('product_id').unsigned().notNullable()
       table.integer('variant_id').unsigned().nullable()
       table.string('name').notNullable()

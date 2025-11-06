@@ -5,7 +5,14 @@ import User from '#models/user'
 import Address from '#models/address'
 import OrderItem from '#models/order_item'
 
-export type OrderStatus = 'pending' | 'confirmed' | 'preparing' | 'ready' | 'out_for_delivery' | 'delivered' | 'cancelled'
+export type OrderStatus =
+  | 'pending'
+  | 'confirmed'
+  | 'preparing'
+  | 'ready'
+  | 'out_for_delivery'
+  | 'delivered'
+  | 'cancelled'
 
 export default class Order extends BaseModel {
   public static table = 'orders'

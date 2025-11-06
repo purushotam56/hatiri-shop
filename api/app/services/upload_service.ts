@@ -1,7 +1,7 @@
 import { inject } from '@adonisjs/core'
 import { HttpContext } from '@adonisjs/core/http'
 import fs from 'node:fs'
-import S3Service from './s3_service.js'
+import StorageService from './storage_service.js'
 import Upload from '#models/upload'
 import { errorHandler } from '#helper/error_handler'
 import { commonParamsIdValidator } from '#validators/common'
@@ -9,9 +9,9 @@ import { normalizeFileName } from '#helper/upload_helper'
 
 @inject()
 export default class UploadService {
-  s3service
+  storageService
   constructor(protected ctx: HttpContext) {
-    this.s3service = new S3Service()
+    this.storageService = new StorageService()
   }
 
   async create() {
@@ -25,13 +25,18 @@ export default class UploadService {
         const key = 'images/' + normalizeFileName(file.clientName)
 
         const mimeType = file?.headers?.['content-type'] || file.type + '/' + file.extname
-        await this.s3service.uploadFile(fileBuffer, key, mimeType as string)
+        const uploadResult = await this.storageService.uploadFile(
+          fileBuffer,
+          key,
+          mimeType as string
+        )
 
         const res = await Upload.create({
           name: file.clientName,
           key,
           mimeType,
           size: file.size,
+          driver: uploadResult.driver,
         })
         finalUrls.push(res)
       }

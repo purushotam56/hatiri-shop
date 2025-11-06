@@ -8,6 +8,7 @@ import { Spinner } from '@heroui/spinner'
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from '@heroui/table'
 import { Input } from '@heroui/input'
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from '@heroui/modal'
+import { apiEndpoints } from '@/lib/api-client'
 import { useSellerStore } from '@/context/seller-store-context'
 
 interface Product {
@@ -60,22 +61,8 @@ export default function StockManagementPage() {
 
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`http://localhost:3333/api/seller/${orgId}/products`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            localStorage.removeItem('sellerToken')
-            router.push('/seller')
-            return
-          }
-          throw new Error('Failed to fetch products')
-        }
-
-        const data = await response.json()
+        const token = localStorage.getItem('sellerToken');
+        const data = await apiEndpoints.getSellerProducts(String(orgId), token || '');
         setProducts(data.products || [])
       } catch (err) {
         setError('Failed to load products')
@@ -99,21 +86,8 @@ export default function StockManagementPage() {
 
     setUpdating(true)
     try {
-      const token = localStorage.getItem('sellerToken')
-      const response = await fetch(`http://localhost:3333/api/products/${selectedProduct.id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          stock: Number(newStock),
-        }),
-      })
-
-      if (!response.ok) {
-        throw new Error('Failed to update stock')
-      }
+      const token = localStorage.getItem('sellerToken');
+      await apiEndpoints.updateProduct(selectedProduct.id, { stock: Number(newStock) }, token || '');
 
       // Update local state
       setProducts(

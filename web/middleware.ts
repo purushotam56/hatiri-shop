@@ -1,10 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export function middleware(request: NextRequest) {
-  const { hostname, pathname } = request.nextUrl
+  const url = request.nextUrl
+  const { hostname, pathname } = url
+
+  console.log('middleware request URL:', url.toString())
+  console.log('middleware hostname:', hostname)
+  
+  // Check if hostname is an IP address (with or without port) - if so, don't redirect
+  if (/^\d+\.\d+\.\d+\.\d+/.test(hostname)) {
+    console.log('detected as IP, skipping redirect')
+    return NextResponse.next()
+  }
+  
   const parts = hostname.split('.')
   
-  // Handle subdomains like mh001.hitari.localhost
+  // Handle subdomains like vw001.hatiri.localhost
   if (
     parts.length >= 3 &&
     parts[0] !== 'www' &&
@@ -13,9 +24,12 @@ export function middleware(request: NextRequest) {
     const storeCode = parts[0].toUpperCase()
     
     if (pathname === '/' || pathname === '') {
-      const url = request.nextUrl.clone()
-      url.pathname = `/store/${storeCode}`
-      return NextResponse.redirect(url)
+      console.log('redirecting to store:', storeCode)
+      // Redirect to main domain with store path
+      const redirectUrl = request.nextUrl.clone()
+      redirectUrl.hostname = parts.slice(1).join('.') // Remove subdomain to get base domain
+      redirectUrl.pathname = `/store/${storeCode}`
+      return NextResponse.redirect(redirectUrl)
     }
   }
 

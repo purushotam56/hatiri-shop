@@ -7,13 +7,20 @@ export default class SqsService {
   private appEnv = env.get('APP_ENV')
   private QueueUrl = env.get('AWS_SQS_URL')
   constructor() {
+    const accessKeyId = env.get('AWS_ACCESS_KEY_ID')
+    const secretAccessKey = env.get('AWS_SECRET_ACCESS_KEY')
+    const region = env.get('AWS_REGION')
+
     this.sqs = new SQS({
       apiVersion: '2010-03-31',
-      region: env.get('AWS_REGION'),
-      credentials: {
-        accessKeyId: env.get('AWS_ACCESS_KEY_ID'),
-        secretAccessKey: env.get('AWS_SECRET_ACCESS_KEY'),
-      },
+      region: region || 'us-east-1',
+      credentials:
+        accessKeyId && secretAccessKey
+          ? {
+              accessKeyId,
+              secretAccessKey,
+            }
+          : undefined,
     })
   }
 

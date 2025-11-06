@@ -6,6 +6,7 @@ import Branch from './branch.js'
 import Upload from './upload.js'
 import ProductCategory from './product_category.js'
 import OrderItem from './order_item.js'
+import ProductImage from './product_image.js'
 import { PRODUCTS, BRANCH_PRODUCTS } from '#database/constants/table_names'
 
 export default class Product extends BaseModel {
@@ -50,7 +51,9 @@ export default class Product extends BaseModel {
   @column()
   declare categoryId: number
 
-  @belongsTo(() => ProductCategory)
+  @belongsTo(() => ProductCategory, {
+    foreignKey: 'categoryId',
+  })
   declare category: BelongsTo<typeof ProductCategory>
 
   @column()
@@ -69,6 +72,9 @@ export default class Product extends BaseModel {
   declare options: any
 
   @column()
+  declare productGroupId: number | null
+
+  @column()
   declare taxRate: number
 
   @column()
@@ -81,6 +87,28 @@ export default class Product extends BaseModel {
     foreignKey: 'imageId',
   })
   declare image: BelongsTo<typeof Upload>
+
+  @column()
+  declare bannerImageId: number | null
+
+  @belongsTo(() => Upload, {
+    foreignKey: 'bannerImageId',
+  })
+  declare bannerImage: BelongsTo<typeof Upload>
+
+  @column()
+  declare details: string | null
+
+  @hasMany(() => ProductImage, {
+    foreignKey: 'productId',
+  })
+  declare images: HasMany<typeof ProductImage>
+
+  @hasMany(() => Product, {
+    foreignKey: 'productGroupId',
+    localKey: 'productGroupId',
+  })
+  declare variants: HasMany<typeof Product>
 
   @column()
   declare isActive: boolean

@@ -12,6 +12,7 @@ import { Button } from "@heroui/button";
 import { Card, CardBody } from "@heroui/card";
 import { Divider } from "@heroui/divider";
 import { Chip } from "@heroui/chip";
+import { apiEndpoints } from "@/lib/api-client";
 import type { Order } from "@/types/order";
 
 interface OrderDetailModalProps {
@@ -37,14 +38,7 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
       const token = localStorage.getItem("token");
       console.log("Downloading invoice for order:", order.id, "Token:", token?.substring(0, 10) + "...");
       
-      const response = await fetch(
-        `http://localhost:3333/api/orders/${order.id}/invoice`,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await apiEndpoints.getOrderInvoice(order.id, token || "");
 
       console.log("Invoice response status:", response.status);
 
@@ -130,7 +124,7 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
             <div>
               <p className="text-slate-400 text-sm">Total Amount</p>
               <p className="text-white font-semibold text-lg">
-                AED {toNumber(order.totalAmount).toFixed(2)}
+                ₹{toNumber(order.totalAmount).toFixed(0)}
               </p>
             </div>
           </div>
@@ -186,24 +180,24 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
           <div className="space-y-2 text-sm">
             <div className="flex justify-between text-slate-300">
               <span>Subtotal</span>
-              <span>AED {toNumber(order.subtotal).toFixed(2)}</span>
+              <span>₹{toNumber(order.subtotal).toFixed(0)}</span>
             </div>
             {toNumber(order.taxAmount) > 0 && (
               <div className="flex justify-between text-slate-300">
                 <span>Tax</span>
-                <span>AED {toNumber(order.taxAmount).toFixed(2)}</span>
+                <span>₹{toNumber(order.taxAmount).toFixed(0)}</span>
               </div>
             )}
             {toNumber(order.deliveryAmount) > 0 && (
               <div className="flex justify-between text-slate-300">
                 <span>Delivery</span>
-                <span>AED {toNumber(order.deliveryAmount).toFixed(2)}</span>
+                <span>₹{toNumber(order.deliveryAmount).toFixed(0)}</span>
               </div>
             )}
             <Divider className="my-2" />
             <div className="flex justify-between text-white font-bold text-base">
               <span>Total</span>
-              <span>AED {toNumber(order.totalAmount).toFixed(2)}</span>
+              <span>₹{toNumber(order.totalAmount).toFixed(0)}</span>
             </div>
           </div>
 

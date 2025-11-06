@@ -7,6 +7,7 @@ import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from '@heroui/table'
 import Link from 'next/link'
+import { apiEndpoints } from '@/lib/api-client'
 import { useSellerStore } from '@/context/seller-store-context'
 
 interface Order {
@@ -65,22 +66,8 @@ export default function CustomerDetailPage() {
 
     const fetchOrders = async () => {
       try {
-        const response = await fetch(`http://localhost:3333/api/seller/${orgId}/customers/${customerId}/orders`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            localStorage.removeItem('sellerToken')
-            router.push('/seller')
-            return
-          }
-          throw new Error('Failed to fetch orders')
-        }
-
-        const data = await response.json()
+        const token = localStorage.getItem('sellerToken');
+        const data = await apiEndpoints.getSellerCustomerOrders(String(orgId), String(customerId), token || '');
         setOrders(data.orders || [])
       } catch (err) {
         setError('Failed to load orders')

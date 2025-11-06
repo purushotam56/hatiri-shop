@@ -6,6 +6,7 @@ import { Button } from '@heroui/button'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import Link from 'next/link'
+import { apiEndpoints } from '@/lib/api-client'
 import { useSellerStore } from '@/context/seller-store-context'
 
 interface Product {
@@ -55,22 +56,8 @@ export default function SellerProductsPage() {
 
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`http://localhost:3333/api/seller/${orgId}/products`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            localStorage.removeItem('sellerToken')
-            router.push('/seller')
-            return
-          }
-          throw new Error('Failed to fetch products')
-        }
-
-        const data = await response.json()
+        const token = localStorage.getItem('sellerToken');
+        const data = await apiEndpoints.getSellerProducts(String(orgId), token || '');
         setProducts(data.products || [])
       } catch (err) {
         setError('Failed to load products')

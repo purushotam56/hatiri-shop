@@ -25,6 +25,9 @@ export default class ProductCategory extends BaseModel {
   declare description: string
 
   @column()
+  declare emoji: string | null
+
+  @column()
   declare isActive: boolean
 
   @belongsTo(() => Organisation)

@@ -24,6 +24,20 @@ const AddressesController = () => import('#controllers/addresses_controller')
 const CartsController = () => import('#controllers/carts_controller')
 const OrdersController = () => import('#controllers/orders_controller')
 
+// Serve uploaded files (for local storage)
+import app from '@adonisjs/core/services/app'
+import env from '#start/env'
+
+if (env.get('STORAGE_DRIVER') === 'local') {
+  router.get('/uploads/*', async ({ request, response }) => {
+    const filePath = request.param('*').join('/')
+    const uploadDir = env.get('STORAGE_LOCAL_PATH') || 'uploads'
+    const fullPath = app.makePath(uploadDir, filePath)
+
+    return response.download(fullPath)
+  })
+}
+
 router
   .group(() => {
     router
@@ -74,7 +88,10 @@ router
       .post('branch/:branchId/user', [BranchsController, 'createBranchUser'])
       .use(middleware.auth({ guards: ['adminapi', 'api'] }))
     router
-      .get('branch/:branchId/users-with-tradecode', [BranchsController, 'findBranchUserWithTradeCode'])
+      .get('branch/:branchId/users-with-tradecode', [
+        BranchsController,
+        'findBranchUserWithTradeCode',
+      ])
       .use(middleware.auth({ guards: ['adminapi', 'api'] }))
 
     router.post('login', [AuthController, 'login'])
@@ -115,7 +132,9 @@ router
       .use('update', middleware.auth({ guards: ['api', 'adminapi'] }))
       .use(['destroy', 'index', 'show', 'store'], middleware.auth({ guards: ['adminapi'] }))
 
-    router.put('admin/:id', [UsersController, 'update']).use(middleware.auth({ guards: ['adminapi'] }))
+    router
+      .put('admin/:id', [UsersController, 'update'])
+      .use(middleware.auth({ guards: ['adminapi'] }))
 
     router
       .post('account/register-device-token', [AccountsController, 'registerUserDeviceToken'])
@@ -125,15 +144,33 @@ router
     router
       .group(() => {
         router.post('/login', [AdminController, 'adminLogin'])
-        router.get('/stats', [AdminController, 'getStats']).use(middleware.auth({ guards: ['adminapi'] }))
-        router.get('/organisations', [AdminController, 'listOrganisations']).use(middleware.auth({ guards: ['adminapi'] }))
-        router.post('/organisations', [AdminController, 'createOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
-        router.get('/organisations/:id', [AdminController, 'getOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
-        router.put('/organisations/:id', [AdminController, 'updateOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
-        router.delete('/organisations/:id', [AdminController, 'deleteOrganisation']).use(middleware.auth({ guards: ['adminapi'] }))
-        router.get('/sellers', [AdminController, 'getSellers']).use(middleware.auth({ guards: ['adminapi'] }))
-        router.get('/orders', [AdminController, 'getOrders']).use(middleware.auth({ guards: ['adminapi'] }))
-        router.get('/products', [AdminController, 'getProducts']).use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .get('/stats', [AdminController, 'getStats'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .get('/organisations', [AdminController, 'listOrganisations'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .post('/organisations', [AdminController, 'createOrganisation'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .get('/organisations/:id', [AdminController, 'getOrganisation'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .put('/organisations/:id', [AdminController, 'updateOrganisation'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .delete('/organisations/:id', [AdminController, 'deleteOrganisation'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .get('/sellers', [AdminController, 'getSellers'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .get('/orders', [AdminController, 'getOrders'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .get('/products', [AdminController, 'getProducts'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
       })
       .prefix('/admin')
 
@@ -145,15 +182,33 @@ router
       .group(() => {
         router.post('/register', [SellerController, 'registerSeller'])
         router.post('/login', [SellerController, 'sellerLogin'])
-        router.get('/stores', [SellerController, 'getSellerStores']).use(middleware.auth({ guards: ['api'] }))
-        router.post('/select-store', [SellerController, 'selectStore']).use(middleware.auth({ guards: ['api'] }))
-        router.get('/:id/dashboard', [SellerController, 'getDashboard']).use(middleware.auth({ guards: ['api'] }))
-        router.get('/:id/orders', [SellerController, 'getOrders']).use(middleware.auth({ guards: ['api'] }))
-        router.get('/:id/orders/:orderId', [SellerController, 'getOrderDetail']).use(middleware.auth({ guards: ['api'] }))
-        router.patch('/:id/orders/:orderId/status', [SellerController, 'updateOrderStatus']).use(middleware.auth({ guards: ['api'] }))
-        router.get('/:id/customers', [SellerController, 'getCustomers']).use(middleware.auth({ guards: ['api'] }))
-        router.get('/:id/customers/:customerId/orders', [SellerController, 'getCustomerOrders']).use(middleware.auth({ guards: ['api'] }))
-        router.get('/:id/products', [SellerController, 'getProducts']).use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/stores', [SellerController, 'getSellerStores'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .post('/select-store', [SellerController, 'selectStore'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/:id/dashboard', [SellerController, 'getDashboard'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/:id/orders', [SellerController, 'getOrders'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/:id/orders/:orderId', [SellerController, 'getOrderDetail'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .patch('/:id/orders/:orderId/status', [SellerController, 'updateOrderStatus'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/:id/customers', [SellerController, 'getCustomers'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/:id/customers/:customerId/orders', [SellerController, 'getCustomerOrders'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/:id/products', [SellerController, 'getProducts'])
+          .use(middleware.auth({ guards: ['api'] }))
       })
       .prefix('/seller')
 
@@ -170,8 +225,10 @@ router
       .use(['store', 'update', 'destroy'], middleware.auth({ guards: ['api', 'adminapi'] }))
 
     // Get categories for a specific organisation
-    router
-      .get('organisation/:organisationId/categories', [ProductCategoryController, 'getByOrganisation'])
+    router.get('organisation/:organisationId/categories', [
+      ProductCategoryController,
+      'getByOrganisation',
+    ])
 
     // Address routes - authenticated only
     router

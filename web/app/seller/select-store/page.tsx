@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
-import { COMPONENTS } from '@/lib/theme'
+import { Button } from '@heroui/button'
+import { Spinner } from '@heroui/spinner'
+import { apiEndpoints } from '@/lib/api-client'
 import { useSellerStore, type Store } from '@/context/seller-store-context'
 
 export default function SelectStorePage() {
@@ -35,18 +37,9 @@ export default function SelectStorePage() {
         return
       }
 
-      const response = await fetch('http://localhost:3333/api/seller/select-store', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ storeId: selectedStoreId }),
-      })
+      const data = await apiEndpoints.sellerSelectStore({ storeId: selectedStoreId }, token);
 
-      const data = await response.json()
-
-      if (!response.ok) {
+      if (!data.store) {
         setError(data.message || 'Failed to select store')
         return
       }
@@ -76,24 +69,24 @@ export default function SelectStorePage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
+    <main className="min-h-screen bg-gradient-to-b from-content1 via-background to-content1 flex items-center justify-center px-4">
       {/* Animated background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 -left-20 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute top-20 -left-20 w-96 h-96 bg-warning/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-warning/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: "2s" }}></div>
       </div>
 
       <div className="relative w-full max-w-2xl">
-        <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700 rounded-3xl shadow-2xl overflow-hidden">
-          <div className="h-2 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500"></div>
+        <div className="bg-content2/50 backdrop-blur-xl border border-divider rounded-3xl shadow-2xl overflow-hidden">
+          <div className="h-2 bg-gradient-to-r from-warning via-warning-500 to-warning-600"></div>
 
           <div className="p-8">
             <div className="text-center mb-8">
               <div className="text-5xl mb-3">🏪</div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent mb-2">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-warning to-warning-600 bg-clip-text text-transparent mb-2">
                 Select Your Store
               </h1>
-              <p className="text-slate-400">Choose which store you'd like to manage</p>
+              <p className="text-default-500">Choose which store you'd like to manage</p>
             </div>
 
             {/* Store Selection Grid */}
@@ -104,22 +97,22 @@ export default function SelectStorePage() {
                   onClick={() => setSelectedStoreId(store.id)}
                   className={`p-4 rounded-xl border-2 cursor-pointer transition-all transform hover:scale-105 ${
                     selectedStoreId === store.id
-                      ? 'border-orange-500 bg-orange-500/20 shadow-lg shadow-orange-500/50'
-                      : 'border-slate-600 bg-slate-700/30 hover:border-slate-500'
+                      ? 'border-warning bg-warning/20 shadow-lg shadow-warning/50'
+                      : 'border-default-300 bg-content2 hover:border-default-400'
                   }`}
                 >
                   <div className="flex items-start justify-between mb-2">
                     <div>
-                      <h3 className="font-semibold text-white text-lg">{store.name}</h3>
-                      <p className="text-sm text-slate-400">Code: {store.code}</p>
+                      <h3 className="font-semibold text-foreground text-lg">{store.name}</h3>
+                      <p className="text-sm text-default-500">Code: {store.code}</p>
                     </div>
                     {selectedStoreId === store.id && (
-                      <div className="text-xl">✓</div>
+                      <div className="text-xl text-warning">✓</div>
                     )}
                   </div>
                   {store.currency && (
-                    <div className="text-xs text-slate-300 mt-2">
-                      Currency: <span className="text-orange-400 font-semibold">{store.currency}</span>
+                    <div className="text-xs text-default-600 mt-2">
+                      Currency: <span className="text-warning font-semibold">{store.currency}</span>
                     </div>
                   )}
                 </div>
@@ -127,39 +120,38 @@ export default function SelectStorePage() {
             </div>
 
             {error && (
-              <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex gap-3 mb-6">
+              <div className="p-4 bg-danger/20 border border-danger/50 rounded-lg flex gap-3 mb-6">
                 <span className="text-xl">⚠️</span>
-                <p className="text-sm font-semibold text-red-200">{error}</p>
+                <p className="text-sm font-semibold text-danger-200">{error}</p>
               </div>
             )}
 
             {/* Action Buttons */}
             <div className="space-y-3">
-              <button
+              <Button
                 onClick={handleSelectStore}
                 disabled={loading || !selectedStoreId}
-                className={`w-full py-3 rounded-lg font-bold transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed ${COMPONENTS.button.seller}`}
+                color="warning"
+                size="lg"
+                className="w-full font-bold"
+                isLoading={loading}
+                spinner={<Spinner size="sm" color="current" />}
               >
-                {loading ? (
-                  <span className="flex items-center justify-center gap-2">
-                    <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-                    Loading Dashboard…
-                  </span>
-                ) : (
-                  'Continue to Dashboard'
-                )}
-              </button>
+                {loading ? 'Loading Dashboard…' : 'Continue to Dashboard'}
+              </Button>
 
-              <button
+              <Button
                 onClick={handleLogout}
                 disabled={loading}
-                className="w-full py-3 rounded-lg font-semibold text-slate-200 bg-slate-700/50 border border-slate-600 hover:bg-slate-700 transition-all disabled:opacity-50"
+                variant="bordered"
+                size="lg"
+                className="w-full font-semibold"
               >
                 Logout
-              </button>
+              </Button>
             </div>
 
-            <p className="text-center text-slate-500 text-xs mt-4">
+            <p className="text-center text-default-500 text-xs mt-4">
               You have access to {stores.length} store{stores.length !== 1 ? 's' : ''}
             </p>
           </div>

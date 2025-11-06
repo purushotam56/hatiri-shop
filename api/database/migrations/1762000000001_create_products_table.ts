@@ -1,4 +1,10 @@
-import { ORGANISATION, BRANCHS, UPLOADS, PRODUCTS, BRANCH_PRODUCTS } from '#database/constants/table_names'
+import {
+  ORGANISATION,
+  BRANCHS,
+  UPLOADS,
+  PRODUCTS,
+  BRANCH_PRODUCTS,
+} from '#database/constants/table_names'
 import { BaseSchema } from '@adonisjs/lucid/schema'
 
 export default class extends BaseSchema {
@@ -36,12 +42,7 @@ export default class extends BaseSchema {
 
       table.json('options')
 
-      table
-        .integer('image_id')
-        .unsigned()
-        .references('id')
-        .inTable(UPLOADS)
-        .onDelete('SET NULL')
+      table.integer('image_id').unsigned().references('id').inTable(UPLOADS).onDelete('SET NULL')
 
       table.boolean('is_active').defaultTo(true)
       table.boolean('is_deleted').defaultTo(false)

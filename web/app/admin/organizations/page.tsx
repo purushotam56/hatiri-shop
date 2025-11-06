@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import { Button } from '@heroui/button'
+import { apiEndpoints } from '@/lib/api-client'
 import { AdminHeader } from '@/components/headers/admin-header'
 import { useAdmin } from '@/context/admin-context'
 
@@ -41,20 +42,8 @@ export default function OrganizationsPage() {
 
     const fetchOrgs = async () => {
       try {
-        const response = await fetch('http://localhost:3333/api/admin/organisations', {
-          headers: { Authorization: `Bearer ${token}` },
-        })
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            clearAdmin()
-            router.push('/admin')
-            return
-          }
-          throw new Error('Failed to fetch organizations')
-        }
-
-        const data = await response.json()
+        const token = localStorage.getItem('adminToken');
+        const data = await apiEndpoints.getAdminOrganisations(token || '');
         setOrganisations(data.organisations || [])
       } catch (err) {
         setError('Failed to load organizations')

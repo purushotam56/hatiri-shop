@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, ReactNode, useState, useEffect } from "react";
 import { useAuth } from "./auth-context";
+import { apiEndpoints } from "@/lib/api-client";
 
 export interface Address {
   id?: number;
@@ -37,8 +38,6 @@ export function AddressProvider({ children }: { children: ReactNode }) {
   const [isLoading, setIsLoading] = useState(false);
   const [mounted, setMounted] = useState(false);
 
-  const API_URL = "http://localhost:3333/api";
-
   // Load local addresses on mount
   useEffect(() => {
     setMounted(true);
@@ -73,27 +72,13 @@ export function AddressProvider({ children }: { children: ReactNode }) {
     }
   }, [localAddresses, mounted, isLoggedIn]);
 
-  const getAuthHeaders = () => {
-    const token = localStorage.getItem("token");
-    return {
-      "Content-Type": "application/json",
-      ...(token && { Authorization: `Bearer ${token}` }),
-    };
-  };
-
   const fetchAddresses = async () => {
     if (!isLoggedIn) return;
 
     setIsLoading(true);
     try {
-      const response = await fetch(`${API_URL}/addresses`, {
-        method: "GET",
-        headers: getAuthHeaders(),
-      });
-
-      if (!response.ok) throw new Error("Failed to fetch addresses");
-
-      const data = await response.json();
+      const token = localStorage.getItem("token");
+      const data = await apiEndpoints.getAddresses(token || "");
       // Backend returns { addresses: [...] }
       const addressArray = Array.isArray(data) ? data : (data.addresses || []);
       setAddresses(addressArray);
@@ -114,12 +99,9 @@ export function AddressProvider({ children }: { children: ReactNode }) {
 
     setIsLoading(true);
     try {
+      const token = localStorage.getItem("token");
       for (const addr of localAddresses) {
-        await fetch(`${API_URL}/addresses`, {
-          method: "POST",
-          headers: getAuthHeaders(),
-          body: JSON.stringify(addr),
-        });
+        await apiEndpoints.createAddress(addr, token || "");
       }
       // Clear local addresses and fetch from backend
       setLocalAddresses([]);
@@ -138,15 +120,9 @@ export function AddressProvider({ children }: { children: ReactNode }) {
       // Backend mode
       setIsLoading(true);
       try {
-        const response = await fetch(`${API_URL}/addresses`, {
-          method: "POST",
-          headers: getAuthHeaders(),
-          body: JSON.stringify(address),
-        });
+        const token = localStorage.getItem("token");
+        const newAddr = await apiEndpoints.createAddress(address, token || "");
 
-        if (!response.ok) throw new Error("Failed to add address");
-
-        const newAddr = await response.json();
         const updatedAddresses = addresses.map((a) => ({
           ...a,
           isDefault: false,
@@ -180,15 +156,9 @@ export function AddressProvider({ children }: { children: ReactNode }) {
       // Backend mode
       setIsLoading(true);
       try {
-        const response = await fetch(`${API_URL}/addresses/${id}`, {
-          method: "PATCH",
-          headers: getAuthHeaders(),
-          body: JSON.stringify(address),
-        });
+        const token = localStorage.getItem("token");
+        const updatedAddr = await apiEndpoints.updateAddress(id, address, token || "");
 
-        if (!response.ok) throw new Error("Failed to update address");
-
-        const updatedAddr = await response.json();
         const updatedAddresses = addresses.map((a) =>
           a.id === id ? updatedAddr : { ...a, isDefault: false }
         );
@@ -218,12 +188,8 @@ export function AddressProvider({ children }: { children: ReactNode }) {
       // Backend mode
       setIsLoading(true);
       try {
-        const response = await fetch(`${API_URL}/addresses/${id}`, {
-          method: "DELETE",
-          headers: getAuthHeaders(),
-        });
-
-        if (!response.ok) throw new Error("Failed to delete address");
+        const token = localStorage.getItem("token");
+        await apiEndpoints.deleteAddress(id, token || "");
 
         const updated = addresses.filter((a) => a.id !== id);
         setAddresses(updated);

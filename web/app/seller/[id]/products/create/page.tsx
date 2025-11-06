@@ -6,6 +6,10 @@ import { Button } from '@heroui/button'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Input } from '@heroui/input'
 import Link from 'next/link'
+import { apiEndpoints, apiUpload } from '@/lib/api-client'
+import RichTextEditor from '@/components/rich-text-editor'
+import ImageUpload from '@/components/image-upload'
+import MultipleImageUpload from '@/components/multiple-image-upload'
 
 export default function SellerCreateProductPage() {
   const router = useRouter()
@@ -23,7 +27,12 @@ export default function SellerCreateProductPage() {
     stock: '',
     unit: 'piece',
     categoryId: '',
+    details: '',
+    productGroupId: '',
+    options: '',
   })
+  const [bannerImage, setBannerImage] = useState<File | null>(null)
+  const [productImages, setProductImages] = useState<File[]>([])
 
   useEffect(() => {
     const token = localStorage.getItem('sellerToken')
@@ -32,25 +41,18 @@ export default function SellerCreateProductPage() {
       return
     }
 
-    // Fetch categories
+    // Fetch categories for this organization
     const fetchCategories = async () => {
       try {
-        const response = await fetch(`http://localhost:3333/api/categories`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-        if (response.ok) {
-          const data = await response.json()
-          setCategories(data.data || [])
-        }
+        const data = await apiEndpoints.getOrganisationCategories(orgId as string);
+        setCategories(data.data || [])
       } catch (err) {
         console.error('Failed to fetch categories', err)
       }
     }
 
     fetchCategories()
-  }, [router])
+  }, [router, orgId])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -70,22 +72,39 @@ export default function SellerCreateProductPage() {
         return
       }
 
-      const response = await fetch(`http://localhost:3333/api/products`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          ...form,
-          price: parseFloat(form.price),
-          stock: parseInt(form.stock),
-          organisationId: orgId,
-        }),
+      // Create FormData for file uploads
+      const formData = new FormData()
+      formData.append('name', form.name)
+      formData.append('description', form.description)
+      formData.append('sku', form.sku)
+      formData.append('price', form.price)
+      formData.append('stock', form.stock)
+      formData.append('unit', form.unit)
+      formData.append('categoryId', form.categoryId)
+      formData.append('organisationId', orgId as string)
+      formData.append('details', form.details)
+      
+      // Add optional fields
+      if (form.productGroupId) {
+        formData.append('productGroupId', form.productGroupId)
+      }
+      if (form.options) {
+        formData.append('options', form.options)
+      }
+
+      // Add banner image if present
+      if (bannerImage) {
+        formData.append('bannerImage', bannerImage)
+      }
+
+      // Add product images if present
+      productImages.forEach((image, index) => {
+        formData.append(`productImages`, image)
       })
 
-      if (!response.ok) {
-        const data = await response.json()
+      const data = await apiUpload('/products', formData, token)
+
+      if (data.error) {
         setError(data.message || 'Failed to create product')
         return
       }
@@ -150,11 +169,22 @@ export default function SellerCreateProductPage() {
                 <label className="text-sm font-medium text-foreground">Description</label>
                 <textarea
                   name="description"
-                  placeholder="Describe your product"
+                  placeholder="Brief description for product listing"
                   value={form.description}
                   onChange={handleChange}
                   disabled={loading}
-                  className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-24"
+                  className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-20"
+                />
+              </div>
+
+              {/* Rich Text Editor for Details */}
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-foreground">Product Details (Rich Text)</label>
+                <RichTextEditor
+                  content={form.details}
+                  onChange={(content) => setForm(prev => ({ ...prev, details: content }))}
+                  placeholder="Enter detailed product information, specifications, ingredients, etc."
+                  disabled={loading}
                 />
               </div>
 
@@ -228,6 +258,50 @@ export default function SellerCreateProductPage() {
                   </select>
                 </div>
               </div>
+
+              {/* Product Group ID (optional) */}
+              <Input
+                label="Product Group ID (optional)"
+                name="productGroupId"
+                type="number"
+                placeholder="Leave empty for new group"
+                value={form.productGroupId}
+                onChange={handleChange}
+                disabled={loading}
+                description="Group similar products together (e.g., different sizes of same product)"
+              />
+
+              {/* Product Options (optional) */}
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-foreground">Options (optional)</label>
+                <textarea
+                  name="options"
+                  placeholder='e.g., ["Color: Red", "Size: Large", "Material: Cotton"]'
+                  value={form.options}
+                  onChange={handleChange}
+                  disabled={loading}
+                  className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-20 font-mono text-sm"
+                />
+                <p className="text-xs text-foreground/60">Enter as JSON array format or comma-separated values</p>
+              </div>
+
+              {/* Banner Image Upload */}
+              <ImageUpload
+                label="Banner Image"
+                value={null}
+                onChange={setBannerImage}
+                disabled={loading}
+                aspectRatio="landscape"
+              />
+
+              {/* Multiple Product Images */}
+              <MultipleImageUpload
+                label="Product Images"
+                value={productImages}
+                onChange={setProductImages}
+                disabled={loading}
+                maxImages={10}
+              />
 
               {error && (
                 <div className="p-3 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-lg text-sm">

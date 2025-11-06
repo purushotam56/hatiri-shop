@@ -2,6 +2,10 @@
 
 import { useRouter } from "next/navigation";
 import React from "react";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
+import { Button } from "@heroui/button";
+import { Chip } from "@heroui/chip";
+import { Image } from "@heroui/image";
 
 interface Product {
   id: number;
@@ -13,6 +17,21 @@ interface Product {
   sku?: string;
   unit?: string;
   category?: string;
+  bannerImage?: {
+    id: number;
+    url: string;
+  };
+  image?: {
+    id: number;
+    url: string;
+  };
+  images?: Array<{
+    id: number;
+    upload: {
+      id: number;
+      url: string;
+    };
+  }>;
 }
 
 interface ProductGroup {
@@ -60,98 +79,116 @@ export function ProductCard({
 
   const isOutOfStock =
     group.variants.length > 0 && group.variants.every((v) => v.stock === 0);
+  
+  const currentStock = selectedVariant?.stock || product.stock;
+  const isLowStock = currentStock < 5 && currentStock > 0;
 
   return (
-    <div className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all border border-slate-200 hover:border-blue-400">
+    <Card
+      isPressable
+      isHoverable
+      shadow="sm"
+      className="group hover:shadow-lg transition-shadow"
+      onPress={() => router.push(`/product/${product.id}`)}
+    >
       {/* Product Image */}
-      <div
-        onClick={() => router.push(`/product/${product.id}`)}
-        className="relative bg-gradient-to-br from-slate-100 via-slate-50 to-slate-100 h-40 flex items-center justify-center overflow-hidden border-b border-slate-200 cursor-pointer"
-      >
-        <div className="text-6xl group-hover:scale-125 transition-transform duration-300">
-          {getCategoryEmoji(product.name)}
-        </div>
-        {(selectedVariant?.stock || product.stock) === 0 && (
-          <div className="absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm">
-            <span className="text-white font-bold text-sm">OUT OF STOCK</span>
-          </div>
-        )}
-        {(selectedVariant?.stock || product.stock) < 5 &&
-          (selectedVariant?.stock || product.stock) > 0 && (
-            <div className="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-              Only {selectedVariant?.stock || product.stock} left!
+      <CardHeader className="p-0">
+        <div className="relative bg-gradient-to-br from-default-100 via-default-50 to-default-100 w-full h-40 flex items-center justify-center overflow-hidden">
+          {product.bannerImage?.url || product.image?.url || (product.images && product.images[0]?.upload?.url) ? (
+            <Image
+              src={product.bannerImage?.url || product.image?.url || (product.images && product.images[0]?.upload?.url) || ''}
+              alt={product.name}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+              removeWrapper
+            />
+          ) : (
+            <div className="text-6xl group-hover:scale-125 transition-transform duration-300">
+              {getCategoryEmoji(product.name)}
             </div>
           )}
-      </div>
+          
+          {/* Out of Stock Overlay */}
+          {currentStock === 0 && (
+            <div className="absolute inset-0 bg-black/60 flex items-center justify-center backdrop-blur-sm">
+              <Chip color="default" variant="flat" size="sm" className="text-white bg-black/50">
+                OUT OF STOCK
+              </Chip>
+            </div>
+          )}
+          
+          {/* Low Stock Badge */}
+          {isLowStock && (
+            <Chip 
+              color="danger" 
+              variant="solid" 
+              size="sm"
+              className="absolute top-3 right-3"
+            >
+              Only {currentStock} left!
+            </Chip>
+          )}
+        </div>
+      </CardHeader>
 
       {/* Product Info */}
-      <div className="p-4">
-        <h3
-          onClick={() => router.push(`/product/${product.id}`)}
-          className="font-bold text-slate-900 text-sm line-clamp-2 mb-2 group-hover:text-blue-600 transition-colors cursor-pointer"
-        >
+      <CardBody className="gap-2">
+        <h3 className="font-bold text-sm line-clamp-2 group-hover:text-primary transition-colors">
           {product.name}
         </h3>
 
         {/* Variants Display */}
         {group.variants.length > 1 && (
-          <div className="mb-3 flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1" onClick={(e) => e.stopPropagation()}>
             {group.variants.map((variant) => (
-              <button
+              <Button
                 key={variant.id}
-                type="button"
-                onClick={() => onSelectVariant(product.id, variant)}
-                className={`px-2 py-1 text-xs rounded-full font-semibold transition-all ${
-                  selectedOptions[product.id]?.id === variant.id
-                    ? "bg-blue-600 text-white shadow-md"
-                    : "bg-slate-200 text-slate-700 hover:bg-slate-300"
-                } ${variant.stock === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
-                disabled={variant.stock === 0}
+                variant={selectedOptions[product.id]?.id === variant.id ? "solid" : "flat"}
+                color={selectedOptions[product.id]?.id === variant.id ? "primary" : "default"}
+                size="sm"
+                radius="full"
+                isDisabled={variant.stock === 0}
+                onPress={() => onSelectVariant(product.id, variant)}
+                className="min-w-unit-12 h-unit-6 text-xs"
               >
                 {variant.unit || variant.name.split("-").pop()}
-              </button>
+              </Button>
             ))}
           </div>
         )}
 
         {(selectedVariant?.unit || product.unit) && (
-          <p className="text-xs text-slate-500 mb-3 font-medium">
+          <p className="text-xs text-default-500">
             {selectedVariant?.unit || product.unit}
           </p>
         )}
 
-        {/* Price */}
-        <div className="flex items-baseline justify-between mb-4">
-          <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
+        {/* Price and SKU */}
+        <div className="flex items-baseline justify-between">
+          <span className="text-2xl font-bold text-primary">
             ₹{parseFloat(
               String(selectedVariant?.price || product.price)
             ).toFixed(0)}
           </span>
           {(selectedVariant?.sku || product.sku) && (
-            <span className="text-xs text-slate-400 font-mono">
+            <Chip variant="light" size="sm" className="text-xs font-mono">
               {selectedVariant?.sku || product.sku}
-            </span>
+            </Chip>
           )}
         </div>
+      </CardBody>
 
-        {/* Add Button */}
-        <button
-          type="button"
-          onClick={handleAddClick}
-          disabled={
-            (group.variants.length > 1
-              ? (selectedOptions[product.id]?.stock || 0) === 0
-              : product.stock === 0) || isOutOfStock
-          }
-          className={`w-full py-2.5 rounded-full font-bold text-sm transition-all transform hover:scale-105 shadow-md ${
-            isOutOfStock
-              ? "bg-slate-200 text-slate-500 cursor-not-allowed opacity-50"
-              : "bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 active:scale-95"
-          }`}
+      {/* Add Button */}
+      <CardFooter onClick={(e) => e.stopPropagation()}>
+        <Button
+          color={isOutOfStock ? "default" : "primary"}
+          variant={isOutOfStock ? "flat" : "solid"}
+          fullWidth
+          isDisabled={isOutOfStock || currentStock === 0}
+          onPress={handleAddClick}
         >
           {isOutOfStock ? "Out of Stock" : "Add"}
-        </button>
-      </div>
-    </div>
+        </Button>
+      </CardFooter>
+    </Card>
   );
 }

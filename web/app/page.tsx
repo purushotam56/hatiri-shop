@@ -3,6 +3,7 @@ import { StoreHomePage } from "@/components/store-home-page";
 import { LandingLayout } from "@/components/layouts/landing-layout";
 import { StoreLayout } from "@/components/layouts/store-layout";
 import { headers } from "next/headers";
+import { apiEndpoints } from "@/lib/api-client";
 
 interface Organisation {
   id: number;
@@ -13,19 +14,14 @@ interface Organisation {
 
 async function fetchOrganisations(): Promise<Organisation[]> {
   try {
-    const res = await fetch("http://localhost:3333/api/organisations", {
-      next: { revalidate: 60 }, // ISR: revalidate every 60 seconds
-    });
-    if (res.ok) {
-      const data = await res.json();
-      const mappedOrgs = (data.organisations || []).map((org: any) => ({
-        id: org.id,
-        name: org.organisationName,
-        organisationUniqueCode: org.organisationUniqueCode,
-        currency: org.currency || "USD",
-      }));
-      return mappedOrgs;
-    }
+    const data = await apiEndpoints.getOrganisations();
+    const mappedOrgs = (data.organisations || []).map((org: any) => ({
+      id: org.id,
+      name: org.organisationName,
+      organisationUniqueCode: org.organisationUniqueCode,
+      currency: org.currency || "USD",
+    }));
+    return mappedOrgs;
   } catch (error) {
     console.error("Failed to fetch organisations:", error);
   }
@@ -33,6 +29,11 @@ async function fetchOrganisations(): Promise<Organisation[]> {
 }
 
 function getSubdomainCode(hostname: string): string | null {
+  // Check if it's an IP address (no subdomain support for IPs)
+  if (/^\d+\.\d+\.\d+\.\d+/.test(hostname)) {
+    return null;
+  }
+
   const parts = hostname.split(".");
   
   // Check if it's a subdomain (not localhost, not www, not main domain)
@@ -49,7 +50,7 @@ export default async function Home() {
   
   // Check if URL contains a subdomain with org code
   const subdomainCode = getSubdomainCode(host);
-  
+
   if (subdomainCode) {
     // Render store page for subdomain
     return (
@@ -63,7 +64,7 @@ export default async function Home() {
   const organisations = await fetchOrganisations();
   return (
     <LandingLayout>
-      <HomePage organisations={organisations} />
+      <HomePage organisations={organisations} hostname={host} />
     </LandingLayout>
   );
 }

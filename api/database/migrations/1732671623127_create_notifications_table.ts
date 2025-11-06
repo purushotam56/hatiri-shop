@@ -22,7 +22,13 @@ export default class extends BaseSchema {
 
       table.boolean('is_need_action').defaultTo(false)
 
-      table.integer('user_id').unsigned().references('id').inTable(USERS).onDelete('CASCADE').nullable()
+      table
+        .integer('user_id')
+        .unsigned()
+        .references('id')
+        .inTable(USERS)
+        .onDelete('CASCADE')
+        .nullable()
 
       table
         .integer('organisation_id')

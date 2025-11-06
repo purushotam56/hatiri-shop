@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import { Button } from '@heroui/button'
+import { apiEndpoints } from '@/lib/api-client'
 import { AdminHeader } from '@/components/headers/admin-header'
 import { useAdmin } from '@/context/admin-context'
 import Link from 'next/link'
@@ -47,20 +48,8 @@ export default function AdminDashboardPage() {
     const fetchStats = async () => {
       try {
         // Fetch real stats from dedicated endpoint
-        const statsResponse = await fetch('http://localhost:3333/api/admin/stats', {
-          headers: { Authorization: `Bearer ${token}` },
-        })
-
-        if (!statsResponse.ok) {
-          if (statsResponse.status === 401) {
-            clearAdmin()
-            router.push('/admin')
-            return
-          }
-          throw new Error('Failed to fetch stats')
-        }
-
-        const statsData = await statsResponse.json()
+        const token = localStorage.getItem('adminToken');
+        const statsData = await apiEndpoints.getAdminStats(token || '');
         setStats(statsData.stats)
       } catch (err) {
         setError('Failed to load dashboard')

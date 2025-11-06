@@ -14,6 +14,11 @@ interface Organisation {
   currency: string
 }
 
+interface HomePageProps {
+  organisations: Organisation[]
+  hostname?: string
+}
+
 const storeDetails: Record<
   string,
   { emoji: string; gradient: string; description: string; categories: string[] }
@@ -81,7 +86,7 @@ const glowVariants = {
   },
 }
 
-export function HomePage({ organisations }: { organisations: Organisation[] }) {
+export function HomePage({ organisations, hostname }: HomePageProps) {
   return (
     <div className={`min-h-screen ${GRADIENTS.page.dark} overflow-hidden`}>
       {/* Animated background gradient orbs */}
@@ -256,7 +261,12 @@ export function HomePage({ organisations }: { organisations: Organisation[] }) {
                     description: org.name,
                     categories: [],
                   }
-                  const storeUrl = `http://${code.toLowerCase()}.${WEB_DOMAIN}`
+                  
+                  // Check if hostname is an IP address
+                  const isIpAddress = hostname && /^\d+\.\d+\.\d+\.\d+/.test(hostname)
+                  const storeUrl = isIpAddress 
+                    ? `/store/${org.organisationUniqueCode}`
+                    : `http://${code.toLowerCase()}.${WEB_DOMAIN}`
 
                   return (
                     <motion.div

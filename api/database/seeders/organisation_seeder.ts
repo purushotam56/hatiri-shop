@@ -1,6 +1,5 @@
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
 import Organisation from '#models/organisation'
-import Branch from '#models/branch'
 
 export default class OrganisationSeeder extends BaseSeeder {
   async run() {
@@ -50,7 +49,10 @@ export default class OrganisationSeeder extends BaseSeeder {
 
     for (const orgData of orgs) {
       // Check if org already exists
-      const existing = await Organisation.findBy('organisationUniqueCode', orgData.organisationUniqueCode)
+      const existing = await Organisation.findBy(
+        'organisationUniqueCode',
+        orgData.organisationUniqueCode
+      )
       if (existing) {
         console.log(`Organisation ${orgData.name} already exists, skipping...`)
         continue

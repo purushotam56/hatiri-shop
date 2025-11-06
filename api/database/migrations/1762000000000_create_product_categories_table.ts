@@ -7,21 +7,21 @@ export default class extends BaseSchema {
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      
+
       table
         .integer('organisation_id')
         .unsigned()
         .references('id')
         .inTable(ORGANISATION)
         .onDelete('CASCADE')
-      
+
       table.string('name').notNullable()
       table.string('slug').notNullable()
       table.text('description')
       table.boolean('is_active').defaultTo(true)
       table.timestamp('created_at')
       table.timestamp('updated_at')
-      
+
       table.unique(['organisation_id', 'slug'])
     })
   }

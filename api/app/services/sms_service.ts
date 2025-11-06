@@ -13,13 +13,20 @@ export default class SMSService {
   ).toString('base64')
 
   constructor() {
+    const accessKeyId = env.get('AWS_ACCESS_KEY_ID')
+    const secretAccessKey = env.get('AWS_SECRET_ACCESS_KEY')
+    const region = env.get('AWS_REGION')
+
     this.sns = new SNS({
       apiVersion: '2010-03-31',
-      region: env.get('AWS_REGION'),
-      credentials: {
-        accessKeyId: env.get('AWS_ACCESS_KEY_ID'),
-        secretAccessKey: env.get('AWS_SECRET_ACCESS_KEY'),
-      },
+      region: region || 'us-east-1',
+      credentials:
+        accessKeyId && secretAccessKey
+          ? {
+              accessKeyId,
+              secretAccessKey,
+            }
+          : undefined,
     })
   }
 

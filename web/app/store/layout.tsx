@@ -1,13 +1,16 @@
 import { StoreLayout } from "@/components/layouts/store-layout";
 
-export default function StorePagesLayout({
+export default async function StorePagesLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ code?: string }>;
 }) {
+  
   return (
-    <StoreLayout>
+    <>
       {children}
-    </StoreLayout>
+    </>
   );
 }

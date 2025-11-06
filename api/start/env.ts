@@ -53,12 +53,21 @@ export default await Env.create(new URL('../', import.meta.url), {
   | Variables for configuring the aws
   |----------------------------------------------------------
   */
-  AWS_REGION: Env.schema.string(),
-  AWS_ACCESS_KEY_ID: Env.schema.string(),
-  AWS_SECRET_ACCESS_KEY: Env.schema.string(),
-  AWS_PUBLIC_BUCKET_NAME: Env.schema.string(),
-  AWS_SQS_NAME: Env.schema.string(),
-  AWS_SQS_URL: Env.schema.string(),
+  /*
+  |----------------------------------------------------------
+  | Variables for file storage configuration
+  |----------------------------------------------------------
+  */
+  STORAGE_DRIVER: Env.schema.enum(['local', 's3'] as const),
+  STORAGE_LOCAL_PATH: Env.schema.string.optional(),
+  STORAGE_LOCAL_URL: Env.schema.string.optional(),
+
+  AWS_REGION: Env.schema.string.optional(),
+  AWS_ACCESS_KEY_ID: Env.schema.string.optional(),
+  AWS_SECRET_ACCESS_KEY: Env.schema.string.optional(),
+  AWS_PUBLIC_BUCKET_NAME: Env.schema.string.optional(),
+  AWS_SQS_NAME: Env.schema.string.optional(),
+  AWS_SQS_URL: Env.schema.string.optional(),
 
   /*
   |----------------------------------------------------------

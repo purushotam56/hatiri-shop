@@ -3,7 +3,9 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { login } from "@/lib/auth";
-import { COLORS, GRADIENTS, COMPONENTS, UTILS } from "@/lib/theme";
+import { Button } from "@heroui/button";
+import { Input } from "@heroui/input";
+import { Spinner } from "@heroui/spinner";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -42,79 +44,70 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-b from-content1 via-background to-content1 flex items-center justify-center px-4">
       {/* Animated background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-32 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-32 right-1/4 w-96 h-96 bg-secondary/30 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: "2s" }}></div>
       </div>
 
       <div className="relative w-full max-w-md">
-        <div className="bg-slate-800/50 backdrop-blur-xl border border-slate-700 rounded-3xl shadow-2xl overflow-hidden">
+        <div className="bg-content2/50 backdrop-blur-xl border border-divider rounded-3xl shadow-2xl overflow-hidden">
           {/* Header gradient */}
-          <div className="h-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"></div>
+          <div className="h-2 bg-gradient-to-r from-primary via-secondary to-secondary-600"></div>
           
           <div className="p-8">
             <div className="text-center mb-8">
               <div className="text-5xl mb-3">🔐</div>
-              <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent mb-2">
+              <h1 className="text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent mb-2">
                 Welcome Back
               </h1>
-              <p className="text-slate-400">Sign in to your Hatiri Shop account</p>
+              <p className="text-default-500">Sign in to your Hatiri Shop account</p>
             </div>
 
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-              <div>
-                <label className="block text-sm font-semibold text-slate-200 mb-2">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  placeholder="you@example.com"
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  required
-                />
-              </div>
+              <Input
+                type="email"
+                label="Email Address"
+                placeholder="you@example.com"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                variant="bordered"
+                size="lg"
+                isRequired
+              />
 
-              <div>
-                <label className="block text-sm font-semibold text-slate-200 mb-2">
-                  Password
-                </label>
-                <input
-                  type="password"
-                  placeholder="••••••••"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
-                  required
-                />
-              </div>
+              <Input
+                type="password"
+                label="Password"
+                placeholder="••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                variant="bordered"
+                size="lg"
+                isRequired
+              />
 
               {error && (
-                <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg flex gap-3">
+                <div className="p-4 bg-danger/20 border border-danger/50 rounded-lg flex gap-3">
                   <span className="text-xl">⚠️</span>
                   <div>
-                    <p className="text-sm font-semibold text-red-200">{error}</p>
+                    <p className="text-sm font-semibold text-danger-200">{error}</p>
                   </div>
                 </div>
               )}
 
-              <button
+              <Button
                 type="submit"
                 disabled={loading}
-                className={`w-full py-3 rounded-lg font-bold transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed ${COMPONENTS.button.primary}`}
+                color="primary"
+                size="lg"
+                className="w-full font-bold"
+                isLoading={loading}
+                spinner={<Spinner size="sm" color="current" />}
               >
-                {loading ? (
-                  <span className="flex items-center justify-center gap-2">
-                    <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></span>
-                    Signing in…
-                  </span>
-                ) : (
-                  "Sign in"
-                )}
-              </button>
+                {loading ? "Signing in…" : "Sign in"}
+              </Button>
             </form>
 
             <div className="mt-6 pt-6 border-t border-slate-600">

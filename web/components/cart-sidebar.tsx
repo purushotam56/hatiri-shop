@@ -8,6 +8,7 @@ import { Badge } from "@heroui/badge";
 import { Divider } from "@heroui/divider";
 import { Card, CardBody } from "@heroui/card";
 import { ScrollShadow } from "@heroui/scroll-shadow";
+import { Image } from "@heroui/image";
 
 export function CartSidebar() {
   const { cart, removeFromCart, updateQuantity, cartCount, cartTotal } =
@@ -71,24 +72,44 @@ export function CartSidebar() {
                   {cart.map((item) => (
                     <Card key={item.id} className="border border-divider">
                       <CardBody className="gap-3 p-3">
-                        <div className="flex justify-between items-start">
-                          <div className="flex-1">
-                            <p className="font-semibold text-foreground text-sm line-clamp-2">
-                              {item.name}
-                            </p>
-                            <p className="text-sm text-primary font-bold mt-1">
-                              ₹{parseFloat(String(item.price)).toFixed(0)}
-                            </p>
+                        <div className="flex gap-3">
+                          {/* Product Image */}
+                          {(item as any).bannerImage?.url || (item as any).image?.url || (item as any).images?.[0]?.upload?.url ? (
+                            <div className="relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-default-100">
+                              <Image
+                                src={(item as any).bannerImage?.url || (item as any).image?.url || (item as any).images?.[0]?.upload?.url}
+                                alt={item.name}
+                                className="w-full h-full object-cover"
+                              />
+                            </div>
+                          ) : (
+                            <div className="w-16 h-16 flex-shrink-0 rounded-lg bg-default-100 flex items-center justify-center text-2xl">
+                              📦
+                            </div>
+                          )}
+                          
+                          {/* Product Details */}
+                          <div className="flex-1 min-w-0">
+                            <div className="flex justify-between items-start gap-2">
+                              <div className="flex-1 min-w-0">
+                                <p className="font-semibold text-foreground text-sm line-clamp-2">
+                                  {item.name}
+                                </p>
+                                <p className="text-sm text-primary font-bold mt-1">
+                                  ₹{parseFloat(String(item.price)).toFixed(0)}
+                                </p>
+                              </div>
+                              <Button
+                                isIconOnly
+                                variant="light"
+                                size="sm"
+                                onClick={() => removeFromCart(item.id)}
+                                className="text-danger flex-shrink-0"
+                              >
+                                ✕
+                              </Button>
+                            </div>
                           </div>
-                          <Button
-                            isIconOnly
-                            variant="light"
-                            size="sm"
-                            onClick={() => removeFromCart(item.id)}
-                            className="text-danger"
-                          >
-                            ✕
-                          </Button>
                         </div>
 
                         {/* Quantity Controls */}

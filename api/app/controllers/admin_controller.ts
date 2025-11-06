@@ -58,7 +58,15 @@ export default class AdminController {
       // Verify admin is authenticated
       await auth.getUserOrFail()
 
-      const { name, currency = 'INR', organisationUniqueCode, addressLine1, addressLine2, postalCode, blockBuildingNo } = request.only([
+      const {
+        name,
+        currency = 'INR',
+        organisationUniqueCode,
+        addressLine1,
+        addressLine2,
+        postalCode,
+        blockBuildingNo,
+      } = request.only([
         'name',
         'currency',
         'organisationUniqueCode',
@@ -76,7 +84,10 @@ export default class AdminController {
       }
 
       // Check if org code already exists
-      const existingOrg = await Organisation.findBy('organisationUniqueCode', organisationUniqueCode)
+      const existingOrg = await Organisation.findBy(
+        'organisationUniqueCode',
+        organisationUniqueCode
+      )
       if (existingOrg) {
         return response.conflict({
           message: 'Organization code already exists',
@@ -114,7 +125,10 @@ export default class AdminController {
         },
       })
     } catch (error) {
-      return errorHandler(error || 'Failed to create organization', { request, response } as HttpContext)
+      return errorHandler(error || 'Failed to create organization', {
+        request,
+        response,
+      } as HttpContext)
     }
   }
 
@@ -170,14 +184,15 @@ export default class AdminController {
       await auth.getUserOrFail()
 
       const organisation = await Organisation.findOrFail(params.id)
-      const { name, currency, addressLine1, addressLine2, postalCode, blockBuildingNo } = request.only([
-        'name',
-        'currency',
-        'addressLine1',
-        'addressLine2',
-        'postalCode',
-        'blockBuildingNo',
-      ])
+      const { name, currency, addressLine1, addressLine2, postalCode, blockBuildingNo } =
+        request.only([
+          'name',
+          'currency',
+          'addressLine1',
+          'addressLine2',
+          'postalCode',
+          'blockBuildingNo',
+        ])
 
       if (name) organisation.name = name
       if (currency) organisation.currency = currency
@@ -193,7 +208,10 @@ export default class AdminController {
         organisation,
       })
     } catch (error) {
-      return errorHandler(error || 'Failed to update organization', { request, response } as HttpContext)
+      return errorHandler(error || 'Failed to update organization', {
+        request,
+        response,
+      } as HttpContext)
     }
   }
 
@@ -223,21 +241,30 @@ export default class AdminController {
       await auth.getUserOrFail()
 
       // Get counts for all entities
-      const totalOrganizations = await Organisation.query().count('* as total').first() as any
-      const totalSellers = await User.query()
+      const totalOrganizations = (await Organisation.query().count('* as total').first()) as any
+      const totalSellers = (await User.query()
         .whereHas('organisation', (query: any) => {
           query.where('is_admin', false)
         })
         .count('* as total')
-        .first() as any
+        .first()) as any
 
-      const totalOrders = await Order.query().count('* as total').first() as any
-      const pendingOrders = await Order.query().where('status', 'pending').count('* as total').first() as any
-      const deliveredOrders = await Order.query().where('status', 'delivered').count('* as total').first() as any
+      const totalOrders = (await Order.query().count('* as total').first()) as any
+      const pendingOrders = (await Order.query()
+        .where('status', 'pending')
+        .count('* as total')
+        .first()) as any
+      const deliveredOrders = (await Order.query()
+        .where('status', 'delivered')
+        .count('* as total')
+        .first()) as any
 
       // Calculate total revenue from delivered orders using reduce (like seller does)
       const deliveredOrdersData = await Order.query().where('status', 'delivered')
-      const totalRevenue = deliveredOrdersData.reduce((sum: number, order: any) => sum + (order.totalAmount || 0), 0)
+      const totalRevenue = deliveredOrdersData.reduce(
+        (sum: number, order: any) => sum + (order.totalAmount || 0),
+        0
+      )
 
       return response.ok({
         stats: {
@@ -317,9 +344,7 @@ export default class AdminController {
       let query = Product.query()
 
       if (search) {
-        query = query
-          .where('name', 'ilike', `%${search}%`)
-          .orWhere('sku', 'ilike', `%${search}%`)
+        query = query.where('name', 'ilike', `%${search}%`).orWhere('sku', 'ilike', `%${search}%`)
       }
 
       const products = await query.paginate(page, limit)

@@ -14,7 +14,7 @@ import {
 import { Button } from "@heroui/button";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
-import { COLORS } from "@/lib/theme";
+import { apiEndpoints } from "@/lib/api-client";
 import { Order } from "@/types/order";
 import { OrderDetailModal } from "@/components/order-detail-modal";
 import { StoreLayout } from "@/components/layouts/store-layout";
@@ -51,17 +51,7 @@ function OrdersPageContent() {
   const fetchOrders = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3333/api/orders", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to fetch orders");
-      }
-
-      const data = await response.json();
+      const data = await apiEndpoints.getOrders(token || "");
       setOrders(data.orders || []);
     } catch (error) {
       console.error("Error fetching orders:", error);
@@ -107,9 +97,9 @@ function OrdersPageContent() {
   // Wait for auth to load
   if (isLoading) {
     return (
-      <div className="min-h-screen py-12 px-4 bg-gradient-to-b from-slate-900 to-slate-800">
+      <div className="min-h-screen py-12 px-4 bg-gradient-to-b from-content1 to-content2">
         <div className="max-w-6xl mx-auto">
-          <p className="text-center text-slate-400">Loading...</p>
+          <p className="text-center text-default-500">Loading...</p>
         </div>
       </div>
     );
@@ -120,28 +110,28 @@ function OrdersPageContent() {
   }
 
   return (
-    <div className="min-h-screen py-12 px-4 bg-gradient-to-b from-slate-900 to-slate-800">
+    <div className="min-h-screen py-12 px-4 bg-gradient-to-b from-content1 to-content2">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-white mb-2">My Orders</h1>
-          <p className="text-slate-400">View and manage your orders</p>
+          <h1 className="text-4xl font-bold text-foreground mb-2">My Orders</h1>
+          <p className="text-default-500">View and manage your orders</p>
         </div>
 
         {/* Orders Table */}
         {pageIsLoading ? (
-          <Card className="bg-slate-800/50 border border-slate-700">
+          <Card>
             <CardBody className="py-8">
-              <p className="text-center text-slate-400">Loading orders...</p>
+              <p className="text-center text-default-500">Loading orders...</p>
             </CardBody>
           </Card>
         ) : orders.length === 0 ? (
-          <Card className="bg-slate-800/50 border border-slate-700">
+          <Card>
             <CardBody className="py-12">
               <div className="text-center">
-                <p className="text-slate-400 text-lg mb-4">No orders yet</p>
+                <p className="text-default-500 text-lg mb-4">No orders yet</p>
                 <Button
-                  className={`${COLORS.ecommerce.from} ${COLORS.ecommerce.to} text-white`}
+                  color="primary"
                   onPress={() => router.push("/products")}
                 >
                   Start Shopping
@@ -150,33 +140,33 @@ function OrdersPageContent() {
             </CardBody>
           </Card>
         ) : (
-          <Card className="bg-slate-800/50 border border-slate-700 overflow-hidden">
+          <Card>
             <Table
               aria-label="Orders table"
               classNames={{
                 base: "bg-transparent",
-                table: "text-slate-200",
-                thead: "[&>tr]:first:border-b-1 [&>tr]:first:border-slate-600",
-                tbody: "[&>tr]:border-b-1 [&>tr]:border-slate-700",
+                table: "text-foreground",
+                thead: "[&>tr]:first:border-b-1 [&>tr]:first:border-divider",
+                tbody: "[&>tr]:border-b-1 [&>tr]:border-divider",
               }}
             >
               <TableHeader>
-                <TableColumn className="bg-slate-700/50 text-slate-100">
+                <TableColumn className="bg-default-100 text-foreground">
                   Order ID
                 </TableColumn>
-                <TableColumn className="bg-slate-700/50 text-slate-100">
+                <TableColumn className="bg-default-100 text-foreground">
                   Date
                 </TableColumn>
-                <TableColumn className="bg-slate-700/50 text-slate-100">
+                <TableColumn className="bg-default-100 text-foreground">
                   Total
                 </TableColumn>
-                <TableColumn className="bg-slate-700/50 text-slate-100">
+                <TableColumn className="bg-default-100 text-foreground">
                   Items
                 </TableColumn>
-                <TableColumn className="bg-slate-700/50 text-slate-100">
+                <TableColumn className="bg-default-100 text-foreground">
                   Status
                 </TableColumn>
-                <TableColumn className="bg-slate-700/50 text-slate-100 text-center">
+                <TableColumn className="bg-default-100 text-foreground text-center">
                   Actions
                 </TableColumn>
               </TableHeader>
@@ -190,7 +180,7 @@ function OrdersPageContent() {
                       {formatDate(order.createdAt)}
                     </TableCell>
                     <TableCell className="text-slate-200 font-semibold">
-                      AED {toNumber(order.totalAmount).toFixed(2)}
+                      ₹{toNumber(order.totalAmount).toFixed(0)}
                     </TableCell>
                     <TableCell className="text-slate-300">
                       {order.items?.length || 0} item(s)

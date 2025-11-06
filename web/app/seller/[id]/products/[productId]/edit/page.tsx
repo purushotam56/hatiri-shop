@@ -7,6 +7,10 @@ import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Input } from '@heroui/input'
 import Link from 'next/link'
 import { Spinner } from '@heroui/spinner'
+import { apiEndpoints, apiUpload } from '@/lib/api-client'
+import RichTextEditor from '@/components/rich-text-editor'
+import ImageUpload from '@/components/image-upload'
+import MultipleImageUpload from '@/components/multiple-image-upload'
 
 export default function SellerEditProductPage() {
   const router = useRouter()
@@ -29,7 +33,12 @@ export default function SellerEditProductPage() {
     categoryId: '',
     taxRate: '',
     taxType: 'percentage',
+    details: '',
   })
+  const [bannerImage, setBannerImage] = useState<File | null>(null)
+  const [existingBannerUrl, setExistingBannerUrl] = useState<string | null>(null)
+  const [productImages, setProductImages] = useState<File[]>([])
+  const [existingImages, setExistingImages] = useState<any[]>([])
 
   useEffect(() => {
     const token = localStorage.getItem('sellerToken')
@@ -47,19 +56,15 @@ export default function SellerEditProductPage() {
       const token = localStorage.getItem('sellerToken')
       
       // Fetch product
-      const response = await fetch(`http://localhost:3333/api/products/${productId}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-
-      if (!response.ok) {
-        setError('Failed to load product')
+      const data = await apiEndpoints.getProduct(String(productId))
+      console.log('Product data:', data)
+      
+      const product = data.product || data
+      
+      if (!product) {
+        setError('Product not found')
         return
       }
-
-      const data = await response.json()
-      const product = data.product
       
       setForm({
         name: product.name || '',
@@ -72,19 +77,23 @@ export default function SellerEditProductPage() {
         categoryId: product.categoryId ? product.categoryId.toString() : '',
         taxRate: product.taxRate ? product.taxRate.toString() : '',
         taxType: product.taxType || 'percentage',
+        details: product.details || '',
       })
 
-      // Fetch categories
+      // Set existing banner image
+      if (product.bannerImage && product.bannerImage.url) {
+        setExistingBannerUrl(product.bannerImage.url)
+      }
+
+      // Set existing product images
+      if (product.images && Array.isArray(product.images)) {
+        setExistingImages(product.images)
+      }
+
+      // Fetch categories for this organization
       try {
-        const catResponse = await fetch(`http://localhost:3333/api/categories`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-        if (catResponse.ok) {
-          const catData = await catResponse.json()
-          setCategories(catData.data || [])
-        }
+        const catData = await apiEndpoints.getOrganisationCategories(orgId as string)
+        setCategories(catData.data || [])
       } catch (err) {
         console.error('Failed to fetch categories', err)
       }
@@ -114,13 +123,39 @@ export default function SellerEditProductPage() {
         return
       }
 
-      const response = await fetch(`http://localhost:3333/api/products/${productId}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
+      // Check if we have file uploads
+      if (bannerImage || productImages.length > 0) {
+        // Use FormData if we have files
+        const formData = new FormData()
+        formData.append('name', form.name)
+        formData.append('description', form.description)
+        formData.append('sku', form.sku)
+        formData.append('price', form.price)
+        formData.append('stock', form.stock)
+        formData.append('quantity', form.quantity || '0')
+        formData.append('unit', form.unit)
+        formData.append('categoryId', form.categoryId)
+        formData.append('taxRate', form.taxRate || '0')
+        formData.append('taxType', form.taxType)
+        formData.append('details', form.details)
+
+        if (bannerImage) {
+          formData.append('bannerImage', bannerImage)
+        }
+
+        productImages.forEach((image) => {
+          formData.append('productImages', image)
+        })
+
+        const data = await apiUpload(`/products/${productId}`, formData, token, 'PUT')
+        
+        if (data.error) {
+          setError(data.message || 'Failed to update product')
+          return
+        }
+      } else {
+        // Use JSON if no files
+        await apiEndpoints.updateProduct(String(productId), {
           name: form.name,
           description: form.description,
           sku: form.sku,
@@ -131,18 +166,13 @@ export default function SellerEditProductPage() {
           categoryId: form.categoryId ? parseInt(form.categoryId) : null,
           taxRate: parseFloat(form.taxRate) || 0,
           taxType: form.taxType,
-        }),
-      })
-
-      if (!response.ok) {
-        const data = await response.json()
-        setError(data.message || 'Failed to update product')
-        return
+          details: form.details,
+        }, token)
       }
 
       router.push(`/seller/${orgId}/products`)
-    } catch (err) {
-      setError('Connection error')
+    } catch (err: any) {
+      setError(err.message || 'Connection error')
       console.error(err)
     } finally {
       setLoading(false)
@@ -208,11 +238,22 @@ export default function SellerEditProductPage() {
                 <label className="text-sm font-medium text-foreground">Description</label>
                 <textarea
                   name="description"
-                  placeholder="Describe your product"
+                  placeholder="Brief description for product listing"
                   value={form.description}
                   onChange={handleChange}
                   disabled={loading}
-                  className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-24"
+                  className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-20"
+                />
+              </div>
+
+              {/* Rich Text Editor for Details */}
+              <div className="space-y-2">
+                <label className="text-sm font-medium text-foreground">Product Details (Rich Text)</label>
+                <RichTextEditor
+                  content={form.details}
+                  onChange={(content) => setForm(prev => ({ ...prev, details: content }))}
+                  placeholder="Enter detailed product information, specifications, ingredients, etc."
+                  disabled={loading}
                 />
               </div>
 
@@ -324,6 +365,30 @@ export default function SellerEditProductPage() {
                   <option value="compound">Compound</option>
                 </select>
               </div>
+
+              {/* Banner Image Upload */}
+              <ImageUpload
+                label="Banner Image"
+                value={existingBannerUrl}
+                onChange={setBannerImage}
+                disabled={loading}
+                aspectRatio="landscape"
+              />
+
+              {/* Multiple Product Images */}
+              <MultipleImageUpload
+                label="Product Images"
+                value={productImages}
+                onChange={setProductImages}
+                disabled={loading}
+                maxImages={10}
+              />
+              
+              {existingImages.length > 0 && (
+                <div className="text-xs text-default-500">
+                  Note: Existing images: {existingImages.length}. New images will be added to the collection.
+                </div>
+              )}
 
               {error && (
                 <div className="p-3 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 rounded-lg text-sm">

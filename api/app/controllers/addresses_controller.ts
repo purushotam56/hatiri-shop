@@ -16,7 +16,16 @@ export default class AddressesController {
   async store({ auth, request, response }: HttpContext) {
     try {
       const user = await auth.getUserOrFail()
-      const data = request.only(['label', 'fullName', 'phoneNumber', 'street', 'city', 'state', 'pincode', 'isDefault'])
+      const data = request.only([
+        'label',
+        'fullName',
+        'phoneNumber',
+        'street',
+        'city',
+        'state',
+        'pincode',
+        'isDefault',
+      ])
 
       // If marking as default, unmark others
       if (data.isDefault) {
@@ -56,7 +65,16 @@ export default class AddressesController {
         .where('user_id', user.id)
         .firstOrFail()
 
-      const data = request.only(['label', 'fullName', 'phoneNumber', 'street', 'city', 'state', 'pincode', 'isDefault'])
+      const data = request.only([
+        'label',
+        'fullName',
+        'phoneNumber',
+        'street',
+        'city',
+        'state',
+        'pincode',
+        'isDefault',
+      ])
 
       // If marking as default, unmark others
       if (data.isDefault && !address.isDefault) {

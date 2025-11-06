@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
+import { apiEndpoints } from '@/lib/api-client'
 import { AdminHeader } from '@/components/headers/admin-header'
 import { useAdmin } from '@/context/admin-context'
 import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from '@heroui/table'
@@ -53,20 +54,8 @@ export default function OrdersPage() {
 
     const fetchOrders = async () => {
       try {
-        const response = await fetch('http://localhost:3333/api/admin/orders', {
-          headers: { Authorization: `Bearer ${token}` },
-        })
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            clearAdmin()
-            router.push('/admin')
-            return
-          }
-          throw new Error('Failed to fetch orders')
-        }
-
-        const data = await response.json()
+        const token = localStorage.getItem('adminToken');
+        const data = await apiEndpoints.getAdminOrders(token || '');
         setOrders(data.orders || [])
       } catch (err) {
         setError('Failed to load orders')

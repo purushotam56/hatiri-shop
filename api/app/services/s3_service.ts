@@ -6,17 +6,17 @@ export default class S3Service {
 
   constructor() {
     this.s3Client = new S3Client({
-      region: env.get('AWS_REGION'),
+      region: env.get('AWS_REGION') || 'us-east-1',
       credentials: {
-        accessKeyId: env.get('AWS_ACCESS_KEY_ID'),
-        secretAccessKey: env.get('AWS_SECRET_ACCESS_KEY'),
+        accessKeyId: env.get('AWS_ACCESS_KEY_ID') || '',
+        secretAccessKey: env.get('AWS_SECRET_ACCESS_KEY') || '',
       },
     })
   }
 
   async uploadFile(fileBuffer: Buffer, fileName: string, mimeType: string) {
     var params: PutObjectCommandInput = {
-      Bucket: env.get('AWS_PUBLIC_BUCKET_NAME'),
+      Bucket: env.get('AWS_PUBLIC_BUCKET_NAME') || '',
       Key: fileName,
       Body: fileBuffer,
       ContentType: mimeType,

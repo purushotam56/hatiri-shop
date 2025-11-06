@@ -33,6 +33,9 @@ export default class Upload extends BaseModel {
   @column()
   declare urlPrefix: string
 
+  @column()
+  declare driver: string
+
   @hasOne(() => Organisation)
   declare organisation: HasOne<typeof Organisation>
 
@@ -44,7 +47,18 @@ export default class Upload extends BaseModel {
     if (this.urlPrefix) {
       return this.urlPrefix + this.key
     }
-    return `https://${env.get('AWS_PUBLIC_BUCKET_NAME')}.s3.${env.get('AWS_REGION')}.amazonaws.com/${this.key}`
+
+    // Generate URL based on storage driver
+    if (this.driver === 's3') {
+      return `https://${env.get('AWS_PUBLIC_BUCKET_NAME')}.s3.${env.get('AWS_REGION')}.amazonaws.com/${this.key}`
+    } else if (this.driver === 'external') {
+      // For external URLs (e.g., picsum.photos), return the key directly
+      return this.key
+    } else {
+      // Local storage
+      const baseUrl = env.get('STORAGE_LOCAL_URL') || `${env.get('APP_URL')}/uploads`
+      return `${baseUrl}/${this.key}`
+    }
   }
 
   // @column()

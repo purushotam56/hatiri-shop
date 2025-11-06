@@ -25,7 +25,7 @@ export default class OrdersController {
         .firstOrFail()
 
       // Calculate totals
-      const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0)
+      const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
       const deliveryFee = 0 // Free delivery for now
       const total = subtotal + deliveryFee
 
@@ -47,7 +47,7 @@ export default class OrdersController {
 
       // Create order items
       await Promise.all(
-        cartItems.map(item =>
+        cartItems.map((item) =>
           OrderItem.create({
             orderId: order.id,
             productId: item.productId,
@@ -55,7 +55,7 @@ export default class OrdersController {
             name: item.name,
             price: Number(item.price),
             quantity: Number(item.quantity),
-            currency: item.currency || 'AED',
+            currency: item.currency || 'INR',
             unit: item.unit || '',
           })
         )
@@ -113,7 +113,7 @@ export default class OrdersController {
 
       // Create PDF
       const doc = new PDFDocument()
-      
+
       // Collect PDF data
       const chunks: Buffer[] = []
       doc.on('data', (chunk: Buffer) => {
@@ -122,7 +122,10 @@ export default class OrdersController {
 
       // Set response headers
       response.header('Content-Type', 'application/pdf')
-      response.header('Content-Disposition', `attachment; filename="Invoice-${order.orderNumber}.pdf"`)
+      response.header(
+        'Content-Disposition',
+        `attachment; filename="Invoice-${order.orderNumber}.pdf"`
+      )
 
       // Add header
       doc.fontSize(20).font('Helvetica-Bold').text('INVOICE', { align: 'center' })
@@ -164,7 +167,7 @@ export default class OrdersController {
       const col2X = 300
       const col3X = 400
       const col4X = 500
-      
+
       doc.text('Item', col1X, doc.y)
       doc.text('Qty', col2X, doc.y - 15)
       doc.text('Price', col3X, doc.y - 15)
@@ -179,8 +182,8 @@ export default class OrdersController {
         const itemTotal = price * quantity
         doc.text(item.name, col1X, doc.y, { width: 240 })
         doc.text(quantity.toString(), col2X, doc.y - doc.heightOfString(item.name))
-        doc.text(`AED ${price.toFixed(2)}`, col3X, doc.y - doc.heightOfString(item.name))
-        doc.text(`AED ${itemTotal.toFixed(2)}`, col4X, doc.y - doc.heightOfString(item.name))
+        doc.text(`₹${price.toFixed(2)}`, col3X, doc.y - doc.heightOfString(item.name))
+        doc.text(`₹${itemTotal.toFixed(2)}`, col4X, doc.y - doc.heightOfString(item.name))
         doc.moveDown(1)
       })
 
@@ -194,18 +197,18 @@ export default class OrdersController {
       const taxAmount = Number(order.taxAmount)
       const deliveryAmount = Number(order.deliveryAmount)
       const totalAmount = Number(order.totalAmount)
-      
+
       doc.fontSize(10).font('Helvetica')
-      doc.text(`Subtotal: AED ${subtotal.toFixed(2)}`, summaryX)
+      doc.text(`Subtotal: ₹${subtotal.toFixed(2)}`, summaryX)
       if (taxAmount > 0) {
-        doc.text(`Tax: AED ${taxAmount.toFixed(2)}`)
+        doc.text(`Tax: ₹${taxAmount.toFixed(2)}`)
       }
       if (deliveryAmount > 0) {
-        doc.text(`Delivery: AED ${deliveryAmount.toFixed(2)}`)
+        doc.text(`Delivery: ₹${deliveryAmount.toFixed(2)}`)
       }
-      
+
       doc.fontSize(12).font('Helvetica-Bold')
-      doc.text(`Total: AED ${totalAmount.toFixed(2)}`)
+      doc.text(`Total: ₹${totalAmount.toFixed(2)}`)
 
       // Footer
       doc.moveDown(2)

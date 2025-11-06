@@ -3,6 +3,12 @@
 import { useParams, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { apiEndpoints } from "@/lib/api-client";
+import { Button } from "@heroui/button";
+import { Card, CardBody } from "@heroui/card";
+import { Chip } from "@heroui/chip";
+import { StoreHeader } from "@/components/store-header";
+import { useCart } from "@/context/cart-context";
 
 interface Product {
   id: number;
@@ -17,6 +23,29 @@ interface Product {
   imageUrl?: string | null;
   options?: string | any[];
   organisationId?: number;
+  productGroupId?: number | null;
+  organisation?: {
+    id: number;
+    name: string;
+    organisationUniqueCode: string;
+  };
+  bannerImage?: {
+    id: number;
+    url: string;
+  };
+  image?: {
+    id: number;
+    url: string;
+  };
+  images?: Array<{
+    id: number;
+    upload: {
+      id: number;
+      url: string;
+    };
+  }>;
+  details?: string;
+  variants?: Product[];
 }
 
 interface CartItem {
@@ -32,39 +61,54 @@ export default function ProductDetailPage() {
   const params = useParams();
   const router = useRouter();
   const productId = params.id as string;
+  const { addToCart } = useCart();
 
   const [product, setProduct] = useState<Product | null>(null);
   const [variants, setVariants] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedVariant, setSelectedVariant] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState(1);
-  const [cart, setCart] = useState<CartItem[]>([]);
   const [addedMessage, setAddedMessage] = useState("");
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
-  // Load cart from localStorage
+  // Keyboard navigation for image slider
   useEffect(() => {
-    const storedCart = localStorage.getItem("cart");
-    if (storedCart) {
-      setCart(JSON.parse(storedCart));
+    if (!product) return;
+    
+    const allImages = [];
+    if (product.bannerImage?.url) allImages.push(product.bannerImage.url);
+    if (product.image?.url) allImages.push(product.image.url);
+    if (product.images) {
+      product.images.forEach(img => {
+        if (img.upload?.url) allImages.push(img.upload.url);
+      });
     }
-  }, []);
+    
+    if (allImages.length <= 1) return;
+    
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        setSelectedImageIndex((prev) => 
+          prev === 0 ? allImages.length - 1 : prev - 1
+        );
+      } else if (e.key === 'ArrowRight') {
+        setSelectedImageIndex((prev) => 
+          prev === allImages.length - 1 ? 0 : prev + 1
+        );
+      }
+    };
+    
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [product, selectedImageIndex]);
 
   // Fetch product and variants
   useEffect(() => {
     const fetchData = async () => {
       try {
         // Fetch single product
-        const productRes = await fetch(
-          `http://localhost:3333/api/products/${productId}`
-        );
+        const productData = await apiEndpoints.getProduct(productId);
         
-        if (!productRes.ok) {
-          console.error("Product fetch failed:", productRes.status);
-          setLoading(false);
-          return;
-        }
-        
-        const productData = await productRes.json();
         // Handle both response formats: {data: {...}} and {product: {...}}
         const mainProduct = productData.product || productData.data;
         
@@ -77,21 +121,59 @@ export default function ProductDetailPage() {
         setProduct(mainProduct);
         setSelectedVariant(mainProduct);
 
-        // Fetch all products to find variants (same base SKU)
-        if (mainProduct.sku) {
-          const skuParts = mainProduct.sku.split("-");
-          const baseSku = skuParts.slice(0, -1).join("-");
-
-          const allProductsRes = await fetch(
-            "http://localhost:3333/api/products"
-          );
-          const allProductsData = await allProductsRes.json();
-          const variantProducts = (allProductsData.data?.data || allProductsData.products || []).filter(
-            (p: Product) =>
-              p.sku?.startsWith(baseSku) &&
-              p.organisationId === mainProduct.organisationId
-          );
-          setVariants(variantProducts);
+        // Check if variants are already included in the response
+        if (mainProduct.variants && Array.isArray(mainProduct.variants) && mainProduct.variants.length > 0) {
+          console.log('Variants included in product response:', mainProduct.variants);
+          setVariants(mainProduct.variants);
+        } else if (mainProduct.productGroupId) {
+          // Fallback: Fetch all products in the group if not included
+          console.log('Fetching variants for group ID:', mainProduct.productGroupId);
+          try {
+            const allProductsData = await apiEndpoints.getProducts();
+            const allProducts = allProductsData.data?.data || allProductsData.products || [];
+            
+            // Find all products with the same productGroupId
+            const groupProducts: any[] = [];
+            allProducts.forEach((group: any) => {
+              if (group.productGroupId === mainProduct.productGroupId) {
+                groupProducts.push(group);
+              }
+              // Also check variants array
+              if (group.variants && Array.isArray(group.variants)) {
+                group.variants.forEach((v: any) => {
+                  if (v.productGroupId === mainProduct.productGroupId || v.id === mainProduct.id) {
+                    groupProducts.push({...group, ...v});
+                  }
+                });
+              }
+            });
+            
+            console.log('Found group products:', groupProducts);
+            
+            // Fetch full details for each product in group
+            const variantPromises = groupProducts.map(async (prod: any) => {
+              try {
+                const variantData = await apiEndpoints.getProduct(prod.id);
+                return variantData.product || variantData.data;
+              } catch (error) {
+                console.error('Failed to fetch variant:', prod.id, error);
+                return null;
+              }
+            });
+            
+            const variantDetails = await Promise.all(variantPromises);
+            const validVariants = variantDetails.filter(v => v !== null);
+            
+            console.log('Loaded variant details:', validVariants);
+            setVariants(validVariants);
+          } catch (error) {
+            console.error('Failed to fetch variants:', error);
+            setVariants([mainProduct]);
+          }
+        } else {
+          // No product group, show only current product
+          console.log('No product group, showing single product');
+          setVariants([mainProduct]);
         }
       } catch (error) {
         console.error("Failed to load product:", error);
@@ -105,37 +187,12 @@ export default function ProductDetailPage() {
     }
   }, [productId]);
 
-  // Save cart to localStorage
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }, [cart]);
-
   const handleAddToCart = (variantToAdd: Product) => {
-    const existing = cart.find(
-      (item) => item.id === variantToAdd.id
-    );
-    
-    if (existing) {
-      setCart(
-        cart.map((item) =>
-          item.id === variantToAdd.id
-            ? { ...item, quantity: item.quantity + quantity }
-            : item
-        )
-      );
-    } else {
-      setCart([
-        ...cart,
-        {
-          id: variantToAdd.id,
-          name: variantToAdd.name,
-          price: variantToAdd.price,
-          quantity: quantity,
-          currency: variantToAdd.currency,
-          sku: variantToAdd.sku,
-        },
-      ]);
-    }
+    // Add to cart using context
+    addToCart({
+      ...variantToAdd,
+      quantity: quantity,
+    });
 
     setAddedMessage(`✓ Added to cart!`);
     setTimeout(() => {
@@ -146,168 +203,357 @@ export default function ProductDetailPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50">
-        <div className="text-center">
-          <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-4 mx-auto"></div>
-          <p className="text-slate-600 font-semibold">Loading product...</p>
-        </div>
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <Card>
+          <CardBody className="gap-4 py-8 text-center items-center">
+            <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+            <p className="text-foreground font-semibold">Loading product...</p>
+          </CardBody>
+        </Card>
       </div>
     );
   }
 
   if (!product) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50">
-        <div className="text-center">
-          <div className="text-6xl mb-4">🔍</div>
-          <p className="text-slate-600 text-xl font-semibold">Product not found</p>
-          <button
-            onClick={() => router.back()}
-            className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Go Back
-          </button>
-        </div>
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <Card className="max-w-md">
+          <CardBody className="gap-4 py-8 text-center items-center">
+            <div className="text-6xl">🔍</div>
+            <p className="text-foreground text-xl font-semibold">Product not found</p>
+            <Button
+              onClick={() => router.back()}
+              color="primary"
+              size="lg"
+            >
+              Go Back
+            </Button>
+          </CardBody>
+        </Card>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-slate-50">
-      {/* Header */}
-      <div className="bg-white border-b border-slate-200 sticky top-0 z-40">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <button
+    <div className="min-h-screen bg-background">
+      {/* Store Header */}
+      <StoreHeader storeCode={product.organisation?.organisationUniqueCode || ""} />
+
+      {/* Back Button Bar */}
+      <div className="bg-content1 border-b border-divider">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center">
+          <Button
+            variant="light"
             onClick={() => router.back()}
-            className="text-slate-600 hover:text-slate-900 font-semibold flex items-center gap-2"
+            size="sm"
+            startContent={
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            }
           >
-            ← Back
-          </button>
-          <h1 className="text-xl font-bold text-slate-900 flex-1 text-center">
-            Product Details
-          </h1>
-          <div className="w-10"></div>
+            Back
+          </Button>
         </div>
       </div>
 
       {/* Product Details */}
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Product Image */}
-          <div className="bg-white rounded-2xl p-8 flex items-center justify-center h-96 shadow-md">
-            <div className="text-9xl">📦</div>
+          {/* Product Image Gallery with Slider */}
+          <div className="space-y-4">
+            {(() => {
+              const allImages = [];
+              if (product.bannerImage?.url) allImages.push(product.bannerImage.url);
+              if (product.image?.url) allImages.push(product.image.url);
+              if (product.images) {
+                product.images.forEach(img => {
+                  if (img.upload?.url) allImages.push(img.upload.url);
+                });
+              }
+              
+              const hasMultipleImages = allImages.length > 1;
+              const currentImage = allImages[selectedImageIndex] || allImages[0];
+              
+              const handlePrevImage = () => {
+                setSelectedImageIndex((prev) => 
+                  prev === 0 ? allImages.length - 1 : prev - 1
+                );
+              };
+              
+              const handleNextImage = () => {
+                setSelectedImageIndex((prev) => 
+                  prev === allImages.length - 1 ? 0 : prev + 1
+                );
+              };
+              
+              return (
+                <>
+                  {/* Main Image with Slider Controls */}
+                  <Card className="relative overflow-hidden group" shadow="lg">
+                    <CardBody className="p-0">
+                      <div className="relative h-96 md:h-[500px] flex items-center justify-center p-8 bg-content2">
+                        {allImages.length > 0 ? (
+                          <img
+                            src={currentImage}
+                            alt={product.name}
+                            className="w-full h-full object-contain transition-opacity duration-300"
+                          />
+                        ) : (
+                          <div className="text-9xl">📦</div>
+                        )}
+                        
+                        {/* Navigation Arrows */}
+                        {hasMultipleImages && (
+                          <>
+                            <Button
+                              isIconOnly
+                              onClick={handlePrevImage}
+                              className="absolute left-4 top-1/2 -translate-y-1/2 transition-all opacity-0 group-hover:opacity-100"
+                              color="default"
+                              variant="solid"
+                              radius="full"
+                              aria-label="Previous image"
+                            >
+                              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                              </svg>
+                            </Button>
+                            <Button
+                              isIconOnly
+                              onClick={handleNextImage}
+                              className="absolute right-4 top-1/2 -translate-y-1/2 transition-all opacity-0 group-hover:opacity-100"
+                              color="default"
+                              variant="solid"
+                              radius="full"
+                              aria-label="Next image"
+                            >
+                              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                              </svg>
+                            </Button>
+                            
+                            {/* Image Counter */}
+                            <Chip 
+                              className="absolute bottom-4 right-4"
+                              color="default"
+                              variant="solid"
+                            >
+                              {selectedImageIndex + 1} / {allImages.length}
+                            </Chip>
+                          </>
+                        )}
+                      </div>
+                    </CardBody>
+                  </Card>
+                  
+                  {/* Thumbnail Preview Grid */}
+                  {hasMultipleImages && (
+                    <div className="grid grid-cols-5 gap-2">
+                      {allImages.map((url, index) => (
+                        <Card
+                          key={index}
+                          isPressable
+                          onPress={() => setSelectedImageIndex(index)}
+                          className={`relative aspect-square transition-all ${
+                            selectedImageIndex === index 
+                              ? 'ring-2 ring-primary scale-105' 
+                              : 'hover:scale-105'
+                          }`}
+                        >
+                          <CardBody className="p-0 overflow-hidden">
+                            <img
+                              src={url}
+                              alt={`${product.name} thumbnail ${index + 1}`}
+                              className="w-full h-full object-cover"
+                            />
+                            {selectedImageIndex === index && (
+                              <div className="absolute inset-0 bg-primary/20 flex items-center justify-center">
+                                <svg className="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                </svg>
+                              </div>
+                            )}
+                          </CardBody>
+                        </Card>
+                      ))}
+                    </div>
+                  )}
+                </>
+              );
+            })()}
           </div>
 
           {/* Product Info */}
           <div className="space-y-6">
             <div>
-              <h1 className="text-4xl font-bold text-slate-900 mb-2">
+              <h1 className="text-4xl font-bold text-foreground mb-2">
                 {product.name}
               </h1>
-              <p className="text-slate-600 text-lg">{product.description}</p>
+              {product.unit && (
+                <p className="text-foreground/60 text-sm mb-2 font-medium">
+                  Unit: {product.unit}
+                </p>
+              )}
+              <p className="text-foreground/70 text-lg">{product.description}</p>
+              
+              {/* Rich Text Details */}
+              {product.details && (
+                <div 
+                  className="mt-4 prose prose-sm max-w-none text-foreground/80"
+                  dangerouslySetInnerHTML={{ __html: product.details }}
+                />
+              )}
             </div>
 
             {/* Price */}
-            <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
-              <p className="text-slate-600 font-medium mb-2">Price</p>
-              <p className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
-                ₹{parseFloat(String(product.price)).toFixed(0)}
-              </p>
-              {product.sku && (
-                <p className="text-xs text-slate-500 mt-2 font-mono">SKU: {product.sku}</p>
-              )}
-            </div>
+            <Card className="bg-primary/10 border-2 border-primary/20">
+              <CardBody className="gap-2">
+                <p className="text-foreground/70 font-medium">Price</p>
+                <p className="text-4xl font-bold text-primary">
+                  ₹{parseFloat(String(product.price)).toFixed(0)}
+                </p>
+                {product.sku && (
+                  <Chip size="sm" variant="flat" className="font-mono mt-1">
+                    SKU: {product.sku}
+                  </Chip>
+                )}
+              </CardBody>
+            </Card>
 
             {/* Stock Status */}
             <div className="flex items-center gap-3">
               <div
                 className={`w-4 h-4 rounded-full ${
-                  product.stock > 0 ? "bg-green-500" : "bg-red-500"
+                  product.stock > 0 ? "bg-success" : "bg-danger"
                 }`}
               ></div>
-              <p className={`font-semibold ${product.stock > 0 ? "text-green-700" : "text-red-700"}`}>
+              <p className={`font-semibold ${product.stock > 0 ? "text-success" : "text-danger"}`}>
                 {product.stock > 0
                   ? `${product.stock} in stock`
                   : "Out of Stock"}
               </p>
             </div>
 
-            {/* Variants Info */}
-            {variants.length > 1 && (
-              <div className="bg-slate-100 rounded-lg p-4">
-                <p className="text-sm text-slate-600 font-medium mb-2">
-                  Available Options
-                </p>
-                <p className="text-2xl font-bold text-slate-900">
-                  {variants.length} variants
-                </p>
-              </div>
+            {/* Product Options - Clickable Variants with Images */}
+            {variants.length > 0 && (
+              <Card>
+                <CardBody className="gap-4">
+                  <p className="text-sm text-foreground/70 font-medium">Available Options:</p>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    {variants.map((variant) => {
+                      const isSelected = selectedVariant?.id === variant.id;
+                      const variantImage = variant.bannerImage?.url || variant.image?.url || 
+                                          (variant.images && variant.images[0]?.upload?.url);
+                      
+                      return (
+                        <Card
+                          key={variant.id}
+                          isPressable
+                          onPress={() => {
+                            setSelectedVariant(variant);
+                            router.push(`/product/${variant.id}`);
+                          }}
+                          className={`transition-all ${
+                            isSelected
+                              ? "ring-2 ring-primary scale-105"
+                              : "hover:scale-105"
+                          }`}
+                        >
+                          <CardBody className="gap-2 p-2">
+                            {/* Variant Image */}
+                            <div className="relative aspect-square rounded-lg overflow-hidden bg-content2">
+                              {variantImage ? (
+                                <img
+                                  src={variantImage}
+                                  alt={variant.name}
+                                  className="w-full h-full object-cover"
+                                />
+                              ) : (
+                                <div className="w-full h-full flex items-center justify-center text-3xl">
+                                  📦
+                                </div>
+                              )}
+                              {isSelected && (
+                                <div className="absolute inset-0 bg-primary/20 flex items-center justify-center">
+                                  <svg className="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                  </svg>
+                                </div>
+                              )}
+                            </div>
+                            
+                            {/* Variant Info */}
+                            <div className="text-center">
+                              <p className="font-semibold text-xs text-foreground line-clamp-2">
+                                {variant.unit || variant.name}
+                              </p>
+                              <p className="text-xs text-primary font-bold mt-1">
+                                ₹{parseFloat(String(variant.price)).toFixed(0)}
+                              </p>
+                              <Chip 
+                                size="sm" 
+                                color={variant.stock > 0 ? "success" : "danger"}
+                                variant="flat"
+                                className="mt-1"
+                              >
+                                {variant.stock > 0 ? `${variant.stock} left` : "Out"}
+                              </Chip>
+                            </div>
+                          </CardBody>
+                        </Card>
+                      );
+                    })}
+                  </div>
+                </CardBody>
+              </Card>
             )}
 
             {/* Quantity Selector */}
             <div className="flex items-center gap-4">
-              <span className="text-slate-700 font-medium">Quantity:</span>
-              <div className="flex items-center gap-2 bg-slate-100 rounded-lg p-1">
-                <button
+              <span className="text-foreground font-medium">Quantity:</span>
+              <div className="flex items-center gap-2 bg-default-100 rounded-lg p-1">
+                <Button
+                  isIconOnly
+                  size="sm"
+                  variant="light"
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="px-4 py-2 text-slate-600 hover:bg-white rounded transition-colors font-bold"
                 >
                   −
-                </button>
-                <span className="px-6 py-2 text-slate-900 font-bold text-lg">
+                </Button>
+                <span className="px-6 py-2 text-foreground font-bold text-lg min-w-[60px] text-center">
                   {quantity}
                 </span>
-                <button
+                <Button
+                  isIconOnly
+                  size="sm"
+                  variant="light"
                   onClick={() => setQuantity(quantity + 1)}
-                  disabled={quantity >= product.stock}
-                  className="px-4 py-2 text-slate-600 hover:bg-white rounded transition-colors font-bold disabled:opacity-50"
+                  isDisabled={quantity >= product.stock}
                 >
                   +
-                </button>
+                </Button>
               </div>
             </div>
 
             {/* Add Button */}
-            <button
-              onClick={() => handleAddToCart(selectedVariant || product)}
-              disabled={product.stock === 0}
-              className={`w-full py-4 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-lg ${
-                product.stock === 0
-                  ? "bg-slate-300 text-slate-500 cursor-not-allowed opacity-50"
-                  : "bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 active:scale-95"
-              }`}
+            <Button
+              fullWidth
+              size="lg"
+              color="primary"
+              onPress={() => handleAddToCart(selectedVariant || product)}
+              isDisabled={product.stock === 0}
+              className="font-bold text-lg"
             >
-              {product.stock === 0 ? "Out of Stock" : "Add"}
-            </button>
+              {product.stock === 0 ? "Out of Stock" : "Add to Cart"}
+            </Button>
 
             {addedMessage && (
-              <div className="bg-green-100 border-2 border-green-400 text-green-700 p-4 rounded-lg font-semibold text-center">
-                {addedMessage}
-              </div>
-            )}
-
-            {/* Variant Slider Section */}
-            {variants.length > 1 && (
-              <div className="mt-8 p-6 bg-slate-50 rounded-xl border-2 border-slate-200">
-                <h3 className="text-lg font-bold text-slate-900 mb-4">Select Variant:</h3>
-                <div className="flex gap-3 overflow-x-auto pb-3 scrollbar-hide">
-                  {variants.map((variant) => (
-                    <button
-                      key={variant.id}
-                      onClick={() => setSelectedVariant(variant)}
-                      className={`flex-shrink-0 px-4 py-3 rounded-xl border-2 transition-all text-center whitespace-nowrap min-w-fit ${
-                        selectedVariant?.id === variant.id
-                          ? "border-blue-600 bg-blue-600 text-white shadow-lg"
-                          : "border-slate-300 bg-white text-slate-900 hover:border-blue-400 hover:shadow-md"
-                      }`}
-                    >
-                      <div className="font-bold text-sm">{variant.name}</div>
-                      <div className="text-xs opacity-80 mt-1">₹{parseFloat(String(variant.price)).toFixed(0)}</div>
-                      <div className="text-xs opacity-60 mt-1">{variant.stock > 0 ? `${variant.stock} left` : "Out"}</div>
-                    </button>
-                  ))}
-                </div>
-              </div>
+              <Card className="bg-success/10 border-2 border-success">
+                <CardBody className="py-3 text-center">
+                  <p className="text-success font-semibold">{addedMessage}</p>
+                </CardBody>
+              </Card>
             )}
           </div>
         </div>

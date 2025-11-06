@@ -133,7 +133,7 @@ export default class SellerController {
    */
   async getSellerStores({ response, auth }: HttpContext) {
     try {
-      const user = await auth.getUserOrFail() as any
+      const user = (await auth.getUserOrFail()) as any
 
       const organisations = await Organisation.query()
         .select('id', 'name', 'organisationUniqueCode', 'currency', 'dateFormat')
@@ -153,7 +153,7 @@ export default class SellerController {
    */
   async selectStore({ request, response, auth }: HttpContext) {
     try {
-      const user = await auth.getUserOrFail() as any
+      const user = (await auth.getUserOrFail()) as any
       const { storeId } = request.only(['storeId'])
 
       if (!storeId) {
@@ -437,7 +437,15 @@ export default class SellerController {
         })
       }
 
-      const validStatuses = ['pending', 'confirmed', 'preparing', 'ready', 'out_for_delivery', 'delivered', 'cancelled']
+      const validStatuses = [
+        'pending',
+        'confirmed',
+        'preparing',
+        'ready',
+        'out_for_delivery',
+        'delivered',
+        'cancelled',
+      ]
       if (!validStatuses.includes(status)) {
         return response.badRequest({
           message: 'Invalid status',
@@ -579,9 +587,7 @@ export default class SellerController {
       }
 
       // Get customer orders with preloaded items
-      const allOrders = await Order.query()
-        .where('customerId', customerId)
-        .preload('items')
+      const allOrders = await Order.query().where('customerId', customerId).preload('items')
 
       // For each order, load products in items
       const ordersWithProducts = await Promise.all(
@@ -633,7 +639,8 @@ export default class SellerController {
       let query = Product.query().where('organisationId', organisationId)
 
       if (search) {
-        query = query.where('name', 'ilike', `%${search}%`)
+        query = query
+          .where('name', 'ilike', `%${search}%`)
           .orWhere('description', 'ilike', `%${search}%`)
           .orWhere('sku', 'ilike', `%${search}%`)
       }

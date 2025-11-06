@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, ReactNode, useState, useEffect } from "react";
+import { apiEndpoints } from "@/lib/api-client";
 
 export interface User {
   id: number;
@@ -45,14 +46,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
         // If token exists, verify with backend
         try {
-          const response = await fetch("http://localhost:3333/api/customer/session", {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          });
-
-          const data = await response.json();
+          const data = await apiEndpoints.session(token);
 
           if (data.isLoggedIn && data.user) {
             setUser(data.user);

@@ -8,6 +8,7 @@ import { Divider } from "@heroui/divider";
 import { useCart } from "@/context/cart-context";
 import { useAuth } from "@/context/auth-context";
 import { useAddress } from "@/context/address-context";
+import { apiEndpoints } from "@/lib/api-client";
 import { LoginModal } from "./login-modal";
 import { AddressSelector } from "./address-selector";
 import type { Address } from "@/context/address-context";
@@ -52,30 +53,27 @@ export function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
         addressId: selectedAddress.id,
         notes: "",
         cartLength: cart.length,
+        cartItems: cart,
       });
 
-      const response = await fetch("http://localhost:3333/api/orders", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}`,
-        },
-        body: JSON.stringify({
+      const token = localStorage.getItem("token") || "";
+      const data = await apiEndpoints.createOrder(
+        {
           addressId: selectedAddress.id,
           notes: "",
-        }),
-      });
+        },
+        token
+      );
 
-      if (!response.ok) {
-        const error = await response.json();
-        console.error("Order API error:", error);
-        throw new Error(error.message || "Failed to create order");
+      console.log("Order creation response:", data);
+
+      if (!data.order || !data.order.id) {
+        throw new Error(data.message || "Failed to create order");
       }
 
-      const data = await response.json();
-      console.log("Order created:", data);
+      console.log("Order created successfully:", data.order);
 
-      // Clear cart after successful order
+      // Clear cart after successful order - only if order was created
       await clearCart();
 
       // Show success message and close modal
@@ -112,7 +110,7 @@ export function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                           <p className="text-xs text-foreground/60">Qty: {item.quantity} x {item.price}</p>
                         </div>
                         <p className="font-bold text-foreground">
-                          {(item.quantity * item.price).toFixed(2)} {item.currency}
+                          ₹{(item.quantity * item.price).toFixed(0)}
                         </p>
                       </CardBody>
                     </Card>
@@ -159,7 +157,7 @@ export function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
               <CardBody className="space-y-2 p-4">
                 <div className="flex items-center justify-between">
                   <p className="text-foreground/70">Subtotal</p>
-                  <p className="text-foreground font-semibold">{cartTotal.toFixed(2)} AED</p>
+                  <p className="text-foreground font-semibold">₹{cartTotal.toFixed(0)}</p>
                 </div>
                 <div className="flex items-center justify-between">
                   <p className="text-foreground/70">Delivery</p>
@@ -169,7 +167,7 @@ export function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                 <div className="flex items-center justify-between">
                   <p className="text-lg font-bold text-foreground">Total</p>
                   <p className="text-2xl font-bold text-primary">
-                    {cartTotal.toFixed(2)} AED
+                    ₹{cartTotal.toFixed(0)}
                   </p>
                 </div>
               </CardBody>

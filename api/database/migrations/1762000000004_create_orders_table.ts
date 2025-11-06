@@ -6,9 +6,9 @@ export default class extends BaseSchema {
   async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      
+
       table.string('order_number').unique().notNullable()
-      
+
       table
         .integer('customer_id')
         .unsigned()
@@ -16,7 +16,7 @@ export default class extends BaseSchema {
         .references('id')
         .inTable('users')
         .onDelete('CASCADE')
-      
+
       table
         .integer('address_id')
         .unsigned()
@@ -24,27 +24,29 @@ export default class extends BaseSchema {
         .references('id')
         .inTable('addresses')
         .onDelete('SET NULL')
-      
-      table.enum('status', [
-        'pending',
-        'confirmed',
-        'preparing',
-        'ready',
-        'out_for_delivery',
-        'delivered',
-        'cancelled',
-      ]).defaultTo('pending')
-      
+
+      table
+        .enum('status', [
+          'pending',
+          'confirmed',
+          'preparing',
+          'ready',
+          'out_for_delivery',
+          'delivered',
+          'cancelled',
+        ])
+        .defaultTo('pending')
+
       table.decimal('total_amount', 12, 2).notNullable()
       table.decimal('subtotal', 12, 2).notNullable()
       table.decimal('tax_amount', 12, 2).defaultTo(0)
       table.decimal('delivery_amount', 12, 2).defaultTo(0)
-      
+
       table.text('delivery_address').nullable()
       table.string('customer_phone').nullable()
       table.string('customer_name').nullable()
       table.text('notes').nullable()
-      
+
       table.timestamp('created_at')
       table.timestamp('updated_at')
     })

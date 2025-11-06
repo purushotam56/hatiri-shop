@@ -11,7 +11,7 @@ export default class ProductController {
   /**
    * Create a new product
    */
-  async store({ request, response }: HttpContext) {
+  async store({ response }: HttpContext) {
     const result = await this.productService.create()
     if (result.error) {
       return response.status(result.status || 400).json(result)
@@ -34,6 +34,12 @@ export default class ProductController {
       const search = request.input('search')
 
       let query = Product.query()
+        .preload('image')
+        .preload('bannerImage')
+        .preload('images', (imagesQuery) => {
+          imagesQuery.preload('upload').orderBy('sortOrder', 'asc')
+        })
+        .preload('category')
 
       if (organisationId) {
         query = query.where('organisationId', organisationId)
@@ -44,21 +50,31 @@ export default class ProductController {
       }
 
       if (search) {
-        query = query.where('name', 'ilike', `%${search}%`).orWhere('description', 'ilike', `%${search}%`)
+        query = query
+          .where('name', 'ilike', `%${search}%`)
+          .orWhere('description', 'ilike', `%${search}%`)
       }
 
       const products = await query.paginate(page, limit)
-      
-      // Group products by base SKU
+
+      // Group products by productGroupId or base SKU (fallback)
       const grouped: { [key: string]: Product[] } = {}
       products.all().forEach((product: Product) => {
-        const skuParts = product.sku?.split('-') || []
-        const baseSku = skuParts.slice(0, -1).join('-') || product.sku || product.name
-        
-        if (!grouped[baseSku]) {
-          grouped[baseSku] = []
+        let groupKey: string
+
+        if (product.productGroupId) {
+          // Use productGroupId if available
+          groupKey = `group_${product.productGroupId}`
+        } else {
+          // Fallback to SKU-based grouping
+          const skuParts = product.sku?.split('-') || []
+          groupKey = skuParts.slice(0, -1).join('-') || product.sku || product.name
         }
-        grouped[baseSku].push(product)
+
+        if (!grouped[groupKey]) {
+          grouped[groupKey] = []
+        }
+        grouped[groupKey].push(product)
       })
 
       // Format grouped products
@@ -72,8 +88,15 @@ export default class ProductController {
         category: variants[0].category,
         imageUrl: variants[0].imageUrl,
         imageId: variants[0].imageId,
+        image: variants[0].image,
+        bannerImage: variants[0].bannerImage,
+        images: variants[0].images,
         organisationId: variants[0].organisationId,
         isActive: variants[0].isActive,
+        options: variants[0].options,
+        productGroupId: variants[0].productGroupId,
+        unit: variants[0].unit,
+        stock: variants[0].stock,
         taxRate: variants[0].taxRate,
         taxType: variants[0].taxType,
         createdAt: variants[0].createdAt,
@@ -125,14 +148,135 @@ export default class ProductController {
    */
   async show({ params, response }: HttpContext) {
     try {
-      const product = await Product.findOrFail(params.id)
+      const product = await Product.query()
+        .where('id', params.id)
+        .preload('image')
+        .preload('bannerImage')
+        .preload('images', (imagesQuery) => {
+          imagesQuery.preload('upload').orderBy('sortOrder', 'asc')
+        })
+        .preload('category')
+        .preload('organisation')
+        .preload('variants', (variantsQuery) => {
+          variantsQuery
+            .preload('image')
+            .preload('bannerImage')
+            .preload('images', (imagesQuery) => {
+              imagesQuery.preload('upload').orderBy('sortOrder', 'asc')
+            })
+        })
+        .firstOrFail()
+
       const taxAmount = calculateTax(product.price, product.taxRate, product.taxType)
       const priceWithTax = calculateTotalWithTax(product.price, product.taxRate, product.taxType)
+
+      // Serialize with computed properties
+      const productData = product.serialize({
+        fields: {
+          pick: [
+            'id',
+            'name',
+            'description',
+            'sku',
+            'price',
+            'currency',
+            'categoryId',
+            'stock',
+            'quantity',
+            'unit',
+            'options',
+            'productGroupId',
+            'taxRate',
+            'taxType',
+            'details',
+            'bannerImageId',
+            'imageId',
+            'isActive',
+            'organisationId',
+            'createdAt',
+            'updatedAt',
+          ],
+        },
+        relations: {
+          image: {
+            fields: {
+              pick: ['id', 'name', 'key', 'url'],
+            },
+          },
+          bannerImage: {
+            fields: {
+              pick: ['id', 'name', 'key', 'url'],
+            },
+          },
+          images: {
+            fields: {
+              pick: ['id', 'productId', 'uploadId', 'sortOrder', 'isActive'],
+            },
+            relations: {
+              upload: {
+                fields: {
+                  pick: ['id', 'name', 'key', 'url'],
+                },
+              },
+            },
+          },
+          category: {
+            fields: {
+              pick: ['id', 'name', 'emoji'],
+            },
+          },
+          organisation: {
+            fields: {
+              pick: ['id', 'name', 'organisationUniqueCode'],
+            },
+          },
+          variants: {
+            fields: {
+              pick: [
+                'id',
+                'name',
+                'sku',
+                'price',
+                'stock',
+                'unit',
+                'options',
+                'productGroupId',
+                'bannerImageId',
+                'imageId',
+              ],
+            },
+            relations: {
+              image: {
+                fields: {
+                  pick: ['id', 'name', 'key', 'url'],
+                },
+              },
+              bannerImage: {
+                fields: {
+                  pick: ['id', 'name', 'key', 'url'],
+                },
+              },
+              images: {
+                fields: {
+                  pick: ['id', 'productId', 'uploadId', 'sortOrder', 'isActive'],
+                },
+                relations: {
+                  upload: {
+                    fields: {
+                      pick: ['id', 'name', 'key', 'url'],
+                    },
+                  },
+                },
+              },
+            },
+          },
+        },
+      })
 
       return response.ok({
         message: 'Product fetched successfully',
         product: {
-          ...product.toJSON(),
+          ...productData,
           taxAmount,
           priceWithTax,
         },
@@ -147,7 +291,7 @@ export default class ProductController {
   /**
    * Update a product
    */
-  async update({ params, request, response }: HttpContext) {
+  async update({ response }: HttpContext) {
     try {
       const result = await this.productService.updateOne()
       if (result.error) {

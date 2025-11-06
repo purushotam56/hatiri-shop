@@ -7,7 +7,9 @@ export default class ProductCategoryController {
    */
   async index({ response }: HttpContext) {
     try {
-      const categories = await ProductCategory.query().where('isActive', true).orderBy('name', 'asc')
+      const categories = await ProductCategory.query()
+        .where('isActive', true)
+        .orderBy('name', 'asc')
       return response.ok({
         message: 'Categories fetched successfully',
         data: categories,
@@ -25,7 +27,7 @@ export default class ProductCategoryController {
   async getByOrganisation({ params, response }: HttpContext) {
     try {
       const organisationId = params.organisationId
-      
+
       const categories = await ProductCategory.query()
         .where('organisationId', organisationId)
         .where('isActive', true)
@@ -90,7 +92,12 @@ export default class ProductCategoryController {
   async update({ params, request, response }: HttpContext) {
     try {
       const category = await ProductCategory.findOrFail(params.id)
-      const { name, slug, description, isActive } = request.only(['name', 'slug', 'description', 'isActive'])
+      const { name, slug, description, isActive } = request.only([
+        'name',
+        'slug',
+        'description',
+        'isActive',
+      ])
 
       category.merge({
         name,

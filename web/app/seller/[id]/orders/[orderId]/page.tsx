@@ -7,6 +7,7 @@ import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import { Select, SelectItem } from '@heroui/select'
 import Link from 'next/link'
+import { apiEndpoints } from '@/lib/api-client'
 import { useSellerStore } from '@/context/seller-store-context'
 
 interface OrderItem {
@@ -92,22 +93,8 @@ export default function OrderDetailPage() {
 
     const fetchOrder = async () => {
       try {
-        const response = await fetch(`http://localhost:3333/api/seller/${orgId}/orders/${orderId}`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            localStorage.removeItem('sellerToken')
-            router.push('/seller')
-            return
-          }
-          throw new Error('Failed to fetch order')
-        }
-
-        const data = await response.json()
+        const token = localStorage.getItem('sellerToken');
+        const data = await apiEndpoints.getSellerOrderDetail(String(orgId), String(orderId), token || '');
         setOrder(data.order)
         setSelectedStatus(data.order.status)
       } catch (err) {
@@ -133,24 +120,7 @@ export default function OrderDetailPage() {
         return
       }
 
-      const url = `http://localhost:3333/api/seller/${orgId}/orders/${orderId}/status`
-      console.log('Updating order status at:', url)
-      
-      const response = await fetch(url, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({ status: selectedStatus }),
-      })
-
-      if (!response.ok) {
-        const errorData = await response.json().catch(() => ({}))
-        throw new Error(errorData.message || `Failed to update status: ${response.status}`)
-      }
-
-      const data = await response.json()
+      const data = await apiEndpoints.updateSellerOrderStatus(String(orgId), String(orderId), selectedStatus, token);
       setOrder(data.order)
       setError('')
     } catch (err) {

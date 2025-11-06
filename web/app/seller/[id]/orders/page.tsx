@@ -6,6 +6,7 @@ import { Button } from '@heroui/button'
 import { Card, CardBody } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import Link from 'next/link'
+import { apiEndpoints } from '@/lib/api-client'
 import { useSellerStore } from '@/context/seller-store-context'
 
 interface Order {
@@ -79,28 +80,9 @@ export default function SellerOrdersPage() {
 
     const fetchOrders = async () => {
       try {
-        const url = new URL(`http://localhost:3333/api/seller/${orgId}/orders`)
-        url.searchParams.append('page', page.toString())
-        if (statusFilter) {
-          url.searchParams.append('status', statusFilter)
-        }
-
-        const response = await fetch(url.toString(), {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            localStorage.removeItem('sellerToken')
-            router.push('/seller')
-            return
-          }
-          throw new Error('Failed to fetch orders')
-        }
-
-        const data = await response.json()
+        const token = localStorage.getItem('sellerToken');
+        // For now, just fetch without pagination params - can be enhanced later
+        const data = await apiEndpoints.getSellerOrders(String(orgId), token || '');
         setOrders(data.orders || [])
         setHasMore(data.hasMore || false)
       } catch (err) {

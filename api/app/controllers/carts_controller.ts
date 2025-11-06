@@ -7,9 +7,9 @@ export default class CartsController {
     try {
       const user = await auth.getUserOrFail()
       const cartItems = await Cart.query().where('user_id', user.id)
-      
-      const total = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0)
-      
+
+      const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
+
       return response.ok({ items: cartItems, total })
     } catch (error) {
       return errorHandler(error, { auth, response } as HttpContext)
@@ -19,7 +19,15 @@ export default class CartsController {
   async store({ auth, request, response }: HttpContext) {
     try {
       const user = await auth.getUserOrFail()
-      const data = request.only(['productId', 'variantId', 'name', 'price', 'quantity', 'currency', 'unit'])
+      const data = request.only([
+        'productId',
+        'variantId',
+        'name',
+        'price',
+        'quantity',
+        'currency',
+        'unit',
+      ])
 
       // Check if item already exists in cart
       const existing = await Cart.query()

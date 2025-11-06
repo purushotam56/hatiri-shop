@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react"
 import { useRouter, useParams } from "next/navigation"
+import { apiEndpoints } from "@/lib/api-client"
 
 export default function ProductEditPage() {
   const router = useRouter()
@@ -28,13 +29,8 @@ export default function ProductEditPage() {
     ;(async () => {
       setLoading(true)
       try {
-        const res = await fetch(`http://localhost:3333/api/products/${id}`, {
-          headers: {
-            Authorization: `Bearer ${storedToken}`,
-          },
-        })
-        if (!res.ok) throw new Error("Failed to fetch product")
-        const body = await res.json()
+        const productId = Array.isArray(id) ? id[0] : id;
+        const body = await apiEndpoints.getProduct(productId);
         const p = body.product || body.data || body
         setFormData({
           name: p.name || "",
@@ -67,18 +63,8 @@ export default function ProductEditPage() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch(`http://localhost:3333/api/products/${id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(formData),
-      })
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}))
-        throw new Error(body?.message || `Failed to update (${res.status})`)
-      }
+      const productId = Array.isArray(id) ? id[0] : id;
+      await apiEndpoints.updateProduct(productId, formData, token || "");
       router.push("/products")
     } catch (err: any) {
       setError(err?.message || "Update failed")

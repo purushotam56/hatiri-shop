@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import { useRouter } from "next/navigation"
+import { apiEndpoints } from "@/lib/api-client"
 
 export default function ProductCreatePage() {
   const router = useRouter()
@@ -44,21 +45,7 @@ export default function ProductCreatePage() {
         return
       }
 
-      const res = await fetch("http://localhost:3333/api/products", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify(formData),
-      })
-
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}))
-        throw new Error(body?.message || `Failed to create product (${res.status})`)
-      }
-
-      const result = await res.json()
+      const result = await apiEndpoints.createProduct(formData, token);
       console.log("Product created:", result)
       router.push("/products")
     } catch (err: any) {

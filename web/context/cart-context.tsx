@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, ReactNode, useState, useEffect } from "react";
 import { useAuth } from "./auth-context";
+import { buildApiUrl } from "@/config/api";
 
 export interface CartItem {
   id: number;
@@ -27,8 +28,6 @@ interface CartContextType {
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
-
-const API_URL = "http://localhost:3333/api";
 
 export function CartProvider({ children }: { children: ReactNode }) {
   const { isLoggedIn, user } = useAuth();
@@ -66,7 +65,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     if (!isLoggedIn) return;
     setIsLoading(true);
     try {
-      const response = await fetch(`${API_URL}/cart`, {
+      const response = await fetch(buildApiUrl("/cart"), {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -87,7 +86,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     try {
       // Sync local cart items to backend
       for (const item of localCart) {
-        await fetch(`${API_URL}/cart`, {
+        await fetch(buildApiUrl("/cart"), {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -107,7 +106,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     if (isLoggedIn) {
       // Add to backend
       try {
-        const response = await fetch(`${API_URL}/cart`, {
+        const response = await fetch(buildApiUrl("/cart"), {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -119,7 +118,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
             name: product.name,
             price: product.price,
             quantity: product.quantity || 1,
-            currency: product.currency || "AED",
+            currency: product.currency || "INR",
             unit: product.unit,
           }),
         });
@@ -153,7 +152,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
             name: product.name,
             price: product.price,
             quantity: product.quantity || 1,
-            currency: product.currency || "AED",
+            currency: product.currency || "INR",
             unit: product.unit,
           },
         ]);
@@ -164,7 +163,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const removeFromCart = async (id: number) => {
     if (isLoggedIn) {
       try {
-        await fetch(`${API_URL}/cart/${id}`, {
+        await fetch(buildApiUrl(`/cart/${id}`), {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -184,7 +183,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       await removeFromCart(id);
     } else if (isLoggedIn) {
       try {
-        await fetch(`${API_URL}/cart/${id}`, {
+        await fetch(buildApiUrl(`/cart/${id}`), {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
@@ -208,7 +207,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const clearCart = async () => {
     if (isLoggedIn) {
       try {
-        await fetch(`${API_URL}/cart`, {
+        await fetch(buildApiUrl("/cart"), {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

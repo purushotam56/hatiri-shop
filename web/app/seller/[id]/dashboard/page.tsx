@@ -6,6 +6,7 @@ import { Button } from '@heroui/button'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import Link from 'next/link'
+import { apiEndpoints } from '@/lib/api-client'
 import { useSellerStore } from '@/context/seller-store-context'
 
 interface DashboardStats {
@@ -65,22 +66,8 @@ export default function SellerDashboardPage() {
 
     const fetchDashboard = async () => {
       try {
-        const response = await fetch(`http://localhost:3333/api/seller/${orgId}/dashboard`, {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        })
-
-        if (!response.ok) {
-          if (response.status === 401) {
-            localStorage.removeItem('sellerToken')
-            router.push('/seller')
-            return
-          }
-          throw new Error('Failed to fetch dashboard')
-        }
-
-        const data = await response.json()
+        const token = localStorage.getItem('sellerToken');
+        const data = await apiEndpoints.getSellerDashboard(String(orgId), token || '');
         setStats(data.stats)
         setRecentOrders(data.recentOrders || [])
       } catch (err) {

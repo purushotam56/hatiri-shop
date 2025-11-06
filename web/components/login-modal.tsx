@@ -7,6 +7,7 @@ import { Input } from "@heroui/input";
 import { useAuth } from "@/context/auth-context";
 import { useCart } from "@/context/cart-context";
 import { useAddress } from "@/context/address-context";
+import { apiEndpoints } from "@/lib/api-client";
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -28,15 +29,9 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:3333/api/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
-      });
+      const data = await apiEndpoints.login({ email, password });
 
-      const data = await response.json();
-
-      if (response.ok && data.user) {
+      if (data.user) {
         // Store token first
         if (typeof window !== "undefined") {
           localStorage.setItem("token", data.token);

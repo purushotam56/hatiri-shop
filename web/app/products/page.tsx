@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
+import { apiEndpoints } from "@/lib/api-client"
 
 type Product = {
   id: number
@@ -35,23 +36,7 @@ export default function ProductsListPage() {
       }
       setToken(storedToken)
 
-      const res = await fetch("http://localhost:3333/api/products", {
-        headers: {
-          Authorization: `Bearer ${storedToken}`,
-          "Content-Type": "application/json",
-        },
-      })
-
-      if (!res.ok) {
-        if (res.status === 401) {
-          setError("Unauthorized. Please login again.")
-          router.push("/login")
-          return
-        }
-        throw new Error(`Failed to fetch products (${res.status})`)
-      }
-
-      const body = await res.json()
+      const body = await apiEndpoints.getProducts();
       // Extract products from paginated response
       const productList = body.data?.data || body.data || body.products || []
       setProducts(productList)
@@ -69,17 +54,8 @@ export default function ProductsListPage() {
   async function handleDelete(id: number) {
     if (!confirm("Are you sure?")) return
     try {
-      const res = await fetch(`http://localhost:3333/api/products/${id}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      if (res.ok) {
-        setProducts(products.filter((p) => p.id !== id))
-      } else {
-        alert("Failed to delete product")
-      }
+      await apiEndpoints.deleteProduct(id, token || "");
+      setProducts(products.filter((p) => p.id !== id))
     } catch (e) {
       alert("Error deleting product")
     }

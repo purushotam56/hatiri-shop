@@ -1,6 +1,9 @@
 import { BaseSeeder } from '@adonisjs/lucid/seeders'
 import Product from '#models/product'
 import Organisation from '#models/organisation'
+import ProductCategory from '#models/product_category'
+import Upload from '#models/upload'
+import ProductImage from '#models/product_image'
 
 export default class extends BaseSeeder {
   async run() {
@@ -36,8 +39,18 @@ export default class extends BaseSeeder {
             { gram: '1kg', price: 4.49, stock: 90, options: ['Fresh', 'Organic', 'Baby Leaf'] },
           ]),
           ...this.generateProducts('Bell Pepper', 'Colorful bell peppers', 'VW-BPEP', [
-            { unit: '4 pack', price: 4.99, stock: 110, options: ['Red', 'Yellow', 'Green', 'Mixed'] },
-            { unit: '8 pack', price: 8.99, stock: 70, options: ['Red', 'Yellow', 'Green', 'Mixed'] },
+            {
+              unit: '4 pack',
+              price: 4.99,
+              stock: 110,
+              options: ['Red', 'Yellow', 'Green', 'Mixed'],
+            },
+            {
+              unit: '8 pack',
+              price: 8.99,
+              stock: 70,
+              options: ['Red', 'Yellow', 'Green', 'Mixed'],
+            },
           ]),
           ...this.generateProducts('Onion', 'Sweet onions', 'VW-ONON', [
             { kg: '1kg', price: 1.49, stock: 250, options: ['Red', 'White', 'Yellow'] },
@@ -50,12 +63,32 @@ export default class extends BaseSeeder {
             { kg: '10kg', price: 9.99, stock: 100, options: ['Red', 'White', 'Russet'] },
           ]),
           ...this.generateProducts('Cucumber', 'Fresh cucumbers', 'VW-CUCU', [
-            { unit: '4 pack', price: 2.99, stock: 180, options: ['English', 'Regular', 'Pickling'] },
-            { unit: '8 pack', price: 5.49, stock: 120, options: ['English', 'Regular', 'Pickling'] },
+            {
+              unit: '4 pack',
+              price: 2.99,
+              stock: 180,
+              options: ['English', 'Regular', 'Pickling'],
+            },
+            {
+              unit: '8 pack',
+              price: 5.49,
+              stock: 120,
+              options: ['English', 'Regular', 'Pickling'],
+            },
           ]),
           ...this.generateProducts('Lettuce', 'Crisp green lettuce', 'VW-LETT', [
-            { unit: '1 head', price: 2.49, stock: 100, options: ['Iceberg', 'Romaine', 'Butterhead'] },
-            { unit: '2 head', price: 4.49, stock: 80, options: ['Iceberg', 'Romaine', 'Butterhead'] },
+            {
+              unit: '1 head',
+              price: 2.49,
+              stock: 100,
+              options: ['Iceberg', 'Romaine', 'Butterhead'],
+            },
+            {
+              unit: '2 head',
+              price: 4.49,
+              stock: 80,
+              options: ['Iceberg', 'Romaine', 'Butterhead'],
+            },
           ]),
           ...this.generateProducts('Garlic', 'Fresh garlic bulbs', 'VW-GLIC', [
             { unit: '1 bulb', price: 0.99, stock: 300, options: [] },
@@ -67,9 +100,24 @@ export default class extends BaseSeeder {
           ]),
           // Fresh Fruits (50 products)
           ...this.generateProducts('Apples', 'Red apples from local farm', 'VW-APPL', [
-            { kg: '1kg', price: 5.99, stock: 150, options: ['Red Delicious', 'Fuji', 'Gala', 'Granny Smith'] },
-            { kg: '2kg', price: 10.99, stock: 100, options: ['Red Delicious', 'Fuji', 'Gala', 'Granny Smith'] },
-            { kg: '5kg', price: 24.99, stock: 50, options: ['Red Delicious', 'Fuji', 'Gala', 'Granny Smith'] },
+            {
+              kg: '1kg',
+              price: 5.99,
+              stock: 150,
+              options: ['Red Delicious', 'Fuji', 'Gala', 'Granny Smith'],
+            },
+            {
+              kg: '2kg',
+              price: 10.99,
+              stock: 100,
+              options: ['Red Delicious', 'Fuji', 'Gala', 'Granny Smith'],
+            },
+            {
+              kg: '5kg',
+              price: 24.99,
+              stock: 50,
+              options: ['Red Delicious', 'Fuji', 'Gala', 'Granny Smith'],
+            },
           ]),
           ...this.generateProducts('Bananas', 'Yellow fresh bananas', 'VW-BANA', [
             { kg: '1kg', price: 2.49, stock: 300, options: ['Yellow Ripe', 'Green', 'Plantain'] },
@@ -213,14 +261,44 @@ export default class extends BaseSeeder {
         products: [
           // Groceries (50+ products)
           ...this.generateProducts('Rice', 'Premium basmati rice', 'KM-RICE', [
-            { kg: '1kg', price: 8.99, stock: 200, options: ['White Basmati', 'Brown Basmati', 'Long Grain'] },
-            { kg: '5kg', price: 39.99, stock: 100, options: ['White Basmati', 'Brown Basmati', 'Long Grain'] },
-            { kg: '10kg', price: 74.99, stock: 50, options: ['White Basmati', 'Brown Basmati', 'Long Grain'] },
+            {
+              kg: '1kg',
+              price: 8.99,
+              stock: 200,
+              options: ['White Basmati', 'Brown Basmati', 'Long Grain'],
+            },
+            {
+              kg: '5kg',
+              price: 39.99,
+              stock: 100,
+              options: ['White Basmati', 'Brown Basmati', 'Long Grain'],
+            },
+            {
+              kg: '10kg',
+              price: 74.99,
+              stock: 50,
+              options: ['White Basmati', 'Brown Basmati', 'Long Grain'],
+            },
           ]),
           ...this.generateProducts('Flour', 'All-purpose flour', 'KM-FLOU', [
-            { kg: '1kg', price: 2.49, stock: 300, options: ['Maida', 'Whole Wheat', 'Brown Bread'] },
-            { kg: '5kg', price: 9.99, stock: 200, options: ['Maida', 'Whole Wheat', 'Brown Bread'] },
-            { kg: '10kg', price: 17.99, stock: 100, options: ['Maida', 'Whole Wheat', 'Brown Bread'] },
+            {
+              kg: '1kg',
+              price: 2.49,
+              stock: 300,
+              options: ['Maida', 'Whole Wheat', 'Brown Bread'],
+            },
+            {
+              kg: '5kg',
+              price: 9.99,
+              stock: 200,
+              options: ['Maida', 'Whole Wheat', 'Brown Bread'],
+            },
+            {
+              kg: '10kg',
+              price: 17.99,
+              stock: 100,
+              options: ['Maida', 'Whole Wheat', 'Brown Bread'],
+            },
           ]),
           ...this.generateProducts('Sugar', 'Granulated sugar', 'KM-SUGA', [
             { kg: '1kg', price: 3.49, stock: 250, options: ['White', 'Brown', 'Crystal'] },
@@ -232,17 +310,42 @@ export default class extends BaseSeeder {
             { kg: '5kg', price: 7.99, stock: 200, options: ['Plain', 'Iodized', 'Rock'] },
           ]),
           ...this.generateProducts('Oil', 'Cooking oil', 'KM-COIL', [
-            { liter: '1L', price: 9.99, stock: 200, options: ['Sunflower', 'Mustard', 'Sesame', 'Coconut'] },
-            { liter: '2L', price: 18.99, stock: 150, options: ['Sunflower', 'Mustard', 'Sesame', 'Coconut'] },
-            { liter: '5L', price: 44.99, stock: 80, options: ['Sunflower', 'Mustard', 'Sesame', 'Coconut'] },
+            {
+              liter: '1L',
+              price: 9.99,
+              stock: 200,
+              options: ['Sunflower', 'Mustard', 'Sesame', 'Coconut'],
+            },
+            {
+              liter: '2L',
+              price: 18.99,
+              stock: 150,
+              options: ['Sunflower', 'Mustard', 'Sesame', 'Coconut'],
+            },
+            {
+              liter: '5L',
+              price: 44.99,
+              stock: 80,
+              options: ['Sunflower', 'Mustard', 'Sesame', 'Coconut'],
+            },
           ]),
           ...this.generateProducts('Dal', 'Yellow split peas', 'KM-DALU', [
             { kg: '1kg', price: 6.99, stock: 180, options: ['Yellow', 'Red', 'Green'] },
             { kg: '5kg', price: 32.99, stock: 100, options: ['Yellow', 'Red', 'Green'] },
           ]),
           ...this.generateProducts('Spices Mix', 'Mixed spice blend', 'KM-SPIC', [
-            { gram: '100g', price: 4.99, stock: 150, options: ['Garam Masala', 'Chaat Masala', 'Curry Powder'] },
-            { gram: '250g', price: 11.99, stock: 80, options: ['Garam Masala', 'Chaat Masala', 'Curry Powder'] },
+            {
+              gram: '100g',
+              price: 4.99,
+              stock: 150,
+              options: ['Garam Masala', 'Chaat Masala', 'Curry Powder'],
+            },
+            {
+              gram: '250g',
+              price: 11.99,
+              stock: 80,
+              options: ['Garam Masala', 'Chaat Masala', 'Curry Powder'],
+            },
           ]),
           ...this.generateProducts('Turmeric', 'Pure turmeric powder', 'KM-TURM', [
             { gram: '100g', price: 3.99, stock: 200, options: ['Organic', 'Regular', 'Premium'] },
@@ -289,35 +392,85 @@ export default class extends BaseSeeder {
           ]),
           // Bakery Products (25 products)
           ...this.generateProducts('Bread', 'Fresh bread loaf', 'KM-BRED', [
-            { unit: '1 loaf', price: 3.49, stock: 150, options: ['White', 'Brown', 'Multigrain', 'Whole Wheat'] },
+            {
+              unit: '1 loaf',
+              price: 3.49,
+              stock: 150,
+              options: ['White', 'Brown', 'Multigrain', 'Whole Wheat'],
+            },
           ]),
           ...this.generateProducts('Croissants', 'Butter croissants', 'KM-CROS', [
             { unit: '4 pack', price: 5.99, stock: 100, options: ['Plain', 'Chocolate', 'Almond'] },
             { unit: '8 pack', price: 10.99, stock: 70, options: ['Plain', 'Chocolate', 'Almond'] },
           ]),
           ...this.generateProducts('Donuts', 'Glazed donuts', 'KM-DONU', [
-            { unit: '6 pack', price: 4.49, stock: 120, options: ['Glazed', 'Chocolate', 'Sprinkled', 'Cream Filled'] },
-            { unit: '12 pack', price: 7.99, stock: 80, options: ['Glazed', 'Chocolate', 'Sprinkled', 'Cream Filled'] },
+            {
+              unit: '6 pack',
+              price: 4.49,
+              stock: 120,
+              options: ['Glazed', 'Chocolate', 'Sprinkled', 'Cream Filled'],
+            },
+            {
+              unit: '12 pack',
+              price: 7.99,
+              stock: 80,
+              options: ['Glazed', 'Chocolate', 'Sprinkled', 'Cream Filled'],
+            },
           ]),
           ...this.generateProducts('Biscuits', 'Whole grain biscuits', 'KM-BISC', [
             { gram: '200g', price: 1.99, stock: 250, options: ['Plain', 'Chocolate', 'Cheese'] },
             { gram: '500g', price: 4.49, stock: 180, options: ['Plain', 'Chocolate', 'Cheese'] },
           ]),
           ...this.generateProducts('Muffins', 'Fresh muffins', 'KM-MUFF', [
-            { unit: '3 pack', price: 3.99, stock: 100, options: ['Blueberry', 'Chocolate', 'Banana'] },
-            { unit: '6 pack', price: 6.99, stock: 70, options: ['Blueberry', 'Chocolate', 'Banana'] },
+            {
+              unit: '3 pack',
+              price: 3.99,
+              stock: 100,
+              options: ['Blueberry', 'Chocolate', 'Banana'],
+            },
+            {
+              unit: '6 pack',
+              price: 6.99,
+              stock: 70,
+              options: ['Blueberry', 'Chocolate', 'Banana'],
+            },
           ]),
           ...this.generateProducts('Cake', 'Vanilla sponge cake', 'KM-CAKE', [
-            { unit: '1 piece', price: 2.99, stock: 100, options: ['Vanilla', 'Chocolate', 'Strawberry'] },
+            {
+              unit: '1 piece',
+              price: 2.99,
+              stock: 100,
+              options: ['Vanilla', 'Chocolate', 'Strawberry'],
+            },
           ]),
           // Cosmetics (20 products)
           ...this.generateProducts('Soap', 'Moisturizing soap', 'KM-SOAP', [
-            { unit: '1 bar', price: 2.49, stock: 300, options: ['Glycerin', 'Aloe Vera', 'Rose', 'Charcoal'] },
-            { unit: '3 pack', price: 5.99, stock: 200, options: ['Glycerin', 'Aloe Vera', 'Rose', 'Charcoal'] },
+            {
+              unit: '1 bar',
+              price: 2.49,
+              stock: 300,
+              options: ['Glycerin', 'Aloe Vera', 'Rose', 'Charcoal'],
+            },
+            {
+              unit: '3 pack',
+              price: 5.99,
+              stock: 200,
+              options: ['Glycerin', 'Aloe Vera', 'Rose', 'Charcoal'],
+            },
           ]),
           ...this.generateProducts('Shampoo', 'Hair shampoo', 'KM-SHAM', [
-            { ml: '200ml', price: 3.99, stock: 200, options: ['Anti-Dandruff', 'Moisturizing', 'Volumizing'] },
-            { ml: '500ml', price: 7.99, stock: 150, options: ['Anti-Dandruff', 'Moisturizing', 'Volumizing'] },
+            {
+              ml: '200ml',
+              price: 3.99,
+              stock: 200,
+              options: ['Anti-Dandruff', 'Moisturizing', 'Volumizing'],
+            },
+            {
+              ml: '500ml',
+              price: 7.99,
+              stock: 150,
+              options: ['Anti-Dandruff', 'Moisturizing', 'Volumizing'],
+            },
           ]),
           ...this.generateProducts('Toothpaste', 'Fluoride toothpaste', 'KM-TOOT', [
             { gram: '100g', price: 1.99, stock: 400, options: ['Mint', 'Cinnamon', 'Spice'] },
@@ -342,12 +495,32 @@ export default class extends BaseSeeder {
           ]),
           // Additional groceries
           ...this.generateProducts('Tea', 'Premium tea leaves', 'KM-TEAL', [
-            { gram: '100g', price: 3.99, stock: 200, options: ['Black Tea', 'Green Tea', 'Herbal'] },
-            { gram: '250g', price: 8.99, stock: 150, options: ['Black Tea', 'Green Tea', 'Herbal'] },
+            {
+              gram: '100g',
+              price: 3.99,
+              stock: 200,
+              options: ['Black Tea', 'Green Tea', 'Herbal'],
+            },
+            {
+              gram: '250g',
+              price: 8.99,
+              stock: 150,
+              options: ['Black Tea', 'Green Tea', 'Herbal'],
+            },
           ]),
           ...this.generateProducts('Coffee', 'Ground coffee', 'KM-COFE', [
-            { gram: '100g', price: 4.99, stock: 180, options: ['Dark Roast', 'Medium Roast', 'Light Roast'] },
-            { gram: '250g', price: 10.99, stock: 140, options: ['Dark Roast', 'Medium Roast', 'Light Roast'] },
+            {
+              gram: '100g',
+              price: 4.99,
+              stock: 180,
+              options: ['Dark Roast', 'Medium Roast', 'Light Roast'],
+            },
+            {
+              gram: '250g',
+              price: 10.99,
+              stock: 140,
+              options: ['Dark Roast', 'Medium Roast', 'Light Roast'],
+            },
           ]),
           ...this.generateProducts('Honey', 'Pure honey', 'KM-HONE', [
             { gram: '250g', price: 6.99, stock: 150, options: ['Acacia', 'Wildflower', 'Manuka'] },
@@ -358,8 +531,18 @@ export default class extends BaseSeeder {
             { gram: '500g', price: 6.99, stock: 160, options: ['Creamy', 'Crunchy'] },
           ]),
           ...this.generateProducts('Jam', 'Fruit jam', 'KM-JAMF', [
-            { gram: '200g', price: 2.99, stock: 250, options: ['Strawberry', 'Raspberry', 'Mixed Berry'] },
-            { gram: '400g', price: 4.99, stock: 200, options: ['Strawberry', 'Raspberry', 'Mixed Berry'] },
+            {
+              gram: '200g',
+              price: 2.99,
+              stock: 250,
+              options: ['Strawberry', 'Raspberry', 'Mixed Berry'],
+            },
+            {
+              gram: '400g',
+              price: 4.99,
+              stock: 200,
+              options: ['Strawberry', 'Raspberry', 'Mixed Berry'],
+            },
           ]),
           ...this.generateProducts('Cornflakes', 'Breakfast cereal', 'KM-CRNF', [
             { gram: '200g', price: 2.99, stock: 250, options: ['Regular', 'Honey', 'Fruity'] },
@@ -375,8 +558,18 @@ export default class extends BaseSeeder {
           ]),
           // More grocery items
           ...this.generateProducts('Noodles', 'Instant noodles', 'KM-NOOD', [
-            { pack: '6 pack', price: 1.99, stock: 400, options: ['Chicken', 'Vegetable', 'Shrimp'] },
-            { pack: '12 pack', price: 3.49, stock: 300, options: ['Chicken', 'Vegetable', 'Shrimp'] },
+            {
+              pack: '6 pack',
+              price: 1.99,
+              stock: 400,
+              options: ['Chicken', 'Vegetable', 'Shrimp'],
+            },
+            {
+              pack: '12 pack',
+              price: 3.49,
+              stock: 300,
+              options: ['Chicken', 'Vegetable', 'Shrimp'],
+            },
           ]),
           ...this.generateProducts('Biscuit', 'Cookies', 'KM-BISC2', [
             { pack: '200g', price: 2.99, stock: 300, options: ['Chocolate', 'Plain', 'Vanilla'] },
@@ -404,7 +597,12 @@ export default class extends BaseSeeder {
           ]),
           ...this.generateProducts('Yogurt Drink', 'Drinkable yogurt', 'KM-YOGD', [
             { ml: '200ml', price: 2.49, stock: 300, options: ['Mango', 'Strawberry', 'Plain'] },
-            { pack: '6x200ml', price: 12.99, stock: 200, options: ['Mango', 'Strawberry', 'Plain'] },
+            {
+              pack: '6x200ml',
+              price: 12.99,
+              stock: 200,
+              options: ['Mango', 'Strawberry', 'Plain'],
+            },
           ]),
           ...this.generateProducts('Vinegar', 'Apple cider vinegar', 'KM-VINE', [
             { ml: '500ml', price: 3.99, stock: 200, options: [] },
@@ -426,9 +624,24 @@ export default class extends BaseSeeder {
         products: [
           // Mobile Phones (15 products)
           ...this.generateProducts('Smartphone', 'Latest smartphone', 'DH-SMPH', [
-            { model: '6GB/128GB', price: 299.99, stock: 30, options: ['Black', 'Blue', 'Red', 'Gold'] },
-            { model: '8GB/256GB', price: 399.99, stock: 25, options: ['Black', 'Blue', 'Red', 'Gold'] },
-            { model: '12GB/512GB', price: 599.99, stock: 15, options: ['Black', 'Blue', 'Red', 'Gold'] },
+            {
+              model: '6GB/128GB',
+              price: 299.99,
+              stock: 30,
+              options: ['Black', 'Blue', 'Red', 'Gold'],
+            },
+            {
+              model: '8GB/256GB',
+              price: 399.99,
+              stock: 25,
+              options: ['Black', 'Blue', 'Red', 'Gold'],
+            },
+            {
+              model: '12GB/512GB',
+              price: 599.99,
+              stock: 15,
+              options: ['Black', 'Blue', 'Red', 'Gold'],
+            },
           ]),
           ...this.generateProducts('Feature Phone', 'Dual SIM phone', 'DH-FEPH', [
             { model: 'Basic', price: 79.99, stock: 50, options: ['Black', 'White', 'Silver'] },
@@ -436,13 +649,38 @@ export default class extends BaseSeeder {
           ]),
           // Mobile Accessories (50 products)
           ...this.generateProducts('Phone Case', 'Protective phone case', 'DH-PHCA', [
-            { model: 'Standard', price: 9.99, stock: 200, options: ['Black', 'Blue', 'Red', 'Transparent'] },
-            { model: 'Premium', price: 19.99, stock: 150, options: ['Black', 'Blue', 'Red', 'Transparent'] },
-            { model: 'Luxury', price: 34.99, stock: 80, options: ['Black', 'Blue', 'Red', 'Transparent'] },
+            {
+              model: 'Standard',
+              price: 9.99,
+              stock: 200,
+              options: ['Black', 'Blue', 'Red', 'Transparent'],
+            },
+            {
+              model: 'Premium',
+              price: 19.99,
+              stock: 150,
+              options: ['Black', 'Blue', 'Red', 'Transparent'],
+            },
+            {
+              model: 'Luxury',
+              price: 34.99,
+              stock: 80,
+              options: ['Black', 'Blue', 'Red', 'Transparent'],
+            },
           ]),
           ...this.generateProducts('Screen Protector', 'Tempered glass protector', 'DH-SCPR', [
-            { pack: '1 pack', price: 4.99, stock: 300, options: ['Clear', 'Matte', 'Anti-Blue Light'] },
-            { pack: '3 pack', price: 12.99, stock: 200, options: ['Clear', 'Matte', 'Anti-Blue Light'] },
+            {
+              pack: '1 pack',
+              price: 4.99,
+              stock: 300,
+              options: ['Clear', 'Matte', 'Anti-Blue Light'],
+            },
+            {
+              pack: '3 pack',
+              price: 12.99,
+              stock: 200,
+              options: ['Clear', 'Matte', 'Anti-Blue Light'],
+            },
           ]),
           ...this.generateProducts('Phone Charger', 'Fast charging charger', 'DH-CHGR', [
             { type: '18W', price: 12.99, stock: 200, options: ['USB-C', 'Micro USB', 'Lightning'] },
@@ -505,8 +743,18 @@ export default class extends BaseSeeder {
           ]),
           // Cameras & Photography (10 products)
           ...this.generateProducts('Webcam', 'HD webcam', 'DH-WCAM', [
-            { resolution: '720p', price: 29.99, stock: 100, options: ['Auto Focus', 'Manual Focus'] },
-            { resolution: '1080p', price: 49.99, stock: 70, options: ['Auto Focus', 'Manual Focus'] },
+            {
+              resolution: '720p',
+              price: 29.99,
+              stock: 100,
+              options: ['Auto Focus', 'Manual Focus'],
+            },
+            {
+              resolution: '1080p',
+              price: 49.99,
+              stock: 70,
+              options: ['Auto Focus', 'Manual Focus'],
+            },
           ]),
           ...this.generateProducts('Camera Tripod', 'Adjustable tripod', 'DH-TRPD', [
             { height: '2ft', price: 14.99, stock: 150, options: ['Aluminum', 'Steel'] },
@@ -655,9 +903,24 @@ export default class extends BaseSeeder {
             { set: 'Set of 6', price: 14.99, stock: 180, options: ['Clear', 'Colored'] },
           ]),
           ...this.generateProducts('Mug', 'Coffee mug', 'MH-MUGC', [
-            { capacity: '250ml', price: 4.99, stock: 200, options: ['Ceramic', 'Glass', 'Stainless Steel'] },
-            { capacity: '350ml', price: 6.99, stock: 180, options: ['Ceramic', 'Glass', 'Stainless Steel'] },
-            { set: 'Set of 4', price: 19.99, stock: 120, options: ['Ceramic', 'Glass', 'Stainless Steel'] },
+            {
+              capacity: '250ml',
+              price: 4.99,
+              stock: 200,
+              options: ['Ceramic', 'Glass', 'Stainless Steel'],
+            },
+            {
+              capacity: '350ml',
+              price: 6.99,
+              stock: 180,
+              options: ['Ceramic', 'Glass', 'Stainless Steel'],
+            },
+            {
+              set: 'Set of 4',
+              price: 19.99,
+              stock: 120,
+              options: ['Ceramic', 'Glass', 'Stainless Steel'],
+            },
           ]),
           ...this.generateProducts('Cutlery', 'Stainless steel spoon', 'MH-CUTL', [
             { type: 'Spoon', price: 2.99, stock: 300, options: ['Regular', 'Large', 'Small'] },
@@ -667,7 +930,12 @@ export default class extends BaseSeeder {
           ...this.generateProducts('Knife', 'Kitchen knife', 'MH-KNIF', [
             { type: 'Paring', price: 8.99, stock: 120, options: ['3 inch', '4 inch'] },
             { type: 'Chef', price: 19.99, stock: 80, options: ['6 inch', '8 inch'] },
-            { set: 'Block Set', price: 49.99, stock: 40, options: ['3 piece', '5 piece', '7 piece'] },
+            {
+              set: 'Block Set',
+              price: 49.99,
+              stock: 40,
+              options: ['3 piece', '5 piece', '7 piece'],
+            },
           ]),
           ...this.generateProducts('Cutting Board', 'Kitchen board', 'MH-CUTTB', [
             { material: 'Plastic', price: 6.99, stock: 150, options: ['Small', 'Medium', 'Large'] },
@@ -675,7 +943,12 @@ export default class extends BaseSeeder {
           ]),
           ...this.generateProducts('Baking Tray', 'Baking sheet', 'MH-BAKTR', [
             { size: 'Small', price: 7.99, stock: 120, options: ['Round', 'Square', 'Rectangular'] },
-            { size: 'Large', price: 12.99, stock: 100, options: ['Round', 'Square', 'Rectangular'] },
+            {
+              size: 'Large',
+              price: 12.99,
+              stock: 100,
+              options: ['Round', 'Square', 'Rectangular'],
+            },
           ]),
           ...this.generateProducts('Pan', 'Cooking pan', 'MH-PANC', [
             { size: '6 inch', price: 9.99, stock: 130, options: ['Non-stick', 'Stainless Steel'] },
@@ -706,7 +979,12 @@ export default class extends BaseSeeder {
           ]),
           // Home Ware (35 products)
           ...this.generateProducts('Bedsheet', 'Cotton bedsheet', 'MH-BEDS', [
-            { size: 'Single', price: 14.99, stock: 100, options: ['White', 'Blue', 'Red', 'Green'] },
+            {
+              size: 'Single',
+              price: 14.99,
+              stock: 100,
+              options: ['White', 'Blue', 'Red', 'Green'],
+            },
             { size: 'Double', price: 24.99, stock: 80, options: ['White', 'Blue', 'Red', 'Green'] },
             { size: 'King', price: 34.99, stock: 60, options: ['White', 'Blue', 'Red', 'Green'] },
           ]),
@@ -729,13 +1007,38 @@ export default class extends BaseSeeder {
             { size: '5x8', price: 79.99, stock: 35, options: ['Cotton', 'Wool', 'Synthetic'] },
           ]),
           ...this.generateProducts('Curtain', 'Window curtain', 'MH-CURT', [
-            { length: '4ft', price: 12.99, stock: 100, options: ['Blackout', 'Semi-Sheer', 'Sheer'] },
-            { length: '6ft', price: 18.99, stock: 80, options: ['Blackout', 'Semi-Sheer', 'Sheer'] },
-            { pair: '2 panel', price: 28.99, stock: 60, options: ['Blackout', 'Semi-Sheer', 'Sheer'] },
+            {
+              length: '4ft',
+              price: 12.99,
+              stock: 100,
+              options: ['Blackout', 'Semi-Sheer', 'Sheer'],
+            },
+            {
+              length: '6ft',
+              price: 18.99,
+              stock: 80,
+              options: ['Blackout', 'Semi-Sheer', 'Sheer'],
+            },
+            {
+              pair: '2 panel',
+              price: 28.99,
+              stock: 60,
+              options: ['Blackout', 'Semi-Sheer', 'Sheer'],
+            },
           ]),
           ...this.generateProducts('Lamp', 'Table lamp', 'MH-LAMP', [
-            { type: 'LED', price: 19.99, stock: 90, options: ['Warm White', 'Cool White', 'Adjustable'] },
-            { type: 'Desk', price: 24.99, stock: 80, options: ['Warm White', 'Cool White', 'Adjustable'] },
+            {
+              type: 'LED',
+              price: 19.99,
+              stock: 90,
+              options: ['Warm White', 'Cool White', 'Adjustable'],
+            },
+            {
+              type: 'Desk',
+              price: 24.99,
+              stock: 80,
+              options: ['Warm White', 'Cool White', 'Adjustable'],
+            },
           ]),
           ...this.generateProducts('Picture Frame', 'Wall frame', 'MH-FRAM', [
             { size: '4x6', price: 4.99, stock: 200, options: ['Wood', 'Metal', 'Plastic'] },
@@ -782,8 +1085,18 @@ export default class extends BaseSeeder {
             { type: 'Gel', price: 5.99, stock: 200, options: ['Lavender', 'Rose', 'Lemon'] },
           ]),
           ...this.generateProducts('Mop', 'Floor mop', 'MH-MOPP', [
-            { type: 'Wet Mop', price: 12.99, stock: 100, options: ['Microfiber', 'Cotton', 'Synthetic'] },
-            { type: 'Dry Mop', price: 8.99, stock: 120, options: ['Microfiber', 'Cotton', 'Synthetic'] },
+            {
+              type: 'Wet Mop',
+              price: 12.99,
+              stock: 100,
+              options: ['Microfiber', 'Cotton', 'Synthetic'],
+            },
+            {
+              type: 'Dry Mop',
+              price: 8.99,
+              stock: 120,
+              options: ['Microfiber', 'Cotton', 'Synthetic'],
+            },
           ]),
           ...this.generateProducts('Broom', 'Cleaning broom', 'MH-BROM', [
             { type: 'Soft', price: 6.99, stock: 150, options: ['Short', 'Long'] },
@@ -811,8 +1124,18 @@ export default class extends BaseSeeder {
             { size: 'Large', price: 14.99, stock: 140, options: ['Round', 'Square', 'Rectangle'] },
           ]),
           ...this.generateProducts('Table Cloth', 'Dining table cover', 'MH-TCLO', [
-            { size: '4 seater', price: 19.99, stock: 100, options: ['Cotton', 'Synthetic', 'Plastic'] },
-            { size: '6 seater', price: 29.99, stock: 80, options: ['Cotton', 'Synthetic', 'Plastic'] },
+            {
+              size: '4 seater',
+              price: 19.99,
+              stock: 100,
+              options: ['Cotton', 'Synthetic', 'Plastic'],
+            },
+            {
+              size: '6 seater',
+              price: 29.99,
+              stock: 80,
+              options: ['Cotton', 'Synthetic', 'Plastic'],
+            },
           ]),
           ...this.generateProducts('Napkins', 'Paper napkins', 'MH-NAPK', [
             { pack: '50 pack', price: 2.99, stock: 400, options: ['White', 'Colored'] },
@@ -837,18 +1160,210 @@ export default class extends BaseSeeder {
     let totalProducts = 0
 
     for (const [storeCode, storeData] of Object.entries(storeProducts)) {
-      const org = organisations.find(o => o.organisationUniqueCode === storeCode)
+      const org = organisations.find((o) => o.organisationUniqueCode === storeCode)
 
       if (!org) {
         console.log(`Organisation ${storeCode} not found, skipping...`)
         continue
       }
 
+      // Fetch categories for this organization
+      const categories = await ProductCategory.query()
+        .where('organisationId', org.id)
+        .where('isActive', true)
+
+      if (categories.length === 0) {
+        console.log(`No categories found for ${storeData.name}, skipping product creation...`)
+        continue
+      }
+
+      // Helper to get category by name
+      const getCategoryId = (productName: string): number => {
+        const nameLower = productName.toLowerCase()
+
+        // Vegetable Wings categories
+        if (
+          nameLower.includes('tomato') ||
+          nameLower.includes('carrot') ||
+          nameLower.includes('broccoli') ||
+          nameLower.includes('spinach') ||
+          nameLower.includes('pepper') ||
+          nameLower.includes('onion') ||
+          nameLower.includes('potato') ||
+          nameLower.includes('cucumber') ||
+          nameLower.includes('lettuce') ||
+          nameLower.includes('garlic') ||
+          nameLower.includes('cabbage') ||
+          nameLower.includes('cauliflower') ||
+          nameLower.includes('radish') ||
+          nameLower.includes('zucchini') ||
+          nameLower.includes('eggplant')
+        ) {
+          const vegCategory = categories.find((c) => c.name.toLowerCase() === 'vegetables')
+          if (vegCategory) return vegCategory.id
+        }
+
+        if (
+          nameLower.includes('apple') ||
+          nameLower.includes('banana') ||
+          nameLower.includes('orange') ||
+          nameLower.includes('strawberr') ||
+          nameLower.includes('grape') ||
+          nameLower.includes('mango') ||
+          nameLower.includes('pineapple') ||
+          nameLower.includes('watermelon') ||
+          nameLower.includes('blueberr') ||
+          nameLower.includes('kiwi') ||
+          nameLower.includes('papaya') ||
+          nameLower.includes('guava') ||
+          nameLower.includes('lime') ||
+          nameLower.includes('lemon') ||
+          nameLower.includes('pomegranate')
+        ) {
+          const fruitCategory = categories.find((c) => c.name.toLowerCase() === 'fruits')
+          if (fruitCategory) return fruitCategory.id
+        }
+
+        // Kirana Mart categories
+        if (
+          nameLower.includes('milk') ||
+          nameLower.includes('yogurt') ||
+          nameLower.includes('cheese') ||
+          nameLower.includes('butter') ||
+          nameLower.includes('paneer') ||
+          nameLower.includes('cream')
+        ) {
+          const dairyCategory = categories.find((c) => c.name.toLowerCase() === 'dairy')
+          if (dairyCategory) return dairyCategory.id
+        }
+
+        if (
+          nameLower.includes('bread') ||
+          nameLower.includes('croissant') ||
+          nameLower.includes('donut') ||
+          nameLower.includes('bagel') ||
+          nameLower.includes('muffin') ||
+          nameLower.includes('cake') ||
+          nameLower.includes('cookie') ||
+          nameLower.includes('bun')
+        ) {
+          const bakeryCategory = categories.find((c) => c.name.toLowerCase() === 'bakery')
+          if (bakeryCategory) return bakeryCategory.id
+        }
+
+        if (
+          nameLower.includes('chips') ||
+          nameLower.includes('popcorn') ||
+          nameLower.includes('crackers') ||
+          nameLower.includes('nuts') ||
+          nameLower.includes('candy') ||
+          nameLower.includes('chocolate')
+        ) {
+          const snacksCategory = categories.find((c) => c.name.toLowerCase() === 'snacks')
+          if (snacksCategory) return snacksCategory.id
+        }
+
+        if (
+          nameLower.includes('juice') ||
+          nameLower.includes('soda') ||
+          nameLower.includes('water') ||
+          nameLower.includes('coffee') ||
+          nameLower.includes('tea') ||
+          nameLower.includes('energy drink')
+        ) {
+          const beveragesCategory = categories.find((c) => c.name.toLowerCase() === 'beverages')
+          if (beveragesCategory) return beveragesCategory.id
+        }
+
+        // Digital Helper categories
+        if (
+          nameLower.includes('phone') ||
+          nameLower.includes('laptop') ||
+          nameLower.includes('tablet') ||
+          nameLower.includes('camera') ||
+          nameLower.includes('speaker') ||
+          nameLower.includes('monitor')
+        ) {
+          const electronicsCategory = categories.find((c) => c.name.toLowerCase() === 'electronics')
+          if (electronicsCategory) return electronicsCategory.id
+        }
+
+        if (
+          nameLower.includes('charger') ||
+          nameLower.includes('cable') ||
+          nameLower.includes('case') ||
+          nameLower.includes('screen protector') ||
+          nameLower.includes('earbuds') ||
+          nameLower.includes('adapter')
+        ) {
+          const accessoriesCategory = categories.find((c) => c.name.toLowerCase() === 'accessories')
+          if (accessoriesCategory) return accessoriesCategory.id
+        }
+
+        // My Home categories
+        if (
+          nameLower.includes('towel') ||
+          nameLower.includes('curtain') ||
+          nameLower.includes('rug') ||
+          nameLower.includes('lamp') ||
+          nameLower.includes('frame') ||
+          nameLower.includes('vase') ||
+          nameLower.includes('sheet') ||
+          nameLower.includes('comforter') ||
+          nameLower.includes('cushion') ||
+          nameLower.includes('table cloth') ||
+          nameLower.includes('napkin')
+        ) {
+          const homeCategory = categories.find((c) => c.name.toLowerCase() === 'home')
+          if (homeCategory) return homeCategory.id
+        }
+
+        if (
+          nameLower.includes('detergent') ||
+          nameLower.includes('soap') ||
+          nameLower.includes('cleaner') ||
+          nameLower.includes('wipes') ||
+          nameLower.includes('mop') ||
+          nameLower.includes('broom') ||
+          nameLower.includes('trash can')
+        ) {
+          const cleaningCategory = categories.find((c) => c.name.toLowerCase() === 'cleaning')
+          if (cleaningCategory) return cleaningCategory.id
+        }
+
+        if (
+          nameLower.includes('pan') ||
+          nameLower.includes('pot') ||
+          nameLower.includes('knife') ||
+          nameLower.includes('cutting board') ||
+          nameLower.includes('spatula') ||
+          nameLower.includes('peeler') ||
+          nameLower.includes('storage box') ||
+          nameLower.includes('shelf')
+        ) {
+          const kitchenCategory = categories.find((c) => c.name.toLowerCase() === 'kitchen')
+          if (kitchenCategory) return kitchenCategory.id
+        }
+
+        // Default to first category if no match
+        return categories[0].id
+      }
+
       const productsList = storeData.products
 
       for (const product of productsList) {
-        await Product.create({
+        const categoryId = getCategoryId(product.name)
+
+        // Create images for this product
+        const { bannerImage, mainImage, galleryImages } = await this.createSampleImages(
+          product.name,
+          org.id
+        )
+
+        // Create product with images
+        const createdProduct = await Product.create({
           organisationId: org.id,
+          categoryId: categoryId,
           name: product.name,
           description: product.description,
           sku: product.sku,
@@ -857,19 +1372,35 @@ export default class extends BaseSeeder {
           stock: product.stock,
           unit: product.unit,
           imageUrl: product.imageUrl,
-          options: product.options && product.options.length > 0 ? JSON.stringify(product.options) : JSON.stringify([]),
+          bannerImageId: bannerImage.id,
+          imageId: mainImage.id,
+          details: `<h2>About ${product.name}</h2><p>${product.description}</p><h3>Features</h3><ul><li>High quality</li><li>Fresh and organic</li><li>Best price guaranteed</li></ul>`,
+          options:
+            product.options && product.options.length > 0
+              ? JSON.stringify(product.options)
+              : JSON.stringify([]),
+          productGroupId: product.productGroupId || null,
           isActive: true,
         })
+
+        // Create product gallery images
+        for (const galleryImage of galleryImages) {
+          await ProductImage.create({
+            productId: createdProduct.id,
+            uploadId: galleryImage.id,
+          })
+        }
+
         totalProducts++
       }
 
-      console.log(
-        `✅ Created ${productsList.length} products for ${storeData.name} (${storeCode})`
-      )
+      console.log(`✅ Created ${productsList.length} products for ${storeData.name} (${storeCode})`)
     }
 
     console.log(`✅ Total: ${totalProducts} products created across 4 stores`)
   }
+
+  private productGroupCounter = 0
 
   private generateProducts(
     baseName: string,
@@ -880,9 +1411,15 @@ export default class extends BaseSeeder {
     const products = []
     let variantIndex = 0
 
+    // Increment and assign the same productGroupId to all variants of this product
+    this.productGroupCounter++
+    const currentGroupId = this.productGroupCounter
+
     for (const variant of variants) {
       variantIndex++
-      const key = Object.keys(variant).find(k => k !== 'price' && k !== 'stock' && k !== 'options')
+      const key = Object.keys(variant).find(
+        (k) => k !== 'price' && k !== 'stock' && k !== 'options'
+      )
       const value = key ? variant[key] : ''
       const name = value ? `${baseName} ${value}` : baseName
 
@@ -895,9 +1432,59 @@ export default class extends BaseSeeder {
         unit: value,
         imageUrl: null,
         options: variant.options || [],
+        productGroupId: currentGroupId,
       })
     }
 
     return products
+  }
+
+  private async createSampleImages(productName: string, _organisationId: number) {
+    // Generate random seed for consistent images per product name
+    const seed = productName.split('').reduce((acc, char) => acc + char.charCodeAt(0), 0)
+
+    // Use picsum.photos for placeholder images - these URLs will work directly
+    const bannerWidth = 1200
+    const bannerHeight = 400
+    const productWidth = 800
+    const productHeight = 800
+
+    // Create banner image (wide format)
+    const bannerImage = await Upload.create({
+      name: `${productName} Banner`,
+      mimeType: 'image/jpeg',
+      size: 150000,
+      key: `https://picsum.photos/seed/${seed}-banner/${bannerWidth}/${bannerHeight}`,
+      urlPrefix: '',
+      driver: 'external', // Use 'external' driver for third-party URLs
+    })
+
+    // Create main product image (square format)
+    const mainImage = await Upload.create({
+      name: `${productName} Main`,
+      mimeType: 'image/jpeg',
+      size: 100000,
+      key: `https://picsum.photos/seed/${seed}-main/${productWidth}/${productHeight}`,
+      urlPrefix: '',
+      driver: 'external',
+    })
+
+    // Create 2-4 additional images for the gallery
+    const galleryImages = []
+    const imageCount = Math.floor(Math.random() * 3) + 2 // 2-4 images
+
+    for (let i = 0; i < imageCount; i++) {
+      const galleryImage = await Upload.create({
+        name: `${productName} Gallery ${i + 1}`,
+        mimeType: 'image/jpeg',
+        size: 80000,
+        key: `https://picsum.photos/seed/${seed}-gallery${i}/${productWidth}/${productHeight}`,
+        urlPrefix: '',
+        driver: 'external',
+      })
+      galleryImages.push(galleryImage)
+    }
+
+    return { bannerImage, mainImage, galleryImages }
   }
 }

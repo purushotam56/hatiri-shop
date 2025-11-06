@@ -73,7 +73,7 @@ export function SellerHeader({
             </div>
             <div className="flex flex-col">
               <p className="font-bold text-white text-lg">Seller Panel</p>
-              <p className="text-xs text-blue-100">Manage Your Business</p>
+              <p className="text-xs text-warning-200">Manage Your Business</p>
             </div>
           </div>
         </NavbarBrand>
@@ -88,7 +88,7 @@ export function SellerHeader({
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
               </svg>
               <span className="text-sm font-semibold text-white">{storeName}</span>
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-success animate-pulse"></span>
             </div>
           </div>
         </div>
@@ -100,7 +100,7 @@ export function SellerHeader({
           <NavbarItem key={item.label}>
             <Link
               href={item.href}
-              className="text-white hover:text-blue-100 hover:bg-white/10 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium"
+              className="text-white hover:text-warning-200 hover:bg-white/10 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium"
             >
               {item.label}
             </Link>
