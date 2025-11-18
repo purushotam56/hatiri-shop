@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import { Button } from '@heroui/button'
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from '@heroui/modal'
+import { Input } from '@heroui/input'
 import { apiEndpoints } from '@/lib/api-client'
 import { AdminHeader } from '@/components/headers/admin-header'
 import { useAdmin } from '@/context/admin-context'
@@ -16,6 +18,18 @@ interface Organisation {
   currency: string
 }
 
+interface OrganisationFormData {
+  name: string
+  organisationUniqueCode: string
+  currency: string
+  addressLine1: string
+  addressLine2: string
+  city: string
+  state: string
+  postalCode: string
+  country: string
+}
+
 export default function OrganizationsPage() {
   const router = useRouter()
   const { adminUser, clearAdmin } = useAdmin()
@@ -23,6 +37,20 @@ export default function OrganizationsPage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [storeLoaded, setStoreLoaded] = useState(false)
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [formError, setFormError] = useState('')
+  const [formData, setFormData] = useState<OrganisationFormData>({
+    name: '',
+    organisationUniqueCode: '',
+    currency: 'INR',
+    addressLine1: '',
+    addressLine2: '',
+    city: '',
+    state: '',
+    postalCode: '',
+    country: '',
+  })
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -56,6 +84,70 @@ export default function OrganizationsPage() {
     fetchOrgs()
   }, [router, clearAdmin, storeLoaded])
 
+  const handleCreateOrganisation = async () => {
+    if (!formData.name || !formData.organisationUniqueCode) {
+      setFormError('Name and organization code are required')
+      return
+    }
+
+    setIsSubmitting(true)
+    setFormError('')
+
+    try {
+      const token = localStorage.getItem('adminToken')
+      if (!token) {
+        router.push('/admin')
+        return
+      }
+
+      await apiEndpoints.createAdminOrganisation(formData, token)
+      
+      // Refresh the list
+      const data = await apiEndpoints.getAdminOrganisations(token)
+      setOrganisations(data.organisations || [])
+      
+      // Reset form and close modal
+      setFormData({
+        name: '',
+        organisationUniqueCode: '',
+        currency: 'INR',
+        addressLine1: '',
+        addressLine2: '',
+        city: '',
+        state: '',
+        postalCode: '',
+        country: '',
+      })
+      setIsCreateModalOpen(false)
+    } catch (err: any) {
+      setFormError(err.message || 'Failed to create organization')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleDeleteOrganisation = async (id: number) => {
+    if (!confirm('Are you sure you want to delete this organization?')) {
+      return
+    }
+
+    try {
+      const token = localStorage.getItem('adminToken')
+      if (!token) {
+        router.push('/admin')
+        return
+      }
+
+      await apiEndpoints.deleteAdminOrganisation(id, token)
+      
+      // Refresh the list
+      const data = await apiEndpoints.getAdminOrganisations(token)
+      setOrganisations(data.organisations || [])
+    } catch (err: any) {
+      setError(err.message || 'Failed to delete organization')
+    }
+  }
+
   return (
     <main className="min-h-screen bg-default-50">
       <AdminHeader userName={adminUser?.fullName} userEmail={adminUser?.email} />
@@ -66,7 +158,9 @@ export default function OrganizationsPage() {
             <h1 className="text-3xl font-bold">Organizations</h1>
             <p className="text-default-500">Manage all organizations in the system</p>
           </div>
-          <Button color="primary">+ Create Organization</Button>
+          <Button color="primary" onPress={() => setIsCreateModalOpen(true)}>
+            + Create Organization
+          </Button>
         </div>
 
         {loading ? (
@@ -97,7 +191,12 @@ export default function OrganizationsPage() {
                     <Button size="sm" variant="flat" color="primary">
                       Edit
                     </Button>
-                    <Button size="sm" variant="flat" color="danger">
+                    <Button
+                      size="sm"
+                      variant="flat"
+                      color="danger"
+                      onPress={() => handleDeleteOrganisation(org.id)}
+                    >
                       Delete
                     </Button>
                   </div>
@@ -107,6 +206,107 @@ export default function OrganizationsPage() {
           </div>
         )}
       </div>
+
+      {/* Create Organization Modal */}
+      <Modal isOpen={isCreateModalOpen} onClose={() => setIsCreateModalOpen(false)} size="2xl">
+        <ModalContent>
+          <ModalHeader>Create New Organization</ModalHeader>
+          <ModalBody>
+            <div className="space-y-4">
+              {formError && (
+                <div className="p-3 bg-danger-50 text-danger rounded-lg text-sm">
+                  {formError}
+                </div>
+              )}
+              
+              <Input
+                label="Organization Name"
+                placeholder="Enter organization name"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                isRequired
+              />
+              
+              <Input
+                label="Organization Code"
+                placeholder="Enter unique code (e.g., org123)"
+                value={formData.organisationUniqueCode}
+                onChange={(e) => setFormData({ ...formData, organisationUniqueCode: e.target.value })}
+                isRequired
+              />
+              
+              <Input
+                label="Currency"
+                placeholder="Currency code"
+                value={formData.currency}
+                onChange={(e) => setFormData({ ...formData, currency: e.target.value })}
+              />
+              
+              <Input
+                label="Address Line 1"
+                placeholder="Enter address"
+                value={formData.addressLine1}
+                onChange={(e) => setFormData({ ...formData, addressLine1: e.target.value })}
+              />
+              
+              <Input
+                label="Address Line 2"
+                placeholder="Enter address line 2"
+                value={formData.addressLine2}
+                onChange={(e) => setFormData({ ...formData, addressLine2: e.target.value })}
+              />
+              
+              <div className="grid grid-cols-2 gap-4">
+                <Input
+                  label="City"
+                  placeholder="Enter city"
+                  value={formData.city}
+                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                />
+                
+                <Input
+                  label="State"
+                  placeholder="Enter state"
+                  value={formData.state}
+                  onChange={(e) => setFormData({ ...formData, state: e.target.value })}
+                />
+              </div>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <Input
+                  label="Postal Code"
+                  placeholder="Enter postal code"
+                  value={formData.postalCode}
+                  onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
+                />
+                
+                <Input
+                  label="Country"
+                  placeholder="Enter country"
+                  value={formData.country}
+                  onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                />
+              </div>
+            </div>
+          </ModalBody>
+          <ModalFooter>
+            <Button
+              variant="flat"
+              onPress={() => setIsCreateModalOpen(false)}
+              isDisabled={isSubmitting}
+            >
+              Cancel
+            </Button>
+            <Button
+              color="primary"
+              onPress={handleCreateOrganisation}
+              isLoading={isSubmitting}
+            >
+              Create Organization
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </main>
   )
 }

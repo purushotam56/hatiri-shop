@@ -64,16 +64,20 @@ export default class AdminController {
         organisationUniqueCode,
         addressLine1,
         addressLine2,
+        city,
+        state,
         postalCode,
-        blockBuildingNo,
+        country,
       } = request.only([
         'name',
         'currency',
         'organisationUniqueCode',
         'addressLine1',
         'addressLine2',
+        'city',
+        'state',
         'postalCode',
-        'blockBuildingNo',
+        'country',
       ])
 
       // Validate required fields
@@ -101,8 +105,10 @@ export default class AdminController {
       organisation.organisationUniqueCode = organisationUniqueCode
       organisation.addressLine1 = addressLine1 || ''
       organisation.addressLine2 = addressLine2 || ''
+      organisation.city = city || ''
+      organisation.state = state || ''
       organisation.postalCode = postalCode || ''
-      organisation.blockBuildingNo = blockBuildingNo || ''
+      organisation.country = country || ''
       organisation.organisationRoleType = 'builder' as any
       await organisation.save()
 
@@ -112,7 +118,7 @@ export default class AdminController {
       defaultBranch.name = `${name} - Main Branch`
       defaultBranch.type = 'apartment' as any
       defaultBranch.address = addressLine1 || ''
-      defaultBranch.blockBuildingNo = blockBuildingNo || ''
+      defaultBranch.blockBuildingNo = ''
       await defaultBranch.save()
 
       return response.created({
@@ -184,22 +190,26 @@ export default class AdminController {
       await auth.getUserOrFail()
 
       const organisation = await Organisation.findOrFail(params.id)
-      const { name, currency, addressLine1, addressLine2, postalCode, blockBuildingNo } =
+      const { name, currency, addressLine1, addressLine2, city, state, postalCode, country } =
         request.only([
           'name',
           'currency',
           'addressLine1',
           'addressLine2',
+          'city',
+          'state',
           'postalCode',
-          'blockBuildingNo',
+          'country',
         ])
 
       if (name) organisation.name = name
       if (currency) organisation.currency = currency
       if (addressLine1) organisation.addressLine1 = addressLine1
       if (addressLine2) organisation.addressLine2 = addressLine2
+      if (city) organisation.city = city
+      if (state) organisation.state = state
       if (postalCode) organisation.postalCode = postalCode
-      if (blockBuildingNo) organisation.blockBuildingNo = blockBuildingNo
+      if (country) organisation.country = country
 
       await organisation.save()
 

@@ -7,7 +7,10 @@ import Upload from './upload.js'
 import { PROJECT_DOCUMENTS } from '#database/constants/table_names'
 import { RoleKeys } from '#types/role'
 import Organisation from './organisation.js'
+
 export default class Branch extends BaseModel {
+  static table = 'branchs'
+
   @column({ isPrimary: true })
   declare id: number
 

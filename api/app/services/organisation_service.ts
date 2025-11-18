@@ -89,9 +89,11 @@ export default class OrganisationService {
         organisationUniqueCode: createData.organisationUniqueCode,
         addressLine1: createData.addressLine1,
         addressLine2: createData.addressLine2,
+        city: createData.city || '',
+        state: createData.state || '',
         postalCode: createData.postalCode,
+        country: createData.country || '',
         organisationRoleType: createData.organisationRoleType,
-        blockBuildingNo: createData.blockBuildingNo,
       })
       if (createUsers && createUsers?.length > 0) {
         const users = await User.createMany(

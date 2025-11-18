@@ -4,6 +4,7 @@ import Organisation from '#models/organisation'
 import Order from '#models/order'
 import Product from '#models/product'
 import { errorHandler } from '#helper/error_handler'
+import StockService, { type OrderStatusType } from '#services/stock_service'
 
 // Helper function to filter orders by seller organisation
 function filterOrdersByOrganisation(orders: any[], organisationId: number): any[] {
@@ -437,7 +438,7 @@ export default class SellerController {
         })
       }
 
-      const validStatuses = [
+      const validStatuses: OrderStatusType[] = [
         'pending',
         'confirmed',
         'preparing',
@@ -446,40 +447,43 @@ export default class SellerController {
         'delivered',
         'cancelled',
       ]
-      if (!validStatuses.includes(status)) {
+      if (!validStatuses.includes(status as OrderStatusType)) {
         return response.badRequest({
-          message: 'Invalid status',
+          message: 'Invalid status. Must be one of: ' + validStatuses.join(', '),
         })
       }
 
-      // If order is being marked as delivered, decrease stock for all items
-      if (status === 'delivered' && order.status !== 'delivered') {
-        for (const item of order.items) {
-          if (item.product) {
-            // Decrease stock by the quantity ordered
-            item.product.stock = Math.max(0, item.product.stock - item.quantity)
-            await item.product.save()
-          }
-        }
+      const previousStatus = order.status as OrderStatusType
+      const newStatus = status as OrderStatusType
+
+      // Validate status transition
+      const validation = StockService.validateStatusTransition(previousStatus, newStatus)
+      if (!validation.valid) {
+        return response.badRequest({ message: validation.error })
       }
 
-      // If order is being cancelled (and was previously delivered), restore stock
-      if (status === 'cancelled' && order.status === 'delivered') {
-        for (const item of order.items) {
-          if (item.product) {
-            // Restore stock by the quantity ordered
-            item.product.stock = item.product.stock + item.quantity
-            await item.product.save()
-          }
-        }
-      }
+      // Adjust stock based on status change using StockService
+      const stockAdjustments = await StockService.adjustStockForStatusChange(
+        order,
+        previousStatus,
+        newStatus
+      )
 
-      order.status = status
+      order.status = newStatus
       await order.save()
 
       return response.ok({
         message: 'Order status updated successfully',
         order,
+        stockAdjustments:
+          stockAdjustments.length > 0
+            ? stockAdjustments.map((adj) => ({
+                productId: adj.productId,
+                previousStock: adj.previousStock,
+                newStock: adj.newStock,
+                quantity: adj.quantity,
+              }))
+            : undefined,
       })
     } catch (error) {
       return errorHandler(error || 'Failed to update order', { request, response } as HttpContext)

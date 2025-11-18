@@ -255,6 +255,7 @@ router
         router.post('/', [OrdersController, 'store'])
         router.get('/:id', [OrdersController, 'show'])
         router.get('/:id/invoice', [OrdersController, 'downloadInvoice'])
+        router.patch('/:id/status', [OrdersController, 'updateStatus'])
       })
       .prefix('/orders')
       .middleware(middleware.auth({ guards: ['api'] }))

@@ -52,10 +52,16 @@ export default class Organisation extends BaseModel {
   declare addressLine2: string
 
   @column()
+  declare city: string
+
+  @column()
+  declare state: string
+
+  @column()
   declare postalCode: string
 
   @column()
-  declare blockBuildingNo: string
+  declare country: string
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

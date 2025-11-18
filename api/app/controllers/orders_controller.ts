@@ -5,6 +5,7 @@ import Cart from '#models/cart'
 import Address from '#models/address'
 import { errorHandler } from '#helper/error_handler'
 import PDFDocument from 'pdfkit'
+import StockService, { type OrderStatusType } from '#services/stock_service'
 
 export default class OrdersController {
   async store({ auth, request, response }: HttpContext) {
@@ -223,6 +224,72 @@ export default class OrdersController {
         })
         doc.on('error', reject)
         doc.end()
+      })
+    } catch (error) {
+      return errorHandler(error, { auth, response } as HttpContext)
+    }
+  }
+
+  async updateStatus({ auth, params, request, response }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const { status } = request.only(['status']) as { status: OrderStatusType }
+
+      // Validate status value
+      const validStatuses: OrderStatusType[] = [
+        'pending',
+        'confirmed',
+        'preparing',
+        'ready',
+        'out_for_delivery',
+        'delivered',
+        'cancelled',
+      ]
+
+      if (!status || !validStatuses.includes(status)) {
+        return response.badRequest({
+          message: 'Invalid status. Must be one of: ' + validStatuses.join(', '),
+        })
+      }
+
+      // Get order
+      const order = await Order.query()
+        .where('id', params.id)
+        .where('customerId', user.id)
+        .preload('items')
+        .firstOrFail()
+
+      const previousStatus = order.status as OrderStatusType
+
+      // Validate status transition
+      const validation = StockService.validateStatusTransition(previousStatus, status)
+      if (!validation.valid) {
+        return response.badRequest({ message: validation.error })
+      }
+
+      // Adjust stock based on status change
+      const stockAdjustments = await StockService.adjustStockForStatusChange(
+        order,
+        previousStatus,
+        status
+      )
+
+      // Update order status
+      order.status = status
+      await order.save()
+
+      return response.ok({
+        order,
+        message: `Order status updated to ${status}`,
+        stockAdjustments:
+          stockAdjustments.length > 0
+            ? stockAdjustments.map((adj) => ({
+                productId: adj.productId,
+                previousStock: adj.previousStock,
+                newStock: adj.newStock,
+                quantity: adj.quantity,
+              }))
+            : undefined,
       })
     } catch (error) {
       return errorHandler(error, { auth, response } as HttpContext)

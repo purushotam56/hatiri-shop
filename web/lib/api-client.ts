@@ -210,6 +210,12 @@ export const apiEndpoints = {
   getAdminStats: (token: string) => apiGet("/admin/stats", token),
   getAdminOrganisations: (token: string) =>
     apiGet("/admin/organisations", token),
+  createAdminOrganisation: (data: any, token: string) =>
+    apiPost("/admin/organisations", data, token),
+  updateAdminOrganisation: (id: number, data: any, token: string) =>
+    apiPut(`/admin/organisations/${id}`, data, token),
+  deleteAdminOrganisation: (id: number, token: string) =>
+    apiDelete(`/admin/organisations/${id}`, token),
   getAdminProducts: (token: string) => apiGet("/admin/products", token),
   getAdminOrders: (token: string) => apiGet("/admin/orders", token),
   getAdminSellers: (token: string) => apiGet("/admin/sellers", token),

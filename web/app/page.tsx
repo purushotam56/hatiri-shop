@@ -15,6 +15,7 @@ interface Organisation {
 async function fetchOrganisations(): Promise<Organisation[]> {
   try {
     const data = await apiEndpoints.getOrganisations();
+    console.log(data,"-----")
     const mappedOrgs = (data.organisations || []).map((org: any) => ({
       id: org.id,
       name: org.organisationName,
