@@ -483,4 +483,53 @@ export default class AuthController {
       })
     }
   }
+
+  /**
+   * Register a new customer/user
+   */
+  async register(ctx: HttpContext) {
+    const { request, response } = ctx
+    const { email, phone, password } = request.only(['email', 'phone', 'password'])
+
+    try {
+      // Validate required fields
+      if (!email || !phone || !password) {
+        return response.badRequest({
+          message: 'Email, phone, and password are required',
+        })
+      }
+
+      // Check if user already exists
+      const existingUser = await User.findBy('email', email)
+      if (existingUser) {
+        return response.badRequest({
+          message: 'Email already registered',
+        })
+      }
+
+      // Create new user
+      const user = await User.create({
+        email,
+        mobile: phone,
+        password,
+        fullName: email.split('@')[0], // Use email prefix as default name
+      })
+
+      // Create access token
+      const token = await User.accessTokens.create(user, ['customer'])
+
+      return response.ok({
+        message: 'Registration successful',
+        token: token.value!.release(),
+        user: {
+          id: user.id,
+          email: user.email,
+          phoneNumber: user.mobile,
+          name: user.fullName,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error ? error : 'Registration failed', ctx)
+    }
+  }
 }

@@ -142,6 +142,7 @@ export async function apiUpload(
 export const apiEndpoints = {
   // Auth
   login: (data: any) => apiPost("/login", data),
+  register: (data: any) => apiPost("/register", data),
   logout: (token: string) => apiPost("/logout", {}, token),
   session: (token: string) => apiGet("/customer/session", token),
 

@@ -60,6 +60,8 @@ export function AddToCart({ group, organisation }: AddToCartProps) {
     } else if (selected && selected.stock > 0) {
       addToCart({
         id: selected.id,
+        productId: group.id,
+        variantId: selected.id,
         name: group.name,
         price: selected.price,
         currency: group.currency,
@@ -169,6 +171,8 @@ export function AddToCart({ group, organisation }: AddToCartProps) {
                   if (selected && !isOutOfStock) {
                     addToCart({
                       id: selected.id,
+                      productId: group.id,
+                      variantId: selected.id,
                       name: group.name,
                       price: selected.price,
                       currency: group.currency,

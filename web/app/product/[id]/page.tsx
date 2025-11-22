@@ -206,6 +206,8 @@ export default function ProductDetailPage() {
     // Add to cart using context
     addToCart({
       ...variantToAdd,
+      productId: product?.id || variantToAdd.id,
+      variantId: variantToAdd.id,
       quantity: quantity,
     });
 

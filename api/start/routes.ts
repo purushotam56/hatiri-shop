@@ -95,6 +95,7 @@ router
       .use(middleware.auth({ guards: ['adminapi', 'api'] }))
 
     router.post('login', [AuthController, 'login'])
+    router.post('register', [AuthController, 'register'])
     router
       .post('organisation_login', [AuthController, 'selectOrganisationRole'])
       .use(middleware.auth({ guards: ['adminapi', 'api'] }))

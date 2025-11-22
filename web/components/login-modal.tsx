@@ -18,8 +18,11 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
   const { setUser } = useAuth();
   const { syncCart } = useCart();
   const { syncAddresses } = useAddress();
+  const [mode, setMode] = useState<'login' | 'signup'>('login');
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -29,33 +32,86 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
     setLoading(true);
 
     try {
-      const data = await apiEndpoints.login({ email, password });
+      if (mode === 'login') {
+        // Login flow
+        const data = await apiEndpoints.login({ email, password });
 
-      if (data.user) {
-        // Store token first
-        if (typeof window !== "undefined") {
-          localStorage.setItem("token", data.token);
+        if (data.user) {
+          // Store token first
+          if (typeof window !== "undefined") {
+            localStorage.setItem("token", data.token);
+          }
+
+          // Set user to update auth context
+          setUser(data.user);
+
+          // Sync cart and addresses
+          try {
+            console.log("Starting cart and address sync after login");
+            await Promise.all([syncCart(), syncAddresses()]);
+            console.log("Sync completed successfully");
+          } catch (syncErr) {
+            console.error("Sync error:", syncErr);
+          }
+
+          setEmail("");
+          setPassword("");
+          onClose();
+        } else {
+          setError(data.message || "Login failed");
         }
-
-        // Set user to update auth context (this triggers useEffect in cart/address context)
-        setUser(data.user);
-
-        // Sync cart and addresses from local storage to backend
-        try {
-          await Promise.all([syncCart(), syncAddresses()]);
-        } catch (syncErr) {
-          console.warn("Sync warning:", syncErr);
-          // Don't fail login if sync fails, just warn
-        }
-
-        setEmail("");
-        setPassword("");
-        onClose();
       } else {
-        setError(data.message || "Login failed");
+        // Signup flow
+        if (!email || !phone || !password || !confirmPassword) {
+          setError("All fields are required");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          setError("Passwords do not match");
+          return;
+        }
+
+        if (password.length < 6) {
+          setError("Password must be at least 6 characters");
+          return;
+        }
+
+        const data = await apiEndpoints.register({ 
+          email, 
+          phone,
+          password 
+        });
+
+        if (data.user) {
+          // Store token first
+          if (typeof window !== "undefined") {
+            localStorage.setItem("token", data.token);
+          }
+
+          // Set user to update auth context
+          setUser(data.user);
+
+          // Sync cart and addresses
+          try {
+            console.log("Starting cart and address sync after signup");
+            await Promise.all([syncCart(), syncAddresses()]);
+            console.log("Sync completed successfully");
+          } catch (syncErr) {
+            console.error("Sync error:", syncErr);
+          }
+
+          setEmail("");
+          setPhone("");
+          setPassword("");
+          setConfirmPassword("");
+          onClose();
+        } else {
+          setError(data.message || "Signup failed");
+        }
       }
     } catch (err) {
-      setError("Login failed. Please try again.");
+      setError(mode === 'login' ? "Login failed. Please try again." : "Signup failed. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -64,7 +120,9 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
   return (
     <Modal isOpen={isOpen} onClose={onClose} backdrop="blur" size="md">
       <ModalContent>
-        <ModalHeader className="flex flex-col gap-1">Login</ModalHeader>
+        <ModalHeader className="flex flex-col gap-1">
+          {mode === 'login' ? 'Login' : 'Sign Up'}
+        </ModalHeader>
         <ModalBody>
           {error && (
             <div className="bg-danger/10 text-danger px-4 py-2 rounded-lg text-sm">
@@ -72,6 +130,16 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
             </div>
           )}
           <div className="space-y-4">
+            {mode === 'signup' && (
+              <Input
+                label="Phone Number"
+                type="tel"
+                placeholder="Your mobile number"
+                value={phone}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)}
+                isRequired
+              />
+            )}
             <Input
               label="Email"
               type="email"
@@ -88,12 +156,45 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
               isRequired
             />
+            {mode === 'signup' && (
+              <Input
+                label="Confirm Password"
+                type="password"
+                placeholder="••••••••"
+                value={confirmPassword}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value)}
+                isRequired
+              />
+            )}
           </div>
           <p className="text-center text-sm text-foreground/60">
-            Don't have an account?{" "}
-            <button className="text-primary font-semibold hover:underline">
-              Sign up
-            </button>
+            {mode === 'login' ? (
+              <>
+                Don't have an account?{" "}
+                <button 
+                  onClick={() => {
+                    setMode('signup');
+                    setError("");
+                  }}
+                  className="text-primary font-semibold hover:underline"
+                >
+                  Sign up
+                </button>
+              </>
+            ) : (
+              <>
+                Already have an account?{" "}
+                <button 
+                  onClick={() => {
+                    setMode('login');
+                    setError("");
+                  }}
+                  className="text-primary font-semibold hover:underline"
+                >
+                  Login
+                </button>
+              </>
+            )}
           </p>
         </ModalBody>
         <ModalFooter>
@@ -105,7 +206,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
             onPress={() => handleSubmit()}
             isLoading={loading}
           >
-            {loading ? "Logging in..." : "Login"}
+            {loading ? (mode === 'login' ? "Logging in..." : "Signing up...") : (mode === 'login' ? "Login" : "Sign Up")}
           </Button>
         </ModalFooter>
       </ModalContent>
