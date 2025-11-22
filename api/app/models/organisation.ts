@@ -69,6 +69,12 @@ export default class Organisation extends BaseModel {
   @column.dateTime()
   declare trialEndDate: DateTime | null
 
+  @column()
+  declare whatsappNumber: string | null
+
+  @column()
+  declare whatsappEnabled: boolean
+
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
 

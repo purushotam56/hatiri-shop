@@ -1,11 +1,15 @@
 import { HttpContext } from '@adonisjs/core/http'
 import { DateTime } from 'luxon'
+import fs from 'node:fs'
 import User from '#models/user'
 import Organisation from '#models/organisation'
 import Order from '#models/order'
 import Product from '#models/product'
 import PlatformSetting from '#models/platform_setting'
+import Upload from '#models/upload'
 import { errorHandler } from '#helper/error_handler'
+import { normalizeFileName } from '#helper/upload_helper'
+import StorageService from '#services/storage_service'
 import StockService, { type OrderStatusType } from '#services/stock_service'
 
 // Helper function to filter orders by seller organisation
@@ -268,10 +272,11 @@ export default class SellerController {
       const user = await auth.getUserOrFail()
       const organisationId = params.id
 
-      // Verify seller belongs to this organization
+      // Verify seller belongs to this organization and preload image
       const org = await Organisation.query()
         .where('id', organisationId)
         .preload('user', (q) => q.where('user_id', user.id))
+        .preload('image')
         .first()
 
       if (!org || org.user.length === 0) {
@@ -320,6 +325,14 @@ export default class SellerController {
         }))
 
       return response.ok({
+        organisation: {
+          id: org.id,
+          name: org.name,
+          organisationUniqueCode: org.organisationUniqueCode,
+          image: org.image,
+          whatsappNumber: org.whatsappNumber,
+          whatsappEnabled: org.whatsappEnabled,
+        },
         stats: {
           totalOrders,
           pendingOrders,
@@ -1212,6 +1225,114 @@ export default class SellerController {
       })
     } catch (error) {
       return errorHandler(error || 'Failed to update product variants', { response } as any)
+    }
+  }
+
+  /**
+   * Update seller store settings (WhatsApp, store name, logo)
+   */
+  async updateSellerStore({ request, response, auth }: HttpContext) {
+    try {
+      const user = await auth.authenticate()
+      const organisationId = request.param('id')
+
+      // Verify user is authorized for this organization
+      const org = await Organisation.query()
+        .where('id', organisationId)
+        .preload('user', (q) => q.where('user_id', user.id))
+        .preload('image')
+        .first()
+
+      if (!org || org.user.length === 0) {
+        return response.forbidden({
+          message: 'Not authorized',
+        })
+      }
+
+      const { whatsappNumber, whatsappEnabled, name } = request.only([
+        'whatsappNumber',
+        'whatsappEnabled',
+        'name',
+      ])
+
+      // Validate WhatsApp number format if provided
+      if (whatsappNumber && !/^\+?[1-9]\d{1,14}$/.test(whatsappNumber.replace(/[^\d+]/g, ''))) {
+        return response.badRequest({
+          message: 'Invalid WhatsApp number format',
+        })
+      }
+
+      // Update store name if provided
+      if (name !== undefined && name !== null) {
+        org.name = name
+      }
+
+      // Update organization settings
+      if (whatsappNumber !== undefined) {
+        org.whatsappNumber = whatsappNumber || null
+      }
+      if (whatsappEnabled !== undefined) {
+        org.whatsappEnabled = whatsappEnabled === true || whatsappEnabled === 'true'
+      }
+
+      // Handle logo upload if file is provided
+      let logoFile = request.file('logo')
+      if (logoFile) {
+        const fileBuffer = fs.readFileSync(logoFile.tmpPath!)
+        const key = 'images/' + normalizeFileName(logoFile.clientName)
+        const mimeType = logoFile?.headers?.['content-type'] || logoFile.type + '/' + logoFile.extname
+
+        const storageService = new StorageService()
+        const uploadResult = await storageService.uploadFile(
+          fileBuffer,
+          key,
+          mimeType as string
+        )
+
+        // Create or update upload record
+        let upload: Upload
+        if (org.imageId) {
+          // Update existing upload
+          upload = (await Upload.find(org.imageId))!
+          upload.name = logoFile.clientName
+          upload.key = key
+          upload.mimeType = mimeType
+          upload.size = logoFile.size
+          upload.driver = uploadResult.driver
+          await upload.save()
+        } else {
+          // Create new upload
+          upload = await Upload.create({
+            name: logoFile.clientName,
+            key,
+            mimeType,
+            size: logoFile.size,
+            driver: uploadResult.driver,
+          })
+        }
+
+        org.imageId = upload.id
+      }
+
+      await org.save()
+
+      // Reload image relation after save if logo was uploaded
+      if (logoFile) {
+        await org.load('image')
+      }
+
+      return response.ok({
+        message: 'Store settings updated successfully',
+        store: {
+          id: org.id,
+          name: org.name,
+          image: org.image,
+          whatsappNumber: org.whatsappNumber,
+          whatsappEnabled: org.whatsappEnabled,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to update store settings', { response } as any)
     }
   }
 }

@@ -14,6 +14,8 @@ export default class OrganisationSeeder extends BaseSeeder {
         addressLine1: '456 Farm Lane',
         addressLine2: 'Green Market',
         postalCode: '10001',
+        whatsappNumber: '+919876543210',
+        whatsappEnabled: true,
       },
       {
         name: 'Kirana Mart',
@@ -24,6 +26,8 @@ export default class OrganisationSeeder extends BaseSeeder {
         addressLine1: '789 Market Street',
         addressLine2: 'Downtown',
         postalCode: '10002',
+        whatsappNumber: '+919876543211',
+        whatsappEnabled: true,
       },
       {
         name: 'Digital Helper',
@@ -34,6 +38,8 @@ export default class OrganisationSeeder extends BaseSeeder {
         addressLine1: '321 Tech Plaza',
         addressLine2: 'Tech Hub',
         postalCode: '10003',
+        whatsappNumber: '+919876543212',
+        whatsappEnabled: true,
       },
       {
         name: 'My Home',
@@ -44,6 +50,8 @@ export default class OrganisationSeeder extends BaseSeeder {
         addressLine1: '654 Home Street',
         addressLine2: 'Retail Area',
         postalCode: '10004',
+        whatsappNumber: '+919876543213',
+        whatsappEnabled: true,
       },
     ]
 
@@ -68,6 +76,8 @@ export default class OrganisationSeeder extends BaseSeeder {
         addressLine1: orgData.addressLine1,
         addressLine2: orgData.addressLine2,
         postalCode: orgData.postalCode,
+        whatsappNumber: orgData.whatsappNumber,
+        whatsappEnabled: orgData.whatsappEnabled,
       })
 
       console.log(`Organisation created: ${org.name}`)

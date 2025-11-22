@@ -237,4 +237,6 @@ export const apiEndpoints = {
     apiUpload(`/seller/${orgId}/products/variants`, data, token),
   updateProductVariants: (orgId: string | number, groupId: string | number, data: FormData, token: string) =>
     apiUpload(`/seller/${orgId}/products/variants/${groupId}`, data, token, 'PUT'),
+  updateSellerStore: (orgId: string | number, data: any, token: string) =>
+    apiPut(`/seller/${orgId}/store`, data, token),
 };

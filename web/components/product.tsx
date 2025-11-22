@@ -42,9 +42,10 @@ interface ProductProps {
   group: ProductGroup;
   onProductClick: (productId: number) => string;
   getCategoryEmoji: (name: string) => string;
+  organisation?: any;
 }
 
-export function Product({ group, onProductClick, getCategoryEmoji }: ProductProps) {
+export function Product({ group, onProductClick, getCategoryEmoji, organisation }: ProductProps) {
   const product = group;
   const hasDiscount = false; // You can add discount logic later
   const discount = 0;
@@ -137,9 +138,9 @@ export function Product({ group, onProductClick, getCategoryEmoji }: ProductProp
             </div>
           </div>
 
-          {/* Add To Cart Component */}
+          {/* Add To Cart and WhatsApp Buttons */}
           <div className="mt-2 sm:mt-3">
-            <AddToCart group={group} />
+            <AddToCart group={group} organisation={organisation} />
           </div>
         </div>
       </div>

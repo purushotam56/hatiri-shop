@@ -128,7 +128,7 @@ function MobileSidebar({ categories, selectedCategoryId, currentPath }: { catego
 }
 
 // Main Content Component
-function MainContent({ products }: { products: any[] }) {
+function MainContent({ products, organisation }: { products: any[]; organisation: any }) {
     return (
         <main className="flex-1 bg-background lg:ml-0 ml-20 overflow-hidden h-full">
             <ScrollShadow className="h-full">
@@ -163,6 +163,7 @@ function MainContent({ products }: { products: any[] }) {
                                         group={product}
                                         onProductClick={(id) => `/product/${id}`}
                                         getCategoryEmoji={getCategoryEmoji}
+                                        organisation={organisation}
                                     />
                                 ))}
                             </div>
@@ -286,7 +287,7 @@ export async function StoreHomePage({ storeCode, selectedCategoryId }: { storeCo
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col h-[calc(100vh - 80px)]">
-        <MainContent products={filteredProducts} />
+        <MainContent products={filteredProducts} organisation={data.organisation} />
       </div>
     </div>
   );

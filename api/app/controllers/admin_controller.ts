@@ -152,7 +152,7 @@ export default class AdminController {
       }
 
       const organisations = await Organisation.query()
-        .select('id', 'name', 'organisationUniqueCode', 'currency', 'createdAt', 'updatedAt')
+        .select('id', 'name', 'organisationUniqueCode', 'currency', 'createdAt', 'updatedAt', 'status', 'trialEndDate', 'whatsappNumber', 'whatsappEnabled')
         .orderBy('createdAt', 'desc')
 
       return response.ok({

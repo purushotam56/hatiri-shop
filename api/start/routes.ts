@@ -227,6 +227,9 @@ router
         router
           .put('/:id/products/variants/:groupId', [SellerController, 'updateProductVariants'])
           .use(middleware.auth({ guards: ['api'] }))
+        router
+          .put('/:id/store', [SellerController, 'updateSellerStore'])
+          .use(middleware.auth({ guards: ['api'] }))
       })
       .prefix('/seller')
 

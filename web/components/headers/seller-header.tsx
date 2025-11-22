@@ -11,6 +11,7 @@ interface SellerHeaderProps {
   sellerName?: string;
   sellerEmail?: string;
   storeName?: string;
+  storeLogoUrl?: string;
   onSwitchStore?: () => void;
   orgId?: string;
 }
@@ -19,6 +20,7 @@ export function SellerHeader({
   sellerName = "Seller",
   sellerEmail = "seller@hatiri.com",
   storeName = "My Store",
+  storeLogoUrl,
   onSwitchStore,
   orgId,
 }: SellerHeaderProps) {
@@ -79,14 +81,22 @@ export function SellerHeader({
         </NavbarBrand>
       </NavbarContent>
 
-      {/* Store Info Badge */}
+      {/* Store Info Badge with Logo */}
       <NavbarContent className="hidden sm:flex gap-4" justify="start">
         <div className="flex items-center gap-2">
           <div className="px-4 py-2 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-            <div className="flex items-center gap-2">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-              </svg>
+            <div className="flex items-center gap-3">
+              {storeLogoUrl ? (
+                <img
+                  src={storeLogoUrl}
+                  alt={storeName}
+                  className="w-5 h-5 rounded object-cover"
+                />
+              ) : (
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+                </svg>
+              )}
               <span className="text-sm font-semibold text-white">{storeName}</span>
               <span className="w-2 h-2 rounded-full bg-success animate-pulse"></span>
             </div>

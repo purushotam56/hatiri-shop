@@ -17,6 +17,7 @@ export function SellerLayout({ children }: SellerLayoutProps) {
   const [sellerName, setSellerName] = useState("Seller");
   const [sellerEmail, setSellerEmail] = useState("seller@hatiri.com");
   const [storeName, setStoreName] = useState("My Store");
+  const [storeLogoUrl, setStoreLogoUrl] = useState<string | undefined>(undefined);
 
   // Extract orgId from URL path
   const getOrgIdFromPath = () => {
@@ -44,10 +45,15 @@ export function SellerLayout({ children }: SellerLayoutProps) {
     }
   }, []);
 
-  // Update store name when selected store changes
+  // Update store name and logo when selected store changes
   useEffect(() => {
     if (selectedStore?.name) {
       setStoreName(selectedStore.name);
+    }
+    if (selectedStore?.image?.url) {
+      setStoreLogoUrl(selectedStore.image.url);
+    } else if (selectedStore?.image) {
+      setStoreLogoUrl(selectedStore.image);
     }
   }, [selectedStore]);
 
@@ -67,6 +73,7 @@ export function SellerLayout({ children }: SellerLayoutProps) {
           sellerName={sellerName}
           sellerEmail={sellerEmail}
           storeName={storeName}
+          storeLogoUrl={storeLogoUrl}
           onSwitchStore={handleSwitchStore}
           orgId={orgId as string}
         />
