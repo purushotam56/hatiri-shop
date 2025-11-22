@@ -8,6 +8,9 @@ export interface Store {
   code: string
   currency?: string
   dateFormat?: string
+  image?: {
+    url: string
+  } | string
 }
 
 export interface SellerStoreContextType {

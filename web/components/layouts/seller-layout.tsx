@@ -50,10 +50,12 @@ export function SellerLayout({ children }: SellerLayoutProps) {
     if (selectedStore?.name) {
       setStoreName(selectedStore.name);
     }
-    if (selectedStore?.image?.url) {
-      setStoreLogoUrl(selectedStore.image.url);
-    } else if (selectedStore?.image) {
-      setStoreLogoUrl(selectedStore.image);
+    if (selectedStore?.image) {
+      if (typeof selectedStore.image === 'object' && 'url' in selectedStore.image) {
+        setStoreLogoUrl(selectedStore.image.url);
+      } else if (typeof selectedStore.image === 'string') {
+        setStoreLogoUrl(selectedStore.image);
+      }
     }
   }, [selectedStore]);
 
