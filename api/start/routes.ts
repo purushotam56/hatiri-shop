@@ -171,6 +171,12 @@ router
         router
           .get('/products', [AdminController, 'getProducts'])
           .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .get('/settings', [AdminController, 'getSettings'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .put('/settings', [AdminController, 'updateSettings'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
       })
       .prefix('/admin')
 

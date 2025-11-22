@@ -18,6 +18,7 @@ export default class extends BaseSchema {
       table.string('name').notNullable()
       table.string('slug').notNullable()
       table.text('description')
+      table.string('emoji', 10).nullable()
       table.boolean('is_active').defaultTo(true)
       table.timestamp('created_at')
       table.timestamp('updated_at')

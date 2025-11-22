@@ -185,6 +185,19 @@ async function fetchStoreData(code: string,categoryId?:string) {
 
     if (!org) throw new Error("Store not found");
 
+    // Check organization status
+    if (org.status === 'disabled') {
+      throw new Error("Store is temporarily unavailable");
+    }
+
+    // Check if trial has expired
+    if (org.status === 'trial' && org.trialEndDate) {
+      const trialEndDate = new Date(org.trialEndDate);
+      if (new Date() > trialEndDate) {
+        throw new Error("Store trial period has expired");
+      }
+    }
+
     // Fetch products - filter by organisation on the backend or here
     const prodsData = await apiEndpoints.getProductsByOrg(org.id,categoryId ? `categoryId=${categoryId}`: undefined);
     const products = prodsData.data.data || [];
@@ -218,12 +231,18 @@ export async function StoreHomePage({ storeCode, selectedCategoryId }: { storeCo
   if (!data) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center p-4">
-        <Card className="max-w-md w-full">
+        <Card className="max-w-md w-full bg-gradient-to-br from-red-50 to-orange-50">
           <CardBody className="gap-4 py-8 text-center items-center">
-            <div className="text-6xl">❌</div>
+            <div className="text-6xl">🔒</div>
             <div>
-              <p className="text-foreground/60 text-xl font-semibold">
-                Store not found
+              <p className="text-foreground/80 text-xl font-bold">
+                Store Unavailable
+              </p>
+              <p className="text-foreground/60 text-sm mt-2">
+                This store is temporarily unavailable or the trial period has expired.
+              </p>
+              <p className="text-foreground/50 text-xs mt-4">
+                Please contact the store owner for more information.
               </p>
             </div>
           </CardBody>

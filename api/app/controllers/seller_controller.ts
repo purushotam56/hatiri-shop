@@ -1,8 +1,10 @@
 import { HttpContext } from '@adonisjs/core/http'
+import { DateTime } from 'luxon'
 import User from '#models/user'
 import Organisation from '#models/organisation'
 import Order from '#models/order'
 import Product from '#models/product'
+import PlatformSetting from '#models/platform_setting'
 import { errorHandler } from '#helper/error_handler'
 import StockService, { type OrderStatusType } from '#services/stock_service'
 
@@ -20,22 +22,36 @@ function filterOrdersByOrganisation(orders: any[], organisationId: number): any[
 
 export default class SellerController {
   /**
-   * Register as seller for an organization
+   * Register as seller - creates a new organization
    */
   async registerSeller({ request, response }: HttpContext) {
     try {
-      const { email, password, fullName, mobile, organisationCode } = request.only([
+      const {
+        email,
+        password,
+        fullName,
+        mobile,
+        organisationName,
+        organisationCode,
+        businessType,
+        city,
+        country,
+      } = request.only([
         'email',
         'password',
         'fullName',
         'mobile',
+        'organisationName',
         'organisationCode',
+        'businessType',
+        'city',
+        'country',
       ])
 
       // Validate required fields
-      if (!email || !password || !organisationCode) {
+      if (!email || !password || !organisationCode || !organisationName) {
         return response.badRequest({
-          message: 'Email, password, and organisationCode are required',
+          message: 'Email, password, organisation name, and code are required',
         })
       }
 
@@ -47,13 +63,37 @@ export default class SellerController {
         })
       }
 
-      // Find organization
-      const organisation = await Organisation.findBy('organisationUniqueCode', organisationCode)
-      if (!organisation) {
-        return response.notFound({
-          message: 'Organization not found',
+      // Check if organization code already exists
+      const existingOrg = await Organisation.findBy('organisationUniqueCode', organisationCode)
+      if (existingOrg) {
+        return response.conflict({
+          message: 'Organization code already exists',
         })
       }
+
+      // Get platform settings to calculate trial end date
+      let settings = await PlatformSetting.query().first()
+      if (!settings) {
+        settings = new PlatformSetting()
+        settings.freeTrialDays = 14
+        await settings.save()
+      }
+
+      // Create organization with trial end date
+      const organisation = new Organisation()
+      organisation.name = organisationName
+      organisation.organisationUniqueCode = organisationCode
+      organisation.currency = 'INR'
+      organisation.organisationRoleType = 'seller' as any
+      organisation.city = city || ''
+      organisation.state = ''
+      organisation.postalCode = ''
+      organisation.country = country || ''
+      organisation.addressLine1 = businessType ? `Business Type: ${businessType}` : ''
+      organisation.addressLine2 = ''
+      organisation.status = 'trial'
+      organisation.trialEndDate = DateTime.now().plus({ days: settings.freeTrialDays })
+      await organisation.save()
 
       // Create user
       const user = new User()
@@ -66,7 +106,7 @@ export default class SellerController {
       // Link user to organization
       await organisation.related('user').attach({
         [user.id]: {
-          is_admin: false,
+          is_admin: true,
           role_id: null,
         },
       })
@@ -77,6 +117,7 @@ export default class SellerController {
           id: user.id,
           email: user.email,
           fullName: user.fullName,
+          organisationId: organisation.id,
         },
       })
     } catch (error) {
@@ -96,13 +137,36 @@ export default class SellerController {
 
       // Fetch all organizations where this user is a member
       const organisations = await Organisation.query()
-        .select('id', 'name', 'organisationUniqueCode')
+        .select('id', 'name', 'organisationUniqueCode', 'status', 'trialEndDate')
         .preload('user', (q) => q.where('user_id', user.id))
         .whereHas('user', (q) => q.where('user_id', user.id))
 
       if (organisations.length === 0) {
         return response.forbidden({
           message: 'You are not authorized as a seller',
+        })
+      }
+
+      // Filter organizations by status - only allow active and valid trial organizations
+      const validOrganisations = organisations.filter((org) => {
+        if (org.status === 'disabled') {
+          return false
+        }
+        
+        // Check if trial has expired
+        if (org.status === 'trial' && org.trialEndDate) {
+          const trialEndDate = DateTime.isDateTime(org.trialEndDate) ? org.trialEndDate : DateTime.fromISO(org.trialEndDate as any)
+          if (DateTime.now() > trialEndDate) {
+            return false
+          }
+        }
+        
+        return true
+      })
+
+      if (validOrganisations.length === 0) {
+        return response.forbidden({
+          message: 'Your trial has expired or your stores are disabled. Please contact support.',
         })
       }
 
@@ -118,10 +182,12 @@ export default class SellerController {
           fullName: user.fullName,
           mobile: user.mobile,
         },
-        stores: organisations.map((org) => ({
+        stores: validOrganisations.map((org) => ({
           id: org.id,
           name: org.name,
           code: org.organisationUniqueCode,
+          status: org.status,
+          trialEndDate: org.trialEndDate,
         })),
       })
     } catch (error) {

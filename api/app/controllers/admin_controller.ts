@@ -5,6 +5,7 @@ import Branch from '#models/branch'
 import User from '#models/user'
 import Order from '#models/order'
 import Product from '#models/product'
+import PlatformSetting from '#models/platform_setting'
 import { errorHandler } from '#helper/error_handler'
 
 export default class AdminController {
@@ -190,7 +191,7 @@ export default class AdminController {
       await auth.getUserOrFail()
 
       const organisation = await Organisation.findOrFail(params.id)
-      const { name, currency, addressLine1, addressLine2, city, state, postalCode, country } =
+      const { name, currency, addressLine1, addressLine2, city, state, postalCode, country, status } =
         request.only([
           'name',
           'currency',
@@ -200,6 +201,7 @@ export default class AdminController {
           'state',
           'postalCode',
           'country',
+          'status',
         ])
 
       if (name) organisation.name = name
@@ -210,6 +212,14 @@ export default class AdminController {
       if (state) organisation.state = state
       if (postalCode) organisation.postalCode = postalCode
       if (country) organisation.country = country
+      if (status) {
+        if (!['active', 'disabled', 'trial'].includes(status)) {
+          return response.badRequest({
+            message: 'Invalid status. Must be active, disabled, or trial',
+          })
+        }
+        organisation.status = status
+      }
 
       await organisation.save()
 
@@ -370,6 +380,81 @@ export default class AdminController {
       })
     } catch (error) {
       return errorHandler(error || 'Failed to fetch products', { response } as any)
+    }
+  }
+
+  /**
+   * Get platform settings (Admin only)
+   */
+  async getSettings({ response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      let settings = await PlatformSetting.query().first()
+      
+      // If no settings exist, create default ones
+      if (!settings) {
+        settings = new PlatformSetting()
+        settings.freeTrialDays = 14
+        await settings.save()
+      }
+
+      return response.ok({
+        settings: {
+          id: settings.id,
+          freeTrialDays: settings.freeTrialDays,
+          minTrialDays: 1,
+          maxTrialDays: 365,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch settings', { response } as any)
+    }
+  }
+
+  /**
+   * Update platform settings (Admin only)
+   */
+  async updateSettings({ request, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const { freeTrialDays } = request.only(['freeTrialDays'])
+
+      // Validate input
+      if (freeTrialDays !== undefined) {
+        const days = parseInt(String(freeTrialDays), 10)
+        if (isNaN(days) || days < 1 || days > 365) {
+          return response.badRequest({
+            message: 'Free trial days must be between 1 and 365',
+          })
+        }
+      }
+
+      let settings = await PlatformSetting.query().first()
+      
+      // If no settings exist, create default ones
+      if (!settings) {
+        settings = new PlatformSetting()
+      }
+
+      if (freeTrialDays !== undefined) {
+        settings.freeTrialDays = parseInt(String(freeTrialDays), 10)
+      }
+
+      await settings.save()
+
+      return response.ok({
+        message: 'Settings updated successfully',
+        settings: {
+          id: settings.id,
+          freeTrialDays: settings.freeTrialDays,
+          minTrialDays: 1,
+          maxTrialDays: 365,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to update settings', { response } as any)
     }
   }
 }

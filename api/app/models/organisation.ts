@@ -63,6 +63,12 @@ export default class Organisation extends BaseModel {
   @column()
   declare country: string
 
+  @column()
+  declare status: 'active' | 'disabled' | 'trial' = 'trial'
+
+  @column.dateTime()
+  declare trialEndDate: DateTime | null
+
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
 

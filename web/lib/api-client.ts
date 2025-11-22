@@ -219,6 +219,8 @@ export const apiEndpoints = {
   getAdminProducts: (token: string) => apiGet("/admin/products", token),
   getAdminOrders: (token: string) => apiGet("/admin/orders", token),
   getAdminSellers: (token: string) => apiGet("/admin/sellers", token),
+  getAdminSettings: (token: string) => apiGet("/admin/settings", token),
+  updateAdminSettings: (token: string, data: any) => apiPut("/admin/settings", data, token),
   
   // Seller additional endpoints
   getSellerOrderDetail: (orgId: string | number, orderId: string | number, token: string) =>

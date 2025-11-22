@@ -7,6 +7,8 @@ import { Spinner } from '@heroui/spinner'
 import { Button } from '@heroui/button'
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from '@heroui/modal'
 import { Input } from '@heroui/input'
+import { Switch } from '@heroui/switch'
+import { Chip } from '@heroui/chip'
 import { apiEndpoints } from '@/lib/api-client'
 import { AdminHeader } from '@/components/headers/admin-header'
 import { useAdmin } from '@/context/admin-context'
@@ -16,6 +18,8 @@ interface Organisation {
   name: string
   organisationUniqueCode: string
   currency: string
+  status?: string
+  trialEndDate?: string
 }
 
 interface OrganisationFormData {
@@ -126,6 +130,28 @@ export default function OrganizationsPage() {
     }
   }
 
+  const handleToggleOrganisationStatus = async (id: number, newStatus: string) => {
+    try {
+      const token = localStorage.getItem('adminToken')
+      if (!token) {
+        router.push('/admin')
+        return
+      }
+
+      // Toggle status
+      const currentOrg = organisations.find(o => o.id === id)
+      const toggledStatus = newStatus === 'active' ? 'disabled' : 'active'
+      
+      await apiEndpoints.updateAdminOrganisation(id, { status: toggledStatus }, token)
+      
+      // Refresh the list
+      const data = await apiEndpoints.getAdminOrganisations(token)
+      setOrganisations(data.organisations || [])
+    } catch (err: any) {
+      setError(err.message || 'Failed to update organization status')
+    }
+  }
+
   const handleDeleteOrganisation = async (id: number) => {
     if (!confirm('Are you sure you want to delete this organization?')) {
       return
@@ -180,21 +206,41 @@ export default function OrganizationsPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {organisations.map((org) => (
-              <Card key={org.id} className="hover:shadow-lg transition-shadow cursor-pointer">
+              <Card key={org.id} className="hover:shadow-lg transition-shadow">
                 <CardBody className="space-y-4 p-6">
                   <div>
-                    <h3 className="text-lg font-bold">{org.name}</h3>
-                    <p className="text-sm text-default-500">Code: {org.organisationUniqueCode}</p>
-                    <p className="text-sm text-default-500">Currency: {org.currency}</p>
+                    <div className="flex items-start justify-between gap-2">
+                      <div>
+                        <h3 className="text-lg font-bold">{org.name}</h3>
+                        <p className="text-sm text-default-500">Code: {org.organisationUniqueCode}</p>
+                        <p className="text-sm text-default-500">Currency: {org.currency}</p>
+                      </div>
+                      <Chip
+                        color={org.status === 'active' ? 'success' : org.status === 'trial' ? 'warning' : 'danger'}
+                        variant="flat"
+                        size="sm"
+                      >
+                        {org.status === 'active' ? '✓ Active' : org.status === 'trial' ? '⏱ Trial' : '✕ Disabled'}
+                      </Chip>
+                    </div>
+                    {org.trialEndDate && org.status === 'trial' && (
+                      <p className="text-xs text-default-500 mt-2">Trial ends: {new Date(org.trialEndDate).toLocaleDateString()}</p>
+                    )}
                   </div>
+
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between p-3 bg-default-100 rounded-lg">
+                      <span className="text-sm font-medium">Status</span>
+                      <Switch
+                        checked={org.status === 'active'}
+                        onChange={(e) => handleToggleOrganisationStatus(org.id, org.status || 'trial')}
+                        color="success"
+                      />
+                    </div>
+                  </div>
+
                   <div className="flex gap-2">
-                    <Button size="sm" variant="flat" color="primary">
-                      Edit
-                    </Button>
-                    <Button
-                      size="sm"
-                      variant="flat"
-                      color="danger"
+                    <Button size="sm" variant="flat" color="danger" fullWidth
                       onPress={() => handleDeleteOrganisation(org.id)}
                     >
                       Delete

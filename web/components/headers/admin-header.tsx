@@ -36,6 +36,7 @@ export function AdminHeader({ userName: propName, userEmail: propEmail }: AdminH
     { label: 'Sellers', href: '/admin/sellers' },
     { label: 'Orders', href: '/admin/orders' },
     { label: 'Products', href: '/admin/products' },
+    { label: 'Settings', href: '/admin/settings' },
   ]
 
   const handleLogout = () => {

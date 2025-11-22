@@ -27,6 +27,8 @@ export default class extends BaseSchema {
         .inTable(UPLOADS)
         .onDelete('SET NULL')
 
+      table.enum('status', ['active', 'disabled', 'trial']).defaultTo('trial')
+      table.dateTime('trial_end_date').nullable()
       table.boolean('is_active').defaultTo(true)
       table.boolean('is_deleted').defaultTo(false)
       table.timestamp('created_at')

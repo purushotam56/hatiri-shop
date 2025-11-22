@@ -30,7 +30,11 @@ export default function SellerAuthPage() {
     password: '',
     fullName: '',
     mobile: '',
+    organisationName: '',
     organisationCode: '',
+    businessType: '',
+    city: '',
+    country: '',
   })
 
   const handleLoginChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -204,9 +208,25 @@ export default function SellerAuthPage() {
                 <div className="py-4">
 
                 <form onSubmit={handleRegister} className="flex flex-col gap-4">
+                  <div>
+                    <p className="text-sm font-semibold text-default-700 mb-3">Store Information</p>
+                    <Input
+                      type="text"
+                      label="Store Name"
+                      placeholder="Your store name"
+                      value={registerForm.organisationName}
+                      onChange={(e) => handleRegisterChange(e as any)}
+                      name="organisationName"
+                      isDisabled={loading}
+                      isRequired
+                      variant="bordered"
+                      size="sm"
+                    />
+                  </div>
+
                   <Input
                     type="text"
-                    label="Organization Code"
+                    label="Store Code"
                     placeholder="e.g., FM001"
                     value={registerForm.organisationCode}
                     onChange={(e) => handleRegisterChange(e as any)}
@@ -214,19 +234,60 @@ export default function SellerAuthPage() {
                     isDisabled={loading}
                     isRequired
                     variant="bordered"
+                    description="Unique identifier for your store (letters and numbers only)"
                   />
 
                   <Input
                     type="text"
-                    label="Full Name"
-                    placeholder="Your full name"
-                    value={registerForm.fullName}
+                    label="Business Type"
+                    placeholder="e.g., Grocery, Electronics, Fashion"
+                    value={registerForm.businessType}
                     onChange={(e) => handleRegisterChange(e as any)}
-                    name="fullName"
+                    name="businessType"
                     isDisabled={loading}
                     isRequired
                     variant="bordered"
                   />
+
+                  <Input
+                    type="text"
+                    label="City"
+                    placeholder="Your store's city"
+                    value={registerForm.city}
+                    onChange={(e) => handleRegisterChange(e as any)}
+                    name="city"
+                    isDisabled={loading}
+                    isRequired
+                    variant="bordered"
+                  />
+
+                  <Input
+                    type="text"
+                    label="Country"
+                    placeholder="e.g., India"
+                    value={registerForm.country}
+                    onChange={(e) => handleRegisterChange(e as any)}
+                    name="country"
+                    isDisabled={loading}
+                    isRequired
+                    variant="bordered"
+                  />
+
+                  <div>
+                    <p className="text-sm font-semibold text-default-700 mb-3">Your Information</p>
+                    <Input
+                      type="text"
+                      label="Full Name"
+                      placeholder="Your full name"
+                      value={registerForm.fullName}
+                      onChange={(e) => handleRegisterChange(e as any)}
+                      name="fullName"
+                      isDisabled={loading}
+                      isRequired
+                      variant="bordered"
+                      size="sm"
+                    />
+                  </div>
 
                   <Input
                     type="email"

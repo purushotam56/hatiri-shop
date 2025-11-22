@@ -12,24 +12,6 @@ export default class extends BaseSchema {
 
       table.string('body').notNullable()
 
-      table.json('data')
-
-      table.boolean('is_read').defaultTo(false)
-
-      table.boolean('for_admin').defaultTo(false)
-
-      table.boolean('is_read_for_admin').defaultTo(false)
-
-      table.boolean('is_need_action').defaultTo(false)
-
-      table
-        .integer('user_id')
-        .unsigned()
-        .references('id')
-        .inTable(USERS)
-        .onDelete('CASCADE')
-        .nullable()
-
       table
         .integer('organisation_id')
         .unsigned()
@@ -37,7 +19,11 @@ export default class extends BaseSchema {
         .inTable(ORGANISATION)
         .onDelete('CASCADE')
         .nullable()
-        .onDelete('CASCADE')
+
+      table.text('screen').nullable()
+      table.integer('ref_id').nullable()
+      table.string('ref_type').nullable()
+
       table.timestamp('created_at')
       table.timestamp('updated_at')
     })
