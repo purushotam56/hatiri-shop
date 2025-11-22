@@ -36,11 +36,9 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
     setIsDownloading(true);
     try {
       const token = localStorage.getItem("token");
-      console.log("Downloading invoice for order:", order.id, "Token:", token?.substring(0, 10) + "...");
-      
       const response = await apiEndpoints.getOrderInvoice(order.id, token || "");
 
-      console.log("Invoice response status:", response.status);
+
 
       if (!response.ok) {
         const errorText = await response.text();

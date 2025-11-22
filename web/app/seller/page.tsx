@@ -284,13 +284,7 @@ export default function SellerAuthPage() {
               </Tab>
             </Tabs>
 
-            <Card className="bg-warning-50 dark:bg-warning-900/20">
-              <CardBody className="text-xs">
-                <p className="font-semibold text-warning mb-2">Test Account:</p>
-                <p className="mb-1"><span className="text-default-500">Email:</span> seller1@example.com</p>
-                <p><span className="text-default-500">Password:</span> Password@123</p>
-              </CardBody>
-            </Card>
+
           </CardBody>
         </Card>
 

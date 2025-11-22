@@ -80,6 +80,10 @@ export default class ProductService {
         taxType: data.taxType ?? 'percentage',
         isActive: data.isActive ?? true,
         isDeleted: false,
+        // Discount fields
+        discountType: data.discountType || null,
+        discountPercentage: data.discountType === 'percentage' ? parseFloat(data.discountValue) : null,
+        isDiscountActive: data.isDiscountActive === 'true' || data.isDiscountActive === true,
       })
 
       // Handle multiple product images upload

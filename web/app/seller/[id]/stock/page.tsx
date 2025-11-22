@@ -5,20 +5,33 @@ import { useRouter, useParams } from 'next/navigation'
 import { Button } from '@heroui/button'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from '@heroui/table'
 import { Input } from '@heroui/input'
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from '@heroui/modal'
+import { Accordion, AccordionItem } from '@heroui/accordion'
+import { Chip } from '@heroui/chip'
 import { apiEndpoints } from '@/lib/api-client'
 import { useSellerStore } from '@/context/seller-store-context'
+import Image from 'next/image'
 
-interface Product {
+interface Variant {
   id: number
   name: string
   sku: string
   stock: number
   price: number
-  isActive: boolean
+  unit: string
   sold: number
+  images?: string[]
+}
+
+interface ProductGroup {
+  productGroupId: number
+  baseName: string
+  categoryName?: string
+  variants: Variant[]
+  totalStock: number
+  totalSold: number
+  baseImages?: string[]
 }
 
 export default function StockManagementPage() {
@@ -27,16 +40,16 @@ export default function StockManagementPage() {
   const orgId = params.id
   const { selectedStore } = useSellerStore()
 
-  const [products, setProducts] = useState<Product[]>([])
+  const [productGroups, setProductGroups] = useState<ProductGroup[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
   const [storeLoaded, setStoreLoaded] = useState(false)
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+  const [selectedVariant, setSelectedVariant] = useState<Variant | null>(null)
   const [newStock, setNewStock] = useState('')
   const [updating, setUpdating] = useState(false)
 
-  // First effect: wait for store to load from localStorage
+  // Wait for store to load from localStorage
   useEffect(() => {
     const timer = setTimeout(() => {
       setStoreLoaded(true)
@@ -44,7 +57,7 @@ export default function StockManagementPage() {
     return () => clearTimeout(timer)
   }, [])
 
-  // Second effect: check auth and store selection
+  // Check auth and fetch product groups
   useEffect(() => {
     if (!storeLoaded) return
 
@@ -59,40 +72,66 @@ export default function StockManagementPage() {
       return
     }
 
-    const fetchProducts = async () => {
+    const fetchProductGroups = async () => {
       try {
-        const token = localStorage.getItem('sellerToken');
-        const data = await apiEndpoints.getSellerProducts(String(orgId), token || '');
-        setProducts(data.products || [])
+        const token = localStorage.getItem('sellerToken')
+        const data = await apiEndpoints.getSellerProductGroups(String(orgId), token || '')
+        setProductGroups(data.productGroups || [])
       } catch (err) {
-        setError('Failed to load products')
+        setError('Failed to load product groups')
         console.error(err)
       } finally {
         setLoading(false)
       }
     }
 
-    fetchProducts()
+    fetchProductGroups()
   }, [orgId, router, selectedStore, storeLoaded])
 
-  const handleEditStock = (product: Product) => {
-    setSelectedProduct(product)
-    setNewStock(product.stock.toString())
+  const handleEditStock = (variant: Variant) => {
+    setSelectedVariant(variant)
+    setNewStock(variant.stock.toString())
     onOpen()
   }
 
   const handleUpdateStock = async () => {
-    if (!selectedProduct || !newStock) return
+    if (!selectedVariant || !newStock) return
 
     setUpdating(true)
     try {
-      const token = localStorage.getItem('sellerToken');
-      await apiEndpoints.updateProduct(selectedProduct.id, { stock: Number(newStock) }, token || '');
+      const token = localStorage.getItem('sellerToken')
+      
+      // Find the group containing this variant
+      const groupWithVariant = productGroups.find(g => g.variants.some(v => v.id === selectedVariant.id))
+      if (!groupWithVariant) throw new Error('Product group not found')
 
-      // Update local state
-      setProducts(
-        products.map((p) =>
-          p.id === selectedProduct.id ? { ...p, stock: Number(newStock) } : p
+      // Update ALL variants in this group to have the same stock
+      // (because they share group-level stock)
+      const variantsToUpdate = groupWithVariant.variants.map(v => ({
+        id: v.id,
+        stock: Number(newStock)
+      }))
+
+      // Update each variant
+      await Promise.all(
+        variantsToUpdate.map(v => 
+          apiEndpoints.updateProduct(v.id, { stock: v.stock }, token || '')
+        )
+      )
+
+      // Update local state - apply new stock to all variants in group
+      setProductGroups(
+        productGroups.map((group) => 
+          group.productGroupId === groupWithVariant.productGroupId
+            ? {
+                ...group,
+                variants: group.variants.map((v) => ({
+                  ...v,
+                  stock: Number(newStock)
+                })),
+                totalStock: group.variants.length * Number(newStock),
+              }
+            : group
         )
       )
 
@@ -114,86 +153,183 @@ export default function StockManagementPage() {
 
   const getStockStatus = (stock: number) => {
     if (stock === 0) return { color: 'danger', label: 'Out of Stock' }
-    if (stock < 5) return { color: 'warning', label: 'Low Stock' }
+    if (stock <= 10) return { color: 'warning', label: 'Low Stock' }
     return { color: 'success', label: 'In Stock' }
   }
+
+  const totalProducts = productGroups.reduce((sum, g) => sum + g.variants.length, 0)
 
   return (
     <main className="min-h-screen bg-default-50 pb-20">
       <div className="max-w-7xl mx-auto px-4 py-6">
         {loading ? (
           <div className="flex justify-center items-center min-h-96">
-            <Spinner label="Loading products..." />
+            <Spinner label="Loading product groups..." />
           </div>
         ) : error ? (
           <Card className="bg-red-50 dark:bg-red-950/20">
             <CardBody className="text-red-600 dark:text-red-400">{error}</CardBody>
           </Card>
-        ) : products.length === 0 ? (
+        ) : productGroups.length === 0 ? (
           <Card>
             <CardBody className="text-center py-12 text-default-600">
-              No products found
+              No products found. Create your first product with variants!
             </CardBody>
           </Card>
         ) : (
-          <Card>
-            <CardHeader className="flex gap-3">
-              <div className="flex flex-col">
-                <p className="text-lg font-semibold">Stock Management ({products.length})</p>
-                <p className="text-sm text-default-500">Manage product inventory</p>
-              </div>
-            </CardHeader>
-            <CardBody>
-              <Table aria-label="Stock management table">
-                <TableHeader>
-                  <TableColumn>Product Name</TableColumn>
-                  <TableColumn>SKU</TableColumn>
-                  <TableColumn align="end">Price</TableColumn>
-                  <TableColumn align="end">Stock</TableColumn>
-                  <TableColumn align="end">Sold</TableColumn>
-                  <TableColumn>Status</TableColumn>
-                  <TableColumn align="center">Action</TableColumn>
-                </TableHeader>
-                <TableBody>
-                  {products.map((product) => {
-                    const stockStatus = getStockStatus(product.stock)
-                    return (
-                      <TableRow key={product.id}>
-                        <TableCell className="font-medium">{product.name}</TableCell>
-                        <TableCell className="text-default-600">{product.sku}</TableCell>
-                        <TableCell className="text-right">{formatPrice(product.price)}</TableCell>
-                        <TableCell className="text-right font-semibold">{product.stock}</TableCell>
-                        <TableCell className="text-right font-semibold text-green-600">{product.sold}</TableCell>
-                        <TableCell>
-                          <span
-                            className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                              stockStatus.color === 'danger'
-                                ? 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'
-                                : stockStatus.color === 'warning'
-                                ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400'
-                                : 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'
-                            }`}
-                          >
-                            {stockStatus.label}
+          <>
+            <Card className="mb-6">
+              <CardHeader className="flex gap-3">
+                <div className="flex flex-col">
+                  <p className="text-lg font-semibold">
+                    Stock Management ({productGroups.length} products, {totalProducts} variants)
+                  </p>
+                  <p className="text-sm text-default-500">
+                    Manage product inventory grouped by variants
+                  </p>
+                </div>
+              </CardHeader>
+            </Card>
+
+            <div className="space-y-4">
+              <Accordion selectionMode="multiple" variant="splitted">
+                {productGroups.map((group) => {
+                  const groupStockStatus = getStockStatus(group.totalStock)
+                  const hasLowStock = group.variants.some((v) => v.stock <= 10 && v.stock > 0)
+                  const hasOutOfStock = group.variants.some((v) => v.stock === 0)
+
+                  return (
+                    <AccordionItem
+                      key={group.productGroupId}
+                      aria-label={group.baseName}
+                      startContent={
+                        group.baseImages && group.baseImages.length > 0 ? (
+                          <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                            <Image
+                              src={group.baseImages[0]}
+                              alt={group.baseName}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+                        ) : (
+                          <div className="w-16 h-16 bg-default-200 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <span className="text-2xl">📦</span>
+                          </div>
+                        )
+                      }
+                      title={
+                        <div className="flex items-center gap-3">
+                          <div className="flex flex-col">
+                            <p className="font-semibold text-lg">{group.baseName}</p>
+                            {group.categoryName && (
+                              <p className="text-sm text-default-500">{group.categoryName}</p>
+                            )}
+                          </div>
+                        </div>
+                      }
+                      subtitle={
+                        <div className="flex items-center gap-3 mt-1">
+                          <Chip size="sm" variant="flat" color={groupStockStatus.color as any}>
+                            Stock: {group.totalStock}
+                          </Chip>
+                          <Chip size="sm" variant="flat" color="success">
+                            Sold: {group.totalSold}
+                          </Chip>
+                          <span className="text-sm text-default-500">
+                            {group.variants.length} variant{group.variants.length !== 1 ? 's' : ''}
                           </span>
-                        </TableCell>
-                        <TableCell className="text-center">
-                          <Button
-                            size="sm"
-                            variant="light"
-                            color="primary"
-                            onPress={() => handleEditStock(product)}
-                          >
-                            Update
-                          </Button>
-                        </TableCell>
-                      </TableRow>
-                    )
-                  })}
-                </TableBody>
-              </Table>
-            </CardBody>
-          </Card>
+                          {hasOutOfStock && (
+                            <Chip size="sm" color="danger" variant="flat">
+                              Some out of stock
+                            </Chip>
+                          )}
+                          {hasLowStock && !hasOutOfStock && (
+                            <Chip size="sm" color="warning" variant="flat">
+                              Low stock
+                            </Chip>
+                          )}
+                        </div>
+                      }
+                      indicator={<span>▼</span>}
+                    >
+                      <div className="px-2 pb-4">
+                        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                          {group.variants.map((variant) => {
+                            const variantStockStatus = getStockStatus(variant.stock)
+                            return (
+                              <Card key={variant.id} className="border border-default-200">
+                                <CardBody className="p-4">
+                                  <div className="flex gap-3">
+                                    {variant.images && variant.images.length > 0 ? (
+                                      <div className="relative w-20 h-20 rounded-lg overflow-hidden flex-shrink-0">
+                                        <Image
+                                          src={variant.images[0]}
+                                          alt={variant.name}
+                                          fill
+                                          className="object-cover"
+                                        />
+                                      </div>
+                                    ) : (
+                                      <div className="w-20 h-20 bg-default-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                        <span className="text-xl">📦</span>
+                                      </div>
+                                    )}
+                                    <div className="flex-1 min-w-0">
+                                      <h4 className="font-semibold text-sm truncate">
+                                        {variant.name}
+                                      </h4>
+                                      <p className="text-xs text-default-500 mb-2">
+                                        SKU: {variant.sku}
+                                      </p>
+                                      <div className="space-y-1">
+                                        <div className="flex justify-between items-center">
+                                          <span className="text-xs text-default-600">Price:</span>
+                                          <span className="text-sm font-semibold">
+                                            {formatPrice(variant.price)}/{variant.unit}
+                                          </span>
+                                        </div>
+                                        <div className="flex justify-between items-center">
+                                          <span className="text-xs text-default-600">Stock:</span>
+                                          <Chip
+                                            size="sm"
+                                            variant="flat"
+                                            color={variantStockStatus.color as any}
+                                            className="text-xs"
+                                          >
+                                            {variant.stock}
+                                          </Chip>
+                                        </div>
+                                        <div className="flex justify-between items-center">
+                                          <span className="text-xs text-default-600">Sold:</span>
+                                          <span className="text-sm font-semibold text-green-600">
+                                            {variant.sold}
+                                          </span>
+                                        </div>
+                                      </div>
+                                      <Button
+                                        size="sm"
+                                        variant="flat"
+                                        color="primary"
+                                        className="w-full mt-3"
+                                        onPress={() => handleEditStock(variant)}
+                                      >
+                                        Update Stock
+                                      </Button>
+                                    </div>
+                                  </div>
+                                </CardBody>
+                              </Card>
+                            )
+                          })}
+                        </div>
+                      </div>
+                    </AccordionItem>
+                  )
+                })}
+              </Accordion>
+            </div>
+          </>
         )}
       </div>
 
@@ -203,17 +339,28 @@ export default function StockManagementPage() {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
-                Update Stock - {selectedProduct?.name}
+                Update Group Stock - {selectedVariant?.name}
               </ModalHeader>
               <ModalBody>
                 <div className="space-y-4">
+                  <div className="bg-primary-50 dark:bg-primary-950/20 border border-primary-200 dark:border-primary-800 rounded-lg p-3">
+                    <p className="text-sm text-primary-700 dark:text-primary-400 font-medium">
+                      ℹ️ This will update stock for ALL variants in this group
+                    </p>
+                  </div>
                   <div>
                     <p className="text-sm text-default-600 mb-1">Current Stock</p>
-                    <p className="text-2xl font-bold">{selectedProduct?.stock}</p>
+                    <p className="text-2xl font-bold">{selectedVariant?.stock}</p>
                   </div>
                   <div>
                     <p className="text-sm text-default-600 mb-1">SKU</p>
-                    <p className="text-sm">{selectedProduct?.sku}</p>
+                    <p className="text-sm">{selectedVariant?.sku}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-default-600 mb-1">Price</p>
+                    <p className="text-sm">
+                      {selectedVariant && formatPrice(selectedVariant.price)}/{selectedVariant?.unit}
+                    </p>
                   </div>
                   <Input
                     type="number"

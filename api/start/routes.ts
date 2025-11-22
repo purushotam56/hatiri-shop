@@ -209,6 +209,18 @@ router
         router
           .get('/:id/products', [SellerController, 'getProducts'])
           .use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/:id/product-groups', [SellerController, 'getProductGroups'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/:id/product-groups/:groupId', [SellerController, 'getProductGroupDetail'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .post('/:id/products/variants', [SellerController, 'createProductWithVariants'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .put('/:id/products/variants/:groupId', [SellerController, 'updateProductVariants'])
+          .use(middleware.auth({ guards: ['api'] }))
       })
       .prefix('/seller')
 

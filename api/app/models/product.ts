@@ -46,6 +46,24 @@ export default class Product extends BaseModel {
   declare price: number
 
   @column()
+  declare discountedPrice: number | null
+
+  @column()
+  declare discountPercentage: number | null
+
+  @column()
+  declare discountType: string | null // 'percentage' or 'fixed_amount'
+
+  @column()
+  declare discountStartDate: DateTime | null
+
+  @column()
+  declare discountEndDate: DateTime | null
+
+  @column()
+  declare isDiscountActive: boolean
+
+  @column()
   declare currency: string
 
   @column()
@@ -73,6 +91,9 @@ export default class Product extends BaseModel {
 
   @column()
   declare productGroupId: number | null
+
+  @column()
+  declare stockMergeType: 'merged' | 'independent'
 
   @column()
   declare taxRate: number

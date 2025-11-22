@@ -110,13 +110,7 @@ export default function AdminLoginPage() {
               </Button>
             </form>
 
-            <Card className="bg-warning-50 dark:bg-warning-900/20">
-              <CardBody className="text-xs">
-                <p className="font-semibold text-warning mb-2">Admin Credentials:</p>
-                <p className="mb-1"><span className="text-default-500">Email:</span> admin@hatiri.com</p>
-                <p><span className="text-default-500">Password:</span> Admin@123</p>
-              </CardBody>
-            </Card>
+
           </CardBody>
         </Card>
 

@@ -227,4 +227,12 @@ export const apiEndpoints = {
     apiPatch(`/seller/${orgId}/orders/${orderId}/status`, { status }, token),
   getSellerCustomerOrders: (orgId: string | number, customerId: string | number, token: string) =>
     apiGet(`/seller/${orgId}/customers/${customerId}/orders`, token),
+  getSellerProductGroups: (orgId: string | number, token: string, page?: number, limit?: number, search?: string) =>
+    apiGet(`/seller/${orgId}/product-groups?page=${page || 1}&limit=${limit || 20}${search ? `&search=${encodeURIComponent(search)}` : ''}`, token),
+  getSellerProductGroupDetail: (orgId: string | number, groupId: string | number, token: string) =>
+    apiGet(`/seller/${orgId}/product-groups/${groupId}`, token),
+  createProductWithVariants: (orgId: string | number, data: FormData, token: string) =>
+    apiUpload(`/seller/${orgId}/products/variants`, data, token),
+  updateProductVariants: (orgId: string | number, groupId: string | number, data: FormData, token: string) =>
+    apiUpload(`/seller/${orgId}/products/variants/${groupId}`, data, token, 'PUT'),
 };
