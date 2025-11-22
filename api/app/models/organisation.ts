@@ -64,7 +64,7 @@ export default class Organisation extends BaseModel {
   declare country: string
 
   @column()
-  declare status: 'active' | 'disabled' | 'trial' = 'trial'
+  declare status: 'active' | 'disabled' | 'trial'
 
   @column.dateTime()
   declare trialEndDate: DateTime | null

@@ -1,5 +1,5 @@
 import { BaseSchema } from '@adonisjs/lucid/schema'
-import { USERS, ORGANISATION } from '#database/constants/table_names'
+import { ORGANISATION } from '#database/constants/table_names'
 
 export default class extends BaseSchema {
   protected tableName = 'notifications'
