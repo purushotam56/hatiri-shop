@@ -244,6 +244,31 @@ export default function OrganizationsPage() {
     }
   }
 
+  const handleViewSellerStore = async (org: Organisation) => {
+    try {
+      setLoading(true)
+      const adminToken = localStorage.getItem('adminToken')
+      if (!adminToken) {
+        router.push('/admin')
+        return
+      }
+
+      // Get master seller token
+      const response = await apiEndpoints.getMasterSellerToken(org.id, adminToken)
+      const { token: sellerToken } = response
+
+      // Save seller token and organization ID to localStorage
+      localStorage.setItem('sellerToken', sellerToken)
+      localStorage.setItem('selectedOrgId', org.id.toString())
+
+      // Navigate to seller dashboard with organization ID
+      router.push(`/seller/dashboard?organisationId=${org.id}`)
+    } catch (err: any) {
+      setError(err.message || 'Failed to access seller store')
+      setLoading(false)
+    }
+  }
+
   return (
     <main className="min-h-screen bg-default-50">
       <AdminHeader userName={adminUser?.fullName} userEmail={adminUser?.email} />
@@ -310,6 +335,11 @@ export default function OrganizationsPage() {
                   </div>
 
                   <div className="flex gap-2">
+                    <Button size="sm" variant="flat" color="success" fullWidth
+                      onPress={() => handleViewSellerStore(org)}
+                    >
+                      👁️ View Store
+                    </Button>
                     <Button size="sm" variant="flat" color="primary" fullWidth
                       onPress={() => handleOpenEditModal(org)}
                     >
@@ -464,7 +494,7 @@ export default function OrganizationsPage() {
                 label="Organization Code"
                 placeholder="Enter unique code (e.g., org123)"
                 value={formData.organisationUniqueCode}
-                onChange={(e) => setFormData({ ...formData, organisationUniqueCode: e.target.value })}
+                onChange={(e) => setFormData({ ...formData, organisationUniqueCode: e.target.value.toLowerCase().trim() })}
                 isRequired
               />
               

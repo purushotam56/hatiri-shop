@@ -68,8 +68,9 @@ export default class SellerController {
         })
       }
 
-      // Check if organization code already exists
-      const existingOrg = await Organisation.findBy('organisationUniqueCode', organisationCode)
+      // Check if organization code already exists (convert to lowercase)
+      const lowercaseCode = organisationCode.toLowerCase().trim()
+      const existingOrg = await Organisation.findBy('organisationUniqueCode', lowercaseCode)
       if (existingOrg) {
         return response.conflict({
           message: 'Organization code already exists',
@@ -87,7 +88,7 @@ export default class SellerController {
       // Create organization with trial end date
       const organisation = new Organisation()
       organisation.name = organisationName
-      organisation.organisationUniqueCode = organisationCode
+      organisation.organisationUniqueCode = lowercaseCode
       organisation.currency = 'INR'
       organisation.organisationRoleType = 'seller' as any
       organisation.city = city || ''
@@ -233,7 +234,7 @@ export default class SellerController {
         })
       }
 
-      const organisation = await Organisation.findBy('organisationUniqueCode', code)
+      const organisation = await Organisation.findBy('organisationUniqueCode', code.toLowerCase().trim())
 
       if (!organisation) {
         return response.notFound({

@@ -182,6 +182,12 @@ router
         router
           .patch('/organisations/:id/full-update', [AdminController, 'updateFullOrganisation'])
           .use(middleware.auth({ guards: ['adminapi'] }))
+        
+        // Master seller token
+        router
+          .post('/organisations/:organisationId/master-seller-token', [AdminController, 'getMasterSellerToken'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        
         router
           .get('/sellers', [AdminController, 'getSellers'])
           .use(middleware.auth({ guards: ['adminapi'] }))

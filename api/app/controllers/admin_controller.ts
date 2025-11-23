@@ -88,10 +88,11 @@ export default class AdminController {
         })
       }
 
-      // Check if org code already exists
+      // Check if org code already exists (convert to lowercase)
+      const lowercaseCode = organisationUniqueCode.toLowerCase().trim()
       const existingOrg = await Organisation.findBy(
         'organisationUniqueCode',
-        organisationUniqueCode
+        lowercaseCode
       )
       if (existingOrg) {
         return response.conflict({
@@ -103,7 +104,7 @@ export default class AdminController {
       const organisation = new Organisation()
       organisation.name = name
       organisation.currency = currency
-      organisation.organisationUniqueCode = organisationUniqueCode
+      organisation.organisationUniqueCode = lowercaseCode
       organisation.addressLine1 = addressLine1 || ''
       organisation.addressLine2 = addressLine2 || ''
       organisation.city = city || ''
@@ -687,6 +688,59 @@ export default class AdminController {
       })
     } catch (error) {
       return errorHandler(error || 'Failed to update organization', { response } as any)
+    }
+  }
+
+  /**
+   * Get master login token for seller organization (Admin only)
+   * This allows admin to view the seller's store as if they were the seller
+   */
+  async getMasterSellerToken({ params, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+      const organisationId = params.organisationId
+
+      // Verify organization exists
+      const organisation = await Organisation.findOrFail(organisationId)
+
+      // Create a special seller token for this organization
+      // In production, you might want to log this action for audit purposes
+      const User = (await import('#models/user')).default
+      
+      // Find or create a master seller user for this organization
+      let sellerUser = await User.query()
+        .where('organisationId', organisationId)
+        .where('userType', 'seller')
+        .orderBy('createdAt', 'asc')
+        .first()
+
+      if (!sellerUser) {
+        // If no seller user exists, we can create a temporary master token
+        // or return an error. For now, let's return an error.
+        return response.notFound({
+          message: 'No seller account found for this organization',
+        })
+      }
+
+      // Create access token for the seller user
+      const token = await User.accessTokens.create(sellerUser)
+
+      return response.ok({
+        message: 'Master seller token generated',
+        token: token.value!.release(),
+        organisation: {
+          id: organisation.id,
+          name: organisation.name,
+          organisationUniqueCode: organisation.organisationUniqueCode,
+        },
+        user: {
+          id: sellerUser.id,
+          email: sellerUser.email,
+          fullName: sellerUser.fullName,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to generate master seller token', { response } as any)
     }
   }
 }

@@ -148,8 +148,9 @@ export default class ProductController {
    */
   async show({ params, response }: HttpContext) {
     try {
+      const productD = await Product.query().where('id', params.id).firstOrFail()
       const product = await Product.query()
-        .where('id', params.id)
+        .where('id', productD.id)
         .preload('image')
         .preload('bannerImage')
         .preload('images', (imagesQuery) => {
@@ -159,6 +160,7 @@ export default class ProductController {
         .preload('organisation')
         .preload('variants', (variantsQuery) => {
           variantsQuery
+            .where('organisationId',productD.organisationId)
             .preload('image')
             .preload('bannerImage')
             .preload('images', (imagesQuery) => {

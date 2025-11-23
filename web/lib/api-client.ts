@@ -218,6 +218,8 @@ export const apiEndpoints = {
     apiPatch(`/admin/organisations/${id}/full-update`, data, token),
   deleteAdminOrganisation: (id: number, token: string) =>
     apiDelete(`/admin/organisations/${id}`, token),
+  getMasterSellerToken: (orgId: number, token: string) =>
+    apiPost(`/admin/organisations/${orgId}/master-seller-token`, {}, token),
   getAdminProducts: (token: string) => apiGet("/admin/products", token),
   getAdminOrders: (token: string) => apiGet("/admin/orders", token),
   getAdminSellers: (token: string) => apiGet("/admin/sellers", token),

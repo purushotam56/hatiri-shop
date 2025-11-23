@@ -45,7 +45,12 @@ export default function SellerAuthPage() {
 
   const handleRegisterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
-    setRegisterForm((prev) => ({ ...prev, [name]: value }))
+    let finalValue = value
+    // Convert organisationCode to lowercase
+    if (name === 'organisationCode') {
+      finalValue = value.toLowerCase().trim()
+    }
+    setRegisterForm((prev) => ({ ...prev, [name]: finalValue }))
     setError('')
   }
 
