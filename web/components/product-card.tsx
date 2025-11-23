@@ -45,6 +45,8 @@ interface ProductCardProps {
   onSelectVariant: (productId: number, variant: Product) => void;
   onAddToCart: (product: Product) => void;
   getCategoryEmoji: (name: string) => string;
+  priceVisibility?: 'hidden' | 'login_only' | 'visible';
+  isUserLoggedIn?: boolean;
 }
 
 export function ProductCard({
@@ -53,12 +55,19 @@ export function ProductCard({
   onSelectVariant,
   onAddToCart,
   getCategoryEmoji,
+  priceVisibility = 'visible',
+  isUserLoggedIn = false,
 }: ProductCardProps) {
   const router = useRouter();
   const product = group.baseProduct;
   const selectedVariant = selectedOptions[product.id]
     ? group.variants.find((v) => v.id === selectedOptions[product.id]?.id)
     : undefined;
+
+  // Determine if price should be shown
+  const shouldShowPrice = 
+    priceVisibility === 'visible' ||
+    (priceVisibility === 'login_only' && isUserLoggedIn);
 
   const handleAddClick = () => {
     if (group.variants.length > 1) {
@@ -164,11 +173,24 @@ export function ProductCard({
 
         {/* Price and SKU */}
         <div className="flex items-baseline justify-between">
-          <span className="text-2xl font-bold text-primary">
-            ₹{parseFloat(
-              String(selectedVariant?.price || product.price)
-            ).toFixed(0)}
-          </span>
+          {shouldShowPrice ? (
+            <span className="text-2xl font-bold text-primary">
+              ₹{parseFloat(
+                String(selectedVariant?.price || product.price)
+              ).toFixed(0)}
+            </span>
+          ) : (
+            <div className="flex items-baseline gap-2">
+              <span className="text-2xl font-bold text-default-300 blur-sm">
+                ₹0000
+              </span>
+              {priceVisibility === 'login_only' && (
+                <span className="text-xs text-default-500 font-medium">
+                  Login to view
+                </span>
+              )}
+            </div>
+          )}
           {(selectedVariant?.sku || product.sku) && (
             <Chip variant="light" size="sm" className="text-xs font-mono">
               {selectedVariant?.sku || product.sku}
@@ -180,13 +202,13 @@ export function ProductCard({
       {/* Add Button */}
       <CardFooter onClick={(e) => e.stopPropagation()}>
         <Button
-          color={isOutOfStock ? "default" : "primary"}
-          variant={isOutOfStock ? "flat" : "solid"}
+          color={isOutOfStock || !shouldShowPrice ? "default" : "primary"}
+          variant={isOutOfStock || !shouldShowPrice ? "flat" : "solid"}
           fullWidth
-          isDisabled={isOutOfStock || currentStock === 0}
+          isDisabled={isOutOfStock || currentStock === 0 || !shouldShowPrice}
           onPress={handleAddClick}
         >
-          {isOutOfStock ? "Out of Stock" : "Add"}
+          {isOutOfStock ? "Out of Stock" : !shouldShowPrice ? "Login to View" : "Add"}
         </Button>
       </CardFooter>
     </Card>

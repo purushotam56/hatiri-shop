@@ -187,6 +187,7 @@ export const apiEndpoints = {
   // Organizations
   getOrganisations: () => apiGet("/organisations"),
   getOrganisation: (id: string | number) => apiGet(`/organisations/${id}`),
+  getOrganisationByCode: (code: string) => apiGet(`/organisation/by_code/${code}`),
 
   // Categories
   getCategories: (token?: string) => token ? apiGet("/categories", token) : apiGet("/categories"),
@@ -214,7 +215,7 @@ export const apiEndpoints = {
   createAdminOrganisation: (data: any, token: string) =>
     apiPost("/admin/organisations", data, token),
   updateAdminOrganisation: (id: number, data: any, token: string) =>
-    apiPut(`/admin/organisations/${id}`, data, token),
+    apiPatch(`/admin/organisations/${id}/full-update`, data, token),
   deleteAdminOrganisation: (id: number, token: string) =>
     apiDelete(`/admin/organisations/${id}`, token),
   getAdminProducts: (token: string) => apiGet("/admin/products", token),
@@ -240,4 +241,18 @@ export const apiEndpoints = {
     apiUpload(`/seller/${orgId}/products/variants/${groupId}`, data, token, 'PUT'),
   updateSellerStore: (orgId: string | number, data: any, token: string) =>
     apiPut(`/seller/${orgId}/store`, data, token),
+
+  // Public Data
+  getCountries: () => apiGet("/public/countries"),
+  getStates: (countryCode: string) => apiGet(`/public/state/${countryCode}`),
+
+  // Seller Categories
+  getSellerCategories: (orgId: string | number, token: string) =>
+    apiGet(`/seller/${orgId}/categories`, token),
+  createSellerCategory: (orgId: string | number, data: any, token: string) =>
+    apiPost(`/seller/${orgId}/categories`, data, token),
+  updateSellerCategory: (orgId: string | number, categoryId: string | number, data: any, token: string) =>
+    apiPut(`/seller/${orgId}/categories/${categoryId}`, data, token),
+  deleteSellerCategory: (orgId: string | number, categoryId: string | number, token: string) =>
+    apiDelete(`/seller/${orgId}/categories/${categoryId}`, token),
 };

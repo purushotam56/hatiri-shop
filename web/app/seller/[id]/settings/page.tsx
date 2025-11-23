@@ -58,6 +58,12 @@ export default function SellerSettingsPage() {
   const [storeError, setStoreError] = useState('')
   const [storeSuccess, setStoreSuccess] = useState('')
 
+  // Price visibility state
+  const [priceVisibility, setPriceVisibility] = useState<'hidden' | 'login_only' | 'visible'>('visible')
+  const [priceVisibilitySaving, setPriceVisibilitySaving] = useState(false)
+  const [priceVisibilityError, setPriceVisibilityError] = useState('')
+  const [priceVisibilitySuccess, setPriceVisibilitySuccess] = useState('')
+
   // First effect: wait for store to load from localStorage
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -128,6 +134,10 @@ export default function SellerSettingsPage() {
         }
         if (org?.whatsappEnabled !== undefined) {
           setWhatsappEnabled(org.whatsappEnabled)
+        }
+        // Set price visibility if it exists
+        if (org?.priceVisibility) {
+          setPriceVisibility(org.priceVisibility)
         }
       } catch (error) {
         console.error('Failed to fetch organisation data:', error)
@@ -356,6 +366,33 @@ export default function SellerSettingsPage() {
     }
   }
 
+  const handleSavePriceVisibility = async (newVisibility: 'hidden' | 'login_only' | 'visible') => {
+    setPriceVisibilitySaving(true)
+    setPriceVisibilityError('')
+    setPriceVisibilitySuccess('')
+
+    try {
+      const token = localStorage.getItem('sellerToken')
+      if (!token) {
+        router.push('/seller')
+        return
+      }
+
+      await apiEndpoints.updateSellerStore(orgId, {
+        priceVisibility: newVisibility,
+      }, token)
+
+      setPriceVisibility(newVisibility)
+      setPriceVisibilitySuccess('Price visibility updated successfully!')
+      setTimeout(() => setPriceVisibilitySuccess(''), 3000)
+    } catch (err: any) {
+      setPriceVisibilityError(err.message || 'Failed to update price visibility')
+      console.error(err)
+    } finally {
+      setPriceVisibilitySaving(false)
+    }
+  }
+
   return (
     <main className="min-h-screen bg-default-50 pb-20">
       <div className="max-w-2xl mx-auto px-4 py-6 space-y-6">
@@ -546,6 +583,121 @@ export default function SellerSettingsPage() {
                 </Button>
               </div>
             </form>
+          </CardBody>
+        </Card>
+
+        {/* Price Visibility Settings */}
+        <Card>
+          <CardHeader className="font-semibold">Price Visibility</CardHeader>
+          <CardBody className="space-y-4">
+            {priceVisibilityError && (
+              <Chip
+                variant="flat"
+                color="danger"
+                className="w-full justify-start"
+              >
+                {priceVisibilityError}
+              </Chip>
+            )}
+            {priceVisibilitySuccess && (
+              <Chip
+                variant="flat"
+                color="success"
+                className="w-full justify-start"
+              >
+                {priceVisibilitySuccess}
+              </Chip>
+            )}
+
+            <p className="text-sm text-default-600 mb-4">
+              Control whether product prices are visible to guests, logged-in users, or everyone.
+            </p>
+
+            <div className="space-y-3">
+              {/* Hidden Option */}
+              <div
+                onClick={() => !priceVisibilitySaving && handleSavePriceVisibility('hidden')}
+                className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                  priceVisibility === 'hidden'
+                    ? 'border-primary bg-primary-50'
+                    : 'border-default-200 hover:border-default-300'
+                } ${priceVisibilitySaving ? 'opacity-50 cursor-not-allowed' : ''}`}
+              >
+                <div className="flex items-start gap-3">
+                  <div className={`w-5 h-5 rounded-full border-2 mt-0.5 flex items-center justify-center ${
+                    priceVisibility === 'hidden'
+                      ? 'border-primary bg-primary'
+                      : 'border-default-300'
+                  }`}>
+                    {priceVisibility === 'hidden' && (
+                      <span className="text-white text-xs">✓</span>
+                    )}
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-foreground">Hide Prices</p>
+                    <p className="text-sm text-default-600">
+                      Prices hidden from all customers (guests and logged-in users)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Login Only Option */}
+              <div
+                onClick={() => !priceVisibilitySaving && handleSavePriceVisibility('login_only')}
+                className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                  priceVisibility === 'login_only'
+                    ? 'border-primary bg-primary-50'
+                    : 'border-default-200 hover:border-default-300'
+                } ${priceVisibilitySaving ? 'opacity-50 cursor-not-allowed' : ''}`}
+              >
+                <div className="flex items-start gap-3">
+                  <div className={`w-5 h-5 rounded-full border-2 mt-0.5 flex items-center justify-center ${
+                    priceVisibility === 'login_only'
+                      ? 'border-primary bg-primary'
+                      : 'border-default-300'
+                  }`}>
+                    {priceVisibility === 'login_only' && (
+                      <span className="text-white text-xs">✓</span>
+                    )}
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-foreground">Login Only</p>
+                    <p className="text-sm text-default-600">
+                      Prices visible only to logged-in customers
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Visible Option */}
+              <div
+                onClick={() => !priceVisibilitySaving && handleSavePriceVisibility('visible')}
+                className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+                  priceVisibility === 'visible'
+                    ? 'border-primary bg-primary-50'
+                    : 'border-default-200 hover:border-default-300'
+                } ${priceVisibilitySaving ? 'opacity-50 cursor-not-allowed' : ''}`}
+              >
+                <div className="flex items-start gap-3">
+                  <div className={`w-5 h-5 rounded-full border-2 mt-0.5 flex items-center justify-center ${
+                    priceVisibility === 'visible'
+                      ? 'border-primary bg-primary'
+                      : 'border-default-300'
+                  }`}>
+                    {priceVisibility === 'visible' && (
+                      <span className="text-white text-xs">✓</span>
+                    )}
+                  </div>
+                  <div className="flex-1">
+                    <p className="font-semibold text-foreground">Show Prices</p>
+                    <p className="text-sm text-default-600">
+                      Prices visible to all customers (guests and logged-in users)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </CardBody>
         </Card>
 

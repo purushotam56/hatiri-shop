@@ -3,6 +3,7 @@ import { HttpContext } from '@adonisjs/core/http'
 import Product from '#models/product'
 import ProductImage from '#models/product_image'
 import Upload from '#models/upload'
+import Organisation from '#models/organisation'
 import { errorHandler } from '#helper/error_handler'
 import { commonParamsIdValidator } from '#validators/common'
 import fs from 'node:fs'
@@ -24,20 +25,35 @@ export default class ProductService {
       const data = this.ctx.request.all()
       let bannerImageId = data.imageId
 
+      // Get organization code for S3 path
+      let orgCode = 'default'
+      const organisationId = data.organisationId || this.ctx.params?.organisationId
+      if (organisationId) {
+        try {
+          const org = await Organisation.findOrFail(organisationId)
+          orgCode = org.organisationUniqueCode
+        } catch (e) {
+          console.warn(`Organisation not found: ${organisationId}`)
+        }
+      }
+
       // Handle banner image upload
       const bannerImage = this.ctx.request.file('bannerImage')
       if (bannerImage) {
         const fileBuffer = fs.readFileSync(bannerImage.tmpPath!)
-        const key = 'images/' + normalizeFileName(bannerImage.clientName)
+        const fileName = normalizeFileName(bannerImage.clientName)
         const mimeType =
           bannerImage?.headers?.['content-type'] || bannerImage.type + '/' + bannerImage.extname
 
         const uploadResult = await this.storageService.uploadFile(
           fileBuffer,
-          key,
-          mimeType as string
+          fileName,
+          mimeType as string,
+          orgCode,
+          'products'
         )
 
+        const key = `${orgCode}/products/${fileName}`
         const upload = await Upload.create({
           name: bannerImage.clientName,
           key,
@@ -91,15 +107,18 @@ export default class ProductService {
       if (productImages && productImages.length > 0) {
         for (const [i, file] of productImages.entries()) {
           const fileBuffer = fs.readFileSync(file.tmpPath!)
-          const key = 'images/' + normalizeFileName(file.clientName)
+          const fileName = normalizeFileName(file.clientName)
           const mimeType = file?.headers?.['content-type'] || file.type + '/' + file.extname
 
           const uploadResult = await this.storageService.uploadFile(
             fileBuffer,
-            key,
-            mimeType as string
+            fileName,
+            mimeType as string,
+            orgCode,
+            'products'
           )
 
+          const key = `${orgCode}/products/${fileName}`
           const upload = await Upload.create({
             name: file.clientName,
             key,
@@ -148,22 +167,37 @@ export default class ProductService {
       const data = this.ctx.request.all()
       const product = await Product.findOrFail(id)
 
+      // Get organization code for S3 path
+      let orgCode = 'default'
+      const orgId = data.organisationId ?? product.organisationId ?? this.ctx.params?.organisationId
+      if (orgId) {
+        try {
+          const org = await Organisation.findOrFail(orgId)
+          orgCode = org.organisationUniqueCode
+        } catch (e) {
+          console.warn(`Organisation not found: ${orgId}`)
+        }
+      }
+
       let bannerImageId = data.bannerImageId ?? product.bannerImageId
 
       // Handle banner image upload
       const bannerImage = this.ctx.request.file('bannerImage')
       if (bannerImage) {
         const fileBuffer = fs.readFileSync(bannerImage.tmpPath!)
-        const key = 'images/' + normalizeFileName(bannerImage.clientName)
+        const fileName = normalizeFileName(bannerImage.clientName)
         const mimeType =
           bannerImage?.headers?.['content-type'] || bannerImage.type + '/' + bannerImage.extname
 
         const uploadResult = await this.storageService.uploadFile(
           fileBuffer,
-          key,
-          mimeType as string
+          fileName,
+          mimeType as string,
+          orgCode,
+          'products'
         )
 
+        const key = `${orgCode}/products/${fileName}`
         const upload = await Upload.create({
           name: bannerImage.clientName,
           key,
@@ -224,15 +258,18 @@ export default class ProductService {
 
         for (const file of productImages) {
           const fileBuffer = fs.readFileSync(file.tmpPath!)
-          const key = 'images/' + normalizeFileName(file.clientName)
+          const fileName = normalizeFileName(file.clientName)
           const mimeType = file?.headers?.['content-type'] || file.type + '/' + file.extname
 
           const uploadResult = await this.storageService.uploadFile(
             fileBuffer,
-            key,
-            mimeType as string
+            fileName,
+            mimeType as string,
+            orgCode,
+            'products'
           )
 
+          const key = `${orgCode}/products/${fileName}`
           const upload = await Upload.create({
             name: file.clientName,
             key,

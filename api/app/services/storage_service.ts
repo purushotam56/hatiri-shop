@@ -22,15 +22,32 @@ export default class StorageService {
     }
   }
 
+  /**
+   * Generate S3 key path based on organization code and image type
+   * @param fileName - Original file name
+   * @param orgCode - Organization unique code
+   * @param imageType - 'products', 'images', or other types
+   */
+  private generateKey(fileName: string, orgCode?: string, imageType?: string): string {
+    if (orgCode && imageType) {
+      return `${orgCode}/${imageType}/${fileName}`
+    }
+    // Fallback for backward compatibility
+    return `images/${fileName}`
+  }
+
   async uploadFile(
     fileBuffer: Buffer,
     fileName: string,
-    mimeType: string
+    mimeType: string,
+    orgCode?: string,
+    imageType?: string
   ): Promise<{ driver: string }> {
+    const key = this.generateKey(fileName, orgCode, imageType)
     if (this.storageDriver === 's3') {
-      return await this.uploadToS3(fileBuffer, fileName, mimeType)
+      return await this.uploadToS3(fileBuffer, key, mimeType)
     } else {
-      return await this.uploadToLocal(fileBuffer, fileName, mimeType)
+      return await this.uploadToLocal(fileBuffer, key, mimeType)
     }
   }
 

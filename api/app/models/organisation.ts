@@ -55,13 +55,13 @@ export default class Organisation extends BaseModel {
   declare city: string
 
   @column()
-  declare state: string
+  declare stateCode: string
 
   @column()
   declare postalCode: string
 
   @column()
-  declare country: string
+  declare countryCode: string
 
   @column()
   declare status: 'active' | 'disabled' | 'trial'
@@ -74,6 +74,9 @@ export default class Organisation extends BaseModel {
 
   @column()
   declare whatsappEnabled: boolean
+
+  @column()
+  declare priceVisibility: 'hidden' | 'login_only' | 'visible'
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime

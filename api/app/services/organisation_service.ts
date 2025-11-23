@@ -90,9 +90,9 @@ export default class OrganisationService {
         addressLine1: createData.addressLine1,
         addressLine2: createData.addressLine2,
         city: createData.city || '',
-        state: createData.state || '',
+        stateCode: createData.stateCode || '',
         postalCode: createData.postalCode,
-        country: createData.country || '',
+        countryCode: createData.countryCode || '',
         organisationRoleType: createData.organisationRoleType,
       })
       if (createUsers && createUsers?.length > 0) {
@@ -332,7 +332,7 @@ export default class OrganisationService {
       await commonParamsIdValidator.validate({ id })
       const data = this.ctx.request.all()
       const updateData = await updateOrganisationValidator.validate({ ...data, id })
-      const { countryId, ...updateFields } = updateData
+      const updateFields = updateData
       const organisation = await Organisation.findOrFail(id)
       if (updateFields.name) {
         const organisationNameAlreadyExists = await Organisation.query()

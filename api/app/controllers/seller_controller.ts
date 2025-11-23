@@ -5,6 +5,7 @@ import User from '#models/user'
 import Organisation from '#models/organisation'
 import Order from '#models/order'
 import Product from '#models/product'
+import ProductCategory from '#models/product_category'
 import PlatformSetting from '#models/platform_setting'
 import Upload from '#models/upload'
 import { errorHandler } from '#helper/error_handler'
@@ -90,9 +91,9 @@ export default class SellerController {
       organisation.currency = 'INR'
       organisation.organisationRoleType = 'seller' as any
       organisation.city = city || ''
-      organisation.state = ''
+      organisation.stateCode = ''
       organisation.postalCode = ''
-      organisation.country = country || ''
+      organisation.countryCode = country || ''
       organisation.addressLine1 = businessType ? `Business Type: ${businessType}` : ''
       organisation.addressLine2 = ''
       organisation.status = 'trial'
@@ -220,6 +221,62 @@ export default class SellerController {
   }
 
   /**
+   * Get organization by unique code (for public store display)
+   */
+  async getOrganisationByCode({ params, response }: HttpContext) {
+    try {
+      const code = params.code
+
+      if (!code) {
+        return response.badRequest({
+          message: 'Organization code is required',
+        })
+      }
+
+      const organisation = await Organisation.findBy('organisationUniqueCode', code)
+
+      if (!organisation) {
+        return response.notFound({
+          message: 'Store not found',
+        })
+      }
+
+      // Check organization status
+      if (organisation.status === 'disabled') {
+        return response.badRequest({
+          message: 'Store is temporarily unavailable',
+        })
+      }
+
+      // Check if trial has expired
+      if (organisation.status === 'trial' && organisation.trialEndDate) {
+        if (DateTime.now() > organisation.trialEndDate) {
+          return response.badRequest({
+            message: 'Store trial period has expired',
+          })
+        }
+      }
+
+      return response.ok({
+        organisation: {
+          id: organisation.id,
+          name: organisation.name,
+          organisationUniqueCode: organisation.organisationUniqueCode,
+          currency: organisation.currency,
+          dateFormat: organisation.dateFormat,
+          status: organisation.status,
+          trialEndDate: organisation.trialEndDate,
+          whatsappNumber: organisation.whatsappNumber,
+          whatsappEnabled: organisation.whatsappEnabled,
+          priceVisibility: organisation.priceVisibility || 'visible',
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch organization', { response } as any)
+    }
+  }
+
+  /**
    * Select store and get updated token
    */
   async selectStore({ request, response, auth }: HttpContext) {
@@ -332,6 +389,7 @@ export default class SellerController {
           image: org.image,
           whatsappNumber: org.whatsappNumber,
           whatsappEnabled: org.whatsappEnabled,
+          priceVisibility: org.priceVisibility || 'visible',
         },
         stats: {
           totalOrders,
@@ -987,23 +1045,43 @@ export default class SellerController {
         })
       }
 
+      // Get organization code for S3 paths
+      const orgCode = org.organisationUniqueCode
+      const storageService = new StorageService()
+
       // Upload shared banner image
       let bannerImagePath = null
       if (bannerImage) {
-        const { normalizeFileName } = await import('#helper/upload_helper')
         const fileName = normalizeFileName(bannerImage.clientName)
-        await bannerImage.move('uploads/images', { name: fileName })
-        bannerImagePath = `uploads/images/${fileName}`
+        const fileBuffer = fs.readFileSync(bannerImage.tmpPath!)
+        const mimeType = bannerImage?.headers?.['content-type'] || bannerImage.type + '/' + bannerImage.extname
+
+        await storageService.uploadFile(
+          fileBuffer,
+          fileName,
+          mimeType as string,
+          orgCode,
+          'products'
+        )
+        bannerImagePath = `${orgCode}/products/${fileName}`
       }
 
       // Upload shared product images
       const sharedImagePaths: string[] = []
       if (productImages && productImages.length > 0) {
         for (const image of productImages) {
-          const { normalizeFileName } = await import('#helper/upload_helper')
           const fileName = normalizeFileName(image.clientName)
-          await image.move('uploads/images', { name: fileName })
-          sharedImagePaths.push(`uploads/images/${fileName}`)
+          const fileBuffer = fs.readFileSync(image.tmpPath!)
+          const mimeType = image?.headers?.['content-type'] || image.type + '/' + image.extname
+
+          await storageService.uploadFile(
+            fileBuffer,
+            fileName,
+            mimeType as string,
+            orgCode,
+            'products'
+          )
+          sharedImagePaths.push(`${orgCode}/products/${fileName}`)
         }
       }
 
@@ -1017,10 +1095,18 @@ export default class SellerController {
           const variantImagePaths: string[] = []
           if (variant.images && variant.images.length > 0) {
             for (const image of variant.images) {
-              const { normalizeFileName } = await import('#helper/upload_helper')
               const fileName = normalizeFileName(image.clientName)
-              await image.move('uploads/images', { name: fileName })
-              variantImagePaths.push(`uploads/images/${fileName}`)
+              const fileBuffer = fs.readFileSync(image.tmpPath!)
+              const mimeType = image?.headers?.['content-type'] || image.type + '/' + image.extname
+
+              await storageService.uploadFile(
+                fileBuffer,
+                fileName,
+                mimeType as string,
+                orgCode,
+                'products'
+              )
+              variantImagePaths.push(`${orgCode}/products/${fileName}`)
             }
           }
 
@@ -1229,7 +1315,7 @@ export default class SellerController {
   }
 
   /**
-   * Update seller store settings (WhatsApp, store name, logo)
+   * Update seller store settings (WhatsApp, store name, logo, price visibility)
    */
   async updateSellerStore({ request, response, auth }: HttpContext) {
     try {
@@ -1249,10 +1335,11 @@ export default class SellerController {
         })
       }
 
-      const { whatsappNumber, whatsappEnabled, name } = request.only([
+      const { whatsappNumber, whatsappEnabled, name, priceVisibility } = request.only([
         'whatsappNumber',
         'whatsappEnabled',
         'name',
+        'priceVisibility',
       ])
 
       // Validate WhatsApp number format if provided
@@ -1274,20 +1361,31 @@ export default class SellerController {
       if (whatsappEnabled !== undefined) {
         org.whatsappEnabled = whatsappEnabled === true || whatsappEnabled === 'true'
       }
+      if (priceVisibility !== undefined) {
+        const validOptions = ['hidden', 'login_only', 'visible']
+        if (validOptions.includes(priceVisibility)) {
+          org.priceVisibility = priceVisibility
+        }
+      }
 
       // Handle logo upload if file is provided
       let logoFile = request.file('logo')
       if (logoFile) {
         const fileBuffer = fs.readFileSync(logoFile.tmpPath!)
-        const key = 'images/' + normalizeFileName(logoFile.clientName)
+        const fileName = normalizeFileName(logoFile.clientName)
         const mimeType = logoFile?.headers?.['content-type'] || logoFile.type + '/' + logoFile.extname
 
         const storageService = new StorageService()
         const uploadResult = await storageService.uploadFile(
           fileBuffer,
-          key,
-          mimeType as string
+          fileName,
+          mimeType as string,
+          org.organisationUniqueCode,
+          'images'
         )
+
+        // Generate full key path with organization code
+        const key = `${org.organisationUniqueCode}/images/${fileName}`
 
         // Create or update upload record
         let upload: Upload
@@ -1329,10 +1427,187 @@ export default class SellerController {
           image: org.image,
           whatsappNumber: org.whatsappNumber,
           whatsappEnabled: org.whatsappEnabled,
+          priceVisibility: org.priceVisibility || 'visible',
         },
       })
     } catch (error) {
       return errorHandler(error || 'Failed to update store settings', { response } as any)
+    }
+  }
+
+  /**
+   * Get categories for a seller's store
+   */
+  async getCategories({ params, response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const organisationId = params.organisationId
+
+      // Verify seller belongs to this organization
+      const org = await Organisation.query()
+        .where('id', organisationId)
+        .preload('user', (q) => q.where('user_id', user.id))
+        .first()
+
+      if (!org || org.user.length === 0) {
+        return response.forbidden({
+          message: 'You do not have access to this organisation',
+        })
+      }
+
+      const categories = await ProductCategory.query()
+        .where('organisationId', organisationId)
+        .where('isActive', true)
+        .orderBy('name', 'asc')
+
+      return response.ok({
+        message: 'Categories fetched successfully',
+        categories,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch categories', { response } as any)
+    }
+  }
+
+  /**
+   * Create a new category for seller's store
+   */
+  async createCategory({ params, request, response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const organisationId = params.organisationId
+      const { name, emoji, description } = request.only(['name', 'emoji', 'description'])
+
+      if (!name) {
+        return response.badRequest({
+          message: 'Category name is required',
+        })
+      }
+
+      // Verify seller belongs to this organization
+      const org = await Organisation.query()
+        .where('id', organisationId)
+        .preload('user', (q) => q.where('user_id', user.id))
+        .first()
+
+      if (!org || org.user.length === 0) {
+        return response.forbidden({
+          message: 'You do not have access to this organisation',
+        })
+      }
+
+      // Create slug from name
+      const slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')
+
+      const category = await ProductCategory.create({
+        organisationId,
+        name,
+        slug,
+        emoji: emoji || null,
+        description: description || '',
+        isActive: true,
+      })
+
+      return response.created({
+        message: 'Category created successfully',
+        category,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to create category', { response } as any)
+    }
+  }
+
+  /**
+   * Update a category
+   */
+  async updateCategory({ params, request, response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const { organisationId, categoryId } = params
+      const { name, emoji, description } = request.only(['name', 'emoji', 'description'])
+
+      // Verify seller belongs to this organization
+      const org = await Organisation.query()
+        .where('id', organisationId)
+        .preload('user', (q) => q.where('user_id', user.id))
+        .first()
+
+      if (!org || org.user.length === 0) {
+        return response.forbidden({
+          message: 'You do not have access to this organisation',
+        })
+      }
+
+      const category = await ProductCategory.query()
+        .where('id', categoryId)
+        .where('organisationId', organisationId)
+        .firstOrFail()
+
+      if (name) {
+        category.name = name
+        category.slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')
+      }
+
+      if (emoji !== undefined) {
+        category.emoji = emoji
+      }
+
+      if (description !== undefined) {
+        category.description = description
+      }
+
+      await category.save()
+
+      return response.ok({
+        message: 'Category updated successfully',
+        category,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to update category', { response } as any)
+    }
+  }
+
+  /**
+   * Delete a category
+   */
+  async deleteCategory({ params, response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const { organisationId, categoryId } = params
+
+      // Verify seller belongs to this organization
+      const org = await Organisation.query()
+        .where('id', organisationId)
+        .preload('user', (q) => q.where('user_id', user.id))
+        .first()
+
+      if (!org || org.user.length === 0) {
+        return response.forbidden({
+          message: 'You do not have access to this organisation',
+        })
+      }
+
+      const category = await ProductCategory.query()
+        .where('id', categoryId)
+        .where('organisationId', organisationId)
+        .firstOrFail()
+
+      // Check if category has products
+      const productCount = await category.related('products').query().count('* as count')
+
+      if (productCount[0].$extras.count > 0) {
+        return response.badRequest({
+          message: 'Cannot delete category with existing products. Please move or delete products first.',
+        })
+      }
+
+      await category.delete()
+
+      return response.ok({
+        message: 'Category deleted successfully',
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to delete category', { response } as any)
     }
   }
 }

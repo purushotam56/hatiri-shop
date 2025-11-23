@@ -9,9 +9,11 @@ import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from '@herou
 import { Input } from '@heroui/input'
 import { Switch } from '@heroui/switch'
 import { Chip } from '@heroui/chip'
+import { Select, SelectItem } from '@heroui/select'
 import { apiEndpoints } from '@/lib/api-client'
 import { AdminHeader } from '@/components/headers/admin-header'
 import { useAdmin } from '@/context/admin-context'
+import { CountryStateSelect } from '@/components/country-state-select'
 
 interface Organisation {
   id: number
@@ -29,9 +31,12 @@ interface OrganisationFormData {
   addressLine1: string
   addressLine2: string
   city: string
-  state: string
+  stateCode: string
   postalCode: string
-  country: string
+  countryCode: string
+  whatsappNumber?: string
+  whatsappEnabled?: boolean
+  priceVisibility?: 'hidden' | 'login_only' | 'visible'
 }
 
 export default function OrganizationsPage() {
@@ -42,6 +47,8 @@ export default function OrganizationsPage() {
   const [error, setError] = useState('')
   const [storeLoaded, setStoreLoaded] = useState(false)
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false)
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false)
+  const [editingOrgId, setEditingOrgId] = useState<number | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formError, setFormError] = useState('')
   const [formData, setFormData] = useState<OrganisationFormData>({
@@ -51,9 +58,12 @@ export default function OrganizationsPage() {
     addressLine1: '',
     addressLine2: '',
     city: '',
-    state: '',
+    stateCode: '',
     postalCode: '',
-    country: '',
+    countryCode: '',
+    whatsappNumber: '',
+    whatsappEnabled: false,
+    priceVisibility: 'visible',
   })
 
   useEffect(() => {
@@ -118,13 +128,73 @@ export default function OrganizationsPage() {
         addressLine1: '',
         addressLine2: '',
         city: '',
-        state: '',
+        stateCode: '',
         postalCode: '',
-        country: '',
+        countryCode: '',
+        whatsappNumber: '',
+        whatsappEnabled: false,
+        priceVisibility: 'visible',
       })
       setIsCreateModalOpen(false)
     } catch (err: any) {
       setFormError(err.message || 'Failed to create organization')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleOpenEditModal = (org: any) => {
+    setEditingOrgId(org.id)
+    setFormData({
+      name: org.name || '',
+      organisationUniqueCode: org.organisationUniqueCode || '',
+      currency: org.currency || 'INR',
+      addressLine1: org.addressLine1 || '',
+      addressLine2: org.addressLine2 || '',
+      city: org.city || '',
+      stateCode: org.stateCode || '',
+      postalCode: org.postalCode || '',
+      countryCode: org.countryCode || '',
+      whatsappNumber: org.whatsappNumber || '',
+      whatsappEnabled: org.whatsappEnabled || false,
+      priceVisibility: org.priceVisibility || 'visible',
+    })
+    setFormError('')
+    setIsEditModalOpen(true)
+  }
+
+  const handleUpdateOrganisation = async () => {
+    if (!formData.name) {
+      setFormError('Organization name is required')
+      return
+    }
+
+    if (!editingOrgId) {
+      setFormError('Organization ID not found')
+      return
+    }
+
+    setIsSubmitting(true)
+    setFormError('')
+
+    try {
+      const token = localStorage.getItem('adminToken')
+      if (!token) {
+        router.push('/admin')
+        return
+      }
+
+      await apiEndpoints.updateAdminOrganisation(editingOrgId, formData, token)
+      
+      // Refresh the list
+      const data = await apiEndpoints.getAdminOrganisations(token)
+      setOrganisations(data.organisations || [])
+      
+      // Close modal
+      setIsEditModalOpen(false)
+      setEditingOrgId(null)
+    } catch (err: any) {
+      setFormError(err.message || 'Failed to update organization')
     } finally {
       setIsSubmitting(false)
     }
@@ -240,6 +310,11 @@ export default function OrganizationsPage() {
                   </div>
 
                   <div className="flex gap-2">
+                    <Button size="sm" variant="flat" color="primary" fullWidth
+                      onPress={() => handleOpenEditModal(org)}
+                    >
+                      Edit
+                    </Button>
                     <Button size="sm" variant="flat" color="danger" fullWidth
                       onPress={() => handleDeleteOrganisation(org.id)}
                     >
@@ -252,6 +327,118 @@ export default function OrganizationsPage() {
           </div>
         )}
       </div>
+
+      {/* Edit Organization Modal */}
+      <Modal isOpen={isEditModalOpen} onClose={() => setIsEditModalOpen(false)} size="2xl">
+        <ModalContent>
+          <ModalHeader>Edit Organization</ModalHeader>
+          <ModalBody>
+            <div className="space-y-4">
+              {formError && (
+                <div className="p-3 bg-danger-50 text-danger rounded-lg text-sm">
+                  {formError}
+                </div>
+              )}
+              
+              <Input
+                label="Organization Name"
+                placeholder="Enter organization name"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                isRequired
+              />
+              
+              <Input
+                label="Currency"
+                placeholder="Currency code"
+                value={formData.currency}
+                onChange={(e) => setFormData({ ...formData, currency: e.target.value })}
+              />
+              
+              <Input
+                label="Address Line 1"
+                placeholder="Enter address"
+                value={formData.addressLine1}
+                onChange={(e) => setFormData({ ...formData, addressLine1: e.target.value })}
+              />
+              
+              <Input
+                label="Address Line 2"
+                placeholder="Enter address line 2"
+                value={formData.addressLine2}
+                onChange={(e) => setFormData({ ...formData, addressLine2: e.target.value })}
+              />
+              
+              <div className="grid grid-cols-2 gap-4">
+                <Input
+                  label="City"
+                  placeholder="Enter city"
+                  value={formData.city}
+                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                />
+                
+                <Input
+                  label="Postal Code"
+                  placeholder="Enter postal code"
+                  value={formData.postalCode}
+                  onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
+                />
+              </div>
+
+              <CountryStateSelect
+                selectedCountryCode={formData.countryCode}
+                selectedStateCode={formData.stateCode}
+                onCountryChange={(code) => setFormData({ ...formData, countryCode: code })}
+                onStateChange={(code) => setFormData({ ...formData, stateCode: code })}
+              />
+
+              <Input
+                label="WhatsApp Number"
+                placeholder="Enter WhatsApp number"
+                value={formData.whatsappNumber || ''}
+                onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
+              />
+              
+              <div className="flex items-center gap-2">
+                <Switch
+                  checked={formData.whatsappEnabled || false}
+                  onChange={(e) => setFormData({ ...formData, whatsappEnabled: e.target.checked })}
+                />
+                <span className="text-sm">Enable WhatsApp</span>
+              </div>
+
+              <div>
+                <label className="text-sm font-medium mb-2 block">Price Visibility</label>
+                <select 
+                  className="w-full p-2 border rounded-lg"
+                  value={formData.priceVisibility || 'visible'}
+                  onChange={(e) => setFormData({ ...formData, priceVisibility: e.target.value as any })}
+                >
+                  <option value="hidden">Hidden</option>
+                  <option value="login_only">Login Only</option>
+                  <option value="visible">Visible</option>
+                </select>
+              </div>
+            </div>
+          </ModalBody>
+          <ModalFooter>
+            <Button
+              variant="flat"
+              onPress={() => setIsEditModalOpen(false)}
+              isDisabled={isSubmitting}
+            >
+              Cancel
+            </Button>
+            <Button
+              color="primary"
+              onPress={handleUpdateOrganisation}
+              isLoading={isSubmitting}
+            >
+              Update Organization
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
 
       {/* Create Organization Modal */}
       <Modal isOpen={isCreateModalOpen} onClose={() => setIsCreateModalOpen(false)} size="2xl">
@@ -311,28 +498,19 @@ export default function OrganizationsPage() {
                 />
                 
                 <Input
-                  label="State"
-                  placeholder="Enter state"
-                  value={formData.state}
-                  onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-                />
-              </div>
-              
-              <div className="grid grid-cols-2 gap-4">
-                <Input
                   label="Postal Code"
                   placeholder="Enter postal code"
                   value={formData.postalCode}
                   onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
                 />
-                
-                <Input
-                  label="Country"
-                  placeholder="Enter country"
-                  value={formData.country}
-                  onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                />
               </div>
+              
+              <CountryStateSelect
+                selectedCountryCode={formData.countryCode}
+                selectedStateCode={formData.stateCode}
+                onCountryChange={(code) => setFormData({ ...formData, countryCode: code })}
+                onStateChange={(code) => setFormData({ ...formData, stateCode: code })}
+              />
             </div>
           </ModalBody>
           <ModalFooter>

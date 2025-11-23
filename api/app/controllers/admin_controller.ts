@@ -66,9 +66,9 @@ export default class AdminController {
         addressLine1,
         addressLine2,
         city,
-        state,
+        stateCode,
         postalCode,
-        country,
+        countryCode,
       } = request.only([
         'name',
         'currency',
@@ -76,9 +76,9 @@ export default class AdminController {
         'addressLine1',
         'addressLine2',
         'city',
-        'state',
+        'stateCode',
         'postalCode',
-        'country',
+        'countryCode',
       ])
 
       // Validate required fields
@@ -107,9 +107,9 @@ export default class AdminController {
       organisation.addressLine1 = addressLine1 || ''
       organisation.addressLine2 = addressLine2 || ''
       organisation.city = city || ''
-      organisation.state = state || ''
+      organisation.stateCode = stateCode || ''
       organisation.postalCode = postalCode || ''
-      organisation.country = country || ''
+      organisation.countryCode = countryCode || ''
       organisation.organisationRoleType = 'builder' as any
       await organisation.save()
 
@@ -191,16 +191,16 @@ export default class AdminController {
       await auth.getUserOrFail()
 
       const organisation = await Organisation.findOrFail(params.id)
-      const { name, currency, addressLine1, addressLine2, city, state, postalCode, country, status } =
+      const { name, currency, addressLine1, addressLine2, city, stateCode, postalCode, countryCode, status } =
         request.only([
           'name',
           'currency',
           'addressLine1',
           'addressLine2',
           'city',
-          'state',
+          'stateCode',
           'postalCode',
-          'country',
+          'countryCode',
           'status',
         ])
 
@@ -209,9 +209,9 @@ export default class AdminController {
       if (addressLine1) organisation.addressLine1 = addressLine1
       if (addressLine2) organisation.addressLine2 = addressLine2
       if (city) organisation.city = city
-      if (state) organisation.state = state
+      if (stateCode) organisation.stateCode = stateCode
       if (postalCode) organisation.postalCode = postalCode
-      if (country) organisation.country = country
+      if (countryCode) organisation.countryCode = countryCode
       if (status) {
         if (!['active', 'disabled', 'trial'].includes(status)) {
           return response.badRequest({
@@ -455,6 +455,238 @@ export default class AdminController {
       })
     } catch (error) {
       return errorHandler(error || 'Failed to update settings', { response } as any)
+    }
+  }
+
+  /**
+   * Get organization categories (Admin only)
+   */
+  async getOrganisationCategories({ params, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const organisationId = params.organisationId
+
+      // Verify organisation exists
+      const org = await Organisation.findOrFail(organisationId)
+
+      // Get categories for this organisation
+      const ProductCategory = (await import('#models/product_category')).default
+      const categories = await ProductCategory.query()
+        .where('organisationId', organisationId)
+        .orderBy('createdAt', 'desc')
+
+      return response.ok({
+        organisation: {
+          id: org.id,
+          name: org.name,
+          code: org.organisationUniqueCode,
+        },
+        categories,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch categories', { response } as any)
+    }
+  }
+
+  /**
+   * Create category for organization (Admin only)
+   */
+  async createOrganisationCategory({ params, request, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const organisationId = params.organisationId
+      const { name, emoji } = request.only(['name', 'emoji'])
+
+      if (!name) {
+        return response.badRequest({
+          message: 'Category name is required',
+        })
+      }
+
+      // Verify organisation exists
+      await Organisation.findOrFail(organisationId)
+
+      const ProductCategory = (await import('#models/product_category')).default
+      const category = await ProductCategory.create({
+        organisationId,
+        name,
+        emoji: emoji || '📦',
+      })
+
+      return response.created({
+        message: 'Category created successfully',
+        category,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to create category', { response } as any)
+    }
+  }
+
+  /**
+   * Update organization category (Admin only)
+   */
+  async updateOrganisationCategory({ params, request, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const { organisationId, categoryId } = params
+      const { name, emoji } = request.only(['name', 'emoji'])
+
+      // Verify organisation exists
+      await Organisation.findOrFail(organisationId)
+
+      const ProductCategory = (await import('#models/product_category')).default
+      const category = await ProductCategory.query()
+        .where('id', categoryId)
+        .where('organisationId', organisationId)
+        .firstOrFail()
+
+      if (name) category.name = name
+      if (emoji) category.emoji = emoji
+
+      await category.save()
+
+      return response.ok({
+        message: 'Category updated successfully',
+        category,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to update category', { response } as any)
+    }
+  }
+
+  /**
+   * Delete organization category (Admin only)
+   */
+  async deleteOrganisationCategory({ params, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const { organisationId, categoryId } = params
+
+      // Verify organisation exists
+      await Organisation.findOrFail(organisationId)
+
+      const ProductCategory = (await import('#models/product_category')).default
+      const category = await ProductCategory.query()
+        .where('id', categoryId)
+        .where('organisationId', organisationId)
+        .firstOrFail()
+
+      await category.delete()
+
+      return response.ok({
+        message: 'Category deleted successfully',
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to delete category', { response } as any)
+    }
+  }
+
+  /**
+   * Update full organization details (Admin only)
+   */
+  async updateFullOrganisation({ params, request, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const organisation = await Organisation.findOrFail(params.id)
+
+      const {
+        name,
+        currency,
+        dateFormat,
+        addressLine1,
+        addressLine2,
+        city,
+        stateCode,
+        postalCode,
+        countryCode,
+        status,
+        whatsappNumber,
+        whatsappEnabled,
+        priceVisibility,
+      } = request.only([
+        'name',
+        'currency',
+        'dateFormat',
+        'addressLine1',
+        'addressLine2',
+        'city',
+        'stateCode',
+        'postalCode',
+        'countryCode',
+        'status',
+        'whatsappNumber',
+        'whatsappEnabled',
+        'priceVisibility',
+      ])
+
+      // Update fields if provided
+      if (name !== undefined) organisation.name = name
+      if (currency !== undefined) organisation.currency = currency
+      if (dateFormat !== undefined) organisation.dateFormat = dateFormat
+
+      if (addressLine1 !== undefined) organisation.addressLine1 = addressLine1
+      if (addressLine2 !== undefined) organisation.addressLine2 = addressLine2
+      if (city !== undefined) organisation.city = city
+      if (stateCode !== undefined) organisation.stateCode = stateCode
+      if (postalCode !== undefined) organisation.postalCode = postalCode
+      if (countryCode !== undefined) organisation.countryCode = countryCode
+
+      // Validate status
+      if (status !== undefined) {
+        if (!['active', 'disabled', 'trial'].includes(status)) {
+          return response.badRequest({
+            message: 'Invalid status. Must be active, disabled, or trial',
+          })
+        }
+        organisation.status = status
+      }
+
+      // Update WhatsApp settings
+      if (whatsappNumber !== undefined) organisation.whatsappNumber = whatsappNumber || null
+      if (whatsappEnabled !== undefined) organisation.whatsappEnabled = whatsappEnabled === true || whatsappEnabled === 'true'
+
+      // Update price visibility
+      if (priceVisibility !== undefined) {
+        const validPriceOptions = ['hidden', 'login_only', 'visible']
+        if (!validPriceOptions.includes(priceVisibility)) {
+          return response.badRequest({
+            message: 'Invalid priceVisibility. Must be hidden, login_only, or visible',
+          })
+        }
+        organisation.priceVisibility = priceVisibility
+      }
+
+      await organisation.save()
+
+      return response.ok({
+        message: 'Organization updated successfully',
+        organisation: {
+          id: organisation.id,
+          name: organisation.name,
+          organisationUniqueCode: organisation.organisationUniqueCode,
+          currency: organisation.currency,
+          dateFormat: organisation.dateFormat,
+          addressLine1: organisation.addressLine1,
+          addressLine2: organisation.addressLine2,
+          city: organisation.city,
+          stateCode: organisation.stateCode,
+          postalCode: organisation.postalCode,
+          countryCode: organisation.countryCode,
+          status: organisation.status,
+          whatsappNumber: organisation.whatsappNumber,
+          whatsappEnabled: organisation.whatsappEnabled,
+          priceVisibility: organisation.priceVisibility,
+          createdAt: organisation.createdAt,
+          updatedAt: organisation.updatedAt,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to update organization', { response } as any)
     }
   }
 }

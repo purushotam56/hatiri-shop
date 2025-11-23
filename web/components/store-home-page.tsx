@@ -164,6 +164,7 @@ function MainContent({ products, organisation }: { products: any[]; organisation
                                         onProductClick={(id) => `/product/${id}`}
                                         getCategoryEmoji={getCategoryEmoji}
                                         organisation={organisation}
+                                        priceVisibility={organisation?.priceVisibility}
                                     />
                                 ))}
                             </div>
@@ -178,35 +179,15 @@ function MainContent({ products, organisation }: { products: any[]; organisation
 // Fetch server-side data
 async function fetchStoreData(code: string,categoryId?:string) {
   try {
-    // Fetch all organisations to find the one with matching code
-    const orgsData = await apiEndpoints.getOrganisations();
-    const org = orgsData.organisations?.find(
-      (o: any) => o.organisationUniqueCode === code
-    );
+    // Fetch organisation by unique code (database-level lookup - efficient!)
+    const orgResponse = await apiEndpoints.getOrganisationByCode(code);
+    const org = orgResponse.organisation;
 
     if (!org) throw new Error("Store not found");
 
-    // Check organization status
-    if (org.status === 'disabled') {
-      throw new Error("Store is temporarily unavailable");
-    }
-
-    // Check if trial has expired
-    if (org.status === 'trial' && org.trialEndDate) {
-      const trialEndDate = new Date(org.trialEndDate);
-      if (new Date() > trialEndDate) {
-        throw new Error("Store trial period has expired");
-      }
-    }
-
-    // Fetch products - filter by organisation on the backend or here
-    const prodsData = await apiEndpoints.getProductsByOrg(org.id,categoryId ? `categoryId=${categoryId}`: undefined);
+    // Fetch products for this organisation
+    const prodsData = await apiEndpoints.getProductsByOrg(org.id, categoryId ? `categoryId=${categoryId}` : undefined);
     const products = prodsData.data.data || [];
-    
-    // Filter products by organisation ID
-    // const products = Array.isArray(allProducts) 
-    //   ? allProducts.filter((p: any) => p.organisationId === org.id || p.organisationId === String(org.id))
-    //   : [];
 
     // Fetch categories for this organisation
     const categoriesData = await apiEndpoints.getOrganisationCategories(org.id);

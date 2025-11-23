@@ -163,6 +163,25 @@ router
         router
           .delete('/organisations/:id', [AdminController, 'deleteOrganisation'])
           .use(middleware.auth({ guards: ['adminapi'] }))
+
+        // Organization categories management
+        router
+          .get('/organisations/:organisationId/categories', [AdminController, 'getOrganisationCategories'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .post('/organisations/:organisationId/categories', [AdminController, 'createOrganisationCategory'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .put('/organisations/:organisationId/categories/:categoryId', [AdminController, 'updateOrganisationCategory'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+        router
+          .delete('/organisations/:organisationId/categories/:categoryId', [AdminController, 'deleteOrganisationCategory'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
+
+        // Full organization details update
+        router
+          .patch('/organisations/:id/full-update', [AdminController, 'updateFullOrganisation'])
+          .use(middleware.auth({ guards: ['adminapi'] }))
         router
           .get('/sellers', [AdminController, 'getSellers'])
           .use(middleware.auth({ guards: ['adminapi'] }))
@@ -183,6 +202,9 @@ router
 
     // Public organisations endpoint - for browsing stores
     router.get('/organisations', [AdminController, 'listOrganisations'])
+
+    // Get organisation by unique code - for public store display
+    router.get('/organisation/by_code/:code', [SellerController, 'getOrganisationByCode'])
 
     // Seller routes
     router
@@ -230,6 +252,20 @@ router
           .use(middleware.auth({ guards: ['api'] }))
         router
           .put('/:id/store', [SellerController, 'updateSellerStore'])
+          .use(middleware.auth({ guards: ['api'] }))
+
+        // Category management for sellers
+        router
+          .get('/:organisationId/categories', [SellerController, 'getCategories'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .post('/:organisationId/categories', [SellerController, 'createCategory'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .put('/:organisationId/categories/:categoryId', [SellerController, 'updateCategory'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .delete('/:organisationId/categories/:categoryId', [SellerController, 'deleteCategory'])
           .use(middleware.auth({ guards: ['api'] }))
       })
       .prefix('/seller')

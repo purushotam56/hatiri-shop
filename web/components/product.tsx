@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { AddToCart } from "./add-to-cart";
+import { PriceDisplay } from "./price-display";
 
 interface Variant {
   id: number;
@@ -43,12 +44,15 @@ interface ProductProps {
   onProductClick: (productId: number) => string;
   getCategoryEmoji: (name: string) => string;
   organisation?: any;
+  priceVisibility?: 'hidden' | 'login_only' | 'visible';
 }
 
-export function Product({ group, onProductClick, getCategoryEmoji, organisation }: ProductProps) {
+export function Product({ group, onProductClick, getCategoryEmoji, organisation, priceVisibility = 'visible' }: ProductProps) {
   const product = group;
   const hasDiscount = false; // You can add discount logic later
   const discount = 0;
+
+  console.log(organisation)
 
   return (
       <div className="group bg-white rounded-lg overflow-hidden border border-divider hover:shadow-lg transition-shadow cursor-pointer h-full flex flex-col hover:border-default-300">
@@ -126,16 +130,12 @@ export function Product({ group, onProductClick, getCategoryEmoji, organisation 
 
           {/* Price Section */}
           <div className="mt-auto">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="text-base sm:text-lg md:text-xl font-bold text-foreground">
-                ₹{parseFloat(String(product.price)).toFixed(0)}
-              </span>
-              {hasDiscount && (
-                <span className="text-xs text-foreground/50 line-through">
-                  ₹{parseFloat(String(product.price)).toFixed(0)}
-                </span>
-              )}
-            </div>
+            <PriceDisplay
+              price={product.price}
+              originalPrice={product.price}
+              priceVisibility={priceVisibility}
+              hasDiscount={hasDiscount}
+            />
           </div>
 
           {/* Add To Cart and WhatsApp Buttons */}
