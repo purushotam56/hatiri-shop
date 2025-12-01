@@ -75,7 +75,8 @@ export default function StockManagementPage() {
     const fetchProductGroups = async () => {
       try {
         const token = localStorage.getItem('sellerToken')
-        const data = await apiEndpoints.getSellerProductGroups(String(orgId), token || '')
+        // Fetch all product groups with high limit (500)
+        const data = await apiEndpoints.getSellerProductGroups(String(orgId), token || '', 1, 500)
         setProductGroups(data.productGroups || [])
       } catch (err) {
         setError('Failed to load product groups')
@@ -114,9 +115,11 @@ export default function StockManagementPage() {
 
       // Update each variant
       await Promise.all(
-        variantsToUpdate.map(v => 
-          apiEndpoints.updateProduct(v.id, { stock: v.stock }, token || '')
-        )
+        variantsToUpdate.map(v => {
+          const fd = new FormData()
+          fd.append('stock', String(v.stock))
+          return apiEndpoints.updateProduct(v.id, fd, token || '')
+        })
       )
 
       // Update local state - apply new stock to all variants in group

@@ -3,29 +3,10 @@
 import React, { createContext, useContext, ReactNode, useState, useEffect } from "react";
 import { useAuth } from "./auth-context";
 import { buildApiUrl } from "@/config/api";
+import { CartItem, CartContextType } from "@/types/cart";
 
-export interface CartItem {
-  id: number;
-  productId?: number;
-  variantId?: number;
-  name: string;
-  price: number;
-  quantity: number;
-  currency: string;
-  unit?: string;
-}
-
-interface CartContextType {
-  cart: CartItem[];
-  addToCart: (product: any) => void;
-  removeFromCart: (id: number) => void;
-  updateQuantity: (id: number, quantity: number) => void;
-  clearCart: () => void;
-  cartCount: number;
-  cartTotal: number;
-  isLoading: boolean;
-  syncCart: () => Promise<void>;
-}
+// Re-export for backward compatibility
+export type { CartItem, CartContextType };
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
@@ -202,6 +183,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
             price: product.price,
             quantity: product.quantity || 1,
             currency: product.currency || "INR",
+            productQuantity: product.productQuantity,
             unit: product.unit || "",
           }),
         });
@@ -237,7 +219,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
             price: product.price,
             quantity: product.quantity || 1,
             currency: product.currency || "INR",
+            productQuantity: product.productQuantity,
             unit: product.unit,
+            sku: product.sku,
+            bannerImage: product.bannerImage,
+            image: product.image,
+            images: product.images,
           },
         ]);
       }

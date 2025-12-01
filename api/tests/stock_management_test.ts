@@ -1,6 +1,6 @@
 /**
  * Test script to demonstrate stock management functionality
- * 
+ *
  * This script shows how stock updates work when order status changes:
  * 1. pending → confirmed: Decreases stock
  * 2. confirmed → cancelled: Restores stock
@@ -95,9 +95,7 @@ async function testStockManagement() {
     })
     console.log(`   Expected: ${initialStock - testQuantity}`)
     console.log(`   Actual: ${stockAfterConfirm}`)
-    console.log(
-      `   ✅ ${stockAfterConfirm === initialStock - testQuantity ? 'PASS' : 'FAIL'}\n`
-    )
+    console.log(`   ✅ ${stockAfterConfirm === initialStock - testQuantity ? 'PASS' : 'FAIL'}\n`)
 
     // 4. Test: Change status to 'cancelled' (should restore stock)
     console.log('📈 Test 2: Changing status to "cancelled"...')

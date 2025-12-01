@@ -23,7 +23,7 @@ const storeDetails: Record<
   string,
   { emoji: string; gradient: string; description: string; categories: string[] }
 > = {
-  VW001: {
+  vw001: {
     emoji: '🥬',
     gradient: 'from-emerald-500 to-green-600',
     description: 'Fresh vegetables & fruits',

@@ -6,38 +6,7 @@ import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Button } from "@heroui/button";
 import { Chip } from "@heroui/chip";
 import { Image } from "@heroui/image";
-
-interface Product {
-  id: number;
-  name: string;
-  description?: string;
-  price: number;
-  currency: string;
-  stock: number;
-  sku?: string;
-  unit?: string;
-  category?: string;
-  bannerImage?: {
-    id: number;
-    url: string;
-  };
-  image?: {
-    id: number;
-    url: string;
-  };
-  images?: Array<{
-    id: number;
-    upload: {
-      id: number;
-      url: string;
-    };
-  }>;
-}
-
-interface ProductGroup {
-  baseProduct: Product;
-  variants: Product[];
-}
+import { Product, ProductGroup } from "@/types/product";
 
 interface ProductCardProps {
   group: ProductGroup;
@@ -165,9 +134,9 @@ export function ProductCard({
           </div>
         )}
 
-        {(selectedVariant?.unit || product.unit) && (
+        {(selectedVariant?.quantity || selectedVariant?.unit || product.quantity || product.unit) && (
           <p className="text-xs text-default-500">
-            {selectedVariant?.unit || product.unit}
+            {selectedVariant?.quantity && selectedVariant?.unit ? `${selectedVariant.quantity} ${selectedVariant.unit}` : (selectedVariant?.unit || product.quantity && product.unit ? `${product.quantity} ${product.unit}` : product.unit)}
           </p>
         )}
 

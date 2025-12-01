@@ -29,7 +29,7 @@ export function SellerHeader({
   const menuItems = [
     { label: "Dashboard", href: orgId ? `/seller/${orgId}/dashboard` : "/seller/dashboard" },
     { label: "Products", href: orgId ? `/seller/${orgId}/products` : "/seller/products" },
-    { label: "Categories", href: orgId ? `/seller/categories?organisationId=${orgId}` : "/seller/categories" },
+    { label: "Categories", href: orgId ? `/seller/${orgId}/categories` : "/seller/categories" },
     { label: "Stock", href: orgId ? `/seller/${orgId}/stock` : "/seller/stock" },
     { label: "Orders", href: orgId ? `/seller/${orgId}/orders` : "/seller/orders" },
     { label: "Customers", href: orgId ? `/seller/${orgId}/customers` : "/seller/customers" },

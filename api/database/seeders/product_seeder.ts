@@ -4,6 +4,7 @@ import Organisation from '#models/organisation'
 import ProductCategory from '#models/product_category'
 import Upload from '#models/upload'
 import ProductImage from '#models/product_image'
+import ProductGroup from '#models/product_group'
 
 export default class extends BaseSeeder {
   async run() {
@@ -16,7 +17,7 @@ export default class extends BaseSeeder {
 
     // Store-specific product templates
     const storeProducts = {
-      VW001: {
+      vw001: {
         name: 'Vegetable Wings',
         products: [
           // Fresh Vegetables (50 products)
@@ -1350,15 +1351,38 @@ export default class extends BaseSeeder {
       }
 
       const productsList = storeData.products
+      const productGroupMap = new Map<number, number>() // Maps generated groupId to DB groupId
 
+      // First pass: Create ProductGroup records for grouped products
+      const groupedProducts = productsList.filter((p) => p.productGroupId)
+      const uniqueGroupIds = [...new Set(groupedProducts.map((p) => p.productGroupId))]
+
+      for (const groupId of uniqueGroupIds) {
+        const groupProducts = groupedProducts.filter((p) => p.productGroupId === groupId)
+        const firstProduct = groupProducts[0]
+
+        const productGroup = await ProductGroup.create({
+          organisationId: org.id,
+          name: firstProduct.name,
+          description: firstProduct.description,
+          baseSku: firstProduct.sku,
+          stockMergeType: 'independent',
+        })
+
+        productGroupMap.set(groupId, productGroup.id)
+      }
+
+      // Second pass: Create products
       for (const product of productsList) {
         const categoryId = getCategoryId(product.name)
 
         // Create images for this product
-        const { bannerImage, mainImage, galleryImages } = await this.createSampleImages(
-          product.name,
-          org.id
-        )
+        const { bannerImage, galleryImages } = await this.createSampleImages(product.name, org.id)
+
+        // Map the generated groupId to actual DB groupId if it exists
+        const finalGroupId = product.productGroupId
+          ? productGroupMap.get(product.productGroupId)
+          : null
 
         // Create product with images
         const createdProduct = await Product.create({
@@ -1371,15 +1395,9 @@ export default class extends BaseSeeder {
           currency: org.currency,
           stock: product.stock,
           unit: product.unit,
-          imageUrl: product.imageUrl,
           bannerImageId: bannerImage.id,
-          imageId: mainImage.id,
           details: `<h2>About ${product.name}</h2><p>${product.description}</p><h3>Features</h3><ul><li>High quality</li><li>Fresh and organic</li><li>Best price guaranteed</li></ul>`,
-          options:
-            product.options && product.options.length > 0
-              ? JSON.stringify(product.options)
-              : JSON.stringify([]),
-          productGroupId: product.productGroupId || null,
+          productGroupId: finalGroupId || null,
           isActive: true,
         })
 

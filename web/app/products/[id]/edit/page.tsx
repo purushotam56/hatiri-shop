@@ -64,7 +64,11 @@ export default function ProductEditPage() {
     setError(null)
     try {
       const productId = Array.isArray(id) ? id[0] : id;
-      await apiEndpoints.updateProduct(productId, formData, token || "");
+      const fd = new FormData()
+      Object.entries(formData).forEach(([key, value]) => {
+        fd.append(key, String(value))
+      })
+      await apiEndpoints.updateProduct(productId, fd, token || "");
       router.push("/products")
     } catch (err: any) {
       setError(err?.message || "Update failed")

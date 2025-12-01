@@ -65,16 +65,6 @@ export default class ProductService {
         bannerImageId = upload.id
       }
 
-      // Parse options if provided
-      let options = null
-      if (data.options) {
-        try {
-          options = typeof data.options === 'string' ? JSON.parse(data.options) : data.options
-        } catch (e) {
-          options = data.options
-        }
-      }
-
       // create base product
       const product = await Product.create({
         name: data.name,
@@ -86,10 +76,8 @@ export default class ProductService {
         stock: data.stock ?? 0,
         quantity: data.quantity ?? 0,
         unit: data.unit,
-        imageId: data.imageId,
         bannerImageId: bannerImageId,
         details: data.details,
-        options: options ? JSON.stringify(options) : null,
         productGroupId: data.productGroupId || null,
         organisationId: data.organisationId,
         taxRate: data.taxRate ?? 0,
@@ -98,7 +86,8 @@ export default class ProductService {
         isDeleted: false,
         // Discount fields
         discountType: data.discountType || null,
-        discountPercentage: data.discountType === 'percentage' ? parseFloat(data.discountValue) : null,
+        discountPercentage:
+          data.discountType === 'percentage' ? Number.parseFloat(data.discountValue) : null,
         isDiscountActive: data.isDiscountActive === 'true' || data.isDiscountActive === true,
       })
 
@@ -209,17 +198,6 @@ export default class ProductService {
         bannerImageId = upload.id
       }
 
-      // Parse options if provided
-      let options = product.options
-      if (data.options !== undefined) {
-        try {
-          options = typeof data.options === 'string' ? JSON.parse(data.options) : data.options
-          options = options ? JSON.stringify(options) : null
-        } catch (e) {
-          options = data.options ? JSON.stringify(data.options) : null
-        }
-      }
-
       // Prepare update data with defaults for optional fields
       const updateData: any = {
         name: data.name ?? product.name,
@@ -231,10 +209,8 @@ export default class ProductService {
         stock: data.stock !== undefined ? data.stock : product.stock,
         quantity: data.quantity !== undefined ? data.quantity : product.quantity,
         unit: data.unit ?? product.unit,
-        imageId: data.imageId ?? product.imageId,
         bannerImageId: bannerImageId,
         details: data.details ?? product.details,
-        options: options,
         productGroupId:
           data.productGroupId !== undefined ? data.productGroupId : product.productGroupId,
         organisationId: data.organisationId ?? product.organisationId,

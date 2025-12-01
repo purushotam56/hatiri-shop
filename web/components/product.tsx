@@ -2,42 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { AddToCart } from "./add-to-cart";
 import { PriceDisplay } from "./price-display";
-
-interface Variant {
-  id: number;
-  sku?: string;
-  price: number;
-  stock: number;
-  unit?: string;
-  options?: string | any[];
-}
-
-interface ProductGroup {
-  id: number;
-  name: string;
-  price: number;
-  currency: string;
-  stock: number;
-  unit?: string;
-  category?: string;
-  imageUrl?: string | null;
-  bannerImage?: {
-    id: number;
-    url: string;
-  };
-  image?: {
-    id: number;
-    url: string;
-  };
-  images?: Array<{
-    id: number;
-    upload: {
-      id: number;
-      url: string;
-    };
-  }>;
-  variants: Variant[];
-}
+import { Variant, ProductGroup } from "@/types/product";
 
 interface ProductProps {
   group: ProductGroup;
@@ -51,8 +16,6 @@ export function Product({ group, onProductClick, getCategoryEmoji, organisation,
   const product = group;
   const hasDiscount = false; // You can add discount logic later
   const discount = 0;
-
-  console.log(organisation)
 
   return (
       <div className="group bg-white rounded-lg overflow-hidden border border-divider hover:shadow-lg transition-shadow cursor-pointer h-full flex flex-col hover:border-default-300">
@@ -68,7 +31,7 @@ export function Product({ group, onProductClick, getCategoryEmoji, organisation,
             />
           ) : (
             <div className="text-5xl sm:text-6xl md:text-7xl group-hover:scale-105 transition-transform duration-300">
-              {getCategoryEmoji(product.name)}
+              {getCategoryEmoji(product.name || '')}
             </div>
           )}
           </Link>
@@ -81,7 +44,7 @@ export function Product({ group, onProductClick, getCategoryEmoji, organisation,
           )}
 
           {/* Stock Badge - Top Right */}
-          {product.stock < 5 && product.stock > 0 && (
+          {product.stock && product.stock < 5 && product.stock > 0 && (
             <div className="absolute top-2 right-2 bg-danger/90 text-white px-2 py-1 rounded-lg text-xs font-bold shadow-md">
               {product.stock} left
             </div>
@@ -107,7 +70,7 @@ export function Product({ group, onProductClick, getCategoryEmoji, organisation,
           </div> */}
 
           {/* Sold Out Overlay */}
-          {product.stock === 0 && (
+          {product.stock === 0 && product.stock !== undefined && (
             <div className="absolute inset-0 bg-foreground/40 flex items-center justify-center backdrop-blur-sm">
               <span className="text-white font-bold text-sm">SOLD OUT</span>
             </div>
@@ -121,21 +84,21 @@ export function Product({ group, onProductClick, getCategoryEmoji, organisation,
             {product.name}
           </h3>
 
-          {/* Unit/Description */}
-          {product.unit && (
-            <p className="text-xs text-foreground/70 mb-2 sm:mb-3 font-medium">
-              {product.unit}
-            </p>
-          )}
-
-          {/* Price Section */}
+          {/* Unit/Description and Price Section */}
           <div className="mt-auto">
-            <PriceDisplay
-              price={product.price}
-              originalPrice={product.price}
-              priceVisibility={priceVisibility}
-              hasDiscount={hasDiscount}
-            />
+            <div className="flex items-center justify-between gap-2 mb-2">
+              {(product.quantity || product.unit) && (
+                <p className="text-xs text-foreground/70 font-medium">
+                  {product.quantity && product.unit ? `${product.quantity} ${product.unit}` : product.unit}
+                </p>
+              )}
+              <PriceDisplay
+                price={product.price || 0}
+                originalPrice={product.price || 0}
+                priceVisibility={priceVisibility}
+                hasDiscount={hasDiscount}
+              />
+            </div>
           </div>
 
           {/* Add To Cart and WhatsApp Buttons */}

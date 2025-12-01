@@ -72,7 +72,7 @@ export default class SMSService {
         .includes(data.mobile)
     )
       return
-    const message = `OTP for Proprly login is ${data.otp}`
+    const message = `OTP for hatiri login is ${data.otp}`
     var params = {
       Message: message,
       PhoneNumber: data.mobile,
@@ -88,12 +88,12 @@ export default class SMSService {
         .includes(data.mobile)
     )
       return
-    const message = `Hi ${data.name}, Here are the credentials to login in Proprly Platform. 
+    const message = `Hi ${data.name}, Here are the credentials to login in hatiri Platform. 
     username: ${data.email}
     password: ${data.password}
-    url: https://admin-dev.proprly.tech
+    url: https://admin-dev.hatiri.tech
     `
-    // const message = `Password for Proprly login is ${data.password}, `
+    // const message = `Password for hatiri login is ${data.password}, `
     var params = {
       Message: message,
       PhoneNumber: data.mobile,
@@ -109,10 +109,10 @@ export default class SMSService {
         .includes(data.mobile)
     )
       return
-    const message = `Hi ${data.name}, Here are the credentials to login in Proprly Platform. 
+    const message = `Hi ${data.name}, Here are the credentials to login in hatiri Platform. 
     username: ${data.email}
     password: ${data.password}
-    url: https://admin-dev.proprly.tech
+    url: https://admin-dev.hatiri.tech
     `
     var params = {
       Message: message,
@@ -129,12 +129,12 @@ export default class SMSService {
         .includes(data.mobile)
     )
       return
-    const auditorMessage = `Hi ${data.name}, Here is the link to download Proprly Auditor App. 
-    App Store: https://apps.apple.com/us/app/proprly-auditor/id6478364981
+    const auditorMessage = `Hi ${data.name}, Here is the link to download hatiri Auditor App. 
+    App Store: https://apps.apple.com/us/app/hatiri-auditor/id6478364981
     Play Store: https://play.google.com/store/apps/details?id=com.app.propedge.auditor
     `
-    const ownerMessage = `Hi ${data.name}, Here is the link to download Proprly Owner App. 
-    App Store: https://apps.apple.com/us/app/proprly/id6478366187
+    const ownerMessage = `Hi ${data.name}, Here is the link to download hatiri Owner App. 
+    App Store: https://apps.apple.com/us/app/hatiri/id6478366187
     Play Store: https://play.google.com/store/apps/details?id=com.app.propedge
     `
     var params = {
@@ -152,8 +152,8 @@ export default class SMSService {
         .includes(data.mobile)
     )
       return
-    const auditorMessage = `Hi ${data.name}, \nA new version of Proprly Auditor App is now available! \nHere is the link to download the latest version, \n\nApp Store: https://tinyurl.com/4sz3ynj4 \nGoogle Play: https://tinyurl.com/3fjw6mkr \n\nImportant Note: The older version of the app will stop working so please download the latest App`
-    const ownerMessage = `Hi ${data.name}, \nA new version of Proprly Owner App is now available! \nHere is the link to download the latest version, \n\nApp Store: https://tinyurl.com/35sax3wz \nGoogle Play: https://tinyurl.com/mr2d9w37 \n\nImportant Note: The older version of the app will stop working so please download the latest App`
+    const auditorMessage = `Hi ${data.name}, \nA new version of hatiri Auditor App is now available! \nHere is the link to download the latest version, \n\nApp Store: https://tinyurl.com/4sz3ynj4 \nGoogle Play: https://tinyurl.com/3fjw6mkr \n\nImportant Note: The older version of the app will stop working so please download the latest App`
+    const ownerMessage = `Hi ${data.name}, \nA new version of hatiri Owner App is now available! \nHere is the link to download the latest version, \n\nApp Store: https://tinyurl.com/35sax3wz \nGoogle Play: https://tinyurl.com/mr2d9w37 \n\nImportant Note: The older version of the app will stop working so please download the latest App`
 
     var params = {
       Message: appType === 'auditor' ? auditorMessage : ownerMessage,
@@ -173,7 +173,7 @@ export default class SMSService {
     )
       return
 
-    const msg = `Hi ${data.name}, We hereby request you to kindly action the ‘pending owner feedback’ defects on urgent basis. We will consider these defects as closed if no action is taken within 7 days.\nKind Regards\nProprly Team`
+    const msg = `Hi ${data.name}, We hereby request you to kindly action the ‘pending owner feedback’ defects on urgent basis. We will consider these defects as closed if no action is taken within 7 days.\nKind Regards\nhatiri Team`
 
     var params = {
       Message: msg,

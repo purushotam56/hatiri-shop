@@ -133,7 +133,17 @@ export async function apiUpload(
     body: formData,
   });
 
-  return response.json();
+  const data = await response.json();
+
+  // Check HTTP status code and add error flag if not successful
+  if (!response.ok) {
+    return {
+      ...data,
+      error: true,
+    };
+  }
+
+  return data;
 }
 
 /**
@@ -146,13 +156,20 @@ export const apiEndpoints = {
   logout: (token: string) => apiPost("/logout", {}, token),
   session: (token: string) => apiGet("/customer/session", token),
 
-  // Products
+  // Products - List and browse
   getProducts: (query?: string) => apiGet(`/products${query || ""}`),
-  getProductsByOrg: (orgId:string,query?: string) => apiGet(`/products?organisationId=${orgId}&${query || ""}`),
+  // Fetch products from organisation/seller - uses /products API with organisationId filter
+  // Supports filtering by type: 'single' | 'variant' | undefined for all products
+  getProductsByOrg: (orgId:string, query?: string, type?: 'single' | 'variant') => {
+    const typeParam = type ? `&type=${type}` : ''
+    return apiGet(`/products?organisationId=${orgId}${typeParam}${query ? `&${query}` : ""}`)
+  },
+  
+  // Products - API endpoints
   getProduct: (id: string | number) => apiGet(`/products/${id}`),
   createProduct: (data: any, token: string) => apiPost("/products", data, token),
-  updateProduct: (id: string | number, data: any, token: string) =>
-    apiPut(`/products/${id}`, data, token),
+  updateProduct: (id: string | number, data: FormData, token: string) =>
+    apiUpload(`/products/${id}`, data, token, 'PUT'),
   deleteProduct: (id: string | number, token: string) =>
     apiDelete(`/products/${id}`, token),
 
@@ -198,8 +215,6 @@ export const apiEndpoints = {
   sellerRegister: (data: any) => apiPost("/seller/register", data),
   sellerSelectStore: (data: any, token: string) =>
     apiPost("/seller/select-store", data, token),
-  getSellerProducts: (orgId: string | number, token: string) =>
-    apiGet(`/seller/${orgId}/products`, token),
   getSellerOrders: (orgId: string | number, token: string) =>
     apiGet(`/seller/${orgId}/orders`, token),
   getSellerDashboard: (orgId: string | number, token: string) =>
@@ -233,14 +248,21 @@ export const apiEndpoints = {
     apiPatch(`/seller/${orgId}/orders/${orderId}/status`, { status }, token),
   getSellerCustomerOrders: (orgId: string | number, customerId: string | number, token: string) =>
     apiGet(`/seller/${orgId}/customers/${customerId}/orders`, token),
-  getSellerProductGroups: (orgId: string | number, token: string, page?: number, limit?: number, search?: string) =>
-    apiGet(`/seller/${orgId}/product-groups?page=${page || 1}&limit=${limit || 20}${search ? `&search=${encodeURIComponent(search)}` : ''}`, token),
+  getSellerProductGroups: (orgId: string | number, token: string, page?: number, limit?: number, search?: string, type?: 'single' | 'variant') => {
+    const typeParam = type ? `&type=${type}` : ''
+    return apiGet(`/seller/${orgId}/product-groups?page=${page || 1}&limit=${limit || 20}${search ? `&search=${encodeURIComponent(search)}` : ''}${typeParam}`, token)
+  },
   getSellerProductGroupDetail: (orgId: string | number, groupId: string | number, token: string) =>
     apiGet(`/seller/${orgId}/product-groups/${groupId}`, token),
   createProductWithVariants: (orgId: string | number, data: FormData, token: string) =>
     apiUpload(`/seller/${orgId}/products/variants`, data, token),
-  updateProductVariants: (orgId: string | number, groupId: string | number, data: FormData, token: string) =>
-    apiUpload(`/seller/${orgId}/products/variants/${groupId}`, data, token, 'PUT'),
+  updateProductVariants: (productId: string | number, data: FormData, token: string) =>
+    apiUpload(`/products/${productId}`, data, token, 'PUT'),
+  
+  // NEW: Simplified product creation for sellers (simple or variant)
+  createSellerProductV2: (data: any, token: string) =>
+    apiPost("/products/create", data, token),
+  
   updateSellerStore: (orgId: string | number, data: any, token: string) =>
     apiPut(`/seller/${orgId}/store`, data, token),
 

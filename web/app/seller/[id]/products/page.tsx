@@ -7,6 +7,7 @@ import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import { Accordion, AccordionItem } from '@heroui/accordion'
 import { Chip } from '@heroui/chip'
+import { Tabs, Tab } from '@heroui/tabs'
 import Link from 'next/link'
 import Image from 'next/image'
 import { apiEndpoints } from '@/lib/api-client'
@@ -33,6 +34,7 @@ interface ProductGroup {
   baseImages?: string[]
   totalStock?: number
   totalSold?: number
+  stockMergeType?: 'merged' | 'independent'
 }
 
 export default function SellerProductsPage() {
@@ -49,6 +51,7 @@ export default function SellerProductsPage() {
   const [limit] = useState(10)
   const [pagination, setPagination] = useState({ total: 0, perPage: 10, currentPage: 1, lastPage: 1 })
   const [search, setSearch] = useState('')
+  const [activeTab, setActiveTab] = useState<'single' | 'variants'>('single')
 
   // First effect: wait for store to load from localStorage
   useEffect(() => {
@@ -74,23 +77,48 @@ export default function SellerProductsPage() {
       return
     }
 
-    const fetchProductGroups = async () => {
-      setLoading(true)
-      try {
-        const token = localStorage.getItem('sellerToken');
-        const data = await apiEndpoints.getSellerProductGroups(String(orgId), token || '', page, limit, search);
-        setProductGroups(data.productGroups || [])
-        setPagination(data.pagination || { total: 0, perPage: limit, currentPage: page, lastPage: 1 })
+      const fetchProductGroups = async () => {
+        setLoading(true)
+        try {
+          // Fetch products from /products API with organisation filter
+          const type = activeTab === 'single' ? 'single' : activeTab === 'variants' ? 'variant' : undefined
+          const queryString = `page=${page}&limit=${limit}${search ? `&search=${search}` : ''}`
+          const response = await apiEndpoints.getProductsByOrg(String(orgId), queryString, type);        // Parse response: { data: { meta: {...}, data: [...] } }
+        const responseData = response.data || response
+        const products = responseData.data || []
+        const meta = responseData.meta || {}
+        
+        console.log('Fetched', type || 'all', 'products:', products.length, 'Meta:', meta)
+        
+        // Transform products to ProductGroup format for UI
+        const productGroups: ProductGroup[] = products.map((product: any) => ({
+          productGroupId: product.productGroupId || product.id,
+          baseName: product.name,
+          categoryName: product.category?.name,
+          variants: product.variants || [],
+          baseImages: product.images?.map((img: any) => img.upload?.url) || [],
+          totalStock: product.stock,
+          totalSold: 0,
+          stockMergeType: product.productGroup?.stockMergeType || product.stockMergeType,
+        }))
+        
+        setProductGroups(productGroups)
+        setPagination({
+          total: meta.total || 0,
+          perPage: meta.per_page || limit,
+          currentPage: meta.current_page || page,
+          lastPage: meta.last_page || 1,
+        })
       } catch (err) {
         setError('Failed to load products')
-        console.error(err)
+        console.error('Fetch error:', err)
       } finally {
         setLoading(false)
       }
     }
 
     fetchProductGroups()
-  }, [router, orgId, selectedStore, storeLoaded, page, limit, search])
+  }, [router, orgId, selectedStore, storeLoaded, page, limit, search, activeTab])
 
   const handleLogout = () => {
     localStorage.removeItem('sellerToken')
@@ -100,6 +128,13 @@ export default function SellerProductsPage() {
   }
 
   const totalVariants = productGroups.reduce((sum, g) => sum + g.variants.length, 0)
+  
+  // Products are already filtered by backend based on activeTab
+  const displayedProducts = productGroups
+  
+  // Calculate counts for tabs
+  const singleProductsCount = pagination.total && activeTab === 'single' ? pagination.total : undefined
+  const variantProductsCount = pagination.total && activeTab === 'variants' ? pagination.total : undefined
 
   return (
     <main className="min-h-screen bg-default-50 pb-20">
@@ -109,7 +144,11 @@ export default function SellerProductsPage() {
           <div className="flex items-center gap-3">
             <div>
               <h1 className="text-2xl font-bold text-foreground">Products</h1>
-              <p className="text-sm text-default-500">{productGroups.length} groups, {totalVariants} variants</p>
+              <p className="text-sm text-default-500">
+                {activeTab === 'single' 
+                  ? `${pagination.total} single products` 
+                  : `${pagination.total} variant groups (${totalVariants} total variants)`}
+              </p>
             </div>
           </div>
           <div className="flex items-center gap-2">
@@ -151,31 +190,89 @@ export default function SellerProductsPage() {
               <p className="text-red-600 dark:text-red-400 text-center">{error}</p>
             </CardBody>
           </Card>
-        ) : productGroups.length === 0 ? (
-          <Card>
-            <CardBody className="py-12 text-center space-y-4">
-              <div>
-                <svg className="w-16 h-16 mx-auto text-default-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m0 0l8 4m-8-4v10l8 4m0-10l8 4m-8-4v10" />
-                </svg>
-                <p className="text-default-600 text-lg">No products yet</p>
-                <p className="text-default-500 text-sm">Create your first product to get started</p>
-              </div>
-              <Link href={`/seller/${orgId}/products/create`}>
-                <Button color="primary" size="lg">
-                  Create First Product
-                </Button>
-              </Link>
-            </CardBody>
-          </Card>
         ) : (
           <div className="space-y-4">
-            {/* Pagination Info */}
-            <div className="text-sm text-default-600 text-right">
-              Showing {(page - 1) * limit + 1}-{Math.min(page * limit, pagination.total)} of {pagination.total} groups
-            </div>
-            <Accordion selectionMode="multiple" variant="splitted">
-              {productGroups.map((group) => (
+            {/* Tabs for Single and Variants */}
+            <Tabs 
+              aria-label="Product types"
+              selectedKey={activeTab}
+              onSelectionChange={(key) => {
+                setActiveTab(key as 'single' | 'variants')
+                setPage(1)
+              }}
+              classNames={{
+                tabList: "gap-6 w-full relative rounded-none p-0 border-b border-divider",
+                cursor: "w-full bg-primary",
+                tab: "max-w-fit px-0 h-12",
+                tabContent: "group-data-[selected=true]:text-primary"
+              }}
+            >
+              <Tab
+                key="single"
+                title={
+                  <div className="flex items-center space-x-2">
+                    <span>Single Products</span>
+                    {activeTab === 'single' && (
+                      <Chip
+                        size="sm"
+                        variant="flat"
+                        color="primary"
+                      >
+                        {pagination.total}
+                      </Chip>
+                    )}
+                  </div>
+                }
+              />
+              <Tab
+                key="variants"
+                title={
+                  <div className="flex items-center space-x-2">
+                    <span>Variant Products</span>
+                    {activeTab === 'variants' && (
+                      <Chip
+                        size="sm"
+                        variant="flat"
+                        color="primary"
+                      >
+                        {pagination.total}
+                      </Chip>
+                    )}
+                  </div>
+                }
+              />
+            </Tabs>
+
+            {/* Empty State for Selected Tab */}
+            {displayedProducts.length === 0 ? (
+              <Card>
+                <CardBody className="py-12 text-center space-y-4">
+                  <div>
+                    <svg className="w-16 h-16 mx-auto text-default-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m0 0l8 4m-8-4v10l8 4m0-10l8 4m-8-4v10" />
+                    </svg>
+                    <p className="text-default-600 text-lg">
+                      No {activeTab === 'single' ? 'single' : 'variant'} products yet
+                    </p>
+                    <p className="text-default-500 text-sm">
+                      Create {activeTab === 'single' ? 'a single' : 'variant'} product to get started
+                    </p>
+                  </div>
+                  <Link href={`/seller/${orgId}/products/create`}>
+                    <Button color="primary" size="lg">
+                      Create {activeTab === 'single' ? 'Single' : 'Variant'} Product
+                    </Button>
+                  </Link>
+                </CardBody>
+              </Card>
+            ) : (
+              <>
+                {/* Pagination Info */}
+                <div className="text-sm text-default-600 text-right">
+                  Showing {(page - 1) * limit + 1}-{Math.min(page * limit, pagination.total)} of {pagination.total}
+                </div>
+                <Accordion selectionMode="multiple" variant="splitted">
+                  {displayedProducts.map((group) => (
                 <AccordionItem
                   key={group.productGroupId}
                   aria-label={group.baseName}
@@ -196,20 +293,70 @@ export default function SellerProductsPage() {
                     )
                   }
                   title={
-                    <div className="flex items-center gap-3">
-                      <div className="flex flex-col">
+                    <div className="flex items-center justify-between gap-3 w-full pr-4">
+                      <div className="flex flex-col flex-1">
                         <p className="font-semibold">{group.baseName}</p>
                         {group.categoryName && (
                           <p className="text-xs text-default-500">{group.categoryName}</p>
                         )}
                       </div>
+                      <div className="flex items-center gap-2">
+                        <Chip size="sm" variant="flat" color="default">
+                          {group.variants.length} variant{group.variants.length !== 1 ? 's' : ''}
+                        </Chip>
+                        <div className="flex items-center gap-1" onClick={(e) => e.stopPropagation()}>
+                          <div
+                            onClick={() => router.push(`/seller/${orgId}/products/${group.variants[0]?.id || group.productGroupId}/edit`)}
+                            className="p-2 hover:bg-blue-100 dark:hover:bg-blue-900/20 rounded-lg cursor-pointer transition-colors"
+                            title="Edit"
+                          >
+                            <svg className="w-4 h-4 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                            </svg>
+                          </div>
+                          <div
+                            onClick={() => {
+                              // Add delete logic here
+                              console.log('Delete product:', group.productGroupId)
+                            }}
+                            className="p-2 hover:bg-red-100 dark:hover:bg-red-900/20 rounded-lg cursor-pointer transition-colors"
+                            title="Delete"
+                          >
+                            <svg className="w-4 h-4 text-red-600 dark:text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   }
                   subtitle={
                     <div className="flex items-center gap-2 mt-1">
-                      <Chip size="sm" variant="flat" color="default">
-                        {group.variants.length} variant{group.variants.length !== 1 ? 's' : ''}
-                      </Chip>
+                      {group.stockMergeType === 'merged' && (
+                        <>
+                          <Chip size="sm" variant="flat" color="secondary">
+                            📦 {group.totalStock || 0} Stock
+                          </Chip>
+                          <Chip 
+                            size="sm" 
+                            variant="flat" 
+                            color="warning"
+                            className="text-xs"
+                          >
+                            🔗 Merged
+                          </Chip>
+                        </>
+                      )}
+                      {group.stockMergeType === 'independent' && (
+                        <Chip 
+                          size="sm" 
+                          variant="flat" 
+                          color="success"
+                          className="text-xs"
+                        >
+                          📍 Independent
+                        </Chip>
+                      )}
                     </div>
                   }
                   indicator={<span>▼</span>}
@@ -291,9 +438,9 @@ export default function SellerProductsPage() {
                   </div>
                 </AccordionItem>
               ))}
-            </Accordion>
-            {/* Pagination Controls */}
-            {pagination.lastPage > 1 && (
+                </Accordion>
+                {/* Pagination Controls */}
+                {pagination.lastPage > 1 && (
               <div className="flex items-center justify-center gap-2 py-6">
                 <Button
                   isIconOnly
@@ -308,13 +455,14 @@ export default function SellerProductsPage() {
                 </Button>
                 <div className="flex gap-1">
                   {Array.from({ length: Math.min(5, pagination.lastPage) }, (_, i) => {
+                    const lastPageNum = pagination.lastPage
                     let pageNum: number
-                    if (pagination.lastPage <= 5) {
+                    if (lastPageNum <= 5) {
                       pageNum = i + 1
                     } else if (page <= 3) {
                       pageNum = i + 1
-                    } else if (page >= pagination.lastPage - 2) {
-                      pageNum = pagination.lastPage - 4 + i
+                    } else if (page >= lastPageNum - 2) {
+                      pageNum = lastPageNum - 4 + i
                     } else {
                       pageNum = page - 2 + i
                     }
@@ -343,6 +491,8 @@ export default function SellerProductsPage() {
                   </svg>
                 </Button>
               </div>
+                )}
+              </>
             )}
           </div>
         )}

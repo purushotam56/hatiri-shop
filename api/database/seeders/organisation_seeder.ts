@@ -7,7 +7,7 @@ export default class OrganisationSeeder extends BaseSeeder {
     const orgs = [
       {
         name: 'Vegetable Wings',
-        organisationUniqueCode: 'VW001',
+        organisationUniqueCode: 'vw001',
         currency: 'INR',
         dateFormat: 'DD-MM-YYYY',
         organisationRoleType: 'seller',

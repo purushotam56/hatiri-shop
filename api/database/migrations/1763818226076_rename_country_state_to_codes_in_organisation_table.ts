@@ -10,7 +10,7 @@ export default class extends BaseSchema {
       table.dropColumn('state')
       table.dropColumn('country')
     })
-    
+
     this.schema.alterTable(this.tableName, (table) => {
       table.string('state_code').nullable().after('city')
       table.string('country_code').nullable().after('postal_code')
@@ -22,7 +22,7 @@ export default class extends BaseSchema {
       table.dropColumn('state_code')
       table.dropColumn('country_code')
     })
-    
+
     this.schema.alterTable(this.tableName, (table) => {
       table.string('state').nullable().after('city')
       table.string('country').nullable().after('postal_code')

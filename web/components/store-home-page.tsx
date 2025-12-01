@@ -4,6 +4,7 @@ import { Chip } from "@heroui/chip";
 import { Divider } from "@heroui/divider";
 import { ScrollShadow } from "@heroui/scroll-shadow";
 import { Product } from "./product";
+import { StoreProductsGrid } from "./store-products-grid";
 import { apiEndpoints } from "@/lib/api-client";
 import Link from "next/link";
 
@@ -17,19 +18,7 @@ const getCategoryEmoji = (categoryOrName: any): string => {
     return "📦";
 };
 
-interface ProductType {
-  id: number;
-  name: string;
-  description?: string;
-  price: number;
-  currency: string;
-  stock: number;
-  sku?: string;
-  unit?: string;
-  category?: string;
-  imageUrl?: string | null;
-  options?: string | any[];
-}
+import { Product as ProductType } from "@/types/product";
 
 // Static Category Sidebar (No interactions)
 function CategorySidebar({ categories, selectedCategoryId, currentPath }: { categories: any[]; selectedCategoryId?: string; currentPath: string }) {
@@ -128,9 +117,9 @@ function MobileSidebar({ categories, selectedCategoryId, currentPath }: { catego
 }
 
 // Main Content Component
-function MainContent({ products, organisation }: { products: any[]; organisation: any }) {
+function MainContent({ products, organisation, selectedCategoryId }: { products: any[]; organisation: any; selectedCategoryId?: string }) {
     return (
-        <main className="flex-1 bg-background lg:ml-0 ml-20 overflow-hidden h-full">
+        <main className="flex-1 bg-background overflow-hidden h-full">
             <ScrollShadow className="h-full">
                 <div className="container mx-auto p-4 lg:p-6">
                     {/* Header */}
@@ -167,6 +156,7 @@ function MainContent({ products, organisation }: { products: any[]; organisation
                                         priceVisibility={organisation?.priceVisibility}
                                     />
                                 ))}
+                <StoreProductsGrid organisation={organisation} categoryId={selectedCategoryId || undefined} />
                             </div>
                         )}
                     </div>
@@ -177,7 +167,7 @@ function MainContent({ products, organisation }: { products: any[]; organisation
 }
 
 // Fetch server-side data
-async function fetchStoreData(code: string,categoryId?:string) {
+async function fetchStoreData(code: string, categoryId?: string) {
   try {
     // Fetch organisation by unique code (database-level lookup - efficient!)
     const orgResponse = await apiEndpoints.getOrganisationByCode(code);
@@ -185,9 +175,12 @@ async function fetchStoreData(code: string,categoryId?:string) {
 
     if (!org) throw new Error("Store not found");
 
-    // Fetch products for this organisation
-    const prodsData = await apiEndpoints.getProductsByOrg(org.id, categoryId ? `categoryId=${categoryId}` : undefined);
-    const products = prodsData.data.data || [];
+    // Build query string with categoryId if provided
+    const queryString = categoryId ? `categoryId=${categoryId}` : "";
+    
+    // Fetch products for this organisation (already filtered by categoryId if provided)
+    const prodsData = await apiEndpoints.getProductsByOrg(org.id, queryString);
+    const products = prodsData.data?.data || [];
 
     // Fetch categories for this organisation
     const categoriesData = await apiEndpoints.getOrganisationCategories(org.id);
@@ -235,18 +228,17 @@ export async function StoreHomePage({ storeCode, selectedCategoryId }: { storeCo
 
   const { products, categories } = data;
   
-  // Filter products by category if selectedCategoryId is provided
-  const filteredProducts = selectedCategoryId 
-    ? products.filter((p: any) => String(p.categoryId) === selectedCategoryId)
-    : products;
+  // No need for client-side filtering - API already returns filtered products
+  // Based on selectedCategoryId passed to fetchStoreData
+  const filteredProducts = products;
   
   const currentPath = `/store/${storeCode.toLowerCase()}`;
 
   return (
-    <div className="flex flex-col lg:flex-row bg-default-50 min-h-screen overflow-hidden h-[calc(100vh - 300px)]">
-      {/* Mobile Sidebar - Absolute positioned */}
+    <div className="flex bg-default-50 h-screen overflow-hidden">
+      {/* Sidebar */}
       <Card 
-        className="lg:hidden absolute left-0 z-30 w-20 h-full" 
+        className="lg:hidden w-20 md:w-64 h-full" 
         radius="none" 
         shadow="sm"
       >
@@ -258,17 +250,18 @@ export async function StoreHomePage({ storeCode, selectedCategoryId }: { storeCo
           />
         </CardBody>
       </Card>
-
-      {/* Desktop Sidebar */}
       <CategorySidebar 
         categories={categories} 
         selectedCategoryId={selectedCategoryId}
         currentPath={currentPath}
       />
-
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col h-[calc(100vh - 80px)]">
-        <MainContent products={filteredProducts} organisation={data.organisation} />
+        <MainContent 
+          products={filteredProducts} 
+          organisation={data.organisation}
+          selectedCategoryId={selectedCategoryId}
+        />
       </div>
     </div>
   );

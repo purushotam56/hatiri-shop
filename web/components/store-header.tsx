@@ -12,12 +12,20 @@ import { LoginModal } from "./login-modal";
 import { CartSidebar } from "./cart-sidebar";
 
 interface StoreHeaderProps {
-  storeCode: string;
+  storeCode?: string;
+  storeName?: string;
+  logoUrl?: string;
 }
 
-export function StoreHeader({ storeCode }: StoreHeaderProps) {
+export function StoreHeader({ storeCode = "", storeName = "", logoUrl = "" }: StoreHeaderProps) {
   const [showLoginModal, setShowLoginModal] = useState(false);
   const { isLoggedIn, user, logout } = useAuth();
+  const displayName = storeName || storeCode;
+  
+  // Debug logging
+  if (process.env.NODE_ENV === 'development') {
+    console.log('StoreHeader props:', { storeCode, storeName, logoUrl, hasTrimmedUrl: !!logoUrl?.trim() });
+  }
 
   return (
     <header className="sticky top-0 z-40 bg-background/95 backdrop-blur-sm border-b border-divider">
@@ -25,26 +33,31 @@ export function StoreHeader({ storeCode }: StoreHeaderProps) {
         <div className="flex items-center justify-between gap-2 sm:gap-3 md:gap-4">
           {/* Logo Section */}
           <div className="flex items-center gap-2 min-w-fit">
-            <Avatar
-              name={storeCode}
-              size="sm"
-              classNames={{
-                base: "w-8 sm:w-10 h-8 sm:h-10 bg-primary/10",
-                name: "text-xs sm:text-sm font-bold",
-              }}
-              className="text-primary"
-            />
+            {logoUrl && logoUrl.trim() ? (
+              <img
+                src={logoUrl}
+                alt={displayName}
+                className="w-8 sm:w-10 h-8 sm:h-10 object-contain rounded"
+                onError={(e) => {
+                  // If image fails to load, hide it
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
+            ) : (
+              <Avatar
+                name={displayName}
+                size="sm"
+                classNames={{
+                  base: "w-8 sm:w-10 h-8 sm:h-10 bg-primary/10",
+                  name: "text-xs sm:text-sm font-bold",
+                }}
+                className="text-primary"
+              />
+            )}
             <div className="hidden sm:block">
               <h1 className="font-bold text-xs sm:text-sm text-foreground leading-tight">
-                {storeCode}
+                {displayName}
               </h1>
-              <Chip
-                size="sm"
-                variant="light"
-                className="text-xs"
-              >
-                ⚡ 10 mins
-              </Chip>
             </div>
           </div>
 

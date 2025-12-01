@@ -254,7 +254,7 @@ export const generateDetailedInquiryWithLink = ({
  * Generate quick product share message with link
  */
 export const getQuickProductMessageWithLink = (
-  product: Product,
+  product: Product | any,
   organisationUniqueCode: string,
   domain?: string
 ): string => {

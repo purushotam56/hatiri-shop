@@ -217,7 +217,7 @@ export default function SellerEditProductVariantsPage() {
         }
       })
 
-      const data = await apiEndpoints.updateProductVariants(String(orgId), groupId, formData, token)
+      const data = await apiEndpoints.updateProductVariants(groupId, formData, token)
 
       if (data.error) {
         setError(data.message || 'Failed to update product')
@@ -249,7 +249,7 @@ export default function SellerEditProductVariantsPage() {
     <main className="min-h-screen bg-default-50 pb-20">
       {/* Header */}
       <div className="sticky top-0 z-30 bg-white dark:bg-default-100 border-b border-default-200">
-        <div className="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-4 flex items-center justify-between">
           <h1 className="text-2xl font-bold text-foreground">Edit Product Variants</h1>
           <Link href={`/seller/${orgId}/products`}>
             <Button color="default" variant="light">
@@ -259,7 +259,7 @@ export default function SellerEditProductVariantsPage() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-6">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4 py-6">
         {error && (
           <Card className="bg-red-50 dark:bg-red-900/20 border-red-200 mb-6">
             <CardBody>

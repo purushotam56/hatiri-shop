@@ -61,7 +61,10 @@ export default class extends BaseSchema {
 
       // Product group and stock merge type
       table.bigInteger('product_group_id').unsigned().nullable()
-      table.enum('stock_merge_type', ['merged', 'independent']).defaultTo('merged').comment('merged: variants share inventory, independent: each variant has own stock')
+      table
+        .enum('stock_merge_type', ['merged', 'independent'])
+        .defaultTo('merged')
+        .comment('merged: variants share inventory, independent: each variant has own stock')
       table.decimal('discount', 12, 2).defaultTo(0)
 
       table.boolean('is_active').defaultTo(true)

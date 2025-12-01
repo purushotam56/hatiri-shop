@@ -166,28 +166,43 @@ router
 
         // Organization categories management
         router
-          .get('/organisations/:organisationId/categories', [AdminController, 'getOrganisationCategories'])
+          .get('/organisations/:organisationId/categories', [
+            AdminController,
+            'getOrganisationCategories',
+          ])
           .use(middleware.auth({ guards: ['adminapi'] }))
         router
-          .post('/organisations/:organisationId/categories', [AdminController, 'createOrganisationCategory'])
+          .post('/organisations/:organisationId/categories', [
+            AdminController,
+            'createOrganisationCategory',
+          ])
           .use(middleware.auth({ guards: ['adminapi'] }))
         router
-          .put('/organisations/:organisationId/categories/:categoryId', [AdminController, 'updateOrganisationCategory'])
+          .put('/organisations/:organisationId/categories/:categoryId', [
+            AdminController,
+            'updateOrganisationCategory',
+          ])
           .use(middleware.auth({ guards: ['adminapi'] }))
         router
-          .delete('/organisations/:organisationId/categories/:categoryId', [AdminController, 'deleteOrganisationCategory'])
+          .delete('/organisations/:organisationId/categories/:categoryId', [
+            AdminController,
+            'deleteOrganisationCategory',
+          ])
           .use(middleware.auth({ guards: ['adminapi'] }))
 
         // Full organization details update
         router
           .patch('/organisations/:id/full-update', [AdminController, 'updateFullOrganisation'])
           .use(middleware.auth({ guards: ['adminapi'] }))
-        
+
         // Master seller token
         router
-          .post('/organisations/:organisationId/master-seller-token', [AdminController, 'getMasterSellerToken'])
+          .post('/organisations/:organisationId/master-seller-token', [
+            AdminController,
+            'getMasterSellerToken',
+          ])
           .use(middleware.auth({ guards: ['adminapi'] }))
-        
+
         router
           .get('/sellers', [AdminController, 'getSellers'])
           .use(middleware.auth({ guards: ['adminapi'] }))
@@ -251,12 +266,6 @@ router
           .get('/:id/product-groups/:groupId', [SellerController, 'getProductGroupDetail'])
           .use(middleware.auth({ guards: ['api'] }))
         router
-          .post('/:id/products/variants', [SellerController, 'createProductWithVariants'])
-          .use(middleware.auth({ guards: ['api'] }))
-        router
-          .put('/:id/products/variants/:groupId', [SellerController, 'updateProductVariants'])
-          .use(middleware.auth({ guards: ['api'] }))
-        router
           .put('/:id/store', [SellerController, 'updateSellerStore'])
           .use(middleware.auth({ guards: ['api'] }))
 
@@ -281,6 +290,9 @@ router
       .resource('products', ProductController)
       .apiOnly()
       .use(['store', 'update', 'destroy'], middleware.auth({ guards: ['api', 'adminapi'] }))
+
+    // Get single product with all variants and details
+    router.get('products/detail/:id', [ProductController, 'getProduct'])
 
     // Product Category routes - public read, authenticated create/edit/delete
     router

@@ -136,7 +136,7 @@ export default class MailService {
       await mail.send((message) => {
         message
           .to(data.email)
-          .from('Proprly Support <' + this.fromEmail + '>')
+          .from('hatiri Support <' + this.fromEmail + '>')
           .subject('Reset Your Password')
           .htmlView('email-templates/forgotPasswordEmail.edge', {
             logoUrl: this.logoUrl,

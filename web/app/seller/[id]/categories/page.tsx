@@ -2,7 +2,7 @@
 
 import { Suspense } from 'react'
 import { useEffect, useState } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter, useParams } from 'next/navigation'
 import { Card, CardBody, CardHeader } from '@heroui/card'
 import { Spinner } from '@heroui/spinner'
 import { Button } from '@heroui/button'
@@ -31,8 +31,8 @@ interface CategoryFormData {
 
 function CategoriesContent() {
   const router = useRouter()
-  const searchParams = useSearchParams()
-  const organisationId = searchParams.get('organisationId')
+  const params = useParams()
+  const organisationId = params.id as string
 
   const [categories, setCategories] = useState<Category[]>([])
   const [loading, setLoading] = useState(true)
@@ -48,18 +48,37 @@ function CategoriesContent() {
     emoji: '📦',
     description: '',
   })
+  const [token, setToken] = useState<string | null>(null)
+  const [isInitialized, setIsInitialized] = useState(false)
 
-  // Get token from localStorage
-  const token = typeof window !== 'undefined' ? localStorage.getItem('sellerToken') : null
-
+  // Initialize token and fetch categories
   useEffect(() => {
-    if (!organisationId || !token) {
-      router.push('/seller/select-store')
-      return
+    const initializeAndFetch = async () => {
+      try {
+        // Get token from localStorage
+        const storedToken = localStorage.getItem('sellerToken')
+        
+        if (!organisationId || !storedToken) {
+          router.push('/seller/select-store')
+          return
+        }
+
+        setToken(storedToken)
+        setIsInitialized(true)
+      } catch (err) {
+        console.error('Initialization error:', err)
+        router.push('/seller/select-store')
+      }
     }
 
-    fetchCategories()
-  }, [organisationId, token, router])
+    initializeAndFetch()
+  }, [organisationId, router])
+
+  useEffect(() => {
+    if (isInitialized && token) {
+      fetchCategories()
+    }
+  }, [isInitialized, token, organisationId])
 
   const fetchCategories = async () => {
     try {

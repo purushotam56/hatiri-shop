@@ -158,15 +158,17 @@ export default class SellerController {
         if (org.status === 'disabled') {
           return false
         }
-        
+
         // Check if trial has expired
         if (org.status === 'trial' && org.trialEndDate) {
-          const trialEndDate = DateTime.isDateTime(org.trialEndDate) ? org.trialEndDate : DateTime.fromISO(org.trialEndDate as any)
+          const trialEndDate = DateTime.isDateTime(org.trialEndDate)
+            ? org.trialEndDate
+            : DateTime.fromISO(org.trialEndDate as any)
           if (DateTime.now() > trialEndDate) {
             return false
           }
         }
-        
+
         return true
       })
 
@@ -234,7 +236,10 @@ export default class SellerController {
         })
       }
 
-      const organisation = await Organisation.findBy('organisationUniqueCode', code.toLowerCase().trim())
+      const organisation = await Organisation.query()
+        .where('organisationUniqueCode', code.toLowerCase().trim())
+        .preload('image')
+        .first()
 
       if (!organisation) {
         return response.notFound({
@@ -258,19 +263,32 @@ export default class SellerController {
         }
       }
 
+      const orgData: any = {
+        id: organisation.id,
+        name: organisation.name,
+        organisationUniqueCode: organisation.organisationUniqueCode,
+        currency: organisation.currency,
+        dateFormat: organisation.dateFormat,
+        status: organisation.status,
+        trialEndDate: organisation.trialEndDate,
+        whatsappNumber: organisation.whatsappNumber,
+        whatsappEnabled: organisation.whatsappEnabled,
+        priceVisibility: organisation.priceVisibility || 'visible',
+      }
+
+      // Add the image with URL if it exists
+      if (organisation.image) {
+        orgData.image = {
+          id: organisation.image.id,
+          url: organisation.image.url,
+          name: organisation.image.name,
+        }
+      } else {
+        orgData.image = null
+      }
+
       return response.ok({
-        organisation: {
-          id: organisation.id,
-          name: organisation.name,
-          organisationUniqueCode: organisation.organisationUniqueCode,
-          currency: organisation.currency,
-          dateFormat: organisation.dateFormat,
-          status: organisation.status,
-          trialEndDate: organisation.trialEndDate,
-          whatsappNumber: organisation.whatsappNumber,
-          whatsappEnabled: organisation.whatsappEnabled,
-          priceVisibility: organisation.priceVisibility || 'visible',
-        },
+        organisation: orgData,
       })
     } catch (error) {
       return errorHandler(error || 'Failed to fetch organization', { response } as any)
@@ -828,7 +846,7 @@ export default class SellerController {
     try {
       const user = await auth.getUserOrFail()
       const organisationId = params.id
-      const { page = 1, limit = 20, search } = request.qs()
+      const { page = 1, limit = 20, search, type } = request.qs()
 
       // Verify authorization
       const org = await Organisation.query()
@@ -846,7 +864,6 @@ export default class SellerController {
       let query = Product.query()
         .where('organisationId', organisationId)
         .preload('category')
-        .preload('image')
         .preload('images', (imagesQuery) => {
           imagesQuery.preload('upload').orderBy('sortOrder', 'asc')
         })
@@ -866,27 +883,9 @@ export default class SellerController {
 
       allProducts.forEach((product) => {
         const sold = product.orderItems.reduce((sum: number, item: any) => sum + item.quantity, 0)
-        
+
         // Parse images from options JSON if available
         let baseImages: string[] = []
-        try {
-          if (product.options && typeof product.options === 'string') {
-            const options = JSON.parse(product.options)
-            if (options.images && Array.isArray(options.images)) {
-              baseImages = options.images.slice(0, 1)
-            }
-            if (options.bannerImage) {
-              baseImages.unshift(options.bannerImage)
-            }
-          }
-        } catch (e) {
-          // Ignore JSON parse errors
-        }
-
-        // Fallback to image relationship
-        if (baseImages.length === 0 && product.image?.url) {
-          baseImages.push(product.image.url)
-        }
 
         const productData = {
           id: product.id,
@@ -895,7 +894,6 @@ export default class SellerController {
           stock: product.stock,
           price: product.price,
           unit: product.unit,
-          options: product.options,
           isActive: product.isActive,
           sold: sold,
           images: baseImages,
@@ -918,7 +916,7 @@ export default class SellerController {
       const productGroups = Object.entries(grouped).map(([groupId, variants]) => {
         const totalStock = variants[0].stock // All variants in group share same stock
         const totalSold = variants.reduce((sum, v) => sum + v.sold, 0)
-        
+
         return {
           productGroupId: Number(groupId),
           baseName: variants[0].name.replace(/\s+(1kg|2kg|5kg|piece|dozen|liter|-.*?)$/i, ''), // Extract base name
@@ -943,219 +941,32 @@ export default class SellerController {
         })
       })
 
+      // Filter by type if specified
+      let filteredGroups = productGroups
+      if (type === 'single') {
+        // Only groups with single variant
+        filteredGroups = productGroups.filter((group) => group.variants.length === 1)
+      } else if (type === 'variant') {
+        // Only groups with multiple variants
+        filteredGroups = productGroups.filter((group) => group.variants.length > 1)
+      }
+
       // Paginate product groups
       const start = (page - 1) * limit
       const end = start + limit
-      const paginatedGroups = productGroups.slice(start, end)
+      const paginatedGroups = filteredGroups.slice(start, end)
 
       return response.ok({
         productGroups: paginatedGroups,
         pagination: {
-          total: productGroups.length,
+          total: filteredGroups.length,
           perPage: limit,
           currentPage: page,
-          lastPage: Math.ceil(productGroups.length / limit),
+          lastPage: Math.ceil(filteredGroups.length / limit),
         },
       })
     } catch (error) {
       return errorHandler(error || 'Failed to fetch product groups', { response } as any)
-    }
-  }
-
-  /**
-   * Create product with variants
-   */
-  async createProductWithVariants({ params, request, response, auth }: HttpContext) {
-    try {
-      const user = await auth.getUserOrFail()
-      const organisationId = params.id
-
-      // Verify authorization
-      const org = await Organisation.query()
-        .where('id', organisationId)
-        .preload('user', (q) => q.where('user_id', user.id))
-        .first()
-
-      if (!org || org.user.length === 0) {
-        return response.forbidden({
-          message: 'Not authorized',
-        })
-      }
-
-      const name = request.input('name')
-      const description = request.input('description')
-      const sku = request.input('sku')
-      const categoryId = request.input('categoryId')
-      const details = request.input('details')
-      // Group-level stock (shared by all variants)
-      const groupStock = parseInt(request.input('stock'))
-      const groupUnit = request.input('unit')
-      const bannerImage = request.file('bannerImage')
-      const productImages = request.files('productImages')
-
-      if (!name || !sku || !categoryId) {
-        return response.badRequest({
-          message: 'Name, SKU, and category are required',
-        })
-      }
-
-      if (!groupStock || !groupUnit) {
-        return response.badRequest({
-          message: 'Stock and unit are required',
-        })
-      }
-
-      // Parse variants from request
-      const variantsData = []
-      let index = 0
-      while (request.input(`variants[${index}][label]`)) {
-        variantsData.push({
-          label: request.input(`variants[${index}][label]`),
-          skuSuffix: request.input(`variants[${index}][skuSuffix]`),
-          price: parseFloat(request.input(`variants[${index}][price]`)),
-          quantity: parseFloat(request.input(`variants[${index}][quantity]`)),
-          unit: request.input(`variants[${index}][unit]`),
-          isDiscountActive: request.input(`variants[${index}][isDiscountActive]`) === 'true',
-          discountType: request.input(`variants[${index}][discountType]`),
-          discountValue: request.input(`variants[${index}][discountValue]`),
-          images: request.files(`variants[${index}][images]`) || [],
-        })
-        index++
-      }
-
-      if (variantsData.length < 2) {
-        return response.badRequest({
-          message: 'At least two variants are required',
-        })
-      }
-
-      // Validate unit compatibility
-      const unitCompatibility: { [key: string]: string[] } = {
-        kg: ['kg', 'gm', 'mg'],
-        liter: ['liter', 'ml'],
-        dozen: ['dozen', 'piece'],
-        piece: ['piece']
-      }
-
-      const compatibleUnits = unitCompatibility[groupUnit] || [groupUnit]
-      const incompatibleVariant = variantsData.find(v => !compatibleUnits.includes(v.unit))
-
-      if (incompatibleVariant) {
-        return response.badRequest({
-          message: `Variant unit "${incompatibleVariant.unit}" is not compatible with group unit "${groupUnit}". Compatible units are: ${compatibleUnits.join(', ')}`
-        })
-      }
-
-      // Get organization code for S3 paths
-      const orgCode = org.organisationUniqueCode
-      const storageService = new StorageService()
-
-      // Upload shared banner image
-      let bannerImagePath = null
-      if (bannerImage) {
-        const fileName = normalizeFileName(bannerImage.clientName)
-        const fileBuffer = fs.readFileSync(bannerImage.tmpPath!)
-        const mimeType = bannerImage?.headers?.['content-type'] || bannerImage.type + '/' + bannerImage.extname
-
-        await storageService.uploadFile(
-          fileBuffer,
-          fileName,
-          mimeType as string,
-          orgCode,
-          'products'
-        )
-        bannerImagePath = `${orgCode}/products/${fileName}`
-      }
-
-      // Upload shared product images
-      const sharedImagePaths: string[] = []
-      if (productImages && productImages.length > 0) {
-        for (const image of productImages) {
-          const fileName = normalizeFileName(image.clientName)
-          const fileBuffer = fs.readFileSync(image.tmpPath!)
-          const mimeType = image?.headers?.['content-type'] || image.type + '/' + image.extname
-
-          await storageService.uploadFile(
-            fileBuffer,
-            fileName,
-            mimeType as string,
-            orgCode,
-            'products'
-          )
-          sharedImagePaths.push(`${orgCode}/products/${fileName}`)
-        }
-      }
-
-      // Generate a unique product group ID
-      const productGroupId = Date.now()
-
-      // Create all variants with shared group stock
-      const createdVariants = await Promise.all(
-        variantsData.map(async (variant: any) => {
-          // Save variant-specific images
-          const variantImagePaths: string[] = []
-          if (variant.images && variant.images.length > 0) {
-            for (const image of variant.images) {
-              const fileName = normalizeFileName(image.clientName)
-              const fileBuffer = fs.readFileSync(image.tmpPath!)
-              const mimeType = image?.headers?.['content-type'] || image.type + '/' + image.extname
-
-              await storageService.uploadFile(
-                fileBuffer,
-                fileName,
-                mimeType as string,
-                orgCode,
-                'products'
-              )
-              variantImagePaths.push(`${orgCode}/products/${fileName}`)
-            }
-          }
-
-          // Combine variant images with shared images
-          const allImages = [...variantImagePaths, ...sharedImagePaths]
-
-          return await Product.create({
-            name: `${name} ${variant.label}`,
-            description,
-            sku: `${sku}${variant.skuSuffix}`,
-            price: variant.price,
-            stock: groupStock, // Apply group-level stock to all variants
-            unit: groupUnit,   // Apply group-level unit to all variants
-            categoryId: parseInt(categoryId),
-            organisationId: Number(organisationId),
-            productGroupId: productGroupId,
-            options: JSON.stringify({ 
-              variant: variant.label,
-              quantity: variant.quantity,
-              unit: variant.unit,
-              images: allImages,
-              bannerImage: bannerImagePath
-            }),
-            taxRate: 0,
-            taxType: 'inclusive',
-            currency: 'INR',
-            quantity: 1,
-            details: details,
-            isActive: true,
-            isDeleted: false,
-            // Discount fields
-            discountType: variant.isDiscountActive ? variant.discountType : null,
-            discountPercentage: variant.isDiscountActive && variant.discountType === 'percentage' ? parseFloat(variant.discountValue) : null,
-            isDiscountActive: variant.isDiscountActive,
-          })
-        })
-      )
-
-      return response.created({
-        message: 'Product with variants created successfully',
-        productGroupId,
-        variants: createdVariants,
-      })
-    } catch (error) {
-      return errorHandler(error || 'Failed to create product with variants', {
-        request,
-        response,
-      } as HttpContext)
     }
   }
 
@@ -1203,7 +1014,6 @@ export default class SellerController {
         unit: product.unit,
         quantity: product.quantity,
         isActive: product.isActive,
-        options: product.options,
         isDiscountActive: product.isDiscountActive,
         discountPercentage: product.discountPercentage,
         discountType: product.discountType,
@@ -1233,85 +1043,6 @@ export default class SellerController {
       })
     } catch (error) {
       return errorHandler(error || 'Failed to fetch product group', { response } as any)
-    }
-  }
-
-  /**
-   * Update product variants - edit all variants together
-   */
-  async updateProductVariants({ params, request, response, auth }: HttpContext) {
-    try {
-      const user = await auth.getUserOrFail()
-      const organisationId = params.id
-      const groupId = params.groupId
-
-      // Verify authorization
-      const org = await Organisation.query()
-        .where('id', organisationId)
-        .preload('user', (q) => q.where('user_id', user.id))
-        .first()
-
-      if (!org || org.user.length === 0) {
-        return response.forbidden({
-          message: 'Not authorized',
-        })
-      }
-
-      const name = request.input('name')
-      const description = request.input('description')
-      const categoryId = request.input('categoryId')
-      const details = request.input('details')
-      const stock = request.input('stock')
-      const unit = request.input('unit')
-
-      // Parse updated variants
-      const updatedVariants = []
-      let index = 0
-      while (request.input(`variants[${index}][id]`)) {
-        updatedVariants.push({
-          id: parseInt(request.input(`variants[${index}][id]`)),
-          price: parseFloat(request.input(`variants[${index}][price]`)),
-          skuSuffix: request.input(`variants[${index}][skuSuffix]`),
-          label: request.input(`variants[${index}][label]`),
-          quantity: parseFloat(request.input(`variants[${index}][quantity]`)),
-          unit: request.input(`variants[${index}][unit]`),
-          isDiscountActive: request.input(`variants[${index}][isDiscountActive]`) === 'true',
-          discountType: request.input(`variants[${index}][discountType]`),
-          discountValue: request.input(`variants[${index}][discountValue]`),
-        })
-        index++
-      }
-
-      // Update all variants
-      for (const variant of updatedVariants) {
-        const product = await Product.find(variant.id)
-        if (!product) continue
-
-        product.name = `${name} ${variant.label}`
-        product.description = description
-        product.categoryId = parseInt(categoryId)
-        product.stock = parseInt(stock)
-        product.unit = unit
-        product.details = details
-        product.discountType = variant.isDiscountActive ? variant.discountType : null
-        product.discountPercentage = variant.isDiscountActive && variant.discountType === 'percentage' ? parseFloat(variant.discountValue) : null
-        product.isDiscountActive = variant.isDiscountActive
-
-        // Update options
-        const options = product.options ? JSON.parse(product.options as any) : {}
-        options.quantity = variant.quantity
-        options.unit = variant.unit
-        product.options = JSON.stringify(options)
-
-        await product.save()
-      }
-
-      return response.ok({
-        message: 'Product variants updated successfully',
-        groupId,
-      })
-    } catch (error) {
-      return errorHandler(error || 'Failed to update product variants', { response } as any)
     }
   }
 
@@ -1374,7 +1105,8 @@ export default class SellerController {
       if (logoFile) {
         const fileBuffer = fs.readFileSync(logoFile.tmpPath!)
         const fileName = normalizeFileName(logoFile.clientName)
-        const mimeType = logoFile?.headers?.['content-type'] || logoFile.type + '/' + logoFile.extname
+        const mimeType =
+          logoFile?.headers?.['content-type'] || logoFile.type + '/' + logoFile.extname
 
         const storageService = new StorageService()
         const uploadResult = await storageService.uploadFile(
@@ -1498,7 +1230,10 @@ export default class SellerController {
       }
 
       // Create slug from name
-      const slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')
+      const slug = name
+        .toLowerCase()
+        .replace(/\s+/g, '-')
+        .replace(/[^\w-]/g, '')
 
       const category = await ProductCategory.create({
         organisationId,
@@ -1546,7 +1281,10 @@ export default class SellerController {
 
       if (name) {
         category.name = name
-        category.slug = name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]/g, '')
+        category.slug = name
+          .toLowerCase()
+          .replace(/\s+/g, '-')
+          .replace(/[^\w-]/g, '')
       }
 
       if (emoji !== undefined) {
@@ -1598,7 +1336,8 @@ export default class SellerController {
 
       if (productCount[0].$extras.count > 0) {
         return response.badRequest({
-          message: 'Cannot delete category with existing products. Please move or delete products first.',
+          message:
+            'Cannot delete category with existing products. Please move or delete products first.',
         })
       }
 

@@ -90,10 +90,7 @@ export default class AdminController {
 
       // Check if org code already exists (convert to lowercase)
       const lowercaseCode = organisationUniqueCode.toLowerCase().trim()
-      const existingOrg = await Organisation.findBy(
-        'organisationUniqueCode',
-        lowercaseCode
-      )
+      const existingOrg = await Organisation.findBy('organisationUniqueCode', lowercaseCode)
       if (existingOrg) {
         return response.conflict({
           message: 'Organization code already exists',
@@ -153,7 +150,18 @@ export default class AdminController {
       }
 
       const organisations = await Organisation.query()
-        .select('id', 'name', 'organisationUniqueCode', 'currency', 'createdAt', 'updatedAt', 'status', 'trialEndDate', 'whatsappNumber', 'whatsappEnabled')
+        .select(
+          'id',
+          'name',
+          'organisationUniqueCode',
+          'currency',
+          'createdAt',
+          'updatedAt',
+          'status',
+          'trialEndDate',
+          'whatsappNumber',
+          'whatsappEnabled'
+        )
         .orderBy('createdAt', 'desc')
 
       return response.ok({
@@ -174,6 +182,7 @@ export default class AdminController {
       const organisation = await Organisation.query()
         .where('id', params.id)
         .preload('branch')
+        .preload('image')
         .firstOrFail()
 
       return response.ok({
@@ -192,18 +201,27 @@ export default class AdminController {
       await auth.getUserOrFail()
 
       const organisation = await Organisation.findOrFail(params.id)
-      const { name, currency, addressLine1, addressLine2, city, stateCode, postalCode, countryCode, status } =
-        request.only([
-          'name',
-          'currency',
-          'addressLine1',
-          'addressLine2',
-          'city',
-          'stateCode',
-          'postalCode',
-          'countryCode',
-          'status',
-        ])
+      const {
+        name,
+        currency,
+        addressLine1,
+        addressLine2,
+        city,
+        stateCode,
+        postalCode,
+        countryCode,
+        status,
+      } = request.only([
+        'name',
+        'currency',
+        'addressLine1',
+        'addressLine2',
+        'city',
+        'stateCode',
+        'postalCode',
+        'countryCode',
+        'status',
+      ])
 
       if (name) organisation.name = name
       if (currency) organisation.currency = currency
@@ -392,7 +410,7 @@ export default class AdminController {
       await auth.getUserOrFail()
 
       let settings = await PlatformSetting.query().first()
-      
+
       // If no settings exist, create default ones
       if (!settings) {
         settings = new PlatformSetting()
@@ -424,8 +442,8 @@ export default class AdminController {
 
       // Validate input
       if (freeTrialDays !== undefined) {
-        const days = parseInt(String(freeTrialDays), 10)
-        if (isNaN(days) || days < 1 || days > 365) {
+        const days = Number.parseInt(String(freeTrialDays), 10)
+        if (Number.isNaN(days) || days < 1 || days > 365) {
           return response.badRequest({
             message: 'Free trial days must be between 1 and 365',
           })
@@ -433,14 +451,14 @@ export default class AdminController {
       }
 
       let settings = await PlatformSetting.query().first()
-      
+
       // If no settings exist, create default ones
       if (!settings) {
         settings = new PlatformSetting()
       }
 
       if (freeTrialDays !== undefined) {
-        settings.freeTrialDays = parseInt(String(freeTrialDays), 10)
+        settings.freeTrialDays = Number.parseInt(String(freeTrialDays), 10)
       }
 
       await settings.save()
@@ -472,7 +490,8 @@ export default class AdminController {
       const org = await Organisation.findOrFail(organisationId)
 
       // Get categories for this organisation
-      const ProductCategory = (await import('#models/product_category')).default
+      const ProductCategoryModule = await import('#models/product_category')
+      const ProductCategory = ProductCategoryModule.default
       const categories = await ProductCategory.query()
         .where('organisationId', organisationId)
         .orderBy('createdAt', 'desc')
@@ -509,7 +528,8 @@ export default class AdminController {
       // Verify organisation exists
       await Organisation.findOrFail(organisationId)
 
-      const ProductCategory = (await import('#models/product_category')).default
+      const ProductCategoryModule = await import('#models/product_category')
+      const ProductCategory = ProductCategoryModule.default
       const category = await ProductCategory.create({
         organisationId,
         name,
@@ -538,7 +558,8 @@ export default class AdminController {
       // Verify organisation exists
       await Organisation.findOrFail(organisationId)
 
-      const ProductCategory = (await import('#models/product_category')).default
+      const ProductCategoryModule = await import('#models/product_category')
+      const ProductCategory = ProductCategoryModule.default
       const category = await ProductCategory.query()
         .where('id', categoryId)
         .where('organisationId', organisationId)
@@ -570,7 +591,8 @@ export default class AdminController {
       // Verify organisation exists
       await Organisation.findOrFail(organisationId)
 
-      const ProductCategory = (await import('#models/product_category')).default
+      const ProductCategoryModule = await import('#models/product_category')
+      const ProductCategory = ProductCategoryModule.default
       const category = await ProductCategory.query()
         .where('id', categoryId)
         .where('organisationId', organisationId)
@@ -649,7 +671,8 @@ export default class AdminController {
 
       // Update WhatsApp settings
       if (whatsappNumber !== undefined) organisation.whatsappNumber = whatsappNumber || null
-      if (whatsappEnabled !== undefined) organisation.whatsappEnabled = whatsappEnabled === true || whatsappEnabled === 'true'
+      if (whatsappEnabled !== undefined)
+        organisation.whatsappEnabled = whatsappEnabled === true || whatsappEnabled === 'true'
 
       // Update price visibility
       if (priceVisibility !== undefined) {
@@ -705,10 +728,11 @@ export default class AdminController {
 
       // Create a special seller token for this organization
       // In production, you might want to log this action for audit purposes
-      const User = (await import('#models/user')).default
-      
+      const UserModule = await import('#models/user')
+      const UserModel = UserModule.default
+
       // Find or create a master seller user for this organization
-      let sellerUser = await User.query()
+      let sellerUser = await UserModel.query()
         .where('organisationId', organisationId)
         .where('userType', 'seller')
         .orderBy('createdAt', 'asc')

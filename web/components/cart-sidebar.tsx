@@ -95,6 +95,11 @@ export function CartSidebar() {
                                 <p className="font-semibold text-foreground text-sm line-clamp-2">
                                   {item.name}
                                 </p>
+                                {(item as any).productQuantity && item.unit && (
+                                  <p className="text-xs text-foreground/60 font-medium mt-0.5">
+                                    {(item as any).productQuantity} {item.unit}
+                                  </p>
+                                )}
                                 <p className="text-sm text-primary font-bold mt-1">
                                   ₹{parseFloat(String(item.price)).toFixed(0)}
                                 </p>
@@ -147,36 +152,39 @@ export function CartSidebar() {
               </ScrollShadow>
 
               {/* Footer */}
-              <div className="p-4 md:p-6 border-t border-divider space-y-3">
-                <Divider />
-
+              <div className="p-4 md:p-6 border-t border-divider space-y-4 bg-default-50">
                 {/* Summary */}
                 <div className="flex justify-between items-center">
-                  <span className="text-foreground/60 font-medium text-sm">Total:</span>
-                  <span className="text-lg md:text-xl font-bold text-primary">
+                  <span className="text-foreground/60 font-medium text-sm">Subtotal:</span>
+                  <span className="text-lg font-bold text-foreground">
                     ₹{cartTotal.toFixed(0)}
                   </span>
                 </div>
 
-                {/* Checkout Button */}
-                <Button
-                  onPress={() => setShowCheckout(true)}
-                  className="w-full"
-                  color="primary"
-                  size="lg"
-                >
-                  Checkout
-                </Button>
+                <Divider />
 
-                {/* Continue Shopping */}
-                <Button
-                  onPress={() => setShowCart(false)}
-                  className="w-full"
-                  variant="bordered"
-                  size="md"
-                >
-                  Continue Shopping
-                </Button>
+                {/* Action Buttons */}
+                <div className="space-y-2.5">
+                  {/* Checkout Button - Primary */}
+                  <Button
+                    onPress={() => setShowCheckout(true)}
+                    className="w-full font-bold text-base h-12"
+                    color="primary"
+                    size="lg"
+                  >
+                    Proceed to Checkout
+                  </Button>
+
+                  {/* Continue Shopping - Secondary */}
+                  <Button
+                    onPress={() => setShowCart(false)}
+                    className="w-full font-semibold text-base h-11"
+                    variant="bordered"
+                    size="lg"
+                  >
+                    Continue Shopping
+                  </Button>
+                </div>
               </div>
             </>
           )}

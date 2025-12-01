@@ -11,14 +11,14 @@ export default class SellerSeeder extends BaseSeeder {
         password: 'Seller@123',
         fullName: 'Seller One - Vegetable Wings',
         mobile: '9111111111',
-        organisationCode: 'VW001',
+        organisationCode: 'vw001',
       },
       {
         email: 'seller2@veg-wings.com',
         password: 'Seller@123',
         fullName: 'Seller Two - Vegetable Wings',
         mobile: '9111111112',
-        organisationCode: 'VW001',
+        organisationCode: 'vw001',
       },
       {
         email: 'seller1@kirana-mart.com',

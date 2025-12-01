@@ -2,15 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-
-interface CartItem {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
-  currency: string;
-  sku?: string;
-}
+import { CartItem } from "@/types/cart";
 
 export default function CartPage() {
   const router = useRouter();
@@ -122,11 +114,18 @@ export default function CartPage() {
                           <h3 className="text-lg font-bold text-slate-900 mb-1">
                             {item.name}
                           </h3>
-                          {item.sku && (
-                            <p className="text-xs text-slate-500 font-mono">
-                              SKU: {item.sku}
-                            </p>
-                          )}
+                          <div className="space-y-1">
+                            {item.productQuantity && item.unit && (
+                              <p className="text-sm text-slate-600 font-medium">
+                                {item.productQuantity} {item.unit}
+                              </p>
+                            )}
+                            {item.sku && (
+                              <p className="text-xs text-slate-500 font-mono">
+                                SKU: {item.sku}
+                              </p>
+                            )}
+                          </div>
                         </div>
                         <button
                           onClick={() => removeItem(item.id)}
