@@ -12,6 +12,11 @@ import { errorHandler } from '#helper/error_handler'
 import { normalizeFileName } from '#helper/upload_helper'
 import StorageService from '#services/storage_service'
 import StockService, { type OrderStatusType } from '#services/stock_service'
+import analyticsService, {
+  type PageViewEvent,
+  type UserEventData,
+} from '#services/analytics_service'
+import OrganisationPage from '#models/organisation_page'
 
 // Helper function to filter orders by seller organisation
 function filterOrdersByOrganisation(orders: any[], organisationId: number): any[] {
@@ -90,7 +95,6 @@ export default class SellerController {
       organisation.name = organisationName
       organisation.organisationUniqueCode = lowercaseCode
       organisation.currency = 'INR'
-      organisation.organisationRoleType = 'seller' as any
       organisation.city = city || ''
       organisation.stateCode = ''
       organisation.postalCode = ''
@@ -292,6 +296,92 @@ export default class SellerController {
       })
     } catch (error) {
       return errorHandler(error || 'Failed to fetch organization', { response } as any)
+    }
+  }
+
+  /**
+   * Get public page content (about/contact) by organisation code
+   * No authentication required for public store pages
+   */
+  async getPublicPageContent({ params, response }: HttpContext) {
+    try {
+      const { code, pageType } = params
+
+      if (!code) {
+        return response.badRequest({
+          message: 'Organization code is required',
+        })
+      }
+
+      if (!pageType || !['about', 'contact'].includes(pageType)) {
+        return response.badRequest({
+          message: 'Invalid page type. Must be "about" or "contact"',
+        })
+      }
+
+      // Find organisation by code
+      const organisation = await Organisation.query()
+        .where('organisationUniqueCode', code.toLowerCase().trim())
+        .first()
+
+      if (!organisation) {
+        return response.notFound({
+          message: 'Store not found',
+        })
+      }
+
+      // Check organization status
+      if (organisation.status === 'disabled') {
+        return response.badRequest({
+          message: 'Store is temporarily unavailable',
+        })
+      }
+
+      // Check if trial has expired
+      if (organisation.status === 'trial' && organisation.trialEndDate) {
+        if (DateTime.now() > organisation.trialEndDate) {
+          return response.badRequest({
+            message: 'Store trial period has expired',
+          })
+        }
+      }
+
+      // Fetch page content
+      const page = await OrganisationPage.query()
+        .where('organisationId', organisation.id)
+        .where('pageType', pageType)
+        .first()
+
+      if (!page) {
+        // Return empty content if page doesn't exist
+        if (pageType === 'about') {
+          return response.ok({
+            pageType: 'about',
+            content: '',
+          })
+        } else {
+          return response.ok({
+            pageType: 'contact',
+            address: '',
+            additionalInfo: '',
+          })
+        }
+      }
+
+      if (pageType === 'about') {
+        return response.ok({
+          pageType: 'about',
+          content: page.content || '',
+        })
+      } else {
+        return response.ok({
+          pageType: 'contact',
+          address: page.address || '',
+          additionalInfo: page.additionalInfo || '',
+        })
+      }
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch page content', { response } as any)
     }
   }
 
@@ -1348,6 +1438,531 @@ export default class SellerController {
       })
     } catch (error) {
       return errorHandler(error || 'Failed to delete category', { response } as any)
+    }
+  }
+
+  /**
+   * Get about page content
+   */
+  async getAboutPage({ params, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const organisationId = params.id
+      const page = await OrganisationPage.query()
+        .where('organisationId', organisationId)
+        .where('pageType', 'about')
+        .first()
+
+      if (!page) {
+        return response.ok({
+          content: '',
+        })
+      }
+
+      return response.ok({
+        content: page.content || '',
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch about page', { response } as any)
+    }
+  }
+
+  /**
+   * Save about page content
+   */
+  async saveAboutPage({ params, request, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const organisationId = params.id
+      const { content } = request.only(['content'])
+
+      if (!content) {
+        return response.badRequest({
+          message: 'Content is required',
+        })
+      }
+
+      let page = await OrganisationPage.query()
+        .where('organisationId', organisationId)
+        .where('pageType', 'about')
+        .first()
+
+      if (!page) {
+        page = new OrganisationPage()
+        page.organisationId = organisationId
+        page.pageType = 'about'
+      }
+
+      page.content = content
+      await page.save()
+
+      return response.ok({
+        message: 'About page updated successfully',
+        page,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to save about page', { response } as any)
+    }
+  }
+
+  /**
+   * Get contact page content
+   */
+  async getContactPage({ params, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const organisationId = params.id
+      const page = await OrganisationPage.query()
+        .where('organisationId', organisationId)
+        .where('pageType', 'contact')
+        .first()
+
+      if (!page) {
+        return response.ok({
+          address: '',
+          additionalInfo: '',
+        })
+      }
+
+      return response.ok({
+        address: page.address || '',
+        additionalInfo: page.additionalInfo || '',
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch contact page', { response } as any)
+    }
+  }
+
+  /**
+   * Save contact page content
+   */
+  async saveContactPage({ params, request, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const organisationId = params.id
+      const { address, additionalInfo } = request.only(['address', 'additionalInfo'])
+
+      if (!address) {
+        return response.badRequest({
+          message: 'Address is required',
+        })
+      }
+
+      let page = await OrganisationPage.query()
+        .where('organisationId', organisationId)
+        .where('pageType', 'contact')
+        .first()
+
+      if (!page) {
+        page = new OrganisationPage()
+        page.organisationId = organisationId
+        page.pageType = 'contact'
+      }
+
+      page.address = address
+      page.additionalInfo = additionalInfo || null
+      await page.save()
+
+      return response.ok({
+        message: 'Contact page updated successfully',
+        page,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to save contact page', { response } as any)
+    }
+  }
+
+  /**
+   * Track a page view
+   */
+  async trackPageView({ params, request, response }: HttpContext) {
+    try {
+      const organisationId = params.id
+      const { pageType, sessionId, userAgent, ipAddress, referer, viewDuration, userId } =
+        request.only([
+          'pageType',
+          'sessionId',
+          'userAgent',
+          'ipAddress',
+          'referer',
+          'viewDuration',
+          'userId',
+        ])
+
+      if (!pageType || !['about', 'contact'].includes(pageType)) {
+        return response.badRequest({
+          message: 'Invalid page type. Must be "about" or "contact"',
+        })
+      }
+
+      if (!sessionId) {
+        return response.badRequest({
+          message: 'Session ID is required',
+        })
+      }
+
+      const pageView: PageViewEvent = {
+        organisationId,
+        pageType,
+        sessionId,
+        userAgent,
+        ipAddress,
+        referer,
+        viewDuration,
+        userId,
+        timestamp: new Date(),
+      }
+
+      await analyticsService.insertPageView(pageView)
+
+      return response.ok({
+        message: 'Page view tracked successfully',
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to track page view', { response } as any)
+    }
+  }
+
+  /**
+   * Track a user event
+   */
+  async trackUserEvent({ params, request, response }: HttpContext) {
+    try {
+      const organisationId = params.id
+      const { eventType, sessionId, userAgent, ipAddress, userId, pageType, metadata } =
+        request.only([
+          'eventType',
+          'sessionId',
+          'userAgent',
+          'ipAddress',
+          'userId',
+          'pageType',
+          'metadata',
+        ])
+
+      if (!eventType) {
+        return response.badRequest({
+          message: 'Event type is required',
+        })
+      }
+
+      if (!sessionId) {
+        return response.badRequest({
+          message: 'Session ID is required',
+        })
+      }
+
+      const userEvent: UserEventData = {
+        organisationId,
+        eventType,
+        sessionId,
+        userAgent,
+        ipAddress,
+        userId,
+        pageType,
+        metadata,
+        timestamp: new Date(),
+      }
+
+      await analyticsService.insertUserEvent(userEvent)
+
+      return response.ok({
+        message: 'User event tracked successfully',
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to track user event', { response } as any)
+    }
+  }
+
+  /**
+   * Get page view statistics
+   */
+  async getPageViewStats({ params, request, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const organisationId = params.id
+      const pageType = request.input('pageType', 'about')
+
+      if (!['about', 'contact'].includes(pageType)) {
+        return response.badRequest({
+          message: 'Invalid page type. Must be "about" or "contact"',
+        })
+      }
+
+      const stats = await analyticsService.getPageViewStats(organisationId, pageType)
+      const topReferers = await analyticsService.getTopReferers(organisationId, pageType)
+
+      return response.ok({
+        stats,
+        topReferers,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch page view stats', { response } as any)
+    }
+  }
+
+  /**
+   * Get event statistics
+   */
+  async getEventStats({ params, request, response, auth }: HttpContext) {
+    try {
+      await auth.getUserOrFail()
+
+      const organisationId = params.id
+      const eventType = request.input('eventType', null)
+
+      const stats = await analyticsService.getEventStats(organisationId, eventType)
+
+      return response.ok({
+        stats,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch event stats', { response } as any)
+    }
+  }
+
+  /**
+   * Get seller about page
+   */
+  async getSellerAboutPage({ params, response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const organisationId = params.id
+
+      // Verify ownership
+      const organisation = await Organisation.findOrFail(organisationId)
+      const userInOrg = await organisation.related('user').query().where('user_id', user.id).first()
+
+      if (!userInOrg) {
+        return response.forbidden({ message: 'Not authorized to access this organisation' })
+      }
+
+      // Fetch or create about page
+      let aboutPage = await OrganisationPage.query()
+        .where('organisation_id', organisationId)
+        .where('page_type', 'about')
+        .first()
+
+      if (!aboutPage) {
+        aboutPage = new OrganisationPage()
+        aboutPage.organisationId = organisationId
+        aboutPage.pageType = 'about'
+        aboutPage.content = ''
+        aboutPage.address = ''
+        aboutPage.additionalInfo = ''
+      }
+
+      return response.ok({
+        page: {
+          organisationId: aboutPage.organisationId,
+          pageType: aboutPage.pageType,
+          content: aboutPage.content,
+          address: aboutPage.address,
+          additionalInfo: aboutPage.additionalInfo,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch about page', { response } as any)
+    }
+  }
+
+  /**
+   * Save seller about page
+   */
+  async saveSellerAboutPage({ params, request, response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const organisationId = params.id
+      const { content, address, additionalInfo } = request.all()
+
+      // Verify ownership
+      const organisation = await Organisation.findOrFail(organisationId)
+      const userInOrg = await organisation.related('user').query().where('user_id', user.id).first()
+
+      if (!userInOrg) {
+        return response.forbidden({ message: 'Not authorized to access this organisation' })
+      }
+
+      // Fetch or create about page
+      let aboutPage = await OrganisationPage.query()
+        .where('organisation_id', organisationId)
+        .where('page_type', 'about')
+        .first()
+
+      if (!aboutPage) {
+        aboutPage = new OrganisationPage()
+        aboutPage.organisationId = organisationId
+        aboutPage.pageType = 'about'
+      }
+
+      aboutPage.content = content || ''
+      aboutPage.address = address || ''
+      aboutPage.additionalInfo = additionalInfo || ''
+      await aboutPage.save()
+
+      return response.ok({
+        message: 'About page saved successfully',
+        page: aboutPage,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to save about page', { response } as any)
+    }
+  }
+
+  /**
+   * Get seller contact page
+   */
+  async getSellerContactPage({ params, response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const organisationId = params.id
+
+      // Verify ownership
+      const organisation = await Organisation.findOrFail(organisationId)
+      const userInOrg = await organisation.related('user').query().where('user_id', user.id).first()
+
+      if (!userInOrg) {
+        return response.forbidden({ message: 'Not authorized to access this organisation' })
+      }
+
+      // Fetch or create contact page
+      let contactPage = await OrganisationPage.query()
+        .where('organisation_id', organisationId)
+        .where('page_type', 'contact')
+        .first()
+
+      if (!contactPage) {
+        contactPage = new OrganisationPage()
+        contactPage.organisationId = organisationId
+        contactPage.pageType = 'contact'
+        contactPage.content = ''
+        contactPage.address = ''
+        contactPage.additionalInfo = ''
+      }
+
+      return response.ok({
+        page: {
+          organisationId: contactPage.organisationId,
+          pageType: contactPage.pageType,
+          content: contactPage.content,
+          address: contactPage.address,
+          additionalInfo: contactPage.additionalInfo,
+        },
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch contact page', { response } as any)
+    }
+  }
+
+  /**
+   * Save seller contact page
+   */
+  async saveSellerContactPage({ params, request, response, auth }: HttpContext) {
+    try {
+      const user = await auth.getUserOrFail()
+      const organisationId = params.id
+      const { content, address, additionalInfo } = request.all()
+
+      // Verify ownership
+      const organisation = await Organisation.findOrFail(organisationId)
+      const userInOrg = await organisation.related('user').query().where('user_id', user.id).first()
+
+      if (!userInOrg) {
+        return response.forbidden({ message: 'Not authorized to access this organisation' })
+      }
+
+      // Fetch or create contact page
+      let contactPage = await OrganisationPage.query()
+        .where('organisation_id', organisationId)
+        .where('page_type', 'contact')
+        .first()
+
+      if (!contactPage) {
+        contactPage = new OrganisationPage()
+        contactPage.organisationId = organisationId
+        contactPage.pageType = 'contact'
+      }
+
+      contactPage.content = content || ''
+      contactPage.address = address || ''
+      contactPage.additionalInfo = additionalInfo || ''
+      await contactPage.save()
+
+      return response.ok({
+        message: 'Contact page saved successfully',
+        page: contactPage,
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to save contact page', { response } as any)
+    }
+  }
+
+  /**
+   * Get current seller user info - validate token
+   */
+  async me({ auth, response }: HttpContext) {
+    try {
+      const user = auth.use('api').user
+      if (!user) {
+        return response.unauthorized({
+          error: 'Unauthorized',
+          message: 'Invalid or expired token',
+        })
+      }
+
+      // Fetch all organizations where this user is a member
+      const organisations = await Organisation.query()
+        .select('id', 'name', 'organisationUniqueCode', 'status', 'trialEndDate')
+        .whereHas('user', (q) => q.where('user_id', user.id))
+
+      // Filter organizations by status - only allow active and valid trial organizations
+      const validOrganisations = organisations.filter((org) => {
+        if (org.status === 'disabled') {
+          return false
+        }
+
+        // Check if trial has expired
+        if (org.status === 'trial' && org.trialEndDate) {
+          const trialEndDate = DateTime.isDateTime(org.trialEndDate)
+            ? org.trialEndDate
+            : DateTime.fromISO(org.trialEndDate as any)
+          if (DateTime.now() > trialEndDate) {
+            return false
+          }
+        }
+
+        return true
+      })
+
+      if (validOrganisations.length === 0) {
+        return response.forbidden({
+          error: 'No valid organizations',
+          message: 'Your trial has expired or your stores are disabled',
+        })
+      }
+
+      return response.ok({
+        data: {
+          id: user.id,
+          email: user.email,
+          fullName: user.fullName,
+          mobile: user.mobile,
+        },
+        stores: validOrganisations.map((org) => ({
+          id: org.id,
+          name: org.name,
+          code: org.organisationUniqueCode,
+          currency: org.currency,
+          dateFormat: org.dateFormat,
+        })),
+      })
+    } catch (error) {
+      return errorHandler(error || 'Failed to fetch user info', { response } as any)
     }
   }
 }

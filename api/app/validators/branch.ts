@@ -18,18 +18,7 @@ export const createBranchValidator = vine.compile(
     numBasementLevels: vine.number().optional(),
     address: vine.string().trim(),
     blockBuildingNo: vine.string().trim().optional(),
-    strataPlanNo: vine.string().trim().optional(),
     imageId: vine.number().optional(),
-    towers: vine
-      .array(
-        vine.object({
-          name: vine.string().trim(),
-          numFloors: vine.number(),
-        })
-      )
-      .minLength(1)
-      .optional(),
-    legacyDocuments: vine.array(vine.number()).minLength(1).optional(),
   })
 )
 

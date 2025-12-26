@@ -4,7 +4,7 @@ import type { BelongsTo, HasMany, ManyToMany } from '@adonisjs/lucid/types/relat
 import Branch from '#models/branch'
 import Upload from '#models/upload'
 import User from '#models/user'
-import { CompanyRoles } from '#types/role'
+import OrganisationPage from '#models/organisation_page'
 import { ORGANISATION_USER } from '#database/constants/table_names'
 
 export default class Organisation extends BaseModel {
@@ -15,6 +15,9 @@ export default class Organisation extends BaseModel {
 
   @hasMany(() => Branch)
   declare branch: HasMany<typeof Branch>
+
+  @hasMany(() => OrganisationPage)
+  declare pages: HasMany<typeof OrganisationPage>
 
   @manyToMany(() => User, {
     pivotTable: ORGANISATION_USER,
@@ -41,9 +44,6 @@ export default class Organisation extends BaseModel {
 
   @column()
   declare organisationUniqueCode: string
-
-  @column()
-  declare organisationRoleType: CompanyRoles
 
   @column()
   declare addressLine1: string
@@ -87,10 +87,5 @@ export default class Organisation extends BaseModel {
   @computed()
   public get totalBranchs(): number {
     return this.$extras.branch_count ?? 0
-  }
-
-  @computed()
-  public get totalProperties(): number {
-    return this.$extras.property_count ?? 0
   }
 }

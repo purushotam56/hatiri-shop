@@ -1,4 +1,4 @@
-import { ORGANISATION_USER, PROJECT_USER, PROPERTY_USER } from '#database/constants/table_names'
+import { BRANCH_USER, ORGANISATION_USER } from '#database/constants/table_names'
 import { errorHandler } from '#helper/error_handler'
 import AdminUser from '#models/admin_user'
 import Organisation from '#models/organisation'
@@ -14,7 +14,6 @@ import { forgotPasswordValidator, resetPasswordValidator } from '#validators/use
 import { HttpContext } from '@adonisjs/core/http'
 import encryption from '@adonisjs/core/services/encryption'
 import _ from 'lodash'
-import { PermissionKeys, PermissionMapper } from '#types/permissions'
 import BranchUser from '#models/branch_user'
 import OrganisationUser from '#models/organisation_user'
 
@@ -74,12 +73,6 @@ export default class AuthController {
       const isSytemAdmin: boolean = await auth.use('adminapi').isAuthenticated
       const roles: { [key: number]: any } = {}
       if (!isSytemAdmin) {
-        // const usr = await User.query()
-        //   .where('id', user.id)
-        //   .preload('organisation_role', (q) => q.preload('organisation'))
-        //   .preload('branch_role', (q) => q.preload('branch', (pq) => pq.preload('organisation')))
-        //   .preload('property_role', (q) => q.preload('property', (pq) => pq.preload('organisation')))
-        //   .firstOrFail()
         const organisationRoles = await OrganisationUser.query()
           .where('userId', user.id)
           .preload('role')
@@ -158,11 +151,6 @@ export default class AuthController {
                   permissions: undefined,
                 }
               : null,
-            permissions: currentRole?.permissions
-              ? PermissionMapper(
-                  currentRole.permissions.map((p) => p.permissionKey as PermissionKeys)
-                )
-              : null,
             organisations: Object.values(roles),
           },
         }
@@ -235,10 +223,7 @@ export default class AuthController {
                 orgQuery.where(ORGANISATION_USER + '.role_id', role.id)
               )
               .orWhereHas('branch_role', (orgQuery) =>
-                orgQuery.where(PROJECT_USER + '.role_id', role.id)
-              )
-              .orWhereHas('property_role', (orgQuery) =>
-                orgQuery.where(PROPERTY_USER + '.role_id', role.id)
+                orgQuery.where(BRANCH_USER + '.role_id', role.id)
               )
           )
           .firstOrFail()
@@ -453,10 +438,7 @@ export default class AuthController {
               orgQuery.where(ORGANISATION_USER + '.role_id', role.id)
             )
             .orWhereHas('branch_role', (orgQuery) =>
-              orgQuery.where(PROJECT_USER + '.role_id', role.id)
-            )
-            .orWhereHas('property_role', (orgQuery) =>
-              orgQuery.where(PROPERTY_USER + '.role_id', role.id)
+              orgQuery.where(BRANCH_USER + '.role_id', role.id)
             )
         )
         .firstOrFail()

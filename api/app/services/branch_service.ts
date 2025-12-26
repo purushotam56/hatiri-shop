@@ -9,7 +9,7 @@ import {
 } from '#validators/branch'
 import User from '#models/user'
 import PermissionsResolverService from '#services/permissions_resolver_service'
-import { RoleAccessLevel, RoleKeys } from '#types/role'
+import { RoleAccessLevel } from '#types/role'
 import { PermissionKeys } from '#types/permissions'
 import { errorHandler } from '#helper/error_handler'
 import Role from '#models/role'
@@ -32,8 +32,6 @@ export default class BranchService {
     try {
       const data = this.ctx.request.all()
       const createData = await createBranchValidator.validate(data)
-      const documents = createData.legacyDocuments
-      delete createData.legacyDocuments
 
       // const { user, accessLevels, permissions } =
       //   await this.permissionsResolverService.permissionResolver(
@@ -60,11 +58,6 @@ export default class BranchService {
         type: createData.type,
       })
 
-      if (documents) {
-        await branch.related('legacyDocuments').sync(documents)
-      }
-
-      // await this.masterConfigService.syncMasterConfigForBranch(branch)
       return { data: branch }
     } catch (e) {
       return errorHandler(e, this.ctx)
@@ -73,12 +66,7 @@ export default class BranchService {
 
   async findAll() {
     const { isSytemAdmin, userAccess } = await this.permissionsResolverService.permissionResolver(
-      [
-        RoleAccessLevel.system,
-        RoleAccessLevel.organisation,
-        RoleAccessLevel.branch,
-        RoleAccessLevel.property,
-      ],
+      [RoleAccessLevel.system, RoleAccessLevel.organisation, RoleAccessLevel.branch],
       [PermissionKeys.branch_view],
       {}
     )
@@ -141,7 +129,6 @@ export default class BranchService {
     const branch = await Branch.query()
       .where('id', id)
       .preload('image')
-      .preload('legacyDocuments')
       .preload('user', (usrQuery) =>
         usrQuery.preload('branch_role', (roleQuery) => roleQuery.where('branch_id', id))
       )
@@ -167,13 +154,10 @@ export default class BranchService {
       const id = this.ctx.params.id
       const data = this.ctx.request.all()
       const updateData = await updateBranchValidator.validate(data)
-      const documents = updateData.legacyDocuments
       delete updateData.legacyDocuments
       const branch = await Branch.findOrFail(id)
       await branch.merge(updateData).save()
-      if (documents) {
-        branch.related('legacyDocuments').sync(documents)
-      }
+
       return branch
     } catch (e) {
       return errorHandler(e, this.ctx)
@@ -189,9 +173,6 @@ export default class BranchService {
       const branch = await Branch.findOrFail(params.branchId)
       const createData = await createBranchUserValidator.validate(body)
       const role = await Role.query().where('id', body.roleId).preload('permissions')
-      if (role[0].roleKey === RoleKeys.branch_sub_contractor && !createData.tradeCodeIds) {
-        throw new Error('Trade Codes Are Required For Subcontractor Role')
-      }
       await createBranchUserRoleValidator.validate(role)
       let user
       if (createData?.id) {
@@ -254,15 +235,6 @@ export default class BranchService {
           },
         },
         false
-      )
-
-      this.smsService.sendCredentialsMobile(
-        {
-          mobile: user.mobile,
-          email: user.email,
-          name: user.fullName as string,
-        },
-        role[0]?.roleKey === RoleKeys.branch_strata ? 'owner' : 'auditor'
       )
 
       const branch1 = await Branch.query()

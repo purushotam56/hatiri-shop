@@ -18,7 +18,6 @@ export default class PermissionsResolverService {
     data?: {
       organisationId?: number
       branchId?: number
-      propertyId?: number
       levelPiority?: RoleAccessLevel[]
       skipCurrentRole?: boolean
       skipCurrentOrganisation?: boolean
@@ -48,15 +47,13 @@ export default class PermissionsResolverService {
     const permissions: PermissionKeys[] = []
     const accessLevels: RoleAccessLevel[] = []
     const isSytemAdmin: boolean = this.ctx.auth.use('adminapi').isAuthenticated
-    const levelPiority = data?.levelPiority || LevelPiority.propertyBranchOrg
+    const levelPiority = data?.levelPiority || LevelPiority.branchOrg
     const userAccess: {
       organisation: number[]
       branch: number[]
-      property: number[]
     } = {
       organisation: [],
       branch: [],
-      property: [],
     }
     let role = currentRole
 
@@ -66,10 +63,8 @@ export default class PermissionsResolverService {
     )
 
     if (isSytemAdmin) {
-      permissions.push(
-        PermissionKeys.property_defect_approval,
-        PermissionKeys.common_area_defect_approval
-      )
+      // permissions.push(
+      // )
       const systemRole = await Role.query().where('roleKey', RoleKeys.system).firstOrFail()
       return {
         user,
@@ -206,9 +201,6 @@ export default class PermissionsResolverService {
     )
 
     for (const level of levelPiority) {
-      if (level === RoleAccessLevel.property && !role) {
-        role = roles.filter((r) => r.roleAccessLevel === RoleAccessLevel.property)[0]
-      }
       if (level === RoleAccessLevel.branch && !role) {
         role = roles.filter((r) => r.roleAccessLevel === RoleAccessLevel.branch)[0]
       }

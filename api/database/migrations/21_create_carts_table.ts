@@ -7,7 +7,12 @@ export default class extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id').primary()
       table.integer('user_id').unsigned().references('id').inTable('users').onDelete('CASCADE')
-      table.integer('product_id').unsigned()
+      table
+        .integer('product_id')
+        .unsigned()
+        .references('id')
+        .inTable('products')
+        .onDelete('RESTRICT')
       table.integer('variant_id').unsigned()
       table.string('name', 255).notNullable()
       table.decimal('price', 10, 2).notNullable()

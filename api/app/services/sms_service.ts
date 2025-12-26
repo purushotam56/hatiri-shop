@@ -160,7 +160,6 @@ export default class SMSService {
       PhoneNumber: data.mobile,
     }
 
-    console.log(params)
     return await this.sendSMS(params.PhoneNumber, params.Message)
   }
 
@@ -180,7 +179,6 @@ export default class SMSService {
       PhoneNumber: data.mobile,
     }
 
-    console.log(params)
     return await this.sendSMS(params.PhoneNumber, params.Message)
   }
 }

@@ -15,10 +15,10 @@ export default class extends BaseSchema {
       table
         .integer('organisation_id')
         .unsigned()
+        .nullable()
         .references('id')
         .inTable(ORGANISATION)
-        .onDelete('CASCADE')
-        .nullable()
+        .onDelete('RESTRICT')
 
       table.text('screen').nullable()
       table.integer('ref_id').nullable()

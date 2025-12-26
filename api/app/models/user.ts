@@ -6,7 +6,7 @@ import { withAuthFinder } from '@adonisjs/auth/mixins/lucid'
 import { DbAccessTokensProvider } from '@adonisjs/auth/access_tokens'
 import Otp from '#models/otp'
 import type { HasMany, ManyToMany } from '@adonisjs/lucid/types/relations'
-import { ORGANISATION_USER, PROJECT_USER, PROPERTY_USER } from '#database/constants/table_names'
+import { BRANCH_USER, ORGANISATION_USER } from '#database/constants/table_names'
 import Role from '#models/role'
 import Organisation from './organisation.js'
 import Branch from './branch.js'
@@ -57,25 +57,19 @@ export default class User extends compose(BaseModel, AuthFinder) {
 
   // branch connection and role
   @manyToMany(() => Branch, {
-    pivotTable: PROJECT_USER,
+    pivotTable: BRANCH_USER,
     pivotColumns: ['is_admin', 'role_id'],
   })
   declare branch: ManyToMany<typeof Branch>
 
   @manyToMany(() => Role, {
-    pivotTable: PROJECT_USER,
+    pivotTable: BRANCH_USER,
     pivotColumns: ['is_admin', 'branch_id'],
   })
   declare branch_role: ManyToMany<typeof Role>
 
-  @manyToMany(() => Role, {
-    pivotTable: PROPERTY_USER,
-    pivotColumns: ['is_admin', 'property_id'],
-  })
-  declare property_role: ManyToMany<typeof Role>
-
   @manyToMany(() => BranchUser, {
-    pivotTable: PROJECT_USER,
+    pivotTable: BRANCH_USER,
     pivotColumns: ['is_admin', 'role_id'],
   })
   declare branchUser: ManyToMany<typeof BranchUser>

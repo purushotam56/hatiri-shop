@@ -15,9 +15,11 @@ export default class extends BaseSchema {
       table.string('address_line_1').nullable()
       table.string('address_line_2').nullable()
       table.string('city').nullable()
-      table.string('state').nullable()
       table.string('postal_code').nullable()
-      table.string('country').nullable()
+
+      // Changed from state/country to state_code/country_code
+      table.string('state_code').nullable()
+      table.string('country_code').nullable()
 
       table
         .integer('image_id')
@@ -31,6 +33,20 @@ export default class extends BaseSchema {
       table.dateTime('trial_end_date').nullable()
       table.boolean('is_active').defaultTo(true)
       table.boolean('is_deleted').defaultTo(false)
+
+      // WhatsApp fields
+      table
+        .string('whatsapp_number', 20)
+        .nullable()
+        .comment('WhatsApp number in international format (e.g., +1234567890)')
+      table
+        .boolean('whatsapp_enabled')
+        .defaultTo(false)
+        .comment('Whether WhatsApp contact is enabled for this seller')
+
+      // Price visibility
+      table.enum('price_visibility', ['hidden', 'login_only', 'visible']).defaultTo('visible')
+
       table.timestamp('created_at')
       table.timestamp('updated_at')
     })

@@ -24,38 +24,11 @@ export default class SqsService {
     })
   }
 
-  async sendReportGenerationRequestForInspection(inspectionId: number) {
+  async sendMessage(data1: any) {
     if (this.triggerSqs) {
       const data = await this.sqs.sendMessage({
         MessageBody: JSON.stringify({
-          inspectionId: inspectionId,
-          appEnv: this.appEnv,
-        }),
-        QueueUrl: this.QueueUrl,
-      })
-      return data
-    }
-  }
-
-  async sendReportGenerationRequestForTradeInspection(inspectionId: number, tradeCodeId: number) {
-    if (this.triggerSqs) {
-      const data = await this.sqs.sendMessage({
-        MessageBody: JSON.stringify({
-          inspectionId: inspectionId,
-          tradeCodeId: tradeCodeId,
-          appEnv: this.appEnv,
-        }),
-        QueueUrl: this.QueueUrl,
-      })
-      return data
-    }
-  }
-
-  async sendReportGenerationRequestForProperty(propertyId: number) {
-    if (this.triggerSqs) {
-      const data = await this.sqs.sendMessage({
-        MessageBody: JSON.stringify({
-          propertyId: propertyId,
+          ...data1,
           appEnv: this.appEnv,
         }),
         QueueUrl: this.QueueUrl,

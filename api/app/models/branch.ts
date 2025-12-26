@@ -4,7 +4,6 @@ import { branchBasementList, BranchMaintenanceServiceType, BranchType } from '#t
 import type { BelongsTo, ManyToMany } from '@adonisjs/lucid/types/relations'
 import User from './user.js'
 import Upload from './upload.js'
-import { PROJECT_DOCUMENTS } from '#database/constants/table_names'
 import { RoleKeys } from '#types/role'
 import Organisation from './organisation.js'
 
@@ -54,11 +53,6 @@ export default class Branch extends BaseModel {
   })
   declare image: BelongsTo<typeof Upload>
 
-  @manyToMany(() => Upload, {
-    pivotTable: PROJECT_DOCUMENTS,
-  })
-  declare legacyDocuments: ManyToMany<typeof Upload>
-
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
 
@@ -78,52 +72,6 @@ export default class Branch extends BaseModel {
     if (this.user && this.user.length > 0) {
       return this.user.filter((usr) =>
         usr.branch_role?.some((pr) => pr.roleKey === RoleKeys.branch_admin)
-      )
-    }
-    return undefined
-  }
-
-  @computed()
-  public get [RoleKeys.branch_auditor]() {
-    if (this.user && this.user.length > 0) {
-      const chrisUser = this.user.filter(
-        (usr) => usr.email.toLowerCase() === 'chris.hua@ababuilders.com.au'
-      )
-      if (chrisUser.length > 0) {
-        return chrisUser
-      }
-      return this.user.filter((usr) =>
-        usr.branch_role?.some((pr) => pr.roleKey === RoleKeys.branch_auditor)
-      )
-    }
-    return undefined
-  }
-
-  @computed()
-  public get [RoleKeys.branch_sub_contractor]() {
-    if (this.user && this.user.length > 0) {
-      return this.user.filter((usr) =>
-        usr.branch_role?.some((pr) => pr.roleKey === RoleKeys.branch_sub_contractor)
-      )
-    }
-    return undefined
-  }
-
-  @computed()
-  public get [RoleKeys.branch_strata]() {
-    if (this.user && this.user.length > 0) {
-      return this.user.filter((usr) =>
-        usr.branch_role?.some((pr) => pr.roleKey === RoleKeys.branch_strata)
-      )
-    }
-    return undefined
-  }
-
-  @computed()
-  public get [RoleKeys.branch_sales_agent]() {
-    if (this.user && this.user.length > 0) {
-      return this.user.filter((usr) =>
-        usr.branch_role?.some((pr) => pr.roleKey === RoleKeys.branch_sales_agent)
       )
     }
     return undefined

@@ -10,6 +10,7 @@ import ProductImage from '#models/product_image'
 import { calculateTax, calculateTotalWithTax } from '#helper/tax_helper'
 import { normalizeFileName } from '#helper/upload_helper'
 import StorageService from '#services/storage_service'
+import { areUnitsCompatible } from '#types/unit'
 
 @inject()
 export default class ProductController {
@@ -68,13 +69,13 @@ export default class ProductController {
         })
       }
 
-      if (!stock && stock !== 0) {
+      if (!stock && stock !== 0 && stockMergeType === 'merged') {
         return response.badRequest({
           message: 'Stock is required and must be a valid number',
         })
       }
 
-      if (!unit) {
+      if (!unit && stockMergeType === 'merged') {
         return response.badRequest({
           message: 'Unit is required',
         })
@@ -97,17 +98,27 @@ export default class ProductController {
       const variantsData = []
       let index = 0
       while (request.input(`variants[${index}][label]`)) {
+        const stockInput = request.input(`variants[${index}][stock]`)
         variantsData.push({
           label: request.input(`variants[${index}][label]`),
           skuSuffix: request.input(`variants[${index}][skuSuffix]`),
           price: Number.parseFloat(request.input(`variants[${index}][price]`)),
           quantity: Number.parseFloat(request.input(`variants[${index}][quantity]`)),
           unit: request.input(`variants[${index}][unit]`),
-          stock: Number.parseInt(request.input(`variants[${index}][stock]`) || '0'),
+          stock: stockInput ? Number.parseInt(stockInput) : 0,
           isDiscountActive: request.input(`variants[${index}][isDiscountActive]`) === 'true',
           discountType: request.input(`variants[${index}][discountType]`),
           discountValue: request.input(`variants[${index}][discountValue]`),
+          // Independent mode: asset flags and values
+          description: request.input(`variants[${index}][description]`),
+          useSameDescription: request.input(`variants[${index}][useSameDescription]`) === 'true',
+          details: request.input(`variants[${index}][details]`),
+          useSameDetails: request.input(`variants[${index}][useSameDetails]`) === 'true',
+          bannerImage: request.file(`variants[${index}][bannerImage]`),
+          useSameBannerImage:
+            index > 0 && request.input(`variants[${index}][useSameBannerImage]`) === 'true',
           images: request.files(`variants[${index}][images]`) || [],
+          useSameImages: index > 0 && request.input(`variants[${index}][useSameImages]`) === 'true',
         })
         index++
       }
@@ -119,19 +130,18 @@ export default class ProductController {
       }
 
       // Validate unit compatibility
-      const unitCompatibility: { [key: string]: string[] } = {
-        kg: ['kg', 'gm', 'mg'],
-        liter: ['liter', 'ml'],
-        dozen: ['dozen', 'piece'],
-        piece: ['piece'],
-      }
+      // const unitCompatibility: { [key: string]: string[] } = {
+      //   kg: ['kg', 'gm', 'mg'],
+      //   liter: ['liter', 'ml'],
+      //   dozen: ['dozen', 'piece'],
+      //   piece: ['piece'],
+      // }
 
-      const compatibleUnits = unitCompatibility[unit] || [unit]
-      const incompatibleVariant = variantsData.find((v) => !compatibleUnits.includes(v.unit))
+      const incompatibleVariant = !areUnitsCompatible(variantsData[0].unit, variantsData[1].unit)
 
       if (incompatibleVariant) {
         return response.badRequest({
-          message: `Variant unit "${incompatibleVariant.unit}" is not compatible with group unit "${unit}". Compatible units are: ${compatibleUnits.join(', ')}`,
+          message: `Variant unit "${variantsData[0].unit}" is not compatible with group unit "${variantsData[1].unit}".`,
         })
       }
 
@@ -139,8 +149,7 @@ export default class ProductController {
       const orgCode = org.organisationUniqueCode
       const storageService = new StorageService()
 
-      // Upload shared banner image
-      let bannerImagePath = null
+      let sharedBannerImageId: number | null = null
       if (bannerImage) {
         const fileName = normalizeFileName(bannerImage.clientName)
         const fileBuffer = fs.readFileSync(bannerImage.tmpPath!)
@@ -154,11 +163,19 @@ export default class ProductController {
           orgCode,
           'products'
         )
-        bannerImagePath = `${orgCode}/products/${fileName}`
+        const bannerImagePath = `${orgCode}/products/${fileName}`
+        const sharedBannerUpload = await Upload.create({
+          name: fileName,
+          mimeType: mimeType as string,
+          size: fileBuffer.length,
+          key: bannerImagePath,
+          urlPrefix: '',
+          driver: 's3',
+        })
+        sharedBannerImageId = sharedBannerUpload.id
       }
 
-      // Upload shared product images
-      const sharedImagePaths: string[] = []
+      const sharedImageIds: number[] = []
       if (productImages && productImages.length > 0) {
         for (const image of productImages) {
           const fileName = normalizeFileName(image.clientName)
@@ -172,7 +189,16 @@ export default class ProductController {
             orgCode,
             'products'
           )
-          sharedImagePaths.push(`${orgCode}/products/${fileName}`)
+          const imagePath = `${orgCode}/products/${fileName}`
+          const sharedImageUpload = await Upload.create({
+            name: fileName,
+            mimeType: mimeType as string,
+            size: fileBuffer.length,
+            key: imagePath,
+            urlPrefix: '',
+            driver: 's3',
+          })
+          sharedImageIds.push(sharedImageUpload.id)
         }
       }
 
@@ -187,146 +213,174 @@ export default class ProductController {
         stockMergeType: stockMergeType as 'merged' | 'independent',
       })
 
-      // Create all variants
-      const createdVariants = await Promise.all(
-        variantsData.map(async (variant: any) => {
-          let variantBannerImageId: number | null = null
-          let variantImageIds: number[] = []
+      let mainVariantBannerImageId: number | null = null
+      let mainVariantImageIds: number[] = []
 
-          // For independent mode: upload variant-specific images
-          // For merged mode: use shared images
-          if (
-            stockMergeType === 'independent' &&
-            variant.images &&
-            variant.images.length > 0 &&
-            variant.images[0]
-          ) {
-            const firstImage = variant.images[0]
-            const fileName = normalizeFileName(firstImage.clientName)
-            const fileBuffer = fs.readFileSync(firstImage.tmpPath!)
-            const mimeType =
-              firstImage?.headers?.['content-type'] || firstImage.type + '/' + firstImage.extname
+      // Create all variants
+      const createdVariants = []
+      let variantIndex = 0
+      for (const variant of variantsData) {
+        let variantBannerImageId: number | null = null
+        let variantImageIds: number[] = []
+
+        // Handle variant-specific banner image (independent mode only)
+        if (
+          stockMergeType === 'independent' &&
+          variant.bannerImage &&
+          (!variant.useSameBannerImage || variantIndex === 0)
+        ) {
+          const imgFileName = normalizeFileName(variant.bannerImage.clientName)
+          const imgBuffer = fs.readFileSync(variant.bannerImage.tmpPath!)
+          const imgMimeType =
+            variant.bannerImage?.headers?.['content-type'] ||
+            variant.bannerImage.type + '/' + variant.bannerImage.extname
+
+          await storageService.uploadFile(
+            imgBuffer,
+            imgFileName,
+            imgMimeType as string,
+            orgCode,
+            'products'
+          )
+
+          const imgUploadPath = `${orgCode}/products/${imgFileName}`
+          const imgUploadRecord = await Upload.create({
+            name: imgFileName,
+            mimeType: imgMimeType as string,
+            size: imgBuffer.length,
+            key: imgUploadPath,
+            urlPrefix: '',
+            driver: 's3',
+          })
+
+          variantBannerImageId = imgUploadRecord.id
+
+          if (variantIndex === 0) {
+            mainVariantBannerImageId = imgUploadRecord.id
+          }
+        }
+
+        // Handle variant-specific product images
+        if (
+          stockMergeType === 'independent' &&
+          variant.images &&
+          variant.images.length > 0 &&
+          (!variant.useSameImages || variantIndex === 0)
+        ) {
+          // Independent mode with custom images
+          for (const image of variant.images) {
+            const imgFileName = normalizeFileName(image.clientName)
+            const imgBuffer = fs.readFileSync(image.tmpPath!)
+            const imgMimeType = image?.headers?.['content-type'] || image.type + '/' + image.extname
 
             await storageService.uploadFile(
-              fileBuffer,
-              fileName,
-              mimeType as string,
+              imgBuffer,
+              imgFileName,
+              imgMimeType as string,
               orgCode,
               'products'
             )
 
-            const uploadPath = `${orgCode}/products/${fileName}`
-            const uploadRecord = await Upload.create({
-              name: fileName,
-              mimeType: mimeType as string,
-              size: fileBuffer.length,
-              key: uploadPath,
+            const imgUploadPath = `${orgCode}/products/${imgFileName}`
+            const imgUploadRecord = await Upload.create({
+              name: imgFileName,
+              mimeType: imgMimeType as string,
+              size: imgBuffer.length,
+              key: imgUploadPath,
               urlPrefix: '',
               driver: 's3',
             })
-            variantBannerImageId = uploadRecord.id
-
-            // Process remaining images as product images
-            for (let i = 1; i < variant.images.length; i++) {
-              const image = variant.images[i]
-              const imgFileName = normalizeFileName(image.clientName)
-              const imgBuffer = fs.readFileSync(image.tmpPath!)
-              const imgMimeType =
-                image?.headers?.['content-type'] || image.type + '/' + image.extname
-
-              await storageService.uploadFile(
-                imgBuffer,
-                imgFileName,
-                imgMimeType as string,
-                orgCode,
-                'products'
-              )
-
-              const imgUploadPath = `${orgCode}/products/${imgFileName}`
-              const imgUploadRecord = await Upload.create({
-                name: imgFileName,
-                mimeType: imgMimeType as string,
-                size: imgBuffer.length,
-                key: imgUploadPath,
-                urlPrefix: '',
-                driver: 's3',
-              })
-              variantImageIds.push(imgUploadRecord.id)
+            variantImageIds.push(imgUploadRecord.id)
+            if (variantIndex === 0) {
+              mainVariantImageIds.push(imgUploadRecord.id)
             }
           }
+        } else if (stockMergeType === 'merged' && variant.images && variant.images.length > 0) {
+          // Merged mode: All variant images go as product images (banner is shared)
+          for (const image of variant.images) {
+            const imgFileName = normalizeFileName(image.clientName)
+            const imgBuffer = fs.readFileSync(image.tmpPath!)
+            const imgMimeType = image?.headers?.['content-type'] || image.type + '/' + image.extname
 
-          // For merged mode: use shared banner image
-          if (stockMergeType === 'merged' && bannerImagePath) {
-            const sharedBannerUpload = await Upload.query().where('key', bannerImagePath).first()
-            if (sharedBannerUpload) {
-              variantBannerImageId = sharedBannerUpload.id
-            }
-          } else if (stockMergeType === 'independent' && !variantBannerImageId && bannerImagePath) {
-            // For independent mode without variant banner, use shared banner as fallback
-            const sharedBannerUpload = await Upload.query().where('key', bannerImagePath).first()
-            if (sharedBannerUpload) {
-              variantBannerImageId = sharedBannerUpload.id
-            }
+            await storageService.uploadFile(
+              imgBuffer,
+              imgFileName,
+              imgMimeType as string,
+              orgCode,
+              'products'
+            )
+
+            const imgUploadPath = `${orgCode}/products/${imgFileName}`
+            const imgUploadRecord = await Upload.create({
+              name: imgFileName,
+              mimeType: imgMimeType as string,
+              size: imgBuffer.length,
+              key: imgUploadPath,
+              urlPrefix: '',
+              driver: 's3',
+            })
+            variantImageIds.push(imgUploadRecord.id)
           }
+        }
 
-          // Create the product variant
-          const product = await Product.create({
-            name: `${name} - ${variant.label}`,
-            description,
-            sku: `${sku}${variant.skuSuffix}`,
-            price: variant.price,
-            stock: stockMergeType === 'independent' ? variant.stock : 0,
-            unit: variant.unit,
-            categoryId: Number.parseInt(categoryId),
-            organisationId: Number(organisationId),
-            productGroupId: productGroup.id,
-            stockMergeType: stockMergeType as 'merged' | 'independent',
-            bannerImageId: variantBannerImageId,
-            taxRate: 0,
-            taxType: 'inclusive',
-            currency: 'INR',
-            quantity: Math.round(Number.parseFloat(variant.quantity) || 1),
-            details: details,
-            isActive: true,
-            isDeleted: false,
-            discountType: variant.isDiscountActive ? variant.discountType : null,
-            discountPercentage:
-              variant.isDiscountActive && variant.discountType === 'percentage'
-                ? Number.parseFloat(variant.discountValue)
-                : null,
-            isDiscountActive: variant.isDiscountActive,
-          })
+        if (!variantBannerImageId) {
+          variantBannerImageId = sharedBannerImageId || mainVariantBannerImageId
+        }
 
-          // Associate product images
-          if (variantImageIds.length > 0) {
-            for (const [sortOrder, variantImageId] of variantImageIds.entries()) {
-              await ProductImage.create({
-                productId: product.id,
-                uploadId: variantImageId,
-                sortOrder: sortOrder,
-                isActive: true,
-              })
-            }
+        // If merged mode or independent mode with useSameImages=true, add shared product images
+        if (
+          (sharedImageIds.length > 0 && stockMergeType === 'merged') ||
+          (stockMergeType === 'independent' && variant.useSameImages)
+        ) {
+          if (stockMergeType === 'merged') {
+            variantImageIds.push(...sharedImageIds)
+          } else {
+            variantImageIds.push(...mainVariantImageIds)
           }
+        }
 
-          // For merged mode, also associate shared product images to each variant
-          if (stockMergeType === 'merged' && sharedImagePaths.length > 0) {
-            for (const [sortOrder, imagePath] of sharedImagePaths.entries()) {
-              const sharedImageUpload = await Upload.query().where('key', imagePath).first()
-              if (sharedImageUpload) {
-                await ProductImage.create({
-                  productId: product.id,
-                  uploadId: sharedImageUpload.id,
-                  sortOrder: sortOrder,
-                  isActive: true,
-                })
-              }
-            }
-          }
-
-          return product
+        // Create the product variant
+        const product = await Product.create({
+          name: `${name} - ${variant.label}`,
+          description,
+          sku: `${org.organisationUniqueCode}-${sku}${variant.skuSuffix}`,
+          price: variant.price,
+          stock: stockMergeType === 'independent' ? variant.stock : 0,
+          unit: variant.unit,
+          categoryId: Number.parseInt(categoryId),
+          organisationId: Number(organisationId),
+          productGroupId: productGroup.id,
+          stockMergeType: stockMergeType as 'merged' | 'independent',
+          bannerImageId: variantBannerImageId,
+          taxRate: 0,
+          taxType: 'inclusive',
+          currency: 'INR',
+          quantity: Math.round(Number(variant.quantity) || 1),
+          details: details,
+          isActive: true,
+          isDeleted: false,
+          discountType: variant.isDiscountActive ? variant.discountType : null,
+          discountPercentage:
+            variant.isDiscountActive && variant.discountType === 'percentage'
+              ? Number.parseFloat(variant.discountValue)
+              : null,
+          isDiscountActive: variant.isDiscountActive,
         })
-      )
+
+        // Associate product images
+        if (variantImageIds.length > 0) {
+          for (const [sortOrder, variantImageId] of variantImageIds.entries()) {
+            await ProductImage.create({
+              productId: product.id,
+              uploadId: variantImageId,
+              sortOrder: sortOrder,
+              isActive: true,
+            })
+          }
+        }
+
+        createdVariants.push(product)
+      }
 
       return response.created({
         message: 'Product variants created successfully',
@@ -388,6 +442,12 @@ export default class ProductController {
         countQuery = countQuery.where('categoryId', categoryId)
       }
 
+      if (type === 'single') {
+        countQuery = countQuery.whereNull('productGroupId')
+      } else if (type === 'variant') {
+        countQuery = countQuery.whereNotNull('productGroupId')
+      }
+
       if (search) {
         countQuery = countQuery
           .where('name', 'ilike', `%${search}%`)
@@ -413,11 +473,6 @@ export default class ProductController {
 
       // Apply type filter
       let filtered = groups
-      if (type === 'single') {
-        filtered = groups.filter((g) => g.isSingle)
-      } else if (type === 'variant') {
-        filtered = groups.filter((g) => !g.isSingle)
-      }
 
       // Apply pagination
       const total = filtered.length
@@ -446,6 +501,7 @@ export default class ProductController {
             imagesQuery.preload('upload').orderBy('sortOrder', 'asc')
           })
           .preload('category')
+          .preload('productGroup')
           .preload('variants', (variantsQuery) => {
             variantsQuery
               .preload('bannerImage')
@@ -528,13 +584,22 @@ export default class ProductController {
           organisationId: baseProduct.organisationId,
           isActive: baseProduct.isActive,
           productGroupId: baseProduct.productGroupId,
+          productGroup: baseProduct.productGroup,
           quantity: baseProduct.quantity,
           unit: baseProduct.unit,
-          stock: baseProduct.stock,
           taxRate: baseProduct.taxRate,
           taxType: baseProduct.taxType,
           createdAt: baseProduct.createdAt,
           updatedAt: baseProduct.updatedAt,
+          stock:
+            baseProduct.productGroup?.stockMergeType === 'merged'
+              ? baseProduct.productGroup?.baseStock
+              : baseProduct.stock,
+          stockUnit:
+            baseProduct.productGroup?.stockMergeType === 'merged'
+              ? baseProduct.productGroup?.unit
+              : baseProduct.unit,
+
           variants: variants.map((v: Product) => {
             // Extract quantity number from unit (e.g., "1kg" -> "1")
             let quantityFromUnit = ''
@@ -580,7 +645,6 @@ export default class ProductController {
               id: v.id,
               sku: v.sku,
               price: v.price,
-              stock: v.stock,
               quantity: v.quantity,
               quantityFromUnit: quantityFromUnit,
               unit: v.unit,
@@ -591,6 +655,16 @@ export default class ProductController {
               imageUrl: variantImageUrl,
               bannerImage: variantBannerImageData,
               images: variantImagesData,
+              name: v.name,
+              productGroup: baseProduct.productGroup,
+              stock:
+                baseProduct.productGroup?.stockMergeType === 'merged'
+                  ? baseProduct.productGroup?.baseStock
+                  : v.stock,
+              stockUnit:
+                baseProduct.productGroup?.stockMergeType === 'merged'
+                  ? baseProduct.productGroup?.unit
+                  : v.unit,
             }
           }),
         }
@@ -779,6 +853,15 @@ export default class ProductController {
         message: 'Product fetched successfully',
         product: {
           ...productData,
+          variants: productData?.variants?.map((v: Product) => ({
+            ...v,
+            stock:
+              productGroup?.stockMergeType === 'merged'
+                ? productGroup?.baseStock
+                : productData.stock,
+            stockUnit:
+              productGroup?.stockMergeType === 'merged' ? productGroup?.unit : productData.unit,
+          })),
           taxAmount,
           priceWithTax,
           // Include product group info for variants
@@ -791,6 +874,8 @@ export default class ProductController {
                 stockMergeType: productGroup.stockMergeType,
               }
             : null,
+          stock:
+            productGroup?.stockMergeType === 'merged' ? productGroup?.baseStock : productData.stock,
         },
       })
     } catch (error) {
@@ -817,12 +902,10 @@ export default class ProductController {
         return response.badRequest({ message: 'Product ID is required' })
       }
 
-      console.log(productId)
-
       // Get the product to check if it's simple or variant
       const product = await Product.findOrFail(productId)
 
-      console.log(product.toJSON())
+      await product.load('productGroup')
 
       // If product is part of a group, it's a variant product - handle as group update
       if (product.productGroupId) {
@@ -832,7 +915,6 @@ export default class ProductController {
         return await this.updateSimpleProduct(product, request, response)
       }
     } catch (error) {
-      console.log(error)
       if (error.code === 'E_ROW_NOT_FOUND') {
         return response.notFound({
           message: 'Product not found',
@@ -939,6 +1021,7 @@ export default class ProductController {
         'details',
       ])
 
+      // return
       // Use productGroup prefixed fields for stock and unit
       const groupStock = request.input('productGroupBaseStock') || request.input('stock')
       const groupUnit = request.input('productGroupUnit') || request.input('unit')
@@ -968,7 +1051,7 @@ export default class ProductController {
       const orgCode = org.organisationUniqueCode
 
       // Handle shared inventory image updates
-      if (stockMergeType === 'merged') {
+      if (groupStockMergeType === 'merged') {
         // Update shared banner image if provided
         const bannerImage = request.file('bannerImage')
         if (bannerImage) {
@@ -1002,7 +1085,7 @@ export default class ProductController {
           // Update all variants with same banner image
           for (const variant of variants) {
             variant.bannerImageId = uploadRecord.id
-            await variant.save()
+            // await variant.save()
           }
         }
 
@@ -1059,11 +1142,10 @@ export default class ProductController {
       }
 
       // Update each variant
-      for (const variantData of updatedVariantsData) {
+      for (const [index1, variantData] of updatedVariantsData.entries()) {
         const variant = variants.find((v) => v.id === variantData.id)
         if (!variant) continue
 
-        variant.name = name ? `${name} - ${variantData.label}` : variant.name
         variant.description = description || variant.description
         variant.categoryId = categoryId ? Number.parseInt(categoryId) : variant.categoryId
         variant.details = details !== undefined ? details : variant.details
@@ -1085,6 +1167,90 @@ export default class ProductController {
             ? Number.parseFloat(variantData.discountValue)
             : null
         variant.isDiscountActive = variantData.isDiscountActive
+
+        // Handle independent mode variant-specific images
+        if (groupStockMergeType === 'independent') {
+          // Process variant banner image
+          const variantBannerImage = request.file(`variants[${index1}][bannerImage]`)
+          if (variantBannerImage) {
+            const fileName = normalizeFileName(variantBannerImage.clientName)
+            const fileBuffer = fs.readFileSync(variantBannerImage.tmpPath!)
+            const mimeType =
+              variantBannerImage?.headers?.['content-type'] ||
+              variantBannerImage.type + '/' + variantBannerImage.extname
+
+            await storageService.uploadFile(
+              fileBuffer,
+              fileName,
+              mimeType as string,
+              orgCode,
+              'products'
+            )
+
+            const uploadPath = `${orgCode}/products/${fileName}`
+            let uploadRecord = await Upload.query().where('key', uploadPath).first()
+
+            if (!uploadRecord) {
+              uploadRecord = await Upload.create({
+                name: fileName,
+                mimeType: mimeType as string,
+                size: fileBuffer.length,
+                key: uploadPath,
+                urlPrefix: '',
+                driver: 's3',
+              })
+            }
+
+            variant.bannerImageId = uploadRecord.id
+          }
+
+          // Process variant product images
+          const variantImages = request.files(`variants[${index}][images]`)
+          if (variantImages && variantImages.length > 0) {
+            const variantImageIds = []
+
+            for (const image of variantImages) {
+              const fileName = normalizeFileName(image.clientName)
+              const fileBuffer = fs.readFileSync(image.tmpPath!)
+              const mimeType = image?.headers?.['content-type'] || image.type + '/' + image.extname
+
+              await storageService.uploadFile(
+                fileBuffer,
+                fileName,
+                mimeType as string,
+                orgCode,
+                'products'
+              )
+
+              const imagePath = `${orgCode}/products/${fileName}`
+              let uploadRecord = await Upload.query().where('key', imagePath).first()
+
+              if (!uploadRecord) {
+                uploadRecord = await Upload.create({
+                  name: fileName,
+                  mimeType: mimeType as string,
+                  size: fileBuffer.length,
+                  key: imagePath,
+                  urlPrefix: '',
+                  driver: 's3',
+                })
+              }
+              variantImageIds.push(uploadRecord.id)
+            }
+
+            // Delete old product images and add new ones
+            await ProductImage.query().where('productId', variant.id).delete()
+
+            for (const [sortOrder, uploadId] of variantImageIds.entries()) {
+              await ProductImage.create({
+                productId: variant.id,
+                uploadId: uploadId,
+                sortOrder: sortOrder,
+                isActive: true,
+              })
+            }
+          }
+        }
 
         await variant.save()
       }

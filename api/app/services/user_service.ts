@@ -1,4 +1,4 @@
-import { ORGANISATION_USER, PROJECT_USER, PROPERTY_USER } from '#database/constants/table_names'
+import { ORGANISATION_USER, BRANCH_USER } from '#database/constants/table_names'
 import { errorHandler } from '#helper/error_handler'
 import Role from '#models/role'
 import User from '#models/user'
@@ -12,7 +12,6 @@ import {
 import { inject } from '@adonisjs/core'
 import { HttpContext } from '@adonisjs/core/http'
 import PermissionsResolverService from './permissions_resolver_service.js'
-import { branchAuditorRoleValidator, propertyOwnerRoleValidator } from '#validators/role'
 import Organisation from '#models/organisation'
 import AdminUser from '#models/admin_user'
 import { commonParamsIdValidator } from '#validators/common'
@@ -31,90 +30,11 @@ export default class UserService {
     this.mailService = new MailService()
   }
 
-  async getLoggedInUserRoleForBranch(branchId: number, checkForRoles?: RoleKeys[]) {
-    const { isSytemAdmin, user } = await this.permissionsResolverService.permissionResolver()
-
-    if (isSytemAdmin) {
-      throw new Error('System Admin cannot perform this action')
-    }
-
-    const loggedInUser = await User.query()
-      .where('id', user.id)
-      .preload('branch_role', (pq) => pq.where('branch_id', branchId))
-      .firstOrFail()
-
-    if (checkForRoles) {
-      for (const rlk of checkForRoles) {
-        if (rlk === RoleKeys.branch_auditor) {
-          await branchAuditorRoleValidator.validate(loggedInUser?.branch_role?.[0] || {})
-        }
-      }
-    }
-
-    return {
-      user: loggedInUser,
-      role: loggedInUser?.branch_role?.[0],
-    }
-  }
-
-  async getLoggedInUserRoleForProperty(propertyId: number, checkForRoles?: RoleKeys[]) {
-    const { isSytemAdmin, user } = await this.permissionsResolverService.permissionResolver()
-
-    if (isSytemAdmin) {
-      throw new Error('System Admin cannot perform this action')
-    }
-
-    const loggedInUser = await User.query()
-      .where('id', user.id)
-      .preload('property_role', (pq) => pq.where('property_id', propertyId))
-      .firstOrFail()
-
-    if (checkForRoles) {
-      for (const rlk of checkForRoles) {
-        if (rlk === RoleKeys.property_owner) {
-          await propertyOwnerRoleValidator.validate(loggedInUser?.property_role?.[0] || {})
-        }
-      }
-    }
-
-    return {
-      user: loggedInUser,
-      role: loggedInUser?.property_role?.[0],
-    }
-  }
-
-  async getLoggedInUserRoleForOrganisation(organisationId: number, checkForRoles?: RoleKeys[]) {
-    const { isSytemAdmin, user } = await this.permissionsResolverService.permissionResolver()
-
-    if (isSytemAdmin) {
-      throw new Error('System Admin cannot perform this action')
-    }
-
-    const loggedInUser = await User.query()
-      .where('id', user.id)
-      .preload('organisation_role', (pq) => pq.where('organisation_id', organisationId))
-      .firstOrFail()
-
-    if (checkForRoles) {
-      for (const rlk of checkForRoles) {
-        if (rlk === RoleKeys.organisation_admin) {
-          await propertyOwnerRoleValidator.validate(loggedInUser?.organisation_role?.[0] || {})
-        }
-      }
-    }
-
-    return {
-      user: loggedInUser,
-      role: loggedInUser?.organisation_role?.[0],
-    }
-  }
-
   async getLoggedInUserRole({
     organisationId,
     branchId,
-    propertyId,
     includeSystemRole = false,
-    levelPiority = LevelPiority.propertyBranchOrg,
+    levelPiority = LevelPiority.branchOrg,
   }: {
     organisationId?: number
     branchId?: number
@@ -127,7 +47,6 @@ export default class UserService {
       await this.permissionsResolverService.permissionResolver('*', '*', {
         organisationId,
         branchId,
-        propertyId,
         levelPiority,
       })
 
@@ -198,12 +117,7 @@ export default class UserService {
         }
         if ((role.roleAccessLevel as RoleAccessLevel) === RoleAccessLevel.branch) {
           userQuery = userQuery.whereHas('branch_role', (orgQuery) =>
-            orgQuery.where(PROJECT_USER + '.role_id', role.id)
-          )
-        }
-        if ((role.roleAccessLevel as RoleAccessLevel) === RoleAccessLevel.property) {
-          userQuery = userQuery.whereHas('property_role', (orgQuery) =>
-            orgQuery.where(PROPERTY_USER + '.role_id', role.id)
+            orgQuery.where(BRANCH_USER + '.role_id', role.id)
           )
         }
       }
@@ -308,23 +222,6 @@ export default class UserService {
     }
   }
 
-  async getPropertyUsers(_propertyId: number, roleKey?: RoleKeys) {
-    try {
-      let userQuery = User.query()
-      if (roleKey) {
-        const role = await Role.query().where('roleKey', roleKey).firstOrFail()
-        if ((role.roleAccessLevel as RoleAccessLevel) === RoleAccessLevel.property) {
-          userQuery = userQuery.whereHas('property_role', (proertyQuery) =>
-            proertyQuery.where(PROPERTY_USER + '.role_id', role.id)
-          )
-        }
-      }
-      const users = await userQuery
-      return { data: users }
-    } catch (e) {
-      return errorHandler(e)
-    }
-  }
   async getBranchUsers(branchId: number, roleKey: RoleKeys) {
     try {
       let userQuery = User.query().andWhere((usrq) =>
@@ -334,7 +231,7 @@ export default class UserService {
       const role = await Role.query().where('roleKey', roleKey).firstOrFail()
       if ((role.roleAccessLevel as RoleAccessLevel) === RoleAccessLevel.branch) {
         userQuery = userQuery.whereHas('branch_role', (branchQuery) =>
-          branchQuery.where(PROJECT_USER + '.role_id', role.id)
+          branchQuery.where(BRANCH_USER + '.role_id', role.id)
         )
       }
 

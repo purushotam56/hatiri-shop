@@ -15,14 +15,16 @@ export default class extends BaseSchema {
         .unsigned()
         .references('id')
         .inTable(ORGANISATION)
-        .onDelete('CASCADE')
+        .onDelete('RESTRICT')
 
       // Group metadata
       table.string('name').notNullable().comment('e.g., Tomato - All Units')
       table.text('description').nullable()
+      table.string('base_sku').nullable()
 
       // Common attributes for all variants in this group
       table.integer('base_stock').defaultTo(0).comment('Total stock across all variants')
+      table.string('unit').defaultTo('piece')
       table
         .enum('stock_merge_type', ['merged', 'independent'])
         .defaultTo('merged')

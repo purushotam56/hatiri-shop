@@ -108,7 +108,6 @@ export default class AdminController {
       organisation.stateCode = stateCode || ''
       organisation.postalCode = postalCode || ''
       organisation.countryCode = countryCode || ''
-      organisation.organisationRoleType = 'builder' as any
       await organisation.save()
 
       // Create default branch for this organization

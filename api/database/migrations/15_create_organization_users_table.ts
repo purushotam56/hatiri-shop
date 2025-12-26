@@ -14,10 +14,23 @@ export default class extends BaseSchema {
         .unsigned()
         .references('id')
         .inTable(ORGANISATION)
+        .onDelete('RESTRICT')
 
-      table.integer('user_id').notNullable().unsigned().references('id').inTable(USERS)
+      table
+        .integer('user_id')
+        .notNullable()
+        .unsigned()
+        .references('id')
+        .inTable(USERS)
+        .onDelete('RESTRICT')
 
-      table.integer('role_id').unsigned().nullable().references('id').inTable(ROLES)
+      table
+        .integer('role_id')
+        .unsigned()
+        .nullable()
+        .references('id')
+        .inTable(ROLES)
+        .onDelete('RESTRICT')
 
       table.boolean('is_admin').defaultTo(false)
 

@@ -42,11 +42,10 @@ export default class FCMService {
       const response = await getMessaging().sendEachForMulticast(message)
 
       if (response.failureCount > 0) {
-        const failedTokens = response.responses
-          .filter((resp) => !resp.success)
-          .map((_, idx) => deviceTokens[idx])
-
-        console.log('Failed tokens:', failedTokens)
+        // const failedTokens = response.responses
+        //   .filter((resp) => !resp.success)
+        //   .map((_, idx) => deviceTokens[idx])
+        // console.log('Failed tokens:', failedTokens)
       }
 
       return response

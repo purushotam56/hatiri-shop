@@ -23,6 +23,7 @@ const ProductCategoryController = () => import('#controllers/product_category_co
 const AddressesController = () => import('#controllers/addresses_controller')
 const CartsController = () => import('#controllers/carts_controller')
 const OrdersController = () => import('#controllers/orders_controller')
+const AnalyticsController = () => import('#controllers/analytics_controller')
 
 // Serve uploaded files (for local storage)
 import app from '@adonisjs/core/services/app'
@@ -125,8 +126,6 @@ router
       .get('/config', [GlobalConfigsController, 'privateConfigs'])
       .use(middleware.auth({ guards: ['adminapi', 'api'] }))
 
-    router.get('/countries', [GlobalConfigsController, 'countryList'])
-
     router
       .resource('users', UsersController)
       .apiOnly()
@@ -227,11 +226,15 @@ router
     // Get organisation by unique code - for public store display
     router.get('/organisation/by_code/:code', [SellerController, 'getOrganisationByCode'])
 
+    // Get public page content (about/contact) by organisation code - for storefront pages
+    router.get('/organisation/:code/page/:pageType', [SellerController, 'getPublicPageContent'])
+
     // Seller routes
     router
       .group(() => {
         router.post('/register', [SellerController, 'registerSeller'])
         router.post('/login', [SellerController, 'sellerLogin'])
+        router.get('/me', [SellerController, 'me']).use(middleware.auth({ guards: ['api'] }))
         router
           .get('/stores', [SellerController, 'getSellerStores'])
           .use(middleware.auth({ guards: ['api'] }))
@@ -267,6 +270,32 @@ router
           .use(middleware.auth({ guards: ['api'] }))
         router
           .put('/:id/store', [SellerController, 'updateSellerStore'])
+          .use(middleware.auth({ guards: ['api'] }))
+
+        // Pages management for sellers
+        router
+          .get('/:id/pages/about', [SellerController, 'getAboutPage'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .post('/:id/pages/about', [SellerController, 'saveAboutPage'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/:id/pages/contact', [SellerController, 'getContactPage'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .post('/:id/pages/contact', [SellerController, 'saveContactPage'])
+          .use(middleware.auth({ guards: ['api'] }))
+
+        // Analytics tracking endpoints (public - no auth required for tracking)
+        router.post('/:id/analytics/track-page-view', [AnalyticsController, 'trackPageView'])
+        router.post('/:id/analytics/track-event', [AnalyticsController, 'trackUserEvent'])
+
+        // Analytics stats endpoints (protected - auth required)
+        router
+          .get('/:id/analytics/page-views', [AnalyticsController, 'getPageViewStats'])
+          .use(middleware.auth({ guards: ['api'] }))
+        router
+          .get('/:id/analytics/events', [AnalyticsController, 'getEventStats'])
           .use(middleware.auth({ guards: ['api'] }))
 
         // Category management for sellers

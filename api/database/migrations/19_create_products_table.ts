@@ -1,9 +1,9 @@
 import {
   ORGANISATION,
-  BRANCHS,
   UPLOADS,
   PRODUCTS,
   BRANCH_PRODUCTS,
+  BRANCHES,
 } from '#database/constants/table_names'
 import { BaseSchema } from '@adonisjs/lucid/schema'
 
@@ -20,7 +20,7 @@ export default class extends BaseSchema {
         .unsigned()
         .references('id')
         .inTable(ORGANISATION)
-        .onDelete('CASCADE')
+        .onDelete('RESTRICT')
 
       table.string('name').notNullable()
       table.text('description')
@@ -60,12 +60,23 @@ export default class extends BaseSchema {
       table.text('details').nullable()
 
       // Product group and stock merge type
-      table.bigInteger('product_group_id').unsigned().nullable()
+      table
+        .bigInteger('product_group_id')
+        .unsigned()
+        .nullable()
+        .references('id')
+        .inTable('product_groups')
+        .onDelete('RESTRICT')
       table
         .enum('stock_merge_type', ['merged', 'independent'])
         .defaultTo('merged')
         .comment('merged: variants share inventory, independent: each variant has own stock')
       table.decimal('discount', 12, 2).defaultTo(0)
+
+      // Discount fields
+      table.string('discount_type').nullable().comment('percentage or fixed_amount')
+      table.decimal('discount_percentage', 5, 2).nullable()
+      table.boolean('is_discount_active').defaultTo(false)
 
       table.boolean('is_active').defaultTo(true)
       table.boolean('is_deleted').defaultTo(false)
@@ -89,7 +100,7 @@ export default class extends BaseSchema {
         .notNullable()
         .unsigned()
         .references('id')
-        .inTable(BRANCHS)
+        .inTable(BRANCHES)
         .onDelete('CASCADE')
 
       table.integer('stock').defaultTo(0)

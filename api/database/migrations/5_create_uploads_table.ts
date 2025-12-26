@@ -13,6 +13,7 @@ export default class extends BaseSchema {
       table.string('url_prefix').nullable()
       table.string('mime_type')
       table.string('size')
+      table.string('driver').defaultTo('s3').notNullable()
       table.boolean('is_deleted').defaultTo(false)
       table.timestamp('created_at')
       table.timestamp('updated_at')

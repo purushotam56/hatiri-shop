@@ -15,7 +15,13 @@ export default class extends BaseSchema {
         .inTable('orders')
         .onDelete('CASCADE')
 
-      table.integer('product_id').unsigned().notNullable()
+      table
+        .integer('product_id')
+        .unsigned()
+        .notNullable()
+        .references('id')
+        .inTable('products')
+        .onDelete('RESTRICT')
       table.integer('variant_id').unsigned().nullable()
       table.string('name').notNullable()
       table.decimal('price', 12, 2).notNullable()

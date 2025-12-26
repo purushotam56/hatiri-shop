@@ -85,7 +85,7 @@ export default class Product extends BaseModel {
   declare unit: string
 
   @column()
-  declare productGroupId: number | null
+  declare productGroupId: number
 
   @belongsTo(() => ProductGroup, {
     foreignKey: 'productGroupId',

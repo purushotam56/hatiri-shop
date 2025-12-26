@@ -38,4 +38,17 @@ const dbConfig = defineConfig({
   },
 })
 
+// MongoDB configuration for analytics
+export const mongoConfig = {
+  uri: env.get('MONGODB_URI', 'mongodb://localhost:27017'),
+  database: env.get('MONGODB_DATABASE', 'hatiri_analytics'),
+}
+
+// Redis configuration for queue
+export const redisConfig = {
+  host: env.get('REDIS_HOST', 'localhost'),
+  port: Number(env.get('REDIS_PORT', '6379')),
+  password: env.get('REDIS_PASSWORD', ''),
+}
+
 export default dbConfig

@@ -91,4 +91,11 @@ export default await Env.create(new URL('../', import.meta.url), {
   |----------------------------------------------------------
   */
   LIMITER_STORE: Env.schema.enum(['database', 'memory'] as const),
+
+  /*
+  |----------------------------------------------------------
+  | Variables for configuring analytics
+  |----------------------------------------------------------
+  */
+  USE_QUEUE: Env.schema.boolean.optional(),
 })

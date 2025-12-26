@@ -1,4 +1,4 @@
-import { CompanyRoles, RoleAccessLevel } from '#types/role'
+import { RoleAccessLevel } from '#types/role'
 import vine from '@vinejs/vine'
 import { userSchemaWithRole } from './user.js'
 
@@ -15,7 +15,6 @@ export const createOrganisationValidator = vine.compile(
     city: vine.string().optional(),
     postalCode: vine.string().optional(),
     countryCode: vine.string().optional(),
-    organisationRoleType: vine.enum(CompanyRoles),
     currency: vine.string().trim().escape(),
     dateFormat: vine.string().trim(),
     imageId: vine.number(),
@@ -57,6 +56,5 @@ export const updateOrganisationValidator = vine.compile(
     addressLine2: vine.string().optional(),
     postalCode: vine.string().optional(),
     organisationUniqueCode: vine.string().trim().optional(),
-    organisationRoleType: vine.enum(CompanyRoles).optional(),
   })
 )

@@ -2,7 +2,7 @@ import { DateTime } from 'luxon'
 import { BaseModel, column, manyToMany } from '@adonisjs/lucid/orm'
 import Permission from '#models/permission'
 import type { ManyToMany } from '@adonisjs/lucid/types/relations'
-import { PROJECT_USER, ORGANISATION_USER } from '#database/constants/table_names'
+import { BRANCH_USER, ORGANISATION_USER } from '#database/constants/table_names'
 import { RoleAccessLevel, RoleKeys } from '#types/role'
 import Organisation from './organisation.js'
 import Branch from './branch.js'
@@ -47,7 +47,7 @@ export default class Role extends BaseModel {
   declare organisation: ManyToMany<typeof Organisation>
 
   @manyToMany(() => Branch, {
-    pivotTable: PROJECT_USER,
+    pivotTable: BRANCH_USER,
     pivotColumns: ['is_admin', 'branch_id'],
   })
   declare branch: ManyToMany<typeof Branch>

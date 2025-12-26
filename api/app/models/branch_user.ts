@@ -6,10 +6,10 @@ import Branch from './branch.js'
 import User from './user.js'
 import Policy from './policy.js'
 import { ResourceType } from '#types/common'
-import { PROJECT_USER } from '#database/constants/table_names'
+import { BRANCH_USER } from '#database/constants/table_names'
 
 export default class BranchUser extends BaseModel {
-  public static table = PROJECT_USER
+  public static table = BRANCH_USER
 
   @column({ isPrimary: true })
   declare id: number

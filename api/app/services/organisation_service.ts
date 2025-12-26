@@ -93,7 +93,6 @@ export default class OrganisationService {
         stateCode: createData.stateCode || '',
         postalCode: createData.postalCode,
         countryCode: createData.countryCode || '',
-        organisationRoleType: createData.organisationRoleType,
       })
       if (createUsers && createUsers?.length > 0) {
         const users = await User.createMany(
@@ -206,7 +205,6 @@ export default class OrganisationService {
         data,
       }
     } catch (e) {
-      console.log(e)
       return errorHandler(e, this.ctx)
     }
   }

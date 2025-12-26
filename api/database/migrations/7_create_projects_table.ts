@@ -1,9 +1,9 @@
-import { ORGANISATION, PROJECTS, UPLOADS } from '#database/constants/table_names'
+import { BRANCHES, ORGANISATION, UPLOADS } from '#database/constants/table_names'
 import { BranchMaintenanceServiceType, BranchType } from '#types/branch'
 import { BaseSchema } from '@adonisjs/lucid/schema'
 
 export default class extends BaseSchema {
-  protected tableName = PROJECTS
+  protected tableName = BRANCHES
 
   async up() {
     this.schema.createTable(this.tableName, (table) => {
@@ -15,7 +15,7 @@ export default class extends BaseSchema {
         .unsigned()
         .references('id')
         .inTable(ORGANISATION)
-        .onDelete('CASCADE')
+        .onDelete('RESTRICT')
 
       table.string('name')
       table.enum('type', Object.values(BranchType))

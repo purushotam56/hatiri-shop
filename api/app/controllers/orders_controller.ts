@@ -14,19 +14,30 @@ export default class OrdersController {
       const { addressId, notes } = request.only(['addressId', 'notes'])
 
       // Get cart items
-      const cartItems = await Cart.query().where('user_id', user.id)
+      const cartItems = await Cart.query().where('userId', user.id)
       if (cartItems.length === 0) {
         return response.badRequest({ message: 'Cart is empty' })
+      }
+
+      // Validate cart items have required fields
+      const invalidItem = cartItems.find((item) => !item.productId || !item.name || !item.price)
+      if (invalidItem) {
+        return response.badRequest({
+          message: 'Cart contains invalid items. All items must have productId, name, and price',
+        })
       }
 
       // Get address
       const address = await Address.query()
         .where('id', addressId)
-        .where('user_id', user.id)
+        .where('userId', user.id)
         .firstOrFail()
 
       // Calculate totals
-      const subtotal = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
+      const subtotal = cartItems.reduce(
+        (sum, item) => sum + Number(item.price) * Number(item.quantity),
+        0
+      )
       const deliveryFee = 0 // Free delivery for now
       const total = subtotal + deliveryFee
 
@@ -51,8 +62,8 @@ export default class OrdersController {
         cartItems.map((item) =>
           OrderItem.create({
             orderId: order.id,
-            productId: item.productId,
-            variantId: item.variantId,
+            productId: Number(item.productId),
+            variantId: item.variantId ? Number(item.variantId) : null,
             name: item.name,
             price: Number(item.price),
             quantity: Number(item.quantity),
@@ -63,7 +74,7 @@ export default class OrdersController {
       )
 
       // Clear cart after order creation
-      await Cart.query().where('user_id', user.id).delete()
+      await Cart.query().where('userId', user.id).delete()
 
       // Load items relationship before returning
       await order.load('items')
