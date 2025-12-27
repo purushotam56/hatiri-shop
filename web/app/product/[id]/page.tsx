@@ -190,29 +190,29 @@ export default async function ProductDetailPage({
       {/* Back Button Bar */}
       <div className="bg-content1 border-b border-divider">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center">
-          <Button
-            as={Link}
-            href={"/store/" + product.organisation?.organisationUniqueCode}
-            size="sm"
-            startContent={
-              <svg
-                className="w-5 h-5"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M15 19l-7-7 7-7"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                />
-              </svg>
-            }
-            variant="light"
-          >
-            Back
-          </Button>
+          <Link href={"/store/" + product.organisation?.organisationUniqueCode}>
+            <Button
+              size="sm"
+              startContent={
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15 19l-7-7 7-7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                  />
+                </svg>
+              }
+              variant="light"
+            >
+              Back
+            </Button>
+          </Link>
         </div>
       </div>
 
