@@ -1,8 +1,7 @@
 // API Configuration
 // Reads from environment variables, with fallback to defaults
 
-const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || "http://localhost:3333";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3333";
 
 export const API_CONFIG = {
   baseUrl: API_BASE_URL,
@@ -25,6 +24,7 @@ export const buildApiUrl = (path: string): string => {
   if (!path) return API_CONFIG.apiBaseUrl;
   // Remove leading slash if present to avoid double slashes
   const cleanPath = path.startsWith("/") ? path : `/${path}`;
+
   return `${API_CONFIG.apiBaseUrl}${cleanPath}`;
 };
 

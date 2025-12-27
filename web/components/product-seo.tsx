@@ -13,7 +13,8 @@ export function ProductSEO({ product }: ProductSEOProps) {
     "@context": "https://schema.org/",
     "@type": "Product",
     name: product.name,
-    description: product.description || `Buy ${product.name} online at Hatiri Shop`,
+    description:
+      product.description || `Buy ${product.name} online at Hatiri Shop`,
     sku: product.sku || `SKU-${product.id}`,
     image: productImage || "https://hatiri.shop/favicon.ico",
     brand: {
@@ -72,16 +73,16 @@ export function ProductSEO({ product }: ProductSEOProps) {
   return (
     <>
       <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(productSchema),
         }}
+        type="application/ld+json"
       />
       <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(breadcrumbSchema),
         }}
+        type="application/ld+json"
       />
     </>
   );

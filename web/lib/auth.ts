@@ -9,7 +9,10 @@ export type LoginResponse = {
   message?: string;
 };
 
-export async function login(username: string, password: string): Promise<LoginResponse> {
+export async function login(
+  username: string,
+  password: string,
+): Promise<LoginResponse> {
   const res = await fetch("/api/auth/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -21,7 +24,11 @@ export async function login(username: string, password: string): Promise<LoginRe
 
   if (!res.ok) {
     // backend may return { message }
-    throw new Error((body && (body.message || body.error)) || res.statusText || "Login failed");
+    throw new Error(
+      (body && (body.message || body.error)) ||
+        res.statusText ||
+        "Login failed",
+    );
   }
 
   return body as LoginResponse;

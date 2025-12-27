@@ -1,12 +1,19 @@
 "use client";
 
-import React, { useState } from "react";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@heroui/modal";
 import { Button } from "@heroui/button";
 import { Input } from "@heroui/input";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+} from "@heroui/modal";
+import React, { useState } from "react";
+
+import { useAddress } from "@/context/address-context";
 import { useAuth } from "@/context/auth-context";
 import { useCart } from "@/context/cart-context";
-import { useAddress } from "@/context/address-context";
 import { apiEndpoints } from "@/lib/api-client";
 
 interface LoginModalProps {
@@ -18,7 +25,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
   const { setUser } = useAuth();
   const { syncCart } = useCart();
   const { syncAddresses } = useAddress();
-  const [mode, setMode] = useState<'login' | 'signup'>('login');
+  const [mode, setMode] = useState<"login" | "signup">("login");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
@@ -32,7 +39,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
     setLoading(true);
 
     try {
-      if (mode === 'login') {
+      if (mode === "login") {
         // Login flow
         const data = await apiEndpoints.login({ email, password });
 
@@ -47,9 +54,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
 
           // Sync cart and addresses
           try {
-            console.log("Starting cart and address sync after login");
             await Promise.all([syncCart(), syncAddresses()]);
-            console.log("Sync completed successfully");
           } catch (syncErr) {
             console.error("Sync error:", syncErr);
           }
@@ -64,23 +69,26 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
         // Signup flow
         if (!email || !phone || !password || !confirmPassword) {
           setError("All fields are required");
+
           return;
         }
 
         if (password !== confirmPassword) {
           setError("Passwords do not match");
+
           return;
         }
 
         if (password.length < 6) {
           setError("Password must be at least 6 characters");
+
           return;
         }
 
-        const data = await apiEndpoints.register({ 
-          email, 
+        const data = await apiEndpoints.register({
+          email,
           phone,
-          password 
+          password,
         });
 
         if (data.user) {
@@ -94,9 +102,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
 
           // Sync cart and addresses
           try {
-            console.log("Starting cart and address sync after signup");
             await Promise.all([syncCart(), syncAddresses()]);
-            console.log("Sync completed successfully");
           } catch (syncErr) {
             console.error("Sync error:", syncErr);
           }
@@ -111,17 +117,21 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
         }
       }
     } catch (err) {
-      setError(mode === 'login' ? "Login failed. Please try again." : "Signup failed. Please try again.");
+      setError(
+        mode === "login"
+          ? "Login failed. Please try again."
+          : "Signup failed. Please try again.",
+      );
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} backdrop="blur" size="md">
+    <Modal backdrop="blur" isOpen={isOpen} size="md" onClose={onClose}>
       <ModalContent>
         <ModalHeader className="flex flex-col gap-1">
-          {mode === 'login' ? 'Login' : 'Sign Up'}
+          {mode === "login" ? "Login" : "Sign Up"}
         </ModalHeader>
         <ModalBody>
           {error && (
@@ -130,53 +140,61 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
             </div>
           )}
           <div className="space-y-4">
-            {mode === 'signup' && (
+            {mode === "signup" && (
               <Input
-                label="Phone Number"
-                type="tel"
-                placeholder="Your mobile number"
-                value={phone}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)}
                 isRequired
+                label="Phone Number"
+                placeholder="Your mobile number"
+                type="tel"
+                value={phone}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setPhone(e.target.value)
+                }
               />
             )}
             <Input
-              label="Email"
-              type="email"
-              placeholder="your@email.com"
-              value={email}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
               isRequired
+              label="Email"
+              placeholder="your@email.com"
+              type="email"
+              value={email}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setEmail(e.target.value)
+              }
             />
             <Input
-              label="Password"
-              type="password"
-              placeholder="••••••••"
-              value={password}
-              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
               isRequired
+              label="Password"
+              placeholder="••••••••"
+              type="password"
+              value={password}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                setPassword(e.target.value)
+              }
             />
-            {mode === 'signup' && (
+            {mode === "signup" && (
               <Input
-                label="Confirm Password"
-                type="password"
-                placeholder="••••••••"
-                value={confirmPassword}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setConfirmPassword(e.target.value)}
                 isRequired
+                label="Confirm Password"
+                placeholder="••••••••"
+                type="password"
+                value={confirmPassword}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setConfirmPassword(e.target.value)
+                }
               />
             )}
           </div>
           <p className="text-center text-sm text-foreground/60">
-            {mode === 'login' ? (
+            {mode === "login" ? (
               <>
-                Don't have an account?{" "}
-                <button 
+                Don&apos;t have an account?{" "}
+                <button
+                  className="text-primary font-semibold hover:underline"
                   onClick={() => {
-                    setMode('signup');
+                    setMode("signup");
                     setError("");
                   }}
-                  className="text-primary font-semibold hover:underline"
                 >
                   Sign up
                 </button>
@@ -184,12 +202,12 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
             ) : (
               <>
                 Already have an account?{" "}
-                <button 
+                <button
+                  className="text-primary font-semibold hover:underline"
                   onClick={() => {
-                    setMode('login');
+                    setMode("login");
                     setError("");
                   }}
-                  className="text-primary font-semibold hover:underline"
                 >
                   Login
                 </button>
@@ -201,12 +219,18 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
           <Button color="default" variant="light" onPress={onClose}>
             Cancel
           </Button>
-          <Button 
-            color="primary" 
-            onPress={() => handleSubmit()}
+          <Button
+            color="primary"
             isLoading={loading}
+            onPress={() => handleSubmit()}
           >
-            {loading ? (mode === 'login' ? "Logging in..." : "Signing up...") : (mode === 'login' ? "Login" : "Sign Up")}
+            {loading
+              ? mode === "login"
+                ? "Logging in..."
+                : "Signing up..."
+              : mode === "login"
+                ? "Login"
+                : "Sign Up"}
           </Button>
         </ModalFooter>
       </ModalContent>

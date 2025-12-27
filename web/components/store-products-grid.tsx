@@ -1,32 +1,37 @@
 "use client";
 
-import React, { useEffect, useRef, useCallback, useState } from "react";
-import { Card, CardBody } from "@heroui/card";
-import { Divider } from "@heroui/divider";
-import { Chip } from "@heroui/chip";
-import { ScrollShadow } from "@heroui/scroll-shadow";
 import { Spinner } from "@heroui/spinner";
+import React, { useEffect, useRef, useCallback, useState } from "react";
+
 import { Product } from "./product";
+import { Category, Organisation, ProductGroup, StoreProductsGridProps } from "@/types/store";
+
 import { apiEndpoints } from "@/lib/api-client";
 
 // Helper function for category emoji
-const getCategoryEmoji = (categoryOrName: any): string => {
-  if (typeof categoryOrName === 'object' && categoryOrName?.emoji) {
-    return categoryOrName.emoji;
+const getCategoryEmoji = (categoryOrName: string | Record<string, unknown>): string => {
+  // Handle string type (just name)
+  if (typeof categoryOrName === "string") {
+    return "📦";
   }
+
+  // If it's a category object with emoji, use it
+  if (typeof categoryOrName === "object" && categoryOrName !== null) {
+    const cat = categoryOrName as Record<string, unknown>;
+    if (cat.emoji && typeof cat.emoji === "string") {
+      return cat.emoji;
+    }
+  }
+
+  // Otherwise just return a default emoji
   return "📦";
 };
-
-interface StoreProductsGridProps {
-  organisation: any;
-  categoryId?: string;
-}
 
 export function StoreProductsGrid({
   organisation,
   categoryId,
 }: StoreProductsGridProps) {
-  const [products, setProducts] = useState<any[]>([]);
+  const [products, setProducts] = useState<ProductGroup[]>([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
@@ -40,34 +45,40 @@ export function StoreProductsGrid({
   }, [categoryId]);
 
   // Fetch more products
-  const fetchMore = useCallback(async (currentPage: number) => {
-    setLoading(true);
-    try {
-      const nextPage = currentPage + 1;
-      const queryString = categoryId
-        ? `categoryId=${categoryId}&page=${nextPage}`
-        : `page=${nextPage}`;
+  const fetchMore = useCallback(
+    async (currentPage: number) => {
+      setLoading(true);
+      try {
+        const nextPage = currentPage + 1;
+        const queryString = categoryId
+          ? `categoryId=${categoryId}&page=${nextPage}`
+          : `page=${nextPage}`;
 
-      const response = await apiEndpoints.getProductsByOrg(organisation.id, queryString);
-      const newProducts = response.data?.data || [];
-      const pagination = response.data?.meta;
+        const response = await apiEndpoints.getProductsByOrg(
+          String(organisation.id),
+          queryString,
+        );
+        const newProducts = response.data?.data || [];
+        const pagination = response.data?.meta;
 
-      if (newProducts.length === 0) {
-        setHasMore(false);
-      } else {
-        setProducts((prev) => [...prev, ...newProducts]);
-        setPage(nextPage);
-        // Check if we've reached the last page
-        if (pagination && nextPage >= pagination.last_page) {
+        if (newProducts.length === 0) {
           setHasMore(false);
+        } else {
+          setProducts((prev) => [...prev, ...newProducts]);
+          setPage(nextPage);
+          // Check if we've reached the last page
+          if (pagination && nextPage >= pagination.last_page) {
+            setHasMore(false);
+          }
         }
+      } catch (error) {
+        console.error("Failed to fetch more products:", error);
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      console.error("Failed to fetch more products:", error);
-    } finally {
-      setLoading(false);
-    }
-  }, [categoryId, organisation.id]);
+    },
+    [categoryId, organisation.id],
+  );
 
   // Intersection Observer for infinite scroll
   useEffect(() => {
@@ -79,7 +90,7 @@ export function StoreProductsGrid({
           fetchMore(page);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     if (observerTarget.current) {
@@ -91,27 +102,26 @@ export function StoreProductsGrid({
 
   return (
     <>
-      {products.map((product: any) => (
+      {products.map((product: ProductGroup) => (
         <Product
           key={product.id}
-          group={product}
-          onProductClick={(id) => `/product/${id}`}
           getCategoryEmoji={getCategoryEmoji}
+          group={product}
           organisation={organisation}
           priceVisibility={organisation?.priceVisibility}
+          onProductClick={(id) => `/product/${id}`}
         />
       ))}
 
       {/* Infinite Scroll Trigger - This div triggers when it comes into view */}
-      <div ref={observerTarget} className="w-full flex justify-center items-center py-12">
+      <div
+        ref={observerTarget}
+        className="w-full flex justify-center items-center py-12"
+      >
         {loading && (
-          <Spinner
-            color="primary"
-            label="Loading more products..."
-          />
+          <Spinner color="primary" label="Loading more products..." />
         )}
       </div>
-
     </>
   );
 }

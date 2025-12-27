@@ -1,11 +1,24 @@
 "use client";
 
-import React from "react";
-import { Button } from "@heroui/button";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@heroui/navbar";
 import { Avatar } from "@heroui/avatar";
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from "@heroui/dropdown";
+import { Button } from "@heroui/button";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+} from "@heroui/dropdown";
 import { Link } from "@heroui/link";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+} from "@heroui/navbar";
+import React from "react";
 
 interface SellerHeaderProps {
   sellerName?: string;
@@ -27,13 +40,42 @@ export function SellerHeader({
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    { label: "Dashboard", href: orgId ? `/seller/${orgId}/dashboard` : "/seller/dashboard" },
-    { label: "Products", href: orgId ? `/seller/${orgId}/products` : "/seller/products" },
-    { label: "Categories", href: orgId ? `/seller/${orgId}/categories` : "/seller/categories" },
-    { label: "Stock", href: orgId ? `/seller/${orgId}/stock` : "/seller/stock" },
-    { label: "Orders", href: orgId ? `/seller/${orgId}/orders` : "/seller/orders" },
-    { label: "Customers", href: orgId ? `/seller/${orgId}/customers` : "/seller/customers" },
-    { label: "Settings", href: orgId ? `/seller/${orgId}/settings` : "/seller/settings" },
+    {
+      label: "Dashboard",
+      href: orgId ? `/seller/${orgId}/dashboard` : "/seller/dashboard",
+    },
+    {
+      label: "Products",
+      href: orgId ? `/seller/${orgId}/products` : "/seller/products",
+    },
+    {
+      label: "Categories",
+      href: orgId ? `/seller/${orgId}/categories` : "/seller/categories",
+    },
+    {
+      label: "Stock",
+      href: orgId ? `/seller/${orgId}/stock` : "/seller/stock",
+    },
+    {
+      label: "Orders",
+      href: orgId ? `/seller/${orgId}/orders` : "/seller/orders",
+    },
+    {
+      label: "Customers",
+      href: orgId ? `/seller/${orgId}/customers` : "/seller/customers",
+    },
+    {
+      label: "Page Settings",
+      href: orgId ? `/seller/${orgId}/pages` : "/seller/pages",
+    },
+    {
+      label: "Analytics",
+      href: orgId ? `/seller/${orgId}/analytics` : "/seller/analytics",
+    },
+    {
+      label: "Settings",
+      href: orgId ? `/seller/${orgId}/settings` : "/seller/settings",
+    },
   ];
 
   const handleLogout = () => {
@@ -47,10 +89,10 @@ export function SellerHeader({
   return (
     <Navbar
       isBordered
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
       className="bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 backdrop-blur-md shadow-lg"
+      isMenuOpen={isMenuOpen}
       maxWidth="full"
+      onMenuOpenChange={setIsMenuOpen}
     >
       {/* Mobile Menu Toggle */}
       <NavbarContent className="sm:hidden" justify="start">
@@ -89,17 +131,23 @@ export function SellerHeader({
             <div className="flex items-center gap-3">
               {storeLogoUrl ? (
                 <img
-                  src={storeLogoUrl}
                   alt={storeName}
                   className="w-5 h-5 rounded object-cover"
+                  src={storeLogoUrl}
                 />
               ) : (
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-4 h-4 text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
                 </svg>
               )}
-              <span className="text-sm font-semibold text-white">{storeName}</span>
-              <span className="w-2 h-2 rounded-full bg-success animate-pulse"></span>
+              <span className="text-sm font-semibold text-white">
+                {storeName}
+              </span>
+              <span className="w-2 h-2 rounded-full bg-success animate-pulse" />
             </div>
           </div>
         </div>
@@ -110,8 +158,8 @@ export function SellerHeader({
         {menuItems.map((item) => (
           <NavbarItem key={item.label}>
             <Link
-              href={item.href}
               className="text-white hover:text-warning-200 hover:bg-white/10 px-3 py-2 rounded-lg transition-all duration-200 text-sm font-medium"
+              href={item.href}
             >
               {item.label}
             </Link>
@@ -120,18 +168,28 @@ export function SellerHeader({
       </NavbarContent>
 
       {/* Right Side - Actions */}
-      <NavbarContent justify="end" className="gap-2">
+      <NavbarContent className="gap-2" justify="end">
         {/* Switch Store Button */}
         <NavbarItem className="hidden sm:flex">
           <Button
             isIconOnly
-            variant="light"
             className="text-white hover:bg-white/20 transition-colors"
-            onPress={onSwitchStore}
             title="Switch Store"
+            variant="light"
+            onPress={onSwitchStore}
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7a4 4 0 100 8 4 4 0 000-8zM6 21h12a2 2 0 002-2V9a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M8 7a4 4 0 100 8 4 4 0 000-8zM6 21h12a2 2 0 002-2V9a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+              />
             </svg>
           </Button>
         </NavbarItem>
@@ -158,8 +216,8 @@ export function SellerHeader({
               <DropdownItem
                 key="user-info"
                 isReadOnly
-                textValue="User Info"
                 className="h-14 gap-2 opacity-100 cursor-default"
+                textValue="User Info"
               >
                 <div>
                   <p className="font-semibold text-foreground">{sellerName}</p>
@@ -172,33 +230,41 @@ export function SellerHeader({
                 onPress={onSwitchStore}
               >
                 <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7a4 4 0 100 8 4 4 0 000-8zM6 21h12a2 2 0 002-2V9a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M8 7a4 4 0 100 8 4 4 0 000-8zM6 21h12a2 2 0 002-2V9a2 2 0 00-2-2H6a2 2 0 00-2 2v10a2 2 0 002 2z"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                    />
                   </svg>
                   Switch Store
                 </div>
               </DropdownItem>
               <DropdownItem
-                key="settings"
-                textValue="Settings"
-              >
-                <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  Settings
-                </div>
-              </DropdownItem>
-              <DropdownItem
                 key="logout"
                 color="danger"
-                onPress={handleLogout}
                 textValue="Logout"
+                onPress={handleLogout}
               >
                 <div className="flex items-center gap-2">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                    />
                   </svg>
                   Logout
                 </div>
@@ -212,25 +278,28 @@ export function SellerHeader({
       <NavbarMenu className="gap-4 p-4">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link href={item.href} className="w-full text-foreground font-medium">
+            <Link
+              className="w-full text-foreground font-medium"
+              href={item.href}
+            >
               {item.label}
             </Link>
           </NavbarMenuItem>
         ))}
         <div className="flex flex-col gap-2 mt-4 pt-4 border-t">
           <Button
-            onPress={onSwitchStore}
             className="w-full"
-            variant="flat"
             color="primary"
+            variant="flat"
+            onPress={onSwitchStore}
           >
             Switch Store
           </Button>
           <Button
-            onPress={handleLogout}
             className="w-full"
             color="danger"
             variant="flat"
+            onPress={handleLogout}
           >
             Logout
           </Button>

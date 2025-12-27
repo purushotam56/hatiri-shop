@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@heroui/button";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -10,6 +9,7 @@ export const BottomNavMobile = () => {
   const isActive = (href: string) => {
     if (href === "/" && pathname === "/") return true;
     if (href !== "/" && pathname.startsWith(href)) return true;
+
     return false;
   };
 
@@ -26,12 +26,12 @@ export const BottomNavMobile = () => {
         {navItems.map((item) => (
           <Link
             key={item.href}
-            href={item.href}
             className={`flex-1 flex flex-col items-center justify-center py-3 text-xs gap-1 transition-colors ${
               isActive(item.href)
                 ? "text-primary"
                 : "text-default-600 hover:text-default-900"
             }`}
+            href={item.href}
           >
             <span className="text-xl">{item.icon}</span>
             <span className="font-medium">{item.label}</span>

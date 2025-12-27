@@ -1,6 +1,5 @@
 "use client";
 
-import { Divider } from "@heroui/divider";
 import { Button } from "@heroui/button";
 
 export function SellerFooter() {
@@ -12,28 +11,28 @@ export function SellerFooter() {
           <div className="flex gap-4">
             <Button
               as="a"
+              className="text-foreground/60"
               href="#"
               size="sm"
               variant="light"
-              className="text-foreground/60"
             >
               Documentation
             </Button>
             <Button
               as="a"
+              className="text-foreground/60"
               href="#"
               size="sm"
               variant="light"
-              className="text-foreground/60"
             >
               Support
             </Button>
             <Button
               as="a"
+              className="text-foreground/60"
               href="#"
               size="sm"
               variant="light"
-              className="text-foreground/60"
             >
               Privacy
             </Button>

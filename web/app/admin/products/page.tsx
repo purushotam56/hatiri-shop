@@ -1,74 +1,91 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { Card, CardBody, CardHeader } from '@heroui/card'
-import { Spinner } from '@heroui/spinner'
-import { Button } from '@heroui/button'
-import { apiEndpoints } from '@/lib/api-client'
-import { AdminHeader } from '@/components/headers/admin-header'
-import { useAdmin } from '@/context/admin-context'
-import { Table, TableHeader, TableColumn, TableBody, TableRow, TableCell } from '@heroui/table'
+import { Button } from "@heroui/button";
+import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Spinner } from "@heroui/spinner";
+import {
+  Table,
+  TableHeader,
+  TableColumn,
+  TableBody,
+  TableRow,
+  TableCell,
+} from "@heroui/table";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+
+import { AdminHeader } from "@/components/headers/admin-header";
+import { useAdmin } from "@/context/admin-context";
+import { apiEndpoints } from "@/lib/api-client";
 
 interface Product {
-  id: number
-  name: string
-  sku: string
-  price: number
-  stock: number
-  isActive: boolean
+  id: number;
+  name: string;
+  sku: string;
+  price: number;
+  stock: number;
+  isActive: boolean;
 }
 
 export default function ProductsPage() {
-  const router = useRouter()
-  const { adminUser, clearAdmin } = useAdmin()
-  const [products, setProducts] = useState<Product[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
-  const [storeLoaded, setStoreLoaded] = useState(false)
+  const router = useRouter();
+  const { adminUser, clearAdmin } = useAdmin();
+  const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [storeLoaded, setStoreLoaded] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setStoreLoaded(true)
-    }, 100)
-    return () => clearTimeout(timer)
-  }, [])
+      setStoreLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
-    if (!storeLoaded) return
+    if (!storeLoaded) return;
 
-    const token = localStorage.getItem('adminToken')
+    const token = localStorage.getItem("adminToken");
+
     if (!token) {
-      router.push('/admin')
-      return
+      router.push("/admin");
+
+      return;
     }
 
     const fetchProducts = async () => {
       try {
-        const token = localStorage.getItem('adminToken');
-        const data = await apiEndpoints.getAdminProducts(token || '');
-        setProducts(data.products || [])
-        setProducts(data.products || [])
-      } catch (err) {
-        setError('Failed to load products')
-        console.error(err)
-      } finally {
-        setLoading(false)
-      }
-    }
+        const token = localStorage.getItem("adminToken");
+        const data = await apiEndpoints.getAdminProducts(token || "");
 
-    fetchProducts()
-  }, [router, clearAdmin, storeLoaded])
+        setProducts(data.products || []);
+        setProducts(data.products || []);
+      } catch (err) {
+        setError("Failed to load products");
+        // console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, [router, clearAdmin, storeLoaded]);
 
   return (
     <main className="min-h-screen bg-default-50">
-      <AdminHeader userName={adminUser?.fullName} userEmail={adminUser?.email} />
+      <AdminHeader
+        userEmail={adminUser?.email}
+        userName={adminUser?.fullName}
+      />
 
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl font-bold">Products</h1>
-            <p className="text-default-500">Manage all products across all organizations</p>
+            <p className="text-default-500">
+              Manage all products across all organizations
+            </p>
           </div>
           <Button color="primary">+ Add Product</Button>
         </div>
@@ -79,7 +96,9 @@ export default function ProductsPage() {
           </div>
         ) : error ? (
           <Card className="bg-red-50 dark:bg-red-950/20">
-            <CardBody className="text-red-600 dark:text-red-400">{error}</CardBody>
+            <CardBody className="text-red-600 dark:text-red-400">
+              {error}
+            </CardBody>
           </Card>
         ) : products.length === 0 ? (
           <Card>
@@ -90,7 +109,9 @@ export default function ProductsPage() {
         ) : (
           <Card>
             <CardHeader className="flex flex-col gap-2">
-              <p className="text-lg font-semibold">All Products ({products.length})</p>
+              <p className="text-lg font-semibold">
+                All Products ({products.length})
+              </p>
             </CardHeader>
             <CardBody>
               <Table aria-label="Products table">
@@ -105,23 +126,31 @@ export default function ProductsPage() {
                 <TableBody>
                   {products.map((product) => (
                     <TableRow key={product.id}>
-                      <TableCell className="font-medium">{product.name}</TableCell>
-                      <TableCell className="text-default-600">{product.sku}</TableCell>
-                      <TableCell className="text-right">₹{product.price}</TableCell>
-                      <TableCell className="text-right font-semibold">{product.stock}</TableCell>
+                      <TableCell className="font-medium">
+                        {product.name}
+                      </TableCell>
+                      <TableCell className="text-default-600">
+                        {product.sku}
+                      </TableCell>
+                      <TableCell className="text-right">
+                        ₹{product.price}
+                      </TableCell>
+                      <TableCell className="text-right font-semibold">
+                        {product.stock}
+                      </TableCell>
                       <TableCell>
                         <span
                           className={`px-3 py-1 rounded-full text-xs font-semibold ${
                             product.isActive
-                              ? 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400'
-                              : 'bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400'
+                              ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
+                              : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400"
                           }`}
                         >
-                          {product.isActive ? 'Active' : 'Inactive'}
+                          {product.isActive ? "Active" : "Inactive"}
                         </span>
                       </TableCell>
                       <TableCell className="text-center">
-                        <Button size="sm" variant="light" color="primary">
+                        <Button color="primary" size="sm" variant="light">
                           Edit
                         </Button>
                       </TableCell>
@@ -134,5 +163,5 @@ export default function ProductsPage() {
         )}
       </div>
     </main>
-  )
+  );
 }

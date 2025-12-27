@@ -1,11 +1,11 @@
 import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
 import clsx from "clsx";
+import { Metadata, Viewport } from "next";
 
 import { Providers } from "./providers";
 
-import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title: {
@@ -44,11 +44,9 @@ export default function RootLayout({
           fontSans.variable,
         )}
       >
-        <Providers themeProps={{ attribute: "class", defaultTheme: "system" }}>
+      <Providers>
           <div className="relative flex flex-col min-h-screen">
-            <main className="w-full flex-grow">
-              {children}
-            </main>
+            <main className="w-full flex-grow">{children}</main>
           </div>
         </Providers>
       </body>

@@ -1,8 +1,14 @@
-'use client'
+"use client";
 
-import React, { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { Button } from '@heroui/button'
+import { Avatar } from "@heroui/avatar";
+import { Button } from "@heroui/button";
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+} from "@heroui/dropdown";
+import { Link } from "@heroui/link";
 import {
   Navbar,
   NavbarBrand,
@@ -11,45 +17,48 @@ import {
   NavbarMenu,
   NavbarMenuItem,
   NavbarMenuToggle,
-} from '@heroui/navbar'
-import { Avatar } from '@heroui/avatar'
-import { Dropdown, DropdownTrigger, DropdownMenu, DropdownItem } from '@heroui/dropdown'
-import { Link } from '@heroui/link'
-import { useAdmin } from '@/context/admin-context'
+} from "@heroui/navbar";
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+
+import { useAdmin } from "@/context/admin-context";
 
 interface AdminHeaderProps {
-  userName?: string
-  userEmail?: string
+  userName?: string;
+  userEmail?: string;
 }
 
-export function AdminHeader({ userName: propName, userEmail: propEmail }: AdminHeaderProps) {
-  const router = useRouter()
-  const { adminUser, clearAdmin } = useAdmin()
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+export function AdminHeader({
+  userName: propName,
+  userEmail: propEmail,
+}: AdminHeaderProps) {
+  const router = useRouter();
+  const { adminUser, clearAdmin } = useAdmin();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const displayName = propName || adminUser?.fullName || 'Admin'
-  const displayEmail = propEmail || adminUser?.email || 'admin@hatiri.com'
+  const displayName = propName || adminUser?.fullName || "Admin";
+  const displayEmail = propEmail || adminUser?.email || "admin@hatiri.com";
 
   const menuItems = [
-    { label: 'Dashboard', href: '/admin/dashboard' },
-    { label: 'Organizations', href: '/admin/organizations' },
-    { label: 'Sellers', href: '/admin/sellers' },
-    { label: 'Orders', href: '/admin/orders' },
-    { label: 'Products', href: '/admin/products' },
-    { label: 'Settings', href: '/admin/settings' },
-  ]
+    { label: "Dashboard", href: "/admin/dashboard" },
+    { label: "Organizations", href: "/admin/organizations" },
+    { label: "Sellers", href: "/admin/sellers" },
+    { label: "Orders", href: "/admin/orders" },
+    { label: "Products", href: "/admin/products" },
+    { label: "Settings", href: "/admin/settings" },
+  ];
 
   const handleLogout = () => {
-    clearAdmin()
-    router.push('/admin')
-  }
+    clearAdmin();
+    router.push("/admin");
+  };
 
   return (
     <Navbar
       isBordered
+      className="bg-gradient-to-r from-red-600 to-red-700 backdrop-blur-sm"
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-gradient-to-r from-red-600 to-red-700 backdrop-blur-sm"
     >
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle />
@@ -71,8 +80,8 @@ export function AdminHeader({ userName: propName, userEmail: propEmail }: AdminH
         {menuItems.map((item) => (
           <NavbarItem key={item.label}>
             <Link
-              href={item.href}
               className="text-white hover:text-gray-200 transition-colors text-sm"
+              href={item.href}
             >
               {item.label}
             </Link>
@@ -98,8 +107,8 @@ export function AdminHeader({ userName: propName, userEmail: propEmail }: AdminH
               <DropdownItem
                 key="user-info"
                 isReadOnly
-                textValue="User Info"
                 className="h-14 gap-2 opacity-100 cursor-default"
+                textValue="User Info"
               >
                 <p className="font-semibold">{displayName}</p>
                 <p className="text-xs text-foreground/60">{displayEmail}</p>
@@ -107,7 +116,12 @@ export function AdminHeader({ userName: propName, userEmail: propEmail }: AdminH
               <DropdownItem key="profile" textValue="Profile">
                 Profile Settings
               </DropdownItem>
-              <DropdownItem key="logout" color="danger" onPress={handleLogout} textValue="Logout">
+              <DropdownItem
+                key="logout"
+                color="danger"
+                textValue="Logout"
+                onPress={handleLogout}
+              >
                 Logout
               </DropdownItem>
             </DropdownMenu>
@@ -118,17 +132,17 @@ export function AdminHeader({ userName: propName, userEmail: propEmail }: AdminH
       <NavbarMenu>
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <Link href={item.href} className="w-full text-foreground">
+            <Link className="w-full text-foreground" href={item.href}>
               {item.label}
             </Link>
           </NavbarMenuItem>
         ))}
         <NavbarMenuItem>
           <Button
-            onPress={handleLogout}
             className="w-full mt-4"
             color="danger"
             variant="flat"
+            onPress={handleLogout}
           >
             Logout
           </Button>

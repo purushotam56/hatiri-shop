@@ -1,231 +1,57 @@
-"use client";
+import { headers } from "next/headers";
 
-import React, { useState, useEffect } from "react";
-import { useAuth } from "@/context/auth-context";
-import { useRouter } from "next/navigation";
-import {
-  Table,
-  TableHeader,
-  TableColumn,
-  TableBody,
-  TableRow,
-  TableCell,
-} from "@heroui/table";
-import { Button } from "@heroui/button";
-import { Card, CardBody, CardHeader } from "@heroui/card";
-import { Chip } from "@heroui/chip";
-import { apiEndpoints } from "@/lib/api-client";
-import { Order } from "@/types/order";
-import { OrderDetailModal } from "@/components/order-detail-modal";
+import OrdersPageContent from "./orders-page-content";
+
 import { StoreLayout } from "@/components/layouts/store-layout";
+import { apiEndpoints } from "@/lib/api-client";
 
-// Helper function to safely convert to number
-const toNumber = (value: any): number => {
-  const num = Number(value);
-  return isNaN(num) ? 0 : num;
-};
-
-function OrdersPageContent() {
-  const { isLoggedIn, isLoading } = useAuth();
-  const router = useRouter();
-  const [orders, setOrders] = useState<Order[]>([]);
-  const [pageIsLoading, setPageIsLoading] = useState(true);
-  const [selectedOrder, setSelectedOrder] = useState<Order | null>(null);
-  const [isDetailOpen, setIsDetailOpen] = useState(false);
-
-  useEffect(() => {
-    // Wait for auth to load
-    if (isLoading) {
-      return;
-    }
-
-    // If not logged in, redirect
-    if (!isLoggedIn) {
-      // router.push("/login");
-      return;
-    }
-
-    fetchOrders();
-  }, [isLoggedIn, isLoading, router]);
-
-  const fetchOrders = async () => {
-    try {
-      const token = localStorage.getItem("token");
-      const data = await apiEndpoints.getOrders(token || "");
-      setOrders(data.orders || []);
-    } catch (error) {
-      console.error("Error fetching orders:", error);
-    } finally {
-      setPageIsLoading(false);
-    }
-  };
-
-  const getStatusColor = (status: string): "warning" | "secondary" | "primary" | "success" | "danger" | "default" => {
-    switch (status) {
-      case "pending":
-        return "warning";
-      case "confirmed":
-        return "secondary";
-      case "preparing":
-        return "secondary";
-      case "ready":
-        return "secondary";
-      case "out_for_delivery":
-        return "primary";
-      case "delivered":
-        return "success";
-      case "cancelled":
-        return "danger";
-      default:
-        return "default";
-    }
-  };
-
-  const formatDate = (date: string) => {
-    return new Date(date).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
-  };
-
-  const handleViewDetails = (order: Order) => {
-    setSelectedOrder(order);
-    setIsDetailOpen(true);
-  };
-
-  // Wait for auth to load
-  if (isLoading) {
-    return (
-      <div className="min-h-screen py-12 px-4 bg-gradient-to-b from-content1 to-content2">
-        <div className="max-w-6xl mx-auto">
-          <p className="text-center text-default-500">Loading...</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (!isLoggedIn) {
+function getSubdomainCode(hostname: string): string | null {
+  if (/^\d+\.\d+\.\d+\.\d+/.test(hostname)) {
     return null;
   }
 
-  return (
-    <div className="min-h-screen py-12 px-4 bg-gradient-to-b from-content1 to-content2">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2">My Orders</h1>
-          <p className="text-default-500">View and manage your orders</p>
-        </div>
+  const parts = hostname.split(".");
 
-        {/* Orders Table */}
-        {pageIsLoading ? (
-          <Card>
-            <CardBody className="py-8">
-              <p className="text-center text-default-500">Loading orders...</p>
-            </CardBody>
-          </Card>
-        ) : orders.length === 0 ? (
-          <Card>
-            <CardBody className="py-12">
-              <div className="text-center">
-                <p className="text-default-500 text-lg mb-4">No orders yet</p>
-                <Button
-                  color="primary"
-                  onPress={() => router.push("/products")}
-                >
-                  Start Shopping
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
-        ) : (
-          <Card>
-            <Table
-              aria-label="Orders table"
-              classNames={{
-                base: "bg-transparent",
-                table: "text-foreground",
-                thead: "[&>tr]:first:border-b-1 [&>tr]:first:border-divider",
-                tbody: "[&>tr]:border-b-1 [&>tr]:border-divider",
-              }}
-            >
-              <TableHeader>
-                <TableColumn className="bg-default-100 text-foreground">
-                  Order ID
-                </TableColumn>
-                <TableColumn className="bg-default-100 text-foreground">
-                  Date
-                </TableColumn>
-                <TableColumn className="bg-default-100 text-foreground">
-                  Total
-                </TableColumn>
-                <TableColumn className="bg-default-100 text-foreground">
-                  Items
-                </TableColumn>
-                <TableColumn className="bg-default-100 text-foreground">
-                  Status
-                </TableColumn>
-                <TableColumn className="bg-default-100 text-foreground text-center">
-                  Actions
-                </TableColumn>
-              </TableHeader>
-              <TableBody>
-                {orders.map((order) => (
-                  <TableRow key={order.id}>
-                    <TableCell className="text-slate-200 font-semibold">
-                      {order.orderNumber}
-                    </TableCell>
-                    <TableCell className="text-slate-300">
-                      {formatDate(order.createdAt)}
-                    </TableCell>
-                    <TableCell className="text-slate-200 font-semibold">
-                      ₹{toNumber(order.totalAmount).toFixed(0)}
-                    </TableCell>
-                    <TableCell className="text-slate-300">
-                      {order.items?.length || 0} item(s)
-                    </TableCell>
-                    <TableCell>
-                      <Chip
-                        className="capitalize"
-                        color={getStatusColor(order.status)}
-                        size="sm"
-                        variant="flat"
-                      >
-                        {order.status.replace(/_/g, " ")}
-                      </Chip>
-                    </TableCell>
-                    <TableCell className="text-center">
-                      <Button
-                        isIconOnly
-                        className="bg-slate-700 hover:bg-slate-600 text-slate-200"
-                        size="sm"
-                        onPress={() => handleViewDetails(order)}
-                      >
-                        👁️
-                      </Button>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </Card>
-        )}
-      </div>
+  if (parts.length >= 3 && parts[0] !== "localhost" && parts[0] !== "www") {
+    return parts[0].toUpperCase();
+  }
 
-      {/* Order Detail Modal */}
-      <OrderDetailModal
-        isOpen={isDetailOpen}
-        onClose={() => setIsDetailOpen(false)}
-        order={selectedOrder}
-      />
-    </div>
-  );
+  return null;
 }
 
-export default function OrdersPage() {
+async function getStoreByCode(code: string) {
+  try {
+    const response = await apiEndpoints.getOrganisationByCode(code);
+
+    return response?.organisation || response?.data || null;
+  } catch (error) {
+    // console.error("Failed to fetch store:", error);
+
+    return null;
+  }
+}
+
+export default async function OrdersPage() {
+  const headersList = await headers();
+  const host = headersList.get("host") || "";
+  const subdomainCode = getSubdomainCode(host);
+
+  let storeCode = "";
+  let storeName = "";
+  let logoUrl = "";
+
+  if (subdomainCode) {
+    const store = await getStoreByCode(subdomainCode);
+
+    if (store) {
+      storeCode = subdomainCode;
+      storeName = store.name || "";
+      logoUrl = store.image?.url || "";
+    }
+  }
+
   return (
-    <StoreLayout>
+    <StoreLayout logoUrl={logoUrl} storeCode={storeCode} storeName={storeName}>
       <OrdersPageContent />
     </StoreLayout>
   );

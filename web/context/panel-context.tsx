@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext } from "react";
+
 import { usePanelType } from "@/lib/hooks/use-panel-type";
 import { PanelType, PanelConfig } from "@/types/panel";
 
@@ -33,8 +34,10 @@ export function PanelProvider({ children }: { children: React.ReactNode }) {
  */
 export function usePanel(): PanelContextType {
   const context = useContext(PanelContext);
+
   if (!context) {
     throw new Error("usePanel must be used within a PanelProvider");
   }
+
   return context;
 }

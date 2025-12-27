@@ -1,98 +1,105 @@
-'use client'
+"use client";
 
-import React, { useState, useRef } from 'react'
-import { Button } from '@heroui/button'
-import { Card, CardBody } from '@heroui/card'
-import QRCode from 'react-qrcode-logo'
-import { buildStoreQRUrl } from '@/lib/qr-code-utils'
+import { Button } from "@heroui/button";
+import { Card, CardBody } from "@heroui/card";
+import React, { useState, useRef } from "react";
+import QRCode from "react-qrcode-logo";
+
+import { buildStoreQRUrl } from "@/lib/qr-code-utils";
 
 interface QRCodeGeneratorProps {
-  organisationUniqueCode: string
-  storeName: string
-  logoUrl?: string
-  domain?: string
-  darkColor?: string
-  lightColor?: string
+  organisationUniqueCode: string;
+  storeName: string;
+  logoUrl?: string;
+  domain?: string;
+  darkColor?: string;
+  lightColor?: string;
 }
 
-type QRModuleShape = 'squares' | 'dots' | 'fluid'
-type QRCornerShape = 0 | 15 | 29
+type QRModuleShape = "squares" | "dots" | "fluid";
+type QRCornerShape = 0 | 15 | 29;
 
 interface QRShapeConfig {
-  name: string
-  module: QRModuleShape
-  corner: QRCornerShape
+  name: string;
+  module: QRModuleShape;
+  corner: QRCornerShape;
 }
 
 const QR_SHAPE_PRESETS: { [key: string]: QRShapeConfig } = {
-  sharp: { name: 'Sharp', module: 'squares', corner: 0 },
-  classic: { name: 'Classic', module: 'squares', corner: 15 },
-  smooth: { name: 'Smooth', module: 'fluid', corner: 15 },
-  rounded: { name: 'Rounded Dots', module: 'dots', corner: 29 },
-}
+  sharp: { name: "Sharp", module: "squares", corner: 0 },
+  classic: { name: "Classic", module: "squares", corner: 15 },
+  smooth: { name: "Smooth", module: "fluid", corner: 15 },
+  rounded: { name: "Rounded Dots", module: "dots", corner: 29 },
+};
 
 export function QRCodeGenerator({
   organisationUniqueCode,
   storeName,
   logoUrl,
   domain,
-  darkColor = '#000000',
-  lightColor = '#FFFFFF',
+  darkColor = "#000000",
+  lightColor = "#FFFFFF",
 }: QRCodeGeneratorProps) {
-  const [selectedShape, setSelectedShape] = useState<string>('sharp')
-  const [moduleShape, setModuleShape] = useState<QRModuleShape>('squares')
-  const [cornerRadius, setCornerRadius] = useState<QRCornerShape>(0)
+  const [selectedShape, setSelectedShape] = useState<string>("sharp");
+  const [moduleShape, setModuleShape] = useState<QRModuleShape>("squares");
+  const [cornerRadius, setCornerRadius] = useState<QRCornerShape>(0);
 
-  const basicQRRef = useRef<any>(null)
-  const logoQRRef = useRef<any>(null)
-  const basicQRContainerRef = useRef<HTMLDivElement>(null)
-  const logoQRContainerRef = useRef<HTMLDivElement>(null)
+  const basicQRRef = useRef<QRCode>(null);
+  const logoQRRef = useRef<QRCode>(null);
+  const basicQRContainerRef = useRef<HTMLDivElement>(null);
+  const logoQRContainerRef = useRef<HTMLDivElement>(null);
 
   const handleShapePreset = (presetKey: string) => {
-    setSelectedShape(presetKey)
-    const preset = QR_SHAPE_PRESETS[presetKey]
-    setModuleShape(preset.module)
-    setCornerRadius(preset.corner)
-  }
+    setSelectedShape(presetKey);
+    const preset = QR_SHAPE_PRESETS[presetKey];
 
-  const storeUrl = buildStoreQRUrl(organisationUniqueCode, domain)
+    setModuleShape(preset.module);
+    setCornerRadius(preset.corner);
+  };
+
+  const storeUrl = buildStoreQRUrl(organisationUniqueCode, domain);
 
   const downloadQRCode = (canvas: HTMLCanvasElement, filename: string) => {
-    const link = document.createElement('a')
-    link.href = canvas.toDataURL('image/png')
-    link.download = filename
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
+    const link = document.createElement("a");
+
+    link.href = canvas.toDataURL("image/png");
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const handleDownloadBasicQR = async () => {
     try {
       if (basicQRContainerRef.current) {
-        const canvas = basicQRContainerRef.current.querySelector('canvas')
+        const canvas = basicQRContainerRef.current.querySelector("canvas");
+
         if (canvas) {
-          const filename = `${storeName}-qrcode.png`
-          downloadQRCode(canvas, filename)
+          const filename = `${storeName}-qrcode.png`;
+
+          downloadQRCode(canvas, filename);
         }
       }
     } catch (err) {
-      console.error('Error downloading QR code:', err)
+      console.error("Error downloading QR code:", err);
     }
-  }
+  };
 
   const handleDownloadLogoQR = async () => {
     try {
       if (logoQRContainerRef.current) {
-        const canvas = logoQRContainerRef.current.querySelector('canvas')
+        const canvas = logoQRContainerRef.current.querySelector("canvas");
+
         if (canvas) {
-          const filename = `${storeName}-qrcode.png`
-          downloadQRCode(canvas, filename)
+          const filename = `${storeName}-qrcode.png`;
+
+          downloadQRCode(canvas, filename);
         }
       }
     } catch (err) {
-      console.error('Error downloading QR code:', err)
+      console.error("Error downloading QR code:", err);
     }
-  }
+  };
 
   return (
     <div className="space-y-6">
@@ -105,10 +112,10 @@ export function QRCodeGenerator({
               {Object.entries(QR_SHAPE_PRESETS).map(([key, preset]) => (
                 <Button
                   key={key}
-                  onPress={() => handleShapePreset(key)}
-                  variant={selectedShape === key ? 'solid' : 'bordered'}
-                  color={selectedShape === key ? 'primary' : 'default'}
+                  color={selectedShape === key ? "primary" : "default"}
                   size="lg"
+                  variant={selectedShape === key ? "solid" : "bordered"}
+                  onPress={() => handleShapePreset(key)}
                 >
                   {preset.name}
                 </Button>
@@ -127,48 +134,60 @@ export function QRCodeGenerator({
           <CardBody className="gap-6 p-8">
             <div className="text-center space-y-4">
               <div className="space-y-1">
-                <h4 className="font-bold text-lg text-foreground">Store QR Code</h4>
+                <h4 className="font-bold text-lg text-foreground">
+                  Store QR Code
+                </h4>
                 <p className="text-xs text-default-500">Standard format</p>
               </div>
 
               <div className="flex justify-center mx-auto">
                 <div className="relative p-4 bg-white rounded-2xl shadow-xl border-4 border-gray-100">
-                  <div ref={basicQRContainerRef} className="flex justify-center">
+                  <div
+                    ref={basicQRContainerRef}
+                    className="flex justify-center"
+                  >
                     <QRCode
                       ref={basicQRRef}
-                      value={storeUrl}
-                      size={224}
-                      enableCORS={true}
-                      fgColor={darkColor}
                       bgColor={lightColor}
-                      qrStyle={moduleShape}
-                      eyeRadius={cornerRadius}
                       ecLevel="H"
+                      enableCORS={true}
+                      eyeRadius={cornerRadius}
+                      fgColor={darkColor}
+                      qrStyle={moduleShape}
+                      size={224}
+                      value={storeUrl}
                     />
                   </div>
-                  <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/5"></div>
+                  <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/5" />
                 </div>
               </div>
 
               <div className="space-y-2 pt-2">
-                <p className="text-sm font-medium text-foreground">Store Link</p>
+                <p className="text-sm font-medium text-foreground">
+                  Store Link
+                </p>
                 <p className="text-xs text-default-500 truncate px-2 py-1.5 bg-default-100 rounded-lg">
                   {storeUrl}
                 </p>
               </div>
 
               <Button
-                color="primary"
-                onPress={handleDownloadBasicQR}
                 className="w-full font-semibold"
+                color="primary"
                 size="lg"
+                onPress={handleDownloadBasicQR}
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
+                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                   />
                 </svg>
                 Download QR Code
@@ -183,37 +202,46 @@ export function QRCodeGenerator({
             <CardBody className="gap-6 p-8">
               <div className="text-center space-y-4">
                 <div className="space-y-1">
-                  <h4 className="font-bold text-lg text-foreground">Branded QR Code</h4>
-                  <p className="text-xs text-default-500">With your store logo</p>
+                  <h4 className="font-bold text-lg text-foreground">
+                    Branded QR Code
+                  </h4>
+                  <p className="text-xs text-default-500">
+                    With your store logo
+                  </p>
                 </div>
 
                 <div className="flex justify-center mx-auto">
                   <div className="relative p-4 bg-white rounded-2xl shadow-xl border-4 border-gray-100">
-                    <div ref={logoQRContainerRef} className="flex justify-center">
+                    <div
+                      ref={logoQRContainerRef}
+                      className="flex justify-center"
+                    >
                       <QRCode
                         ref={logoQRRef}
-                        value={storeUrl}
-                        size={224}
-                        enableCORS={true}
-                        fgColor={darkColor}
                         bgColor={lightColor}
-                        qrStyle={moduleShape}
-                        eyeRadius={cornerRadius}
-                        logoImage={logoUrl}
-                        logoWidth={50}
-                        logoHeight={50}
-                        logoPaddingStyle="square"
-                        logoPadding={5}
-                        removeQrCodeBehindLogo={true}
                         ecLevel="H"
+                        enableCORS={true}
+                        eyeRadius={cornerRadius}
+                        fgColor={darkColor}
+                        logoHeight={50}
+                        logoImage={logoUrl}
+                        logoPadding={5}
+                        logoPaddingStyle="square"
+                        logoWidth={50}
+                        qrStyle={moduleShape}
+                        removeQrCodeBehindLogo={true}
+                        size={224}
+                        value={storeUrl}
                       />
                     </div>
-                    <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/5"></div>
+                    <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/5" />
                   </div>
                 </div>
 
                 <div className="space-y-2 pt-2">
-                  <p className="text-sm font-medium text-foreground">Perfect for</p>
+                  <p className="text-sm font-medium text-foreground">
+                    Perfect for
+                  </p>
                   <div className="flex flex-wrap gap-1 justify-center">
                     <span className="text-xs px-2 py-1 bg-purple-100 text-purple-700 rounded-full">
                       📱 Social Media
@@ -225,17 +253,22 @@ export function QRCodeGenerator({
                 </div>
 
                 <Button
-                  color="success"
-                  onPress={handleDownloadLogoQR}
                   className="w-full font-semibold"
+                  color="success"
                   size="lg"
+                  onPress={handleDownloadLogoQR}
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                     />
                   </svg>
                   Download with Logo
@@ -257,7 +290,10 @@ export function QRCodeGenerator({
             <ul className="space-y-2 text-sm text-default-600">
               <li className="flex items-start gap-2">
                 <span className="text-primary font-bold">•</span>
-                <span>Print the QR code on product packaging, flyers, and business cards</span>
+                <span>
+                  Print the QR code on product packaging, flyers, and business
+                  cards
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary font-bold">•</span>
@@ -276,5 +312,5 @@ export function QRCodeGenerator({
         </CardBody>
       </Card>
     </div>
-  )
+  );
 }

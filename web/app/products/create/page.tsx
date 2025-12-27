@@ -1,11 +1,12 @@
-"use client"
+"use client";
 
-import React, { useState } from "react"
-import { useRouter } from "next/navigation"
-import { apiEndpoints } from "@/lib/api-client"
+import { useRouter } from "next/navigation";
+import React, { useState } from "react";
+
+import { apiEndpoints } from "@/lib/api-client";
 
 export default function ProductCreatePage() {
-  const router = useRouter()
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     description: "",
@@ -15,76 +16,95 @@ export default function ProductCreatePage() {
     stock: 0,
     unit: "pcs",
     organisationId: 1,
-  })
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
+  });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-    const { name, value } = e.target
+  function handleChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) {
+    const { name, value } = e.target;
+
     setFormData((prev) => ({
       ...prev,
-      [name]: name === "stock" ? Number(value) : name === "price" ? parseFloat(value) : value,
-    }))
+      [name]:
+        name === "stock"
+          ? Number(value)
+          : name === "price"
+            ? parseFloat(value)
+            : value,
+    }));
   }
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault()
-    setError(null)
-    
+    e.preventDefault();
+    setError(null);
+
     if (!formData.name) {
-      setError("Product name is required")
-      return
+      setError("Product name is required");
+
+      return;
     }
-    
-    setLoading(true)
+
+    setLoading(true);
     try {
-      const token = localStorage.getItem("token")
+      const token = localStorage.getItem("token");
+
       if (!token) {
-        setError("Not authenticated. Please login first.")
-        router.push("/login")
-        return
+        setError("Not authenticated. Please login first.");
+        router.push("/login");
+
+        return;
       }
 
       const result = await apiEndpoints.createProduct(formData, token);
-      console.log("Product created:", result)
-      router.push("/products")
-    } catch (err: any) {
-      setError(err?.message || "Create failed")
+
+      router.push("/products");
+    } catch (err: unknown) {
+      const error = err instanceof Error ? err : new Error(String(err));
+      setError(error?.message || "Create failed");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
   }
 
   return (
     <section className="p-6 max-w-2xl mx-auto">
       <h1 className="text-3xl font-bold mb-6">Create Product</h1>
-      
-      {error && <div className="bg-red-100 text-red-700 p-4 rounded mb-4">{error}</div>}
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 bg-gray-50 p-6 rounded-lg">
+      {error && (
+        <div className="bg-red-100 text-red-700 p-4 rounded mb-4">{error}</div>
+      )}
+
+      <form
+        className="flex flex-col gap-4 bg-gray-50 p-6 rounded-lg"
+        onSubmit={handleSubmit}
+      >
         <div className="grid grid-cols-2 gap-4">
           <label className="flex flex-col">
             <span className="text-sm font-semibold mb-2">Product Name *</span>
             <input
-              type="text"
+              required
+              className="border rounded px-3 py-2"
               name="name"
+              placeholder="e.g., Fresh Apples"
+              type="text"
               value={formData.name}
               onChange={handleChange}
-              placeholder="e.g., Fresh Apples"
-              className="border rounded px-3 py-2"
-              required
             />
           </label>
 
           <label className="flex flex-col">
             <span className="text-sm font-semibold mb-2">SKU</span>
             <input
-              type="text"
+              className="border rounded px-3 py-2"
               name="sku"
+              placeholder="e.g., APP-001"
+              type="text"
               value={formData.sku}
               onChange={handleChange}
-              placeholder="e.g., APP-001"
-              className="border rounded px-3 py-2"
             />
           </label>
         </div>
@@ -92,12 +112,12 @@ export default function ProductCreatePage() {
         <label className="flex flex-col">
           <span className="text-sm font-semibold mb-2">Description</span>
           <textarea
+            className="border rounded px-3 py-2 min-h-24"
             name="description"
+            placeholder="Product details..."
+            rows={4}
             value={formData.description}
             onChange={handleChange}
-            placeholder="Product details..."
-            className="border rounded px-3 py-2 min-h-24"
-            rows={4}
           />
         </label>
 
@@ -105,24 +125,24 @@ export default function ProductCreatePage() {
           <label className="flex flex-col">
             <span className="text-sm font-semibold mb-2">Price *</span>
             <input
-              type="number"
+              required
+              className="border rounded px-3 py-2"
               name="price"
-              value={formData.price}
-              onChange={handleChange}
               placeholder="0.00"
               step="0.01"
-              className="border rounded px-3 py-2"
-              required
+              type="number"
+              value={formData.price}
+              onChange={handleChange}
             />
           </label>
 
           <label className="flex flex-col">
             <span className="text-sm font-semibold mb-2">Currency</span>
             <select
+              className="border rounded px-3 py-2"
               name="currency"
               value={formData.currency}
               onChange={handleChange}
-              className="border rounded px-3 py-2"
             >
               <option value="USD">USD</option>
               <option value="AUD">AUD</option>
@@ -134,12 +154,12 @@ export default function ProductCreatePage() {
           <label className="flex flex-col">
             <span className="text-sm font-semibold mb-2">Stock</span>
             <input
-              type="number"
+              className="border rounded px-3 py-2"
+              min="0"
               name="stock"
+              type="number"
               value={formData.stock}
               onChange={handleChange}
-              min="0"
-              className="border rounded px-3 py-2"
             />
           </label>
         </div>
@@ -147,10 +167,10 @@ export default function ProductCreatePage() {
         <label className="flex flex-col">
           <span className="text-sm font-semibold mb-2">Unit</span>
           <select
+            className="border rounded px-3 py-2"
             name="unit"
             value={formData.unit}
             onChange={handleChange}
-            className="border rounded px-3 py-2"
           >
             <option value="pcs">Pieces (pcs)</option>
             <option value="kg">Kilogram (kg)</option>
@@ -164,22 +184,22 @@ export default function ProductCreatePage() {
 
         <div className="flex gap-2 pt-4">
           <button
-            type="submit"
-            disabled={loading}
             className="btn btn-primary flex-1 py-2"
+            disabled={loading}
+            type="submit"
           >
             {loading ? "Creating…" : "Create Product"}
           </button>
           <button
+            className="btn border flex-1 py-2"
+            disabled={loading}
             type="button"
             onClick={() => router.push("/products")}
-            disabled={loading}
-            className="btn border flex-1 py-2"
           >
             Cancel
           </button>
         </div>
       </form>
     </section>
-  )
+  );
 }

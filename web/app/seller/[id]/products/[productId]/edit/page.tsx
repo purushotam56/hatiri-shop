@@ -1,407 +1,557 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { useRouter, useParams } from 'next/navigation'
-import { Button } from '@heroui/button'
-import { Card, CardBody, CardHeader } from '@heroui/card'
-import { Input } from '@heroui/input'
-import Link from 'next/link'
-import { apiEndpoints, apiUpload } from '@/lib/api-client'
-import RichTextEditor from '@/components/rich-text-editor'
-import ImageUpload from '@/components/image-upload'
-import MultipleImageUpload from '@/components/multiple-image-upload'
-import { Switch } from '@heroui/switch'
+import { Button } from "@heroui/button";
+import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Input } from "@heroui/input";
+import { Switch } from "@heroui/switch";
+import Link from "next/link";
+import { useRouter, useParams } from "next/navigation";
+import { useEffect, useState } from "react";
+
+import ImageUpload from "@/components/image-upload";
+import MultipleImageUpload from "@/components/multiple-image-upload";
+import RichTextEditor from "@/components/rich-text-editor";
+import { apiEndpoints, apiUpload } from "@/lib/api-client";
+import { Product, ProductGroup, ProductImage } from "@/types/product";
 
 interface VariantForm {
-  id: string
-  label: string // e.g., "500 gm", "1 kg", "2 kg"
-  skuSuffix: string // e.g., "-500GM", "-1KG"
-  price: string
-  quantity: string // e.g., "500" for 500 gm when group unit is kg
-  unit: string // e.g., "gm", "ml" when group is in "kg" or "liter"
-  stock: string // for independent inventory mode
-  discountType: string // 'percentage' or 'fixed_amount'
-  discountValue: string // discount percentage or fixed amount
-  isDiscountActive: boolean
-  description: string // for independent inventory mode
-  details: string // detailed information for independent inventory mode
-  bannerImage: File | null // for independent inventory mode
-  existingBannerImage: { id: number; url: string } | null // existing banner from API
-  useSameBannerImage: boolean // use main product banner
-  images: Array<File | any> // variant-specific images (File for new, API objects for existing)
+  id: string;
+  label: string; // e.g., "500 gm", "1 kg", "2 kg"
+  skuSuffix: string; // e.g., "-500GM", "-1KG"
+  price: string;
+  quantity: string; // e.g., "500" for 500 gm when group unit is kg
+  unit: string; // e.g., "gm", "ml" when group is in "kg" or "liter"
+  stock: string; // for independent inventory mode
+  discountType: string; // 'percentage' or 'fixed_amount'
+  discountValue: string; // discount percentage or fixed amount
+  isDiscountActive: boolean;
+  description: string; // for independent inventory mode
+  details: string; // detailed information for independent inventory mode
+  bannerImage: File | null; // for independent inventory mode
+  existingBannerImage: { id: number; url: string } | null; // existing banner from API
+  useSameBannerImage: boolean; // use main product banner
+  images: Array<File | Record<string, unknown>>; // variant-specific images (File for new, API objects for existing)
 }
 
 /**
  * Seller Product Creation/Edit Page
- * 
+ *
  * SUPPORTS TWO APPROACHES:
  * 1. Complex UI (existing): Full featured form with images, multiple variants, independent stock
  * 2. Simplified API (new): Use apiEndpoints.createSellerProductV2() for quick product creation
- * 
+ *
  * To use simplified API, pass useSimplifiedAPI=true to handleSubmit()
  * This is useful for sellers who want to create products programmatically or through a simpler interface.
  */
 export default function SellerProductPage() {
-  const router = useRouter()
-  const params = useParams()
-  const orgId = params.id
-  const productId = params.productId
-  
+  const router = useRouter();
+  const params = useParams();
+  const orgId = params.id;
+  const productId = params.productId;
+
   // Determine if we're in edit mode
-  const isEditMode = !!productId
-  
-  const [loading, setLoading] = useState(false)
-  const [fetching, setFetching] = useState(isEditMode)
-  const [error, setError] = useState('')
-  const [categories, setCategories] = useState<Array<{ id: number; name: string }>>([])
+  const isEditMode = !!productId;
+
+  const [loading, setLoading] = useState(false);
+  const [fetching, setFetching] = useState(isEditMode);
+  const [error, setError] = useState("");
+  const [categories, setCategories] = useState<
+    Array<{ id: number; name: string }>
+  >([]);
   const [form, setForm] = useState({
-    name: '',
-    description: '',
-    sku: '',
-    price: '',
-    stock: '',
-    unit: 'piece',
-    categoryId: '',
-    details: '',
-    discountType: 'percentage',
-    discountValue: '',
+    name: "",
+    description: "",
+    sku: "",
+    price: "",
+    stock: "",
+    unit: "piece",
+    categoryId: "",
+    details: "",
+    discountType: "percentage",
+    discountValue: "",
     isDiscountActive: false,
-    stockMergeType: 'merged' as 'merged' | 'independent',
-  })
-  const [bannerImage, setBannerImage] = useState<File | null>(null)
-  const [existingBannerUrl, setExistingBannerUrl] = useState<string | null>(null)
-  const [productImages, setProductImages] = useState<File[]>([])
-  const [existingImages, setExistingImages] = useState<any[]>([])
-  
+    stockMergeType: "merged" as "merged" | "independent",
+  });
+  const [bannerImage, setBannerImage] = useState<File | null>(null);
+  const [existingBannerUrl, setExistingBannerUrl] = useState<string | null>(
+    null,
+  );
+  const [productImages, setProductImages] = useState<File[]>([]);
+  const [existingImages, setExistingImages] = useState<Array<Record<string, unknown>>>([]);
+
   // Variant management state
-  const [hasVariants, setHasVariants] = useState(false)
+  const [hasVariants, setHasVariants] = useState(false);
   const [variants, setVariants] = useState<VariantForm[]>([
-    { id: '1', label: '', skuSuffix: '', price: '', quantity: '', unit: 'kg', stock: '', discountType: 'percentage', discountValue: '', isDiscountActive: false, description: '', details: '', bannerImage: null, existingBannerImage: null, useSameBannerImage: true, images: [] },
-    { id: '2', label: '', skuSuffix: '', price: '', quantity: '', unit: 'kg', stock: '', discountType: 'percentage', discountValue: '', isDiscountActive: false, description: '', details: '', bannerImage: null, existingBannerImage: null, useSameBannerImage: true, images: [] }
-  ])
+    {
+      id: "1",
+      label: "",
+      skuSuffix: "",
+      price: "",
+      quantity: "",
+      unit: "kg",
+      stock: "",
+      discountType: "percentage",
+      discountValue: "",
+      isDiscountActive: false,
+      description: "",
+      details: "",
+      bannerImage: null,
+      existingBannerImage: null,
+      useSameBannerImage: true,
+      images: [],
+    },
+    {
+      id: "2",
+      label: "",
+      skuSuffix: "",
+      price: "",
+      quantity: "",
+      unit: "kg",
+      stock: "",
+      discountType: "percentage",
+      discountValue: "",
+      isDiscountActive: false,
+      description: "",
+      details: "",
+      bannerImage: null,
+      existingBannerImage: null,
+      useSameBannerImage: true,
+      images: [],
+    },
+  ]);
 
   const fetchProduct = async () => {
     try {
-      const token = localStorage.getItem('sellerToken')
+      const token = localStorage.getItem("sellerToken");
+
       if (!token) {
-        router.push('/seller')
-        return
+        router.push("/seller");
+
+        return;
       }
 
-      const data = await apiEndpoints.getProduct(productId as string)
+      const data = await apiEndpoints.getProduct(productId as string);
+
       if (data.data || data.product) {
-        const product = data.data || data.product
-        
+        const product = data.data || data.product;
+
         // Determine if this is a variant product
-        const hasVariants = product.variants && product.variants.length > 0
-        
+        const hasVariants = product.variants && product.variants.length > 0;
+
         // Extract base SKU and main product label from the product name
-        const baseSku = product.sku || ''
-        const productName = product.name || ''
-        
+        const baseSku = product.sku || "";
+        const productName = product.name || "";
+
         // Determine correct values based on product group (for variants) or current product
-        const productGroup = product.productGroup
-        const isVariantProduct = !!product.productGroupId
-        const stockMergeTypeToUse = isVariantProduct && productGroup ? productGroup.stockMergeType : (product.stockMergeType || 'merged')
-        
+        const productGroup = product.productGroup;
+        const isVariantProduct = !!product.productGroupId;
+        const stockMergeTypeToUse =
+          isVariantProduct && productGroup
+            ? productGroup.stockMergeType
+            : product.stockMergeType || "merged";
+
         // For shared inventory variants, use product group's unit and stock
-        const unitToUse = isVariantProduct && productGroup && stockMergeTypeToUse === 'merged' 
-          ? productGroup.unit 
-          : product.unit || 'piece'
-        const stockToUse = isVariantProduct && productGroup && stockMergeTypeToUse === 'merged' 
-          ? productGroup.baseStock?.toString() || ''
-          : product.stock?.toString() || ''
-        
+        const unitToUse =
+          isVariantProduct && productGroup && stockMergeTypeToUse === "merged"
+            ? productGroup.unit
+            : product.unit || "piece";
+        const stockToUse =
+          isVariantProduct && productGroup && stockMergeTypeToUse === "merged"
+            ? productGroup.baseStock?.toString() || ""
+            : product.stock?.toString() || "";
+
         // Populate form with existing data
         // For variant products with merged inventory, use productGroup stock
-        const formStock = hasVariants && stockMergeTypeToUse === 'merged'
-          ? productGroup?.baseStock?.toString() || ''
-          : (hasVariants ? '' : stockToUse)
-        
+        const formStock =
+          hasVariants && stockMergeTypeToUse === "merged"
+            ? productGroup?.baseStock?.toString() || ""
+            : hasVariants
+              ? ""
+              : stockToUse;
+
         setForm({
           name: productName,
-          description: product.description || '',
+          description: product.description || "",
           sku: product.sku,
-          price: hasVariants ? '' : (product.price?.toString() || ''),
+          price: hasVariants ? "" : product.price?.toString() || "",
           stock: formStock,
           unit: unitToUse,
-          categoryId: product.categoryId?.toString() || '',
-          details: product.details || '',
-          discountType: product.discountType || 'percentage',
-          discountValue: product.discountValue?.toString() || '',
+          categoryId: product.categoryId?.toString() || "",
+          details: product.details || "",
+          discountType: product.discountType || "percentage",
+          discountValue: product.discountValue?.toString() || "",
           isDiscountActive: !!product.isDiscountActive,
           stockMergeType: stockMergeTypeToUse,
-        })
+        });
 
         // Set existing images if available
         if (product.bannerImage) {
-          const bannerUrl = typeof product.bannerImage === 'string' 
-            ? product.bannerImage 
-            : product.bannerImage.url
-          setExistingBannerUrl(bannerUrl)
+          const bannerUrl =
+            typeof product.bannerImage === "string"
+              ? product.bannerImage
+              : product.bannerImage.url;
+
+          setExistingBannerUrl(bannerUrl);
         }
-        
+
         // Set existing product images
-        if (product.images && Array.isArray(product.images) && product.images.length > 0) {
+        if (
+          product.images &&
+          Array.isArray(product.images) &&
+          product.images.length > 0
+        ) {
           // Map images to include upload URLs
-          const mappedImages = product.images.map((img: any) => ({
+          const mappedImages = product.images.map((img: ProductImage) => ({
             id: img.id,
             uploadId: img.uploadId,
             sortOrder: img.sortOrder,
-            url: img.upload?.url || img.url,
-            upload: img.upload
-          }))
-          setExistingImages(mappedImages)
+            url: img.upload?.url || (img as Record<string, unknown>).url,
+            upload: img.upload,
+          }));
+
+          setExistingImages(mappedImages);
         } else {
-          console.warn('No images found for product:', { productId, images: product.images })
-          setExistingImages([])
+          console.warn("No images found for product:", {
+            productId,
+            images: product.images,
+          });
+          setExistingImages([]);
         }
 
         // Check if product has variants
         if (hasVariants) {
-          setHasVariants(true)
-          
+          setHasVariants(true);
+
           // Use product group data if available (for variants)
-          const baseSkuForVariants = productGroup?.baseSku || baseSku
-          const stockMergeTypeForVariants = productGroup?.stockMergeType || product.stockMergeType || 'merged'
-          const globalStockForMerged = productGroup?.baseStock || product.stock || ''
+          const baseSkuForVariants = productGroup?.baseSku || baseSku;
+          const stockMergeTypeForVariants =
+            productGroup?.stockMergeType || product.stockMergeType || "merged";
+          const globalStockForMerged =
+            productGroup?.baseStock || product.stock || "";
 
           // Extract the SKU suffix from each variant's SKU
-          const variantForms = product.variants.map((v: any, idx: number) => {
-            const variantName = v.name || ''
-            const label = variantName.replace(productName, '').trim()
-            
-            const variantStock = stockMergeTypeForVariants === 'merged' 
-              ? globalStockForMerged?.toString() || ''
-              : v.stock?.toString() || ''
-            
+          const variantForms = product.variants.map((v: ProductGroup, idx: number) => {
+            const variantName = v.name || "";
+            const label = variantName.replace(productName, "").trim();
+
+            const variantStock =
+              stockMergeTypeForVariants === "merged"
+                ? globalStockForMerged?.toString() || ""
+                : v.stock?.toString() || "";
+
             // Check if variant has custom banner image (different from main product)
-            const hasCustomBanner = v.bannerImageId && v.bannerImageId !== product.bannerImageId
-            
+            const hasCustomBanner =
+              v.bannerImageId && v.bannerImageId !== product.bannerImageId;
+
             // Check if variant has custom images (different count or different images)
-            const hasCustomImages = v.images && v.images.length > 0 && 
-              (v.images.length !== (product.images?.length || 0) || 
-               (product.images && v.images.some((img: any) => !product.images.some((pImg: any) => pImg.uploadId === img.uploadId))))
-            
-               console.log(v)
+            const hasCustomImages =
+              (v.images as Array<Record<string, unknown>> | undefined) &&
+              (v.images as Array<Record<string, unknown>>).length > 0 &&
+              ((v.images as Array<Record<string, unknown>>).length !== (product.images?.length || 0) ||
+                (product.images &&
+                  (v.images as Array<Record<string, unknown>>).some(
+                    (img: Record<string, unknown>) =>
+                      !product.images.some(
+                        (pImg: Record<string, unknown>) => pImg.uploadId === img.uploadId,
+                      ),
+                  )));
 
             return {
               id: v.id?.toString() || idx.toString(),
-              label: label || `Variant ${idx + 1}`,
+              label: v.name,
               skuSuffix: v.sku,
-              price: v.price?.toString() || '',
-              quantity: v.quantity?.toString() || '',
-              unit: v.unit || product.unit || 'kg',
+              price: v.price?.toString() || "",
+              quantity: v.quantity?.toString() || "",
+              unit: v.unit || product.unit || "kg",
               stock: variantStock,
-              discountType: v.discountType || 'percentage',
-              discountValue: v.discountValue?.toString() || '',
+              discountType: v.discountType || "percentage",
+              discountValue: v.discountValue?.toString() || "",
               isDiscountActive: !!v.isDiscountActive,
-              description: v.description || '',
-              details: v.details || '',
+              description: v.description || "",
+              details: v.details || "",
               bannerImage: null,
-              existingBannerImage: v.bannerImage ? {
-                id: v.bannerImage.id,
-                url: v.bannerImage.url || v.bannerImage.key
-              } : null,
+              existingBannerImage: v.bannerImage
+                ? {
+                    id: v.bannerImage.id,
+                    url: v.bannerImage.url || v.bannerImage.key,
+                  }
+                : null,
               useSameBannerImage: !hasCustomBanner,
-              images: v.images || [],
-            }
-          })
-          setVariants(variantForms)
+              images: (v.images as Array<Record<string, unknown>>) || [],
+            };
+          });
+
+          setVariants(variantForms);
         }
 
-        setFetching(false)
+        setFetching(false);
       }
     } catch (err) {
-      console.error('Failed to fetch product', err)
-      setError('Failed to load product')
-      setFetching(false)
+      console.error("Failed to fetch product", err);
+      setError("Failed to load product");
+      setFetching(false);
     }
-  }
+  };
 
   useEffect(() => {
-    const token = localStorage.getItem('sellerToken')
+    const token = localStorage.getItem("sellerToken");
+
     if (!token) {
-      router.push('/seller')
-      return
+      router.push("/seller");
+
+      return;
     }
 
     // Fetch categories for this organization
     const fetchCategories = async () => {
       try {
-        const data = await apiEndpoints.getOrganisationCategories(orgId as string);
-        setCategories(data.data || [])
-      } catch (err) {
-        console.error('Failed to fetch categories', err)
-      }
-    }
+        const data = await apiEndpoints.getOrganisationCategories(
+          orgId as string,
+        );
 
-    fetchCategories()
+        setCategories(data.data || []);
+      } catch (err) {
+        console.error("Failed to fetch categories", err);
+      }
+    };
+
+    fetchCategories();
 
     // If editing, fetch the product
     if (isEditMode && productId) {
-      fetchProduct()
+      fetchProduct();
     } else {
-      setFetching(false)
+      setFetching(false);
     }
-  }, [router, orgId, isEditMode, productId])
+  }, [router, orgId, isEditMode, productId]);
 
   // Note: Variant units are independent of group unit
   // Group unit is just for reference and validation
   // Each variant keeps its own unit even in merged mode
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
+    const { name, value } = e.target;
+
     setForm((prev) => {
-      const updated = { ...prev, [name]: value }
+      const updated = { ...prev, [name]: value };
+
       // Auto-generate SKU from product name when name changes
-      if (name === 'name' && value) {
-        updated.sku = generateSKUFromName(value)
+      if (name === "name" && value) {
+        updated.sku = generateSKUFromName(value);
       }
-      return updated
-    })
-    setError('')
-  }
+
+      return updated;
+    });
+    setError("");
+  };
 
   const generateSKUFromName = (name: string): string => {
     // Take first 3 letters of product name, uppercase, add 4 random digits
-    const prefix = name.substring(0, 3).toUpperCase().replace(/[^A-Z]/g, '')
-    const randomNum = Math.floor(1000 + Math.random() * 9000)
-    return `${prefix || 'PRD'}-${randomNum}`
-  }
+    const prefix = name
+      .substring(0, 3)
+      .toUpperCase()
+      .replace(/[^A-Z]/g, "");
+    const randomNum = Math.floor(1000 + Math.random() * 9000);
+
+    return `${prefix || "PRD"}-${randomNum}`;
+  };
 
   // Generate variant SKU suffix from variant label
   const generateVariantSKUSuffix = (label: string, index: number): string => {
     if (!label) {
       // If no label, use index-based suffix
-      return `-${index + 1}`
+      return `-${index + 1}`;
     }
-    
+
     // Extract meaningful text from label
     // Examples: "500gm" -> "-500GM", "1kg" -> "-1KG", "Red Small" -> "-RS"
-    const cleanLabel = label.toUpperCase().trim()
-    
-    // Try to extract number + unit pattern first (e.g., "500gm" or "1 kg")
-    const numberUnitMatch = cleanLabel.match(/([0-9.]+)\s*([A-Z]+)/)
-    if (numberUnitMatch) {
-      const number = numberUnitMatch[1]
-      const unit = numberUnitMatch[2]
-      return `-${number}${unit}`.replace(/\s+/g, '')
-    }
-    
-    // If no number+unit pattern, use first letters of each word
-    const words = cleanLabel.split(/\s+/)
-    if (words.length > 0) {
-      const suffix = words.map(w => w[0]).join('').substring(0, 3)
-      return `-${suffix}`
-    }
-    
-    // Fallback
-    return `-${index + 1}`
-  }
+    const cleanLabel = label.toUpperCase().trim();
 
-  const handleVariantChange = (id: string, field: keyof VariantForm, value: string | boolean | File | null) => {
-    setVariants(variants.map(v => {
-      if (v.id === id) {
-        const updated = { ...v, [field]: value }
-        // Auto-generate SKU suffix when label changes
-        if (field === 'label' && typeof value === 'string') {
-          const variantIndex = variants.findIndex(x => x.id === id)
-          updated.skuSuffix = generateVariantSKUSuffix(value, variantIndex)
+    // Try to extract number + unit pattern first (e.g., "500gm" or "1 kg")
+    const numberUnitMatch = cleanLabel.match(/([0-9.]+)\s*([A-Z]+)/);
+
+    if (numberUnitMatch) {
+      const number = numberUnitMatch[1];
+      const unit = numberUnitMatch[2];
+
+      return `-${number}${unit}`.replace(/\s+/g, "");
+    }
+
+    // If no number+unit pattern, use first letters of each word
+    const words = cleanLabel.split(/\s+/);
+
+    if (words.length > 0) {
+      const suffix = words
+        .map((w) => w[0])
+        .join("")
+        .substring(0, 3);
+
+      return `-${suffix}`;
+    }
+
+    // Fallback
+    return `-${index + 1}`;
+  };
+
+  const handleVariantChange = (
+    id: string,
+    field: keyof VariantForm,
+    value: string | boolean | File | null,
+  ) => {
+    setVariants(
+      variants.map((v) => {
+        if (v.id === id) {
+          const updated = { ...v, [field]: value };
+
+          // Auto-generate SKU suffix when label changes
+          if (field === "label" && typeof value === "string") {
+            const variantIndex = variants.findIndex((x) => x.id === id);
+
+            updated.skuSuffix = generateVariantSKUSuffix(value, variantIndex);
+          }
+
+          return updated;
         }
-        return updated
-      }
-      return v
-    }))
-  }
+
+        return v;
+      }),
+    );
+  };
 
   const addVariant = () => {
-    const newId = (Math.max(...variants.map(v => parseInt(v.id)), 0) + 1).toString()
-    const availableUnits = getAvailableVariantUnits(form.unit)
-    const defaultUnit = availableUnits[0] || 'piece'
+    const newId = (
+      Math.max(...variants.map((v) => parseInt(v.id)), 0) + 1
+    ).toString();
+    const availableUnits = getAvailableVariantUnits(form.unit);
+    const defaultUnit = availableUnits[0] || "piece";
     // Pre-fill SKU suffix with index-based default (will be auto-generated when label is added)
-    const skuSuffix = `-${variants.length + 1}`
-    setVariants([...variants, { id: newId, label: '', skuSuffix, price: '', quantity: '', unit: defaultUnit, stock: '', discountType: 'percentage', discountValue: '', isDiscountActive: false, description: '', details: '', bannerImage: null, existingBannerImage: null, useSameBannerImage: true, images: [] }])
-  }
+    const skuSuffix = `-${variants.length + 1}`;
+
+    setVariants([
+      ...variants,
+      {
+        id: newId,
+        label: "",
+        skuSuffix,
+        price: "",
+        quantity: "",
+        unit: defaultUnit,
+        stock: "",
+        discountType: "percentage",
+        discountValue: "",
+        isDiscountActive: false,
+        description: "",
+        details: "",
+        bannerImage: null,
+        existingBannerImage: null,
+        useSameBannerImage: true,
+        images: [],
+      },
+    ]);
+  };
 
   const removeVariant = (id: string) => {
     if (variants.length > 2) {
-      setVariants(variants.filter(v => v.id !== id))
+      setVariants(variants.filter((v) => v.id !== id));
     }
-  }
+  };
 
   // Unit type mapping
-  const unitTypeMap: { [key: string]: { label: string; units: { [key: string]: string } } } = {
+  const unitTypeMap: {
+    [key: string]: { label: string; units: { [key: string]: string } };
+  } = {
     weight: {
-      label: 'Weight',
+      label: "Weight",
       units: {
-        'mg': 'Milligram (mg)',
-        'gm': 'Gram (gm)',
-        'kg': 'Kilogram (kg)',
-      }
+        mg: "Milligram (mg)",
+        gm: "Gram (gm)",
+        kg: "Kilogram (kg)",
+      },
     },
     volume: {
-      label: 'Volume',
+      label: "Volume",
       units: {
-        'ml': 'Milliliter (ml)',
-        'liter': 'Liter (L)',
-      }
+        ml: "Milliliter (ml)",
+        liter: "Liter (L)",
+      },
     },
     quantity: {
-      label: 'Quantity',
+      label: "Quantity",
       units: {
-        'piece': 'Piece',
-        'dozen': 'Dozen',
-      }
-    }
-  }
+        piece: "Piece",
+        dozen: "Dozen",
+      },
+    },
+  };
 
   const getUnitType = (unit: string): string => {
     for (const [type, data] of Object.entries(unitTypeMap)) {
-      if (unit in data.units) return type
+      if (unit in data.units) return type;
     }
-    return 'quantity'
-  }
+
+    return "quantity";
+  };
 
   // Helper function to check if units are compatible
-  const isCompatibleUnits = (groupUnit: string, variantUnits: string[]): boolean => {
-    const groupType = getUnitType(groupUnit)
-    return variantUnits.every(u => getUnitType(u) === groupType)
-  }
+  const isCompatibleUnits = (
+    groupUnit: string,
+    variantUnits: string[],
+  ): boolean => {
+    const groupType = getUnitType(groupUnit);
+
+    return variantUnits.every((u) => getUnitType(u) === groupType);
+  };
 
   // Get available variant units based on group unit
   const getAvailableVariantUnits = (groupUnit: string): string[] => {
-    const groupType = getUnitType(groupUnit)
-    return Object.keys(unitTypeMap[groupType].units)
-  }
+    const groupType = getUnitType(groupUnit);
 
-  const handleSubmit = async (e: React.FormEvent, useSimplifiedAPI: boolean = false) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
+    return Object.keys(unitTypeMap[groupType].units);
+  };
+
+  const handleSubmit = async (
+    e: React.FormEvent,
+    useSimplifiedAPI: boolean = false,
+  ) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
 
     try {
-      const token = localStorage.getItem('sellerToken')
+      const token = localStorage.getItem("sellerToken");
+
       if (!token) {
-        router.push('/seller')
-        return
+        router.push("/seller");
+
+        return;
       }
 
       // NEW: Option to use simplified API for variant products
       if (hasVariants && useSimplifiedAPI) {
         // Validate minimum 2 variants
         if (variants.length < 2) {
-          setError('At least 2 variants are required')
-          setLoading(false)
-          return
+          setError("At least 2 variants are required");
+          setLoading(false);
+
+          return;
         }
 
         // Validate variants
-        const invalidVariant = variants.find(v => !v.label || !v.skuSuffix || !v.price || !v.quantity || !v.unit)
+        const invalidVariant = variants.find(
+          (v) => !v.label || !v.skuSuffix || !v.price || !v.quantity || !v.unit,
+        );
+
         if (invalidVariant) {
-          setError('Please fill in all variant fields (label, SKU, price, quantity, and unit)')
-          setLoading(false)
-          return
+          setError(
+            "Please fill in all variant fields (label, SKU, price, quantity, and unit)",
+          );
+          setLoading(false);
+
+          return;
         }
 
         // Use simplified API
@@ -410,232 +560,315 @@ export default function SellerProductPage() {
           name: `${form.name} - ${variant.label}`,
           unit: variant.unit,
           price: parseFloat(variant.price),
-          stock: form.stockMergeType === 'independent' ? parseInt(variant.stock) : 0,
-        }))
+          stock:
+            form.stockMergeType === "independent" ? parseInt(variant.stock) : 0,
+        }));
 
         const payload = {
           organisationId: parseInt(orgId as string),
           name: form.name,
           description: form.description,
           categoryId: parseInt(form.categoryId),
-          currency: 'INR',
+          currency: "INR",
           isVariant: true,
           stockMergeType: form.stockMergeType,
           variants: variantsArray,
           details: form.details,
-        }
+        };
 
-        const data = await apiEndpoints.createSellerProductV2(payload, token)
+        const data = await apiEndpoints.createSellerProductV2(payload, token);
 
         if (data.error || !data.data) {
-          setError(data.message || 'Failed to create product')
-          setLoading(false)
-          return
+          setError(data.message || "Failed to create product");
+          setLoading(false);
+
+          return;
         }
 
         // router.push(`/seller/${orgId}/products`)
-        return
+        return;
       }
 
       // If creating with variants, use the existing complex API endpoint
       if (hasVariants) {
         // Validate minimum 2 variants
         if (variants.length < 2) {
-          setError('At least 2 variants are required')
-          return
+          setError("At least 2 variants are required");
+
+          return;
         }
 
         // Validate variants
-        const invalidVariant = variants.find(v => !v.label || !v.skuSuffix || !v.price || !v.quantity || !v.unit)
+        const invalidVariant = variants.find(
+          (v) => !v.label || !v.skuSuffix || !v.price || !v.quantity || !v.unit,
+        );
+
         if (invalidVariant) {
-          setError('Please fill in all variant fields (label, SKU, price, quantity, and unit)')
-          return
+          setError(
+            "Please fill in all variant fields (label, SKU, price, quantity, and unit)",
+          );
+
+          return;
         }
 
         // Validate stock based on merge type
-        if (form.stockMergeType === 'merged') {
+        if (form.stockMergeType === "merged") {
           if (!form.stock) {
-            setError('Group stock is required for merged inventory mode')
-            return
+            setError("Group stock is required for merged inventory mode");
+
+            return;
           }
         } else {
           // Independent mode - check that all variants have stock
-          const variantWithoutStock = variants.find(v => !v.stock)
+          const variantWithoutStock = variants.find((v) => !v.stock);
+
           if (variantWithoutStock) {
-            setError('Each variant must have stock defined for independent inventory mode')
-            return
+            setError(
+              "Each variant must have stock defined for independent inventory mode",
+            );
+
+            return;
           }
         }
 
         // Validate that all variants have compatible units
-        const variantUnits = variants.map(v => v.unit)
+        const variantUnits = variants.map((v) => v.unit);
+
         if (!isCompatibleUnits(form.unit, variantUnits)) {
-          setError('All variant units must be compatible with the group unit')
-          return
+          setError("All variant units must be compatible with the group unit");
+
+          return;
         }
 
         // Use FormData to handle file uploads
-        const formData = new FormData()
-        
+        const formData = new FormData();
+
         // Add base product data
-        formData.append('name', form.name)
-        formData.append('description', form.description)
-        formData.append('sku', form.sku)
-        formData.append('categoryId', form.categoryId)
-        formData.append('organisationId', orgId as string)
-        formData.append('details', form.details)
-        formData.append('productGroupBaseStock', form.stock)
-        formData.append('productGroupUnit', form.unit)
-        formData.append('productGroupStockMergeType', form.stockMergeType)
+        formData.append("name", form.name);
+        formData.append("description", form.description);
+        formData.append("sku", form.sku);
+        formData.append("categoryId", form.categoryId);
+        formData.append("organisationId", orgId as string);
+        formData.append("details", form.details);
+        formData.append("productGroupBaseStock", form.stock);
+        formData.append("productGroupUnit", form.unit);
+        formData.append("productGroupStockMergeType", form.stockMergeType);
 
         // For SHARED INVENTORY: Add banner image and product images at group level
-        if (form.stockMergeType === 'merged') {
+        if (form.stockMergeType === "merged") {
           if (bannerImage) {
-            formData.append('bannerImage', bannerImage)
+            formData.append("bannerImage", bannerImage);
           }
           productImages.forEach((image) => {
-            formData.append('productImages', image)
-          })
+            formData.append("productImages", image);
+          });
         }
 
         // Add variants and their images
         variants.forEach((variant, index) => {
-          formData.append(`variants[${index}][id]`, variant.id)
-          formData.append(`variants[${index}][label]`, variant.label)
-          formData.append(`variants[${index}][skuSuffix]`, variant.skuSuffix)
-          formData.append(`variants[${index}][price]`, variant.price)
-          formData.append(`variants[${index}][quantity]`, variant.quantity)
-          formData.append(`variants[${index}][unit]`, variant.unit)
-          
+          formData.append(`variants[${index}][id]`, variant.id);
+          formData.append(`variants[${index}][label]`, variant.label);
+          formData.append(`variants[${index}][skuSuffix]`, variant.skuSuffix);
+          formData.append(`variants[${index}][price]`, variant.price);
+          formData.append(`variants[${index}][quantity]`, variant.quantity);
+          formData.append(`variants[${index}][unit]`, variant.unit);
+
           // Add stock for both merged and independent modes
-          formData.append(`variants[${index}][stock]`, variant.stock)
-          
+          formData.append(`variants[${index}][stock]`, variant.stock);
+
           // For independent mode, validate stock is provided
-          if (form.stockMergeType === 'independent' && !variant.stock) {
-            setError('Each variant must have stock defined for independent inventory mode')
-            setLoading(false)
-            return
+          if (form.stockMergeType === "independent" && !variant.stock) {
+            setError(
+              "Each variant must have stock defined for independent inventory mode",
+            );
+            setLoading(false);
+
+            return;
           }
-          
+
           // Add variant-specific assets for INDEPENDENT mode only
-          if (form.stockMergeType === 'independent') {
+          if (form.stockMergeType === "independent") {
             // Description
             if (variant.description) {
-              formData.append(`variants[${index}][description]`, variant.description)
+              formData.append(
+                `variants[${index}][description]`,
+                variant.description,
+              );
             }
-            
+
             // Detailed Information
             if (variant.details) {
-              formData.append(`variants[${index}][details]`, variant.details)
+              formData.append(`variants[${index}][details]`, variant.details);
             }
-            
+
             // Banner image - send File objects only (new uploads)
             if (variant.bannerImage instanceof File) {
-              formData.append(`variants[${index}][bannerImage]`, variant.bannerImage)
+              formData.append(
+                `variants[${index}][bannerImage]`,
+                variant.bannerImage,
+              );
             }
-            
+
             // Images - send File objects only (new uploads), keep existing API objects for reference
             if (variant.images.length > 0) {
               variant.images.forEach((image) => {
                 if (image instanceof File) {
-                  formData.append(`variants[${index}][images]`, image)
+                  formData.append(`variants[${index}][images]`, image);
                 }
-              })
+              });
             }
           }
-          
+
           // Add discount fields if active
           if (variant.isDiscountActive && variant.discountValue) {
-            formData.append(`variants[${index}][isDiscountActive]`, 'true')
-            formData.append(`variants[${index}][discountType]`, variant.discountType)
-            formData.append(`variants[${index}][discountValue]`, variant.discountValue)
+            formData.append(`variants[${index}][isDiscountActive]`, "true");
+            formData.append(
+              `variants[${index}][discountType]`,
+              variant.discountType,
+            );
+            formData.append(
+              `variants[${index}][discountValue]`,
+              variant.discountValue,
+            );
           }
-        })
+        });
 
         const data = isEditMode
-          ? await apiEndpoints.updateProductVariants(productId as string, formData, token)
-          : await apiEndpoints.createProductWithVariants(orgId as string, formData, token)
+          ? await apiEndpoints.updateProductVariants(
+              productId as string,
+              formData,
+              token,
+            )
+          : await apiEndpoints.createProductWithVariants(
+              orgId as string,
+              formData,
+              token,
+            );
 
         if (data.error) {
-          setError(data.message || (isEditMode ? 'Failed to update product with variants' : 'Failed to create product with variants'))
-          return
+          setError(
+            data.message ||
+              (isEditMode
+                ? "Failed to update product with variants"
+                : "Failed to create product with variants"),
+          );
+
+          return;
         }
 
         // router.push(`/seller/${orgId}/products`)
       } else {
         // Original single product creation with image upload
-        const formData = new FormData()
-        formData.append('name', form.name)
-        formData.append('description', form.description)
-        formData.append('sku', form.sku)
-        formData.append('price', form.price)
-        formData.append('stock', form.stock)
-        formData.append('unit', form.unit)
-        formData.append('categoryId', form.categoryId)
-        formData.append('organisationId', orgId as string)
-        formData.append('details', form.details)
-        
+        const formData = new FormData();
+
+        formData.append("name", form.name);
+        formData.append("description", form.description);
+        formData.append("sku", form.sku);
+        formData.append("price", form.price);
+        formData.append("stock", form.stock);
+        formData.append("unit", form.unit);
+        formData.append("categoryId", form.categoryId);
+        formData.append("organisationId", orgId as string);
+        formData.append("details", form.details);
+
         // Add discount fields if discount is active
         if (form.isDiscountActive && form.discountValue) {
-          formData.append('isDiscountActive', 'true')
-          formData.append('discountType', form.discountType)
-          formData.append('discountValue', form.discountValue)
+          formData.append("isDiscountActive", "true");
+          formData.append("discountType", form.discountType);
+          formData.append("discountValue", form.discountValue);
         }
-        
+
         if (bannerImage) {
-          formData.append('bannerImage', bannerImage)
+          formData.append("bannerImage", bannerImage);
         }
 
         productImages.forEach((image, index) => {
-          formData.append(`productImages`, image)
-        })
+          formData.append(`productImages`, image);
+        });
 
         const data = isEditMode
-          ? await apiEndpoints.updateProduct(productId as string, formData, token)
-          : await apiUpload('/products', formData, token)
+          ? await apiEndpoints.updateProduct(
+              productId as string,
+              formData,
+              token,
+            )
+          : await apiUpload("/products", formData, token);
 
         if (data.error) {
-          setError(data.message || (isEditMode ? 'Failed to update product' : 'Failed to create product'))
-          return
+          setError(
+            data.message ||
+              (isEditMode
+                ? "Failed to update product"
+                : "Failed to create product"),
+          );
+
+          return;
         }
 
         // router.push(`/seller/${orgId}/products`)
       }
     } catch (err) {
-      setError('Connection error')
-      console.error(err)
+      setError("Connection error");
+      console.error(err);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   const handleLogout = () => {
-    localStorage.removeItem('sellerToken')
-    localStorage.removeItem('sellerUser')
-    localStorage.removeItem('sellerOrg')
-    router.push('/seller')
-  }
+    localStorage.removeItem("sellerToken");
+    localStorage.removeItem("sellerUser");
+    localStorage.removeItem("sellerOrg");
+    router.push("/seller");
+  };
 
   return (
-    <main role="main" className="min-h-screen bg-default-50 pb-20">
+    <main className="min-h-screen bg-default-50 pb-20" role="main">
       {/* Header */}
       <div className="sticky top-0 z-30 bg-white dark:bg-default-100 border-b border-default-200">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link href={`/seller/${orgId}/products`}>
-              <Button isIconOnly variant="light" size="sm">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <Button isIconOnly size="sm" variant="light">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M15 19l-7-7 7-7"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                  />
                 </svg>
               </Button>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold text-foreground">{isEditMode ? 'Edit Product' : 'New Product'}</h1>
+              <h1 className="text-2xl font-bold text-foreground">
+                {isEditMode ? "Edit Product" : "New Product"}
+              </h1>
             </div>
           </div>
-          <Button isIconOnly color="default" variant="light" onPress={handleLogout}>
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+          <Button
+            isIconOnly
+            color="default"
+            variant="light"
+            onPress={handleLogout}
+          >
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+              />
             </svg>
           </Button>
         </div>
@@ -646,10 +879,10 @@ export default function SellerProductPage() {
           <div className="mb-6 p-4 bg-primary-50 dark:bg-primary-950/20 border border-primary-200 dark:border-primary-800 rounded-lg text-primary-600 flex items-center gap-2">
             <div className="animate-spin">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="1" opacity=".3"/>
-                <circle cx="12" cy="5" r="1"/>
-                <circle cx="17" cy="6.46" r="1" opacity=".3"/>
-                <circle cx="19" cy="11" r="1" opacity=".3"/>
+                <circle cx="12" cy="12" opacity=".3" r="1" />
+                <circle cx="12" cy="5" r="1" />
+                <circle cx="17" cy="6.46" opacity=".3" r="1" />
+                <circle cx="19" cy="11" opacity=".3" r="1" />
               </svg>
             </div>
             Loading product...
@@ -661,7 +894,11 @@ export default function SellerProductPage() {
           </div>
         )}
 
-        <form onSubmit={(e) => handleSubmit(e, false)} id="product-form" className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <form
+          className="grid grid-cols-1 lg:grid-cols-3 gap-6"
+          id="product-form"
+          onSubmit={(e) => handleSubmit(e, false)}
+        >
           {/* Basic Information Section - Always visible */}
           <div className="lg:col-span-full">
             {/* Product Type Selection */}
@@ -677,11 +914,11 @@ export default function SellerProductPage() {
                     </p>
                   </div>
                   <Switch
-                    isSelected={hasVariants}
-                    onValueChange={setHasVariants}
                     color="primary"
                     disabled={loading}
+                    isSelected={hasVariants}
                     size="lg"
+                    onValueChange={setHasVariants}
                   />
                 </div>
               </CardBody>
@@ -698,42 +935,48 @@ export default function SellerProductPage() {
                   <CardHeader className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-950/10 dark:to-secondary-950/10 border-b">
                     <div className="flex items-center gap-2">
                       <span className="text-xl">📝</span>
-                      <h2 className="text-lg font-semibold text-foreground">Basic Information</h2>
+                      <h2 className="text-lg font-semibold text-foreground">
+                        Basic Information
+                      </h2>
                     </div>
                   </CardHeader>
                   <CardBody className="space-y-4">
                     <Input
+                      required
+                      disabled={loading}
                       label="Product Name"
                       name="name"
                       placeholder="e.g., Fresh Tomatoes"
+                      size="lg"
                       value={form.name}
                       onChange={handleChange}
-                      required
-                      disabled={loading}
-                      size="lg"
                     />
 
                     <div className="space-y-2">
-                      <label className="text-sm font-medium text-foreground">Short Description</label>
+                      <label className="text-sm font-medium text-foreground">
+                        Short Description
+                      </label>
                       <textarea
+                        className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-16 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
+                        disabled={loading}
                         name="description"
                         placeholder="Brief 1-2 line description shown on product cards"
                         value={form.description}
                         onChange={handleChange}
-                        disabled={loading}
-                        className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-16 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                       />
                     </div>
 
                     <div>
-                      <label className="text-sm font-medium text-foreground block mb-2">Category</label>
+                      <label className="text-sm font-medium text-foreground block mb-2">
+                        Category
+                      </label>
                       <select
+                        required
+                        className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
+                        disabled={loading}
                         name="categoryId"
                         value={form.categoryId}
                         onChange={handleChange}
-                        disabled={loading}
-                        required
-                        className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                       >
                         <option value="">Select Category</option>
                         {categories.map((cat) => (
@@ -751,200 +994,286 @@ export default function SellerProductPage() {
                   <CardHeader className="bg-gradient-to-r from-success-50 to-emerald-50 dark:from-success-950/10 dark:to-emerald-950/10 border-b">
                     <div className="flex items-center gap-2">
                       <span className="text-xl">💰</span>
-                      <h2 className="text-lg font-semibold text-foreground">Pricing & Inventory</h2>
+                      <h2 className="text-lg font-semibold text-foreground">
+                        Pricing & Inventory
+                      </h2>
                     </div>
                   </CardHeader>
-                <CardBody className="space-y-4">
-                  {/* SKU */}
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">SKU (Auto-generated from product name)</label>
-                    <div className="flex gap-2">
-                      <Input
-                        name="sku"
-                        placeholder="Enter product name to auto-generate SKU"
-                        value={form.sku}
-                        onChange={handleChange}
-                        required
-                        disabled={loading}
-                        className="flex-1"
-                        description={form.name ? "Auto-generated from product name. Edit if needed." : "Product name is required to generate SKU"}
-                      />
-                      <Button
-                        isIconOnly
-                        color="default"
-                        variant="flat"
-                        onClick={() => setForm(prev => ({ ...prev, sku: generateSKUFromName(form.name || 'PRD') }))}
-                        disabled={loading || !form.name}
-                        title="Regenerate SKU"
-                        size="lg"
-                      >
-                        🔄
-                      </Button>
-                    </div>
-                    {form.sku && <p className="text-xs text-default-500">Unique identifier: <span className="font-mono font-semibold">{form.sku}</span></p>}
-                  </div>
-
-                  {/* Price & Stock Grid */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <Input
-                      label="Price (₹)"
-                      name="price"
-                      type="number"
-                      placeholder="0.00"
-                      step="0.01"
-                      value={form.price}
-                      onChange={handleChange}
-                      disabled={loading}
-                      required
-                      size="lg"
-                    />
-                    <Input
-                      label="Stock Quantity"
-                      name="stock"
-                      type="number"
-                      placeholder="0"
-                      value={form.stock}
-                      onChange={handleChange}
-                      disabled={loading}
-                      required
-                      size="lg"
-                    />
-                  </div>
-
-                  {/* Unit Selection */}
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm font-medium text-foreground block mb-2">Unit Type</label>
-                      <select
-                        value={getUnitType(form.unit)}
-                        onChange={(e) => {
-                          const unitType = e.target.value as keyof typeof unitTypeMap
-                          const firstUnit = Object.keys(unitTypeMap[unitType].units)[0]
-                          setForm(prev => ({ ...prev, unit: firstUnit }))
-                        }}
-                        disabled={loading}
-                        className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
-                      >
-                        {Object.entries(unitTypeMap).map(([key, data]) => (
-                          <option key={key} value={key}>{data.label}</option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="text-sm font-medium text-foreground block mb-2">Unit</label>
-                      <select
-                        value={form.unit}
-                        onChange={handleChange}
-                        name="unit"
-                        disabled={loading}
-                        className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
-                      >
-                        {Object.entries(unitTypeMap[getUnitType(form.unit)].units).map(([value, label]) => (
-                          <option key={value} value={value}>{label}</option>
-                        ))}
-                      </select>
-                    </div>
-                  </div>
-                </CardBody>
-              </Card>
-
-              {/* Discount Section */}
-              <Card className="border border-default-200">
-                <CardHeader className="bg-gradient-to-r from-warning-50 to-amber-50 dark:from-warning-950/10 dark:to-amber-950/10 border-b">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🏷️</span>
-                    <h2 className="text-lg font-semibold text-foreground">Discount (Optional)</h2>
-                  </div>
-                </CardHeader>
-                <CardBody className="space-y-4">
-                  <div className="flex items-center gap-2">
-                    <Switch
-                      isSelected={form.isDiscountActive}
-                      onValueChange={(checked) => setForm(prev => ({ ...prev, isDiscountActive: checked }))}
-                      color="warning"
-                      disabled={loading}
-                    />
-                    <label className="text-sm font-medium text-foreground">Apply Discount</label>
-                  </div>
-
-                  {form.isDiscountActive && (
-                    <div className="space-y-4">
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <label className="text-sm font-medium text-foreground block mb-2">Discount Type</label>
-                          <select
-                            name="discountType"
-                            value={form.discountType}
-                            onChange={handleChange}
-                            disabled={loading}
-                            className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
-                          >
-                            <option value="percentage">Percentage (%)</option>
-                            <option value="fixed_amount">Fixed Amount (₹)</option>
-                          </select>
-                        </div>
+                  <CardBody className="space-y-4">
+                    {/* SKU */}
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-foreground">
+                        SKU (Auto-generated from product name)
+                      </label>
+                      <div className="flex gap-2">
                         <Input
-                          label={form.discountType === 'percentage' ? 'Discount (%)' : 'Discount (₹)'}
-                          name="discountValue"
-                          type="number"
-                          placeholder={form.discountType === 'percentage' ? '0-100' : '0.00'}
-                          step={form.discountType === 'percentage' ? '1' : '0.01'}
-                          max={form.discountType === 'percentage' ? '100' : undefined}
-                          value={form.discountValue}
-                          onChange={handleChange}
+                          required
+                          className="flex-1"
+                          description={
+                            form.name
+                              ? "Auto-generated from product name. Edit if needed."
+                              : "Product name is required to generate SKU"
+                          }
                           disabled={loading}
+                          name="sku"
+                          placeholder="Enter product name to auto-generate SKU"
+                          value={form.sku}
+                          onChange={handleChange}
                         />
+                        <Button
+                          isIconOnly
+                          color="default"
+                          disabled={loading || !form.name}
+                          size="lg"
+                          title="Regenerate SKU"
+                          variant="flat"
+                          onClick={() =>
+                            setForm((prev) => ({
+                              ...prev,
+                              sku: generateSKUFromName(form.name || "PRD"),
+                            }))
+                          }
+                        >
+                          🔄
+                        </Button>
                       </div>
-                      {form.price && form.discountValue && (
-                        <div className="p-4 bg-gradient-to-r from-warning-50 to-success-50 dark:from-warning-950/20 dark:to-success-950/20 rounded-lg border border-warning-200 dark:border-warning-800">
-                          <p className="text-sm space-y-1">
-                            <div className="flex justify-between">
-                              <span className="text-default-600">Original Price:</span>
-                              <span className="font-semibold">₹{parseFloat(form.price).toFixed(2)}</span>
-                            </div>
-                            <div className="flex justify-between">
-                              <span className="text-default-600">Discount:</span>
-                              <span className="font-semibold text-warning-600">{form.discountType === 'percentage' ? `${form.discountValue}%` : `₹${form.discountValue}`}</span>
-                            </div>
-                            <div className="flex justify-between pt-2 border-t border-warning-200 dark:border-warning-800">
-                              <span className="text-default-600 font-semibold">Final Price:</span>
-                              <span className="font-bold text-success-600 dark:text-success-400 text-lg">
-                                ₹{
-                                  form.discountType === 'percentage'
-                                    ? (parseFloat(form.price) - (parseFloat(form.price) * parseFloat(form.discountValue) / 100)).toFixed(2)
-                                    : (parseFloat(form.price) - parseFloat(form.discountValue)).toFixed(2)
-                                }
-                              </span>
-                            </div>
-                          </p>
-                        </div>
+                      {form.sku && (
+                        <p className="text-xs text-default-500">
+                          Unique identifier:{" "}
+                          <span className="font-mono font-semibold">
+                            {form.sku}
+                          </span>
+                        </p>
                       )}
                     </div>
-                  )}
-                </CardBody>
-              </Card>
 
-              {/* Details Section */}
-              <Card className="border border-default-200">
-                <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/10 dark:to-pink-950/10 border-b">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">📖</span>
-                    <h2 className="text-lg font-semibold text-foreground">Detailed Information</h2>
-                  </div>
-                </CardHeader>
-                <CardBody className="space-y-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Product Details</label>
-                    <RichTextEditor
-                      content={form.details}
-                      onChange={(content) => setForm(prev => ({ ...prev, details: content }))}
-                      placeholder="Enter detailed product information, specifications, ingredients, etc."
-                      disabled={loading}
-                    />
-                  </div>
-                </CardBody>
-              </Card>
+                    {/* Price & Stock Grid */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <Input
+                        required
+                        disabled={loading}
+                        label="Price (₹)"
+                        name="price"
+                        placeholder="0.00"
+                        size="lg"
+                        step="0.01"
+                        type="number"
+                        value={form.price}
+                        onChange={handleChange}
+                      />
+                      <Input
+                        required
+                        disabled={loading}
+                        label="Stock Quantity"
+                        name="stock"
+                        placeholder="0"
+                        size="lg"
+                        type="number"
+                        value={form.stock}
+                        onChange={handleChange}
+                      />
+                    </div>
+
+                    {/* Unit Selection */}
+                    <div className="grid grid-cols-2 gap-4">
+                      <div>
+                        <label className="text-sm font-medium text-foreground block mb-2">
+                          Unit Type
+                        </label>
+                        <select
+                          className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
+                          disabled={loading}
+                          value={getUnitType(form.unit)}
+                          onChange={(e) => {
+                            const unitType = e.target
+                              .value as keyof typeof unitTypeMap;
+                            const firstUnit = Object.keys(
+                              unitTypeMap[unitType].units,
+                            )[0];
+
+                            setForm((prev) => ({ ...prev, unit: firstUnit }));
+                          }}
+                        >
+                          {Object.entries(unitTypeMap).map(([key, data]) => (
+                            <option key={key} value={key}>
+                              {data.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+
+                      <div>
+                        <label className="text-sm font-medium text-foreground block mb-2">
+                          Unit
+                        </label>
+                        <select
+                          className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
+                          disabled={loading}
+                          name="unit"
+                          value={form.unit}
+                          onChange={handleChange}
+                        >
+                          {Object.entries(
+                            unitTypeMap[getUnitType(form.unit)].units,
+                          ).map(([value, label]) => (
+                            <option key={value} value={value}>
+                              {label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  </CardBody>
+                </Card>
+
+                {/* Discount Section */}
+                <Card className="border border-default-200">
+                  <CardHeader className="bg-gradient-to-r from-warning-50 to-amber-50 dark:from-warning-950/10 dark:to-amber-950/10 border-b">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">🏷️</span>
+                      <h2 className="text-lg font-semibold text-foreground">
+                        Discount (Optional)
+                      </h2>
+                    </div>
+                  </CardHeader>
+                  <CardBody className="space-y-4">
+                    <div className="flex items-center gap-2">
+                      <Switch
+                        color="warning"
+                        disabled={loading}
+                        isSelected={form.isDiscountActive}
+                        onValueChange={(checked) =>
+                          setForm((prev) => ({
+                            ...prev,
+                            isDiscountActive: checked,
+                          }))
+                        }
+                      />
+                      <label className="text-sm font-medium text-foreground">
+                        Apply Discount
+                      </label>
+                    </div>
+
+                    {form.isDiscountActive && (
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-2 gap-4">
+                          <div>
+                            <label className="text-sm font-medium text-foreground block mb-2">
+                              Discount Type
+                            </label>
+                            <select
+                              className="w-full px-3 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
+                              disabled={loading}
+                              name="discountType"
+                              value={form.discountType}
+                              onChange={handleChange}
+                            >
+                              <option value="percentage">Percentage (%)</option>
+                              <option value="fixed_amount">
+                                Fixed Amount (₹)
+                              </option>
+                            </select>
+                          </div>
+                          <Input
+                            disabled={loading}
+                            label={
+                              form.discountType === "percentage"
+                                ? "Discount (%)"
+                                : "Discount (₹)"
+                            }
+                            max={
+                              form.discountType === "percentage"
+                                ? "100"
+                                : undefined
+                            }
+                            name="discountValue"
+                            placeholder={
+                              form.discountType === "percentage"
+                                ? "0-100"
+                                : "0.00"
+                            }
+                            step={
+                              form.discountType === "percentage" ? "1" : "0.01"
+                            }
+                            type="number"
+                            value={form.discountValue}
+                            onChange={handleChange}
+                          />
+                        </div>
+                        {form.price && form.discountValue && (
+                          <div className="p-4 bg-gradient-to-r from-warning-50 to-success-50 dark:from-warning-950/20 dark:to-success-950/20 rounded-lg border border-warning-200 dark:border-warning-800">
+                            <p className="text-sm space-y-1">
+                              <div className="flex justify-between">
+                                <span className="text-default-600">
+                                  Original Price:
+                                </span>
+                                <span className="font-semibold">
+                                  ₹{parseFloat(form.price).toFixed(2)}
+                                </span>
+                              </div>
+                              <div className="flex justify-between">
+                                <span className="text-default-600">
+                                  Discount:
+                                </span>
+                                <span className="font-semibold text-warning-600">
+                                  {form.discountType === "percentage"
+                                    ? `${form.discountValue}%`
+                                    : `₹${form.discountValue}`}
+                                </span>
+                              </div>
+                              <div className="flex justify-between pt-2 border-t border-warning-200 dark:border-warning-800">
+                                <span className="text-default-600 font-semibold">
+                                  Final Price:
+                                </span>
+                                <span className="font-bold text-success-600 dark:text-success-400 text-lg">
+                                  ₹
+                                  {form.discountType === "percentage"
+                                    ? (
+                                        parseFloat(form.price) -
+                                        (parseFloat(form.price) *
+                                          parseFloat(form.discountValue)) /
+                                          100
+                                      ).toFixed(2)
+                                    : (
+                                        parseFloat(form.price) -
+                                        parseFloat(form.discountValue)
+                                      ).toFixed(2)}
+                                </span>
+                              </div>
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </CardBody>
+                </Card>
+
+                {/* Details Section */}
+                <Card className="border border-default-200">
+                  <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/10 dark:to-pink-950/10 border-b">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">📖</span>
+                      <h2 className="text-lg font-semibold text-foreground">
+                        Detailed Information
+                      </h2>
+                    </div>
+                  </CardHeader>
+                  <CardBody className="space-y-4">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-foreground">
+                        Product Details
+                      </label>
+                      <RichTextEditor
+                        content={form.details}
+                        disabled={loading}
+                        placeholder="Enter detailed product information, specifications, ingredients, etc."
+                        onChange={(content) =>
+                          setForm((prev) => ({ ...prev, details: content }))
+                        }
+                      />
+                    </div>
+                  </CardBody>
+                </Card>
               </div>
 
               {/* Right Column - Product Images (Sticky) */}
@@ -955,24 +1284,28 @@ export default function SellerProductPage() {
                     <CardHeader className="bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-cyan-950/10 dark:to-blue-950/10 border-b">
                       <div className="flex items-center gap-2">
                         <span className="text-xl">🖼️</span>
-                        <h2 className="text-lg font-semibold text-foreground">Product Images</h2>
+                        <h2 className="text-lg font-semibold text-foreground">
+                          Product Images
+                        </h2>
                       </div>
                     </CardHeader>
                     <CardBody className="space-y-4">
                       {/* Show existing banner image if available */}
                       {existingBannerUrl && !bannerImage && (
                         <div className="space-y-2">
-                          <label className="text-sm font-medium text-foreground block">Current Banner Image</label>
+                          <label className="text-sm font-medium text-foreground block">
+                            Current Banner Image
+                          </label>
                           <div className="relative w-full h-32 rounded-lg overflow-hidden border-2 border-default-300">
                             <img
-                              src={existingBannerUrl}
                               alt="Current banner"
                               className="w-full h-full object-cover"
+                              src={existingBannerUrl}
                             />
                             <button
+                              className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm hover:bg-red-600 shadow-lg"
                               type="button"
                               onClick={() => setExistingBannerUrl(null)}
-                              className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm hover:bg-red-600 shadow-lg"
                             >
                               ✕
                             </button>
@@ -981,22 +1314,28 @@ export default function SellerProductPage() {
                       )}
 
                       <ImageUpload
-                        label={existingBannerUrl && !bannerImage ? "Replace Banner Image" : "Banner Image (Main product image)"}
+                        aspectRatio="landscape"
+                        disabled={loading}
+                        label={
+                          existingBannerUrl && !bannerImage
+                            ? "Replace Banner Image"
+                            : "Banner Image (Main product image)"
+                        }
                         value={null}
                         onChange={setBannerImage}
-                        disabled={loading}
-                        aspectRatio="landscape"
                       />
 
                       {/* Show existing product images if available */}
                       {existingImages.length > 0 && (
                         <div className="space-y-2">
                           <div className="flex items-center justify-between">
-                            <label className="text-sm font-medium text-foreground">Current Product Images</label>
+                            <label className="text-sm font-medium text-foreground">
+                              Current Product Images
+                            </label>
                             <Button
+                              color="danger"
                               size="sm"
                               variant="flat"
-                              color="danger"
                               onClick={() => setExistingImages([])}
                             >
                               Clear All
@@ -1004,16 +1343,25 @@ export default function SellerProductPage() {
                           </div>
                           <div className="grid grid-cols-3 gap-2">
                             {existingImages.map((img, idx) => (
-                              <div key={idx} className="relative w-full h-24 rounded-lg overflow-hidden border-2 border-default-300">
+                              <div
+                                key={idx}
+                                className="relative w-full h-24 rounded-lg overflow-hidden border-2 border-default-300"
+                              >
                                 <img
-                                  src={img.url}
-                                  alt={`Product image ${idx + 1}`}
+                                  alt={`${idx + 1}`}
                                   className="w-full h-full object-cover"
+                                  src={(img.url as string) || ""}
                                 />
                                 <button
-                                  type="button"
-                                  onClick={() => setExistingImages(existingImages.filter((_, i) => i !== idx))}
                                   className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs hover:bg-red-600 shadow-lg"
+                                  type="button"
+                                  onClick={() =>
+                                    setExistingImages(
+                                      existingImages.filter(
+                                        (_, i) => i !== idx,
+                                      ),
+                                    )
+                                  }
                                 >
                                   ✕
                                 </button>
@@ -1024,11 +1372,15 @@ export default function SellerProductPage() {
                       )}
 
                       <MultipleImageUpload
-                        label={existingImages.length > 0 ? "Add More Product Images" : "Additional Product Images"}
+                        disabled={loading}
+                        label={
+                          existingImages.length > 0
+                            ? "Add More Product Images"
+                            : "Additional Product Images"
+                        }
+                        maxImages={10}
                         value={productImages}
                         onChange={setProductImages}
-                        disabled={loading}
-                        maxImages={10}
                       />
                     </CardBody>
                   </Card>
@@ -1038,630 +1390,916 @@ export default function SellerProductPage() {
           ) : (
             <>
               {/* Variant Products Section */}
-            <div className="lg:col-span-2 space-y-6">
-              {/* Basic Information for Variants */}
-              <Card className="border border-default-200">
-                <CardHeader className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-950/10 dark:to-secondary-950/10 border-b">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">📝</span>
-                    <h2 className="text-lg font-semibold text-foreground">Basic Information</h2>
-                  </div>
-                </CardHeader>
-                <CardBody className="space-y-4">
-                  <Input
-                    label="Product Name"
-                    name="name"
-                    placeholder="e.g., Fresh Tomatoes"
-                    value={form.name}
-                    onChange={handleChange}
-                    required
-                    disabled={loading}
-                    size="lg"
-                  />
-
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Short Description</label>
-                    <textarea
-                      name="description"
-                      placeholder="Brief 1-2 line description shown on product cards"
-                      value={form.description}
-                      onChange={handleChange}
-                      disabled={loading}
-                      className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-16 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="text-sm font-medium text-foreground block mb-2">Category</label>
-                    <select
-                      name="categoryId"
-                      value={form.categoryId}
-                      onChange={handleChange}
-                      disabled={loading}
-                      required
-                      className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
-                    >
-                      <option value="">Select Category</option>
-                      {categories.map((cat) => (
-                        <option key={cat.id} value={cat.id.toString()}>
-                          {cat.name}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </CardBody>
-              </Card>
-
-              {/* Variant Configuration */}
-              <Card className="border border-default-200">
-                <CardHeader className="bg-gradient-to-r from-success-50 to-emerald-50 dark:from-success-950/10 dark:to-emerald-950/10 border-b">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">⚙️</span>
-                    <h2 className="text-lg font-semibold text-foreground">Variant Configuration</h2>
-                  </div>
-                </CardHeader>
-                <CardBody className="space-y-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Base SKU (Auto-generated from product name)</label>
-                    <Input
-                      name="sku"
-                      placeholder="Enter product name to auto-generate base SKU"
-                      value={form.sku}
-                      onChange={handleChange}
-                      required
-                      disabled={loading}
-                      size="lg"
-                      description={form.name ? "Auto-generated from product name. Each variant suffix is auto-generated from label." : "Product name is required to generate base SKU"}
-                    />
-                  </div>
-
-                  {/* Unit Type - Only for Shared Inventory */}
-                  {form.stockMergeType === 'merged' && (
-                    <div>
-                      <label className="text-sm font-medium text-foreground block mb-2">Unit Type</label>
-                      <select
-                        value={getUnitType(form.unit)}
-                        onChange={(e) => {
-                          const unitType = e.target.value as keyof typeof unitTypeMap
-                          const firstUnit = Object.keys(unitTypeMap[unitType].units)[0]
-                          setForm(prev => ({ ...prev, unit: firstUnit }))
-                        }}
-                        disabled={loading}
-                        className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-base"
-                      >
-                        {Object.entries(unitTypeMap).map(([key, data]) => (
-                          <option key={key} value={key}>{data.label}</option>
-                        ))}
-                      </select>
-                      <p className="text-xs text-default-500 mt-2">Variants will have different quantities of this unit type</p>
+              <div className="lg:col-span-2 space-y-6">
+                {/* Basic Information for Variants */}
+                <Card className="border border-default-200">
+                  <CardHeader className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-950/10 dark:to-secondary-950/10 border-b">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">📝</span>
+                      <h2 className="text-lg font-semibold text-foreground">
+                        Basic Information
+                      </h2>
                     </div>
-                  )}
+                  </CardHeader>
+                  <CardBody className="space-y-4">
+                    <Input
+                      disabled={loading}
+                      label="Product Name (Read Only | you can change name at variant section below)"
+                      name="name"
+                      placeholder="e.g., Fresh Tomatoes"
+                      readOnly={true}
+                      size="lg"
+                      value={form.name}
+                      // onChange={handleChange}
+                      required
+                    />
 
-                  <div className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-950/20 dark:to-secondary-950/20 rounded-lg p-4 border-2 border-primary-200 dark:border-primary-800 space-y-3">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-sm font-semibold text-primary-700 dark:text-primary-400">
-                          {form.stockMergeType === 'merged' ? '📦 Shared Inventory' : '📦 Independent Inventory'}
-                        </p>
-                        <p className="text-xs text-primary-600 dark:text-primary-500 mt-1">
-                          {form.stockMergeType === 'merged' ? 'All variants share the same inventory pool' : 'Each variant has independent stock tracking'}
-                        </p>
-                      </div>
-                      <Switch
-                        isSelected={form.stockMergeType === 'merged'}
-                        onValueChange={(value) => setForm(prev => ({ ...prev, stockMergeType: value ? 'merged' : 'independent' }))}
-                        color="primary"
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-foreground">
+                        Short Description
+                      </label>
+                      <textarea
+                        className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-16 focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
                         disabled={loading}
-                        size="lg"
+                        name="description"
+                        placeholder="Brief 1-2 line description shown on product cards"
+                        value={form.description}
+                        onChange={handleChange}
                       />
                     </div>
-                    
-                    {form.stockMergeType === 'merged' && (
-                      <div className="space-y-4">
-                        <div className="grid grid-cols-2 gap-4">
-                          <div>
-                            <label className="text-sm font-medium text-foreground block mb-2">Unit</label>
-                            <select
-                              value={form.unit}
-                              onChange={handleChange}
-                              name="unit"
-                              disabled={loading}
-                              className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-base"
-                            >
-                              {Object.entries(unitTypeMap[getUnitType(form.unit)].units).map(([value, label]) => (
-                                <option key={value} value={value}>{label}</option>
-                              ))}
-                            </select>
-                            <p className="text-xs text-default-500 mt-2">Shared across all variants</p>
-                          </div>
-                          <div>
-                            <label className="text-sm font-medium text-foreground block mb-2">Total Stock</label>
-                            <Input
-                              type="number"
-                              placeholder="0"
-                              value={form.stock}
-                              onChange={handleChange}
-                              name="stock"
-                              required
-                              disabled={loading}
-                              size="lg"
-                            />
-                          </div>
-                        </div>
+
+                    <div>
+                      <label className="text-sm font-medium text-foreground block mb-2">
+                        Category
+                      </label>
+                      <select
+                        required
+                        className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500"
+                        disabled={loading}
+                        name="categoryId"
+                        value={form.categoryId}
+                        onChange={handleChange}
+                      >
+                        <option value="">Select Category</option>
+                        {categories.map((cat) => (
+                          <option key={cat.id} value={cat.id.toString()}>
+                            {cat.name}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </CardBody>
+                </Card>
+
+                {/* Variant Configuration */}
+                <Card className="border border-default-200">
+                  <CardHeader className="bg-gradient-to-r from-success-50 to-emerald-50 dark:from-success-950/10 dark:to-emerald-950/10 border-b">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">⚙️</span>
+                      <h2 className="text-lg font-semibold text-foreground">
+                        Variant Configuration
+                      </h2>
+                    </div>
+                  </CardHeader>
+                  <CardBody className="space-y-4">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-foreground">
+                        Base SKU (Auto-generated from product name)
+                      </label>
+                      <Input
+                        required
+                        description={
+                          form.name
+                            ? "Auto-generated from product name. Each variant suffix is auto-generated from label."
+                            : "Product name is required to generate base SKU"
+                        }
+                        disabled={loading}
+                        name="sku"
+                        placeholder="Enter product name to auto-generate base SKU"
+                        size="lg"
+                        value={form.sku}
+                        onChange={handleChange}
+                      />
+                    </div>
+
+                    {/* Unit Type - Only for Shared Inventory */}
+                    {form.stockMergeType === "merged" && (
+                      <div>
+                        <label className="text-sm font-medium text-foreground block mb-2">
+                          Unit Type
+                        </label>
+                        <select
+                          className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-base"
+                          disabled={loading}
+                          value={getUnitType(form.unit)}
+                          onChange={(e) => {
+                            const unitType = e.target
+                              .value as keyof typeof unitTypeMap;
+                            const firstUnit = Object.keys(
+                              unitTypeMap[unitType].units,
+                            )[0];
+
+                            setForm((prev) => ({ ...prev, unit: firstUnit }));
+                          }}
+                        >
+                          {Object.entries(unitTypeMap).map(([key, data]) => (
+                            <option key={key} value={key}>
+                              {data.label}
+                            </option>
+                          ))}
+                        </select>
+                        <p className="text-xs text-default-500 mt-2">
+                          Variants will have different quantities of this unit
+                          type
+                        </p>
                       </div>
                     )}
-                  </div>
-                </CardBody>
-              </Card>
 
-              {/* Product Details */}
-              <Card className="border border-default-200">
-                <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/10 dark:to-pink-950/10 border-b">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">📖</span>
-                    <h2 className="text-lg font-semibold text-foreground">Detailed Information</h2>
-                  </div>
-                </CardHeader>
-                <CardBody className="space-y-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-foreground">Product Details</label>
-                    <RichTextEditor
-                      content={form.details}
-                      onChange={(content) => setForm(prev => ({ ...prev, details: content }))}
-                      placeholder="Enter detailed product information, specifications, ingredients, etc."
-                      disabled={loading}
-                    />
-                  </div>
-                </CardBody>
-              </Card>
+                    <div className="bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-950/20 dark:to-secondary-950/20 rounded-lg p-4 border-2 border-primary-200 dark:border-primary-800 space-y-3">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-sm font-semibold text-primary-700 dark:text-primary-400">
+                            {form.stockMergeType === "merged"
+                              ? "📦 Shared Inventory"
+                              : "📦 Independent Inventory"}
+                          </p>
+                          <p className="text-xs text-primary-600 dark:text-primary-500 mt-1">
+                            {form.stockMergeType === "merged"
+                              ? "All variants share the same inventory pool"
+                              : "Each variant has independent stock tracking"}
+                          </p>
+                        </div>
+                        <Switch
+                          color="primary"
+                          disabled={loading}
+                          isSelected={form.stockMergeType === "merged"}
+                          size="lg"
+                          onValueChange={(value) =>
+                            setForm((prev) => ({
+                              ...prev,
+                              stockMergeType: value ? "merged" : "independent",
+                            }))
+                          }
+                        />
+                      </div>
 
-              {/* Variants List */}
-              <Card className="border border-default-200">
-                <CardHeader className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-950/10 dark:to-blue-950/10 border-b flex justify-between items-center">
-                  <div className="flex items-center gap-2">
-                    <span className="text-xl">🎨</span>
-                    <div>
-                      <h2 className="text-lg font-semibold text-foreground">Product Variants</h2>
-                      <p className="text-sm text-default-500">Add different sizes or options</p>
-                    </div>
-                  </div>
-                  <Button
-                    size="md"
-                    color="primary"
-                    variant="flat"
-                    onPress={addVariant}
-                    disabled={loading}
-                    className="font-semibold"
-                  >
-                    + Add Variant
-                  </Button>
-                </CardHeader>
-                    <CardBody className="space-y-4">
-                      {variants.map((variant, index) => (
-                        <Card key={variant.id} className="border-2 border-default-200 dark:border-default-300">
-                          <CardBody className="space-y-4">
-                            {/* Variant Header with Title and Delete Button */}
-                            <div className="flex items-center justify-between pb-3 border-b-2 border-default-100">
-                              <div>
-                                <p className="text-lg font-semibold text-foreground">Variant {index + 1}</p>
-                                <p className="text-sm text-default-500 mt-1">{variant.label || 'New variant'}</p>
-                              </div>
-                              {variants.length > 2 && (
-                                <Button
-                                  isIconOnly
-                                  size="sm"
-                                  variant="light"
-                                  color="danger"
-                                  onPress={() => removeVariant(variant.id)}
-                                  disabled={loading}
-                                  title="Remove variant (minimum 2 required)"
-                                  className="hover:bg-danger-50"
-                                >
-                                  ✕
-                                </Button>
-                              )}
+                      {form.stockMergeType === "merged" && (
+                        <div className="space-y-4">
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <label className="text-sm font-medium text-foreground block mb-2">
+                                Unit
+                              </label>
+                              <select
+                                className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-base"
+                                disabled={loading}
+                                name="unit"
+                                value={form.unit}
+                                onChange={handleChange}
+                              >
+                                {Object.entries(
+                                  unitTypeMap[getUnitType(form.unit)].units,
+                                ).map(([value, label]) => (
+                                  <option key={value} value={value}>
+                                    {label}
+                                  </option>
+                                ))}
+                              </select>
+                              <p className="text-xs text-default-500 mt-2">
+                                Shared across all variants
+                              </p>
                             </div>
-
-                            {/* Variant Label and SKU */}
-                            <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <label className="text-sm font-medium text-foreground block mb-2">
+                                Total Stock
+                              </label>
                               <Input
-                                label="Variant Label"
-                                placeholder="e.g., 1kg, 2kg, 500gm, Red Small"
-                                value={variant.label}
-                                onChange={(e) => handleVariantChange(variant.id, 'label', e.target.value)}
-                                description="Enter label to auto-generate SKU suffix"
                                 required
                                 disabled={loading}
+                                name="stock"
+                                placeholder="0"
                                 size="lg"
+                                type="number"
+                                value={form.stock}
+                                onChange={handleChange}
                               />
+                            </div>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  </CardBody>
+                </Card>
 
-                              <div>
-                                <label className="text-sm font-medium text-foreground block mb-2">SKU</label>
-                                <div className="flex gap-2 items-end">
-                                  <div className="flex-1">
-                                    <Input
-                                      placeholder="Auto-generated from label"
-                                      value={variant.skuSuffix}
-                                      onChange={(e) => handleVariantChange(variant.id, 'skuSuffix', e.target.value)}
-                                      required
+                {/* Product Details */}
+                <Card className="border border-default-200">
+                  <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/10 dark:to-pink-950/10 border-b">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">📖</span>
+                      <h2 className="text-lg font-semibold text-foreground">
+                        Detailed Information
+                      </h2>
+                    </div>
+                  </CardHeader>
+                  <CardBody className="space-y-4">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-foreground">
+                        Product Details
+                      </label>
+                      <RichTextEditor
+                        content={form.details}
+                        disabled={loading}
+                        placeholder="Enter detailed product information, specifications, ingredients, etc."
+                        onChange={(content) =>
+                          setForm((prev) => ({ ...prev, details: content }))
+                        }
+                      />
+                    </div>
+                  </CardBody>
+                </Card>
+
+                {/* Variants List */}
+                <Card className="border border-default-200">
+                  <CardHeader className="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-950/10 dark:to-blue-950/10 border-b flex justify-between items-center">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl">🎨</span>
+                      <div>
+                        <h2 className="text-lg font-semibold text-foreground">
+                          Product Variants
+                        </h2>
+                        <p className="text-sm text-default-500">
+                          Add different sizes or options
+                        </p>
+                      </div>
+                    </div>
+                    <Button
+                      className="font-semibold"
+                      color="primary"
+                      disabled={loading}
+                      size="md"
+                      variant="flat"
+                      onPress={addVariant}
+                    >
+                      + Add Variant
+                    </Button>
+                  </CardHeader>
+                  <CardBody className="space-y-4">
+                    {variants.map((variant, index) => (
+                      <Card
+                        key={variant.id}
+                        className="border-2 border-default-200 dark:border-default-300"
+                      >
+                        <CardBody className="space-y-4">
+                          {/* Variant Header with Title and Delete Button */}
+                          <div className="flex items-center justify-between pb-3 border-b-2 border-default-100">
+                            <div>
+                              <p className="text-lg font-semibold text-foreground">
+                                Variant {index + 1}
+                              </p>
+                              <p className="text-sm text-default-500 mt-1">
+                                {variant.label || "New variant"}
+                              </p>
+                            </div>
+                            {variants.length > 2 && (
+                              <Button
+                                isIconOnly
+                                className="hover:bg-danger-50"
+                                color="danger"
+                                disabled={loading}
+                                size="sm"
+                                title="Remove variant (minimum 2 required)"
+                                variant="light"
+                                onPress={() => removeVariant(variant.id)}
+                              >
+                                ✕
+                              </Button>
+                            )}
+                          </div>
+
+                          {/* Variant Label and SKU */}
+                          <div className="grid grid-cols-2 gap-4">
+                            <Input
+                              required
+                              description="Enter label to auto-generate SKU suffix"
+                              disabled={loading}
+                              label="Variant Label"
+                              placeholder="e.g., 1kg, 2kg, 500gm, Red Small"
+                              size="lg"
+                              value={variant.label}
+                              onChange={(e) =>
+                                handleVariantChange(
+                                  variant.id,
+                                  "label",
+                                  e.target.value,
+                                )
+                              }
+                            />
+
+                            <div>
+                              <label className="text-sm font-medium text-foreground block mb-2">
+                                SKU
+                              </label>
+                              <div className="flex gap-2 items-end">
+                                <div className="flex-1">
+                                  <Input
+                                    required
+                                    description="Edit if needed"
+                                    disabled={loading}
+                                    placeholder="Auto-generated from label"
+                                    size="lg"
+                                    value={variant.skuSuffix}
+                                    onChange={(e) =>
+                                      handleVariantChange(
+                                        variant.id,
+                                        "skuSuffix",
+                                        e.target.value,
+                                      )
+                                    }
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Pricing */}
+                          <div>
+                            <label className="text-sm font-medium text-foreground block mb-2">
+                              Price (₹)
+                            </label>
+                            <Input
+                              required
+                              disabled={loading}
+                              placeholder="0.00"
+                              size="lg"
+                              step="0.01"
+                              type="number"
+                              value={variant.price}
+                              onChange={(e) =>
+                                handleVariantChange(
+                                  variant.id,
+                                  "price",
+                                  e.target.value,
+                                )
+                              }
+                            />
+                          </div>
+
+                          {/* Variant Unit and Quantity - Same Row */}
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <label className="text-sm font-medium text-foreground block mb-2">
+                                Variant Unit
+                              </label>
+                              <select
+                                className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-base"
+                                disabled={loading}
+                                value={variant.unit}
+                                onChange={(e) =>
+                                  handleVariantChange(
+                                    variant.id,
+                                    "unit",
+                                    e.target.value,
+                                  )
+                                }
+                              >
+                                {Object.entries(
+                                  unitTypeMap[getUnitType(form.unit)].units,
+                                ).map(([value, label]) => (
+                                  <option key={value} value={value}>
+                                    {label}
+                                  </option>
+                                ))}
+                              </select>
+                              {form.stockMergeType === "merged" && (
+                                <p className="text-xs text-default-500 mt-2">
+                                  Related to stock unit:{" "}
+                                  <span className="font-semibold">
+                                    {form.unit === "piece"
+                                      ? "Pieces"
+                                      : form.unit === "dozen"
+                                        ? "Dozens"
+                                        : form.unit === "gm"
+                                          ? "Grams"
+                                          : form.unit === "mg"
+                                            ? "Milligrams"
+                                            : form.unit === "kg"
+                                              ? "Kilograms"
+                                              : form.unit === "ml"
+                                                ? "Milliliters"
+                                                : "Liters"}
+                                  </span>
+                                </p>
+                              )}
+                            </div>
+                            <div>
+                              <label className="text-sm font-medium text-foreground block mb-2">
+                                {`Quantity (${variant.unit === "gm" ? "Gram" : variant.unit === "mg" ? "Milligram" : variant.unit === "ml" ? "Milliliter" : variant.unit.charAt(0).toUpperCase() + variant.unit.slice(1)})`}
+                              </label>
+                              <Input
+                                required
+                                disabled={loading}
+                                placeholder="e.g., 500"
+                                size="lg"
+                                step="0.01"
+                                type="number"
+                                value={variant.quantity}
+                                onChange={(e) =>
+                                  handleVariantChange(
+                                    variant.id,
+                                    "quantity",
+                                    e.target.value,
+                                  )
+                                }
+                              />
+                            </div>
+                          </div>
+
+                          {/* Stock Input - Only for Independent Mode */}
+                          {form.stockMergeType === "independent" && (
+                            <div>
+                              <label className="text-sm font-medium text-foreground block mb-2">
+                                Stock
+                              </label>
+                              <Input
+                                required
+                                description="Stock for this variant only"
+                                disabled={loading}
+                                placeholder="0"
+                                size="lg"
+                                type="number"
+                                value={variant.stock}
+                                onChange={(e) =>
+                                  handleVariantChange(
+                                    variant.id,
+                                    "stock",
+                                    e.target.value,
+                                  )
+                                }
+                              />
+                            </div>
+                          )}
+
+                          {/* Discount Section */}
+                          <div className="bg-gradient-to-r from-warning-50 to-amber-50 dark:from-warning-950/20 dark:to-amber-950/20 rounded-lg p-4 border-2 border-warning-200 dark:border-warning-800 space-y-3">
+                            <div className="flex items-center gap-2">
+                              <Switch
+                                color="warning"
+                                disabled={loading}
+                                isSelected={variant.isDiscountActive}
+                                size="lg"
+                                onValueChange={(value) =>
+                                  handleVariantChange(
+                                    variant.id,
+                                    "isDiscountActive",
+                                    value ? "true" : "false",
+                                  )
+                                }
+                              />
+                              <label className="text-sm font-semibold text-warning-700 dark:text-warning-400">
+                                Apply Discount
+                              </label>
+                            </div>
+                            {variant.isDiscountActive && (
+                              <div className="space-y-3">
+                                <div className="grid grid-cols-2 gap-3">
+                                  <div>
+                                    <label className="text-sm font-medium text-foreground block mb-1">
+                                      Discount Type
+                                    </label>
+                                    <select
+                                      className="w-full px-3 py-2 text-sm border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-warning-500"
                                       disabled={loading}
-                                      size="lg"
-                                      description="Edit if needed"
+                                      value={variant.discountType}
+                                      onChange={(e) =>
+                                        handleVariantChange(
+                                          variant.id,
+                                          "discountType",
+                                          e.target.value,
+                                        )
+                                      }
+                                    >
+                                      <option value="percentage">
+                                        Percentage (%)
+                                      </option>
+                                      <option value="fixed_amount">
+                                        Fixed Amount (₹)
+                                      </option>
+                                    </select>
+                                  </div>
+                                  <div>
+                                    <label className="text-sm font-medium text-foreground block mb-1">
+                                      {variant.discountType === "percentage"
+                                        ? "Discount (%)"
+                                        : "Discount (₹)"}
+                                    </label>
+                                    <Input
+                                      disabled={loading}
+                                      max={
+                                        variant.discountType === "percentage"
+                                          ? "100"
+                                          : undefined
+                                      }
+                                      placeholder={
+                                        variant.discountType === "percentage"
+                                          ? "0-100"
+                                          : "0.00"
+                                      }
+                                      size="sm"
+                                      step={
+                                        variant.discountType === "percentage"
+                                          ? "1"
+                                          : "0.01"
+                                      }
+                                      type="number"
+                                      value={variant.discountValue}
+                                      onChange={(e) =>
+                                        handleVariantChange(
+                                          variant.id,
+                                          "discountValue",
+                                          e.target.value,
+                                        )
+                                      }
                                     />
                                   </div>
                                 </div>
-                              </div>
-                            </div>
-
-                            {/* Pricing */}
-                            <div>
-                              <label className="text-sm font-medium text-foreground block mb-2">Price (₹)</label>
-                              <Input
-                                type="number"
-                                placeholder="0.00"
-                                step="0.01"
-                                value={variant.price}
-                                onChange={(e) => handleVariantChange(variant.id, 'price', e.target.value)}
-                                required
-                                disabled={loading}
-                                size="lg"
-                              />
-                            </div>
-
-                            {/* Variant Unit and Quantity - Same Row */}
-                            <div className="grid grid-cols-2 gap-4">
-                              <div>
-                                <label className="text-sm font-medium text-foreground block mb-2">Variant Unit</label>
-                                <select
-                                  value={variant.unit}
-                                  onChange={(e) => handleVariantChange(variant.id, 'unit', e.target.value)}
-                                  disabled={loading}
-                                  className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500 text-base"
-                                >
-                                  {Object.entries(unitTypeMap[getUnitType(form.unit)].units).map(([value, label]) => (
-                                    <option key={value} value={value}>{label}</option>
-                                  ))}
-                                </select>
-                                {form.stockMergeType === 'merged' && (
-                                  <p className="text-xs text-default-500 mt-2">
-                                    Related to stock unit: <span className="font-semibold">{form.unit === 'piece' ? 'Pieces' : form.unit === 'dozen' ? 'Dozens' : form.unit === 'gm' ? 'Grams' : form.unit === 'mg' ? 'Milligrams' : form.unit === 'kg' ? 'Kilograms' : form.unit === 'ml' ? 'Milliliters' : 'Liters'}</span>
-                                  </p>
+                                {variant.price && variant.discountValue && (
+                                  <div className="p-3 bg-white dark:bg-default-100 rounded-lg border border-warning-300 dark:border-warning-700 text-center">
+                                    <p className="text-xs text-default-600 mb-1">
+                                      Final Price
+                                    </p>
+                                    <p className="text-lg font-bold text-success-600 dark:text-success-400">
+                                      ₹
+                                      {variant.discountType === "percentage"
+                                        ? (
+                                            parseFloat(variant.price) -
+                                            (parseFloat(variant.price) *
+                                              parseFloat(
+                                                variant.discountValue,
+                                              )) /
+                                              100
+                                          ).toFixed(2)
+                                        : (
+                                            parseFloat(variant.price) -
+                                            parseFloat(variant.discountValue)
+                                          ).toFixed(2)}
+                                    </p>
+                                  </div>
                                 )}
                               </div>
-                              <div>
-                                <label className="text-sm font-medium text-foreground block mb-2">
-                                  {`Quantity (${variant.unit === 'gm' ? 'Gram' : variant.unit === 'mg' ? 'Milligram' : variant.unit === 'ml' ? 'Milliliter' : variant.unit.charAt(0).toUpperCase() + variant.unit.slice(1)})`}
-                                </label>
-                                <Input
-                                  type="number"
-                                  placeholder="e.g., 500"
-                                  step="0.01"
-                                  value={variant.quantity}
-                                  onChange={(e) => handleVariantChange(variant.id, 'quantity', e.target.value)}
-                                  required
-                                  disabled={loading}
-                                  size="lg"
-                                />
-                              </div>
-                            </div>
-
-                            {/* Stock Input - Only for Independent Mode */}
-                            {form.stockMergeType === 'independent' && (
-                              <div>
-                                <label className="text-sm font-medium text-foreground block mb-2">Stock</label>
-                                <Input
-                                  type="number"
-                                  placeholder="0"
-                                  value={variant.stock}
-                                  onChange={(e) => handleVariantChange(variant.id, 'stock', e.target.value)}
-                                  required
-                                  disabled={loading}
-                                  size="lg"
-                                  description="Stock for this variant only"
-                                />
-                              </div>
                             )}
+                          </div>
 
-                            {/* Discount Section */}
-                            <div className="bg-gradient-to-r from-warning-50 to-amber-50 dark:from-warning-950/20 dark:to-amber-950/20 rounded-lg p-4 border-2 border-warning-200 dark:border-warning-800 space-y-3">
-                              <div className="flex items-center gap-2">
-                                <Switch
-                                  isSelected={variant.isDiscountActive}
-                                  onValueChange={(value) => handleVariantChange(variant.id, 'isDiscountActive', value ? 'true' : 'false')}
-                                  color="warning"
+                          {/* Full Name Preview */}
+                          <div className="p-3 bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-950/20 dark:to-secondary-950/20 rounded-lg border border-primary-200 dark:border-primary-800">
+                            <p className="text-xs text-default-600 mb-1">
+                              Full Product Name
+                            </p>
+                            <p className="text-sm font-semibold text-foreground">
+                              {form.name} {variant.label}
+                            </p>
+                          </div>
+
+                          {/* Independent Mode: Variant-specific assets */}
+                          {form.stockMergeType === "independent" && (
+                            <div className="space-y-4 pt-4 border-t-2 border-default-200">
+                              <p className="text-sm font-semibold text-foreground">
+                                Variant-Specific Assets
+                              </p>
+
+                              {/* Variant Description */}
+                              <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 rounded-lg p-4 border-2 border-blue-200 dark:border-blue-800">
+                                <div className="flex items-center gap-2 mb-3 pb-3 border-b border-blue-200 dark:border-blue-800">
+                                  <span className="text-xl">📝</span>
+                                  <label className="text-sm font-semibold text-blue-700 dark:text-blue-400">
+                                    Description
+                                  </label>
+                                </div>
+                                <textarea
+                                  className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-20 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                                   disabled={loading}
-                                  size="lg"
+                                  placeholder="Variant-specific description for this size/option"
+                                  value={variant.description}
+                                  onChange={(e) =>
+                                    handleVariantChange(
+                                      variant.id,
+                                      "description",
+                                      e.target.value,
+                                    )
+                                  }
                                 />
-                                <label className="text-sm font-semibold text-warning-700 dark:text-warning-400">Apply Discount</label>
                               </div>
-                              {variant.isDiscountActive && (
-                                <div className="space-y-3">
-                                  <div className="grid grid-cols-2 gap-3">
-                                    <div>
-                                      <label className="text-sm font-medium text-foreground block mb-1">Discount Type</label>
-                                      <select
-                                        value={variant.discountType}
-                                        onChange={(e) => handleVariantChange(variant.id, 'discountType', e.target.value)}
-                                        disabled={loading}
-                                        className="w-full px-3 py-2 text-sm border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground focus:outline-none focus:border-warning-500"
-                                      >
-                                        <option value="percentage">Percentage (%)</option>
-                                        <option value="fixed_amount">Fixed Amount (₹)</option>
-                                      </select>
-                                    </div>
-                                    <div>
-                                      <label className="text-sm font-medium text-foreground block mb-1">{variant.discountType === 'percentage' ? 'Discount (%)' : 'Discount (₹)'}</label>
-                                      <Input
-                                        type="number"
-                                        placeholder={variant.discountType === 'percentage' ? '0-100' : '0.00'}
-                                        step={variant.discountType === 'percentage' ? '1' : '0.01'}
-                                        max={variant.discountType === 'percentage' ? '100' : undefined}
-                                        value={variant.discountValue}
-                                        onChange={(e) => handleVariantChange(variant.id, 'discountValue', e.target.value)}
-                                        disabled={loading}
-                                        size="sm"
-                                      />
-                                    </div>
-                                  </div>
-                                  {variant.price && variant.discountValue && (
-                                    <div className="p-3 bg-white dark:bg-default-100 rounded-lg border border-warning-300 dark:border-warning-700 text-center">
-                                      <p className="text-xs text-default-600 mb-1">Final Price</p>
-                                      <p className="text-lg font-bold text-success-600 dark:text-success-400">
-                                        ₹{
-                                          variant.discountType === 'percentage'
-                                            ? (parseFloat(variant.price) - (parseFloat(variant.price) * parseFloat(variant.discountValue) / 100)).toFixed(2)
-                                            : (parseFloat(variant.price) - parseFloat(variant.discountValue)).toFixed(2)
+
+                              {/* Variant Detailed Information */}
+                              <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20 rounded-lg p-4 border-2 border-indigo-200 dark:border-indigo-800">
+                                <div className="flex items-center gap-2 mb-3 pb-3 border-b border-indigo-200 dark:border-indigo-800">
+                                  <span className="text-xl">📖</span>
+                                  <label className="text-sm font-semibold text-indigo-700 dark:text-indigo-400">
+                                    Detailed Information
+                                  </label>
+                                </div>
+                                <RichTextEditor
+                                  content={variant.details}
+                                  disabled={loading}
+                                  placeholder="Enter detailed product information, specifications, ingredients, etc. for this variant"
+                                  onChange={(content) =>
+                                    handleVariantChange(
+                                      variant.id,
+                                      "details",
+                                      content,
+                                    )
+                                  }
+                                />
+                              </div>
+
+                              {/* Variant Banner Image */}
+                              <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-lg p-4 border-2 border-green-200 dark:border-green-800">
+                                <div className="flex items-center gap-2 mb-3 pb-3 border-b border-green-200 dark:border-green-800">
+                                  <span className="text-xl">🖼️</span>
+                                  <label className="text-sm font-semibold text-green-700 dark:text-green-400">
+                                    Banner Image
+                                  </label>
+                                </div>
+                                <div className="flex flex-col gap-3">
+                                  {(variant.bannerImage ||
+                                    variant.existingBannerImage) && (
+                                    <div className="relative w-full h-32 rounded-lg overflow-hidden border-2 border-default-300">
+                                      <img
+                                        alt={`Variant ${index + 1} banner`}
+                                        className="w-full h-full object-cover"
+                                        src={
+                                          variant.bannerImage
+                                            ? URL.createObjectURL(
+                                                variant.bannerImage,
+                                              )
+                                            : variant.existingBannerImage?.url
                                         }
-                                      </p>
+                                      />
+                                      <button
+                                        className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm hover:bg-red-600 shadow-lg"
+                                        type="button"
+                                        onClick={() =>
+                                          handleVariantChange(
+                                            variant.id,
+                                            "bannerImage",
+                                            null,
+                                          )
+                                        }
+                                      >
+                                        ✕
+                                      </button>
                                     </div>
                                   )}
+                                  <label className="w-full px-4 py-3 border-2 border-dashed border-green-300 dark:border-green-700 rounded-lg cursor-pointer hover:border-green-400 hover:bg-green-50 dark:hover:bg-green-950/30 flex flex-col items-center justify-center gap-2 transition">
+                                    <input
+                                      accept="image/*"
+                                      className="hidden"
+                                      disabled={loading}
+                                      type="file"
+                                      onChange={(e) => {
+                                        const file = e.target.files?.[0];
+
+                                        if (file)
+                                          handleVariantChange(
+                                            variant.id,
+                                            "bannerImage",
+                                            file,
+                                          );
+                                      }}
+                                    />
+                                    <span className="text-2xl">📤</span>
+                                    <span className="text-sm font-medium text-foreground">
+                                      Click to upload banner image
+                                    </span>
+                                  </label>
                                 </div>
-                              )}
-                            </div>
+                              </div>
 
-                            {/* Full Name Preview */}
-                            <div className="p-3 bg-gradient-to-r from-primary-50 to-secondary-50 dark:from-primary-950/20 dark:to-secondary-950/20 rounded-lg border border-primary-200 dark:border-primary-800">
-                              <p className="text-xs text-default-600 mb-1">Full Product Name</p>
-                              <p className="text-sm font-semibold text-foreground">{form.name} {variant.label}</p>
-                            </div>
-
-                            {/* Independent Mode: Variant-specific assets */}
-                            {form.stockMergeType === 'independent' && (
-                              <div className="space-y-4 pt-4 border-t-2 border-default-200">
-                                <p className="text-sm font-semibold text-foreground">Variant-Specific Assets</p>
-
-                                {/* Variant Description */}
-                                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-950/20 dark:to-cyan-950/20 rounded-lg p-4 border-2 border-blue-200 dark:border-blue-800">
-                                  <div className="flex items-center gap-2 mb-3 pb-3 border-b border-blue-200 dark:border-blue-800">
-                                    <span className="text-xl">📝</span>
-                                    <label className="text-sm font-semibold text-blue-700 dark:text-blue-400">Description</label>
-                                  </div>
-                                  <textarea
-                                    placeholder="Variant-specific description for this size/option"
-                                    value={variant.description}
-                                    onChange={(e) => handleVariantChange(variant.id, 'description', e.target.value)}
-                                    disabled={loading}
-                                    className="w-full px-4 py-2 border border-default-200 rounded-lg bg-white dark:bg-default-100 text-foreground min-h-20 text-sm focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-                                  />
+                              {/* Variant Images */}
+                              <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20 rounded-lg p-4 border-2 border-purple-200 dark:border-purple-800">
+                                <div className="flex items-center gap-2 mb-3 pb-3 border-b border-purple-200 dark:border-purple-800">
+                                  <span className="text-xl">🎨</span>
+                                  <label className="text-sm font-semibold text-purple-700 dark:text-purple-400">
+                                    Product Images
+                                  </label>
                                 </div>
+                                <div className="space-y-3">
+                                  <div className="flex flex-wrap gap-3">
+                                    {variant.images.map((img, imgIdx) => {
+                                      // Handle both File objects (new uploads) and API objects (existing images)
+                                      const imageSrc =
+                                        img instanceof File
+                                          ? URL.createObjectURL(img)
+                                          : ((img.upload as Record<string, unknown>)?.url as string) || (img.url as string) || "";
 
-                                {/* Variant Detailed Information */}
-                                <div className="bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20 rounded-lg p-4 border-2 border-indigo-200 dark:border-indigo-800">
-                                  <div className="flex items-center gap-2 mb-3 pb-3 border-b border-indigo-200 dark:border-indigo-800">
-                                    <span className="text-xl">📖</span>
-                                    <label className="text-sm font-semibold text-indigo-700 dark:text-indigo-400">Detailed Information</label>
-                                  </div>
-                                  <RichTextEditor
-                                    content={variant.details}
-                                    onChange={(content) => handleVariantChange(variant.id, 'details', content)}
-                                    placeholder="Enter detailed product information, specifications, ingredients, etc. for this variant"
-                                    disabled={loading}
-                                  />
-                                </div>
-
-                                {/* Variant Banner Image */}
-                                <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-lg p-4 border-2 border-green-200 dark:border-green-800">
-                                  <div className="flex items-center gap-2 mb-3 pb-3 border-b border-green-200 dark:border-green-800">
-                                    <span className="text-xl">🖼️</span>
-                                    <label className="text-sm font-semibold text-green-700 dark:text-green-400">Banner Image</label>
-                                  </div>
-                                  <div className="flex flex-col gap-3">
-                                      {(variant.bannerImage || variant.existingBannerImage) && (
-                                        <div className="relative w-full h-32 rounded-lg overflow-hidden border-2 border-default-300">
+                                      return (
+                                        <div
+                                          key={imgIdx}
+                                          className="relative w-24 h-24 rounded-lg overflow-hidden border-2 border-default-300 hover:border-purple-400 transition"
+                                        >
                                           <img
-                                            src={variant.bannerImage ? URL.createObjectURL(variant.bannerImage) : variant.existingBannerImage?.url}
-                                            alt={`Variant ${index + 1} banner`}
+                                            alt={`Variant ${index + 1} image ${imgIdx + 1}`}
                                             className="w-full h-full object-cover"
+                                            src={imageSrc}
                                           />
                                           <button
+                                            className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600 shadow-md"
                                             type="button"
-                                            onClick={() => handleVariantChange(variant.id, 'bannerImage', null)}
-                                            className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm hover:bg-red-600 shadow-lg"
+                                            onClick={() => {
+                                              const newImages =
+                                                variant.images.filter(
+                                                  (_, i) => i !== imgIdx,
+                                                );
+
+                                              setVariants(
+                                                variants.map((v) =>
+                                                  v.id === variant.id
+                                                    ? {
+                                                        ...v,
+                                                        images: newImages,
+                                                      }
+                                                    : v,
+                                                ),
+                                              );
+                                            }}
                                           >
                                             ✕
                                           </button>
                                         </div>
-                                      )}
-                                      <label className="w-full px-4 py-3 border-2 border-dashed border-green-300 dark:border-green-700 rounded-lg cursor-pointer hover:border-green-400 hover:bg-green-50 dark:hover:bg-green-950/30 flex flex-col items-center justify-center gap-2 transition">
-                                        <input
-                                          type="file"
-                                          accept="image/*"
-                                          className="hidden"
-                                          onChange={(e) => {
-                                            const file = e.target.files?.[0]
-                                            if (file) handleVariantChange(variant.id, 'bannerImage', file)
-                                          }}
-                                          disabled={loading}
-                                        />
-                                        <span className="text-2xl">📤</span>
-                                        <span className="text-sm font-medium text-foreground">Click to upload banner image</span>
-                                      </label>
-                                    </div>
-                                </div>
+                                      );
+                                    })}
+                                    <label className="w-24 h-24 rounded-lg border-2 border-dashed border-purple-300 dark:border-purple-700 flex items-center justify-center cursor-pointer hover:border-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/30 transition">
+                                      <input
+                                        multiple
+                                        accept="image/*"
+                                        className="hidden"
+                                        disabled={loading}
+                                        type="file"
+                                        onChange={(e) => {
+                                          const newFiles = Array.from(
+                                            e.target.files || [],
+                                          );
+                                          const updatedImages = [
+                                            ...variant.images,
+                                            ...newFiles,
+                                          ];
 
-                                {/* Variant Images */}
-                                <div className="bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/20 dark:to-pink-950/20 rounded-lg p-4 border-2 border-purple-200 dark:border-purple-800">
-                                  <div className="flex items-center gap-2 mb-3 pb-3 border-b border-purple-200 dark:border-purple-800">
-                                    <span className="text-xl">🎨</span>
-                                    <label className="text-sm font-semibold text-purple-700 dark:text-purple-400">Product Images</label>
+                                          setVariants(
+                                            variants.map((v) =>
+                                              v.id === variant.id
+                                                ? {
+                                                    ...v,
+                                                    images: updatedImages,
+                                                  }
+                                                : v,
+                                            ),
+                                          );
+                                        }}
+                                      />
+                                      <span className="text-3xl">+</span>
+                                    </label>
                                   </div>
-                                  <div className="space-y-3">
-                                      <div className="flex flex-wrap gap-3">
-                                        {variant.images.map((img, imgIdx) => {
-                                          // Handle both File objects (new uploads) and API objects (existing images)
-                                          const imageSrc = img instanceof File 
-                                            ? URL.createObjectURL(img)
-                                            : (img.upload?.url || img.url)
-                                          
-                                          return (
-                                            <div key={imgIdx} className="relative w-24 h-24 rounded-lg overflow-hidden border-2 border-default-300 hover:border-purple-400 transition">
-                                              <img
-                                                src={imageSrc}
-                                                alt={`Variant ${index + 1} image ${imgIdx + 1}`}
-                                                className="w-full h-full object-cover"
-                                              />
-                                              <button
-                                                type="button"
-                                                onClick={() => {
-                                                  const newImages = variant.images.filter((_, i) => i !== imgIdx)
-                                                  setVariants(variants.map(v => v.id === variant.id ? { ...v, images: newImages } : v))
-                                                }}
-                                                className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs hover:bg-red-600 shadow-md"
-                                              >
-                                                ✕
-                                              </button>
-                                            </div>
-                                          )
-                                        })}
-                                        <label className="w-24 h-24 rounded-lg border-2 border-dashed border-purple-300 dark:border-purple-700 flex items-center justify-center cursor-pointer hover:border-purple-400 hover:bg-purple-50 dark:hover:bg-purple-950/30 transition">
-                                          <input
-                                            type="file"
-                                            multiple
-                                            accept="image/*"
-                                            className="hidden"
-                                            onChange={(e) => {
-                                              const newFiles = Array.from(e.target.files || [])
-                                              const updatedImages = [...variant.images, ...newFiles]
-                                              setVariants(variants.map(v => v.id === variant.id ? { ...v, images: updatedImages } : v))
-                                            }}
-                                            disabled={loading}
-                                          />
-                                          <span className="text-3xl">+</span>
-                                        </label>
-                                      </div>
-                                      <p className="text-xs text-default-600">Add up to 10 images per variant</p>
-                                  </div>
+                                  <p className="text-xs text-default-600">
+                                    Add up to 10 images per variant
+                                  </p>
                                 </div>
                               </div>
-                            )}
-                          </CardBody>
-                        </Card>
-                      ))}
-                    </CardBody>
-                  </Card>
-            </div>
-
-            {/* Right Column - Product Images (Sticky) */}
-            <div className="lg:col-span-1">
-              <div className="sticky top-20 space-y-6">
-                {/* Media Section */}
-                <Card className="border border-default-200">
-                  <CardHeader className="bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-cyan-950/10 dark:to-blue-950/10 border-b">
-                    <div className="flex items-center gap-2">
-                      <span className="text-xl">🖼️</span>
-                      <h2 className="text-lg font-semibold text-foreground">Product Images</h2>
-                    </div>
-                  </CardHeader>
-                  <CardBody className="space-y-4">
-                    {form.stockMergeType === 'merged' && (
-                      <>
-                        {existingBannerUrl && !bannerImage && (
-                          <div className="space-y-2">
-                            <label className="text-sm font-medium text-foreground block">Current Banner Image</label>
-                            <div className="relative w-full h-32 rounded-lg overflow-hidden border-2 border-default-300">
-                              <img
-                                src={existingBannerUrl}
-                                alt="Current banner"
-                                className="w-full h-full object-cover"
-                              />
-                              <button
-                                type="button"
-                                onClick={() => setExistingBannerUrl(null)}
-                                className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm hover:bg-red-600 shadow-lg"
-                              >
-                                ✕
-                              </button>
                             </div>
-                          </div>
-                        )}
-                        <ImageUpload
-                          label={existingBannerUrl && !bannerImage ? "Replace Banner Image" : "Banner Image (applies to all variants)"}
-                          value={null}
-                          onChange={setBannerImage}
-                          disabled={loading}
-                          aspectRatio="landscape"
-                        />
-
-                        {existingImages.length > 0 && productImages.length === 0 && (
-                          <div className="space-y-2">
-                            <div className="flex items-center justify-between">
-                              <label className="text-sm font-medium text-foreground">Current Product Images</label>
-                              <Button
-                                size="sm"
-                                variant="flat"
-                                color="danger"
-                                onClick={() => setExistingImages([])}
-                              >
-                                Clear All
-                              </Button>
-                            </div>
-                            <div className="grid grid-cols-3 gap-2">
-                              {existingImages.map((img, idx) => (
-                                <div key={idx} className="relative w-full h-24 rounded-lg overflow-hidden border-2 border-default-300">
-                                  <img
-                                    src={img.url}
-                                    alt={`Product image ${idx + 1}`}
-                                    className="w-full h-full object-cover"
-                                  />
-                                  <button
-                                    type="button"
-                                    onClick={() => setExistingImages(existingImages.filter((_, i) => i !== idx))}
-                                    className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs hover:bg-red-600 shadow-lg"
-                                  >
-                                    ✕
-                                  </button>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        )}
-
-                        <MultipleImageUpload
-                          label={existingImages.length > 0 && productImages.length === 0 ? "Add More Product Images" : "Product Images (applies to all variants)"}
-                          value={productImages}
-                          onChange={setProductImages}
-                          disabled={loading}
-                          maxImages={10}
-                        />
-                      </>
-                    )}
-                    {form.stockMergeType === 'independent' && (
-                      <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-3 border border-blue-200 dark:border-blue-800">
-                        <p className="text-sm text-blue-700 dark:text-blue-400 mb-2">
-                          📝 Variant-specific images are configured in each variant's settings below
-                        </p>
-                        <p className="text-xs text-blue-600 dark:text-blue-500">
-                          Add custom banner images and product images for each variant to showcase different perspectives
-                        </p>
-                      </div>
-                    )}
+                          )}
+                        </CardBody>
+                      </Card>
+                    ))}
                   </CardBody>
                 </Card>
               </div>
-            </div>
 
-            {/* Submit Section moved outside form */}
-          </>
+              {/* Right Column - Product Images (Sticky) */}
+              <div className="lg:col-span-1">
+                <div className="sticky top-20 space-y-6">
+                  {/* Media Section */}
+                  <Card className="border border-default-200">
+                    <CardHeader className="bg-gradient-to-r from-cyan-50 to-blue-50 dark:from-cyan-950/10 dark:to-blue-950/10 border-b">
+                      <div className="flex items-center gap-2">
+                        <span className="text-xl">🖼️</span>
+                        <h2 className="text-lg font-semibold text-foreground">
+                          Product Images
+                        </h2>
+                      </div>
+                    </CardHeader>
+                    <CardBody className="space-y-4">
+                      {form.stockMergeType === "merged" && (
+                        <>
+                          {existingBannerUrl && !bannerImage && (
+                            <div className="space-y-2">
+                              <label className="text-sm font-medium text-foreground block">
+                                Current Banner Image
+                              </label>
+                              <div className="relative w-full h-32 rounded-lg overflow-hidden border-2 border-default-300">
+                                <img
+                                  alt="Current banner"
+                                  className="w-full h-full object-cover"
+                                  src={existingBannerUrl}
+                                />
+                                <button
+                                  className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-7 h-7 flex items-center justify-center text-sm hover:bg-red-600 shadow-lg"
+                                  type="button"
+                                  onClick={() => setExistingBannerUrl(null)}
+                                >
+                                  ✕
+                                </button>
+                              </div>
+                            </div>
+                          )}
+                          <ImageUpload
+                            aspectRatio="landscape"
+                            disabled={loading}
+                            label={
+                              existingBannerUrl && !bannerImage
+                                ? "Replace Banner Image"
+                                : "Banner Image (applies to all variants)"
+                            }
+                            value={null}
+                            onChange={setBannerImage}
+                          />
+
+                          {existingImages.length > 0 &&
+                            productImages.length === 0 && (
+                              <div className="space-y-2">
+                                <div className="flex items-center justify-between">
+                                  <label className="text-sm font-medium text-foreground">
+                                    Current Product Images
+                                  </label>
+                                  <Button
+                                    color="danger"
+                                    size="sm"
+                                    variant="flat"
+                                    onClick={() => setExistingImages([])}
+                                  >
+                                    Clear All
+                                  </Button>
+                                </div>
+                                <div className="grid grid-cols-3 gap-2">
+                                  {existingImages.map((img, idx) => (
+                                    <div
+                                      key={idx}
+                                      className="relative w-full h-24 rounded-lg overflow-hidden border-2 border-default-300"
+                                    >
+                                      <img
+                                        alt={`Product image ${idx + 1}`}
+                                        className="w-full h-full object-cover"
+                                        src={(img.url as string) || ""}
+                                      />
+                                      <button
+                                        className="absolute top-1 right-1 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs hover:bg-red-600 shadow-lg"
+                                        type="button"
+                                        onClick={() =>
+                                          setExistingImages(
+                                            existingImages.filter(
+                                              (_, i) => i !== idx,
+                                            ),
+                                          )
+                                        }
+                                      >
+                                        ✕
+                                      </button>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+
+                          <MultipleImageUpload
+                            disabled={loading}
+                            label={
+                              existingImages.length > 0 &&
+                              productImages.length === 0
+                                ? "Add More Product Images"
+                                : "Product Images (applies to all variants)"
+                            }
+                            maxImages={10}
+                            value={productImages}
+                            onChange={setProductImages}
+                          />
+                        </>
+                      )}
+                      {form.stockMergeType === "independent" && (
+                        <div className="bg-blue-50 dark:bg-blue-950/20 rounded-lg p-3 border border-blue-200 dark:border-blue-800">
+                          <p className="text-sm text-blue-700 dark:text-blue-400 mb-2">
+                            📝 Variant-specific images are configured in each
+                            variant&apos;s settings below
+                          </p>
+                          <p className="text-xs text-blue-600 dark:text-blue-500">
+                            Add custom banner images and product images for each
+                            variant to showcase different perspectives
+                          </p>
+                        </div>
+                      )}
+                    </CardBody>
+                  </Card>
+                </div>
+              </div>
+
+              {/* Submit Section moved outside form */}
+            </>
           )}
         </form>
       </div>
@@ -1669,25 +2307,31 @@ export default function SellerProductPage() {
       {/* Fixed Button - Outside containers to always be visible */}
       <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-default-100 border-t border-default-200 p-4 flex gap-3 z-50 shadow-lg">
         <div className="max-w-6xl mx-auto px-2 sm:px-4 w-full flex gap-3">
-          <Link href={`/seller/${orgId}/products`} className="flex-1">
-            <Button fullWidth variant="bordered" disabled={loading} size="lg">
+          <Link className="flex-1" href={`/seller/${orgId}/products`}>
+            <Button fullWidth disabled={loading} size="lg" variant="bordered">
               ← Cancel
             </Button>
           </Link>
           <Button
             fullWidth
+            className="font-semibold"
             color="primary"
-            type="submit"
+            disabled={loading || fetching}
             form="product-form"
             isLoading={loading}
-            disabled={loading || fetching}
             size="lg"
-            className="font-semibold"
+            type="submit"
           >
-            {loading ? (isEditMode ? 'Updating...' : 'Creating...') : (isEditMode ? '✓ Update Product' : '✓ Create Product')}
+            {loading
+              ? isEditMode
+                ? "Updating..."
+                : "Creating..."
+              : isEditMode
+                ? "✓ Update Product"
+                : "✓ Create Product"}
           </Button>
         </div>
       </div>
     </main>
-  )
+  );
 }

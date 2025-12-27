@@ -1,11 +1,11 @@
-import {heroui} from "@heroui/theme"
+import { heroui } from "@heroui/theme";
 
 /** @type {import('tailwindcss').Config} */
 const config = {
   content: [
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}"
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -15,12 +15,12 @@ const config = {
       },
       colors: {
         // Theme colors are injected via CSS variables
-        'theme-primary': 'hsl(var(--theme-primary))',
-        'theme-secondary': 'hsl(var(--theme-secondary))',
-        'theme-accent': 'hsl(var(--theme-accent))',
-        'theme-success': 'hsl(var(--theme-success))',
-        'theme-warning': 'hsl(var(--theme-warning))',
-        'theme-danger': 'hsl(var(--theme-danger))',
+        "theme-primary": "hsl(var(--theme-primary))",
+        "theme-secondary": "hsl(var(--theme-secondary))",
+        "theme-accent": "hsl(var(--theme-accent))",
+        "theme-success": "hsl(var(--theme-success))",
+        "theme-warning": "hsl(var(--theme-warning))",
+        "theme-danger": "hsl(var(--theme-danger))",
       },
     },
   },
@@ -252,6 +252,6 @@ const config = {
       },
     }),
   ],
-}
+};
 
 module.exports = config;

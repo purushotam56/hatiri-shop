@@ -1,5 +1,3 @@
-import { StoreLayout } from "@/components/layouts/store-layout";
-
 export default async function StorePagesLayout({
   children,
   params,
@@ -7,10 +5,5 @@ export default async function StorePagesLayout({
   children: React.ReactNode;
   params: Promise<{ code?: string }>;
 }) {
-  
-  return (
-    <>
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }

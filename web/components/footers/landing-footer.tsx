@@ -21,22 +21,34 @@ export function LandingFooter() {
             <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-foreground/60 hover:text-foreground">
+                <Link
+                  className="text-foreground/60 hover:text-foreground"
+                  href="/"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-foreground/60 hover:text-foreground">
+                <Link
+                  className="text-foreground/60 hover:text-foreground"
+                  href="/products"
+                >
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-foreground/60 hover:text-foreground">
+                <Link
+                  className="text-foreground/60 hover:text-foreground"
+                  href="/about"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="text-foreground/60 hover:text-foreground">
+                <Link
+                  className="text-foreground/60 hover:text-foreground"
+                  href="/blog"
+                >
                   Blog
                 </Link>
               </li>
@@ -48,17 +60,26 @@ export function LandingFooter() {
             <h3 className="font-semibold text-foreground mb-4">Support</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/docs" className="text-foreground/60 hover:text-foreground">
+                <Link
+                  className="text-foreground/60 hover:text-foreground"
+                  href="/docs"
+                >
                   Documentation
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-foreground/60 hover:text-foreground">
+                <Link
+                  className="text-foreground/60 hover:text-foreground"
+                  href="/faq"
+                >
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-foreground/60 hover:text-foreground">
+                <Link
+                  className="text-foreground/60 hover:text-foreground"
+                  href="/contact"
+                >
                   Contact Us
                 </Link>
               </li>
@@ -70,12 +91,18 @@ export function LandingFooter() {
             <h3 className="font-semibold text-foreground mb-4">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/privacy" className="text-foreground/60 hover:text-foreground">
+                <Link
+                  className="text-foreground/60 hover:text-foreground"
+                  href="/privacy"
+                >
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms" className="text-foreground/60 hover:text-foreground">
+                <Link
+                  className="text-foreground/60 hover:text-foreground"
+                  href="/terms"
+                >
                   Terms of Service
                 </Link>
               </li>
@@ -89,13 +116,13 @@ export function LandingFooter() {
           <p>&copy; 2025 Hatiri. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <span>Follow us on:</span>
-            <Link href="#" className="text-foreground/60 hover:text-foreground">
+            <Link className="text-foreground/60 hover:text-foreground" href="#">
               Twitter
             </Link>
-            <Link href="#" className="text-foreground/60 hover:text-foreground">
+            <Link className="text-foreground/60 hover:text-foreground" href="#">
               Facebook
             </Link>
-            <Link href="#" className="text-foreground/60 hover:text-foreground">
+            <Link className="text-foreground/60 hover:text-foreground" href="#">
               Instagram
             </Link>
           </div>

@@ -19,8 +19,7 @@ export const BottomNav = () => {
       <div className="grid grid-cols-4 gap-1 p-2">
         {navItems.map((item) => {
           const isActive =
-            pathname === item.href ||
-            (item.href === "/" && pathname === "/");
+            pathname === item.href || (item.href === "/" && pathname === "/");
 
           return (
             <Link key={item.href} href={item.href}>

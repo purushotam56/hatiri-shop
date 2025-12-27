@@ -5,8 +5,8 @@
 
 "use client";
 
-import { useEffect, useState } from "react";
 import { Card, CardBody } from "@heroui/card";
+import { useEffect, useState } from "react";
 
 export function PaletteTester() {
   const [cssVars, setCssVars] = useState<Record<string, string>>({});
@@ -15,22 +15,25 @@ export function PaletteTester() {
   const readCSSVariables = () => {
     const root = document.documentElement;
     const computedStyle = getComputedStyle(root);
-    
+
     setCssVars({
-      primary: computedStyle.getPropertyValue('--theme-primary').trim(),
-      secondary: computedStyle.getPropertyValue('--theme-secondary').trim(),
-      accent: computedStyle.getPropertyValue('--theme-accent').trim(),
-      success: computedStyle.getPropertyValue('--theme-success').trim(),
-      warning: computedStyle.getPropertyValue('--theme-warning').trim(),
-      danger: computedStyle.getPropertyValue('--theme-danger').trim(),
+      primary: computedStyle.getPropertyValue("--theme-primary").trim(),
+      secondary: computedStyle.getPropertyValue("--theme-secondary").trim(),
+      accent: computedStyle.getPropertyValue("--theme-accent").trim(),
+      success: computedStyle.getPropertyValue("--theme-success").trim(),
+      warning: computedStyle.getPropertyValue("--theme-warning").trim(),
+      danger: computedStyle.getPropertyValue("--theme-danger").trim(),
     });
   };
 
   useEffect(() => {
-    readCSSVariables();
+    Promise.resolve().then(() => {
+      readCSSVariables();
+    });
 
     // Poll for changes (in case CSS variables are updated)
     const interval = setInterval(readCSSVariables, 500);
+
     return () => clearInterval(interval);
   }, []);
 
@@ -46,7 +49,7 @@ export function PaletteTester() {
             </div>
           ))}
         </div>
-        
+
         <div className="mt-4 grid grid-cols-3 gap-2">
           <div className="h-12 bg-primary rounded" title="primary" />
           <div className="h-12 bg-secondary rounded" title="secondary" />

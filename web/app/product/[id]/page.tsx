@@ -1,20 +1,26 @@
-import { Metadata } from "next";
-import { apiEndpoints } from "@/lib/api-client";
-import { ProductSEO } from "@/components/product-seo";
-import { StoreLayout } from "@/components/layouts/store-layout";
 import { Button } from "@heroui/button";
 import { Card, CardBody } from "@heroui/card";
-import { ProductDetailClient } from "./product-detail-client";
+import { Metadata } from "next";
 import Link from "next/link";
+
+import { ProductDetailClient } from "./product-detail-client";
+
+import { StoreLayout } from "@/components/layouts/store-layout";
+import { PageTracker } from "@/components/page-tracker";
+import { ProductSEO } from "@/components/product-seo";
+import { API_CONFIG } from "@/config/api";
+import { apiEndpoints } from "@/lib/api-client";
 import { Product } from "@/types/product";
 
 async function getProduct(productId: string): Promise<Product | null> {
   try {
     const productData = await apiEndpoints.getProduct(productId);
     const product = productData.product || productData.data;
+
     return product || null;
   } catch (error) {
-    console.error("Failed to load product:", error);
+    // console.error("Failed to load product:", error);
+
     return null;
   }
 }
@@ -22,9 +28,11 @@ async function getProduct(productId: string): Promise<Product | null> {
 async function getOrganisation(organisationId: number) {
   try {
     const orgData = await apiEndpoints.getOrganisation(organisationId);
+
     return orgData.organisation || orgData.data || null;
   } catch (error) {
-    console.error("Failed to fetch organization:", error);
+    // console.error("Failed to fetch organization:", error);
+
     return null;
   }
 }
@@ -45,15 +53,17 @@ async function getVariants(product: Product): Promise<Product[]> {
 
 // Server-side metadata generation
 async function getProductMetadata(productId: string): Promise<{
-  product?: any;
+  product?: Product | Record<string, unknown>;
   error?: string;
 }> {
   try {
     const productData = await apiEndpoints.getProduct(productId);
     const product = productData.product || productData.data;
+
     return { product };
   } catch (error) {
-    console.error("Failed to fetch product metadata:", error);
+    // console.error("Failed to fetch product metadata:", error);
+
     return { error: "Failed to load product" };
   }
 }
@@ -74,12 +84,13 @@ export async function generateMetadata({
     };
   }
 
-  const productName = product.name || "Product";
+  const p = product as Product & Record<string, unknown>;
+  const productName = p.name || "Product";
   const productDescription =
-    product.description ||
+    p.description ||
     `Buy ${productName} online at Hatiri Shop - Quick Commerce in 10 Minutes`;
-  const productImage = product.bannerImage?.url || product.image?.url;
-  const storeName = product.organisation?.name || "Hatiri Shop";
+  const productImage = p.bannerImage?.url || p.image?.url || "";
+  const storeName = p.organisation?.name || "Hatiri Shop";
 
   return {
     title: productName,
@@ -143,7 +154,7 @@ export default async function ProductDetailPage({
             <p className="text-foreground text-xl font-semibold">
               Product not found
             </p>
-            <Button href="/" color="primary" size="lg">
+            <Button color="primary" href="/" size="lg">
               Go Home
             </Button>
           </CardBody>
@@ -159,10 +170,20 @@ export default async function ProductDetailPage({
 
   return (
     <StoreLayout
+      logoUrl={product.organisation?.image?.url || ""}
       storeCode={product.organisation?.organisationUniqueCode || ""}
       storeName={product.organisation?.name || ""}
-      logoUrl={product.organisation?.image?.url || ""}
     >
+      {/* Track Product Page View */}
+      {product.organisationId && (
+        <PageTracker
+          apiUrl={API_CONFIG.apiBaseUrl}
+          organisationId={product.organisationId}
+          pageType="product-page"
+          productId={Number(product.id)}
+        />
+      )}
+
       {/* SEO Structured Data */}
       <ProductSEO product={product} />
 
@@ -170,9 +191,8 @@ export default async function ProductDetailPage({
       <div className="bg-content1 border-b border-divider">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center">
           <Button
-            variant="light"
             as={Link}
-            href={"/store/"+product.organisation?.organisationUniqueCode}
+            href={"/store/" + product.organisation?.organisationUniqueCode}
             size="sm"
             startContent={
               <svg
@@ -182,13 +202,14 @@ export default async function ProductDetailPage({
                 viewBox="0 0 24 24"
               >
                 <path
+                  d="M15 19l-7-7 7-7"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
                 />
               </svg>
             }
+            variant="light"
           >
             Back
           </Button>
@@ -199,9 +220,9 @@ export default async function ProductDetailPage({
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Interactive Components */}
         <ProductDetailClient
+          organisation={organisation}
           product={product}
           variants={variants}
-          organisation={organisation}
         />
       </div>
     </StoreLayout>

@@ -1,6 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import type { Order } from "@/types/order";
+
+import { Button } from "@heroui/button";
+import { Card, CardBody } from "@heroui/card";
+import { Chip } from "@heroui/chip";
+import { Divider } from "@heroui/divider";
 import {
   Modal,
   ModalContent,
@@ -8,12 +13,9 @@ import {
   ModalBody,
   ModalFooter,
 } from "@heroui/modal";
-import { Button } from "@heroui/button";
-import { Card, CardBody } from "@heroui/card";
-import { Divider } from "@heroui/divider";
-import { Chip } from "@heroui/chip";
+import React, { useState } from "react";
+
 import { apiEndpoints } from "@/lib/api-client";
-import type { Order } from "@/types/order";
 
 interface OrderDetailModalProps {
   isOpen: boolean;
@@ -22,12 +24,17 @@ interface OrderDetailModalProps {
 }
 
 // Helper function to safely convert to number
-const toNumber = (value: any): number => {
+const toNumber = (value: unknown): number => {
   const num = Number(value);
+
   return isNaN(num) ? 0 : num;
 };
 
-export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalProps) {
+export function OrderDetailModal({
+  isOpen,
+  onClose,
+  order,
+}: OrderDetailModalProps) {
   const [isDownloading, setIsDownloading] = useState(false);
 
   if (!order) return null;
@@ -36,21 +43,25 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
     setIsDownloading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await apiEndpoints.getOrderInvoice(order.id, token || "");
-
-
+      const response = await apiEndpoints.getOrderInvoice(
+        order.id,
+        token || "",
+      );
 
       if (!response.ok) {
         const errorText = await response.text();
+
         console.error("Invoice error:", errorText);
-        throw new Error(`Failed to download invoice: ${response.status} ${errorText}`);
+        throw new Error(
+          `Failed to download invoice: ${response.status} ${errorText}`,
+        );
       }
 
       const blob = await response.blob();
-      console.log("Invoice blob size:", blob.size);
-      
+
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement("a");
+
       a.href = url;
       a.download = `Invoice-${order.orderNumber}.pdf`;
       document.body.appendChild(a);
@@ -59,7 +70,9 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
       document.body.removeChild(a);
     } catch (error) {
       console.error("Error downloading invoice:", error);
-      alert(`Failed to download invoice: ${error instanceof Error ? error.message : String(error)}`);
+      alert(
+        `Failed to download invoice: ${error instanceof Error ? error.message : String(error)}`,
+      );
     } finally {
       setIsDownloading(false);
     }
@@ -87,7 +100,13 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
   };
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} backdrop="blur" size="2xl" scrollBehavior="inside">
+    <Modal
+      backdrop="blur"
+      isOpen={isOpen}
+      scrollBehavior="inside"
+      size="2xl"
+      onClose={onClose}
+    >
       <ModalContent>
         <ModalHeader className="flex flex-col gap-1 text-white">
           Order {order.orderNumber}
@@ -98,10 +117,10 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
             <span className="text-slate-400">Status:</span>
             <Chip
               className="capitalize"
-              color={getStatusColor(order.status)}
+              color={getStatusColor(order.status || "")}
               variant="flat"
             >
-              {order.status.replace(/_/g, " ")}
+              {(order.status || "").replace(/_/g, " ")}
             </Chip>
           </div>
 
@@ -112,7 +131,7 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
             <div>
               <p className="text-slate-400 text-sm">Order Date</p>
               <p className="text-white font-semibold">
-                {new Date(order.createdAt).toLocaleDateString("en-US", {
+                {new Date(order.createdAt || "").toLocaleDateString("en-US", {
                   year: "numeric",
                   month: "short",
                   day: "numeric",
@@ -145,7 +164,9 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
 
           {/* Order Items */}
           <div>
-            <p className="text-slate-400 text-sm mb-2">Items ({order.items?.length || 0})</p>
+            <p className="text-slate-400 text-sm mb-2">
+              Items ({order.items?.length || 0})
+            </p>
             <div className="space-y-2">
               {order.items?.map((item) => (
                 <Card key={item.id} className="bg-slate-800/50">
@@ -159,7 +180,10 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
                       </div>
                       <div className="text-right">
                         <p className="text-white font-semibold">
-                          {item.currency} {(toNumber(item.price) * toNumber(item.quantity)).toFixed(2)}
+                          {item.currency}{" "}
+                          {(
+                            toNumber(item.price) * toNumber(item.quantity)
+                          ).toFixed(2)}
                         </p>
                         <p className="text-slate-400 text-xs">
                           {item.currency} {toNumber(item.price).toFixed(2)} each
@@ -210,13 +234,17 @@ export function OrderDetailModal({ isOpen, onClose, order }: OrderDetailModalPro
           )}
         </ModalBody>
         <ModalFooter className="gap-2">
-          <Button variant="bordered" onPress={onClose} className="text-slate-200">
+          <Button
+            className="text-slate-200"
+            variant="bordered"
+            onPress={onClose}
+          >
             Close
           </Button>
           <Button
             color="primary"
-            onPress={handleDownloadInvoice}
             isLoading={isDownloading}
+            onPress={handleDownloadInvoice}
           >
             📥 Download Invoice
           </Button>

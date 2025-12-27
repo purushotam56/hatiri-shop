@@ -1,5 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
-import { useApiGet } from "@/lib/hooks";
+import { useEffect, useState } from "react";
 
 interface Product {
   id: number;
@@ -11,20 +10,17 @@ interface Product {
   category?: string;
 }
 
-interface ApiResponse<T> {
-  data: T;
-  message?: string;
-}
-
 // Products service
 export const productsService = {
   // Get all products with optional filters
   getAll: async (filters?: { category?: string; search?: string }) => {
     const params = new URLSearchParams();
+
     if (filters?.category) params.append("category", filters.category);
     if (filters?.search) params.append("search", filters.search);
-    
+
     const query = params.toString() ? `?${params.toString()}` : "";
+
     return await fetch(`/api/products${query}`).then((r) => r.json());
   },
 
@@ -53,15 +49,15 @@ export const productsService = {
 
   // Hide product
   hide: async (id: number) => {
-    return await fetch(`/api/products/${id}/hide`, { method: "POST" }).then((r) =>
-      r.json()
+    return await fetch(`/api/products/${id}/hide`, { method: "POST" }).then(
+      (r) => r.json(),
     );
   },
 
   // Show product
   show: async (id: number) => {
-    return await fetch(`/api/products/${id}/show`, { method: "POST" }).then((r) =>
-      r.json()
+    return await fetch(`/api/products/${id}/show`, { method: "POST" }).then(
+      (r) => r.json(),
     );
   },
 };
@@ -79,7 +75,7 @@ export const ordersService = {
   },
 
   // Create order
-  create: async (data: any) => {
+  create: async (data: Record<string, unknown>) => {
     return await fetch("/api/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -94,8 +90,8 @@ export const ordersService = {
 
   // Cancel order
   cancel: async (id: string) => {
-    return await fetch(`/api/orders/${id}/cancel`, { method: "POST" }).then((r) =>
-      r.json()
+    return await fetch(`/api/orders/${id}/cancel`, { method: "POST" }).then(
+      (r) => r.json(),
     );
   },
 };
@@ -127,8 +123,8 @@ export const cartService = {
 
   // Remove from cart
   removeItem: async (itemId: number) => {
-    return await fetch(`/api/cart/items/${itemId}`, { method: "DELETE" }).then((r) =>
-      r.json()
+    return await fetch(`/api/cart/items/${itemId}`, { method: "DELETE" }).then(
+      (r) => r.json(),
     );
   },
 
@@ -146,7 +142,7 @@ export const userService = {
   },
 
   // Update profile
-  updateProfile: async (data: any) => {
+  updateProfile: async (data: Record<string, unknown>) => {
     return await fetch("/api/user/profile", {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -160,7 +156,7 @@ export const userService = {
   },
 
   // Add address
-  addAddress: async (data: any) => {
+  addAddress: async (data: Record<string, unknown>) => {
     return await fetch("/api/user/addresses", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -169,7 +165,7 @@ export const userService = {
   },
 
   // Update address
-  updateAddress: async (id: number, data: any) => {
+  updateAddress: async (id: number, data: Record<string, unknown>) => {
     return await fetch(`/api/user/addresses/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -179,8 +175,8 @@ export const userService = {
 
   // Delete address
   deleteAddress: async (id: number) => {
-    return await fetch(`/api/user/addresses/${id}`, { method: "DELETE" }).then((r) =>
-      r.json()
+    return await fetch(`/api/user/addresses/${id}`, { method: "DELETE" }).then(
+      (r) => r.json(),
     );
   },
 
@@ -200,9 +196,9 @@ export const userService = {
 
   // Remove saved item
   removeSavedItem: async (productId: number) => {
-    return await fetch(`/api/user/saved-items/${productId}`, { method: "DELETE" }).then(
-      (r) => r.json()
-    );
+    return await fetch(`/api/user/saved-items/${productId}`, {
+      method: "DELETE",
+    }).then((r) => r.json());
   },
 };
 
@@ -218,7 +214,7 @@ export const authService = {
   },
 
   // Register
-  register: async (data: any) => {
+  register: async (data: Record<string, unknown>) => {
     return await fetch("/api/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -228,7 +224,9 @@ export const authService = {
 
   // Logout
   logout: async () => {
-    return await fetch("/api/auth/logout", { method: "POST" }).then((r) => r.json());
+    return await fetch("/api/auth/logout", { method: "POST" }).then((r) =>
+      r.json(),
+    );
   },
 
   // Verify OTP
@@ -242,7 +240,10 @@ export const authService = {
 };
 
 // Hook: useProducts - fetch products with filters
-export const useProducts = (filters?: { category?: string; search?: string }) => {
+export const useProducts = (filters?: {
+  category?: string;
+  search?: string;
+}) => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
@@ -253,6 +254,7 @@ export const useProducts = (filters?: { category?: string; search?: string }) =>
       setError(null);
       try {
         const data = await productsService.getAll(filters);
+
         setProducts(data.data || data || []);
       } catch (err) {
         setError(err instanceof Error ? err : new Error(String(err)));
@@ -269,7 +271,7 @@ export const useProducts = (filters?: { category?: string; search?: string }) =>
 
 // Hook: useOrders - fetch user orders
 export const useOrders = () => {
-  const [orders, setOrders] = useState<any[]>([]);
+  const [orders, setOrders] = useState<Record<string, unknown>[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<Error | null>(null);
 
@@ -279,6 +281,7 @@ export const useOrders = () => {
       setError(null);
       try {
         const data = await ordersService.getAll();
+
         setOrders(data.data || data || []);
       } catch (err) {
         setError(err instanceof Error ? err : new Error(String(err)));

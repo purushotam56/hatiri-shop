@@ -1,16 +1,21 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import { Card, CardBody, CardHeader, CardFooter } from "@heroui/card";
 import { Button } from "@heroui/button";
-import { Input } from "@heroui/input";
+import { Card, CardBody, CardHeader, CardFooter } from "@heroui/card";
 import { Divider } from "@heroui/divider";
 import Link from "next/link";
-import { StoreLayout } from "@/components/layouts/store-layout";
+import React, { useState, useEffect } from "react";
 
-export default function OrderTrackingPage({ params }: { params: Promise<{ id: string }> }) {
+import { StoreLayout } from "@/components/layouts/store-layout";
+import { Order } from "@/types/order";
+
+export default function OrderTrackingPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const [orderId, setOrderId] = useState<string>("");
-  const [order, setOrder] = useState<any>(null);
+  const [order, setOrder] = useState<Order | null>(null);
 
   useEffect(() => {
     params.then((p) => setOrderId(p.id));
@@ -19,7 +24,7 @@ export default function OrderTrackingPage({ params }: { params: Promise<{ id: st
   useEffect(() => {
     if (!orderId) return;
     // Mock order data
-    const mockOrder = {
+    const mockOrder: Order = {
       id: orderId,
       status: "in-transit",
       items: [
@@ -33,11 +38,26 @@ export default function OrderTrackingPage({ params }: { params: Promise<{ id: st
       total: 23.01,
       address: "123 Main St, Apt 4B",
       timeline: [
-        { status: "Order Placed", time: "2:15 PM", icon: "✅", completed: true },
+        {
+          status: "Order Placed",
+          time: "2:15 PM",
+          icon: "✅",
+          completed: true,
+        },
         { status: "Confirmed", time: "2:18 PM", icon: "✅", completed: true },
         { status: "Preparing", time: "2:20 PM", icon: "✅", completed: true },
-        { status: "Out for Delivery", time: "2:35 PM", icon: "🚚", completed: true },
-        { status: "Arriving Now", time: "~2:43 PM", icon: "📍", completed: false },
+        {
+          status: "Out for Delivery",
+          time: "2:35 PM",
+          icon: "🚚",
+          completed: true,
+        },
+        {
+          status: "Arriving Now",
+          time: "~2:43 PM",
+          icon: "📍",
+          completed: false,
+        },
       ],
       driver: {
         name: "Rajesh Kumar",
@@ -47,7 +67,10 @@ export default function OrderTrackingPage({ params }: { params: Promise<{ id: st
         phone: "+91 98765 43210",
       },
     };
-    setOrder(mockOrder);
+
+    Promise.resolve().then(() => {
+      setOrder(mockOrder);
+    });
   }, [orderId]);
 
   return (
@@ -57,8 +80,13 @@ export default function OrderTrackingPage({ params }: { params: Promise<{ id: st
   );
 }
 
-function OrderTrackingPageContent({ order, orderId }: { order: any; orderId: string }) {
-
+function OrderTrackingPageContent({
+  order,
+  orderId,
+}: {
+  order: Order | null;
+  orderId: string;
+}) {
   if (!order) {
     return (
       <main className="min-h-screen bg-white dark:bg-default-100 flex items-center justify-center">
@@ -75,13 +103,15 @@ function OrderTrackingPageContent({ order, orderId }: { order: any; orderId: str
         {/* Header */}
         <div className="mb-4 flex items-center gap-3">
           <Link href="/orders">
-            <Button isIconOnly variant="light" size="sm">
+            <Button isIconOnly size="sm" variant="light">
               ←
             </Button>
           </Link>
           <div>
             <h1 className="text-xl md:text-2xl font-bold">{order.id}</h1>
-            <p className="text-default-600 text-xs md:text-sm">Track your live delivery</p>
+            <p className="text-default-600 text-xs md:text-sm">
+              Track your live delivery
+            </p>
           </div>
         </div>
 
@@ -91,8 +121,12 @@ function OrderTrackingPageContent({ order, orderId }: { order: any; orderId: str
             <div className="flex items-center gap-2 w-full md:gap-3">
               <p className="text-3xl md:text-4xl">📍</p>
               <div className="flex-1">
-                <p className="text-base md:text-lg font-bold">Out for Delivery</p>
-                <p className="text-xs md:text-sm text-default-600">Arriving in ~8 minutes</p>
+                <p className="text-base md:text-lg font-bold">
+                  Out for Delivery
+                </p>
+                <p className="text-xs md:text-sm text-default-600">
+                  Arriving in ~8 minutes
+                </p>
               </div>
             </div>
           </CardHeader>
@@ -101,7 +135,9 @@ function OrderTrackingPageContent({ order, orderId }: { order: any; orderId: str
         {/* Driver Info */}
         <Card className="mb-4 bg-default-50 dark:bg-default-200">
           <CardHeader className="flex gap-2 p-3 md:p-4">
-            <p className="font-semibold text-sm md:text-base">Your Delivery Partner</p>
+            <p className="font-semibold text-sm md:text-base">
+              Your Delivery Partner
+            </p>
           </CardHeader>
           <CardBody className="space-y-3 p-3 md:space-y-4 md:p-4">
             <div className="flex items-center justify-between">
@@ -110,24 +146,44 @@ function OrderTrackingPageContent({ order, orderId }: { order: any; orderId: str
                   👨
                 </div>
                 <div>
-                  <p className="font-bold text-sm md:text-base">{order.driver.name}</p>
-                  <p className="text-xs md:text-sm text-default-600">⭐ {order.driver.rating}</p>
-                  <p className="text-xs text-default-600">{order.driver.vehicle}</p>
+                  <p className="font-bold text-sm md:text-base">
+                    {order.driver?.name || "Driver"}
+                  </p>
+                  <p className="text-xs md:text-sm text-default-600">
+                    ⭐ {order.driver?.rating || 0}
+                  </p>
+                  <p className="text-xs text-default-600">
+                    {order.driver?.vehicle || "Vehicle"}
+                  </p>
                 </div>
               </div>
               <div className="text-right">
-                <p className="text-sm md:text-base font-bold text-primary">{order.driver.eta}</p>
+                <p className="text-sm md:text-base font-bold text-primary">
+                  {order.driver?.eta || "10 min"}
+                </p>
               </div>
             </div>
             <Divider className="my-1" />
             <div className="flex gap-2">
-              <Button fullWidth size="sm" color="primary" variant="flat" className="text-xs">
-                📞 Call
+              <Button
+                fullWidth
+                className="text-xs"
+                color="primary"
+                size="sm"
+                variant="flat"
+              >
+                📞 {order.driver?.phone || "Call"}
               </Button>
-              <Button fullWidth size="sm" variant="flat" className="text-xs">
+              <Button fullWidth className="text-xs" size="sm" variant="flat">
                 💬 Chat
               </Button>
-              <Button fullWidth size="sm" variant="flat" isIconOnly className="flex-shrink-0">
+              <Button
+                fullWidth
+                isIconOnly
+                className="flex-shrink-0"
+                size="sm"
+                variant="flat"
+              >
                 📍
               </Button>
             </div>
@@ -137,12 +193,14 @@ function OrderTrackingPageContent({ order, orderId }: { order: any; orderId: str
         {/* Timeline - Compact */}
         <Card className="mb-4 bg-default-50 dark:bg-default-200">
           <CardHeader className="p-3 md:p-4">
-            <p className="font-semibold text-sm md:text-base">Delivery Timeline</p>
+            <p className="font-semibold text-sm md:text-base">
+              Delivery Timeline
+            </p>
           </CardHeader>
           <CardBody className="space-y-2 p-3 md:p-4 pt-0 md:pt-0">
-            {order.timeline.map((step: any, idx: number) => (
+            {order.timeline?.map((step, idx) => (
               <div key={idx} className="relative pb-3">
-                {idx !== order.timeline.length - 1 && (
+                {idx !== (order.timeline?.length || 0) - 1 && (
                   <div
                     className={`absolute left-3 top-8 w-0.5 h-8 md:left-5 md:top-10 md:h-10 ${
                       step.completed
@@ -162,10 +220,14 @@ function OrderTrackingPageContent({ order, orderId }: { order: any; orderId: str
                     {step.icon}
                   </div>
                   <div className="flex-1 pt-0.5 md:pt-1">
-                    <p className={`font-semibold text-xs md:text-sm ${step.completed ? "text-default-900" : "text-default-600"}`}>
+                    <p
+                      className={`font-semibold text-xs md:text-sm ${step.completed ? "text-default-900" : "text-default-600"}`}
+                    >
                       {step.status}
                     </p>
-                    <p className="text-xs md:text-sm text-default-600">{step.time}</p>
+                    <p className="text-xs md:text-sm text-default-600">
+                      {step.time}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -179,35 +241,43 @@ function OrderTrackingPageContent({ order, orderId }: { order: any; orderId: str
             <p className="font-semibold text-sm md:text-base">Order Summary</p>
           </CardHeader>
           <CardBody className="space-y-2 p-3 md:p-4 pt-0 md:pt-0">
-            {order.items.map((item: any, idx: number) => (
-              <div key={idx} className="flex justify-between text-xs md:text-sm">
-                <p>{item.name}</p>
-                <p className="font-semibold">₹{item.price}</p>
+            {order.items?.map((item, idx) => (
+              <div
+                key={idx}
+                className="flex justify-between text-xs md:text-sm"
+              >
+                <p>{item.name || "Item"}</p>
+                <p className="font-semibold">₹{item.price || 0}</p>
               </div>
             ))}
             <Divider className="my-1" />
             <div className="space-y-1 text-xs md:text-sm">
               <div className="flex justify-between text-default-600">
                 <p>Subtotal</p>
-                <p>₹{order.subtotal}</p>
+                <p>₹{order.subtotal || 0}</p>
               </div>
               <div className="flex justify-between text-default-600">
                 <p>Delivery</p>
-                <p>₹{order.delivery}</p>
+                <p>₹{order.delivery || 0}</p>
               </div>
               <div className="flex justify-between text-default-600">
                 <p>Tax</p>
-                <p>₹{order.tax}</p>
+                <p>₹{order.tax || 0}</p>
               </div>
             </div>
             <Divider className="my-1" />
             <div className="flex justify-between text-base md:text-lg font-bold">
               <p>Total</p>
-              <p className="text-primary">₹{order.total}</p>
+              <p className="text-primary">₹{order.total || 0}</p>
             </div>
           </CardBody>
           <CardFooter className="p-3 md:p-4">
-            <Button fullWidth size="sm" variant="flat" className="text-xs md:text-sm">
+            <Button
+              fullWidth
+              className="text-xs md:text-sm"
+              size="sm"
+              variant="flat"
+            >
               Need Help?
             </Button>
           </CardFooter>

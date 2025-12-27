@@ -1,5 +1,5 @@
-import { StoreHeader } from "@/components/store-header";
 import { StoreFooter } from "@/components/footers/store-footer";
+import { StoreHeader } from "@/components/store-header";
 
 interface StoreLayoutProps {
   children: React.ReactNode;
@@ -8,14 +8,21 @@ interface StoreLayoutProps {
   logoUrl?: string;
 }
 
-export function StoreLayout({ children, storeCode = "", storeName = "", logoUrl = "" }: StoreLayoutProps) {
+export function StoreLayout({
+  children,
+  storeCode = "",
+  storeName = "",
+  logoUrl = "",
+}: StoreLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
-      <StoreHeader storeCode={storeCode || ""} storeName={storeName || ""} logoUrl={logoUrl || ""} />
-      <main className="flex-1 w-full">
-        {children}
-      </main>
-      <StoreFooter storeCode={storeName} />
+      <StoreHeader
+        logoUrl={logoUrl || ""}
+        storeCode={storeCode || ""}
+        storeName={storeName || ""}
+      />
+      <main className="flex-1 w-full">{children}</main>
+      <StoreFooter storeCode={storeCode} storeName={storeName} />
     </div>
   );
 }

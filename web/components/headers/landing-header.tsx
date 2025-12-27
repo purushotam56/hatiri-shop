@@ -1,12 +1,20 @@
 "use client";
 
-import React, { useState } from "react";
 import { Button } from "@heroui/button";
-import { Input } from "@heroui/input";
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@heroui/navbar";
 import { Link } from "@heroui/link";
-import { useAuth } from "@/context/auth-context";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  NavbarMenu,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+} from "@heroui/navbar";
+import React, { useState } from "react";
+
 import { LoginModal } from "@/components/login-modal";
+import { useAuth } from "@/context/auth-context";
 
 export function LandingHeader() {
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -25,9 +33,9 @@ export function LandingHeader() {
     <>
       <Navbar
         isBordered
+        className="bg-background/95 backdrop-blur-sm"
         isMenuOpen={isMenuOpen}
         onMenuOpenChange={setIsMenuOpen}
-        className="bg-background/95 backdrop-blur-sm"
       >
         <NavbarContent className="sm:hidden" justify="start">
           <NavbarMenuToggle />
@@ -48,7 +56,10 @@ export function LandingHeader() {
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
           {menuItems.map((item) => (
             <NavbarItem key={item.label}>
-              <Link href={item.href} className="text-foreground hover:text-primary transition-colors">
+              <Link
+                className="text-foreground hover:text-primary transition-colors"
+                href={item.href}
+              >
                 {item.label}
               </Link>
             </NavbarItem>
@@ -59,21 +70,19 @@ export function LandingHeader() {
           {isLoggedIn && user ? (
             <>
               <NavbarItem className="hidden sm:flex gap-2">
-                <span className="text-sm font-medium text-foreground">{user.name || user.email}</span>
+                <span className="text-sm font-medium text-foreground">
+                  {user.name || user.email}
+                </span>
                 <Button
                   as={Link}
-                  href="/orders"
                   className="text-sm"
                   color="primary"
+                  href="/orders"
                   variant="flat"
                 >
                   📦 Orders
                 </Button>
-                <Button
-                  onPress={logout}
-                  className="text-sm"
-                  variant="light"
-                >
+                <Button className="text-sm" variant="light" onPress={logout}>
                   Logout
                 </Button>
               </NavbarItem>
@@ -81,9 +90,9 @@ export function LandingHeader() {
           ) : (
             <NavbarItem>
               <Button
-                onPress={() => setShowLoginModal(true)}
                 className="text-sm"
                 color="primary"
+                onPress={() => setShowLoginModal(true)}
               >
                 Sign In
               </Button>
@@ -94,7 +103,7 @@ export function LandingHeader() {
         <NavbarMenu>
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
-              <Link href={item.href} className="w-full">
+              <Link className="w-full" href={item.href}>
                 {item.label}
               </Link>
             </NavbarMenuItem>
@@ -102,12 +111,12 @@ export function LandingHeader() {
           {!isLoggedIn && (
             <NavbarMenuItem>
               <Button
+                className="w-full mt-4"
+                color="primary"
                 onPress={() => {
                   setShowLoginModal(true);
                   setIsMenuOpen(false);
                 }}
-                className="w-full mt-4"
-                color="primary"
               >
                 Sign In
               </Button>
@@ -116,7 +125,10 @@ export function LandingHeader() {
         </NavbarMenu>
       </Navbar>
 
-      <LoginModal isOpen={showLoginModal} onClose={() => setShowLoginModal(false)} />
+      <LoginModal
+        isOpen={showLoginModal}
+        onClose={() => setShowLoginModal(false)}
+      />
     </>
   );
 }

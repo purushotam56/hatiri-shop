@@ -9,13 +9,14 @@ export interface Upload {
   url: string;
 }
 
-export interface ProductImage {
+export interface ProductImage extends Record<string, unknown> {
   id: number;
   productId: number;
   uploadId: number;
   sortOrder: number;
   isActive: boolean;
-  upload: Upload;
+  upload?: Upload;
+  url?: string;
 }
 
 export interface BannerImage {
@@ -25,7 +26,17 @@ export interface BannerImage {
   url: string;
 }
 
-export interface Product {
+export interface Organisation {
+  id?: number;
+  name?: string;
+  organisationUniqueCode?: string;
+  priceVisibility?: "hidden" | "login_only" | "visible";
+  whatsappNumber?: string;
+  whatsappEnabled?: boolean;
+  image?: BannerImage;
+}
+
+export interface Product extends Record<string, unknown> {
   id: number;
   name: string;
   description?: string;
@@ -35,6 +46,7 @@ export interface Product {
   sku?: string;
   quantity?: number;
   unit?: string;
+  stockUnit?: string;
   bannerImage?: BannerImage;
   image?: BannerImage;
   images?: ProductImage[];
@@ -43,7 +55,7 @@ export interface Product {
   categoryId?: number;
   organisationId?: number;
   productGroupId?: number | null;
-  stockMergeType?: 'merged' | 'independent';
+  stockMergeType?: "merged" | "independent";
   taxRate?: number;
   taxType?: string;
   isActive?: boolean;
@@ -52,32 +64,29 @@ export interface Product {
   isDiscountActive?: boolean;
   createdAt?: Date;
   updatedAt?: Date;
-  organisation?: {
-    id?: number;
-    name?: string;
-    organisationUniqueCode?: string;
-    priceVisibility?: any;
-    whatsappNumber?: string;
-    whatsappEnabled?: boolean;
-    image?: BannerImage;
+  organisation?: Organisation;
+  category: {
+    id: number;
+    name: string;
   };
+  productGroup?: ProductGroup;
 }
 
-export interface ProductGroup {
+export interface ProductGroup extends Record<string, unknown> {
   // Core fields - required for components
   id: number; // Product/Group ID
   baseProduct: Product; // Base product for display
   variants: Product[]; // Available variants
-  
+
   // ProductGroup-specific fields
   baseSku?: string;
   baseStock?: number;
-  stockMergeType?: 'merged' | 'independent';
+  stockMergeType?: "merged" | "independent";
   organisationId?: number;
-  
+
   // Base product reference
   baseName?: string;
-  
+
   // Product display properties (for flattened usage in components)
   // These allow ProductGroup to be used directly like a Product in UI components
   name?: string;
@@ -109,13 +118,13 @@ export interface ProductGroup {
 export interface Variant extends Product {
   // Variant-specific fields
   quantity?: number;
-  options?: string | any[];
+  options?: string | Record<string, unknown>[];
 }
 
 export interface ProductDetailClientProps {
   product: Product;
   variants: Product[];
-  organisation?: any;
+  organisation?: Record<string, unknown>;
 }
 
 export interface Category {

@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+
 import { apiGet, apiPost, apiPut, apiDelete, apiPatch } from "@/lib/api";
 
 interface UseApiState<T> {
@@ -8,12 +9,15 @@ interface UseApiState<T> {
 }
 
 interface UseApiOptions {
-  onSuccess?: (data: any) => void;
+  onSuccess?: (data: Record<string, unknown>) => void;
   onError?: (error: Error) => void;
 }
 
 // Hook for GET requests
-export const useApiGet = <T = any>(endpoint: string, options?: UseApiOptions) => {
+export const useApiGet = <T extends Record<string, unknown> = Record<string, unknown>>(
+  endpoint: string,
+  options?: UseApiOptions,
+) => {
   const [state, setState] = useState<UseApiState<T>>({
     data: null,
     loading: false,
@@ -24,11 +28,14 @@ export const useApiGet = <T = any>(endpoint: string, options?: UseApiOptions) =>
     setState({ data: null, loading: true, error: null });
     try {
       const data = await apiGet(endpoint);
-      setState({ data, loading: false, error: null });
+
+      setState({ data: data as T, loading: false, error: null });
       options?.onSuccess?.(data);
+
       return data;
     } catch (error) {
       const err = error instanceof Error ? error : new Error(String(error));
+
       setState({ data: null, loading: false, error: err });
       options?.onError?.(err);
       throw err;
@@ -39,7 +46,10 @@ export const useApiGet = <T = any>(endpoint: string, options?: UseApiOptions) =>
 };
 
 // Hook for POST requests
-export const useApiPost = <T = any>(endpoint?: string, options?: UseApiOptions) => {
+export const useApiPost = <T extends Record<string, unknown> = Record<string, unknown>>(
+  endpoint?: string,
+  options?: UseApiOptions,
+) => {
   const [state, setState] = useState<UseApiState<T>>({
     data: null,
     loading: false,
@@ -47,31 +57,38 @@ export const useApiPost = <T = any>(endpoint?: string, options?: UseApiOptions) 
   });
 
   const post = useCallback(
-    async (body?: any, customEndpoint?: string) => {
+    async (body?: Record<string, unknown>, customEndpoint?: string) => {
       const url = customEndpoint || endpoint;
+
       if (!url) throw new Error("Endpoint is required");
 
       setState({ data: null, loading: true, error: null });
       try {
         const data = await apiPost(url, body);
-        setState({ data, loading: false, error: null });
+
+        setState({ data: data as T, loading: false, error: null });
         options?.onSuccess?.(data);
+
         return data;
       } catch (error) {
         const err = error instanceof Error ? error : new Error(String(error));
+
         setState({ data: null, loading: false, error: err });
         options?.onError?.(err);
         throw err;
       }
     },
-    [endpoint, options]
+    [endpoint, options],
   );
 
   return { ...state, post };
 };
 
 // Hook for PUT requests
-export const useApiPut = <T = any>(endpoint?: string, options?: UseApiOptions) => {
+export const useApiPut = <T extends Record<string, unknown> = Record<string, unknown>>(
+  endpoint?: string,
+  options?: UseApiOptions,
+) => {
   const [state, setState] = useState<UseApiState<T>>({
     data: null,
     loading: false,
@@ -79,31 +96,38 @@ export const useApiPut = <T = any>(endpoint?: string, options?: UseApiOptions) =
   });
 
   const put = useCallback(
-    async (body?: any, customEndpoint?: string) => {
+    async (body?: Record<string, unknown>, customEndpoint?: string) => {
       const url = customEndpoint || endpoint;
+
       if (!url) throw new Error("Endpoint is required");
 
       setState({ data: null, loading: true, error: null });
       try {
         const data = await apiPut(url, body);
-        setState({ data, loading: false, error: null });
+
+        setState({ data: data as T, loading: false, error: null });
         options?.onSuccess?.(data);
+
         return data;
       } catch (error) {
         const err = error instanceof Error ? error : new Error(String(error));
+
         setState({ data: null, loading: false, error: err });
         options?.onError?.(err);
         throw err;
       }
     },
-    [endpoint, options]
+    [endpoint, options],
   );
 
   return { ...state, put };
 };
 
 // Hook for DELETE requests
-export const useApiDelete = <T = any>(endpoint?: string, options?: UseApiOptions) => {
+export const useApiDelete = <T extends Record<string, unknown> = Record<string, unknown>>(
+  endpoint?: string,
+  options?: UseApiOptions,
+) => {
   const [state, setState] = useState<UseApiState<T>>({
     data: null,
     loading: false,
@@ -113,29 +137,36 @@ export const useApiDelete = <T = any>(endpoint?: string, options?: UseApiOptions
   const remove = useCallback(
     async (customEndpoint?: string) => {
       const url = customEndpoint || endpoint;
+
       if (!url) throw new Error("Endpoint is required");
 
       setState({ data: null, loading: true, error: null });
       try {
         const data = await apiDelete(url);
-        setState({ data, loading: false, error: null });
+
+        setState({ data: data as T, loading: false, error: null });
         options?.onSuccess?.(data);
+
         return data;
       } catch (error) {
         const err = error instanceof Error ? error : new Error(String(error));
+
         setState({ data: null, loading: false, error: err });
         options?.onError?.(err);
         throw err;
       }
     },
-    [endpoint, options]
+    [endpoint, options],
   );
 
   return { ...state, remove };
 };
 
 // Hook for PATCH requests
-export const useApiPatch = <T = any>(endpoint?: string, options?: UseApiOptions) => {
+export const useApiPatch = <T extends Record<string, unknown> = Record<string, unknown>>(
+  endpoint?: string,
+  options?: UseApiOptions,
+) => {
   const [state, setState] = useState<UseApiState<T>>({
     data: null,
     loading: false,
@@ -143,24 +174,28 @@ export const useApiPatch = <T = any>(endpoint?: string, options?: UseApiOptions)
   });
 
   const patch = useCallback(
-    async (body?: any, customEndpoint?: string) => {
+    async (body?: Record<string, unknown>, customEndpoint?: string) => {
       const url = customEndpoint || endpoint;
+
       if (!url) throw new Error("Endpoint is required");
 
       setState({ data: null, loading: true, error: null });
       try {
         const data = await apiPatch(url, body);
-        setState({ data, loading: false, error: null });
+
+        setState({ data: data as T, loading: false, error: null });
         options?.onSuccess?.(data);
+
         return data;
       } catch (error) {
         const err = error instanceof Error ? error : new Error(String(error));
+
         setState({ data: null, loading: false, error: err });
         options?.onError?.(err);
         throw err;
       }
     },
-    [endpoint, options]
+    [endpoint, options],
   );
 
   return { ...state, patch };

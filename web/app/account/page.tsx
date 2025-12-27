@@ -1,15 +1,14 @@
 "use client";
 
-import React, { useState } from "react";
-import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Button } from "@heroui/button";
-import { Input } from "@heroui/input";
+import { Card, CardBody, CardFooter, CardHeader } from "@heroui/card";
 import { Tabs, Tab } from "@heroui/tabs";
 import Link from "next/link";
+import React, { useState } from "react";
 
 export default function UserDashboardPage() {
   const [activeTab, setActiveTab] = useState("overview");
-  const [addresses, setAddresses] = useState([
+  const [addresses, _setAddresses] = useState([
     {
       id: 1,
       label: "Home",
@@ -24,7 +23,7 @@ export default function UserDashboardPage() {
     },
   ]);
 
-  const [orders, setOrders] = useState([
+  const [orders, _setOrders] = useState([
     {
       id: "ORD-001",
       date: "Oct 28, 2025",
@@ -37,7 +36,7 @@ export default function UserDashboardPage() {
       id: "ORD-002",
       date: "Oct 26, 2025",
       items: 8,
-      total: 32.50,
+      total: 32.5,
       status: "Delivered",
       icon: "✅",
     },
@@ -51,7 +50,7 @@ export default function UserDashboardPage() {
     },
   ]);
 
-  const [savedItems, setSavedItems] = useState([
+  const [savedItems, _setSavedItems] = useState([
     { id: 1, name: "Fresh Red Apples", price: 4.99, saves: 23 },
     { id: 2, name: "Organic Spinach", price: 3.49, saves: 15 },
     { id: 3, name: "Whole Wheat Bread", price: 2.99, saves: 8 },
@@ -65,7 +64,9 @@ export default function UserDashboardPage() {
           <div className="flex items-center justify-between mb-4">
             <div>
               <h1 className="text-2xl md:text-4xl font-bold">My Account</h1>
-              <p className="text-default-600 text-sm">Welcome back, Priya! 👋</p>
+              <p className="text-default-600 text-sm">
+                Welcome back, Priya! 👋
+              </p>
             </div>
             <div className="text-right">
               <p className="text-xs text-default-600">Member since</p>
@@ -95,11 +96,11 @@ export default function UserDashboardPage() {
         {/* Tabs - Full Width on Mobile */}
         <Tabs
           aria-label="Dashboard options"
-          selectedKey={activeTab}
-          onSelectionChange={(key) => setActiveTab(String(key))}
           className="flex flex-col w-full"
+          selectedKey={activeTab}
           size="lg"
           variant="underlined"
+          onSelectionChange={(key) => setActiveTab(String(key))}
         >
           <Tab key="overview" title="📋 Overview">
             <div className="space-y-4 mt-4">
@@ -108,7 +109,9 @@ export default function UserDashboardPage() {
                 <CardHeader className="flex gap-2 p-4">
                   <div className="flex flex-col">
                     <p className="font-semibold md:text-lg">Recent Orders</p>
-                    <p className="text-xs text-default-500">Your last 3 orders</p>
+                    <p className="text-xs text-default-500">
+                      Your last 3 orders
+                    </p>
                   </div>
                 </CardHeader>
                 <CardBody className="space-y-2 p-3">
@@ -118,7 +121,9 @@ export default function UserDashboardPage() {
                         <div className="flex-1">
                           <div className="flex items-center gap-2 mb-1">
                             <span className="text-lg">{order.icon}</span>
-                            <p className="font-semibold text-sm md:text-base">{order.id}</p>
+                            <p className="font-semibold text-sm md:text-base">
+                              {order.id}
+                            </p>
                             <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded">
                               {order.status}
                             </span>
@@ -128,7 +133,9 @@ export default function UserDashboardPage() {
                           </p>
                         </div>
                         <div className="text-right">
-                          <p className="font-bold text-sm md:text-base">₹{order.total}</p>
+                          <p className="font-bold text-sm md:text-base">
+                            ₹{order.total}
+                          </p>
                           <p className="text-xs text-default-600">→</p>
                         </div>
                       </div>
@@ -136,7 +143,13 @@ export default function UserDashboardPage() {
                   ))}
                 </CardBody>
                 <CardFooter className="p-3">
-                  <Button as={Link} href="/orders" fullWidth variant="flat" size="sm">
+                  <Button
+                    fullWidth
+                    as={Link}
+                    href="/orders"
+                    size="sm"
+                    variant="flat"
+                  >
                     View All Orders →
                   </Button>
                 </CardFooter>
@@ -147,21 +160,33 @@ export default function UserDashboardPage() {
           <Tab key="addresses" title="📍 Addresses">
             <div className="space-y-3 mt-4">
               {addresses.map((addr) => (
-                <Card key={addr.id} className="bg-default-50 dark:bg-default-200">
+                <Card
+                  key={addr.id}
+                  className="bg-default-50 dark:bg-default-200"
+                >
                   <CardBody className="py-3">
                     <div className="flex items-start justify-between gap-2">
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-1">
-                          <p className="font-bold text-sm md:text-base">{addr.label}</p>
+                          <p className="font-bold text-sm md:text-base">
+                            {addr.label}
+                          </p>
                           {addr.default && (
                             <span className="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded">
                               Default
                             </span>
                           )}
                         </div>
-                        <p className="text-xs md:text-sm text-default-600">{addr.address}</p>
+                        <p className="text-xs md:text-sm text-default-600">
+                          {addr.address}
+                        </p>
                       </div>
-                      <Button isIconOnly size="sm" variant="flat" className="flex-shrink-0">
+                      <Button
+                        isIconOnly
+                        className="flex-shrink-0"
+                        size="sm"
+                        variant="flat"
+                      >
                         ✎
                       </Button>
                     </div>
@@ -173,7 +198,7 @@ export default function UserDashboardPage() {
                 <CardBody className="py-6">
                   <div className="flex flex-col items-center justify-center gap-2">
                     <p className="text-2xl">➕</p>
-                    <Button color="primary" size="sm" className="mt-2">
+                    <Button className="mt-2" color="primary" size="sm">
                       Add New Address
                     </Button>
                   </div>
@@ -186,18 +211,32 @@ export default function UserDashboardPage() {
             <div className="mt-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {savedItems.map((item) => (
-                  <Card key={item.id} className="bg-default-50 dark:bg-default-200 hover:shadow-lg transition-shadow">
+                  <Card
+                    key={item.id}
+                    className="bg-default-50 dark:bg-default-200 hover:shadow-lg transition-shadow"
+                  >
                     <CardBody className="py-3">
                       <div className="flex items-start justify-between mb-2">
                         <div>
-                          <p className="font-semibold text-sm md:text-base">{item.name}</p>
-                          <p className="text-primary font-bold text-base md:text-lg">₹{item.price}</p>
+                          <p className="font-semibold text-sm md:text-base">
+                            {item.name}
+                          </p>
+                          <p className="text-primary font-bold text-base md:text-lg">
+                            ₹{item.price}
+                          </p>
                         </div>
-                        <p className="text-xs text-default-600">{item.saves} saved</p>
+                        <p className="text-xs text-default-600">
+                          {item.saves} saved
+                        </p>
                       </div>
                     </CardBody>
                     <CardFooter className="gap-2 p-3 pt-0">
-                      <Button fullWidth size="sm" color="primary" className="text-xs md:text-sm">
+                      <Button
+                        fullWidth
+                        className="text-xs md:text-sm"
+                        color="primary"
+                        size="sm"
+                      >
                         Add to Cart
                       </Button>
                     </CardFooter>
@@ -211,7 +250,9 @@ export default function UserDashboardPage() {
             <div className="space-y-4 mt-4">
               <Card>
                 <CardHeader className="p-3">
-                  <p className="font-semibold text-sm md:text-base">Notifications</p>
+                  <p className="font-semibold text-sm md:text-base">
+                    Notifications
+                  </p>
                 </CardHeader>
                 <CardBody className="space-y-2 p-3 pt-0">
                   {[
@@ -219,12 +260,21 @@ export default function UserDashboardPage() {
                     { label: "Offers & Deals", desc: "Promotions" },
                     { label: "Reminders", desc: "Recommendations" },
                   ].map((pref, idx) => (
-                    <div key={idx} className="flex items-center justify-between p-2 bg-default-100 dark:bg-default-300 rounded">
+                    <div
+                      key={idx}
+                      className="flex items-center justify-between p-2 bg-default-100 dark:bg-default-300 rounded"
+                    >
                       <div>
-                        <p className="font-semibold text-xs md:text-sm">{pref.label}</p>
+                        <p className="font-semibold text-xs md:text-sm">
+                          {pref.label}
+                        </p>
                         <p className="text-xs text-default-600">{pref.desc}</p>
                       </div>
-                      <input type="checkbox" defaultChecked className="w-4 h-4" />
+                      <input
+                        defaultChecked
+                        className="w-4 h-4"
+                        type="checkbox"
+                      />
                     </div>
                   ))}
                 </CardBody>
@@ -235,10 +285,21 @@ export default function UserDashboardPage() {
                   <p className="font-semibold text-sm md:text-base">Account</p>
                 </CardHeader>
                 <CardBody className="space-y-2 p-3 pt-0">
-                  <Button fullWidth variant="flat" size="sm" className="text-xs md:text-sm">
+                  <Button
+                    fullWidth
+                    className="text-xs md:text-sm"
+                    size="sm"
+                    variant="flat"
+                  >
                     Change Password
                   </Button>
-                  <Button fullWidth variant="flat" size="sm" color="danger" className="text-xs md:text-sm">
+                  <Button
+                    fullWidth
+                    className="text-xs md:text-sm"
+                    color="danger"
+                    size="sm"
+                    variant="flat"
+                  >
                     Logout
                   </Button>
                 </CardBody>

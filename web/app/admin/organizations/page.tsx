@@ -1,283 +1,325 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { Card, CardBody, CardHeader } from '@heroui/card'
-import { Spinner } from '@heroui/spinner'
-import { Button } from '@heroui/button'
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from '@heroui/modal'
-import { Input } from '@heroui/input'
-import { Switch } from '@heroui/switch'
-import { Chip } from '@heroui/chip'
-import { Select, SelectItem } from '@heroui/select'
-import { apiEndpoints } from '@/lib/api-client'
-import { AdminHeader } from '@/components/headers/admin-header'
-import { useAdmin } from '@/context/admin-context'
-import { CountryStateSelect } from '@/components/country-state-select'
+import { Button } from "@heroui/button";
+import { Card, CardBody } from "@heroui/card";
+import { Chip } from "@heroui/chip";
+import { Input } from "@heroui/input";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+} from "@heroui/modal";
+import { Spinner } from "@heroui/spinner";
+import { Switch } from "@heroui/switch";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
-interface Organisation {
-  id: number
-  name: string
-  organisationUniqueCode: string
-  currency: string
-  status?: string
-  trialEndDate?: string
-}
+import { CountryStateSelect } from "@/components/country-state-select";
+import { AdminHeader } from "@/components/headers/admin-header";
+import { useAdmin } from "@/context/admin-context";
+import { apiEndpoints } from "@/lib/api-client";
+import { OrganisationFormData } from "@/types/organization";
 
-interface OrganisationFormData {
-  name: string
-  organisationUniqueCode: string
-  currency: string
-  addressLine1: string
-  addressLine2: string
-  city: string
-  stateCode: string
-  postalCode: string
-  countryCode: string
-  whatsappNumber?: string
-  whatsappEnabled?: boolean
-  priceVisibility?: 'hidden' | 'login_only' | 'visible'
+interface Organisation extends Record<string, unknown> {
+  id: number;
+  name: string;
+  organisationUniqueCode: string;
+  currency: string;
+  status?: string;
+  trialEndDate?: string;
+  addressLine1?: string;
+  addressLine2?: string;
+  city?: string;
+  stateCode?: string;
+  postalCode?: string;
+  countryCode?: string;
+  whatsappNumber?: string;
+  whatsappEnabled?: boolean;
+  priceVisibility?: "hidden" | "login_only" | "visible";
 }
 
 export default function OrganizationsPage() {
-  const router = useRouter()
-  const { adminUser, clearAdmin } = useAdmin()
-  const [organisations, setOrganisations] = useState<Organisation[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
-  const [storeLoaded, setStoreLoaded] = useState(false)
-  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false)
-  const [isEditModalOpen, setIsEditModalOpen] = useState(false)
-  const [editingOrgId, setEditingOrgId] = useState<number | null>(null)
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [formError, setFormError] = useState('')
+  const router = useRouter();
+  const { adminUser, clearAdmin } = useAdmin();
+  const [organisations, setOrganisations] = useState<Organisation[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [storeLoaded, setStoreLoaded] = useState(false);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [editingOrgId, setEditingOrgId] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formError, setFormError] = useState("");
   const [formData, setFormData] = useState<OrganisationFormData>({
-    name: '',
-    organisationUniqueCode: '',
-    currency: 'INR',
-    addressLine1: '',
-    addressLine2: '',
-    city: '',
-    stateCode: '',
-    postalCode: '',
-    countryCode: '',
-    whatsappNumber: '',
+    name: "",
+    organisationUniqueCode: "",
+    currency: "INR",
+    addressLine1: "",
+    addressLine2: "",
+    city: "",
+    stateCode: "",
+    postalCode: "",
+    countryCode: "",
+    whatsappNumber: "",
     whatsappEnabled: false,
-    priceVisibility: 'visible',
-  })
+    priceVisibility: "visible",
+  });
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setStoreLoaded(true)
-    }, 100)
-    return () => clearTimeout(timer)
-  }, [])
+      setStoreLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
-    if (!storeLoaded) return
+    if (!storeLoaded) return;
 
-    const token = localStorage.getItem('adminToken')
+    const token = localStorage.getItem("adminToken");
+
     if (!token) {
-      router.push('/admin')
-      return
+      router.push("/admin");
+
+      return;
     }
 
     const fetchOrgs = async () => {
       try {
-        const token = localStorage.getItem('adminToken');
-        const data = await apiEndpoints.getAdminOrganisations(token || '');
-        setOrganisations(data.organisations || [])
-      } catch (err) {
-        setError('Failed to load organizations')
-        console.error(err)
-      } finally {
-        setLoading(false)
-      }
-    }
+        const token = localStorage.getItem("adminToken");
+        const data = await apiEndpoints.getAdminOrganisations(token || "");
 
-    fetchOrgs()
-  }, [router, clearAdmin, storeLoaded])
+        setOrganisations(data.organisations || []);
+      } catch (err) {
+        setError("Failed to load organizations");
+        // console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchOrgs();
+  }, [router, clearAdmin, storeLoaded]);
 
   const handleCreateOrganisation = async () => {
     if (!formData.name || !formData.organisationUniqueCode) {
-      setFormError('Name and organization code are required')
-      return
+      setFormError("Name and organization code are required");
+
+      return;
     }
 
-    setIsSubmitting(true)
-    setFormError('')
+    setIsSubmitting(true);
+    setFormError("");
 
     try {
-      const token = localStorage.getItem('adminToken')
+      const token = localStorage.getItem("adminToken");
+
       if (!token) {
-        router.push('/admin')
-        return
+        router.push("/admin");
+
+        return;
       }
 
-      await apiEndpoints.createAdminOrganisation(formData, token)
-      
+      await apiEndpoints.createAdminOrganisation(formData, token);
+
       // Refresh the list
-      const data = await apiEndpoints.getAdminOrganisations(token)
-      setOrganisations(data.organisations || [])
-      
+      const data = await apiEndpoints.getAdminOrganisations(token);
+
+      setOrganisations(data.organisations || []);
+
       // Reset form and close modal
       setFormData({
-        name: '',
-        organisationUniqueCode: '',
-        currency: 'INR',
-        addressLine1: '',
-        addressLine2: '',
-        city: '',
-        stateCode: '',
-        postalCode: '',
-        countryCode: '',
-        whatsappNumber: '',
+        name: "",
+        organisationUniqueCode: "",
+        currency: "INR",
+        addressLine1: "",
+        addressLine2: "",
+        city: "",
+        stateCode: "",
+        postalCode: "",
+        countryCode: "",
+        whatsappNumber: "",
         whatsappEnabled: false,
-        priceVisibility: 'visible',
-      })
-      setIsCreateModalOpen(false)
-    } catch (err: any) {
-      setFormError(err.message || 'Failed to create organization')
+        priceVisibility: "visible",
+      });
+      setIsCreateModalOpen(false);
+    } catch (err: unknown) {
+      const error = err instanceof Error ? err : new Error(String(err));
+      setFormError(error.message || "Failed to create organization");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
-  const handleOpenEditModal = (org: any) => {
-    setEditingOrgId(org.id)
+  const handleOpenEditModal = (org: Organisation) => {
+    setEditingOrgId(org.id);
     setFormData({
-      name: org.name || '',
-      organisationUniqueCode: org.organisationUniqueCode || '',
-      currency: org.currency || 'INR',
-      addressLine1: org.addressLine1 || '',
-      addressLine2: org.addressLine2 || '',
-      city: org.city || '',
-      stateCode: org.stateCode || '',
-      postalCode: org.postalCode || '',
-      countryCode: org.countryCode || '',
-      whatsappNumber: org.whatsappNumber || '',
+      name: org.name || "",
+      organisationUniqueCode: org.organisationUniqueCode || "",
+      currency: org.currency || "INR",
+      addressLine1: org.addressLine1 || "",
+      addressLine2: org.addressLine2 || "",
+      city: org.city || "",
+      stateCode: org.stateCode || "",
+      postalCode: org.postalCode || "",
+      countryCode: org.countryCode || "",
+      whatsappNumber: org.whatsappNumber || "",
       whatsappEnabled: org.whatsappEnabled || false,
-      priceVisibility: org.priceVisibility || 'visible',
-    })
-    setFormError('')
-    setIsEditModalOpen(true)
-  }
+      priceVisibility: org.priceVisibility || "visible",
+    });
+    setFormError("");
+    setIsEditModalOpen(true);
+  };
 
   const handleUpdateOrganisation = async () => {
     if (!formData.name) {
-      setFormError('Organization name is required')
-      return
+      setFormError("Organization name is required");
+
+      return;
     }
 
     if (!editingOrgId) {
-      setFormError('Organization ID not found')
-      return
+      setFormError("Organization ID not found");
+
+      return;
     }
 
-    setIsSubmitting(true)
-    setFormError('')
+    setIsSubmitting(true);
+    setFormError("");
 
     try {
-      const token = localStorage.getItem('adminToken')
+      const token = localStorage.getItem("adminToken");
+
       if (!token) {
-        router.push('/admin')
-        return
+        router.push("/admin");
+
+        return;
       }
 
-      await apiEndpoints.updateAdminOrganisation(editingOrgId, formData, token)
-      
-      // Refresh the list
-      const data = await apiEndpoints.getAdminOrganisations(token)
-      setOrganisations(data.organisations || [])
-      
-      // Close modal
-      setIsEditModalOpen(false)
-      setEditingOrgId(null)
-    } catch (err: any) {
-      setFormError(err.message || 'Failed to update organization')
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+      await apiEndpoints.updateAdminOrganisation(editingOrgId, formData, token);
 
-  const handleToggleOrganisationStatus = async (id: number, newStatus: string) => {
+      // Refresh the list
+      const data = await apiEndpoints.getAdminOrganisations(token);
+
+      setOrganisations(data.organisations || []);
+
+      // Close modal
+      setIsEditModalOpen(false);
+      setEditingOrgId(null);
+    } catch (err: unknown) {
+      const error = err instanceof Error ? err : new Error(String(err));
+      setFormError(error.message || "Failed to update organization");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleToggleOrganisationStatus = async (
+    id: number,
+    newStatus: string,
+  ) => {
     try {
-      const token = localStorage.getItem('adminToken')
+      const token = localStorage.getItem("adminToken");
+
       if (!token) {
-        router.push('/admin')
-        return
+        router.push("/admin");
+
+        return;
       }
 
       // Toggle status
-      const currentOrg = organisations.find(o => o.id === id)
-      const toggledStatus = newStatus === 'active' ? 'disabled' : 'active'
-      
-      await apiEndpoints.updateAdminOrganisation(id, { status: toggledStatus }, token)
-      
+      const _currentOrg = organisations.find((o) => o.id === id);
+      const toggledStatus = newStatus === "active" ? "disabled" : "active";
+
+      await apiEndpoints.updateAdminOrganisation(
+        id,
+        { status: toggledStatus },
+        token,
+      );
+
       // Refresh the list
-      const data = await apiEndpoints.getAdminOrganisations(token)
-      setOrganisations(data.organisations || [])
-    } catch (err: any) {
-      setError(err.message || 'Failed to update organization status')
+      const data = await apiEndpoints.getAdminOrganisations(token);
+
+      setOrganisations(data.organisations || []);
+    } catch (err: unknown) {
+      const error = err instanceof Error ? err : new Error(String(err));
+      setError(error.message || "Failed to update organization status");
     }
-  }
+  };
 
   const handleDeleteOrganisation = async (id: number) => {
-    if (!confirm('Are you sure you want to delete this organization?')) {
-      return
+    if (!confirm("Are you sure you want to delete this organization?")) {
+      return;
     }
 
     try {
-      const token = localStorage.getItem('adminToken')
+      const token = localStorage.getItem("adminToken");
+
       if (!token) {
-        router.push('/admin')
-        return
+        router.push("/admin");
+
+        return;
       }
 
-      await apiEndpoints.deleteAdminOrganisation(id, token)
-      
+      await apiEndpoints.deleteAdminOrganisation(id, token);
+
       // Refresh the list
-      const data = await apiEndpoints.getAdminOrganisations(token)
-      setOrganisations(data.organisations || [])
-    } catch (err: any) {
-      setError(err.message || 'Failed to delete organization')
+      const data = await apiEndpoints.getAdminOrganisations(token);
+
+      setOrganisations(data.organisations || []);
+    } catch (err: unknown) {
+      const error = err instanceof Error ? err : new Error(String(err));
+      setError(error.message || "Failed to delete organization");
     }
-  }
+  };
 
   const handleViewSellerStore = async (org: Organisation) => {
     try {
-      setLoading(true)
-      const adminToken = localStorage.getItem('adminToken')
+      setLoading(true);
+      const adminToken = localStorage.getItem("adminToken");
+
       if (!adminToken) {
-        router.push('/admin')
-        return
+        router.push("/admin");
+
+        return;
       }
 
       // Get master seller token
-      const response = await apiEndpoints.getMasterSellerToken(org.id, adminToken)
-      const { token: sellerToken } = response
+      const response = await apiEndpoints.getMasterSellerToken(
+        org.id,
+        adminToken,
+      );
+      const { token: sellerToken } = response;
 
       // Save seller token and organization ID to localStorage
-      localStorage.setItem('sellerToken', sellerToken)
-      localStorage.setItem('selectedOrgId', org.id.toString())
+      localStorage.setItem("sellerToken", sellerToken);
+      localStorage.setItem("selectedOrgId", org.id.toString());
 
       // Navigate to seller dashboard with organization ID
-      router.push(`/seller/dashboard?organisationId=${org.id}`)
-    } catch (err: any) {
-      setError(err.message || 'Failed to access seller store')
-      setLoading(false)
+      router.push(`/seller/dashboard?organisationId=${org.id}`);
+    } catch (err: unknown) {
+      const error = err instanceof Error ? err : new Error(String(err));
+      setError(error.message || "Failed to access seller store");
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <main className="min-h-screen bg-default-50">
-      <AdminHeader userName={adminUser?.fullName} userEmail={adminUser?.email} />
+      <AdminHeader
+        userEmail={adminUser?.email}
+        userName={adminUser?.fullName}
+      />
 
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-2">
             <h1 className="text-3xl font-bold">Organizations</h1>
-            <p className="text-default-500">Manage all organizations in the system</p>
+            <p className="text-default-500">
+              Manage all organizations in the system
+            </p>
           </div>
           <Button color="primary" onPress={() => setIsCreateModalOpen(true)}>
             + Create Organization
@@ -290,7 +332,9 @@ export default function OrganizationsPage() {
           </div>
         ) : error ? (
           <Card className="bg-red-50 dark:bg-red-950/20">
-            <CardBody className="text-red-600 dark:text-red-400">{error}</CardBody>
+            <CardBody className="text-red-600 dark:text-red-400">
+              {error}
+            </CardBody>
           </Card>
         ) : organisations.length === 0 ? (
           <Card>
@@ -307,19 +351,36 @@ export default function OrganizationsPage() {
                     <div className="flex items-start justify-between gap-2">
                       <div>
                         <h3 className="text-lg font-bold">{org.name}</h3>
-                        <p className="text-sm text-default-500">Code: {org.organisationUniqueCode}</p>
-                        <p className="text-sm text-default-500">Currency: {org.currency}</p>
+                        <p className="text-sm text-default-500">
+                          Code: {org.organisationUniqueCode}
+                        </p>
+                        <p className="text-sm text-default-500">
+                          Currency: {org.currency}
+                        </p>
                       </div>
                       <Chip
-                        color={org.status === 'active' ? 'success' : org.status === 'trial' ? 'warning' : 'danger'}
-                        variant="flat"
+                        color={
+                          org.status === "active"
+                            ? "success"
+                            : org.status === "trial"
+                              ? "warning"
+                              : "danger"
+                        }
                         size="sm"
+                        variant="flat"
                       >
-                        {org.status === 'active' ? '✓ Active' : org.status === 'trial' ? '⏱ Trial' : '✕ Disabled'}
+                        {org.status === "active"
+                          ? "✓ Active"
+                          : org.status === "trial"
+                            ? "⏱ Trial"
+                            : "✕ Disabled"}
                       </Chip>
                     </div>
-                    {org.trialEndDate && org.status === 'trial' && (
-                      <p className="text-xs text-default-500 mt-2">Trial ends: {new Date(org.trialEndDate).toLocaleDateString()}</p>
+                    {org.trialEndDate && org.status === "trial" && (
+                      <p className="text-xs text-default-500 mt-2">
+                        Trial ends:{" "}
+                        {new Date(org.trialEndDate).toLocaleDateString()}
+                      </p>
                     )}
                   </div>
 
@@ -327,25 +388,42 @@ export default function OrganizationsPage() {
                     <div className="flex items-center justify-between p-3 bg-default-100 rounded-lg">
                       <span className="text-sm font-medium">Status</span>
                       <Switch
-                        checked={org.status === 'active'}
-                        onChange={(e) => handleToggleOrganisationStatus(org.id, org.status || 'trial')}
+                        checked={org.status === "active"}
                         color="success"
+                        onChange={(_e) =>
+                          handleToggleOrganisationStatus(
+                            org.id,
+                            org.status || "trial",
+                          )
+                        }
                       />
                     </div>
                   </div>
 
                   <div className="flex gap-2">
-                    <Button size="sm" variant="flat" color="success" fullWidth
+                    <Button
+                      fullWidth
+                      color="success"
+                      size="sm"
+                      variant="flat"
                       onPress={() => handleViewSellerStore(org)}
                     >
                       👁️ View Store
                     </Button>
-                    <Button size="sm" variant="flat" color="primary" fullWidth
+                    <Button
+                      fullWidth
+                      color="primary"
+                      size="sm"
+                      variant="flat"
                       onPress={() => handleOpenEditModal(org)}
                     >
                       Edit
                     </Button>
-                    <Button size="sm" variant="flat" color="danger" fullWidth
+                    <Button
+                      fullWidth
+                      color="danger"
+                      size="sm"
+                      variant="flat"
                       onPress={() => handleDeleteOrganisation(org.id)}
                     >
                       Delete
@@ -359,7 +437,11 @@ export default function OrganizationsPage() {
       </div>
 
       {/* Edit Organization Modal */}
-      <Modal isOpen={isEditModalOpen} onClose={() => setIsEditModalOpen(false)} size="2xl">
+      <Modal
+        isOpen={isEditModalOpen}
+        size="2xl"
+        onClose={() => setIsEditModalOpen(false)}
+      >
         <ModalContent>
           <ModalHeader>Edit Organization</ModalHeader>
           <ModalBody>
@@ -369,80 +451,114 @@ export default function OrganizationsPage() {
                   {formError}
                 </div>
               )}
-              
+
               <Input
+                isRequired
                 label="Organization Name"
                 placeholder="Enter organization name"
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                isRequired
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
               />
-              
+
               <Input
                 label="Currency"
                 placeholder="Currency code"
                 value={formData.currency}
-                onChange={(e) => setFormData({ ...formData, currency: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, currency: e.target.value })
+                }
               />
-              
+
               <Input
                 label="Address Line 1"
                 placeholder="Enter address"
                 value={formData.addressLine1}
-                onChange={(e) => setFormData({ ...formData, addressLine1: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, addressLine1: e.target.value })
+                }
               />
-              
+
               <Input
                 label="Address Line 2"
                 placeholder="Enter address line 2"
                 value={formData.addressLine2}
-                onChange={(e) => setFormData({ ...formData, addressLine2: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, addressLine2: e.target.value })
+                }
               />
-              
+
               <div className="grid grid-cols-2 gap-4">
                 <Input
                   label="City"
                   placeholder="Enter city"
                   value={formData.city}
-                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, city: e.target.value })
+                  }
                 />
-                
+
                 <Input
                   label="Postal Code"
                   placeholder="Enter postal code"
                   value={formData.postalCode}
-                  onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, postalCode: e.target.value })
+                  }
                 />
               </div>
 
               <CountryStateSelect
                 selectedCountryCode={formData.countryCode}
                 selectedStateCode={formData.stateCode}
-                onCountryChange={(code) => setFormData({ ...formData, countryCode: code })}
-                onStateChange={(code) => setFormData({ ...formData, stateCode: code })}
+                onCountryChange={(code) =>
+                  setFormData({ ...formData, countryCode: code })
+                }
+                onStateChange={(code) =>
+                  setFormData({ ...formData, stateCode: code })
+                }
               />
 
               <Input
                 label="WhatsApp Number"
                 placeholder="Enter WhatsApp number"
-                value={formData.whatsappNumber || ''}
-                onChange={(e) => setFormData({ ...formData, whatsappNumber: e.target.value })}
+                value={formData.whatsappNumber || ""}
+                onChange={(e) =>
+                  setFormData({ ...formData, whatsappNumber: e.target.value })
+                }
               />
-              
+
               <div className="flex items-center gap-2">
                 <Switch
                   checked={formData.whatsappEnabled || false}
-                  onChange={(e) => setFormData({ ...formData, whatsappEnabled: e.target.checked })}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      whatsappEnabled: e.target.checked,
+                    })
+                  }
                 />
                 <span className="text-sm">Enable WhatsApp</span>
               </div>
 
               <div>
-                <label className="text-sm font-medium mb-2 block">Price Visibility</label>
-                <select 
+                <label
+                  className="text-sm font-medium mb-2 block"
+                  htmlFor="priceVisibility"
+                >
+                  Price Visibility
+                </label>
+                <select
+                  id="priceVisibility"
                   className="w-full p-2 border rounded-lg"
-                  value={formData.priceVisibility || 'visible'}
-                  onChange={(e) => setFormData({ ...formData, priceVisibility: e.target.value as any })}
+                  value={formData.priceVisibility || "visible"}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      priceVisibility: e.target.value as "hidden" | "login_only" | "visible",
+                    })
+                  }
                 >
                   <option value="hidden">Hidden</option>
                   <option value="login_only">Login Only</option>
@@ -453,16 +569,16 @@ export default function OrganizationsPage() {
           </ModalBody>
           <ModalFooter>
             <Button
+              isDisabled={isSubmitting}
               variant="flat"
               onPress={() => setIsEditModalOpen(false)}
-              isDisabled={isSubmitting}
             >
               Cancel
             </Button>
             <Button
               color="primary"
-              onPress={handleUpdateOrganisation}
               isLoading={isSubmitting}
+              onPress={handleUpdateOrganisation}
             >
               Update Organization
             </Button>
@@ -471,7 +587,11 @@ export default function OrganizationsPage() {
       </Modal>
 
       {/* Create Organization Modal */}
-      <Modal isOpen={isCreateModalOpen} onClose={() => setIsCreateModalOpen(false)} size="2xl">
+      <Modal
+        isOpen={isCreateModalOpen}
+        size="2xl"
+        onClose={() => setIsCreateModalOpen(false)}
+      >
         <ModalContent>
           <ModalHeader>Create New Organization</ModalHeader>
           <ModalBody>
@@ -481,80 +601,101 @@ export default function OrganizationsPage() {
                   {formError}
                 </div>
               )}
-              
+
               <Input
+                isRequired
                 label="Organization Name"
                 placeholder="Enter organization name"
                 value={formData.name}
-                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                isRequired
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
               />
-              
+
               <Input
+                isRequired
                 label="Organization Code"
                 placeholder="Enter unique code (e.g., org123)"
                 value={formData.organisationUniqueCode}
-                onChange={(e) => setFormData({ ...formData, organisationUniqueCode: e.target.value.toLowerCase().trim() })}
-                isRequired
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    organisationUniqueCode: e.target.value.toLowerCase().trim(),
+                  })
+                }
               />
-              
+
               <Input
                 label="Currency"
                 placeholder="Currency code"
                 value={formData.currency}
-                onChange={(e) => setFormData({ ...formData, currency: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, currency: e.target.value })
+                }
               />
-              
+
               <Input
                 label="Address Line 1"
                 placeholder="Enter address"
                 value={formData.addressLine1}
-                onChange={(e) => setFormData({ ...formData, addressLine1: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, addressLine1: e.target.value })
+                }
               />
-              
+
               <Input
                 label="Address Line 2"
                 placeholder="Enter address line 2"
                 value={formData.addressLine2}
-                onChange={(e) => setFormData({ ...formData, addressLine2: e.target.value })}
+                onChange={(e) =>
+                  setFormData({ ...formData, addressLine2: e.target.value })
+                }
               />
-              
+
               <div className="grid grid-cols-2 gap-4">
                 <Input
                   label="City"
                   placeholder="Enter city"
                   value={formData.city}
-                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, city: e.target.value })
+                  }
                 />
-                
+
                 <Input
                   label="Postal Code"
                   placeholder="Enter postal code"
                   value={formData.postalCode}
-                  onChange={(e) => setFormData({ ...formData, postalCode: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, postalCode: e.target.value })
+                  }
                 />
               </div>
-              
+
               <CountryStateSelect
                 selectedCountryCode={formData.countryCode}
                 selectedStateCode={formData.stateCode}
-                onCountryChange={(code) => setFormData({ ...formData, countryCode: code })}
-                onStateChange={(code) => setFormData({ ...formData, stateCode: code })}
+                onCountryChange={(code) =>
+                  setFormData({ ...formData, countryCode: code })
+                }
+                onStateChange={(code) =>
+                  setFormData({ ...formData, stateCode: code })
+                }
               />
             </div>
           </ModalBody>
           <ModalFooter>
             <Button
+              isDisabled={isSubmitting}
               variant="flat"
               onPress={() => setIsCreateModalOpen(false)}
-              isDisabled={isSubmitting}
             >
               Cancel
             </Button>
             <Button
               color="primary"
-              onPress={handleCreateOrganisation}
               isLoading={isSubmitting}
+              onPress={handleCreateOrganisation}
             >
               Create Organization
             </Button>
@@ -562,5 +703,5 @@ export default function OrganizationsPage() {
         </ModalContent>
       </Modal>
     </main>
-  )
+  );
 }

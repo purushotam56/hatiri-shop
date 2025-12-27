@@ -1,63 +1,66 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { useAdmin } from '@/context/admin-context'
-import { apiEndpoints } from '@/lib/api-client'
-import { Card, CardBody, CardHeader } from '@heroui/card'
-import { Button } from '@heroui/button'
-import { Input } from '@heroui/input'
-import { Chip } from '@heroui/chip'
-import Link from 'next/link'
+import { Button } from "@heroui/button";
+import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Chip } from "@heroui/chip";
+import { Input } from "@heroui/input";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
+
+import { useAdmin } from "@/context/admin-context";
+import { apiEndpoints } from "@/lib/api-client";
 
 export default function AdminLoginPage() {
-  const router = useRouter()
-  const { setAdminUser } = useAdmin()
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState('')
+  const router = useRouter();
+  const { setAdminUser } = useAdmin();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  })
+    email: "",
+    password: "",
+  });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target
-    setFormData((prev) => ({ ...prev, [name]: value }))
-    setError('')
-  }
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setError("");
+  };
 
   const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
+    e.preventDefault();
+    setLoading(true);
+    setError("");
 
     try {
       const data = await apiEndpoints.adminLogin(formData);
 
       if (!data.admin) {
-        setError(data.message || 'Login failed')
-        return
+        setError(data.message || "Login failed");
+
+        return;
       }
 
       // Store token
-      localStorage.setItem('adminToken', data.token)
-      setAdminUser(data.admin)
+      localStorage.setItem("adminToken", data.token);
+      setAdminUser(data.admin);
 
-      router.push('/admin/dashboard')
+      router.push("/admin/dashboard");
     } catch (err) {
-      setError('Connection error. Please try again.')
-      console.error(err)
+      setError("Connection error. Please try again.");
+      // console.error(err);
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-content1 via-content2 to-content1 flex items-center justify-center px-4">
       <div className="relative w-full max-w-md">
         <Card className="w-full" shadow="lg">
-          <div className="h-2 bg-gradient-to-r from-warning via-success to-warning"></div>
-          
+          <div className="h-2 bg-gradient-to-r from-warning via-success to-warning" />
+
           <CardHeader className="flex flex-col items-center gap-2 pt-8 pb-6">
             <div className="text-5xl mb-3">👑</div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-warning to-success bg-clip-text text-transparent">
@@ -67,60 +70,66 @@ export default function AdminLoginPage() {
           </CardHeader>
 
           <CardBody className="gap-6">
-            <form onSubmit={handleLogin} className="flex flex-col gap-4">
+            <form className="flex flex-col gap-4" onSubmit={handleLogin}>
               <Input
-                type="email"
-                label="Email Address"
-                placeholder="admin@hatiri.com"
-                value={formData.email}
-                onChange={(e) => handleChange(e as any)}
-                name="email"
-                isDisabled={loading}
                 isRequired
+                isDisabled={loading}
+                label="Email Address"
+                name="email"
+                placeholder="admin@hatiri.com"
+                type="email"
+                value={formData.email}
                 variant="bordered"
+                onChange={(e) => handleChange(e as React.ChangeEvent<HTMLInputElement>)}
               />
 
               <Input
-                type="password"
-                label="Password"
-                placeholder="Enter your password"
-                value={formData.password}
-                onChange={(e) => handleChange(e as any)}
-                name="password"
-                isDisabled={loading}
                 isRequired
+                isDisabled={loading}
+                label="Password"
+                name="password"
+                placeholder="Enter your password"
+                type="password"
+                value={formData.password}
                 variant="bordered"
+                onChange={(e) => handleChange(e as React.ChangeEvent<HTMLInputElement>)}
               />
 
               {error && (
-                <Chip color="danger" variant="flat" startContent={<span>⚠️</span>} className="w-full justify-start p-4">
+                <Chip
+                  className="w-full justify-start p-4"
+                  color="danger"
+                  startContent={<span>⚠️</span>}
+                  variant="flat"
+                >
                   {error}
                 </Chip>
               )}
 
               <Button
-                type="submit"
-                color="warning"
-                variant="shadow"
                 fullWidth
-                isLoading={loading}
+                color="warning"
                 isDisabled={loading}
+                isLoading={loading}
+                type="submit"
+                variant="shadow"
               >
                 {loading ? "Logging in…" : "Login as Admin"}
               </Button>
             </form>
-
-
           </CardBody>
         </Card>
 
         <p className="text-center text-default-500 text-sm mt-6">
           Not an admin?{" "}
-          <Link href="/" className="text-warning hover:text-warning-600 font-semibold transition-colors">
+          <Link
+            className="text-warning hover:text-warning-600 font-semibold transition-colors"
+            href="/"
+          >
             Go to store
           </Link>
         </p>
       </div>
     </main>
-  )
+  );
 }

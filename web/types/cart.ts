@@ -2,7 +2,9 @@
  * Cart Types - Centralized type definitions for cart-related interfaces
  */
 
-export interface CartItem {
+import { BannerImage, Product, ProductImage } from "./product";
+
+export interface CartItem extends Record<string, unknown> {
   id: number;
   productId?: number;
   variantId?: number;
@@ -10,17 +12,18 @@ export interface CartItem {
   price: number;
   quantity: number;
   currency: string;
+  stock?: number;
   productQuantity?: number;
   unit?: string;
   sku?: string;
-  bannerImage?: any;
-  image?: any;
-  images?: any[];
+  bannerImage?: BannerImage;
+  image?: BannerImage;
+  images?: (ProductImage | BannerImage | Record<string, unknown>)[];
 }
 
 export interface CartContextType {
   cart: CartItem[];
-  addToCart: (product: any) => void;
+  addToCart: (product: CartItem | Product | Record<string, unknown>) => void;
   removeFromCart: (id: number) => void;
   updateQuantity: (id: number, quantity: number) => void;
   clearCart: () => void;

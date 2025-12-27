@@ -5,9 +5,5 @@ export default function SellerDashboardLayout({
 }: {
   children: ReactNode;
 }) {
-  return (
-    <>
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }

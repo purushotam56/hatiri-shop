@@ -2,7 +2,8 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Hatiri Shop",
-  description: "Quick commerce delivery for groceries, fruits, and more. Get what you need in 30 minutes.",
+  description:
+    "Quick commerce delivery for groceries, fruits, and more. Get what you need in 30 minutes.",
   navItems: [
     {
       label: "Shop",

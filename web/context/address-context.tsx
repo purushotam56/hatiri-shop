@@ -1,20 +1,19 @@
 "use client";
 
-import React, { createContext, useContext, ReactNode, useState, useEffect } from "react";
-import { useAuth } from "./auth-context";
-import { apiEndpoints } from "@/lib/api-client";
+import React, {
+  createContext,
+  useContext,
+  ReactNode,
+  useState,
+  useEffect,
+} from "react";
 
-export interface Address {
-  id?: number;
-  label: string;
-  fullName: string;
-  phoneNumber: string;
-  street: string;
-  city: string;
-  state: string;
-  pincode: string;
-  isDefault: boolean;
-}
+import { useAuth } from "./auth-context";
+
+import { apiEndpoints } from "@/lib/api-client";
+import { Address } from "@/types/address";
+
+export type { Address };
 
 interface AddressContextType {
   addresses: Address[];
@@ -43,11 +42,14 @@ export function AddressProvider({ children }: { children: ReactNode }) {
     setMounted(true);
     if (typeof window !== "undefined") {
       const storedAddresses = localStorage.getItem("addresses");
+
       if (storedAddresses) {
         try {
           const parsed = JSON.parse(storedAddresses);
+
           setLocalAddresses(parsed);
           const defaultAddr = parsed.find((a: Address) => a.isDefault);
+
           if (defaultAddr) {
             setSelectedAddress(defaultAddr);
           }
@@ -80,10 +82,12 @@ export function AddressProvider({ children }: { children: ReactNode }) {
       const token = localStorage.getItem("token");
       const data = await apiEndpoints.getAddresses(token || "");
       // Backend returns { addresses: [...] }
-      const addressArray = Array.isArray(data) ? data : (data.addresses || []);
+      const addressArray = Array.isArray(data) ? data : data.addresses || [];
+
       setAddresses(addressArray);
 
       const defaultAddr = addressArray.find((a: Address) => a.isDefault);
+
       if (defaultAddr) {
         setSelectedAddress(defaultAddr);
       }
@@ -100,6 +104,7 @@ export function AddressProvider({ children }: { children: ReactNode }) {
     setIsLoading(true);
     try {
       const token = localStorage.getItem("token");
+
       for (const addr of localAddresses) {
         await apiEndpoints.createAddress(addr, token || "");
       }
@@ -127,6 +132,7 @@ export function AddressProvider({ children }: { children: ReactNode }) {
           ...a,
           isDefault: false,
         }));
+
         updatedAddresses.push(newAddr);
         setAddresses(updatedAddresses);
         setSelectedAddress(newAddr);
@@ -145,7 +151,8 @@ export function AddressProvider({ children }: { children: ReactNode }) {
         ...a,
         isDefault: false,
       }));
-      updatedAddresses.push(newAddress);
+
+      updatedAddresses.push({ ...newAddress, isDefault: newAddress.isDefault ?? false });
       setLocalAddresses(updatedAddresses);
       setSelectedAddress(newAddress);
     }
@@ -157,11 +164,16 @@ export function AddressProvider({ children }: { children: ReactNode }) {
       setIsLoading(true);
       try {
         const token = localStorage.getItem("token");
-        const updatedAddr = await apiEndpoints.updateAddress(id, address, token || "");
+        const updatedAddr = await apiEndpoints.updateAddress(
+          id,
+          address,
+          token || "",
+        );
 
         const updatedAddresses = addresses.map((a) =>
-          a.id === id ? updatedAddr : { ...a, isDefault: false }
+          a.id === id ? updatedAddr : { ...a, isDefault: false },
         );
+
         setAddresses(updatedAddresses);
         if (selectedAddress?.id === id) {
           setSelectedAddress(updatedAddr);
@@ -174,8 +186,9 @@ export function AddressProvider({ children }: { children: ReactNode }) {
     } else {
       // Local mode
       const updatedAddresses = localAddresses.map((a) =>
-        a.id === id ? { ...address, id } : { ...a, isDefault: false }
+        a.id === id ? { ...address, id } : { ...a, isDefault: false },
       );
+
       setLocalAddresses(updatedAddresses);
       if (selectedAddress?.id === id) {
         setSelectedAddress({ ...address, id });
@@ -189,9 +202,11 @@ export function AddressProvider({ children }: { children: ReactNode }) {
       setIsLoading(true);
       try {
         const token = localStorage.getItem("token");
+
         await apiEndpoints.deleteAddress(id, token || "");
 
         const updated = addresses.filter((a) => a.id !== id);
+
         setAddresses(updated);
         if (selectedAddress?.id === id) {
           setSelectedAddress(updated.length > 0 ? updated[0] : null);
@@ -204,6 +219,7 @@ export function AddressProvider({ children }: { children: ReactNode }) {
     } else {
       // Local mode
       const updated = localAddresses.filter((a) => a.id !== id);
+
       setLocalAddresses(updated);
       if (selectedAddress?.id === id) {
         setSelectedAddress(updated.length > 0 ? updated[0] : null);
@@ -237,8 +253,10 @@ export function AddressProvider({ children }: { children: ReactNode }) {
 
 export function useAddress() {
   const context = useContext(AddressContext);
+
   if (!context) {
     throw new Error("useAddress must be used within AddressProvider");
   }
+
   return context;
 }

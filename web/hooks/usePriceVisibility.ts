@@ -1,6 +1,6 @@
-import { useAuth } from '@/context/auth-context';
+import { useAuth } from "@/context/auth-context";
 
-export type PriceVisibility = 'hidden' | 'login_only' | 'visible';
+export type PriceVisibility = "hidden" | "login_only" | "visible";
 
 interface PriceVisibilityResult {
   shouldShowPrice: boolean;
@@ -12,17 +12,19 @@ interface PriceVisibilityResult {
  * @param priceVisibility - The seller's price visibility setting
  * @returns Object with shouldShowPrice and shouldShowAsBlur flags
  */
-export function usePriceVisibility(priceVisibility: PriceVisibility = 'visible'): PriceVisibilityResult {
+export function usePriceVisibility(
+  priceVisibility: PriceVisibility = "visible",
+): PriceVisibilityResult {
   const { isLoggedIn } = useAuth();
 
-  if (priceVisibility === 'hidden') {
+  if (priceVisibility === "hidden") {
     return {
       shouldShowPrice: false,
       shouldShowAsBlur: true,
     };
   }
 
-  if (priceVisibility === 'login_only') {
+  if (priceVisibility === "login_only") {
     if (isLoggedIn) {
       return {
         shouldShowPrice: true,

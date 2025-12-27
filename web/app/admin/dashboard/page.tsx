@@ -1,70 +1,76 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { Card, CardBody, CardHeader } from '@heroui/card'
-import { Spinner } from '@heroui/spinner'
-import { Button } from '@heroui/button'
-import { apiEndpoints } from '@/lib/api-client'
-import { AdminHeader } from '@/components/headers/admin-header'
-import { useAdmin } from '@/context/admin-context'
-import Link from 'next/link'
+import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Spinner } from "@heroui/spinner";
+import { useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
+
+import { AdminHeader } from "@/components/headers/admin-header";
+import { useAdmin } from "@/context/admin-context";
+import { apiEndpoints } from "@/lib/api-client";
 
 interface DashboardStats {
-  totalOrganizations: number
-  totalSellers: number
-  totalOrders: number
-  totalRevenue: number
-  pendingOrders: number
-  deliveredOrders: number
+  totalOrganizations: number;
+  totalSellers: number;
+  totalOrders: number;
+  totalRevenue: number;
+  pendingOrders: number;
+  deliveredOrders: number;
 }
 
 export default function AdminDashboardPage() {
-  const router = useRouter()
-  const { adminUser, clearAdmin } = useAdmin()
-  const [stats, setStats] = useState<DashboardStats | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
-  const [storeLoaded, setStoreLoaded] = useState(false)
+  const router = useRouter();
+  const { adminUser, clearAdmin } = useAdmin();
+  const [stats, setStats] = useState<DashboardStats | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [storeLoaded, setStoreLoaded] = useState(false);
 
   // First effect: wait for context to load from localStorage
   useEffect(() => {
     const timer = setTimeout(() => {
-      setStoreLoaded(true)
-    }, 100)
-    return () => clearTimeout(timer)
-  }, [])
+      setStoreLoaded(true);
+    }, 100);
+
+    return () => clearTimeout(timer);
+  }, []);
 
   // Second effect: check auth and load stats
   useEffect(() => {
-    if (!storeLoaded) return
+    if (!storeLoaded) return;
 
-    const token = localStorage.getItem('adminToken')
+    const token = localStorage.getItem("adminToken");
+
     if (!token) {
-      router.push('/admin')
-      return
+      router.push("/admin");
+
+      return;
     }
 
     const fetchStats = async () => {
       try {
         // Fetch real stats from dedicated endpoint
-        const token = localStorage.getItem('adminToken');
-        const statsData = await apiEndpoints.getAdminStats(token || '');
-        setStats(statsData.stats)
-      } catch (err) {
-        setError('Failed to load dashboard')
-        console.error(err)
-      } finally {
-        setLoading(false)
-      }
-    }
+        const token = localStorage.getItem("adminToken");
+        const statsData = await apiEndpoints.getAdminStats(token || "");
 
-    fetchStats()
-  }, [router, clearAdmin, storeLoaded])
+        setStats(statsData.stats);
+      } catch (err) {
+        setError("Failed to load dashboard");
+        // console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchStats();
+  }, [router, clearAdmin, storeLoaded]);
 
   return (
     <main className="min-h-screen bg-default-50">
-      <AdminHeader userName={adminUser?.fullName} userEmail={adminUser?.email} />
+      <AdminHeader
+        userEmail={adminUser?.email}
+        userName={adminUser?.fullName}
+      />
 
       <div className="max-w-7xl mx-auto px-4 py-6 space-y-6">
         {loading ? (
@@ -73,7 +79,9 @@ export default function AdminDashboardPage() {
           </div>
         ) : error ? (
           <Card className="bg-red-50 dark:bg-red-950/20">
-            <CardBody className="text-red-600 dark:text-red-400">{error}</CardBody>
+            <CardBody className="text-red-600 dark:text-red-400">
+              {error}
+            </CardBody>
           </Card>
         ) : stats ? (
           <>
@@ -88,9 +96,13 @@ export default function AdminDashboardPage() {
               {/* Organizations Card */}
               <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/30 dark:to-blue-900/30 border border-blue-200 dark:border-blue-800">
                 <CardBody className="space-y-2 p-6">
-                  <p className="text-sm text-default-600">Total Organizations</p>
+                  <p className="text-sm text-default-600">
+                    Total Organizations
+                  </p>
                   <div className="flex items-baseline gap-2">
-                    <p className="text-4xl font-bold text-blue-600">{stats.totalOrganizations}</p>
+                    <p className="text-4xl font-bold text-blue-600">
+                      {stats.totalOrganizations}
+                    </p>
                     <p className="text-sm text-blue-500">active</p>
                   </div>
                 </CardBody>
@@ -101,7 +113,9 @@ export default function AdminDashboardPage() {
                 <CardBody className="space-y-2 p-6">
                   <p className="text-sm text-default-600">Total Sellers</p>
                   <div className="flex items-baseline gap-2">
-                    <p className="text-4xl font-bold text-green-600">{stats.totalSellers}</p>
+                    <p className="text-4xl font-bold text-green-600">
+                      {stats.totalSellers}
+                    </p>
                     <p className="text-sm text-green-500">across orgs</p>
                   </div>
                 </CardBody>
@@ -112,7 +126,9 @@ export default function AdminDashboardPage() {
                 <CardBody className="space-y-2 p-6">
                   <p className="text-sm text-default-600">Total Orders</p>
                   <div className="flex items-baseline gap-2">
-                    <p className="text-4xl font-bold text-purple-600">{stats.totalOrders}</p>
+                    <p className="text-4xl font-bold text-purple-600">
+                      {stats.totalOrders}
+                    </p>
                     <p className="text-sm text-purple-500">all time</p>
                   </div>
                 </CardBody>
@@ -123,7 +139,9 @@ export default function AdminDashboardPage() {
                 <CardBody className="space-y-2 p-6">
                   <p className="text-sm text-default-600">Total Revenue</p>
                   <div className="flex items-baseline gap-2">
-                    <p className="text-4xl font-bold text-yellow-600">₹{stats.totalRevenue.toLocaleString('en-IN')}</p>
+                    <p className="text-4xl font-bold text-yellow-600">
+                      ₹{stats.totalRevenue.toLocaleString("en-IN")}
+                    </p>
                     <p className="text-sm text-yellow-500">earned</p>
                   </div>
                 </CardBody>
@@ -134,7 +152,9 @@ export default function AdminDashboardPage() {
                 <CardBody className="space-y-2 p-6">
                   <p className="text-sm text-default-600">Pending Orders</p>
                   <div className="flex items-baseline gap-2">
-                    <p className="text-4xl font-bold text-orange-600">{stats.pendingOrders}</p>
+                    <p className="text-4xl font-bold text-orange-600">
+                      {stats.pendingOrders}
+                    </p>
                     <p className="text-sm text-orange-500">processing</p>
                   </div>
                 </CardBody>
@@ -145,7 +165,9 @@ export default function AdminDashboardPage() {
                 <CardBody className="space-y-2 p-6">
                   <p className="text-sm text-default-600">Delivered Orders</p>
                   <div className="flex items-baseline gap-2">
-                    <p className="text-4xl font-bold text-emerald-600">{stats.deliveredOrders}</p>
+                    <p className="text-4xl font-bold text-emerald-600">
+                      {stats.deliveredOrders}
+                    </p>
                     <p className="text-sm text-emerald-500">completed</p>
                   </div>
                 </CardBody>
@@ -156,29 +178,43 @@ export default function AdminDashboardPage() {
             <Card>
               <CardHeader className="flex flex-col gap-2">
                 <p className="text-lg font-semibold">Quick Actions</p>
-                <p className="text-sm text-default-500">Common management tasks</p>
+                <p className="text-sm text-default-500">
+                  Common management tasks
+                </p>
               </CardHeader>
               <CardBody className="space-y-3">
                 <a
+                  className="block p-4 border border-divider rounded-lg hover:bg-default-100 transition-colors"
                   href="/admin/organizations"
-                  className="block p-4 border border-divider rounded-lg hover:bg-default-100 transition-colors"
                 >
-                  <p className="font-semibold text-blue-600">📦 Manage Organizations</p>
-                  <p className="text-sm text-default-500">Create, edit, or view all organizations</p>
+                  <p className="font-semibold text-blue-600">
+                    📦 Manage Organizations
+                  </p>
+                  <p className="text-sm text-default-500">
+                    Create, edit, or view all organizations
+                  </p>
                 </a>
                 <a
+                  className="block p-4 border border-divider rounded-lg hover:bg-default-100 transition-colors"
                   href="/admin/sellers"
-                  className="block p-4 border border-divider rounded-lg hover:bg-default-100 transition-colors"
                 >
-                  <p className="font-semibold text-green-600">👥 Manage Sellers</p>
-                  <p className="text-sm text-default-500">View and manage seller accounts</p>
+                  <p className="font-semibold text-green-600">
+                    👥 Manage Sellers
+                  </p>
+                  <p className="text-sm text-default-500">
+                    View and manage seller accounts
+                  </p>
                 </a>
                 <a
-                  href="/admin/orders"
                   className="block p-4 border border-divider rounded-lg hover:bg-default-100 transition-colors"
+                  href="/admin/orders"
                 >
-                  <p className="font-semibold text-purple-600">📋 View Orders</p>
-                  <p className="text-sm text-default-500">Global order management and tracking</p>
+                  <p className="font-semibold text-purple-600">
+                    📋 View Orders
+                  </p>
+                  <p className="text-sm text-default-500">
+                    Global order management and tracking
+                  </p>
                 </a>
               </CardBody>
             </Card>
@@ -186,6 +222,5 @@ export default function AdminDashboardPage() {
         ) : null}
       </div>
     </main>
-  )
+  );
 }
-

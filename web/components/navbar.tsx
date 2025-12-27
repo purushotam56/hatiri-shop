@@ -1,5 +1,8 @@
 "use client";
 
+import { Button } from "@heroui/button";
+import { Input } from "@heroui/input";
+import { Link } from "@heroui/link";
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -9,17 +12,13 @@ import {
   NavbarItem,
   NavbarMenuItem,
 } from "@heroui/navbar";
-import { Button } from "@heroui/button";
-import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
 import { link as linkStyles } from "@heroui/theme";
-import NextLink from "next/link";
 import clsx from "clsx";
+import NextLink from "next/link";
 import { useState } from "react";
 
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
 import { SearchIcon, Logo } from "@/components/icons";
+import { siteConfig } from "@/config/site";
 
 export const Navbar = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -32,9 +31,11 @@ export const Navbar = () => {
         input: "text-sm",
       }}
       placeholder="Search items..."
-      startContent={<SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />}
-      type="search"
       size="sm"
+      startContent={
+        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
+      }
+      type="search"
       value={searchQuery}
       onChange={(e) => setSearchQuery(e.target.value)}
     />
@@ -42,9 +43,9 @@ export const Navbar = () => {
 
   return (
     <HeroUINavbar
+      className="bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 z-50"
       maxWidth="full"
       position="sticky"
-      className="bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 z-50"
     >
       {/* Mobile Layout */}
       <NavbarContent className="md:hidden basis-1 pl-0" justify="start">
@@ -79,7 +80,10 @@ export const Navbar = () => {
       </NavbarContent>
 
       {/* Desktop Layout */}
-      <NavbarContent className="hidden md:flex basis-1/5 sm:basis-full" justify="start">
+      <NavbarContent
+        className="hidden md:flex basis-1/5 sm:basis-full"
+        justify="start"
+      >
         <NavbarBrand as="li" className="gap-2 max-w-fit">
           <NextLink className="flex justify-start items-center gap-2" href="/">
             <Logo />
@@ -92,7 +96,7 @@ export const Navbar = () => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "text-sm font-medium data-[active=true]:text-primary data-[active=true]:font-semibold"
+                  "text-sm font-medium data-[active=true]:text-primary data-[active=true]:font-semibold",
                 )}
                 href={item.href}
               >
@@ -103,12 +107,14 @@ export const Navbar = () => {
         </ul>
       </NavbarContent>
 
-      <NavbarContent className="hidden md:flex basis-1/5 md:basis-full" justify="end">
+      <NavbarContent
+        className="hidden md:flex basis-1/5 md:basis-full"
+        justify="end"
+      >
         <NavbarItem className="hidden md:flex w-full max-w-xs">
           {searchInput}
         </NavbarItem>
         <NavbarItem className="hidden md:flex gap-3">
-          <ThemeSwitch />
           <Button
             as={Link}
             className="bg-primary text-white font-semibold"
@@ -134,15 +140,17 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       <NavbarMenu>
-        <div className="mx-4 py-2 flex flex-col gap-2">
-          {searchInput}
-        </div>
+        <div className="mx-4 py-2 flex flex-col gap-2">{searchInput}</div>
         <div className="mx-4 mt-4 flex flex-col gap-3 border-t pt-4">
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item.href}-${index}`}>
               <Link
-                color={index === siteConfig.navItems.length - 1 ? "danger" : "foreground"}
                 as={NextLink}
+                color={
+                  index === siteConfig.navItems.length - 1
+                    ? "danger"
+                    : "foreground"
+                }
                 href={item.href}
                 size="lg"
               >
@@ -151,12 +159,7 @@ export const Navbar = () => {
             </NavbarMenuItem>
           ))}
           <NavbarMenuItem>
-            <Link
-              color="foreground"
-              as={NextLink}
-              href="/orders"
-              size="lg"
-            >
+            <Link as={NextLink} color="foreground" href="/orders" size="lg">
               📦 Orders
             </Link>
           </NavbarMenuItem>

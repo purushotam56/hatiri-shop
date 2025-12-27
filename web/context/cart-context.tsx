@@ -1,17 +1,23 @@
 "use client";
 
-import React, { createContext, useContext, ReactNode, useState, useEffect } from "react";
+import React, {
+  createContext,
+  useContext,
+  ReactNode,
+  useState,
+  useEffect,
+} from "react";
+
 import { useAuth } from "./auth-context";
+
 import { buildApiUrl } from "@/config/api";
 import { CartItem, CartContextType } from "@/types/cart";
-
-// Re-export for backward compatibility
-export type { CartItem, CartContextType };
+import { BannerImage } from "@/types/product";
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export function CartProvider({ children }: { children: ReactNode }) {
-  const { isLoggedIn, user } = useAuth();
+  const { isLoggedIn, user: _user } = useAuth();
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [localCart, setLocalCart] = useState<CartItem[]>([]);
@@ -22,6 +28,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setMounted(true);
     if (typeof window !== "undefined") {
       const storedCart = localStorage.getItem("cart");
+
       if (storedCart) {
         setLocalCart(JSON.parse(storedCart));
       }
@@ -47,23 +54,18 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setIsLoading(true);
     try {
       const token = localStorage.getItem("token");
-      console.log("Fetching cart with token:", token ? "present" : "missing");
-      
+
       const response = await fetch(buildApiUrl("/cart"), {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
-      
-      console.log("Cart fetch response status:", response.status);
+
       const data = await response.json();
-      console.log("Cart data received:", data);
-      
+
       if (data.items) {
-        console.log("Setting cart with items:", data.items);
         setCart(data.items);
       } else if (Array.isArray(data)) {
-        console.log("Cart data is array, setting directly:", data);
         setCart(data);
       } else {
         console.warn("Unexpected cart response structure:", data);
@@ -78,32 +80,26 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const syncCart = async () => {
     // Check token directly instead of isLoggedIn state (which may not update immediately)
     const token = localStorage.getItem("token");
+
     if (!token) {
-      console.log("No token found, skipping cart sync");
       return;
     }
-    
+
     if (localCart.length === 0) {
-      console.log("Local cart is empty, fetching backend cart");
       await fetchCart();
+
       return;
     }
 
     try {
-      console.log("Starting cart sync, localCart items:", localCart.length);
-      console.log("Syncing local cart items to backend:", localCart);
-      
       // Sync local cart items to backend
-      let syncedCount = 0;
-      
+      let _syncedCount = 0;
+
       for (const item of localCart) {
         try {
           // Don't send the 'id' field to backend - let it create new cart items
-          const { id, ...itemData } = item;
-          
-          console.log("Syncing item:", itemData, "Item ID was:", id);
-          
-          console.log("POST request body:", JSON.stringify(itemData));
+          const { id: _id, ...itemData } = item;
+
           const response = await fetch(buildApiUrl("/cart"), {
             method: "POST",
             headers: {
@@ -112,26 +108,26 @@ export function CartProvider({ children }: { children: ReactNode }) {
             },
             body: JSON.stringify(itemData),
           });
-          
+
           const responseData = await response.json();
-          console.log("POST response status:", response.status, "data:", responseData);
-          
+
           if (!response.ok) {
-            console.error("Failed to add item to cart:", response.status, responseData);
+            // console.error(
+            //   "Failed to add item to cart:",
+            //   response.status,
+            //   responseData,
+            // );
           } else {
-            console.log("Item added to cart successfully:", responseData);
-            syncedCount++;
+            _syncedCount++;
           }
         } catch (itemError) {
-          console.error("Error adding item to cart:", itemError);
+          // console.error("Error adding item to cart:", itemError);
         }
       }
-      
-      console.log(`Synced ${syncedCount}/${localCart.length} items to backend`);
-      
+
       // Fetch the updated cart from backend with a small delay to ensure backend is updated
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
+      await new Promise((resolve) => setTimeout(resolve, 500));
+
       // Fetch fresh cart from backend
       setIsLoading(true);
       try {
@@ -140,33 +136,28 @@ export function CartProvider({ children }: { children: ReactNode }) {
             Authorization: `Bearer ${token}`,
           },
         });
-        
+
         const data = await response.json();
-        console.log("Cart after sync:", data);
-        
+
         if (data.items) {
-          console.log("Setting backend cart with", data.items.length, "items");
           setCart(data.items);
         } else if (Array.isArray(data)) {
-          console.log("Setting backend cart with", data.length, "items");
           setCart(data);
         }
-        
+
         // Only clear local cart after we've successfully populated backend cart
         setLocalCart([]);
-        console.log("Cart sync completed successfully");
-      } catch (fetchError) {
-        console.error("Failed to fetch cart after sync:", fetchError);
+      } catch (_fetchError) {
         // Don't clear local cart if fetch failed - user can retry
       } finally {
         setIsLoading(false);
       }
     } catch (error) {
-      console.error("Failed to sync cart:", error);
+      // console.error("Failed to sync cart:", error);
     }
   };
 
-  const addToCart = async (product: any) => {
+  const addToCart = async (product: Record<string, unknown>) => {
     if (isLoggedIn) {
       // Add to backend
       try {
@@ -177,55 +168,55 @@ export function CartProvider({ children }: { children: ReactNode }) {
             Authorization: `Bearer ${localStorage.getItem("token")}`,
           },
           body: JSON.stringify({
-            productId: product.productId || product.id,
-            variantId: product.variantId || product.id,
-            name: product.name,
-            price: product.price,
-            quantity: product.quantity || 1,
-            currency: product.currency || "INR",
-            productQuantity: product.productQuantity,
-            unit: product.unit || "",
+            productId: (product.productId as number | undefined) || (product.id as number | undefined),
+            variantId: (product.variantId as number | undefined) || (product.id as number | undefined),
+            name: (product.name as string) || "",
+            price: (product.price as number) || 0,
+            quantity: (product.quantity as number | undefined) || 1,
+            currency: (product.currency as string | undefined) || "INR",
+            productQuantity: product.productQuantity as number | undefined,
+            unit: (product.unit as string | undefined) || "",
           }),
         });
         const data = await response.json();
+
         if (data.item) {
           await fetchCart();
         }
       } catch (error) {
-        console.error("Failed to add to cart:", error);
+        // console.error("Failed to add to cart:", error);
       }
     } else {
       // Add to local cart
-      const variantId = product.variantId || product.id;
-      const existing = localCart.find(
-        (item) => item.variantId === variantId
-      );
+      const variantId = (product.variantId as number | undefined) || (product.id as number | undefined);
+      const existing = localCart.find((item) => item.variantId === variantId);
+
       if (existing) {
         setLocalCart(
           localCart.map((item) =>
             item.variantId === variantId
-              ? { ...item, quantity: item.quantity + (product.quantity || 1) }
-              : item
-          )
+              ? { ...item, quantity: item.quantity + ((product.quantity as number | undefined) || 1) }
+              : item,
+          ),
         );
       } else {
         setLocalCart([
           ...localCart,
           {
-            id: product.id || Date.now(),
-            productId: product.productId || product.id,
-            variantId: product.variantId || product.id,
-            name: product.name,
-            price: product.price,
-            quantity: product.quantity || 1,
-            currency: product.currency || "INR",
-            productQuantity: product.productQuantity,
-            unit: product.unit,
-            sku: product.sku,
-            bannerImage: product.bannerImage,
-            image: product.image,
-            images: product.images,
-          },
+            id: (product.id as number | undefined) || Date.now(),
+            productId: (product.productId as number | undefined) || (product.id as number | undefined),
+            variantId: (product.variantId as number | undefined) || (product.id as number | undefined),
+            name: (product.name as string) || "",
+            price: (product.price as number) || 0,
+            quantity: (product.quantity as number | undefined) || 1,
+            currency: (product.currency as string | undefined) || "INR",
+            productQuantity: product.productQuantity as number | undefined,
+            unit: product.unit as string | undefined,
+            sku: product.sku as string | undefined,
+            bannerImage: (product.bannerImage as BannerImage | string | undefined),
+            image: (product.image as BannerImage | string | undefined),
+            images: Array.isArray(product.images) ? product.images : undefined,
+          } as CartItem,
         ]);
       }
     }
@@ -242,7 +233,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         });
         await fetchCart();
       } catch (error) {
-        console.error("Failed to remove from cart:", error);
+        // console.error("Failed to remove from cart:", error);
       }
     } else {
       setLocalCart(localCart.filter((item) => item.id !== id));
@@ -264,13 +255,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
         });
         await fetchCart();
       } catch (error) {
-        console.error("Failed to update quantity:", error);
+        // console.error("Failed to update quantity:", error);
       }
     } else {
       setLocalCart(
         localCart.map((item) =>
-          item.id === id ? { ...item, quantity } : item
-        )
+          item.id === id ? { ...item, quantity } : item,
+        ),
       );
     }
   };
@@ -286,7 +277,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         });
         setCart([]);
       } catch (error) {
-        console.error("Failed to clear cart:", error);
+        // console.error("Failed to clear cart:", error);
       }
     } else {
       setLocalCart([]);
@@ -297,7 +288,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const cartCount = displayCart.reduce((sum, item) => sum + item.quantity, 0);
   const cartTotal = displayCart.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   );
 
   return (
@@ -321,8 +312,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
 export function useCart() {
   const context = useContext(CartContext);
+
   if (context === undefined) {
     throw new Error("useCart must be used within a CartProvider");
   }
+
   return context;
 }

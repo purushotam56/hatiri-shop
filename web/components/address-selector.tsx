@@ -1,10 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@heroui/modal";
 import { Button } from "@heroui/button";
-import { Input } from "@heroui/input";
 import { Card, CardBody } from "@heroui/card";
+import { Input } from "@heroui/input";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+} from "@heroui/modal";
+import React, { useState } from "react";
+
 import { useAddress, type Address } from "@/context/address-context";
 
 interface AddressSelectorProps {
@@ -13,8 +20,13 @@ interface AddressSelectorProps {
   onSelect: (address: Address) => void;
 }
 
-export function AddressSelector({ isOpen, onClose, onSelect }: AddressSelectorProps) {
-  const { addresses, selectedAddress, setSelectedAddress, addAddress } = useAddress();
+export function AddressSelector({
+  isOpen,
+  onClose,
+  onSelect,
+}: AddressSelectorProps) {
+  const { addresses, selectedAddress, setSelectedAddress, addAddress } =
+    useAddress();
   const [isAddingNew, setIsAddingNew] = useState(false);
   const [formData, setFormData] = useState<Address>({
     label: "",
@@ -49,7 +61,13 @@ export function AddressSelector({ isOpen, onClose, onSelect }: AddressSelectorPr
   };
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} backdrop="blur" size="2xl" scrollBehavior="inside">
+    <Modal
+      backdrop="blur"
+      isOpen={isOpen}
+      scrollBehavior="inside"
+      size="2xl"
+      onClose={onClose}
+    >
       <ModalContent>
         <ModalHeader className="flex flex-col gap-1">
           {isAddingNew ? "Add New Address" : "Select Address"}
@@ -59,31 +77,37 @@ export function AddressSelector({ isOpen, onClose, onSelect }: AddressSelectorPr
             <>
               {/* Address List */}
               {addresses.length === 0 ? (
-                <p className="text-center text-foreground/60 py-8">No addresses saved yet</p>
+                <p className="text-center text-foreground/60 py-8">
+                  No addresses saved yet
+                </p>
               ) : (
                 <div className="space-y-3">
                   {addresses.map((address) => (
                     <Card
                       key={address.id}
                       isPressable
-                      onClick={() => handleSelectAddress(address)}
                       className={`cursor-pointer transition-all ${
                         selectedAddress?.id === address.id
                           ? "border-2 border-primary bg-primary/5"
                           : "border border-divider"
                       }`}
+                      onClick={() => handleSelectAddress(address)}
                     >
                       <CardBody className="p-4">
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
                             <p className="font-bold text-foreground">
-                              {address.label || address.fullName}
+                              {(address.label as string) || (address.fullName as string) || ""}
                             </p>
-                            <p className="text-sm text-foreground/70">{address.street}</p>
                             <p className="text-sm text-foreground/70">
-                              {address.city}, {address.state} {address.pincode}
+                              {(address.street as string) || ""}
                             </p>
-                            <p className="text-sm text-foreground/70">{address.phoneNumber}</p>
+                            <p className="text-sm text-foreground/70">
+                              {(address.city as string) || ""}, {(address.state as string) || ""} {(address.pincode as string) || ""}
+                            </p>
+                            <p className="text-sm text-foreground/70">
+                              {(address.phoneNumber as string) || ""}
+                            </p>
                           </div>
                           <div className="flex items-center justify-center w-6 h-6 rounded-full border-2 border-divider">
                             {selectedAddress?.id === address.id && (
@@ -92,7 +116,9 @@ export function AddressSelector({ isOpen, onClose, onSelect }: AddressSelectorPr
                           </div>
                         </div>
                         {address.isDefault && (
-                          <p className="text-xs font-semibold text-primary mt-2">Default Address</p>
+                          <p className="text-xs font-semibold text-primary mt-2">
+                            Default Address
+                          </p>
                         )}
                       </CardBody>
                     </Card>
@@ -125,8 +151,8 @@ export function AddressSelector({ isOpen, onClose, onSelect }: AddressSelectorPr
 
                 <Input
                   label="Phone"
-                  type="tel"
                   placeholder="+1 (555) 000-0000"
+                  type="tel"
                   value={formData.phoneNumber}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setFormData({ ...formData, phoneNumber: e.target.value })
@@ -172,15 +198,15 @@ export function AddressSelector({ isOpen, onClose, onSelect }: AddressSelectorPr
 
                 <div className="flex items-center gap-2">
                   <input
-                    type="checkbox"
-                    id="default"
                     checked={formData.isDefault}
+                    className="w-4 h-4 rounded"
+                    id="default"
+                    type="checkbox"
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                       setFormData({ ...formData, isDefault: e.target.checked })
                     }
-                    className="w-4 h-4 rounded"
                   />
-                  <label htmlFor="default" className="text-sm text-foreground">
+                  <label className="text-sm text-foreground" htmlFor="default">
                     Set as default address
                   </label>
                 </div>
@@ -200,7 +226,11 @@ export function AddressSelector({ isOpen, onClose, onSelect }: AddressSelectorPr
             </>
           ) : (
             <>
-              <Button color="default" variant="light" onPress={() => setIsAddingNew(false)}>
+              <Button
+                color="default"
+                variant="light"
+                onPress={() => setIsAddingNew(false)}
+              >
                 Cancel
               </Button>
               <Button color="primary" onPress={handleAddAddress}>

@@ -1,5 +1,6 @@
 // API configuration and base setup
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3333/api";
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_URL || "http://localhost:3333/api";
 
 export const apiConfig = {
   baseURL: API_BASE_URL,
@@ -14,6 +15,7 @@ export const getAuthToken = () => {
   if (typeof window !== "undefined") {
     return localStorage.getItem("authToken");
   }
+
   return null;
 };
 
@@ -34,8 +36,8 @@ export const removeAuthToken = () => {
 // API fetch wrapper with auth
 export async function apiCall(
   endpoint: string,
-  options: RequestInit = {}
-): Promise<any> {
+  options: RequestInit = {},
+): Promise<Record<string, unknown>> {
   const token = getAuthToken();
   const headers: Record<string, string> = {
     ...apiConfig.headers,
@@ -47,7 +49,7 @@ export async function apiCall(
   }
 
   const url = `${apiConfig.baseURL}${endpoint}`;
-  
+
   try {
     const response = await fetch(url, {
       ...options,
@@ -58,14 +60,15 @@ export async function apiCall(
 
     if (!response.ok) {
       const error = new Error(data?.message || `API Error: ${response.status}`);
-      (error as any).status = response.status;
-      (error as any).data = data;
+
+      (error as unknown as Record<string, unknown>).status = response.status;
+      (error as unknown as Record<string, unknown>).data = data;
       throw error;
     }
 
     return data;
-  } catch (error: any) {
-    console.error(`API Error [${endpoint}]:`, error.message);
+  } catch (error: unknown) {
+    // console.error(`API Error [${endpoint}]:`, error.message);
     throw error;
   }
 }
@@ -75,7 +78,7 @@ export const apiGet = (endpoint: string, options?: RequestInit) =>
   apiCall(endpoint, { ...options, method: "GET" });
 
 // POST request
-export const apiPost = (endpoint: string, body?: any, options?: RequestInit) =>
+export const apiPost = (endpoint: string, body?: Record<string, unknown>, options?: RequestInit) =>
   apiCall(endpoint, {
     ...options,
     method: "POST",
@@ -83,7 +86,7 @@ export const apiPost = (endpoint: string, body?: any, options?: RequestInit) =>
   });
 
 // PUT request
-export const apiPut = (endpoint: string, body?: any, options?: RequestInit) =>
+export const apiPut = (endpoint: string, body?: Record<string, unknown>, options?: RequestInit) =>
   apiCall(endpoint, {
     ...options,
     method: "PUT",
@@ -95,7 +98,7 @@ export const apiDelete = (endpoint: string, options?: RequestInit) =>
   apiCall(endpoint, { ...options, method: "DELETE" });
 
 // PATCH request
-export const apiPatch = (endpoint: string, body?: any, options?: RequestInit) =>
+export const apiPatch = (endpoint: string, body?: Record<string, unknown>, options?: RequestInit) =>
   apiCall(endpoint, {
     ...options,
     method: "PATCH",

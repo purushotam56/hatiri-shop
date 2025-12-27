@@ -4,27 +4,27 @@
  */
 
 export enum PanelType {
-  LANDING = "landing",      // Main marketplace homepage
-  STORE = "store",          // Store/vendor storefront
-  ADMIN = "admin",          // Admin dashboard
-  SELLER = "seller",        // Seller dashboard
-  ORDERS = "orders",        // Orders page
-  ACCOUNT = "account",      // User account page
-  CART = "cart",            // Shopping cart
-  SEARCH = "search",        // Search results
-  PRODUCT = "product",      // Product detail page
-  UNKNOWN = "unknown",      // Unknown/other pages
+  LANDING = "landing", // Main marketplace homepage
+  STORE = "store", // Store/vendor storefront
+  ADMIN = "admin", // Admin dashboard
+  SELLER = "seller", // Seller dashboard
+  ORDERS = "orders", // Orders page
+  ACCOUNT = "account", // User account page
+  CART = "cart", // Shopping cart
+  SEARCH = "search", // Search results
+  PRODUCT = "product", // Product detail page
+  UNKNOWN = "unknown", // Unknown/other pages
 }
 
 export interface PanelConfig {
   type: PanelType;
   name: string;
   description: string;
-  headerColor?: string;      // Tailwind color class
-  footerColor?: string;      // Tailwind color class
-  layout?: "landing" | "admin" | "seller" | "store";  // Which layout to use
-  requiresAuth?: boolean;    // Whether authentication is required
-  authType?: "user" | "admin" | "seller";  // Type of authentication required
+  headerColor?: string; // Tailwind color class
+  footerColor?: string; // Tailwind color class
+  layout?: "landing" | "admin" | "seller" | "store"; // Which layout to use
+  requiresAuth?: boolean; // Whether authentication is required
+  authType?: "user" | "admin" | "seller"; // Type of authentication required
 }
 
 // Panel configuration mapping

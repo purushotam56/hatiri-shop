@@ -117,7 +117,8 @@ export const ROLE_COLORS = {
   // Customer Portal
   customer: {
     primary: COLORS.primary,
-    button: "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700",
+    button:
+      "bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700",
     ring: "ring-cyan-500/20",
     border: "border-cyan-500",
   },
@@ -125,7 +126,8 @@ export const ROLE_COLORS = {
   // Seller Portal
   seller: {
     primary: COLORS.secondary,
-    button: "bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700",
+    button:
+      "bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-600 hover:to-green-700",
     ring: "ring-emerald-500/20",
     border: "border-emerald-500",
   },
@@ -133,7 +135,8 @@ export const ROLE_COLORS = {
   // Admin Portal
   admin: {
     primary: COLORS.accent,
-    button: "bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700",
+    button:
+      "bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700",
     ring: "ring-violet-500/20",
     border: "border-violet-500",
   },
@@ -151,9 +154,12 @@ export const GRADIENTS = {
 
   orbs: {
     cyan: "bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse",
-    emerald: "bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse",
-    violet: "bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse",
-    amber: "bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse",
+    emerald:
+      "bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse",
+    violet:
+      "bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse",
+    amber:
+      "bg-amber-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse",
   },
 
   header: {
@@ -179,12 +185,14 @@ export const COMPONENTS = {
       "bg-gradient-to-r from-emerald-500 to-green-600 text-white hover:from-emerald-600 hover:to-green-700 shadow-lg shadow-emerald-500/50",
     warning:
       "bg-gradient-to-r from-amber-500 to-orange-600 text-white hover:from-amber-600 hover:to-orange-700 shadow-lg shadow-amber-500/50",
-    danger: "bg-gradient-to-r from-red-500 to-red-600 text-white hover:from-red-600 hover:to-red-700 shadow-lg shadow-red-500/50",
+    danger:
+      "bg-gradient-to-r from-red-500 to-red-600 text-white hover:from-red-600 hover:to-red-700 shadow-lg shadow-red-500/50",
   },
 
   input: {
     base: "px-4 py-3 bg-slate-700/50 border border-slate-600 rounded-lg text-white placeholder-slate-500 transition-all duration-200",
-    focus: "focus:outline-none focus:ring-2 focus:ring-offset-0 disabled:opacity-50",
+    focus:
+      "focus:outline-none focus:ring-2 focus:ring-offset-0 disabled:opacity-50",
     primary: "focus:border-cyan-500 focus:ring-cyan-500/30",
     seller: "focus:border-emerald-500 focus:ring-emerald-500/30",
     admin: "focus:border-violet-500 focus:ring-violet-500/30",
@@ -192,9 +200,11 @@ export const COMPONENTS = {
 
   card: {
     base: "bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl transition-all duration-300",
-    hover: "hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:bg-slate-800/80",
+    hover:
+      "hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20 hover:bg-slate-800/80",
     interactive: "hover:border-slate-600 transition-colors cursor-pointer",
-    hoverLift: "hover:shadow-xl hover:-translate-y-1 transition-all duration-300",
+    hoverLift:
+      "hover:shadow-xl hover:-translate-y-1 transition-all duration-300",
   },
 
   header: {
@@ -215,7 +225,8 @@ export const COMPONENTS = {
 // ============================================================================
 
 export const UTILS = {
-  loadingSpinner: "w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin",
+  loadingSpinner:
+    "w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin",
 
   backdrop: "absolute inset-0 overflow-hidden pointer-events-none",
 
@@ -261,10 +272,14 @@ export const THEME_VARIANTS = {
 // HELPER FUNCTIONS
 // ============================================================================
 
-export const getTheme = (variant: "customer" | "seller" | "admin" = "customer") => {
+export const getTheme = (
+  variant: "customer" | "seller" | "admin" = "customer",
+) => {
   return THEME_VARIANTS[variant];
 };
 
-export const combineClasses = (...classes: (string | undefined | null | false)[]): string => {
+export const combineClasses = (
+  ...classes: (string | undefined | null | false)[]
+): string => {
   return classes.filter(Boolean).join(" ");
 };

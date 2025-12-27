@@ -1,7 +1,7 @@
-'use client'
+"use client";
 
-import { SellerStoreProvider } from '@/context/seller-store-context'
-import { SellerLayout } from '@/components/layouts/seller-layout'
+import { SellerLayout } from "@/components/layouts/seller-layout";
+import { SellerStoreProvider } from "@/context/seller-store-context";
 
 export default function SellerRootLayout({
   children,
@@ -10,9 +10,7 @@ export default function SellerRootLayout({
 }) {
   return (
     <SellerStoreProvider>
-      <SellerLayout>
-        {children}
-      </SellerLayout>
+      <SellerLayout>{children}</SellerLayout>
     </SellerStoreProvider>
   );
 }

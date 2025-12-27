@@ -77,6 +77,7 @@ export function isOrdersPath(pathname: string): boolean {
 export function isAuthRequiredPath(pathname: string): boolean {
   const panelType = getPanelTypeFromPath(pathname);
   const config = getPanelConfig(panelType);
+
   return config.requiresAuth || false;
 }
 
@@ -84,9 +85,10 @@ export function isAuthRequiredPath(pathname: string): boolean {
  * Get required auth type for a path
  */
 export function getRequiredAuthType(
-  pathname: string
+  pathname: string,
 ): "user" | "admin" | "seller" | null {
   const panelType = getPanelTypeFromPath(pathname);
   const config = getPanelConfig(panelType);
+
   return config.authType || null;
 }

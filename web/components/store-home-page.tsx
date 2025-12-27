@@ -1,169 +1,225 @@
-import React from "react";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Chip } from "@heroui/chip";
 import { Divider } from "@heroui/divider";
 import { ScrollShadow } from "@heroui/scroll-shadow";
+import Link from "next/link";
+import React from "react";
+
 import { Product } from "./product";
 import { StoreProductsGrid } from "./store-products-grid";
+import { Category, Organisation, ProductGroup } from "@/types/store";
+
 import { apiEndpoints } from "@/lib/api-client";
-import Link from "next/link";
 
 // Helper function for category emoji - accepts category object or string
-const getCategoryEmoji = (categoryOrName: any): string => {
-    // If it's a category object with emoji, use it
-    if (typeof categoryOrName === 'object' && categoryOrName?.emoji) {
-        return categoryOrName.emoji;
-    }
-    // Otherwise just return a default emoji
+const getCategoryEmoji = (categoryOrName: string | Record<string, unknown>): string => {
+  // Handle string type (just name)
+  if (typeof categoryOrName === "string") {
     return "📦";
+  }
+
+  // If it's a category object with emoji, use it
+  if (typeof categoryOrName === "object" && categoryOrName !== null) {
+    const cat = categoryOrName as Record<string, unknown>;
+    if (cat.emoji && typeof cat.emoji === "string") {
+      return cat.emoji;
+    }
+  }
+
+  // Otherwise just return a default emoji
+  return "📦";
 };
 
-import { Product as ProductType } from "@/types/product";
-
 // Static Category Sidebar (No interactions)
-function CategorySidebar({ categories, selectedCategoryId, currentPath }: { categories: any[]; selectedCategoryId?: string; currentPath: string }) {
-    const isAllSelected = !selectedCategoryId;
-    
-    return (
-        <aside className="hidden lg:block w-64 bg-content1 border-r border-divider flex-shrink-0 h-[calc(100vh - 80px)]">
-            <Card className="h-full" radius="none" shadow="none">
-                <CardHeader className="pb-2">
-                    <h2 className="text-lg font-semibold text-foreground">Categories</h2>
-                </CardHeader>
-                <Divider />
-                <CardBody className="p-0">
-                    <ScrollShadow className="h-full">
-                        <div className="flex flex-col gap-1 p-2">
-                            {/* All Products */}
-                            <Link href={currentPath} className="block">
-                                <div className={`px-4 py-3 rounded-lg font-medium transition-colors ${
-                                    isAllSelected 
-                                        ? 'bg-primary/10 text-primary' 
-                                        : 'text-default-700 hover:bg-default-100'
-                                }`}>
-                                    <span className="mr-2">🏪</span>
-                                    All Products
-                                </div>
-                            </Link>
+function CategorySidebar({
+  categories,
+  selectedCategoryId,
+  currentPath,
+}: {
+  categories: Category[];
+  selectedCategoryId?: string;
+  currentPath: string;
+}) {
+  const isAllSelected = !selectedCategoryId;
 
-                            {/* Category List */}
-                            {categories.map((category: any) => {
-                                const isSelected = selectedCategoryId === String(category.id);
-                                return (
-                                    <Link 
-                                        key={category.id} 
-                                        href={`${currentPath}?category=${category.id}`}
-                                        className="block"
-                                    >
-                                        <div className={`px-4 py-3 rounded-lg transition-colors ${
-                                            isSelected 
-                                                ? 'bg-primary/10 text-primary font-medium' 
-                                                : 'text-default-700 hover:bg-default-100'
-                                        }`}>
-                                            <span className="mr-2">{getCategoryEmoji(category)}</span>
-                                            {category.name}
-                                        </div>
-                                    </Link>
-                                );
-                            })}
-                        </div>
-                    </ScrollShadow>
-                </CardBody>
-            </Card>
-        </aside>
-    );
+  return (
+    <aside className="hidden lg:block w-64 bg-content1 border-r border-divider flex-shrink-0 h-[calc(100vh - 80px)]">
+      <Card className="h-full" radius="none" shadow="none">
+        <CardHeader className="pb-2">
+          <h2 className="text-lg font-semibold text-foreground">Categories</h2>
+        </CardHeader>
+        <Divider />
+        <CardBody className="p-0">
+          <ScrollShadow className="h-full">
+            <div className="flex flex-col gap-1 p-2">
+              {/* All Products */}
+              <Link className="block" href={currentPath}>
+                <div
+                  className={`px-4 py-3 rounded-lg font-medium transition-colors ${
+                    isAllSelected
+                      ? "bg-primary/10 text-primary"
+                      : "text-default-700 hover:bg-default-100"
+                  }`}
+                >
+                  <span className="mr-2">🏪</span>
+                  All Products
+                </div>
+              </Link>
+
+              {/* Category List */}
+              {categories.map((category: Category) => {
+                const isSelected = selectedCategoryId === String(category.id);
+
+                return (
+                  <Link
+                    key={category.id}
+                    className="block"
+                    href={`${currentPath}?category=${category.id}`}
+                  >
+                    <div
+                      className={`px-4 py-3 rounded-lg transition-colors ${
+                        isSelected
+                          ? "bg-primary/10 text-primary font-medium"
+                          : "text-default-700 hover:bg-default-100"
+                      }`}
+                    >
+                      <span className="mr-2">{getCategoryEmoji(category)}</span>
+                      {category.name}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </ScrollShadow>
+        </CardBody>
+      </Card>
+    </aside>
+  );
 }
 
 // Static Mobile Sidebar (No interactions)
-function MobileSidebar({ categories, selectedCategoryId, currentPath }: { categories: any[]; selectedCategoryId?: string; currentPath: string }) {
-    const isAllSelected = !selectedCategoryId;
-    
-    return (
-        <ScrollShadow className="h-full">
-            <div className="flex flex-col gap-2 py-4">
-                {/* All Products */}
-                <Link href={currentPath}>
-                    <div className={`flex flex-col items-center justify-center p-3 rounded-lg mx-2 transition-colors ${
-                        isAllSelected 
-                            ? 'bg-primary/10 text-primary' 
-                            : 'hover:bg-default-100'
-                    }`}>
-                        <span className="text-2xl">🏪</span>
-                        <span className="text-[10px] mt-1 font-medium text-center">All</span>
-                    </div>
-                </Link>
+function MobileSidebar({
+  categories,
+  selectedCategoryId,
+  currentPath,
+}: {
+  categories: Category[];
+  selectedCategoryId?: string;
+  currentPath: string;
+}) {
+  const isAllSelected = !selectedCategoryId;
 
-                {/* Categories */}
-                {categories.map((category: any) => {
-                    const isSelected = selectedCategoryId === String(category.id);
-                    return (
-                        <Link key={category.id} href={`${currentPath}?category=${category.id}`}>
-                            <div className={`flex flex-col items-center justify-center p-3 rounded-lg mx-2 transition-colors ${
-                                isSelected 
-                                    ? 'bg-primary/10 text-primary' 
-                                    : 'hover:bg-default-100'
-                            }`}>
-                                <span className="text-2xl">{getCategoryEmoji(category)}</span>
-                                <span className="text-[10px] mt-1 text-center line-clamp-2">
-                                    {category.name}
-                                </span>
-                            </div>
-                        </Link>
-                    );
-                })}
-            </div>
-        </ScrollShadow>
-    );
+  return (
+    <ScrollShadow className="h-full">
+      <div className="flex flex-col gap-2 py-4">
+        {/* All Products */}
+        <Link href={currentPath}>
+          <div
+            className={`flex flex-col items-center justify-center p-3 rounded-lg mx-2 transition-colors ${
+              isAllSelected
+                ? "bg-primary/10 text-primary"
+                : "hover:bg-default-100"
+            }`}
+          >
+            <span className="text-2xl">🏪</span>
+            <span className="text-[10px] mt-1 font-medium text-center">
+              All
+            </span>
+          </div>
+        </Link>
+
+        {/* Categories */}
+        {categories.map((category: Category) => {
+          const isSelected = selectedCategoryId === String(category.id);
+
+          return (
+            <Link
+              key={category.id}
+              href={`${currentPath}?category=${category.id}`}
+            >
+              <div
+                className={`flex flex-col items-center justify-center p-3 rounded-lg mx-2 transition-colors ${
+                  isSelected
+                    ? "bg-primary/10 text-primary"
+                    : "hover:bg-default-100"
+                }`}
+              >
+                <span className="text-2xl">{getCategoryEmoji(category)}</span>
+                <span className="text-[10px] mt-1 text-center line-clamp-2">
+                  {category.name}
+                </span>
+              </div>
+            </Link>
+          );
+        })}
+      </div>
+    </ScrollShadow>
+  );
 }
 
 // Main Content Component
-function MainContent({ products, organisation, selectedCategoryId }: { products: any[]; organisation: any; selectedCategoryId?: string }) {
-    return (
-        <main className="flex-1 bg-background overflow-hidden h-full">
-            <ScrollShadow className="h-full">
-                <div className="container mx-auto p-4 lg:p-6">
-                    {/* Header */}
-                    <div className="mb-6">
-                        <div className="flex items-center justify-between mb-4">
-                            <h1 className="text-2xl font-bold text-foreground">All Products</h1>
-                            <Chip color="primary" variant="flat" size="lg">
-                                {products.length} items
-                            </Chip>
-                        </div>
-                        <Divider />
-                    </div>
+function MainContent({
+  products,
+  organisation,
+  selectedCategoryId,
+}: {
+  products: ProductGroup[];
+  organisation: Organisation;
+  selectedCategoryId?: string;
+}) {
+  return (
+    <main className="flex-1 bg-background overflow-hidden h-full">
+      <ScrollShadow className="h-full">
+        <div className="container mx-auto p-4 lg:p-6">
+          {/* Header */}
+          <div className="mb-6">
+            <div className="flex items-center justify-between mb-4">
+              <h1 className="text-2xl font-bold text-foreground">
+                All Products
+              </h1>
+              <Chip color="primary" size="lg" variant="flat">
+                {products.length} items
+              </Chip>
+            </div>
+            <Divider />
+          </div>
 
-                    {/* Products Grid */}
-                    <div className="pb-8">
-                        {products.length === 0 ? (
-                            <Card className="p-8">
-                                <CardBody>
-                                    <div className="text-center text-default-500">
-                                        <p className="text-lg font-medium mb-2">No products found</p>
-                                        <p className="text-sm">Try browsing all categories</p>
-                                    </div>
-                                </CardBody>
-                            </Card>
-                        ) : (
-                            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-                                {products.map((product: any) => (
-                                    <Product
-                                        key={product.id}
-                                        group={product}
-                                        onProductClick={(id) => `/product/${id}`}
-                                        getCategoryEmoji={getCategoryEmoji}
-                                        organisation={organisation}
-                                        priceVisibility={organisation?.priceVisibility}
-                                    />
-                                ))}
-                <StoreProductsGrid organisation={organisation} categoryId={selectedCategoryId || undefined} />
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </ScrollShadow>
-        </main>
-    );
+          {/* Products Grid */}
+          <div className="pb-8">
+            {products.length === 0 ? (
+              <Card className="p-8">
+                <CardBody>
+                  <div className="text-center text-default-500">
+                    <p className="text-lg font-medium mb-2">
+                      No products found
+                    </p>
+                    <p className="text-sm">Try browsing all categories</p>
+                  </div>
+                </CardBody>
+              </Card>
+            ) : (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                {products.map((product: ProductGroup) => (
+                  <Product
+                    key={product.id}
+                    getCategoryEmoji={getCategoryEmoji}
+                    group={product}
+                    organisation={organisation}
+                    priceVisibility={organisation?.priceVisibility}
+                    onProductClick={(id) => `/product/${id}`}
+                  />
+                ))}
+                <StoreProductsGrid
+                  categoryId={selectedCategoryId || undefined}
+                  organisation={organisation}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+      </ScrollShadow>
+    </main>
+  );
 }
 
 // Fetch server-side data
@@ -177,16 +233,18 @@ async function fetchStoreData(code: string, categoryId?: string) {
 
     // Build query string with categoryId if provided
     const queryString = categoryId ? `categoryId=${categoryId}` : "";
-    
+
     // Fetch products for this organisation (already filtered by categoryId if provided)
     const prodsData = await apiEndpoints.getProductsByOrg(org.id, queryString);
     const products = prodsData.data?.data || [];
 
     // Fetch categories for this organisation
     const categoriesData = await apiEndpoints.getOrganisationCategories(org.id);
-    const categories = Array.isArray(categoriesData.data) 
-      ? categoriesData.data 
-      : (Array.isArray(categoriesData) ? categoriesData : []);
+    const categories = Array.isArray(categoriesData.data)
+      ? categoriesData.data
+      : Array.isArray(categoriesData)
+        ? categoriesData
+        : [];
 
     return {
       organisation: org,
@@ -195,13 +253,20 @@ async function fetchStoreData(code: string, categoryId?: string) {
     };
   } catch (error) {
     console.error("Failed to load store:", error);
+
     return null;
   }
 }
 
 // Main Store Home Page Component - Server Component
-export async function StoreHomePage({ storeCode, selectedCategoryId }: { storeCode: string; selectedCategoryId?: string }) {
-  const data = await fetchStoreData(storeCode,selectedCategoryId);
+export async function StoreHomePage({
+  storeCode,
+  selectedCategoryId,
+}: {
+  storeCode: string;
+  selectedCategoryId?: string;
+}) {
+  const data = await fetchStoreData(storeCode, selectedCategoryId);
 
   if (!data) {
     return (
@@ -214,7 +279,8 @@ export async function StoreHomePage({ storeCode, selectedCategoryId }: { storeCo
                 Store Unavailable
               </p>
               <p className="text-foreground/60 text-sm mt-2">
-                This store is temporarily unavailable or the trial period has expired.
+                This store is temporarily unavailable or the trial period has
+                expired.
               </p>
               <p className="text-foreground/50 text-xs mt-4">
                 Please contact the store owner for more information.
@@ -227,39 +293,35 @@ export async function StoreHomePage({ storeCode, selectedCategoryId }: { storeCo
   }
 
   const { products, categories } = data;
-  
+
   // No need for client-side filtering - API already returns filtered products
   // Based on selectedCategoryId passed to fetchStoreData
   const filteredProducts = products;
-  
+
   const currentPath = `/store/${storeCode.toLowerCase()}`;
 
   return (
     <div className="flex bg-default-50 h-screen overflow-hidden">
       {/* Sidebar */}
-      <Card 
-        className="lg:hidden w-20 md:w-64 h-full" 
-        radius="none" 
-        shadow="sm"
-      >
+      <Card className="lg:hidden w-20 md:w-64 h-full" radius="none" shadow="sm">
         <CardBody className="p-0">
-          <MobileSidebar 
-            categories={categories} 
-            selectedCategoryId={selectedCategoryId}
+          <MobileSidebar
+            categories={categories}
             currentPath={currentPath}
+            selectedCategoryId={selectedCategoryId}
           />
         </CardBody>
       </Card>
-      <CategorySidebar 
-        categories={categories} 
-        selectedCategoryId={selectedCategoryId}
+      <CategorySidebar
+        categories={categories}
         currentPath={currentPath}
+        selectedCategoryId={selectedCategoryId}
       />
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col h-[calc(100vh - 80px)]">
-        <MainContent 
-          products={filteredProducts} 
+        <MainContent
           organisation={data.organisation}
+          products={filteredProducts}
           selectedCategoryId={selectedCategoryId}
         />
       </div>

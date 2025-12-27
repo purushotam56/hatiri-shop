@@ -5,32 +5,38 @@
 
 "use client";
 
-import { useState, useEffect } from "react";
 import { Card, CardBody, CardHeader } from "@heroui/card";
+import { useState, useEffect } from "react";
+
 import { COLOR_PALETTES } from "@/config/theme-config";
-import { Button } from "@heroui/button";
 
 export function VisualPaletteComparison() {
-  const [currentColors, setCurrentColors] = useState<Record<string, string>>({});
+  const [currentColors, setCurrentColors] = useState<Record<string, string>>(
+    {},
+  );
 
   const readCurrentColors = () => {
     const root = document.documentElement;
     const computedStyle = getComputedStyle(root);
-    
+
     setCurrentColors({
-      primary: computedStyle.getPropertyValue('--theme-primary').trim(),
-      secondary: computedStyle.getPropertyValue('--theme-secondary').trim(),
+      primary: computedStyle.getPropertyValue("--theme-primary").trim(),
+      secondary: computedStyle.getPropertyValue("--theme-secondary").trim(),
     });
   };
 
   useEffect(() => {
-    readCurrentColors();
+    Promise.resolve().then(() => {
+      readCurrentColors();
+    });
     const interval = setInterval(readCurrentColors, 300);
+
     return () => clearInterval(interval);
   }, []);
 
   const extractHSL = (hslString: string) => {
     const match = hslString.match(/hsl\(([^)]+)\)/);
+
     return match ? match[1] : "0, 0%, 0%";
   };
 
@@ -38,7 +44,7 @@ export function VisualPaletteComparison() {
     const palette = COLOR_PALETTES[paletteKey];
     const palettePrimary = extractHSL(palette.colors.primary);
     const paletteSecondary = extractHSL(palette.colors.secondary);
-    
+
     return (
       currentColors.primary === palettePrimary &&
       currentColors.secondary === paletteSecondary
@@ -61,13 +67,13 @@ export function VisualPaletteComparison() {
             const isActive = matchesCurrent(key);
             const primary = extractHSL(palette.colors.primary);
             const secondary = extractHSL(palette.colors.secondary);
-            
+
             return (
               <div
                 key={key}
                 className={`flex items-center justify-between p-3 rounded-lg border-2 transition-all ${
-                  isActive 
-                    ? "border-primary bg-primary/10" 
+                  isActive
+                    ? "border-primary bg-primary/10"
                     : "border-default-200 bg-default-50"
                 }`}
               >
@@ -92,7 +98,9 @@ export function VisualPaletteComparison() {
                 {isActive && (
                   <div className="flex items-center gap-2">
                     <div className="w-2 h-2 rounded-full bg-success animate-pulse" />
-                    <span className="text-xs font-semibold text-success">ACTIVE</span>
+                    <span className="text-xs font-semibold text-success">
+                      ACTIVE
+                    </span>
                   </div>
                 )}
               </div>

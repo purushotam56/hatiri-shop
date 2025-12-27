@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useMemo } from "react";
+
 import { PanelType, PANEL_CONFIGS } from "@/types/panel";
 
 /**
